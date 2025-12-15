@@ -89,9 +89,8 @@ class TestSummaryGenerator:
         with caplog.at_level(logging.INFO):
             generate_validation_summary(collector, logging.getLogger("test"))
         
-        # Check log record messages (not formatted text)
-        log_messages = [record.message for record in caplog.records]
-        all_log_text = "\n".join(log_messages)
+        # Check formatted log output (caplog.text includes all formatted messages)
+        all_log_text = caplog.text
         
         assert "[VALIDATION SUMMARY]" in all_log_text
         assert "Total Issues: 2" in all_log_text
@@ -114,10 +113,11 @@ class TestSummaryGenerator:
                 failed_items=0
             )
         
-        # Check log record messages
-        log_messages = [record.message for record in caplog.records]
-        all_log_text = "\n".join(log_messages)
+        # Check formatted log output (log_status_with_text formats as [STATUS] message emoji)
+        all_log_text = caplog.text
         
+        # log_status_with_text formats as: [STATUS] message emoji
+        # So we need to check for the message part and status
         assert "Test Stage - Summary" in all_log_text
         assert "ALL COMPLIANT" in all_log_text
         assert "Items Processed: 10" in all_log_text
@@ -139,7 +139,7 @@ class TestSummaryGenerator:
             context="Module 1 Session 2"
         )
         
-        with caplog.at_level(logging.INFO):
+        with caplog.at_level(logging.INFO, logging.WARNING):
             generate_stage_summary(
                 collector,
                 "Test Stage",
@@ -149,10 +149,10 @@ class TestSummaryGenerator:
                 failed_items=2
             )
         
-        # Check log record messages (INFO and WARNING levels)
-        log_messages = [record.message for record in caplog.records]
-        all_log_text = "\n".join(log_messages)
+        # Check formatted log output (includes INFO and WARNING)
+        all_log_text = caplog.text
         
+        # log_status_with_text formats as: [STATUS] message emoji
         assert "Test Stage - Summary" in all_log_text
         assert "CRITICAL ISSUES FOUND" in all_log_text
         assert "Critical Errors: 1" in all_log_text
@@ -174,16 +174,15 @@ class TestSummaryGenerator:
             'modules_processed': 5
         }
         
-        with caplog.at_level(logging.INFO):
+        with caplog.at_level(logging.INFO, logging.WARNING):
             generate_generation_summary(
                 results,
                 collector,
                 logging.getLogger("test")
             )
         
-        # Check log record messages (INFO and WARNING levels)
-        log_messages = [record.message for record in caplog.records]
-        all_log_text = "\n".join(log_messages)
+        # Check formatted log output
+        all_log_text = caplog.text
         
         assert "Generation Complete" in all_log_text
         assert "Sessions Generated" in all_log_text or "10" in all_log_text
@@ -203,10 +202,10 @@ class TestSummaryGenerator:
                 failed_items=None
             )
         
-        # Check log record messages
-        log_messages = [record.message for record in caplog.records]
-        all_log_text = "\n".join(log_messages)
+        # Check formatted log output
+        all_log_text = caplog.text
         
+        # log_status_with_text formats as: [STATUS] message emoji
         assert "Test Stage - Summary" in all_log_text
         # Should not crash when items are None
 

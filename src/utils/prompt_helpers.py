@@ -73,14 +73,15 @@ def categorize_warnings(warnings: List[str]) -> Dict[str, List[str]]:
     
     for warning in warnings:
         warning_lower = warning.lower()
-        if any(kw in warning_lower for kw in critical_keywords):
+        # Check quality keywords first (word count is quality-related, not count-related)
+        if any(kw in warning_lower for kw in quality_keywords):
+            categorized['quality'].append(warning)
+        elif any(kw in warning_lower for kw in critical_keywords):
             categorized['critical'].append(warning)
         elif any(kw in warning_lower for kw in format_keywords):
             categorized['format'].append(warning)
         elif any(kw in warning_lower for kw in count_keywords):
             categorized['count'].append(warning)
-        elif any(kw in warning_lower for kw in quality_keywords):
-            categorized['quality'].append(warning)
         else:
             # Default to critical if unclear
             categorized['critical'].append(warning)

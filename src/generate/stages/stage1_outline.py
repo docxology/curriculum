@@ -59,33 +59,88 @@ class OutlineGenerator:
     def _extract_json_from_response(self, response: str) -> Optional[Dict[str, Any]]:
         """Extract JSON from LLM response, handling potential markdown wrapping.
         
+        Uses multiple strategies to find and extract valid JSON from LLM responses
+        that may contain markdown, explanatory text, or other formatting.
+        
         Args:
             response: Raw LLM response text
             
         Returns:
             Parsed JSON dictionary or None if parsing fails
         """
-        # Try to find JSON in markdown code blocks first
+        # Strategy 1: Try to find JSON in markdown code blocks (```json or ```)
         json_pattern = r'```(?:json)?\s*(\{.*?\})\s*```'
         match = re.search(json_pattern, response, re.DOTALL)
-        
         if match:
             json_str = match.group(1)
-        else:
-            # Try to find raw JSON (look for { ... } pattern)
-            json_pattern = r'\{.*\}'
-            match = re.search(json_pattern, response, re.DOTALL)
-            if match:
-                json_str = match.group(0)
-            else:
-                json_str = response.strip()
+            try:
+                return json.loads(json_str)
+            except json.JSONDecodeError:
+                pass  # Try next strategy
         
+        # Strategy 2: Find the largest valid JSON object by matching braces
+        # This handles cases where JSON is embedded in text without code fences
+        brace_count = 0
+        start_idx = -1
+        best_match = None
+        best_length = 0
+        
+        for i, char in enumerate(response):
+            if char == '{':
+                if brace_count == 0:
+                    start_idx = i
+                brace_count += 1
+            elif char == '}':
+                brace_count -= 1
+                if brace_count == 0 and start_idx >= 0:
+                    # Found a complete JSON object
+                    candidate = response[start_idx:i+1]
+                    if len(candidate) > best_length:
+                        try:
+                            # Validate it's actually JSON
+                            json.loads(candidate)
+                            best_match = candidate
+                            best_length = len(candidate)
+                        except json.JSONDecodeError:
+                            pass
+                    start_idx = -1
+        
+        if best_match:
+            try:
+                return json.loads(best_match)
+            except json.JSONDecodeError:
+                pass  # Try next strategy
+        
+        # Strategy 3: Try to find JSON starting from "course_metadata" or "modules"
+        # Look for common JSON structure indicators
+        for pattern in [r'\{[\s\n]*"course_metadata"', r'\{[\s\n]*"modules"']:
+            match = re.search(pattern, response, re.IGNORECASE | re.DOTALL)
+            if match:
+                start_idx = match.start()
+                # Find matching closing brace
+                brace_count = 0
+                for i in range(start_idx, len(response)):
+                    if response[i] == '{':
+                        brace_count += 1
+                    elif response[i] == '}':
+                        brace_count -= 1
+                        if brace_count == 0:
+                            candidate = response[start_idx:i+1]
+                            try:
+                                return json.loads(candidate)
+                            except json.JSONDecodeError:
+                                break
+        
+        # Strategy 4: Try the entire response (in case it's pure JSON)
         try:
-            return json.loads(json_str)
-        except json.JSONDecodeError as e:
-            logger.error(f"Failed to parse JSON from response: {e}")
-            logger.debug(f"Attempted to parse: {json_str[:500]}...")
-            return None
+            return json.loads(response.strip())
+        except json.JSONDecodeError:
+            pass
+        
+        # All strategies failed
+        logger.error("Failed to extract valid JSON from LLM response")
+        logger.debug(f"Response preview (first 1000 chars): {response[:1000]}...")
+        return None
     
     def _normalize_session_numbering(self, data: Dict[str, Any]) -> Dict[str, Any]:
         """Ensure session numbers are sequential and global (1-N) across all modules.

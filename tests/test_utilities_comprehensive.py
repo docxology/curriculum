@@ -129,8 +129,9 @@ class TestCourseSelection:
         loader = ConfigLoader(config_path)
         logger = logging.getLogger("test")
         
-        # Mock input to select generate all (option 2)
-        with patch('builtins.input', return_value='2'):
+        # With 1 course: option 1 = course, option 2 = default, option 3 = generate all
+        # Mock input to select generate all (option 3)
+        with patch('builtins.input', return_value='3'):
             result = select_course_template(loader, logger)
             assert result == GENERATE_ALL_COURSES
     
