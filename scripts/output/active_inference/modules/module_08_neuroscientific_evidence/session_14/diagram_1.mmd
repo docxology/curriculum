@@ -1,0 +1,43 @@
+graph LR
+    subgraph Sensory Input
+        A[Vision] --> B(Retinal Processing)
+        C[Audition] --> D(Cochlear Processing)
+        E[Touch] --> F(Somatosensory Processing)
+    end
+
+    subgraph Cortical Processing - Primary
+        B --> G(V1 - Early Visual)
+        D --> H(A1 - Primary Auditory)
+        F --> I(S1 - Primary Somatosensory)
+    end
+
+    subgraph Cortical Processing - Secondary & Tertiary
+        G --> K(MT - Middle Temporal)
+        H --> L(A2 - Secondary Auditory)
+        K --> M(MT+) (Higher-Order Visual)
+        L --> N(A1+) (Higher-Order Auditory)
+        M --> O(V5 - Shape Processing)
+        N --> P(W - Frequency Processing)
+        O --> Q(Visual Association Cortex)
+        P --> R(Auditory Association Cortex)
+    end
+
+    subgraph Feedback & Integration
+        Q --> S(Prefrontal Cortex - Attention)
+        S -- Feedback Loop --> Q
+        R --> S
+        Q --> T(LGN - Lateral Geniculate Nucleus)
+        T --> U(Magnocellular Pathway)
+    end
+
+    subgraph Decision Points & Modulation
+        V[Reward/Salience Detection] -- Conditional Pathway --> Q
+        V --> W(Amygdala - Emotion)
+        W -- Feedback Loop --> Q
+    end
+
+    subgraph Motor Output (Simplified)
+        X[Motor Cortex] --> Y(Action Planning)
+    end
+
+    Y -- Pathway --> X

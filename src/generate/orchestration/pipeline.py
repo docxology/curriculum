@@ -411,7 +411,13 @@ class ContentGenerator:
         
         # Filter by module_ids if specified
         if module_ids:
-            modules = [m for m in modules if m.get('module_id') in module_ids]
+            # Convert module_ids to set for O(1) lookup and handle type mismatches
+            module_ids_set = set(int(mid) for mid in module_ids)
+            modules = [
+                m for m in modules 
+                if m.get('module_id') is not None 
+                and int(m.get('module_id')) in module_ids_set
+            ]
         
         logger.info(f"Processing {len(modules)} modules with session-based generation")
         if course_name:

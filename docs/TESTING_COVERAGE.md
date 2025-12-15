@@ -39,7 +39,7 @@ All 25 test files covering comprehensive functionality:
 | `test_content_analysis.py` | - | Unit | Content analysis utilities |
 | `test_content_generators.py` | 10 | 25-29% | Integration | Lectures, diagrams, questions |
 | `test_error_collector.py` | 15 | - | Unit | Error collection utilities |
-| `test_helpers_extended.py` | 8 | 32% | Unit | Extended helper functions |
+| `test_helpers_extended.py` | 8 | 32% | Unit | Additional helper functions |
 | `test_json_outline_integration.py` | 10 | 16% | Integration | JSON outline loading and discovery |
 | `test_llm_client.py` | 11 | 20% | Integration | Ollama API, retries, prompts |
 | `test_logging_setup.py` | - | Unit | Logging setup and configuration |
@@ -133,7 +133,7 @@ open htmlcov/index.html
 - `test_parser.py` - Outline parsing and structure extraction
 - `test_cleanup.py` - Post-generation content cleanup
 - `test_utils.py` - File I/O and text utilities
-- `test_helpers_extended.py` - Extended helper functions
+- `test_helpers_extended.py` - Additional helper functions
 
 **LLM Integration**
 - `test_llm_client.py` - Ollama API client
@@ -228,7 +228,7 @@ Following `.cursorrules/03-testing-real-only.md`:
 
 **Added Tests**:
 - ✅ 35 tests for content cleanup module (`test_cleanup.py`)
-- ✅ 8 tests for extended helper functions (`test_helpers_extended.py`)
+- ✅ 8 tests for additional helper functions (`test_helpers_extended.py`)
 
 **Coverage Improvements**:
 - ✅ Overall: 50% → 55% (+10%)

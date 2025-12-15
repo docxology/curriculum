@@ -1,0 +1,30 @@
+graph TD
+    A([Start: Robot Initialization]) --> B{Sensor Data Acquisition}
+    B --> C{Path Planning Algorithm}
+    C -- Primary --> D{Navigation Commands}
+    D --> E[Robot Movement]
+    E --> F{Obstacle Detection}
+    F -- Conditional --> G{Re-route Planning}
+    G -- Primary --> D
+    F -- Feedback --> C
+    C --> H{Data Logging}
+    H --> I{Performance Analysis}
+    I --> J{Algorithm Refinement}
+    J --> C
+    B --> K{Environmental Mapping}
+    K --> L{Map Updates}
+    L --> B
+    E --> M{Power Management}
+    M --> B
+    B --> N{Communication with Base Station}
+    N --> O{Remote Control/Override}
+    O --> N
+    A --> P([End: Autonomous Exploration Complete])
+    class Start A;
+    class End P;
+    class SensorDataB;
+    class PathPlanC;
+    class NavigationD;
+    class ObstacleF;
+    class MapK;
+    class PerformanceI;

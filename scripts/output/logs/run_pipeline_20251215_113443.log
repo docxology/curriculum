@@ -1,0 +1,23 @@
+2025-12-15 11:34:43,800 - root - INFO - Logging to file: /Users/mini/Documents/GitHub/curriculum/scripts/output/logs/run_pipeline_20251215_113443.log
+2025-12-15 11:34:43,801 - __main__ - INFO - 
+2025-12-15 11:34:43,801 - __main__ - INFO - 🚀 EDUCATIONAL COURSE GENERATOR - Full Pipeline
+2025-12-15 11:34:43,801 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 11:34:43,801 - __main__ - INFO - 📝 Log file: output/logs/run_pipeline_20251215_113443.log
+2025-12-15 11:34:43,801 - __main__ - INFO - 
+2025-12-15 11:34:43,801 - __main__ - INFO - 
+2025-12-15 11:34:43,801 - __main__ - INFO - ⚙️ Configuration
+2025-12-15 11:34:43,801 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 11:34:43,801 - __main__ - INFO -   • Config Directory: /Users/mini/Documents/GitHub/curriculum/config
+2025-12-15 11:34:43,801 - __main__ - INFO -   • Project Root: /Users/mini/Documents/GitHub/curriculum
+2025-12-15 11:34:43,801 - __main__ - INFO -   • Python Executable: /Users/mini/.venvs/py314/bin/python
+2025-12-15 11:34:43,801 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 11:34:43,801 - __main__ - INFO - 
+2025-12-15 11:34:43,801 - __main__ - INFO - 🔧 STAGE 01: Environment Setup
+2025-12-15 11:34:43,802 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 11:34:43,802 - __main__ - INFO - Running: /Users/mini/.venvs/py314/bin/python /Users/mini/Documents/GitHub/curriculum/scripts/01_setup_environment.py --config-dir /Users/mini/Documents/GitHub/curriculum/config
+2025-12-15 11:34:44,050 - __main__ - INFO - ✅ Stage 01 complete
+2025-12-15 11:34:44,051 - __main__ - INFO - 
+2025-12-15 11:34:44,051 - __main__ - INFO - 🧪 STAGE 02: Validation & Testing
+2025-12-15 11:34:44,051 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 11:34:44,051 - __main__ - INFO - Running: /Users/mini/.venvs/py314/bin/python /Users/mini/Documents/GitHub/curriculum/scripts/02_run_tests.py --config-dir /Users/mini/Documents/GitHub/curriculum/config
+2025-12-15 11:34:52,155 - __main__ - ERROR - ❌ Stage 02 failed with exit code 2

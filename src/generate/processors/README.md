@@ -98,7 +98,7 @@ Tests cover:
 
 ## See Also
 
-- **For AI Agents**: [AGENTS.md](AGENTS.md) - Complete API reference
+- **For AI Agents**: [AGENTS.md](AGENTS.md) - API reference
 - **Outline Generator**: [../stages/README.md](../stages/README.md) - Generate outlines
 - **Content Generators**: [../formats/README.md](../formats/README.md) - Use parsed data
 

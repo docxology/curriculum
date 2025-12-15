@@ -1,0 +1,22 @@
+graph TD
+    A([Start: Subjective Experience]) --> B{Sensory Input};
+    B -- Primary --> C(Brain Processing);
+    C -- Feedback --> B;
+    C --> D{Cognitive Appraisal};
+    D -- Critical Pathway --> E(Decision Making);
+    E -- Optional --> F(Action Execution);
+    F --> G{Outcome Evaluation};
+    G -- Feedback --> D;
+    B -- Parallel --> H(Emotional Response);
+    H -- Secondary --> I(Behavioral Output);
+    I --> J([End: Conscious Awareness]);
+    C -- Indirect --> K(Neural Networks);
+    K --> L{Internal Model};
+    L --> C;
+    B -- Parallel --> M(Attention Filtering);
+    M --> C;
+    D -- Decision {Is it Relevant?} --> N{Yes}
+    N --> E
+    D -- Decision {Is it Dangerous?} --> O{Yes}
+    O --> P(Threat Response);
+    P --> E;

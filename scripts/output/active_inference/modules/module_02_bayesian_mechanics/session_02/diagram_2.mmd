@@ -1,0 +1,26 @@
+graph TD
+    A([Start]) --> B{Prior Belief P};
+    B --> C{Observe Data X};
+    C --> D{Update Belief P};
+    D --> E{New Belief P'};
+    E --> F{Bayes' Theorem: P' = (P * Prior) / Evidence};
+    F --> G{Posterior Belief P};
+    G --> H{Interpret Posterior Belief};
+    H --> I{Decision Making};
+    I --> J[End];
+
+    B --> K{Prior Belief P(A)};
+    K --> B;
+
+    C --> L{Data X};
+    L --> C;
+
+    E --> M{Posterior Probability P'};
+    M --> E;
+
+    F --> N{Evidence - Likelihood};
+    N --> F;
+
+    B -- "Subjective Assessment" --> C;
+    C -- "Objective Measurement" --> N;
+    N -- "Updated Probability" --> E;

@@ -1,0 +1,29 @@
+Okay, here’s the generated content following all the specified requirements and formatting guidelines.
+
+## Research Question 1: How does the number of connections in a neural network impact its accuracy when learning a simple linear classification task?
+
+**Methodology:** This investigation will utilize a simple dataset consisting of 1000 linearly separable data points, each with two features (x1, x2). The dataset will be artificially generated with a known underlying linear relationship.  We will train a basic feedforward neural network with a single hidden layer, varying the number of connections (links) between the input layer and the hidden layer.  Specifically, we will experiment with networks having 10, 50, and 100 connections.  For each network, we will train it using stochastic gradient descent for a fixed number of epochs.  Accuracy will be measured as the percentage of correctly classified data points.  The learning rate and momentum will be kept constant for all networks to control for this variable.  The experiments will be repeated five times to account for the inherent randomness of the stochastic gradient descent process. The statistical significance of the observed differences in accuracy will be evaluated using a t-test.
+
+**Expected Outcomes:** We anticipate that as the number of connections increases, the accuracy of the neural network will initially improve due to the increased capacity of the network to learn complex patterns. However, beyond a certain threshold (likely around 50-100 connections for this relatively simple problem), we expect the accuracy to plateau or even decrease. This is because an excessive number of connections can lead to overfitting – the network memorizes the training data instead of learning the underlying generalizable pattern.  We expect a statistically significant difference in accuracy between the networks, with the network containing the optimal number of connections (likely around 50) performing best. The results will provide empirical evidence supporting the concept of structural sparsity and the importance of balancing network capacity with the amount of data available.
+
+## Research Question 2: What is the effect of varying the learning rate during training on the convergence speed and final accuracy of a neural network?
+
+**Methodology:**  We will use a dataset of 500 linearly separable data points with two features.  A simple feedforward neural network (one hidden layer, 20 neurons) will be trained on this dataset using stochastic gradient descent. We will conduct the experiment with four different learning rates: 0.01, 0.1, 1, and 10. Each learning rate will be applied for 200 training iterations.  The training progress (loss value) will be recorded for each learning rate. We will monitor the loss value over iterations. The learning rate will be adjusted dynamically: each iteration, the learning rate is multiplied by a factor of 0.95, providing momentum to accelerate convergence. The experiment will be repeated 3 times to achieve statistical power. The final accuracy will be measured. The training progress (loss value) will be recorded for each learning rate over iterations to assess convergence speed.  The data will be visualized as graphs of loss value versus the number of iterations.
+
+**Expected Outcomes:** We hypothesize that a learning rate of 0.1 will lead to the fastest convergence, as it provides sufficient momentum to overcome local minima. However, a learning rate that is too high (e.g., 1) will cause the training process to oscillate wildly and fail to converge. A smaller learning rate (e.g., 0.01) will result in a slow but stable convergence. Furthermore, a learning rate of 0.01 has a tendency to become stuck in local minima. The data will provide a graph showing how quickly the learning rate converges to the minimum loss point.
+
+## Research Question 3: How can we measure the influence of initialization methods on the training dynamics of a feedforward neural network?
+
+**Methodology:** We will use a dataset of 1000 linearly separable data points with two features. A standard feedforward neural network with one hidden layer and 30 neurons will be constructed. The experiment will involve comparing the training dynamics of the network when using three different weight initialization methods: Random Initialization, Xavier Initialization, and He Initialization. Each initialization method will be applied to the network, and the training process will be monitored over 1000 epochs. The weight values for each layer will be recorded during each iteration. We will calculate the average loss value and the standard deviation of the loss value over the iterations. A learning rate of 0.1 will be used for all networks. A convergence threshold (defined by a 1% change in loss) will be applied to stop the training.
+
+**Expected Outcomes:** We anticipate that Xavier initialization will consistently lead to more stable training dynamics and a faster convergence rate, as it accounts for the width of the layers and ensures a proper scale for initial weights.  He initialization is another appropriate choice. Random initialization will likely result in highly variable and unstable training, with the loss value fluctuating significantly. The data will be visualized as a graph showing the training loss for each initialization method, allowing us to visually assess the influence of weight initialization on training stability.
+
+═══════════════════════════════════════════════════════════════
+VERIFICATION CHECKLIST (BEFORE OUTPUT):
+[ ] Verify you have 3 ## Research Question N: headings
+[ ] Each investigation is approximately 150-200 words
+[ ] Questions are section headings, not embedded in prose
+[ ] No conversational artifacts or meta-commentary
+[ ] NO word count statements in output - we calculate this automatically
+
+═══════════════════════════════════════════════════════════════

@@ -1,0 +1,15 @@
+graph TD
+    A[Start: Uncertainty & Noise] --> B{Data Acquisition};
+    B --> C{Noise Detection};
+    C --> D{Signal Processing};
+    D --> E{Uncertainty Modeling};
+    E --> F{Monte Carlo Simulation};
+    F --> G{Sensitivity Analysis};
+    G --> H{Result Interpretation};
+    H --> I{Model Validation};
+    I --> J[End: Operationalized Model];
+    A -- Secondary --> K{Cognitive Appraisal};
+    K --> L{Decision Making};
+    L --> M{Action Execution};
+    M --> N{Outcome Evaluation};
+    N --> I;

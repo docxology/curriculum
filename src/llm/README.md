@@ -20,9 +20,9 @@ This module provides a lightweight client for interacting with local Ollama LLM 
 - **Request ID tracing** for debugging and monitoring
 - **Stream timeout tracking** (separate from connection timeout)
 - **Progress logging** during long generations
-- **Health monitoring** - Automatic health checks and diagnostics (NEW)
-- **Request handler** - Non-blocking requests with timeout monitoring (NEW)
-- **Troubleshooting tools** - Comprehensive diagnostics and suggestions (NEW)
+- **Health monitoring** - Automatic health checks and diagnostics
+- **Request handler** - Non-blocking requests with timeout monitoring
+- **Troubleshooting tools** - Comprehensive diagnostics and suggestions
 
 ## Usage
 

@@ -1,0 +1,9 @@
+graph TD
+    A[Robot Perception] --> B{Sensor Data};
+    B --> C[Data Processing];
+    C --> D[Localization & Mapping];
+    D --> E[Path Planning];
+    E --> F[Motor Commands];
+    F --> G[Robot Movement];
+    G --> H{Environment Feedback};
+    H --> B

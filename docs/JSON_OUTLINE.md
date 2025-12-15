@@ -193,7 +193,7 @@ uv run python3 scripts/03_generate_outline.py
 
 **Non-Interactive Mode**:
 ```bash
-uv run python3 scripts/03_generate_outline.py --non-interactive
+uv run python3 scripts/03_generate_outline.py --no-interactive
 ```
 - Uses config defaults only
 - No prompts (CI/CD friendly)
@@ -411,7 +411,7 @@ modules:
 ### New Approach (Current)
 
 ```yaml
-# NEW: course_config.yaml with dynamic generation
+# course_config.yaml with dynamic generation
 course:
   defaults:
     num_modules: 5
@@ -471,7 +471,7 @@ echo "output/outlines/*.json" >> .gitignore
 ```bash
 # Generate multiple outlines
 for i in {1..3}; do
-  uv run python3 scripts/03_generate_outline.py --non-interactive
+  uv run python3 scripts/03_generate_outline.py --no-interactive
 done
 
 # Review all generated outlines

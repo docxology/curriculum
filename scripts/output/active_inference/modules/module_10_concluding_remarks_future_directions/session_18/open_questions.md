@@ -1,0 +1,13 @@
+Okay, here’s the output adhering strictly to the provided requirements and formatting guidelines.
+
+## Open Question 1: What is the mechanism of embodied simulation?
+
+Context: Embodied simulation, the idea that our brains continuously run simulations of our actions and their potential outcomes, is increasingly supported by neuroimaging data. Understanding *how* this simulation process actually unfolds—the specific neural networks involved, the types of sensory input driving the simulations, and the feedback loops generating predictions—is a central question in cognitive science. This research could fundamentally shift our understanding of decision-making and action control. Current research: Computational neuroscience, dynamical systems theory, and experimental psychology are investigating the neural correlates of embodied simulation.
+
+## Open Question 2: How does proprioceptive feedback influence social cognition?
+
+Context: Recent studies suggest a strong link between our sense of body position (proprioception) and our ability to understand the emotions and intentions of others. The "embodied perspective" proposes that we naturally interpret social situations through the lens of our own physical experiences.  Research is attempting to determine if manipulating proprioceptive input – for example, through virtual reality or wearable sensors – alters our judgments of social cues and behavioral predictions. Current research: Studies in social psychology, robotics, and neurophysiology are exploring this connection, focusing on the influence of bodily states on empathy and social perception.
+
+## Open Question 3: What are the implications of distributed agency for moral responsibility?
+
+Context: The concept of distributed agency—where responsibility for actions is not solely attributed to a single individual, but rather to a network of interacting factors (environment, social influences, biological predispositions)—is becoming increasingly relevant in ethical debates. Particularly, the rise of autonomous systems (AI, robotics) demands a re-evaluation of our traditional notions of blame and accountability. The challenge lies in determining where responsibility truly resides when actions are the result of complex, interconnected systems. Current research: Philosophers, legal scholars, and computer scientists are grappling with the challenges posed by distributed agency, leading to new frameworks for assessing moral responsibility and developing ethical guidelines for intelligent systems.

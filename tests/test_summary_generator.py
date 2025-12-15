@@ -139,7 +139,7 @@ class TestSummaryGenerator:
             context="Module 1 Session 2"
         )
         
-        with caplog.at_level(logging.INFO, logging.WARNING):
+        with caplog.at_level(logging.INFO, logger="test"):
             generate_stage_summary(
                 collector,
                 "Test Stage",
@@ -174,7 +174,7 @@ class TestSummaryGenerator:
             'modules_processed': 5
         }
         
-        with caplog.at_level(logging.INFO, logging.WARNING):
+        with caplog.at_level(logging.INFO, logger="test"):
             generate_generation_summary(
                 results,
                 collector,

@@ -480,19 +480,26 @@ class TestContentGenerator:
                     assert len(files) > 0, "No content files generated"
     
     def test_stage2_with_invalid_outline(self, test_config, tmp_path):
-        """Test stage2 error handling when outline is missing using real file system."""
-        # Create a new config loader that points to tmp_path with no outlines
+        """Test stage2 error handling when outline is missing using real file system.
+        
+        This test verifies that stage2 raises ValueError immediately when no outline exists,
+        without attempting to generate content (no Ollama needed).
+        """
         import yaml
         from src.config.loader import ConfigLoader
         
-        # Create isolated config directory
+        # Create isolated config directory with unique base_directory
         isolated_config_dir = tmp_path / "isolated_config"
         isolated_config_dir.mkdir()
+        
+        # Use absolute path for base_directory to ensure it's different from default
+        isolated_base = tmp_path / "isolated_output"
+        isolated_base = isolated_base.resolve()  # Make absolute
         
         # Copy configs but set output to isolated directory
         output_config = {
             "output": {
-                "base_directory": str(tmp_path / "isolated_output"),
+                "base_directory": str(isolated_base),
                 "directories": {
                     "outlines": "outlines",
                     "modules": "modules"
@@ -521,20 +528,25 @@ class TestContentGenerator:
         
         # Create isolated config loader
         isolated_config = ConfigLoader(isolated_config_dir)
+        
+        # Verify the config has the correct base_directory
+        output_paths = isolated_config.load_output_config()
+        assert output_paths["output"]["base_directory"] == str(isolated_base)
+        
         generator = ContentGenerator(isolated_config)
         
         # Ensure no outline files exist in isolated output directory
-        isolated_outline_dir = tmp_path / "isolated_output" / "outlines"
+        isolated_outline_dir = isolated_base / "outlines"
         isolated_outline_dir.mkdir(parents=True, exist_ok=True)
         for outline_file in isolated_outline_dir.glob("course_outline_*.json"):
             outline_file.unlink()
         
-        # Also check other possible locations and ensure they're empty for this isolated test
-        # The _find_latest_outline_json searches multiple locations, but with isolated config
-        # it should only find outlines in the isolated output directory
+        # Verify outline finder returns None for isolated config
+        outline_path = isolated_config._find_latest_outline_json()
+        assert outline_path is None, f"Expected no outline, but found: {outline_path}"
         
         # Try to run stage2 without generating outline first
-        # Should raise ValueError because no outline exists
+        # Should raise ValueError immediately (no Ollama calls)
         with pytest.raises(ValueError, match="No JSON outline found|No outline JSON found"):
             generator.stage2_generate_content_by_session()
     

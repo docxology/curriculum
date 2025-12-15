@@ -1,0 +1,16 @@
+graph LR
+    A([Start]) --> B{Prior Belief}
+    B --> C{Likelihood Calculation}
+    C -- Data Observed --> D{Posterior Belief}
+    D --> E{Update Belief}
+    E --> B
+    B -- Strong Prior --> C
+    C -- High Likelihood --> D
+    D --  Bayesian Update --> E
+    E --  New Prior --> B
+    C -- Weak Likelihood --> D
+    D --  Model Assessment --> F{Decision Making}
+    F --> G{Implement Action}
+    G --> H{Observe Outcome}
+    H --> F
+    F --  New Data --> C

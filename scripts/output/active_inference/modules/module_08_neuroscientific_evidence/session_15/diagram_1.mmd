@@ -1,0 +1,35 @@
+graph LR
+    A([Start: Sensor Input])
+    B(...: Motor Cortex)
+    C(...: Cerebellum)
+    D(...: Basal Ganglia)
+    E(...: Primary Motor Cortex)
+    F(...: Internal Models)
+    G(...: Predictive Coding)
+    H(...: Error Signals)
+    I(...: Motor Commands)
+    J([Execute Movement])
+    K(...: Feedback Pathways - Touch)
+    L(...:  Proprioception)
+    M(...:  Vestibular System)
+    N([Adjust Movement])
+    O(...:  Refinement Loops)
+    P(...:  Temporal Integration)
+    Q([End: Movement Outcome])
+    R --> S{Check Error}
+    S -- Yes --> R
+    S -- No --> R
+    R --> Q
+    A --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    J --> N
+    N --> K
+    K --> L
+    L --> M
+    M --> O
+    O --> P
+    P --> Q

@@ -1,0 +1,5 @@
+graph TD
+    A[Generator Network] --> B{Discriminator Network};
+    B -- Critical Feedback --> A;
+    A --> C[Real-World Data Input];
+    C --> A;

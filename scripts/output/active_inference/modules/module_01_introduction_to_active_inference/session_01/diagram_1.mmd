@@ -1,0 +1,23 @@
+graph LR
+    A([Start: Sensory Input]) --> B{Environment Perception};
+    B --> C[Initial Processing - Feature Extraction];
+    C --> D{Feedback: Predictive Coding};
+    D --> C;
+    C --> E[Higher-Level Inference - Action Prediction];
+    E --> F{Decision: Action Needed?};
+    F -- Yes --> G[Motor Output];
+    F -- No --> H[Maintain Current State];
+    G --> I[Execute Action];
+    I --> J[Action Effects];
+    J --> K[Updated Sensory Input];
+    K --> B;
+    B --> L{Contextual Refinement};
+    L --> B;
+    E --> M{Neural Pathway Selection};
+    M --> E;
+    J --> B;
+    subgraph Sensory Feedback Loop
+        B --> C;
+        C --> D;
+        D --> C;
+    end

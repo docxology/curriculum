@@ -9,10 +9,10 @@ Provides `OllamaClient` class for interacting with local Ollama LLM instances. H
 ## Module Structure
 
 - `client.py` - Main OllamaClient class
-- `health.py` - Health monitoring and diagnostics (NEW)
-- `request_handler.py` - Request handling with timeout monitoring (NEW)
-- `TROUBLESHOOTING.md` - Comprehensive troubleshooting guide (NEW)
-- `HEALTH_MONITORING.md` - Health monitoring documentation (NEW)
+- `health.py` - Health monitoring and diagnostics
+- `request_handler.py` - Request handling with timeout monitoring
+- `TROUBLESHOOTING.md` - Comprehensive troubleshooting guide
+- `HEALTH_MONITORING.md` - Health monitoring documentation
 
 ## Key Class: OllamaClient
 
@@ -638,12 +638,12 @@ Tests in `tests/test_llm_client.py`:
 - Template formatting
 - Error handling
 - Retry logic
-- **NEW**: Hanging request scenarios
-- **NEW**: Comprehensive timeout testing
-- **NEW**: Health monitoring functionality
-- **NEW**: Request handler with monitoring
-- **NEW**: Ollama unavailable scenarios
-- **NEW**: Streaming issues
+- Hanging request scenarios
+- Comprehensive timeout testing
+- Health monitoring functionality
+- Request handler with monitoring
+- Ollama unavailable scenarios
+- Streaming issues
 
 **Requires Ollama + gemma3:4b model**
 

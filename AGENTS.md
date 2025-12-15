@@ -8,7 +8,7 @@ Educational course materials generator using Ollama (gemma3:4b) to create compre
 
 ## Key Principles
 
-1. **No Mock Methods** - All code uses real implementations. Tests interact with actual services.
+1. **No Mock Methods** - All code uses implementations. Tests interact with actual services.
 2. **Use uv** - All package management and script execution uses `uv` (not pip/venv).
 3. **Configuration-Driven** - Course structure, LLM settings, and output formats are in YAML files under `config/`.
 4. **TDD Approach** - Write tests before or alongside implementation.
@@ -134,7 +134,7 @@ See **[docs/PIPELINE_GUIDE.md](docs/PIPELINE_GUIDE.md)** for detailed script doc
 - `test_content_analysis.py` - Content analysis utilities
 - `test_content_generators.py` - Content generators (requires Ollama)
 - `test_error_collector.py` - Error collection utilities
-- `test_helpers_extended.py` - Extended helper functions
+- `test_helpers_extended.py` - Additional helper functions
 - `test_json_outline_integration.py` - JSON outline integration tests
 - `test_llm_client.py` - Ollama API integration (requires Ollama)
 - `test_logging_setup.py` - Logging setup and configuration
@@ -172,7 +172,7 @@ See **[docs/PIPELINE_GUIDE.md](docs/PIPELINE_GUIDE.md)** for detailed script doc
 - **JSON Outline Loading**: ConfigLoader loads modules from `course_outline_*.json` files
 - **Session-Based Structure**: Primary materials generated per session (not per module)
 - **Automatic Outline Discovery**: Scripts search multiple locations for most recent outline
-- **Enhanced Error Handling**: Clear messages when outlines not found with actionable guidance
+- **Error Handling**: Clear messages when outlines not found with actionable guidance
 - **Content Validation System**: Automatic quality checks with [COMPLIANT]/[NEEDS REVIEW] status indicators
 - **Improved Question Parsing**: Supports multiple question formats (Question N:, ## Question N, numbered lists)
 - **Logging Improvements**: Reduced verbosity (~40-50% fewer INFO messages), operation context in request IDs, stream progress at DEBUG level, new helper functions (log_operation_context, log_llm_request_summary)
@@ -555,7 +555,7 @@ if errors:
 
 ### Testing
 - **Test with real Ollama** - Integration tests use actual LLM, skip if unavailable
-- **No mocks ever** - All tests use real implementations (see [tests/AGENTS.md](tests/AGENTS.md))
+- **No mocks ever** - All tests use implementations (see [tests/AGENTS.md](tests/AGENTS.md))
 - **Run tests before committing** - `uv run pytest` should pass
 - **Add tests for new features** - Create `tests/test_<module>.py` if needed
 

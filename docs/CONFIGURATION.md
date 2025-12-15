@@ -1,4 +1,4 @@
-## Configuration Guide
+# Configuration Guide
 
 Complete reference for all configuration files in the educational course Generator.
 

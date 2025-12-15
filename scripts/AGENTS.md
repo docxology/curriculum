@@ -22,7 +22,7 @@ Master Orchestrator             → run_pipeline.py (runs all 6 stages)
 ### 01_setup_environment.py
 **Stage 01: Environment Setup and Validation**
 
-Comprehensive environment validation including system information, dependencies, configuration, and Ollama service.
+Environment validation including system information, dependencies, configuration, and Ollama service.
 
 **What it does**:
 - Reports system information (Python version, platform, disk space)
@@ -53,7 +53,7 @@ uv run python3 scripts/01_setup_environment.py --auto-install --start-ollama
 ```
 
 ### 02_run_tests.py
-**Stage 02: Validation and Comprehensive Testing**
+**Stage 02: Validation and Testing**
 
 Validates configuration and optionally runs pytest suite with detailed reporting.
 
@@ -109,7 +109,7 @@ Generates course outline with LLM. Interactive by default, allowing customizatio
 - **Interactively** prompts for course metadata (name, level, description)
 - Prompts for structure (num_modules, total_sessions)
 - Prompts for content bounds (subtopics, objectives, concepts per session)
-- Generates comprehensive outline using Ollama
+- Generates outline using Ollama
 - Saves both JSON and Markdown formats
 - Outputs to `output/outlines/course_outline_TIMESTAMP.{json,md}`
 
@@ -170,7 +170,7 @@ Generates primary materials for each session: lectures, labs, study notes, diagr
 - Generates content **per session** (not per module)
 - Creates session-based folder structure
 - Generates 5 primary material types per session:
-  1. `lecture.md` - Comprehensive instructional content
+  1. `lecture.md` - Instructional content
   2. `lab.md` - Laboratory exercise with procedures
   3. `study_notes.md` - Concise session summary
   4. `diagram_1.mmd`, `diagram_2.mmd`, ... - Mermaid diagrams (number from config, typically 1-2)
@@ -363,7 +363,7 @@ output/website/
 ### run_pipeline.py
 **Master Orchestrator: Execute All 6 Stages**
 
-Runs all pipeline stages sequentially with comprehensive logging and error handling.
+Runs all pipeline stages sequentially with logging and error handling.
 
 **What it does**:
 - Executes stages 01→06 in order
@@ -778,7 +778,7 @@ uv run python3 scripts/02_run_tests.py --run-tests --include-ollama
 
 ## See Also
 
-- **Complete Guide**: [../docs/PIPELINE_GUIDE.md](../docs/PIPELINE_GUIDE.md) - Comprehensive pipeline documentation
+- **Complete Guide**: [../docs/PIPELINE_GUIDE.md](../docs/PIPELINE_GUIDE.md) - Pipeline documentation
 - **README**: [README.md](README.md) - Human-readable script reference
 - **Configuration**: [../config/AGENTS.md](../config/AGENTS.md) - How scripts use configs
 - **Architecture**: [../docs/ARCHITECTURE.md](../docs/ARCHITECTURE.md) - System design

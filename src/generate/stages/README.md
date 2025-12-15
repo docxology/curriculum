@@ -8,7 +8,7 @@ Course outline generation stage.
 
 ## Overview
 
-This module provides the first stage of the course generation pipeline: creating comprehensive, structured course outlines. The `OutlineGenerator` creates both JSON-structured data and markdown-formatted documents.
+This module provides the first stage of the course generation pipeline: creating structured course outlines. The `OutlineGenerator` creates both JSON-structured data and markdown-formatted documents.
 
 ## OutlineGenerator
 
@@ -105,7 +105,7 @@ uv run pytest tests/test_outline_generator.py -v
 
 ## See Also
 
-- **For AI Agents**: [AGENTS.md](AGENTS.md) - Complete API reference
+- **For AI Agents**: [AGENTS.md](AGENTS.md) - API reference
 - **Parser**: [../processors/README.md](../processors/README.md) - Parse outlines
 - **Pipeline**: [../orchestration/README.md](../orchestration/README.md) - Full workflow
 - **Scripts**: [../../../scripts/README.md](../../../scripts/README.md) - CLI usage

@@ -1,6 +1,6 @@
 # Pipeline Orchestration
 
-Complete workflow coordination for course generation.
+Workflow coordination for course generation.
 
 ## Files
 
@@ -89,7 +89,7 @@ uv run pytest tests/test_pipeline.py -v
 
 ## See Also
 
-- **For AI Agents**: [AGENTS.md](AGENTS.md) - Complete API reference
+- **For AI Agents**: [AGENTS.md](AGENTS.md) - API reference
 - **Pipeline Guide**: [../../../docs/PIPELINE_GUIDE.md](../../../docs/PIPELINE_GUIDE.md)
 - **Scripts**: [../../../scripts/README.md](../../../scripts/README.md)
 

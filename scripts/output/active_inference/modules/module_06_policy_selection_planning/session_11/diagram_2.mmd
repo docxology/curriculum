@@ -1,0 +1,19 @@
+graph TD
+    A[RL Agent] --> B(Reward Function Definition)
+    B --> C{Environment Interaction}
+    C --> D{Reward Calculation}
+    D --> E{Policy Update}
+    E --> F{Store Experience}
+    F --> G(Reward Function Learning)
+    G --> H{Iterate}
+    H -- Feedback Loop --> B
+    C --> I{Observe State}
+    I --> J{Evaluate Action}
+    J --> K{Receive Reward}
+    K --> D
+    B --> L{Discount Factor}
+    L --> D
+    C -- Parallel Pathway --> M(External Stimuli)
+    M --> C
+    B --> N{Reward Shaping}
+    N --> D

@@ -1,0 +1,19 @@
+graph LR
+    A[Start: Initial Setup] --> B{Calculate Evidence Lower Bound (ELB)?}
+    B -- Yes --> C[ELB = ELB_Value]
+    B -- No --> D[Alternative Estimation Method]
+    D --> C
+    C --> E[Apply ELB to Model]
+    E --> F{Model Validated?}
+    F -- Yes --> G[Model Refined]
+    F -- No --> H[Re-evaluate Assumptions]
+    H --> I[Adjust ELB Calculation]
+    I --> B
+    B --> J[Output ELB & Model]
+    J --> K[End: Final Result]
+    E -.-> L[Sensitivity Analysis]
+    L --> E
+    A --> M[Environmental Context: Data Quality]
+    M --> B
+    J --> N[Documentation & Reporting]
+    N --> K

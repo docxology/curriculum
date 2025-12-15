@@ -1,0 +1,7 @@
+graph TD
+    A[Prior Beliefs] --> B{Update Beliefs?};
+    B -- Yes --> C[Posterior Update];
+    C --> D{Convergence?};
+    D -- Yes --> E[Output Estimate];
+    D -- No --> C;
+    E --> F[End];

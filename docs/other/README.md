@@ -6,7 +6,7 @@ Additional documentation files that supplement the main documentation structure.
 
 This directory contains supplementary documentation that doesn't fit into the main `docs/` structure. These may include:
 
-- Experimental or experimental documentation
+- Experimental documentation
 - Reference materials
 - Historical documentation
 - Specialized or domain-specific guides

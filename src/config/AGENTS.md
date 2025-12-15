@@ -313,7 +313,7 @@ def validate_all_configs(self) -> None
 
 ### Loading Modules from JSON Outlines
 
-**NEW**: Modules are now loaded from dynamically-generated JSON outlines instead of static YAML configuration.
+Modules are loaded from dynamically-generated JSON outlines instead of static YAML configuration.
 
 ```python
 from src.config.loader import ConfigLoader
@@ -401,7 +401,7 @@ def _find_latest_outline(self) -> Optional[Path]:
 
 ### Using Course Templates
 
-**NEW**: Course templates allow you to use pre-configured course settings from `config/courses/` directory.
+Course templates allow you to use pre-configured course settings from `config/courses/` directory.
 
 ```python
 from src.config.loader import ConfigLoader

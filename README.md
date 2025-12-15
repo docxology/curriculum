@@ -218,7 +218,7 @@ See **[docs/FORMATS.md](docs/FORMATS.md)** for complete details.
 
 ## Core Principles
 
-- **Real implementations only** - No mocks in tests
+- **Implementations only** - No mocks in tests
 - **Configuration-driven** - YAML controls all behavior
 - **Text-based** - All formats human-editable and git-friendly
 - **Modular design** - Clear separation of concerns

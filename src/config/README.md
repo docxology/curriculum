@@ -58,8 +58,8 @@ output_paths = loader.get_output_paths()
 
 **Accessors**:
 - `get_course_info()` - Get course metadata
-- `get_modules_from_outline([path])` - **NEW**: Load modules from JSON outline
-- `get_module_by_id_from_outline(id, [path])` - **NEW**: Load specific module from JSON outline
+- `get_modules_from_outline([path])` - Load modules from JSON outline
+- `get_module_by_id_from_outline(id, [path])` - Load specific module from JSON outline
 - `get_modules([from_outline], [path])` - Get all modules (loads from outline by default)
 - `get_module_by_id(id, [from_outline], [path])` - Get specific module (loads from outline by default)
 - `get_llm_config()` - Get full LLM configuration (including outline_generation settings)

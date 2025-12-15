@@ -1,0 +1,21 @@
+graph TD
+    A([Start]) --> B{Initialization}
+    B --> C[Sample Data Generation]
+    C --> D{Prior Beliefs}
+    D --> E[Posterior Update]
+    E --> F{Convergence Check?}
+    F -- Yes --> G[Output Estimate]
+    F -- No --> H[Iterate - Return to E]
+    H --> E
+    C --> I{Model Selection}
+    I --> J[Parameter Learning]
+    J --> K[Update Model]
+    K --> L{Re-evaluate}
+    L -- Yes --> J
+    L -- No --> M[Output Best Model]
+    M --> N[End]
+    N -- Feedback --> B
+    B --> C
+    I --> J
+    J --> K
+    K --> L

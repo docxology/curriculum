@@ -6,7 +6,7 @@ Comprehensive test coverage for all modules using pytest.
 
 ✅ **Auto-Start Ollama**: Tests automatically attempt to start Ollama if installed  
 ✅ **Graceful Skipping**: Integration tests skip if Ollama/llama3 unavailable  
-✅ **No Mocks**: All tests use real implementations and data  
+✅ **No Mocks**: All tests use implementations and data  
 ✅ **Session-Level Setup**: Ollama started once per test session
 
 ## Test Organization
@@ -75,7 +75,7 @@ uv run pytest -s
 
 **Total Tests**: ~500 | **Test Files**: 25 | **Coverage**: ~30% (unit tests), ~75% (with Ollama integration tests)
 
-**Note**: All tests use real implementations - NO MOCKS. Integration tests require Ollama + gemma3:4b model.
+**Note**: All tests use implementations - NO MOCKS. Integration tests require Ollama + gemma3:4b model.
 
 ### Test Files
 
@@ -85,17 +85,17 @@ uv run pytest -s
 4. `test_content_analysis.py` (35+ tests) - Content analysis utilities with edge cases
 5. `test_content_generators.py` (10 tests) - Lectures, diagrams, questions (requires Ollama)
 6. `test_error_collector.py` (15 tests) - Error collection utilities
-7. `test_helpers_extended.py` (8 tests) - Helper functions
+7. `test_helpers_extended.py` (8 tests) - Additional helper functions
 8. `test_json_outline_integration.py` (10 tests) - JSON outline integration
 9. `test_llm_client.py` (15 tests) - LLM API integration (requires Ollama, retry logic tested implicitly)
-10. `test_logging_setup.py` (38 tests) - Logging utilities (NEW - comprehensive coverage)
+10. `test_logging_setup.py` (38 tests) - Logging utilities
 11. `test_new_generators.py` (7 tests) - Study notes and labs (requires Ollama)
 12. `test_outline_generator.py` (12+ tests) - Outline generation with edge cases (requires Ollama)
 13. `test_outline_generator_noninteractive.py` (15 tests) - Non-interactive outline tests
 14. `test_parser.py` (14 tests) - Outline parsing
 15. `test_parser_edge_cases.py` (15 tests) - Malformed markdown, unicode, boundaries
 16. `test_pipeline.py` (11+ tests) - Full pipeline with expanded integration tests (requires Ollama)
-17. `test_pipeline_extended.py` (20 tests) - Extended pipeline scenarios
+17. `test_pipeline_extended.py` (20 tests) - Additional pipeline scenarios
 18. `test_summary_generator.py` (8 tests) - Summary generation utilities
 19. `test_utils.py` (15 tests) - Utility functions
 20. `test_website_generator.py` (10 tests) - WebsiteGenerator class (initialization, generation, error handling)
@@ -162,7 +162,7 @@ Tests configuration loading and validation:
 - Unicode in configuration files
 - Very large config files
 - Concurrent config loading
-- **NEW**: 15 additional tests for edge cases, unicode, permissions, etc.
+- 15 additional tests for edge cases, unicode, permissions, etc.
 
 ### test_llm_client.py
 Tests Ollama LLM client integration:
@@ -223,14 +223,14 @@ Tests utility functions:
 - Directory management and race conditions
 - Timestamp formatting
 - Path traversal prevention
-- **NEW**: 5 additional tests for edge cases
+- 5 additional tests for edge cases
 
 ### test_helpers_extended.py (13 tests)
-Extended helper function tests:
+Additional helper function tests:
 - Unicode to ASCII conversion
 - Error recovery scenarios
 - Timezone handling
-- **NEW**: 5 additional tests for edge cases
+- 5 additional tests for edge cases
 
 ### test_cleanup.py (45 tests)
 Content cleanup and validation:
@@ -238,7 +238,7 @@ Content cleanup and validation:
 - Placeholder standardization
 - Content validation
 - Batch validation
-- **NEW**: 10 additional tests for unicode, large content, code blocks, etc.
+- 10 additional tests for unicode, large content, code blocks, etc.
 
 ### test_llm_client.py (21 tests)
 LLM client integration and error handling:
@@ -247,9 +247,9 @@ LLM client integration and error handling:
 - Retry logic (connection errors, timeouts, HTTP errors)
 - Timeout handling
 - Streaming responses
-- **NEW**: 10 additional tests for retry logic, error handling, parameter validation
+- 10 additional tests for retry logic, error handling, parameter validation
 
-### test_pipeline_extended.py (**NEW**, 20 tests)
+### test_pipeline_extended.py (20 tests)
 Comprehensive pipeline testing:
 - Multi-module generation (all succeed, partial failures)
 - Empty and very large module counts (0, 1, 100+ modules)
@@ -263,7 +263,7 @@ Comprehensive pipeline testing:
 - Concurrent access
 - Null/None handling
 
-### test_outline_generator_noninteractive.py (**NEW**, 15 tests)
+### test_outline_generator_noninteractive.py (15 tests)
 Non-interactive outline generation:
 - Non-interactive mode with config defaults
 - Module count scenarios (0, 1, 100 modules)
@@ -277,7 +277,7 @@ Non-interactive outline generation:
 - Config defaults handling
 - Edge cases (special characters, unicode)
 
-### test_parser_edge_cases.py (**NEW**, 15 tests)
+### test_parser_edge_cases.py (15 tests)
 Outline parser edge case handling:
 - Malformed markdown headers
 - Missing sections (modules, metadata)
@@ -360,7 +360,7 @@ Test coverage with new comprehensive tests:
 All integration tests pass with real Ollama, significantly increasing coverage for LLM-dependent modules.
 
 **Key Improvements**:
-- **NO MOCKS** - All tests use real implementations
+- **NO MOCKS** - All tests use implementations
 - **Edge case coverage** for unicode, malformed input, boundaries
 - **Error handling** comprehensively tested with real connection attempts
 - **Real-world scenarios** (large outlines, concurrent access, etc.)

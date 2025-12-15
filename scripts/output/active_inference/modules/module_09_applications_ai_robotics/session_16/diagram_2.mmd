@@ -1,0 +1,18 @@
+graph TD
+    A([Start: Robot Perception]) --> B{Sensor Data Acquisition};
+    B --> C{Data Processing & Feature Extraction};
+    C --> D{Localization & Mapping};
+    D --> E{Path Planning};
+    E --> F{Action Execution (Motor Commands)};
+    F --> G{Environment Feedback (New Sensors)};
+    G --> B;
+    E -- ==> Critical Path -- C;
+    C --|Conditional|--> D;
+    D --|Parallel|--> E;
+    B --> H{Obstacle Detection};
+    H --|Optional|--> E;
+    A --> I{Initial State Estimation};
+    I --> B;
+    I --|Feedback|--> A;
+    B --|Error Correction|--> I;
+    H --|Emergency Stop|--> F;

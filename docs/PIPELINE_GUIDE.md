@@ -666,7 +666,7 @@ uv run python3 scripts/04_generate_primary.py --modules 1
 ```bash
 # Generate 3 different outlines
 for i in {1..3}; do
-  uv run python3 scripts/03_generate_outline.py --non-interactive
+  uv run python3 scripts/03_generate_outline.py --no-interactive
   sleep 2  # Brief pause between generations
 done
 
@@ -1383,7 +1383,7 @@ Approximate generation times (with gemma3:4b):
 
 ## Troubleshooting
 
-For comprehensive troubleshooting information, see **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)**.
+For troubleshooting information, see **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)**.
 
 **Common issues**:
 - **Ollama connection errors**: See [TROUBLESHOOTING.md](TROUBLESHOOTING.md#llm-issues)

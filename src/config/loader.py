@@ -362,29 +362,38 @@ class ConfigLoader:
                 logger.debug(f"Could not get course-specific outline directory: {e}")
         
         # 2. Config-specified directory (default, for backward compatibility)
+        config_base_dir = None
         try:
-            output_config = self.get_output_paths()  # No course_name = default paths
-            base_dir = Path(output_config.get('base_directory', 'output'))
-            directories = output_config.get('directories', {})
-            config_outline_dir = base_dir / directories.get('outlines', 'outlines')
+            output_config = self.load_output_config()  # Get raw config, not course-specific
+            base_dir_raw = output_config.get('output', {}).get('base_directory', 'output')
+            config_base_dir = Path(base_dir_raw).resolve()  # Store for comparison (absolute path)
+            directories = output_config.get('output', {}).get('directories', {})
+            config_outline_dir = Path(base_dir_raw) / directories.get('outlines', 'outlines')
             if config_outline_dir not in search_paths:
                 search_paths.append(config_outline_dir)
         except Exception as e:
             logger.debug(f"Could not get config outline directory: {e}")
         
         # 3. Project root output/outlines (backward compatibility)
-        root_outline_dir = Path('output/outlines')
-        if root_outline_dir not in search_paths:
-            search_paths.append(root_outline_dir)
+        # Only add if config uses default base_directory
+        default_base = Path('output').resolve()
+        if not config_base_dir or config_base_dir == default_base:
+            root_outline_dir = Path('output/outlines')
+            if root_outline_dir not in search_paths:
+                search_paths.append(root_outline_dir)
         
         # 4. scripts/output/outlines (common when run from scripts/)
-        scripts_outline_dir = Path('scripts/output/outlines')
-        if scripts_outline_dir not in search_paths:
-            search_paths.append(scripts_outline_dir)
+        # Only add if config uses default base_directory
+        if not config_base_dir or config_base_dir == default_base:
+            scripts_outline_dir = Path('scripts/output/outlines')
+            if scripts_outline_dir not in search_paths:
+                search_paths.append(scripts_outline_dir)
         
         # 5. Discover and search all course-specific directories (for batch processing)
         # When course_name is not provided, search in all course subdirectories
-        if not course_name:
+        # Only do this if config uses default base_directory
+        default_base = Path('output').resolve()
+        if not course_name and (not config_base_dir or config_base_dir == default_base):
             # Search in output/ for course-specific directories
             base_output_dir = Path('output')
             if base_output_dir.exists():
@@ -405,13 +414,33 @@ class ConfigLoader:
                             search_paths.append(course_outlines)
                             logger.debug(f"Added course-specific search path: {course_outlines}")
         
-        # Find all JSON outlines across all search paths
+        # Search config-specified directories first (primary), then fallback locations
+        # This ensures isolated configs only find outlines in their own directories
+        # If config uses non-default base_directory, only search config-specified paths
+        default_base = Path('output').resolve()
+        use_fallback = (not config_base_dir or config_base_dir == default_base)
+        
+        primary_paths = search_paths[:2] if len(search_paths) >= 2 else search_paths[:1]  # First 1-2 are config-specified
+        fallback_paths = search_paths[len(primary_paths):] if len(search_paths) > len(primary_paths) else []
+        
         all_json_files = []
-        for search_dir in search_paths:
+        # Search primary (config-specified) paths first
+        for search_dir in primary_paths:
             if search_dir.exists():
                 json_files = list(search_dir.glob('course_outline_*.json'))
                 all_json_files.extend(json_files)
                 logger.debug(f"Searched {search_dir}: found {len(json_files)} JSON outline(s)")
+        
+        # Only search fallback paths if nothing found in primary paths AND config uses default base
+        if not all_json_files and fallback_paths and use_fallback:
+            logger.debug("No outlines found in config-specified directories, checking fallback locations")
+            for search_dir in fallback_paths:
+                if search_dir.exists():
+                    json_files = list(search_dir.glob('course_outline_*.json'))
+                    all_json_files.extend(json_files)
+                    logger.debug(f"Searched {search_dir}: found {len(json_files)} JSON outline(s)")
+        elif not all_json_files and not use_fallback:
+            logger.debug("Config uses non-default base_directory, skipping fallback location search")
         
         if not all_json_files:
             logger.warning("No JSON outline found in any search location:")

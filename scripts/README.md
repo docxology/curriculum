@@ -62,13 +62,13 @@ flowchart TD
     C --> M
 ```
 
-See [docs/PIPELINE_GUIDE.md](../docs/PIPELINE_GUIDE.md) for comprehensive pipeline documentation.
+See [docs/PIPELINE_GUIDE.md](../docs/PIPELINE_GUIDE.md) for pipeline documentation.
 
 ## Scripts
 
 ### Stage 01: `01_setup_environment.py`
 
-Comprehensive environment setup and validation with detailed system reporting.
+Environment setup and validation with detailed system reporting.
 
 **Usage**:
 ```bash
@@ -91,7 +91,7 @@ uv run python3 scripts/01_setup_environment.py --verbose
 - **Configuration Validation**: Validates all YAML files, reports module count and details
 - **Output Structure**: Ensures all output directories exist, counts existing files
 - **Ollama Service**: Checks service status, lists all available models, validates configured model
-- **Summary Report**: Comprehensive environment readiness summary
+- **Summary Report**: Environment readiness summary
 
 **Arguments**:
 - `--auto-install` - Install dependencies with uv
@@ -146,7 +146,7 @@ Overall Status: ✓ READY
 
 ### Stage 02: `02_run_tests.py`
 
-Validation and comprehensive test reporting.
+Validation and test reporting.
 
 **Usage**:
 ```bash
@@ -242,7 +242,7 @@ uv run python3 scripts/03_generate_outline.py --no-interactive
 **What it does**:
 - Loads course configuration
 - Interactively prompts for course metadata (or uses defaults)
-- Generates comprehensive outline using Ollama
+- Generates outline using Ollama
 - Saves to `output/outlines/course_outline_TIMESTAMP.md`
 
 **Arguments**:
@@ -285,7 +285,7 @@ uv run python3 scripts/04_generate_primary.py --all --sessions 3
 **Arguments**:
 - `--all` - Generate for all modules from outline
 - `--modules ID [ID ...]` - Generate for specific module IDs
-- `--outline PATH` - **NEW**: Path to specific outline JSON (default: most recent in output/outlines/ or scripts/output/outlines/)
+- `--outline PATH` - Path to specific outline JSON (default: most recent in output/outlines/ or scripts/output/outlines/)
 - `--sessions N` - Override number of sessions per module
 - `--config-dir PATH` - Custom configuration directory
 
@@ -355,7 +355,7 @@ uv run python3 scripts/05_generate_secondary.py --all --validate
 - `--all` - Generate for all modules (default if no --modules)
 - `--modules ID [ID ...]` - Generate for specific module IDs
 - `--types TYPE [TYPE ...]` - Specific types to generate (default: all 6 types)
-- `--outline PATH` - **NEW**: Path to specific outline JSON (default: most recent)
+- `--outline PATH` - Path to specific outline JSON (default: most recent)
 - `--validate` - Validate generated content for quality issues
 - `--dry-run` - Show what would be generated without calling LLM
 - `--config-dir PATH` - Custom configuration directory
@@ -581,7 +581,7 @@ uv run python3 scripts/04_generate_primary.py --modules <module_id>
 
 ## Documentation
 
-- **Comprehensive Guide**: [docs/PIPELINE_GUIDE.md](../docs/PIPELINE_GUIDE.md)
+- **Complete Guide**: [docs/PIPELINE_GUIDE.md](../docs/PIPELINE_GUIDE.md)
 - **Content Formats**: [docs/FORMATS.md](../docs/FORMATS.md)
 - **Configuration**: [docs/CONFIGURATION.md](../docs/CONFIGURATION.md)
 - **Architecture**: [docs/ARCHITECTURE.md](../docs/ARCHITECTURE.md)

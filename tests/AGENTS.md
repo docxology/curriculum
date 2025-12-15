@@ -2,17 +2,17 @@
 
 ## Purpose
 
-This directory contains the comprehensive test suite for the educational course Generator. **ALL TESTS USE REAL IMPLEMENTATIONS - NO MOCKS EVER**.
+This directory contains the comprehensive test suite for the educational course Generator. **ALL TESTS USE IMPLEMENTATIONS - NO MOCKS EVER**.
 
 ## Core Philosophy: NO MOCKS
 
-✅ **Real Ollama** - Integration tests use actual LLM API  
-✅ **Real Files** - Tests use actual file I/O  
-✅ **Real Data** - Tests use real configuration and content  
+✅ **Ollama** - Integration tests use actual LLM API  
+✅ **Files** - Tests use actual file I/O  
+✅ **Data** - Tests use actual configuration and content  
 ✅ **Graceful Skipping** - Tests skip if dependencies unavailable  
 ✅ **NO unittest.mock** - Removed from entire codebase  
 
-**Rationale**: Mocks hide integration issues. Real tests catch real problems.
+**Rationale**: Mocks hide integration issues. Tests catch problems.
 
 ## Test Statistics
 
@@ -28,7 +28,7 @@ This directory contains the comprehensive test suite for the educational course 
 2. **test_parser.py** (14 tests) - Outline parsing from markdown
 3. **test_parser_edge_cases.py** (15 tests) - Malformed markdown, unicode, boundaries
 4. **test_utils.py** (15 tests) - Utility functions, file I/O
-5. **test_helpers_extended.py** (8 tests) - Extended helper functions
+5. **test_helpers_extended.py** (8 tests) - Additional helper functions
 6. **test_cleanup.py** (35 tests) - Content cleanup and validation
 7. **test_outline_generator_noninteractive.py** (15 tests) - Non-interactive outline tests
 8. **test_content_analysis.py** (10 tests) - Content analysis utilities
@@ -53,7 +53,7 @@ This directory contains the comprehensive test suite for the educational course 
 22. **test_new_generators.py** (7 tests) - Study notes and labs generation
 23. **test_pipeline.py** (11+ tests) - Full pipeline orchestration with expanded tests
 24. **test_json_outline_integration.py** (10 tests) - JSON outline integration
-25. **test_pipeline_extended.py** (20 tests) - Extended pipeline scenarios
+25. **test_pipeline_extended.py** (20 tests) - Additional pipeline scenarios
 
 **Total integration tests**: ~89 tests, run in ~150 seconds with Ollama
 
@@ -86,7 +86,7 @@ This directory contains the comprehensive test suite for the educational course 
 
 **Utilities**:
 - `test_utils.py` - Core utility functions
-- `test_helpers_extended.py` - Extended helpers
+- `test_helpers_extended.py` - Additional helpers
 - `test_logging_setup.py` - Logging configuration
 
 **Website Generation**:
@@ -429,7 +429,7 @@ pytest -m "integration"      # Run only integration tests
 
 ## Best Practices
 
-✅ **Use real implementations** - No mocks, ever  
+✅ **Use implementations** - No mocks, ever  
 ✅ **Skip gracefully** - Don't fail on missing dependencies  
 ✅ **Isolate tests** - Each test independent  
 ✅ **Clear assertions** - Specific, meaningful checks  
@@ -489,7 +489,7 @@ pytest -m "integration"      # Run only integration tests
 
 **Utilities**:
 - `test_utils.py` - Core utility functions
-- `test_helpers_extended.py` - Extended helpers
+- `test_helpers_extended.py` - Additional helpers
 - `test_logging_setup.py` - Logging configuration
 
 ### By Speed

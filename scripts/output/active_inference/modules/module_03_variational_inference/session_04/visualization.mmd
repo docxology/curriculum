@@ -1,0 +1,19 @@
+graph TD
+    A[Start: Variational Inference Setup] --> B{Choose Prior Distribution (P(Z))}
+    B -- Gaussian Prior --> C{Sample Z from P(Z)}
+    C --> D{Calculate E[log p(x|Z)]}
+    D -- Optimization Algorithm --> E{Update Parameters (θ)}
+    E --> F{Calculate Posterior Distribution (p(Z|x))}
+    F -- Bayes' Theorem -- G{Approximate Posterior with Mean Field}
+    G -- Symmetry Assumption --> H{Mean Field Approximation: p(Z) = p(z_i | Z)}
+    H --> I{Calculate E[log p(x|Z)}
+    I --> J{Iterate for Multiple Samples}
+    J -- Feedback Loop: Update Parameters (θ) based on Samples --> K{Refine Posterior Approximation}
+    K --> L{Repeat J until Convergence}
+    L --> M{Output: Estimated Posterior Distribution (p(Z|x))}
+    M --> N{End: Mean Field Approximation Complete}
+    B -- Alternative Pathway: Use a Non-Gaussian Prior -- O{Adjust Sampling Process}
+    O --> B
+    N --> P{Convergence Check}
+    P -- Not Converged --> B
+    B --> N

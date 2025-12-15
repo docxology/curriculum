@@ -342,7 +342,7 @@ Each submodule has detailed documentation:
 ## Development Principles
 
 1. **Modular Design** - Clear separation of concerns
-2. **Real Implementations** - No mocks in tests
+2. **Implementations** - No mocks in tests
 3. **Type Hints** - All public functions have type annotations
 4. **Comprehensive Logging** - Logging at all levels
 5. **Error Handling** - Custom exceptions with clear messages

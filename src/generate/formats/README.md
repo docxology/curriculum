@@ -24,7 +24,7 @@ Base class providing:
 - Common initialization pattern
 
 ### LectureGenerator
-Generates comprehensive lecture content (2000-4000 words).
+Generates lecture content (2000-4000 words).
 
 **Methods**:
 - `generate_lecture(module_info)` - Generate lecture
@@ -115,7 +115,7 @@ uv run pytest tests/test_content_generators.py tests/test_new_generators.py -v
 
 ## See Also
 
-- **For AI Agents**: [AGENTS.md](AGENTS.md) - Complete API reference
+- **For AI Agents**: [AGENTS.md](AGENTS.md) - API reference
 - **Format Details**: [../../../docs/FORMATS.md](../../../docs/FORMATS.md)
 - **Pipeline**: [../orchestration/README.md](../orchestration/README.md)
 

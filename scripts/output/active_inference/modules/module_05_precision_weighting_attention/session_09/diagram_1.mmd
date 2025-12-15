@@ -1,0 +1,19 @@
+graph TD
+    A([Attention Filter]) --> B{Sensory Input};
+    B --> C{Feature Extraction};
+    C --> D{Prioritization (Weighting)};
+    D --> E{Selective Response};
+    E --> F{Cognitive Processing};
+    F --> G{Contextual Integration};
+    G --> H{Output/Action};
+    H --> I{Feedback - Re-evaluation};
+    I -- Optional --> B;
+    B -- Optional --> C;
+    C --> D;
+    D --> E;
+    E --> F;
+    F --> G;
+    G --> H;
+    I -- Feedback Loop --> B;
+
+    subgraph Sensory Input

@@ -1,0 +1,18 @@
+graph TD
+    A([Start: Sensory Input]) --> B{Perception: Initial Processing};
+    B -- "Feature Extraction" --> C(Concept Representation);
+    C -- "Contextual Analysis" --> D{Inference: Hypothesis Generation};
+    D -- "Prediction" --> E(Model Prediction);
+    E -- "Compare to Sensory Input" --> F{Mismatch?};
+    F -- "Yes" --> G[Error Signal Generation];
+    G -- "Update Model" --> C;
+    F -- "No" --> H[Action Selection];
+    H -- "Motor Command" --> I[Motor Execution];
+    I --> J(Effect on Environment);
+    J --> K[Sensory Feedback];
+    K --> B;
+    B --> L{Re-evaluate Hypothesis};
+    L -- "New Evidence?" --> H;
+    L -- "No Change" --> K;
+    I -- "Influence on Perception" --> B;
+    J --> A;

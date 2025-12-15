@@ -16,6 +16,13 @@ We will look at what is at hand, and almost at hand, for three areas of Generati
 - 🔬 Research and meta-analysis https://github.com/docxology/literature
 - 📄 Scientific integral/holistic consideration (from notes and codebases to rendered PDF) https://github.com/docxology/template/
 
+## Where We Are
+
+Open for all to fork, contribute, improve! 
+- 📚 Curriculum https://github.com/docxology/curriculum
+- 🔬 Research https://github.com/docxology/literature
+- 📄 Development https://github.com/docxology/template/
+
 ## Where We Are Going
 
 ### The Hill We Are On
@@ -68,7 +75,7 @@ We will look at what is at hand, and almost at hand, for three areas of Generati
 - 🛠️ Tools: Cursor 2.2. Ollama use of llama, qwen, gemma, local LLM models. 
 
 ### 1. 🏗️ Repository Walkthrough
-- 📐 Project structure and architecture
+- 📐 Github README: Project structure and architecture
 - ⚙️ Configuration-driven course generation
 - 🔄 Modular content pipeline
 - 🤖 Integration with Ollama and local LLMs

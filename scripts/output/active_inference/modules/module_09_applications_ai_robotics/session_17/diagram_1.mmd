@@ -1,0 +1,15 @@
+graph TD
+    A([Start: Generator]) --> B{Generator Network};
+    B -- Primary --> C([Discriminator Network]);
+    C -- Critical --> D([Generator Network - Revised]);
+    D -- Feedback --> B;
+    B -- Parallel --> E([Real-World Data Input]);
+    E --> B;
+    C -- Optional --> F([Adversarial Loss Calculation]);
+    F --> C;
+    C --> G([Generator Network - Enhanced]);
+    G --> H([Real-World Data Output]);
+    H --> E;
+    B -- Decision --> I{Convergence?};
+    I -- Yes --> B;
+    I -- No --> F;
