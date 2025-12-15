@@ -1,0 +1,149 @@
+{
+  "course_metadata": {
+    "name": "Sample Biology Course",
+    "level": "Undergraduate Introductory",
+    "duration_weeks": 8,
+    "total_modules": 2,
+    "total_sessions": 6,
+    "description": "A sample biology course covering cell biology and molecular biology fundamentals"
+  },
+  "modules": [
+    {
+      "module_id": 1,
+      "module_name": "Cell Biology",
+      "module_description": "Introduction to cellular structure and function",
+      "sessions": [
+        {
+          "session_number": 1,
+          "session_title": "Introduction to Cells",
+          "subtopics": [
+            "Cell theory",
+            "Cell types",
+            "Cell organization"
+          ],
+          "learning_objectives": [
+            "Understand the basic principles of cell theory",
+            "Distinguish between prokaryotic and eukaryotic cells"
+          ],
+          "key_concepts": [
+            "Cell membrane",
+            "Nucleus",
+            "Organelles"
+          ],
+          "rationale": "This session provides the foundation for understanding cellular biology"
+        },
+        {
+          "session_number": 2,
+          "session_title": "Cell Membrane and Transport",
+          "subtopics": [
+            "Membrane structure",
+            "Passive transport",
+            "Active transport"
+          ],
+          "learning_objectives": [
+            "Describe the fluid mosaic model",
+            "Explain different transport mechanisms"
+          ],
+          "key_concepts": [
+            "Phospholipid bilayer",
+            "Diffusion",
+            "Osmosis"
+          ],
+          "rationale": "Understanding membrane transport is crucial for cellular function"
+        },
+        {
+          "session_number": 3,
+          "session_title": "Cellular Metabolism",
+          "subtopics": [
+            "Cellular respiration",
+            "Photosynthesis",
+            "Energy pathways"
+          ],
+          "learning_objectives": [
+            "Explain the process of cellular respiration",
+            "Compare photosynthesis and respiration"
+          ],
+          "key_concepts": [
+            "ATP",
+            "Glycolysis",
+            "Krebs cycle"
+          ],
+          "rationale": "Metabolism is the core of cellular energy production"
+        }
+      ]
+    },
+    {
+      "module_id": 2,
+      "module_name": "Molecular Biology",
+      "module_description": "Study of molecular mechanisms in biological systems",
+      "sessions": [
+        {
+          "session_number": 4,
+          "session_title": "DNA Structure and Function",
+          "subtopics": [
+            "DNA structure",
+            "DNA replication",
+            "DNA repair"
+          ],
+          "learning_objectives": [
+            "Describe the structure of DNA",
+            "Explain DNA replication"
+          ],
+          "key_concepts": [
+            "Double helix",
+            "Base pairing",
+            "Replication fork"
+          ],
+          "rationale": "DNA is the fundamental molecule of heredity"
+        },
+        {
+          "session_number": 5,
+          "session_title": "Gene Expression",
+          "subtopics": [
+            "Transcription",
+            "RNA processing",
+            "Translation"
+          ],
+          "learning_objectives": [
+            "Describe the central dogma of molecular biology",
+            "Explain the process of transcription and translation"
+          ],
+          "key_concepts": [
+            "mRNA",
+            "Codon",
+            "Ribosome"
+          ],
+          "rationale": "Gene expression is how genetic information becomes functional"
+        },
+        {
+          "session_number": 6,
+          "session_title": "Gene Regulation",
+          "subtopics": [
+            "Transcriptional regulation",
+            "Post-transcriptional regulation",
+            "Epigenetics"
+          ],
+          "learning_objectives": [
+            "Understand mechanisms of gene regulation",
+            "Explain epigenetic modifications"
+          ],
+          "key_concepts": [
+            "Promoter",
+            "Enhancer",
+            "Methylation"
+          ],
+          "rationale": "Gene regulation controls when and how genes are expressed"
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+

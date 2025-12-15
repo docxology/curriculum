@@ -1,0 +1,41 @@
+graph LR
+    Start([Krebs Cycle Initiation])
+    CoA_Input((Citrate))
+    Step1[Condensation: Citrate + Acetyl-CoA]
+    Step2[Isomerization: Isocitrate]
+    Step3[Oxidation 1: α-Ketoglutarate]
+    Step4[Decarboxylation 1: Succinyl-CoA]
+    Step5[Conversion: Succinate]
+    Step6[Conversion: Fumarate]
+    Step7[Hydration: Malate]
+    Step8[Oxidation: Oxaloacetate]
+    Step9[Regeneration: Citrate]
+    NADH1((NADH 1))
+    NADH2((NADH 2))
+    FADH2((FADH2))
+    GOX((Gox Enzyme))
+    CS((Carbonyl Shunt))
+    CoA_Output((CoA))
+    ATP_Output((ATP))
+    O2((O2))
+
+    Start --> CoA_Input
+    CoA_Input --> Step1
+    Step1 --> GOX
+    GOX --> Step2
+    Step2 --> Step3
+    Step3 --> Step4
+    Step4 --> Step5
+    Step5 --> Step6
+    Step6 --> Step7
+    Step7 --> Step8
+    Step8 --> Step9
+    Step9 --> CoA_Output
+    Step8 --> ATP_Output
+    Step7 --> CS
+    CS --> O2
+    ATP_Output --> ATP
+
+    Step1 -- "NAD+" --> NADH1
+    Step8 -- "NAD+" --> NADH2
+    Step7 -- "FAD" --> FADH2

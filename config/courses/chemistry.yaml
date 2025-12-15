@@ -1,0 +1,20 @@
+# Educational Course Configuration - Chemistry
+# Introductory Chemistry course template
+
+course:
+  name: "Introductory Chemistry"
+  subject: "General Chemistry"  # Subject/expertise area
+  description: "Comprehensive introduction covering fundamental concepts and principles of Chemistry, including atomic structure, chemical bonding, and reactions"
+  level: "Undergraduate Introductory"
+  additional_constraints: ""  # Optional: pedagogical, practical, or thematic constraints
+  
+  # Configurable defaults (all overwritable in interactive mode)
+  defaults:
+    num_modules: 3           # Number of modules to generate
+    total_sessions: 6       # Total sessions across all modules
+    sessions_per_module: null  # Auto-calculated if null
+
+
+
+
+

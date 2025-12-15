@@ -1,0 +1,13 @@
+course:
+  name: "Sample Biology Course"
+  description: "A comprehensive introductory biology course"
+  level: "Undergraduate"
+  estimated_duration_weeks: 16
+  defaults:
+    num_modules: 5
+    total_sessions: 15
+    sessions_per_module: null
+
+
+
+

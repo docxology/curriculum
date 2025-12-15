@@ -1,0 +1,30 @@
+2025-12-15 09:54:17,468 - root - INFO - Logging to file: /Users/mini/Documents/GitHub/curriculum/scripts/output/logs/06_website_20251215_095417.log
+2025-12-15 09:54:17,468 - generate_website - INFO - 
+2025-12-15 09:54:17,468 - generate_website - INFO - 🌐 STAGE 06: WEBSITE GENERATION
+2025-12-15 09:54:17,468 - generate_website - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 09:54:17,468 - generate_website - INFO - Generating single HTML website for course materials
+2025-12-15 09:54:17,468 - generate_website - INFO - Output: output/website/index.html
+2025-12-15 09:54:17,468 - generate_website - INFO - 
+2025-12-15 09:54:17,468 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/mini/Documents/GitHub/curriculum/config
+2025-12-15 09:54:17,469 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-15 09:54:17,481 - src.config.loader - INFO - All configurations validated successfully
+2025-12-15 09:54:17,481 - generate_website - INFO - 
+2025-12-15 09:54:17,481 - generate_website - INFO - ⚙️ CONFIGURATION
+2025-12-15 09:54:17,481 - generate_website - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 09:54:17,481 - generate_website - INFO -   • Config Directory: /Users/mini/Documents/GitHub/curriculum/config
+2025-12-15 09:54:17,481 - generate_website - INFO -   • Log File: output/logs/06_website_20251215_095417.log
+2025-12-15 09:54:17,481 - generate_website - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 09:54:17,482 - src.config.loader - INFO - Found most recent outline: /Users/mini/Documents/GitHub/curriculum/scripts/output/biology/outlines/course_outline_20251215_092727.json
+2025-12-15 09:54:17,482 - generate_website - INFO - Using most recent outline: /Users/mini/Documents/GitHub/curriculum/scripts/output/biology/outlines/course_outline_20251215_092727.json
+2025-12-15 09:54:17,482 - generate_website - INFO - 
+2025-12-15 09:54:17,482 - src.website.generator - INFO - Loading outline from: /Users/mini/Documents/GitHub/curriculum/scripts/output/biology/outlines/course_outline_20251215_092727.json
+2025-12-15 09:54:17,482 - src.website.generator - INFO - Found 2 modules in outline
+2025-12-15 09:54:17,482 - src.website.generator - INFO - Using course-specific output directory: output/biology/
+2025-12-15 09:54:17,645 - src.website.generator - INFO - Generating HTML website...
+2025-12-15 09:54:17,646 - src.website.generator - INFO - Website generated: /Users/mini/Documents/GitHub/curriculum/scripts/output/biology/website/index.html
+2025-12-15 09:54:17,646 - generate_website - INFO - 
+2025-12-15 09:54:17,646 - generate_website - INFO -   ✅ SUCCESS: Website generated: /Users/mini/Documents/GitHub/curriculum/scripts/output/biology/website/index.html
+2025-12-15 09:54:17,646 - generate_website - INFO - 
+2025-12-15 09:54:17,646 - generate_website - INFO - You can now open the website in your browser:
+2025-12-15 09:54:17,646 - generate_website - INFO -   file:///Users/mini/Documents/GitHub/curriculum/scripts/output/biology/website/index.html
+2025-12-15 09:54:17,647 - generate_website - INFO - 

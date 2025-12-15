@@ -2,7 +2,11 @@
 
 **Repository**: [https://github.com/docxology/curriculum](https://github.com/docxology/curriculum)
 
-AI-powered educational course materials generator using local Ollama LLM (default: gemma3:4b, configurable).
+Infrastructure for creating custom, modularly configured, legibly generated curricula through the intersection of human expertise and generative AI. Faculty leverage cognitive skills and postures alongside synthetic intelligence tools to curate, validate, and enhance educational content—supporting both manual creation and AI-assisted generation workflows.
+
+This system embodies a recursive collaboration between human judgment (top-down strategy, analytical validation) and synthetic generation (bottom-up tactics, empirical exploration), creating a nested continuum where pedagogical quality emerges through iterative refinement. The balance between what *ought* to be taught and what *is* effectively learnable is continuously negotiated through faculty oversight and AI capability.
+
+Powered by local Ollama LLM (default: gemma3:4b, configurable).
 
 ## Quick Start
 
@@ -50,22 +54,45 @@ uv run python3 scripts/run_pipeline.py --no-interactive --modules 1 2 3
 ### Getting Started
 - **[SETUP.md](SETUP.md)** - Installation, prerequisites, quick test, troubleshooting
 
-### System Documentation  
+### Essential Reading
 - **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System design, modules, data flow, extension points
 - **[docs/PIPELINE_GUIDE.md](docs/PIPELINE_GUIDE.md)** - Pipeline stages, scripts reference, workflows, error handling
 - **[docs/CONFIGURATION.md](docs/CONFIGURATION.md)** - Complete YAML configuration reference
+- **[docs/JSON_OUTLINE.md](docs/JSON_OUTLINE.md)** - JSON outline format, generation, and consumption
+
+### Content & Output
 - **[docs/FORMATS.md](docs/FORMATS.md)** - All content formats (lectures, labs, diagrams, questions, study notes)
+- **[docs/API.md](docs/API.md)** - Complete public API reference for all modules
+
+### Testing & Quality
 - **[docs/TESTING_COVERAGE.md](docs/TESTING_COVERAGE.md)** - Test suite coverage, statistics, and guidelines
+
+### Troubleshooting
+- **[docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** - Comprehensive troubleshooting guide
 
 ### For Developers
 - **[AGENTS.md](AGENTS.md)** - For AI agents: architecture, common tasks, code standards
 - **[docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)** - Contribution guidelines and development workflow
 - **[.cursorrules/README.md](.cursorrules/README.md)** - Development rules (environment, testing, logging, error handling)
 
+### Complete Documentation
+- **[docs/README.md](docs/README.md)** - Complete documentation index with navigation guide
+
 ## System Architecture
 
 ```mermaid
 graph TB
+    subgraph "Human Expertise Layer"
+        Faculty[Faculty: Curators Validators Enhancers]
+        Validation[Pedagogical Validation]
+        Curation[Content Curation]
+    end
+    
+    subgraph "Cognitive Postures"
+        TopDown["Top-Down Strategy (High Road: Analytical Axiomatic)"]
+        BottomUp["Bottom-Up Tactics (Low Road: Empirical Evidential)"]
+    end
+    
     subgraph Scripts
         S1[01_setup] --> S2[02_tests]
         S2 --> S3[03_outline]
@@ -95,6 +122,13 @@ graph TB
         O3[Module Materials]
     end
     
+    Faculty -->|Oversees| Validation
+    Faculty -->|Guides| Curation
+    Validation -->|Informs| TopDown
+    Curation -->|Shapes| BottomUp
+    TopDown -->|Directs| Scripts
+    BottomUp -->|Influences| Scripts
+    
     Scripts -->|Load| Configuration
     Scripts -->|Use| Config
     Config -->|Parse| Configuration
@@ -105,18 +139,18 @@ graph TB
     Formats -->|Generate| O2
     Formats -->|Generate| O3
     
-    LLM -.->|API Calls| Ollama[Ollama Service]
+    O1 -.->|Review| Validation
+    O2 -.->|Review| Validation
+    O3 -.->|Review| Validation
+    Validation -.->|Refine| Pipeline
     
-    style Scripts fill:#e1f5ff
-    style Configuration fill:#e1ffe1
-    style Output fill:#fff4e1
-    style Ollama fill:#ffe1e1
+    LLM -.->|API Calls| Ollama[Ollama Service]
 ```
 
 ## Project Structure
 
 ```
-biology/
+curriculum/
 ├── src/        # Source code (modular)
 │   ├── config/           # Configuration management
 │   ├── llm/              # Ollama LLM client
@@ -141,7 +175,7 @@ biology/
 │   ├── 06_website.py
 │   └── run_pipeline.py
 ├── tests/                # Test suite (~540 tests across 25 files, NO MOCKS)
-├── docs/                 # Comprehensive documentation (8+ files)
+├── docs/                 # Comprehensive documentation (18+ files)
 └── output/               # Generated content (gitignored)
     ├── outlines/         # JSON course outlines (dynamically generated)
     ├── modules/          # Session-based course materials
@@ -200,4 +234,6 @@ See **[.cursorrules/README.md](.cursorrules/README.md)** for complete developmen
 
 ## License
 
-MIT License
+This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-nd/4.0/

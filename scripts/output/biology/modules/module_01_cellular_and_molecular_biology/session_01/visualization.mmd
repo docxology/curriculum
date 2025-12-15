@@ -1,0 +1,45 @@
+graph TD
+    A[Prokaryotic Cell] --> B{DNA Replication};
+    B -- Primary --> C([Binary Fission]);
+    C --> D([Cell Division]);
+    A --> E{Ribosomes};
+    E -- Secondary --> C;
+    A --> F{Cell Wall};
+    F -- Feedback --> C;
+    A --> G{Simple Organelles};
+    G -- Parallel --> C;
+    A --> H{Lack of Membrane-Bound Organelles};
+    H --> I([Smaller Size]);
+    I --> J([Faster Growth]);
+    J --> K{Rapid Reproduction};
+    K --> C;
+
+    subgraph Eukaryotic Cell
+        L([Eukaryotic Cell]) --> M{DNA Transcription};
+        M -- Primary --> N([RNA Processing]);
+        N --> O([Protein Synthesis]);
+        O --> P([Cell Growth & Differentiation]);
+        L --> Q{Membrane-Bound Organelles};
+        Q --> P;
+        L --> R{Complex Organelles};
+        R --> P;
+        L --> S{Larger Size};
+        S --> T([Slower Growth]);
+        T --> U{Controlled Reproduction};
+        U --> V{Cell Specialization};
+        V --> W{Cell Differentiation};
+        W --> V;
+    end
+
+    A --> X{Cell Membrane};
+    X --> Y{Transport Proteins};
+    Y --> Z{Passive Transport};
+    Z --> AA{Diffusion};
+    X --> BB{Active Transport};
+    BB --> CC{ATP Utilization};
+    CC --> DD{Sodium/Potassium Gradient};
+    DD --> EE{Vesicular Transport};
+    EE --> FF{Endocytosis};
+    EE --> GG{Exocytosis};
+    A --> HH{Signal Transduction};
+    HH --> II{Cell Communication};

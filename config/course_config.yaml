@@ -1,0 +1,18 @@
+# Educational Course Configuration
+# Generic course structure for educational materials generation
+# Defaults are for Biology introductory course for ease of testing
+# These will be overridden by the user or LLM during course generation
+
+course:
+  name: "Introductory Biology"
+  subject: "General Biology"  # Subject/expertise area (e.g., "biology", "chemistry", "physics", "mathematics")
+  description: "Comprehensive introduction covering fundamental concepts and principles of Biology"
+  level: "Undergraduate Introductory"
+  additional_constraints: ""  # Optional: pedagogical, practical, or thematic constraints
+  
+  # Configurable defaults (all overwritable in interactive mode)
+  defaults:
+    num_modules: 2           # Number of modules to generate
+    total_sessions: 4       # Total sessions across all modules
+    sessions_per_module: null  # Auto-calculated if null
+

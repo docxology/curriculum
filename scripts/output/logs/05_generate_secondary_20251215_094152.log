@@ -1,0 +1,778 @@
+2025-12-15 09:41:52,152 - root - INFO - Logging to file: /Users/mini/Documents/GitHub/curriculum/scripts/output/logs/05_generate_secondary_20251215_094152.log
+2025-12-15 09:41:52,152 - generate_secondary - INFO - 
+2025-12-15 09:41:52,152 - generate_secondary - INFO - 🔬 STAGE 05: SECONDARY MATERIALS (Session-Level Synthesis)
+2025-12-15 09:41:52,152 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 09:41:52,152 - generate_secondary - INFO - Generating materials PER SESSION (with full session context)
+2025-12-15 09:41:52,152 - generate_secondary - INFO - Reading all content from: [course-specific]/modules/module_XX/session_YY/
+2025-12-15 09:41:52,152 - generate_secondary - INFO - Output structure: [course-specific]/modules/module_XX/session_YY/[type].md
+2025-12-15 09:41:52,152 - generate_secondary - INFO - 
+2025-12-15 09:41:52,152 - generate_secondary - INFO - SECONDARY TYPES GENERATED PER SESSION:
+2025-12-15 09:41:52,152 - generate_secondary - INFO -   1. application.md - Real-world applications and case studies
+2025-12-15 09:41:52,152 - generate_secondary - INFO -   2. extension.md - Advanced topics beyond core curriculum
+2025-12-15 09:41:52,152 - generate_secondary - INFO -   3. visualization.mmd - Additional diagrams and concept maps (Mermaid format)
+2025-12-15 09:41:52,152 - generate_secondary - INFO -   4. integration.md - Cross-module connections and synthesis
+2025-12-15 09:41:52,152 - generate_secondary - INFO -   5. investigation.md - Research questions and experiments
+2025-12-15 09:41:52,152 - generate_secondary - INFO -   6. open_questions.md - Current scientific debates and frontiers
+2025-12-15 09:41:52,152 - generate_secondary - INFO - 
+2025-12-15 09:41:52,152 - generate_secondary - INFO - 
+2025-12-15 09:41:52,152 - generate_secondary - INFO - ⚙️ CONFIGURATION
+2025-12-15 09:41:52,152 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 09:41:52,152 - generate_secondary - INFO -   • Content Validation: DISABLED
+2025-12-15 09:41:52,152 - generate_secondary - INFO -   • Dry Run: DISABLED
+2025-12-15 09:41:52,152 - generate_secondary - INFO -   • Log File: output/logs/05_generate_secondary_20251215_094152.log
+2025-12-15 09:41:52,152 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 09:41:52,152 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/mini/Documents/GitHub/curriculum/config
+2025-12-15 09:41:52,153 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-15 09:41:52,165 - src.config.loader - INFO - All configurations validated successfully
+2025-12-15 09:41:52,165 - generate_secondary - INFO - Using most recent outline from output/outlines/ or scripts/output/outlines/
+2025-12-15 09:41:52,165 - src.config.loader - INFO - Found most recent outline: /Users/mini/Documents/GitHub/curriculum/scripts/output/biology/outlines/course_outline_20251215_092727.json
+2025-12-15 09:41:52,166 - src.config.loader - INFO - Found most recent outline: /Users/mini/Documents/GitHub/curriculum/scripts/output/biology/outlines/course_outline_20251215_092727.json
+2025-12-15 09:41:52,166 - src.config.loader - INFO - Loaded 2 modules from outline: course_outline_20251215_092727.json
+2025-12-15 09:41:52,166 - generate_secondary - INFO - Using course-specific output directory: output/biology/
+2025-12-15 09:41:52,166 - generate_secondary - INFO - Processing ALL modules
+2025-12-15 09:41:52,166 - generate_secondary - INFO - Processing 2 modules (4 total sessions)
+2025-12-15 09:41:52,166 - generate_secondary - INFO - Secondary types: application, extension, visualization, integration, investigation, open_questions
+2025-12-15 09:41:52,166 - src.llm.client - INFO - Initialized OllamaClient: model=gemma3:4b, url=http://localhost:11434/api/generate
+2025-12-15 09:41:52,166 - generate_secondary - INFO - 
+============================================================
+2025-12-15 09:41:52,166 - generate_secondary - INFO - [1/2] Module 1: Cellular and Molecular Biology (2 sessions)
+2025-12-15 09:41:52,166 - generate_secondary - INFO - ============================================================
+2025-12-15 09:41:52,166 - generate_secondary - INFO - 
+  Session 1/4: Cell Structure & Function
+2025-12-15 09:41:52,168 - generate_secondary - INFO - Generating application for session 1: Cell Structure & Function...
+2025-12-15 09:41:52,168 - src.llm.client - INFO - [app:c4b0b8] 🚀 app | m=gemma3:4b | p=28765c | t=150s
+2025-12-15 09:41:52,168 - src.llm.client - INFO - [app:c4b0b8] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:41:52,168 - src.llm.client - INFO - [app:c4b0b8] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:41:52,173 - src.llm.client - INFO - [app:c4b0b8] Sending request to Ollama: model=gemma3:4b, operation=application, payload=30557 bytes, prompt=28765 chars
+2025-12-15 09:41:52,173 - src.llm.client - INFO - [app:c4b0b8] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:42:01,637 - src.llm.request_handler - INFO - [app:c4b0b8] ✓ Done 9.46s
+2025-12-15 09:42:01,637 - src.llm.client - INFO - [app:c4b0b8] ✅ HTTP 200 in 9.46s
+2025-12-15 09:42:01,637 - src.llm.client - INFO - [app:c4b0b8] 📡 Stream active (200)
+2025-12-15 09:42:01,637 - src.llm.client - INFO - [app:c4b0b8] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:42:03,666 - src.llm.client - INFO - [app:c4b0b8] 📊 2.0s: 357c @176c/s (69ch, ~89t @44t/s)
+2025-12-15 09:42:05,692 - src.llm.client - INFO - [app:c4b0b8] 📊 4.1s: 779c @192c/s (138ch, ~195t @48t/s)
+2025-12-15 09:42:07,721 - src.llm.client - INFO - [app:c4b0b8] 📊 6.1s: 1189c @195c/s (207ch, ~297t @49t/s)
+2025-12-15 09:42:09,722 - src.llm.client - INFO - [app:c4b0b8] 📊 8.1s: 1617c @200c/s (275ch, ~404t @50t/s)
+2025-12-15 09:42:11,725 - src.llm.client - INFO - [app:c4b0b8] 📊 10.1s: 2076c @206c/s (343ch, ~519t @51t/s)
+2025-12-15 09:42:13,730 - src.llm.client - INFO - [app:c4b0b8] 📊 12.1s: 2475c @205c/s (411ch, ~619t @51t/s)
+2025-12-15 09:42:15,736 - src.llm.client - INFO - [app:c4b0b8] 📊 14.1s: 2888c @205c/s (479ch, ~722t @51t/s)
+2025-12-15 09:42:17,762 - src.llm.client - INFO - [app:c4b0b8] 📊 16.1s: 3325c @206c/s (547ch, ~831t @52t/s)
+2025-12-15 09:42:19,771 - src.llm.client - INFO - [app:c4b0b8] 📊 18.1s: 3738c @206c/s (615ch, ~934t @52t/s)
+2025-12-15 09:42:21,780 - src.llm.client - INFO - [app:c4b0b8] 📊 20.1s: 4152c @206c/s (683ch, ~1038t @52t/s)
+2025-12-15 09:42:23,647 - src.llm.client - INFO - [app:c4b0b8] ✓ Done 31.48s: 4420c (~568w @140c/s)
+2025-12-15 09:42:23,650 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-15 09:42:23,651 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-15 09:42:23,651 - generate_secondary - INFO -     - Length: 4274 chars, 549 words
+2025-12-15 09:42:23,651 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-15 09:42:23,651 - generate_secondary - INFO -     - Applications: 5
+2025-12-15 09:42:23,651 - generate_secondary - INFO -     - Avg words per application: 108
+2025-12-15 09:42:23,651 - generate_secondary - WARNING - [WARNING] Application 1 has 138 words (require 150-200, need 12 more words) ⚠️
+2025-12-15 09:42:23,651 - generate_secondary - WARNING - [WARNING] Application 2 has 110 words (require 150-200, need 40 more words) ⚠️
+2025-12-15 09:42:23,651 - generate_secondary - WARNING - [WARNING] Application 3 has 105 words (require 150-200, need 45 more words) ⚠️
+2025-12-15 09:42:23,651 - generate_secondary - WARNING - [WARNING] Application 4 has 90 words (require 150-200, need 60 more words) ⚠️
+2025-12-15 09:42:23,651 - generate_secondary - WARNING - [WARNING] Application 5 has 96 words (require 150-200, need 54 more words) ⚠️
+2025-12-15 09:42:23,651 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_01/application.md
+2025-12-15 09:42:23,651 - generate_secondary - INFO - Generating extension for session 1: Cell Structure & Function...
+2025-12-15 09:42:23,651 - src.llm.client - INFO - [ext:eb6876] 🚀 ext | m=gemma3:4b | p=28049c | t=120s
+2025-12-15 09:42:23,651 - src.llm.client - INFO - [ext:eb6876] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:42:23,651 - src.llm.client - INFO - [ext:eb6876] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:42:23,653 - src.llm.client - INFO - [ext:eb6876] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=32993 bytes, prompt=28049 chars
+2025-12-15 09:42:23,653 - src.llm.client - INFO - [ext:eb6876] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:42:33,103 - src.llm.request_handler - INFO - [ext:eb6876] ✓ Done 9.45s
+2025-12-15 09:42:33,103 - src.llm.client - INFO - [ext:eb6876] ✅ HTTP 200 in 9.45s
+2025-12-15 09:42:33,103 - src.llm.client - INFO - [ext:eb6876] 📡 Stream active (200)
+2025-12-15 09:42:33,103 - src.llm.client - INFO - [ext:eb6876] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:42:35,131 - src.llm.client - INFO - [ext:eb6876] 📊 2.0s: 392c @193c/s (69ch, ~98t @48t/s)
+2025-12-15 09:42:37,156 - src.llm.client - INFO - [ext:eb6876] 📊 4.1s: 850c @210c/s (138ch, ~212t @52t/s)
+2025-12-15 09:42:39,157 - src.llm.client - INFO - [ext:eb6876] 📊 6.1s: 1269c @210c/s (206ch, ~317t @52t/s)
+2025-12-15 09:42:41,161 - src.llm.client - INFO - [ext:eb6876] 📊 8.1s: 1619c @201c/s (274ch, ~405t @50t/s)
+2025-12-15 09:42:43,162 - src.llm.client - INFO - [ext:eb6876] 📊 10.1s: 2036c @202c/s (342ch, ~509t @51t/s)
+2025-12-15 09:42:45,166 - src.llm.client - INFO - [ext:eb6876] 📊 12.1s: 2483c @206c/s (410ch, ~621t @51t/s)
+2025-12-15 09:42:47,170 - src.llm.client - INFO - [ext:eb6876] 📊 14.1s: 2875c @204c/s (478ch, ~719t @51t/s)
+2025-12-15 09:42:49,179 - src.llm.client - INFO - [ext:eb6876] 📊 16.1s: 3238c @201c/s (546ch, ~810t @50t/s)
+2025-12-15 09:42:51,184 - src.llm.client - INFO - [ext:eb6876] 📊 18.1s: 3650c @202c/s (614ch, ~912t @50t/s)
+2025-12-15 09:42:53,190 - src.llm.client - INFO - [ext:eb6876] 📊 20.1s: 3887c @194c/s (682ch, ~972t @48t/s)
+2025-12-15 09:42:55,200 - src.llm.client - INFO - [ext:eb6876] 📊 22.1s: 4152c @188c/s (750ch, ~1038t @47t/s)
+2025-12-15 09:42:55,975 - src.llm.client - INFO - [ext:eb6876] ✓ Done 32.32s: 4229c (~563w @131c/s)
+2025-12-15 09:42:55,977 - src.generate.processors.cleanup - INFO - Cleanup complete: 3 issues before, 0 issues after
+2025-12-15 09:42:55,977 - generate_secondary - INFO - [NEEDS REVIEW] Extension generated ⚠️
+2025-12-15 09:42:55,977 - generate_secondary - INFO -     - Length: 4153 chars, 551 words
+2025-12-15 09:42:55,977 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-15 09:42:55,977 - generate_secondary - INFO -     - Topics: 6
+2025-12-15 09:42:55,977 - generate_secondary - INFO -     - Avg words per topic: 87
+2025-12-15 09:42:55,977 - generate_secondary - WARNING - [WARNING] Too many topics (6, maximum 4, 2 excess - consider consolidating or removing less critical topics) ⚠️
+2025-12-15 09:42:55,977 - generate_secondary - WARNING - [WARNING] Topic 1 has 163 words (exceeds 150 by 13 words - consider condensing) ⚠️
+2025-12-15 09:42:55,977 - generate_secondary - WARNING - [WARNING] Topic 3 has 196 words (exceeds 150 by 46 words - consider condensing) ⚠️
+2025-12-15 09:42:55,977 - generate_secondary - WARNING - [WARNING] Topic 4 has 1 words (require 100-150, need 99 more words) ⚠️
+2025-12-15 09:42:55,977 - generate_secondary - WARNING - [WARNING] Topic 5 has 1 words (require 100-150, need 99 more words) ⚠️
+2025-12-15 09:42:55,977 - generate_secondary - WARNING - [WARNING] Topic 6 has 16 words (require 100-150, need 84 more words) ⚠️
+2025-12-15 09:42:55,977 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-15 09:42:55,977 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-15 09:42:55,978 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_01/extension.md
+2025-12-15 09:42:55,978 - generate_secondary - INFO - Generating visualization for session 1: Cell Structure & Function...
+2025-12-15 09:42:55,978 - src.llm.client - INFO - [viz:cc931b] 🚀 viz | m=gemma3:4b | p=27009c | t=120s
+2025-12-15 09:42:55,978 - src.llm.client - INFO - [viz:cc931b] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:42:55,978 - src.llm.client - INFO - [viz:cc931b] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:42:55,979 - src.llm.client - INFO - [viz:cc931b] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=31275 bytes, prompt=27009 chars
+2025-12-15 09:42:55,979 - src.llm.client - INFO - [viz:cc931b] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:43:05,413 - src.llm.request_handler - INFO - [viz:cc931b] ✓ Done 9.43s
+2025-12-15 09:43:05,413 - src.llm.client - INFO - [viz:cc931b] ✅ HTTP 200 in 9.43s
+2025-12-15 09:43:05,413 - src.llm.client - INFO - [viz:cc931b] 📡 Stream active (200)
+2025-12-15 09:43:05,414 - src.llm.client - INFO - [viz:cc931b] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:43:07,422 - src.llm.client - INFO - [viz:cc931b] 📊 2.0s: 290c @144c/s (68ch, ~72t @36t/s)
+2025-12-15 09:43:09,422 - src.llm.client - INFO - [viz:cc931b] 📊 4.0s: 497c @124c/s (136ch, ~124t @31t/s)
+2025-12-15 09:43:11,440 - src.llm.client - INFO - [viz:cc931b] 📊 6.0s: 733c @122c/s (204ch, ~183t @30t/s)
+2025-12-15 09:43:13,444 - src.llm.client - INFO - [viz:cc931b] 📊 8.0s: 988c @123c/s (272ch, ~247t @31t/s)
+2025-12-15 09:43:15,445 - src.llm.client - INFO - [viz:cc931b] 📊 10.0s: 1231c @123c/s (340ch, ~308t @31t/s)
+2025-12-15 09:43:17,469 - src.llm.client - INFO - [viz:cc931b] 📊 12.1s: 1467c @122c/s (408ch, ~367t @30t/s)
+2025-12-15 09:43:19,474 - src.llm.client - INFO - [viz:cc931b] 📊 14.1s: 1772c @126c/s (476ch, ~443t @32t/s)
+2025-12-15 09:43:20,313 - src.llm.client - INFO - [viz:cc931b] ✓ Done 24.34s: 1845c (~247w @76c/s)
+2025-12-15 09:43:20,314 - src.generate.processors.cleanup - INFO - Cleanup complete: 2 issues before, 0 issues after
+2025-12-15 09:43:20,314 - generate_secondary - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-15 09:43:20,314 - generate_secondary - INFO -     - Length: 1365 chars (cleaned: 1365 chars)
+2025-12-15 09:43:20,314 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:43:20,314 - generate_secondary - INFO - [OK] Elements: 80 total (nodes: 35, connections: 45) ✓
+2025-12-15 09:43:20,314 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_01/visualization.mmd
+2025-12-15 09:43:20,314 - generate_secondary - INFO - Generating integration for session 1: Cell Structure & Function...
+2025-12-15 09:43:20,315 - src.llm.client - INFO - [int:8b270d] 🚀 int | m=gemma3:4b | p=28358c | t=150s
+2025-12-15 09:43:20,315 - src.llm.client - INFO - [int:8b270d] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:43:20,315 - src.llm.client - INFO - [int:8b270d] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:43:20,316 - src.llm.client - INFO - [int:8b270d] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=33641 bytes, prompt=28358 chars
+2025-12-15 09:43:20,316 - src.llm.client - INFO - [int:8b270d] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:43:29,752 - src.llm.request_handler - INFO - [int:8b270d] ✓ Done 9.44s
+2025-12-15 09:43:29,752 - src.llm.client - INFO - [int:8b270d] ✅ HTTP 200 in 9.44s
+2025-12-15 09:43:29,752 - src.llm.client - INFO - [int:8b270d] 📡 Stream active (200)
+2025-12-15 09:43:29,753 - src.llm.client - INFO - [int:8b270d] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:43:31,754 - src.llm.client - INFO - [int:8b270d] 📊 2.0s: 368c @184c/s (68ch, ~92t @46t/s)
+2025-12-15 09:43:33,781 - src.llm.client - INFO - [int:8b270d] 📊 4.0s: 756c @188c/s (137ch, ~189t @47t/s)
+2025-12-15 09:43:35,810 - src.llm.client - INFO - [int:8b270d] 📊 6.1s: 1182c @195c/s (206ch, ~296t @49t/s)
+2025-12-15 09:43:37,811 - src.llm.client - INFO - [int:8b270d] 📊 8.1s: 1618c @201c/s (274ch, ~404t @50t/s)
+2025-12-15 09:43:39,840 - src.llm.client - INFO - [int:8b270d] 📊 10.1s: 2073c @206c/s (343ch, ~518t @51t/s)
+2025-12-15 09:43:41,845 - src.llm.client - INFO - [int:8b270d] 📊 12.1s: 2307c @191c/s (411ch, ~577t @48t/s)
+2025-12-15 09:43:43,857 - src.llm.client - INFO - [int:8b270d] 📊 14.1s: 2629c @186c/s (468ch, ~657t @47t/s)
+2025-12-15 09:43:43,857 - src.llm.client - INFO - [int:8b270d] ✓ Done 23.54s: 2629c (~351w @112c/s)
+2025-12-15 09:43:43,858 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:43:43,859 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-15 09:43:43,859 - generate_secondary - INFO -     - Length: 2626 chars, 351 words
+2025-12-15 09:43:43,859 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-15 09:43:43,859 - generate_secondary - INFO -     - Connections: 16
+2025-12-15 09:43:43,859 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-15 09:43:43,859 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_01/integration.md
+2025-12-15 09:43:43,859 - generate_secondary - INFO - Generating investigation for session 1: Cell Structure & Function...
+2025-12-15 09:43:43,859 - src.llm.client - INFO - [inv:55dfc8] 🚀 inv | m=gemma3:4b | p=27271c | t=150s
+2025-12-15 09:43:43,859 - src.llm.client - INFO - [inv:55dfc8] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:43:43,859 - src.llm.client - INFO - [inv:55dfc8] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:43:43,861 - src.llm.client - INFO - [inv:55dfc8] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=31497 bytes, prompt=27271 chars
+2025-12-15 09:43:43,861 - src.llm.client - INFO - [inv:55dfc8] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:43:53,295 - src.llm.request_handler - INFO - [inv:55dfc8] ✓ Done 9.43s
+2025-12-15 09:43:53,295 - src.llm.client - INFO - [inv:55dfc8] ✅ HTTP 200 in 9.43s
+2025-12-15 09:43:53,295 - src.llm.client - INFO - [inv:55dfc8] 📡 Stream active (200)
+2025-12-15 09:43:53,295 - src.llm.client - INFO - [inv:55dfc8] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:43:55,303 - src.llm.client - INFO - [inv:55dfc8] 📊 2.0s: 342c @170c/s (68ch, ~86t @43t/s)
+2025-12-15 09:43:57,330 - src.llm.client - INFO - [inv:55dfc8] 📊 4.0s: 796c @197c/s (137ch, ~199t @49t/s)
+2025-12-15 09:43:59,358 - src.llm.client - INFO - [inv:55dfc8] 📊 6.1s: 1147c @189c/s (206ch, ~287t @47t/s)
+2025-12-15 09:44:01,387 - src.llm.client - INFO - [inv:55dfc8] 📊 8.1s: 1572c @194c/s (275ch, ~393t @49t/s)
+2025-12-15 09:44:03,402 - src.llm.client - INFO - [inv:55dfc8] 📊 10.1s: 1981c @196c/s (343ch, ~495t @49t/s)
+2025-12-15 09:44:05,406 - src.llm.client - INFO - [inv:55dfc8] 📊 12.1s: 2332c @193c/s (411ch, ~583t @48t/s)
+2025-12-15 09:44:07,411 - src.llm.client - INFO - [inv:55dfc8] 📊 14.1s: 2715c @192c/s (479ch, ~679t @48t/s)
+2025-12-15 09:44:09,415 - src.llm.client - INFO - [inv:55dfc8] 📊 16.1s: 3067c @190c/s (547ch, ~767t @48t/s)
+2025-12-15 09:44:11,425 - src.llm.client - INFO - [inv:55dfc8] 📊 18.1s: 3466c @191c/s (615ch, ~866t @48t/s)
+2025-12-15 09:44:13,433 - src.llm.client - INFO - [inv:55dfc8] 📊 20.1s: 3838c @191c/s (683ch, ~960t @48t/s)
+2025-12-15 09:44:15,445 - src.llm.client - INFO - [inv:55dfc8] 📊 22.1s: 4171c @188c/s (751ch, ~1043t @47t/s)
+2025-12-15 09:44:17,467 - src.llm.client - INFO - [inv:55dfc8] 📊 24.2s: 4590c @190c/s (819ch, ~1148t @47t/s)
+2025-12-15 09:44:19,501 - src.llm.client - INFO - [inv:55dfc8] 📊 26.2s: 4928c @188c/s (876ch, ~1232t @47t/s)
+2025-12-15 09:44:19,502 - src.llm.client - INFO - [inv:55dfc8] ✓ Done 35.64s: 4928c (~710w @138c/s)
+2025-12-15 09:44:19,503 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-15 09:44:19,504 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-15 09:44:19,504 - generate_secondary - INFO -     - Length: 4912 chars, 708 words
+2025-12-15 09:44:19,504 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-15 09:44:19,504 - generate_secondary - INFO -     - Research questions: 3
+2025-12-15 09:44:19,504 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-15 09:44:19,504 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_01/investigation.md
+2025-12-15 09:44:19,504 - generate_secondary - INFO - Generating open_questions for session 1: Cell Structure & Function...
+2025-12-15 09:44:19,504 - src.llm.client - INFO - [opq:3f28ec] 🚀 opq | m=gemma3:4b | p=27357c | t=150s
+2025-12-15 09:44:19,504 - src.llm.client - INFO - [opq:3f28ec] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:44:19,504 - src.llm.client - INFO - [opq:3f28ec] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:44:19,506 - src.llm.client - INFO - [opq:3f28ec] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=31594 bytes, prompt=27357 chars
+2025-12-15 09:44:19,506 - src.llm.client - INFO - [opq:3f28ec] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:44:28,941 - src.llm.request_handler - INFO - [opq:3f28ec] ✓ Done 9.44s
+2025-12-15 09:44:28,941 - src.llm.client - INFO - [opq:3f28ec] ✅ HTTP 200 in 9.44s
+2025-12-15 09:44:28,941 - src.llm.client - INFO - [opq:3f28ec] 📡 Stream active (200)
+2025-12-15 09:44:28,941 - src.llm.client - INFO - [opq:3f28ec] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:44:30,943 - src.llm.client - INFO - [opq:3f28ec] 📊 2.0s: 371c @185c/s (68ch, ~93t @46t/s)
+2025-12-15 09:44:32,970 - src.llm.client - INFO - [opq:3f28ec] 📊 4.0s: 805c @200c/s (137ch, ~201t @50t/s)
+2025-12-15 09:44:34,970 - src.llm.client - INFO - [opq:3f28ec] 📊 6.0s: 1203c @200c/s (205ch, ~301t @50t/s)
+2025-12-15 09:44:36,972 - src.llm.client - INFO - [opq:3f28ec] 📊 8.0s: 1621c @202c/s (273ch, ~405t @50t/s)
+2025-12-15 09:44:39,001 - src.llm.client - INFO - [opq:3f28ec] 📊 10.1s: 2021c @201c/s (342ch, ~505t @50t/s)
+2025-12-15 09:44:41,006 - src.llm.client - INFO - [opq:3f28ec] 📊 12.1s: 2409c @200c/s (410ch, ~602t @50t/s)
+2025-12-15 09:44:43,009 - src.llm.client - INFO - [opq:3f28ec] 📊 14.1s: 2603c @185c/s (478ch, ~651t @46t/s)
+2025-12-15 09:44:45,095 - src.llm.client - INFO - [opq:3f28ec] 📊 16.2s: 2855c @177c/s (538ch, ~714t @44t/s)
+2025-12-15 09:44:45,096 - src.llm.client - INFO - [opq:3f28ec] ✓ Done 25.59s: 2855c (~388w @112c/s)
+2025-12-15 09:44:45,097 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:44:45,097 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-15 09:44:45,097 - generate_secondary - INFO -     - Length: 2854 chars, 388 words
+2025-12-15 09:44:45,097 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-15 09:44:45,097 - generate_secondary - INFO -     - Open questions: 3
+2025-12-15 09:44:45,097 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-15 09:44:45,098 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_01/open_questions.md
+2025-12-15 09:44:45,098 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-15 09:44:45,098 - generate_secondary - INFO - 
+  Session 2/4: DNA & Protein Structure
+2025-12-15 09:44:45,098 - generate_secondary - INFO - Generating application for session 2: DNA & Protein Structure...
+2025-12-15 09:44:45,098 - src.llm.client - INFO - [app:157005] 🚀 app | m=gemma3:4b | p=25653c | t=150s
+2025-12-15 09:44:45,098 - src.llm.client - INFO - [app:157005] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:44:45,098 - src.llm.client - INFO - [app:157005] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:44:45,100 - src.llm.client - INFO - [app:157005] Sending request to Ollama: model=gemma3:4b, operation=application, payload=27469 bytes, prompt=25653 chars
+2025-12-15 09:44:45,100 - src.llm.client - INFO - [app:157005] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:44:54,529 - src.llm.request_handler - INFO - [app:157005] ✓ Done 9.43s
+2025-12-15 09:44:54,529 - src.llm.client - INFO - [app:157005] ✅ HTTP 200 in 9.43s
+2025-12-15 09:44:54,529 - src.llm.client - INFO - [app:157005] 📡 Stream active (200)
+2025-12-15 09:44:54,529 - src.llm.client - INFO - [app:157005] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:44:56,533 - src.llm.client - INFO - [app:157005] 📊 2.0s: 388c @194c/s (68ch, ~97t @48t/s)
+2025-12-15 09:44:58,559 - src.llm.client - INFO - [app:157005] 📊 4.0s: 796c @198c/s (137ch, ~199t @49t/s)
+2025-12-15 09:45:00,560 - src.llm.client - INFO - [app:157005] 📊 6.0s: 1155c @192c/s (205ch, ~289t @48t/s)
+2025-12-15 09:45:02,561 - src.llm.client - INFO - [app:157005] 📊 8.0s: 1538c @191c/s (273ch, ~384t @48t/s)
+2025-12-15 09:45:04,562 - src.llm.client - INFO - [app:157005] 📊 10.0s: 1964c @196c/s (341ch, ~491t @49t/s)
+2025-12-15 09:45:06,568 - src.llm.client - INFO - [app:157005] 📊 12.0s: 2275c @189c/s (409ch, ~569t @47t/s)
+2025-12-15 09:45:08,569 - src.llm.client - INFO - [app:157005] 📊 14.0s: 2720c @194c/s (477ch, ~680t @48t/s)
+2025-12-15 09:45:10,577 - src.llm.client - INFO - [app:157005] 📊 16.0s: 3116c @194c/s (545ch, ~779t @49t/s)
+2025-12-15 09:45:12,584 - src.llm.client - INFO - [app:157005] 📊 18.1s: 3524c @195c/s (613ch, ~881t @49t/s)
+2025-12-15 09:45:14,591 - src.llm.client - INFO - [app:157005] 📊 20.1s: 3913c @195c/s (681ch, ~978t @49t/s)
+2025-12-15 09:45:16,604 - src.llm.client - INFO - [app:157005] 📊 22.1s: 4254c @193c/s (749ch, ~1064t @48t/s)
+2025-12-15 09:45:18,615 - src.llm.client - INFO - [app:157005] 📊 24.1s: 4642c @193c/s (816ch, ~1160t @48t/s)
+2025-12-15 09:45:20,643 - src.llm.client - INFO - [app:157005] 📊 26.1s: 5063c @194c/s (882ch, ~1266t @48t/s)
+2025-12-15 09:45:22,546 - src.llm.client - INFO - [app:157005] ✓ Done 37.45s: 5424c (~729w @145c/s)
+2025-12-15 09:45:22,549 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-15 09:45:22,550 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-15 09:45:22,550 - generate_secondary - INFO -     - Length: 5243 chars, 705 words
+2025-12-15 09:45:22,550 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-15 09:45:22,550 - generate_secondary - INFO -     - Applications: 5
+2025-12-15 09:45:22,550 - generate_secondary - INFO -     - Avg words per application: 139
+2025-12-15 09:45:22,550 - generate_secondary - WARNING - [WARNING] Application 2 has 147 words (require 150-200, need 3 more words) ⚠️
+2025-12-15 09:45:22,550 - generate_secondary - WARNING - [WARNING] Application 3 has 130 words (require 150-200, need 20 more words) ⚠️
+2025-12-15 09:45:22,550 - generate_secondary - WARNING - [WARNING] Application 4 has 130 words (require 150-200, need 20 more words) ⚠️
+2025-12-15 09:45:22,550 - generate_secondary - WARNING - [WARNING] Application 5 has 111 words (require 150-200, need 39 more words) ⚠️
+2025-12-15 09:45:22,550 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_02/application.md
+2025-12-15 09:45:22,550 - generate_secondary - INFO - Generating extension for session 2: DNA & Protein Structure...
+2025-12-15 09:45:22,550 - src.llm.client - INFO - [ext:09263a] 🚀 ext | m=gemma3:4b | p=24937c | t=120s
+2025-12-15 09:45:22,550 - src.llm.client - INFO - [ext:09263a] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:45:22,550 - src.llm.client - INFO - [ext:09263a] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:45:22,552 - src.llm.client - INFO - [ext:09263a] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=29905 bytes, prompt=24937 chars
+2025-12-15 09:45:22,552 - src.llm.client - INFO - [ext:09263a] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:45:31,981 - src.llm.request_handler - INFO - [ext:09263a] ✓ Done 9.43s
+2025-12-15 09:45:31,981 - src.llm.client - INFO - [ext:09263a] ✅ HTTP 200 in 9.43s
+2025-12-15 09:45:31,981 - src.llm.client - INFO - [ext:09263a] 📡 Stream active (200)
+2025-12-15 09:45:31,981 - src.llm.client - INFO - [ext:09263a] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:45:33,984 - src.llm.client - INFO - [ext:09263a] 📊 2.0s: 414c @207c/s (68ch, ~104t @52t/s)
+2025-12-15 09:45:35,987 - src.llm.client - INFO - [ext:09263a] 📊 4.0s: 862c @215c/s (136ch, ~216t @54t/s)
+2025-12-15 09:45:37,992 - src.llm.client - INFO - [ext:09263a] 📊 6.0s: 1291c @215c/s (204ch, ~323t @54t/s)
+2025-12-15 09:45:39,997 - src.llm.client - INFO - [ext:09263a] 📊 8.0s: 1691c @211c/s (272ch, ~423t @53t/s)
+2025-12-15 09:45:42,006 - src.llm.client - INFO - [ext:09263a] 📊 10.0s: 2134c @213c/s (340ch, ~534t @53t/s)
+2025-12-15 09:45:44,015 - src.llm.client - INFO - [ext:09263a] 📊 12.0s: 2487c @207c/s (408ch, ~622t @52t/s)
+2025-12-15 09:45:46,023 - src.llm.client - INFO - [ext:09263a] 📊 14.0s: 2892c @206c/s (476ch, ~723t @51t/s)
+2025-12-15 09:45:48,147 - src.llm.client - INFO - [ext:09263a] 📊 16.2s: 3330c @206c/s (538ch, ~832t @51t/s)
+2025-12-15 09:45:48,147 - src.llm.client - INFO - [ext:09263a] ✓ Done 25.60s: 3330c (~444w @130c/s)
+2025-12-15 09:45:48,149 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:45:48,149 - generate_secondary - INFO - [COMPLIANT] Extension generated ✓
+2025-12-15 09:45:48,149 - generate_secondary - INFO -     - Length: 3330 chars, 444 words
+2025-12-15 09:45:48,149 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-15 09:45:48,149 - generate_secondary - INFO -     - Topics: 3
+2025-12-15 09:45:48,149 - generate_secondary - INFO -     - Avg words per topic: 138
+2025-12-15 09:45:48,149 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_02/extension.md
+2025-12-15 09:45:48,149 - generate_secondary - INFO - Generating visualization for session 2: DNA & Protein Structure...
+2025-12-15 09:45:48,149 - src.llm.client - INFO - [viz:798a15] 🚀 viz | m=gemma3:4b | p=23897c | t=120s
+2025-12-15 09:45:48,149 - src.llm.client - INFO - [viz:798a15] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:45:48,149 - src.llm.client - INFO - [viz:798a15] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:45:48,151 - src.llm.client - INFO - [viz:798a15] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=28187 bytes, prompt=23897 chars
+2025-12-15 09:45:48,151 - src.llm.client - INFO - [viz:798a15] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:45:57,587 - src.llm.request_handler - INFO - [viz:798a15] ✓ Done 9.44s
+2025-12-15 09:45:57,587 - src.llm.client - INFO - [viz:798a15] ✅ HTTP 200 in 9.44s
+2025-12-15 09:45:57,587 - src.llm.client - INFO - [viz:798a15] 📡 Stream active (200)
+2025-12-15 09:45:57,587 - src.llm.client - INFO - [viz:798a15] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:45:59,593 - src.llm.client - INFO - [viz:798a15] 📊 2.0s: 286c @143c/s (68ch, ~72t @36t/s)
+2025-12-15 09:46:01,602 - src.llm.client - INFO - [viz:798a15] 📊 4.0s: 519c @129c/s (136ch, ~130t @32t/s)
+2025-12-15 09:46:03,604 - src.llm.client - INFO - [viz:798a15] 📊 6.0s: 798c @133c/s (204ch, ~200t @33t/s)
+2025-12-15 09:46:05,610 - src.llm.client - INFO - [viz:798a15] 📊 8.0s: 1121c @140c/s (272ch, ~280t @35t/s)
+2025-12-15 09:46:06,706 - src.llm.client - INFO - [viz:798a15] ✓ Done 18.56s: 1267c (~185w @68c/s)
+2025-12-15 09:46:06,707 - src.generate.processors.cleanup - INFO - Cleanup complete: 3 issues before, 0 issues after
+2025-12-15 09:46:06,707 - generate_secondary - INFO - [NEEDS REVIEW] Diagram generated ⚠️
+2025-12-15 09:46:06,707 - generate_secondary - INFO -     - Length: 234 chars (cleaned: 234 chars)
+2025-12-15 09:46:06,707 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:46:06,707 - generate_secondary - INFO - [CRITICAL] Elements: 18 total (nodes: 9, connections: 9) 🔴
+2025-12-15 09:46:06,707 - generate_secondary - WARNING -     - Mermaid syntax warnings: 1 issues fixed (code fences, style commands)
+2025-12-15 09:46:06,707 - generate_secondary - WARNING -     - Critical issues: 2 structural problems requiring attention
+2025-12-15 09:46:06,707 - generate_secondary - WARNING - [WARNING] Only 9 nodes found (require at least 10, need 1 more - add more nodes to the diagram) ⚠️
+2025-12-15 09:46:06,707 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-15 09:46:06,707 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-15 09:46:06,707 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_02/visualization.mmd
+2025-12-15 09:46:06,707 - generate_secondary - INFO - Generating integration for session 2: DNA & Protein Structure...
+2025-12-15 09:46:06,707 - src.llm.client - INFO - [int:521424] 🚀 int | m=gemma3:4b | p=25246c | t=150s
+2025-12-15 09:46:06,707 - src.llm.client - INFO - [int:521424] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:46:06,707 - src.llm.client - INFO - [int:521424] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:46:06,709 - src.llm.client - INFO - [int:521424] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=30553 bytes, prompt=25246 chars
+2025-12-15 09:46:06,709 - src.llm.client - INFO - [int:521424] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:46:16,164 - src.llm.request_handler - INFO - [int:521424] ✓ Done 9.45s
+2025-12-15 09:46:16,164 - src.llm.client - INFO - [int:521424] ✅ HTTP 200 in 9.45s
+2025-12-15 09:46:16,164 - src.llm.client - INFO - [int:521424] 📡 Stream active (200)
+2025-12-15 09:46:16,164 - src.llm.client - INFO - [int:521424] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:46:18,174 - src.llm.client - INFO - [int:521424] 📊 2.0s: 372c @185c/s (67ch, ~93t @46t/s)
+2025-12-15 09:46:20,178 - src.llm.client - INFO - [int:521424] 📊 4.0s: 741c @185c/s (135ch, ~185t @46t/s)
+2025-12-15 09:46:22,188 - src.llm.client - INFO - [int:521424] 📊 6.0s: 1150c @191c/s (203ch, ~288t @48t/s)
+2025-12-15 09:46:24,194 - src.llm.client - INFO - [int:521424] 📊 8.0s: 1561c @194c/s (271ch, ~390t @49t/s)
+2025-12-15 09:46:26,202 - src.llm.client - INFO - [int:521424] 📊 10.0s: 1949c @194c/s (339ch, ~487t @49t/s)
+2025-12-15 09:46:28,210 - src.llm.client - INFO - [int:521424] 📊 12.0s: 2323c @193c/s (407ch, ~581t @48t/s)
+2025-12-15 09:46:30,217 - src.llm.client - INFO - [int:521424] 📊 14.1s: 2718c @193c/s (475ch, ~680t @48t/s)
+2025-12-15 09:46:32,233 - src.llm.client - INFO - [int:521424] 📊 16.1s: 3029c @189c/s (543ch, ~757t @47t/s)
+2025-12-15 09:46:34,243 - src.llm.client - INFO - [int:521424] 📊 18.1s: 3299c @182c/s (611ch, ~825t @46t/s)
+2025-12-15 09:46:35,006 - src.llm.client - INFO - [int:521424] ✓ Done 28.30s: 3380c (~482w @119c/s)
+2025-12-15 09:46:35,007 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-15 09:46:35,007 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-15 09:46:35,007 - generate_secondary - INFO -     - Length: 3364 chars, 480 words
+2025-12-15 09:46:35,007 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-15 09:46:35,007 - generate_secondary - INFO -     - Connections: 24
+2025-12-15 09:46:35,007 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-15 09:46:35,008 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_02/integration.md
+2025-12-15 09:46:35,008 - generate_secondary - INFO - Generating investigation for session 2: DNA & Protein Structure...
+2025-12-15 09:46:35,008 - src.llm.client - INFO - [inv:0d1c98] 🚀 inv | m=gemma3:4b | p=24159c | t=150s
+2025-12-15 09:46:35,008 - src.llm.client - INFO - [inv:0d1c98] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:46:35,008 - src.llm.client - INFO - [inv:0d1c98] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:46:35,009 - src.llm.client - INFO - [inv:0d1c98] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=28409 bytes, prompt=24159 chars
+2025-12-15 09:46:35,009 - src.llm.client - INFO - [inv:0d1c98] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:46:44,454 - src.llm.request_handler - INFO - [inv:0d1c98] ✓ Done 9.44s
+2025-12-15 09:46:44,454 - src.llm.client - INFO - [inv:0d1c98] ✅ HTTP 200 in 9.45s
+2025-12-15 09:46:44,454 - src.llm.client - INFO - [inv:0d1c98] 📡 Stream active (200)
+2025-12-15 09:46:44,454 - src.llm.client - INFO - [inv:0d1c98] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:46:46,462 - src.llm.client - INFO - [inv:0d1c98] 📊 2.0s: 347c @173c/s (68ch, ~87t @43t/s)
+2025-12-15 09:46:48,471 - src.llm.client - INFO - [inv:0d1c98] 📊 4.0s: 612c @152c/s (136ch, ~153t @38t/s)
+2025-12-15 09:46:50,474 - src.llm.client - INFO - [inv:0d1c98] 📊 6.0s: 902c @150c/s (204ch, ~226t @37t/s)
+2025-12-15 09:46:52,480 - src.llm.client - INFO - [inv:0d1c98] 📊 8.0s: 1249c @156c/s (272ch, ~312t @39t/s)
+2025-12-15 09:46:54,484 - src.llm.client - INFO - [inv:0d1c98] 📊 10.0s: 1584c @158c/s (340ch, ~396t @39t/s)
+2025-12-15 09:46:56,494 - src.llm.client - INFO - [inv:0d1c98] 📊 12.0s: 2051c @170c/s (408ch, ~513t @43t/s)
+2025-12-15 09:46:58,500 - src.llm.client - INFO - [inv:0d1c98] 📊 14.0s: 2384c @170c/s (476ch, ~596t @42t/s)
+2025-12-15 09:47:00,509 - src.llm.client - INFO - [inv:0d1c98] 📊 16.1s: 2675c @167c/s (544ch, ~669t @42t/s)
+2025-12-15 09:47:02,518 - src.llm.client - INFO - [inv:0d1c98] 📊 18.1s: 2995c @166c/s (612ch, ~749t @41t/s)
+2025-12-15 09:47:04,527 - src.llm.client - INFO - [inv:0d1c98] 📊 20.1s: 3353c @167c/s (680ch, ~838t @42t/s)
+2025-12-15 09:47:06,543 - src.llm.client - INFO - [inv:0d1c98] 📊 22.1s: 3732c @169c/s (748ch, ~933t @42t/s)
+2025-12-15 09:47:08,555 - src.llm.client - INFO - [inv:0d1c98] 📊 24.1s: 4107c @170c/s (816ch, ~1027t @43t/s)
+2025-12-15 09:47:10,558 - src.llm.client - INFO - [inv:0d1c98] 📊 26.1s: 4274c @164c/s (883ch, ~1068t @41t/s)
+2025-12-15 09:47:12,574 - src.llm.client - INFO - [inv:0d1c98] 📊 28.1s: 4583c @163c/s (951ch, ~1146t @41t/s)
+2025-12-15 09:47:14,593 - src.llm.client - INFO - [inv:0d1c98] 📊 30.1s: 4930c @164c/s (1019ch, ~1232t @41t/s)
+2025-12-15 09:47:15,645 - src.llm.client - INFO - [inv:0d1c98] ✓ Done 40.64s: 5090c (~782w @125c/s)
+2025-12-15 09:47:15,647 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:47:15,648 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-15 09:47:15,648 - generate_secondary - INFO -     - Length: 5086 chars, 782 words
+2025-12-15 09:47:15,648 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-15 09:47:15,648 - generate_secondary - INFO -     - Research questions: 3
+2025-12-15 09:47:15,648 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-15 09:47:15,648 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_02/investigation.md
+2025-12-15 09:47:15,648 - generate_secondary - INFO - Generating open_questions for session 2: DNA & Protein Structure...
+2025-12-15 09:47:15,648 - src.llm.client - INFO - [opq:d54e25] 🚀 opq | m=gemma3:4b | p=24245c | t=150s
+2025-12-15 09:47:15,648 - src.llm.client - INFO - [opq:d54e25] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:47:15,648 - src.llm.client - INFO - [opq:d54e25] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:47:15,649 - src.llm.client - INFO - [opq:d54e25] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=28506 bytes, prompt=24245 chars
+2025-12-15 09:47:15,649 - src.llm.client - INFO - [opq:d54e25] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:47:25,092 - src.llm.request_handler - INFO - [opq:d54e25] ✓ Done 9.44s
+2025-12-15 09:47:25,092 - src.llm.client - INFO - [opq:d54e25] ✅ HTTP 200 in 9.44s
+2025-12-15 09:47:25,092 - src.llm.client - INFO - [opq:d54e25] 📡 Stream active (200)
+2025-12-15 09:47:25,092 - src.llm.client - INFO - [opq:d54e25] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:47:27,100 - src.llm.client - INFO - [opq:d54e25] 📊 2.0s: 341c @170c/s (68ch, ~85t @42t/s)
+2025-12-15 09:47:29,100 - src.llm.client - INFO - [opq:d54e25] 📊 4.0s: 726c @181c/s (136ch, ~182t @45t/s)
+2025-12-15 09:47:31,103 - src.llm.client - INFO - [opq:d54e25] 📊 6.0s: 1126c @187c/s (204ch, ~282t @47t/s)
+2025-12-15 09:47:33,108 - src.llm.client - INFO - [opq:d54e25] 📊 8.0s: 1553c @194c/s (272ch, ~388t @48t/s)
+2025-12-15 09:47:35,110 - src.llm.client - INFO - [opq:d54e25] 📊 10.0s: 1983c @198c/s (340ch, ~496t @49t/s)
+2025-12-15 09:47:36,484 - src.llm.client - INFO - [opq:d54e25] ✓ Done 20.84s: 2204c (~301w @106c/s)
+2025-12-15 09:47:36,485 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:47:36,485 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-15 09:47:36,485 - generate_secondary - INFO -     - Length: 2203 chars, 301 words
+2025-12-15 09:47:36,485 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-15 09:47:36,486 - generate_secondary - INFO -     - Open questions: 3
+2025-12-15 09:47:36,486 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-15 09:47:36,486 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_01_cellular_and_molecular_biology/session_02/open_questions.md
+2025-12-15 09:47:36,486 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-15 09:47:36,486 - generate_secondary - INFO - 
+============================================================
+2025-12-15 09:47:36,486 - generate_secondary - INFO - [2/2] Module 2: Organisms and Processes (2 sessions)
+2025-12-15 09:47:36,486 - generate_secondary - INFO - ============================================================
+2025-12-15 09:47:36,486 - generate_secondary - INFO - 
+  Session 3/4: Cellular Respiration & Photosynthesis
+2025-12-15 09:47:36,488 - generate_secondary - INFO - Generating application for session 3: Cellular Respiration & Photosynthesis...
+2025-12-15 09:47:36,488 - src.llm.client - INFO - [app:2b9c8f] 🚀 app | m=gemma3:4b | p=29468c | t=150s
+2025-12-15 09:47:36,488 - src.llm.client - INFO - [app:2b9c8f] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:47:36,489 - src.llm.client - INFO - [app:2b9c8f] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:47:36,490 - src.llm.client - INFO - [app:2b9c8f] Sending request to Ollama: model=gemma3:4b, operation=application, payload=31401 bytes, prompt=29468 chars
+2025-12-15 09:47:36,490 - src.llm.client - INFO - [app:2b9c8f] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:47:45,943 - src.llm.request_handler - INFO - [app:2b9c8f] ✓ Done 9.45s
+2025-12-15 09:47:45,944 - src.llm.client - INFO - [app:2b9c8f] ✅ HTTP 200 in 9.45s
+2025-12-15 09:47:45,944 - src.llm.client - INFO - [app:2b9c8f] 📡 Stream active (200)
+2025-12-15 09:47:45,944 - src.llm.client - INFO - [app:2b9c8f] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:47:47,949 - src.llm.client - INFO - [app:2b9c8f] 📊 2.0s: 415c @207c/s (67ch, ~104t @52t/s)
+2025-12-15 09:47:49,962 - src.llm.client - INFO - [app:2b9c8f] 📊 4.0s: 871c @217c/s (135ch, ~218t @54t/s)
+2025-12-15 09:47:51,968 - src.llm.client - INFO - [app:2b9c8f] 📊 6.0s: 1265c @210c/s (203ch, ~316t @52t/s)
+2025-12-15 09:47:53,973 - src.llm.client - INFO - [app:2b9c8f] 📊 8.0s: 1702c @212c/s (271ch, ~426t @53t/s)
+2025-12-15 09:47:55,979 - src.llm.client - INFO - [app:2b9c8f] 📊 10.0s: 2141c @213c/s (339ch, ~535t @53t/s)
+2025-12-15 09:47:57,988 - src.llm.client - INFO - [app:2b9c8f] 📊 12.0s: 2548c @212c/s (407ch, ~637t @53t/s)
+2025-12-15 09:47:59,992 - src.llm.client - INFO - [app:2b9c8f] 📊 14.0s: 2990c @213c/s (475ch, ~748t @53t/s)
+2025-12-15 09:48:01,993 - src.llm.client - INFO - [app:2b9c8f] 📊 16.0s: 3397c @212c/s (542ch, ~849t @53t/s)
+2025-12-15 09:48:04,004 - src.llm.client - INFO - [app:2b9c8f] 📊 18.1s: 3852c @213c/s (610ch, ~963t @53t/s)
+2025-12-15 09:48:05,490 - src.llm.client - INFO - [app:2b9c8f] ✓ Done 29.00s: 4112c (~521w @142c/s)
+2025-12-15 09:48:05,492 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-15 09:48:05,492 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-15 09:48:05,492 - generate_secondary - INFO -     - Length: 4101 chars, 519 words
+2025-12-15 09:48:05,492 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-15 09:48:05,492 - generate_secondary - INFO -     - Applications: 5
+2025-12-15 09:48:05,492 - generate_secondary - INFO -     - Avg words per application: 98
+2025-12-15 09:48:05,492 - generate_secondary - WARNING - [WARNING] Application 1 has 118 words (require 150-200, need 32 more words) ⚠️
+2025-12-15 09:48:05,492 - generate_secondary - WARNING - [WARNING] Application 2 has 106 words (require 150-200, need 44 more words) ⚠️
+2025-12-15 09:48:05,492 - generate_secondary - WARNING - [WARNING] Application 3 has 89 words (require 150-200, need 61 more words) ⚠️
+2025-12-15 09:48:05,492 - generate_secondary - WARNING - [WARNING] Application 4 has 86 words (require 150-200, need 64 more words) ⚠️
+2025-12-15 09:48:05,492 - generate_secondary - WARNING - [WARNING] Application 5 has 93 words (require 150-200, need 57 more words) ⚠️
+2025-12-15 09:48:05,493 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_03/application.md
+2025-12-15 09:48:05,493 - generate_secondary - INFO - Generating extension for session 3: Cellular Respiration & Photosynthesis...
+2025-12-15 09:48:05,493 - src.llm.client - INFO - [ext:0aba0d] 🚀 ext | m=gemma3:4b | p=28752c | t=120s
+2025-12-15 09:48:05,493 - src.llm.client - INFO - [ext:0aba0d] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:48:05,493 - src.llm.client - INFO - [ext:0aba0d] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:48:05,494 - src.llm.client - INFO - [ext:0aba0d] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=33837 bytes, prompt=28752 chars
+2025-12-15 09:48:05,494 - src.llm.client - INFO - [ext:0aba0d] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:48:14,942 - src.llm.request_handler - INFO - [ext:0aba0d] ✓ Done 9.45s
+2025-12-15 09:48:14,942 - src.llm.client - INFO - [ext:0aba0d] ✅ HTTP 200 in 9.45s
+2025-12-15 09:48:14,942 - src.llm.client - INFO - [ext:0aba0d] 📡 Stream active (200)
+2025-12-15 09:48:14,942 - src.llm.client - INFO - [ext:0aba0d] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:48:16,966 - src.llm.client - INFO - [ext:0aba0d] 📊 2.0s: 410c @203c/s (68ch, ~102t @51t/s)
+2025-12-15 09:48:18,981 - src.llm.client - INFO - [ext:0aba0d] 📊 4.0s: 822c @204c/s (136ch, ~206t @51t/s)
+2025-12-15 09:48:20,987 - src.llm.client - INFO - [ext:0aba0d] 📊 6.0s: 1231c @204c/s (204ch, ~308t @51t/s)
+2025-12-15 09:48:22,993 - src.llm.client - INFO - [ext:0aba0d] 📊 8.1s: 1638c @203c/s (272ch, ~410t @51t/s)
+2025-12-15 09:48:24,997 - src.llm.client - INFO - [ext:0aba0d] 📊 10.1s: 2041c @203c/s (340ch, ~510t @51t/s)
+2025-12-15 09:48:27,008 - src.llm.client - INFO - [ext:0aba0d] 📊 12.1s: 2466c @204c/s (408ch, ~616t @51t/s)
+2025-12-15 09:48:29,014 - src.llm.client - INFO - [ext:0aba0d] 📊 14.1s: 2837c @202c/s (476ch, ~709t @50t/s)
+2025-12-15 09:48:31,023 - src.llm.client - INFO - [ext:0aba0d] 📊 16.1s: 3272c @203c/s (544ch, ~818t @51t/s)
+2025-12-15 09:48:33,030 - src.llm.client - INFO - [ext:0aba0d] 📊 18.1s: 3719c @206c/s (612ch, ~930t @51t/s)
+2025-12-15 09:48:34,841 - src.llm.client - INFO - [ext:0aba0d] ✓ Done 29.35s: 3888c (~479w @132c/s)
+2025-12-15 09:48:34,843 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:48:34,843 - generate_secondary - INFO - [NEEDS REVIEW] Extension generated ⚠️
+2025-12-15 09:48:34,843 - generate_secondary - INFO -     - Length: 3886 chars, 479 words
+2025-12-15 09:48:34,843 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-15 09:48:34,843 - generate_secondary - INFO -     - Topics: 3
+2025-12-15 09:48:34,843 - generate_secondary - INFO -     - Avg words per topic: 153
+2025-12-15 09:48:34,843 - generate_secondary - WARNING - [WARNING] Topic 2 has 155 words (exceeds 150 by 5 words - consider condensing) ⚠️
+2025-12-15 09:48:34,843 - generate_secondary - WARNING - [WARNING] Topic 3 has 155 words (exceeds 150 by 5 words - consider condensing) ⚠️
+2025-12-15 09:48:34,843 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_03/extension.md
+2025-12-15 09:48:34,843 - generate_secondary - INFO - Generating visualization for session 3: Cellular Respiration & Photosynthesis...
+2025-12-15 09:48:34,843 - src.llm.client - INFO - [viz:b67936] 🚀 viz | m=gemma3:4b | p=27712c | t=120s
+2025-12-15 09:48:34,843 - src.llm.client - INFO - [viz:b67936] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:48:34,844 - src.llm.client - INFO - [viz:b67936] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:48:34,845 - src.llm.client - INFO - [viz:b67936] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=32119 bytes, prompt=27712 chars
+2025-12-15 09:48:34,845 - src.llm.client - INFO - [viz:b67936] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:48:44,306 - src.llm.request_handler - INFO - [viz:b67936] ✓ Done 9.46s
+2025-12-15 09:48:44,306 - src.llm.client - INFO - [viz:b67936] ✅ HTTP 200 in 9.46s
+2025-12-15 09:48:44,306 - src.llm.client - INFO - [viz:b67936] 📡 Stream active (200)
+2025-12-15 09:48:44,306 - src.llm.client - INFO - [viz:b67936] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:48:46,307 - src.llm.client - INFO - [viz:b67936] 📊 2.0s: 280c @140c/s (66ch, ~70t @35t/s)
+2025-12-15 09:48:48,330 - src.llm.client - INFO - [viz:b67936] 📊 4.0s: 482c @120c/s (134ch, ~120t @30t/s)
+2025-12-15 09:48:50,337 - src.llm.client - INFO - [viz:b67936] 📊 6.0s: 711c @118c/s (200ch, ~178t @29t/s)
+2025-12-15 09:48:52,358 - src.llm.client - INFO - [viz:b67936] 📊 8.1s: 962c @119c/s (267ch, ~240t @30t/s)
+2025-12-15 09:48:54,556 - src.llm.client - INFO - [viz:b67936] 📊 10.2s: 1265c @123c/s (330ch, ~316t @31t/s)
+2025-12-15 09:48:54,556 - src.llm.client - INFO - [viz:b67936] ✓ Done 19.71s: 1265c (~186w @64c/s)
+2025-12-15 09:48:54,556 - src.generate.processors.cleanup - INFO - Cleanup complete: 3 issues before, 0 issues after
+2025-12-15 09:48:54,557 - generate_secondary - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-15 09:48:54,557 - generate_secondary - INFO -     - Length: 394 chars (cleaned: 394 chars)
+2025-12-15 09:48:54,557 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:48:54,557 - generate_secondary - INFO - [OK] Elements: 24 total (nodes: 11, connections: 13) ✓
+2025-12-15 09:48:54,557 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_03/visualization.mmd
+2025-12-15 09:48:54,557 - generate_secondary - INFO - Generating integration for session 3: Cellular Respiration & Photosynthesis...
+2025-12-15 09:48:54,557 - src.llm.client - INFO - [int:427ba9] 🚀 int | m=gemma3:4b | p=29061c | t=150s
+2025-12-15 09:48:54,557 - src.llm.client - INFO - [int:427ba9] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:48:54,557 - src.llm.client - INFO - [int:427ba9] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:48:54,558 - src.llm.client - INFO - [int:427ba9] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=34485 bytes, prompt=29061 chars
+2025-12-15 09:48:54,559 - src.llm.client - INFO - [int:427ba9] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:49:04,081 - src.llm.request_handler - INFO - [int:427ba9] ✓ Done 9.52s
+2025-12-15 09:49:04,081 - src.llm.client - INFO - [int:427ba9] ✅ HTTP 200 in 9.52s
+2025-12-15 09:49:04,081 - src.llm.client - INFO - [int:427ba9] 📡 Stream active (200)
+2025-12-15 09:49:04,081 - src.llm.client - INFO - [int:427ba9] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:49:06,098 - src.llm.client - INFO - [int:427ba9] 📊 2.0s: 391c @194c/s (67ch, ~98t @48t/s)
+2025-12-15 09:49:08,118 - src.llm.client - INFO - [int:427ba9] 📊 4.0s: 782c @194c/s (134ch, ~196t @48t/s)
+2025-12-15 09:49:10,133 - src.llm.client - INFO - [int:427ba9] 📊 6.1s: 1220c @202c/s (200ch, ~305t @50t/s)
+2025-12-15 09:49:12,153 - src.llm.client - INFO - [int:427ba9] 📊 8.1s: 1618c @200c/s (266ch, ~404t @50t/s)
+2025-12-15 09:49:14,162 - src.llm.client - INFO - [int:427ba9] 📊 10.1s: 2042c @203c/s (332ch, ~510t @51t/s)
+2025-12-15 09:49:16,168 - src.llm.client - INFO - [int:427ba9] 📊 12.1s: 2482c @205c/s (399ch, ~620t @51t/s)
+2025-12-15 09:49:18,168 - src.llm.client - INFO - [int:427ba9] 📊 14.1s: 2887c @205c/s (466ch, ~722t @51t/s)
+2025-12-15 09:49:20,172 - src.llm.client - INFO - [int:427ba9] 📊 16.1s: 3353c @208c/s (534ch, ~838t @52t/s)
+2025-12-15 09:49:20,885 - src.llm.client - INFO - [int:427ba9] ✓ Done 26.33s: 3432c (~453w @130c/s)
+2025-12-15 09:49:20,886 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-15 09:49:20,886 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-15 09:49:20,886 - generate_secondary - INFO -     - Length: 3418 chars, 451 words
+2025-12-15 09:49:20,886 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-15 09:49:20,886 - generate_secondary - INFO -     - Connections: 24
+2025-12-15 09:49:20,886 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-15 09:49:20,887 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_03/integration.md
+2025-12-15 09:49:20,887 - generate_secondary - INFO - Generating investigation for session 3: Cellular Respiration & Photosynthesis...
+2025-12-15 09:49:20,887 - src.llm.client - INFO - [inv:056b8a] 🚀 inv | m=gemma3:4b | p=27974c | t=150s
+2025-12-15 09:49:20,887 - src.llm.client - INFO - [inv:056b8a] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:49:20,887 - src.llm.client - INFO - [inv:056b8a] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:49:20,888 - src.llm.client - INFO - [inv:056b8a] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=32341 bytes, prompt=27974 chars
+2025-12-15 09:49:20,888 - src.llm.client - INFO - [inv:056b8a] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:49:30,355 - src.llm.request_handler - INFO - [inv:056b8a] ✓ Done 9.47s
+2025-12-15 09:49:30,355 - src.llm.client - INFO - [inv:056b8a] ✅ HTTP 200 in 9.47s
+2025-12-15 09:49:30,355 - src.llm.client - INFO - [inv:056b8a] 📡 Stream active (200)
+2025-12-15 09:49:30,355 - src.llm.client - INFO - [inv:056b8a] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:49:32,359 - src.llm.client - INFO - [inv:056b8a] 📊 2.0s: 330c @165c/s (68ch, ~82t @41t/s)
+2025-12-15 09:49:34,386 - src.llm.client - INFO - [inv:056b8a] 📊 4.0s: 650c @161c/s (137ch, ~162t @40t/s)
+2025-12-15 09:49:36,391 - src.llm.client - INFO - [inv:056b8a] 📊 6.0s: 916c @152c/s (205ch, ~229t @38t/s)
+2025-12-15 09:49:38,392 - src.llm.client - INFO - [inv:056b8a] 📊 8.0s: 1311c @163c/s (273ch, ~328t @41t/s)
+2025-12-15 09:49:40,394 - src.llm.client - INFO - [inv:056b8a] 📊 10.0s: 1701c @169c/s (341ch, ~425t @42t/s)
+2025-12-15 09:49:42,399 - src.llm.client - INFO - [inv:056b8a] 📊 12.0s: 2007c @167c/s (409ch, ~502t @42t/s)
+2025-12-15 09:49:44,401 - src.llm.client - INFO - [inv:056b8a] 📊 14.0s: 2368c @169c/s (477ch, ~592t @42t/s)
+2025-12-15 09:49:46,411 - src.llm.client - INFO - [inv:056b8a] 📊 16.1s: 2753c @171c/s (545ch, ~688t @43t/s)
+2025-12-15 09:49:48,425 - src.llm.client - INFO - [inv:056b8a] 📊 18.1s: 3160c @175c/s (613ch, ~790t @44t/s)
+2025-12-15 09:49:50,431 - src.llm.client - INFO - [inv:056b8a] 📊 20.1s: 3522c @175c/s (681ch, ~880t @44t/s)
+2025-12-15 09:49:52,441 - src.llm.client - INFO - [inv:056b8a] 📊 22.1s: 3900c @177c/s (749ch, ~975t @44t/s)
+2025-12-15 09:49:54,383 - src.llm.client - INFO - [inv:056b8a] ✓ Done 33.50s: 4260c (~606w @127c/s)
+2025-12-15 09:49:54,384 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:49:54,384 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-15 09:49:54,384 - generate_secondary - INFO -     - Length: 4255 chars, 606 words
+2025-12-15 09:49:54,385 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-15 09:49:54,385 - generate_secondary - INFO -     - Research questions: 3
+2025-12-15 09:49:54,385 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-15 09:49:54,385 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_03/investigation.md
+2025-12-15 09:49:54,385 - generate_secondary - INFO - Generating open_questions for session 3: Cellular Respiration & Photosynthesis...
+2025-12-15 09:49:54,385 - src.llm.client - INFO - [opq:955a0e] 🚀 opq | m=gemma3:4b | p=28060c | t=150s
+2025-12-15 09:49:54,385 - src.llm.client - INFO - [opq:955a0e] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:49:54,385 - src.llm.client - INFO - [opq:955a0e] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:49:54,386 - src.llm.client - INFO - [opq:955a0e] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=32438 bytes, prompt=28060 chars
+2025-12-15 09:49:54,386 - src.llm.client - INFO - [opq:955a0e] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:50:03,848 - src.llm.request_handler - INFO - [opq:955a0e] ✓ Done 9.46s
+2025-12-15 09:50:03,848 - src.llm.client - INFO - [opq:955a0e] ✅ HTTP 200 in 9.46s
+2025-12-15 09:50:03,848 - src.llm.client - INFO - [opq:955a0e] 📡 Stream active (200)
+2025-12-15 09:50:03,848 - src.llm.client - INFO - [opq:955a0e] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:50:05,870 - src.llm.client - INFO - [opq:955a0e] 📊 2.0s: 355c @176c/s (68ch, ~89t @44t/s)
+2025-12-15 09:50:07,877 - src.llm.client - INFO - [opq:955a0e] 📊 4.0s: 796c @198c/s (134ch, ~199t @49t/s)
+2025-12-15 09:50:09,892 - src.llm.client - INFO - [opq:955a0e] 📊 6.0s: 1205c @199c/s (201ch, ~301t @50t/s)
+2025-12-15 09:50:11,916 - src.llm.client - INFO - [opq:955a0e] 📊 8.1s: 1583c @196c/s (267ch, ~396t @49t/s)
+2025-12-15 09:50:13,937 - src.llm.client - INFO - [opq:955a0e] 📊 10.1s: 1985c @197c/s (331ch, ~496t @49t/s)
+2025-12-15 09:50:14,637 - src.llm.client - INFO - [opq:955a0e] ✓ Done 20.25s: 2036c (~271w @101c/s)
+2025-12-15 09:50:14,638 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-15 09:50:14,638 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-15 09:50:14,638 - generate_secondary - INFO -     - Length: 2024 chars, 269 words
+2025-12-15 09:50:14,638 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-15 09:50:14,638 - generate_secondary - INFO -     - Open questions: 3
+2025-12-15 09:50:14,638 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-15 09:50:14,638 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_03/open_questions.md
+2025-12-15 09:50:14,639 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-15 09:50:14,639 - generate_secondary - INFO - 
+  Session 4/4: Homeostasis & Biodiversity
+2025-12-15 09:50:14,641 - generate_secondary - INFO - Generating application for session 4: Homeostasis & Biodiversity...
+2025-12-15 09:50:14,641 - src.llm.client - INFO - [app:16c762] 🚀 app | m=gemma3:4b | p=26632c | t=150s
+2025-12-15 09:50:14,641 - src.llm.client - INFO - [app:16c762] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:50:14,641 - src.llm.client - INFO - [app:16c762] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:50:14,643 - src.llm.client - INFO - [app:16c762] Sending request to Ollama: model=gemma3:4b, operation=application, payload=28380 bytes, prompt=26632 chars
+2025-12-15 09:50:14,643 - src.llm.client - INFO - [app:16c762] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:50:26,214 - src.llm.request_handler - INFO - [app:16c762] ✓ Done 11.57s
+2025-12-15 09:50:26,214 - src.llm.client - INFO - [app:16c762] ✅ HTTP 200 in 11.57s
+2025-12-15 09:50:26,214 - src.llm.client - INFO - [app:16c762] 📡 Stream active (200)
+2025-12-15 09:50:26,214 - src.llm.client - INFO - [app:16c762] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:50:28,225 - src.llm.client - INFO - [app:16c762] 📊 2.0s: 372c @185c/s (65ch, ~93t @46t/s)
+2025-12-15 09:50:30,235 - src.llm.client - INFO - [app:16c762] 📊 4.0s: 763c @190c/s (130ch, ~191t @47t/s)
+2025-12-15 09:50:32,239 - src.llm.client - INFO - [app:16c762] 📊 6.0s: 1134c @188c/s (195ch, ~284t @47t/s)
+2025-12-15 09:50:34,243 - src.llm.client - INFO - [app:16c762] 📊 8.0s: 1514c @189c/s (260ch, ~378t @47t/s)
+2025-12-15 09:50:36,246 - src.llm.client - INFO - [app:16c762] 📊 10.0s: 1899c @189c/s (325ch, ~475t @47t/s)
+2025-12-15 09:50:38,247 - src.llm.client - INFO - [app:16c762] 📊 12.0s: 2270c @189c/s (390ch, ~568t @47t/s)
+2025-12-15 09:50:40,252 - src.llm.client - INFO - [app:16c762] 📊 14.0s: 2681c @191c/s (455ch, ~670t @48t/s)
+2025-12-15 09:50:42,255 - src.llm.client - INFO - [app:16c762] 📊 16.0s: 3087c @192c/s (520ch, ~772t @48t/s)
+2025-12-15 09:50:44,281 - src.llm.client - INFO - [app:16c762] 📊 18.1s: 3448c @191c/s (585ch, ~862t @48t/s)
+2025-12-15 09:50:46,289 - src.llm.client - INFO - [app:16c762] 📊 20.1s: 3845c @192c/s (650ch, ~961t @48t/s)
+2025-12-15 09:50:48,303 - src.llm.client - INFO - [app:16c762] 📊 22.1s: 4223c @191c/s (715ch, ~1056t @48t/s)
+2025-12-15 09:50:50,314 - src.llm.client - INFO - [app:16c762] 📊 24.1s: 4653c @193c/s (780ch, ~1163t @48t/s)
+2025-12-15 09:50:52,322 - src.llm.client - INFO - [app:16c762] 📊 26.1s: 5100c @195c/s (845ch, ~1275t @49t/s)
+2025-12-15 09:50:54,335 - src.llm.client - INFO - [app:16c762] 📊 28.1s: 5492c @195c/s (910ch, ~1373t @49t/s)
+2025-12-15 09:50:56,352 - src.llm.client - INFO - [app:16c762] 📊 30.1s: 5956c @198c/s (975ch, ~1489t @49t/s)
+2025-12-15 09:50:58,296 - src.llm.client - INFO - [app:16c762] ✓ Done 43.66s: 6327c (~825w @145c/s)
+2025-12-15 09:50:58,299 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:50:58,299 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-15 09:50:58,299 - generate_secondary - INFO -     - Length: 6326 chars, 825 words
+2025-12-15 09:50:58,299 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-15 09:50:58,299 - generate_secondary - INFO -     - Applications: 5
+2025-12-15 09:50:58,299 - generate_secondary - INFO -     - Avg words per application: 161
+2025-12-15 09:50:58,299 - generate_secondary - WARNING - [WARNING] Application 5 has 131 words (require 150-200, need 19 more words) ⚠️
+2025-12-15 09:50:58,299 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_04/application.md
+2025-12-15 09:50:58,299 - generate_secondary - INFO - Generating extension for session 4: Homeostasis & Biodiversity...
+2025-12-15 09:50:58,300 - src.llm.client - INFO - [ext:e72fe7] 🚀 ext | m=gemma3:4b | p=25916c | t=120s
+2025-12-15 09:50:58,300 - src.llm.client - INFO - [ext:e72fe7] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:50:58,300 - src.llm.client - INFO - [ext:e72fe7] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:50:58,301 - src.llm.client - INFO - [ext:e72fe7] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=30816 bytes, prompt=25916 chars
+2025-12-15 09:50:58,301 - src.llm.client - INFO - [ext:e72fe7] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:51:39,817 - src.llm.request_handler - INFO - [ext:e72fe7] ✓ Done 41.52s
+2025-12-15 09:51:39,818 - src.llm.client - INFO - [ext:e72fe7] ✅ HTTP 200 in 41.52s
+2025-12-15 09:51:39,818 - src.llm.client - INFO - [ext:e72fe7] 📡 Stream active (200)
+2025-12-15 09:51:39,818 - src.llm.client - INFO - [ext:e72fe7] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:51:41,829 - src.llm.client - INFO - [ext:e72fe7] 📊 2.0s: 428c @213c/s (65ch, ~107t @53t/s)
+2025-12-15 09:51:43,859 - src.llm.client - INFO - [ext:e72fe7] 📊 4.0s: 841c @208c/s (131ch, ~210t @52t/s)
+2025-12-15 09:51:45,865 - src.llm.client - INFO - [ext:e72fe7] 📊 6.0s: 1222c @202c/s (196ch, ~306t @51t/s)
+2025-12-15 09:51:47,867 - src.llm.client - INFO - [ext:e72fe7] 📊 8.0s: 1685c @209c/s (261ch, ~421t @52t/s)
+2025-12-15 09:51:49,869 - src.llm.client - INFO - [ext:e72fe7] 📊 10.1s: 2078c @207c/s (326ch, ~520t @52t/s)
+2025-12-15 09:51:51,874 - src.llm.client - INFO - [ext:e72fe7] 📊 12.1s: 2482c @206c/s (391ch, ~620t @51t/s)
+2025-12-15 09:51:53,878 - src.llm.client - INFO - [ext:e72fe7] 📊 14.1s: 2888c @205c/s (456ch, ~722t @51t/s)
+2025-12-15 09:51:55,889 - src.llm.client - INFO - [ext:e72fe7] 📊 16.1s: 3329c @207c/s (521ch, ~832t @52t/s)
+2025-12-15 09:51:57,893 - src.llm.client - INFO - [ext:e72fe7] 📊 18.1s: 3777c @209c/s (586ch, ~944t @52t/s)
+2025-12-15 09:51:59,901 - src.llm.client - INFO - [ext:e72fe7] 📊 20.1s: 4206c @209c/s (651ch, ~1052t @52t/s)
+2025-12-15 09:52:01,921 - src.llm.client - INFO - [ext:e72fe7] 📊 22.1s: 4632c @210c/s (716ch, ~1158t @52t/s)
+2025-12-15 09:52:03,928 - src.llm.client - INFO - [ext:e72fe7] 📊 24.1s: 5035c @209c/s (781ch, ~1259t @52t/s)
+2025-12-15 09:52:04,260 - src.llm.client - INFO - [ext:e72fe7] ✓ Done 65.96s: 5036c (~653w @76c/s)
+2025-12-15 09:52:04,262 - src.generate.processors.cleanup - INFO - Cleanup complete: 2 issues before, 0 issues after
+2025-12-15 09:52:04,262 - generate_secondary - INFO - [NEEDS REVIEW] Extension generated ⚠️
+2025-12-15 09:52:04,262 - generate_secondary - INFO -     - Length: 4981 chars, 642 words
+2025-12-15 09:52:04,262 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-15 09:52:04,262 - generate_secondary - INFO -     - Topics: 3
+2025-12-15 09:52:04,262 - generate_secondary - INFO -     - Avg words per topic: 207
+2025-12-15 09:52:04,263 - generate_secondary - WARNING - [WARNING] Topic 1 has 201 words (exceeds 150 by 51 words - consider condensing) ⚠️
+2025-12-15 09:52:04,263 - generate_secondary - WARNING - [WARNING] Topic 2 has 202 words (exceeds 150 by 52 words - consider condensing) ⚠️
+2025-12-15 09:52:04,263 - generate_secondary - WARNING - [WARNING] Topic 3 has 219 words (exceeds 150 by 69 words - consider condensing) ⚠️
+2025-12-15 09:52:04,263 - generate_secondary - WARNING - [WARNING] Total word count (642) exceeds maximum 600 (exceeds by 42 words - condense content) ⚠️
+2025-12-15 09:52:04,263 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-15 09:52:04,263 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-15 09:52:04,263 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_04/extension.md
+2025-12-15 09:52:04,263 - generate_secondary - INFO - Generating visualization for session 4: Homeostasis & Biodiversity...
+2025-12-15 09:52:04,263 - src.llm.client - INFO - [viz:e10d13] 🚀 viz | m=gemma3:4b | p=24876c | t=120s
+2025-12-15 09:52:04,263 - src.llm.client - INFO - [viz:e10d13] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:52:04,263 - src.llm.client - INFO - [viz:e10d13] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:52:04,265 - src.llm.client - INFO - [viz:e10d13] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=29098 bytes, prompt=24876 chars
+2025-12-15 09:52:04,265 - src.llm.client - INFO - [viz:e10d13] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:52:15,312 - src.llm.request_handler - INFO - [viz:e10d13] ✓ Done 11.05s
+2025-12-15 09:52:15,312 - src.llm.client - INFO - [viz:e10d13] ✅ HTTP 200 in 11.05s
+2025-12-15 09:52:15,312 - src.llm.client - INFO - [viz:e10d13] 📡 Stream active (200)
+2025-12-15 09:52:15,312 - src.llm.client - INFO - [viz:e10d13] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:52:17,324 - src.llm.client - INFO - [viz:e10d13] 📊 2.0s: 272c @135c/s (64ch, ~68t @34t/s)
+2025-12-15 09:52:19,354 - src.llm.client - INFO - [viz:e10d13] 📊 4.0s: 479c @119c/s (130ch, ~120t @30t/s)
+2025-12-15 09:52:21,372 - src.llm.client - INFO - [viz:e10d13] 📊 6.1s: 713c @118c/s (195ch, ~178t @29t/s)
+2025-12-15 09:52:23,386 - src.llm.client - INFO - [viz:e10d13] 📊 8.1s: 955c @118c/s (259ch, ~239t @30t/s)
+2025-12-15 09:52:25,404 - src.llm.client - INFO - [viz:e10d13] 📊 10.1s: 1210c @120c/s (324ch, ~302t @30t/s)
+2025-12-15 09:52:27,415 - src.llm.client - INFO - [viz:e10d13] 📊 12.1s: 1494c @123c/s (388ch, ~374t @31t/s)
+2025-12-15 09:52:29,417 - src.llm.client - INFO - [viz:e10d13] 📊 14.1s: 1766c @125c/s (452ch, ~442t @31t/s)
+2025-12-15 09:52:29,980 - src.llm.client - INFO - [viz:e10d13] ✓ Done 25.72s: 1822c (~287w @71c/s)
+2025-12-15 09:52:29,980 - src.generate.processors.cleanup - INFO - Cleanup complete: 3 issues before, 0 issues after
+2025-12-15 09:52:29,980 - generate_secondary - INFO - [NEEDS REVIEW] Diagram generated ⚠️
+2025-12-15 09:52:29,980 - generate_secondary - INFO -     - Length: 438 chars (cleaned: 438 chars)
+2025-12-15 09:52:29,980 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:52:29,980 - generate_secondary - INFO - [CRITICAL] Elements: 30 total (nodes: 7, connections: 23) 🔴
+2025-12-15 09:52:29,981 - generate_secondary - WARNING -     - Mermaid syntax warnings: 1 issues fixed (code fences, style commands)
+2025-12-15 09:52:29,981 - generate_secondary - WARNING -     - Critical issues: 2 structural problems requiring attention
+2025-12-15 09:52:29,981 - generate_secondary - WARNING - [WARNING] Only 7 nodes found (require at least 10, need 3 more - add more nodes to the diagram) ⚠️
+2025-12-15 09:52:29,981 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-15 09:52:29,981 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-15 09:52:29,981 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_04/visualization.mmd
+2025-12-15 09:52:29,981 - generate_secondary - INFO - Generating integration for session 4: Homeostasis & Biodiversity...
+2025-12-15 09:52:29,981 - src.llm.client - INFO - [int:a1c449] 🚀 int | m=gemma3:4b | p=26225c | t=150s
+2025-12-15 09:52:29,981 - src.llm.client - INFO - [int:a1c449] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:52:29,981 - src.llm.client - INFO - [int:a1c449] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:52:29,983 - src.llm.client - INFO - [int:a1c449] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=31464 bytes, prompt=26225 chars
+2025-12-15 09:52:29,983 - src.llm.client - INFO - [int:a1c449] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:52:40,372 - src.llm.request_handler - INFO - [int:a1c449] ✓ Done 10.39s
+2025-12-15 09:52:40,373 - src.llm.client - INFO - [int:a1c449] ✅ HTTP 200 in 10.39s
+2025-12-15 09:52:40,373 - src.llm.client - INFO - [int:a1c449] 📡 Stream active (200)
+2025-12-15 09:52:40,373 - src.llm.client - INFO - [int:a1c449] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:52:42,391 - src.llm.client - INFO - [int:a1c449] 📊 2.0s: 354c @175c/s (65ch, ~88t @44t/s)
+2025-12-15 09:52:44,394 - src.llm.client - INFO - [int:a1c449] 📊 4.0s: 758c @189c/s (130ch, ~190t @47t/s)
+2025-12-15 09:52:46,410 - src.llm.client - INFO - [int:a1c449] 📊 6.0s: 1183c @196c/s (195ch, ~296t @49t/s)
+2025-12-15 09:52:48,419 - src.llm.client - INFO - [int:a1c449] 📊 8.0s: 1604c @199c/s (260ch, ~401t @50t/s)
+2025-12-15 09:52:50,429 - src.llm.client - INFO - [int:a1c449] 📊 10.1s: 2028c @202c/s (325ch, ~507t @50t/s)
+2025-12-15 09:52:52,430 - src.llm.client - INFO - [int:a1c449] 📊 12.1s: 2462c @204c/s (389ch, ~616t @51t/s)
+2025-12-15 09:52:54,439 - src.llm.client - INFO - [int:a1c449] 📊 14.1s: 2677c @190c/s (454ch, ~669t @48t/s)
+2025-12-15 09:52:56,467 - src.llm.client - INFO - [int:a1c449] 📊 16.1s: 2915c @181c/s (519ch, ~729t @45t/s)
+2025-12-15 09:52:58,477 - src.llm.client - INFO - [int:a1c449] 📊 18.1s: 3153c @174c/s (584ch, ~788t @44t/s)
+2025-12-15 09:53:00,490 - src.llm.client - INFO - [int:a1c449] 📊 20.1s: 3407c @169c/s (648ch, ~852t @42t/s)
+2025-12-15 09:53:02,518 - src.llm.client - INFO - [int:a1c449] 📊 22.1s: 3678c @166c/s (712ch, ~920t @42t/s)
+2025-12-15 09:53:04,521 - src.llm.client - INFO - [int:a1c449] 📊 24.1s: 3926c @163c/s (776ch, ~982t @41t/s)
+2025-12-15 09:53:06,530 - src.llm.client - INFO - [int:a1c449] 📊 26.2s: 4163c @159c/s (839ch, ~1041t @40t/s)
+2025-12-15 09:53:08,840 - src.llm.client - INFO - [int:a1c449] 📊 28.5s: 4423c @155c/s (903ch, ~1106t @39t/s)
+2025-12-15 09:53:08,841 - src.llm.client - INFO - [int:a1c449] ✓ Done 38.86s: 4423c (~607w @114c/s)
+2025-12-15 09:53:08,843 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:53:08,843 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-15 09:53:08,844 - generate_secondary - INFO -     - Length: 4422 chars, 607 words
+2025-12-15 09:53:08,844 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-15 09:53:08,844 - generate_secondary - INFO -     - Connections: 19
+2025-12-15 09:53:08,844 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-15 09:53:08,844 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_04/integration.md
+2025-12-15 09:53:08,844 - generate_secondary - INFO - Generating investigation for session 4: Homeostasis & Biodiversity...
+2025-12-15 09:53:08,844 - src.llm.client - INFO - [inv:7cb5b9] 🚀 inv | m=gemma3:4b | p=25138c | t=150s
+2025-12-15 09:53:08,844 - src.llm.client - INFO - [inv:7cb5b9] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:53:08,844 - src.llm.client - INFO - [inv:7cb5b9] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:53:08,846 - src.llm.client - INFO - [inv:7cb5b9] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=29320 bytes, prompt=25138 chars
+2025-12-15 09:53:08,846 - src.llm.client - INFO - [inv:7cb5b9] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:53:20,571 - src.llm.request_handler - INFO - [inv:7cb5b9] ✓ Done 11.73s
+2025-12-15 09:53:20,572 - src.llm.client - INFO - [inv:7cb5b9] ✅ HTTP 200 in 11.73s
+2025-12-15 09:53:20,572 - src.llm.client - INFO - [inv:7cb5b9] 📡 Stream active (200)
+2025-12-15 09:53:20,572 - src.llm.client - INFO - [inv:7cb5b9] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:53:22,595 - src.llm.client - INFO - [inv:7cb5b9] 📊 2.0s: 331c @164c/s (65ch, ~83t @41t/s)
+2025-12-15 09:53:24,608 - src.llm.client - INFO - [inv:7cb5b9] 📊 4.0s: 616c @153c/s (130ch, ~154t @38t/s)
+2025-12-15 09:53:26,628 - src.llm.client - INFO - [inv:7cb5b9] 📊 6.1s: 924c @153c/s (195ch, ~231t @38t/s)
+2025-12-15 09:53:28,636 - src.llm.client - INFO - [inv:7cb5b9] 📊 8.1s: 1270c @157c/s (260ch, ~318t @39t/s)
+2025-12-15 09:53:30,647 - src.llm.client - INFO - [inv:7cb5b9] 📊 10.1s: 1646c @163c/s (325ch, ~412t @41t/s)
+2025-12-15 09:53:32,669 - src.llm.client - INFO - [inv:7cb5b9] 📊 12.1s: 1967c @163c/s (390ch, ~492t @41t/s)
+2025-12-15 09:53:34,681 - src.llm.client - INFO - [inv:7cb5b9] 📊 14.1s: 2270c @161c/s (455ch, ~568t @40t/s)
+2025-12-15 09:53:36,701 - src.llm.client - INFO - [inv:7cb5b9] 📊 16.1s: 2522c @156c/s (520ch, ~630t @39t/s)
+2025-12-15 09:53:38,714 - src.llm.client - INFO - [inv:7cb5b9] 📊 18.1s: 2831c @156c/s (585ch, ~708t @39t/s)
+2025-12-15 09:53:40,730 - src.llm.client - INFO - [inv:7cb5b9] 📊 20.2s: 3151c @156c/s (650ch, ~788t @39t/s)
+2025-12-15 09:53:42,756 - src.llm.client - INFO - [inv:7cb5b9] 📊 22.2s: 3458c @156c/s (715ch, ~864t @39t/s)
+2025-12-15 09:53:44,774 - src.llm.client - INFO - [inv:7cb5b9] 📊 24.2s: 3715c @154c/s (780ch, ~929t @38t/s)
+2025-12-15 09:53:46,801 - src.llm.client - INFO - [inv:7cb5b9] 📊 26.2s: 3971c @151c/s (845ch, ~993t @38t/s)
+2025-12-15 09:53:48,828 - src.llm.client - INFO - [inv:7cb5b9] 📊 28.3s: 4300c @152c/s (910ch, ~1075t @38t/s)
+2025-12-15 09:53:50,838 - src.llm.client - INFO - [inv:7cb5b9] 📊 30.3s: 4630c @153c/s (974ch, ~1158t @38t/s)
+2025-12-15 09:53:52,850 - src.llm.client - INFO - [inv:7cb5b9] 📊 32.3s: 4885c @151c/s (1038ch, ~1221t @38t/s)
+2025-12-15 09:53:54,027 - src.llm.client - INFO - [inv:7cb5b9] ✓ Done 45.18s: 5032c (~771w @111c/s)
+2025-12-15 09:53:54,030 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:53:54,030 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-15 09:53:54,030 - generate_secondary - INFO -     - Length: 5030 chars, 771 words
+2025-12-15 09:53:54,030 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-15 09:53:54,030 - generate_secondary - INFO -     - Research questions: 3
+2025-12-15 09:53:54,030 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-15 09:53:54,030 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_04/investigation.md
+2025-12-15 09:53:54,030 - generate_secondary - INFO - Generating open_questions for session 4: Homeostasis & Biodiversity...
+2025-12-15 09:53:54,030 - src.llm.client - INFO - [opq:40c571] 🚀 opq | m=gemma3:4b | p=25224c | t=150s
+2025-12-15 09:53:54,030 - src.llm.client - INFO - [opq:40c571] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:53:54,030 - src.llm.client - INFO - [opq:40c571] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:53:54,032 - src.llm.client - INFO - [opq:40c571] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=29417 bytes, prompt=25224 chars
+2025-12-15 09:53:54,032 - src.llm.client - INFO - [opq:40c571] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:54:05,837 - src.llm.request_handler - INFO - [opq:40c571] ✓ Done 11.81s
+2025-12-15 09:54:05,838 - src.llm.client - INFO - [opq:40c571] ✅ HTTP 200 in 11.81s
+2025-12-15 09:54:05,838 - src.llm.client - INFO - [opq:40c571] 📡 Stream active (200)
+2025-12-15 09:54:05,838 - src.llm.client - INFO - [opq:40c571] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:54:07,843 - src.llm.client - INFO - [opq:40c571] 📊 2.0s: 378c @189c/s (65ch, ~94t @47t/s)
+2025-12-15 09:54:09,843 - src.llm.client - INFO - [opq:40c571] 📊 4.0s: 792c @198c/s (130ch, ~198t @49t/s)
+2025-12-15 09:54:11,880 - src.llm.client - INFO - [opq:40c571] 📊 6.0s: 1184c @196c/s (196ch, ~296t @49t/s)
+2025-12-15 09:54:13,888 - src.llm.client - INFO - [opq:40c571] 📊 8.1s: 1537c @191c/s (261ch, ~384t @48t/s)
+2025-12-15 09:54:15,892 - src.llm.client - INFO - [opq:40c571] 📊 10.1s: 1952c @194c/s (326ch, ~488t @49t/s)
+2025-12-15 09:54:17,304 - src.llm.client - INFO - [opq:40c571] ✓ Done 23.27s: 2212c (~287w @95c/s)
+2025-12-15 09:54:17,305 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-15 09:54:17,306 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - Length: 2059 chars, 265 words
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - Open questions: 3
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-15 09:54:17,306 - generate_secondary - INFO -   → Saved to: output/biology/modules/module_02_organisms_and_processes/session_04/open_questions.md
+2025-12-15 09:54:17,306 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-15 09:54:17,306 - generate_secondary - INFO - 
+2025-12-15 09:54:17,306 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-15 09:54:17,306 - generate_secondary - INFO - [ALL COMPLIANT] Secondary Materials Generation - Summary ✅
+2025-12-15 09:54:17,306 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-15 09:54:17,306 - generate_secondary - INFO -   Items Processed: 4
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - [COMPLIANT] Successful: 4
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - [ERROR] Failed: 0
+2025-12-15 09:54:17,306 - generate_secondary - INFO - 
+2025-12-15 09:54:17,306 - generate_secondary - INFO -   Compliance Breakdown:
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - [COMPLIANT]: 4
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - [NEEDS REVIEW]: 0
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - [CRITICAL]: 0
+2025-12-15 09:54:17,306 - generate_secondary - INFO - 
+2025-12-15 09:54:17,306 - generate_secondary - INFO -   Issue Statistics:
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - Total Issues: 0
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - Critical Errors: 0
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - Warnings: 0
+2025-12-15 09:54:17,306 - generate_secondary - INFO - 
+2025-12-15 09:54:17,306 - generate_secondary - INFO -   Recommendations:
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - All content generated successfully
+2025-12-15 09:54:17,306 - generate_secondary - INFO -     - No issues detected
+2025-12-15 09:54:17,306 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-15 09:54:17,306 - generate_secondary - INFO - 
+================================================================================
+2025-12-15 09:54:17,306 - generate_secondary - INFO - EXIT CODE: 0 (SUCCESS)
+2025-12-15 09:54:17,306 - generate_secondary - INFO - ================================================================================
+2025-12-15 09:54:17,306 - generate_secondary - INFO - All sessions processed successfully with no issues
+2025-12-15 09:54:17,306 - generate_secondary - INFO - ================================================================================

@@ -1,0 +1,33 @@
+# Educational Course Configuration - Active Inference
+# Comprehensive long course on Active Inference theory and applications
+
+course:
+  name: "Active Inference: Theory and Applications"
+  subject: "Cognitive Science and Neuroscience"  # Subject/expertise area
+  description: |
+    A comprehensive exploration of Active Inference, a unifying theoretical framework that explains how biological systems 
+    (from single cells to complex organisms) maintain their structural and functional integrity through perception, action, 
+    and learning. This course covers the mathematical foundations of variational inference and Bayesian mechanics, the 
+    hierarchical generative models that enable predictive processing, and the active inference formulation of perception 
+    as inference and action as minimizing expected free energy. Students will learn how this framework integrates perception, 
+    action, attention, and learning into a single principled account, with applications spanning neuroscience, cognitive 
+    science, artificial intelligence, robotics, and clinical psychology. The course examines how organisms minimize surprise 
+    (or maximize model evidence) through both perceptual inference (updating beliefs about the world) and active inference 
+    (sampling data that confirms predictions), leading to adaptive behavior and self-organization. Topics include the 
+    mathematical formulation of variational free energy, the role of generative models and their hierarchical structure, 
+    precision weighting and attention, policy selection and planning, model learning and structure learning, and the 
+    relationship between active inference and other frameworks such as predictive processing, reinforcement learning, 
+    and optimal control theory. The course also explores empirical evidence from neuroscience, computational implementations, 
+    and practical applications in AI systems, autonomous agents, and therapeutic interventions.
+  level: "Graduate / Advanced Undergraduate"
+  additional_constraints: |
+    Emphasize the mathematical rigor while maintaining accessibility through intuitive explanations and concrete examples. 
+    Include computational exercises and implementations. Connect theoretical principles to empirical findings in neuroscience 
+    and applications in AI/robotics. Address both the philosophical implications (e.g., embodied cognition, the nature of 
+    agency) and practical applications (e.g., clinical interventions, autonomous systems design).
+  
+  # Configurable defaults (all overwritable in interactive mode)
+  defaults:
+    num_modules: 10           # Number of modules to generate
+    total_sessions: 20       # Total sessions across all modules
+    sessions_per_module: null  # Auto-calculated if null

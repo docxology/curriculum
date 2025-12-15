@@ -1,0 +1,20 @@
+# Educational Course Configuration - Biology
+# Introductory Biology course template
+
+course:
+  name: "Introductory Biology"
+  subject: "General Biology"  # Subject/expertise area
+  description: "Comprehensive introduction covering fundamental concepts and principles of Biology"
+  level: "Undergraduate Introductory"
+  additional_constraints: ""  # Optional: pedagogical, practical, or thematic constraints
+  
+  # Configurable defaults (all overwritable in interactive mode)
+  defaults:
+    num_modules: 2           # Number of modules to generate
+    total_sessions: 4       # Total sessions across all modules
+    sessions_per_module: null  # Auto-calculated if null
+
+
+
+
+

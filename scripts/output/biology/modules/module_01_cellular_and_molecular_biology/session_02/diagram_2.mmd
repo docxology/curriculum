@@ -1,0 +1,15 @@
+graph LR
+    subgraph DNA & Protein Synthesis
+        A[DNA Template] --> B{Transcription}
+        B -- mRNA --> C[Translation]
+        C --> D[Polypeptide Chain]
+    end
+
+    subgraph Primary Structure
+        D --> E[Amino Acid Sequence]
+        E --> F{Peptide Bonds}
+    end
+
+    subgraph Secondary Structure
+        F --> G[Alpha Helices]
+        F --> H[Beta Sheets]

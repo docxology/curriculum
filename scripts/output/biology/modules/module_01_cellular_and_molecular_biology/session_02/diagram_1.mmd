@@ -1,0 +1,22 @@
+graph TD
+    A[DNA Molecule] --> B(DNA Replication Initiation)
+    B --> C{Origin Recognition}
+    C -- Helicase & Primase --> D(Unwinding & Primer Synthesis)
+    D --> E{RNA Polymerase Binding}
+    E -- Sigma Factor --> F(Transcription Start)
+    F --> G{RNA Polymerase Action}
+    G -- Multiple Subunits --> H(DNA Synthesis - 5' to 3' Direction)
+    H --> I{Leading Strand Synthesis}
+    H --> J{Lagging Strand Synthesis}
+    J --> K{Okazaki Fragments}
+    K -- Removal by Nucleases --> L(Fragment Processing)
+    L --> M{Ligation}
+    M --> N(Replicated DNA Molecules)
+    N --> O{Feedback Loop - Proofreading}
+    O -- DNA Polymerase --> N
+    B --> P{Termination}
+    P -- Rho Factor --> N
+    N --> Q(Double Helix)
+    Q --> R{DNA Repair Mechanisms (Parallel Pathways)}
+    R -- Damage Detection --> S(Repair Enzymes)
+    S --> N

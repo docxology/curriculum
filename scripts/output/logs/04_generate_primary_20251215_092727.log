@@ -1,0 +1,1103 @@
+2025-12-15 09:27:27,659 - root - INFO - Logging to file: /Users/mini/Documents/GitHub/curriculum/scripts/output/logs/04_generate_primary_20251215_092727.log
+2025-12-15 09:27:27,659 - generate_primary - INFO - 
+2025-12-15 09:27:27,659 - generate_primary - INFO - 📚 STAGE 04: PRIMARY MATERIALS (Session-Based)
+2025-12-15 09:27:27,659 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 09:27:27,659 - generate_primary - INFO - Generating materials PER SESSION (not per module)
+2025-12-15 09:27:27,659 - generate_primary - INFO - Output structure: output/modules/module_XX/session_YY/[material].md
+2025-12-15 09:27:27,659 - generate_primary - INFO - 
+2025-12-15 09:27:27,659 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/mini/Documents/GitHub/curriculum/config
+2025-12-15 09:27:27,659 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-15 09:27:27,671 - src.config.loader - INFO - All configurations validated successfully
+2025-12-15 09:27:27,671 - generate_primary - INFO - PRIMARY ARTIFACTS GENERATED PER SESSION:
+2025-12-15 09:27:27,671 - generate_primary - INFO -   1. lecture.md - Comprehensive instructional content
+2025-12-15 09:27:27,671 - generate_primary - INFO -   2. lab.md - Laboratory exercise with procedures
+2025-12-15 09:27:27,671 - generate_primary - INFO -   3. study_notes.md - Concise session summary
+2025-12-15 09:27:27,671 - generate_primary - INFO -   4. diagram_1.mmd, diagram_2.mmd, ... (up to 4 diagrams)
+2025-12-15 09:27:27,671 - generate_primary - INFO -   5. questions.md - Comprehension assessment questions
+2025-12-15 09:27:27,671 - generate_primary - INFO - 
+2025-12-15 09:27:27,671 - generate_primary - INFO - 
+2025-12-15 09:27:27,671 - generate_primary - INFO - ⚙️ CONFIGURATION
+2025-12-15 09:27:27,671 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 09:27:27,671 - generate_primary - INFO -   • Diagrams per Session: 4
+2025-12-15 09:27:27,671 - generate_primary - INFO -   • Log File: output/logs/04_generate_primary_20251215_092727.log
+2025-12-15 09:27:27,671 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-15 09:27:27,671 - src.config.loader - INFO - Found most recent outline: /Users/mini/Documents/GitHub/curriculum/scripts/output/biology/outlines/course_outline_20251215_092727.json
+2025-12-15 09:27:27,671 - generate_primary - INFO - Using most recent outline: /Users/mini/Documents/GitHub/curriculum/scripts/output/biology/outlines/course_outline_20251215_092727.json
+2025-12-15 09:27:27,671 - generate_primary - INFO - 
+2025-12-15 09:27:27,671 - generate_primary - INFO - Processing ALL modules from outline
+2025-12-15 09:27:27,671 - src.generate.orchestration.pipeline - INFO - Initializing Educational Course Generator pipeline...
+2025-12-15 09:27:27,671 - src.llm.client - INFO - Initialized OllamaClient: model=gemma3:4b, url=http://localhost:11434/api/generate
+2025-12-15 09:27:27,672 - src.generate.stages.stage1_outline - INFO - Initialized OutlineGenerator
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO - Pipeline initialized successfully
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO - STAGE 2: Generating Primary Content (Session-Based)
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-15 09:27:27,672 - src.config.loader - INFO - Found most recent outline: /Users/mini/Documents/GitHub/curriculum/scripts/output/biology/outlines/course_outline_20251215_092727.json
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO - Processing 2 modules with session-based generation
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO - Using course-specific output directory: output/biology/
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO - 
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO - Module 1: Cellular and Molecular Biology (2 sessions)
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO - 
+[1/4] Session 1: Cell Structure & Function
+2025-12-15 09:27:27,672 - src.generate.orchestration.pipeline - INFO -   → Generating lecture...
+2025-12-15 09:27:27,672 - src.generate.formats.lectures - INFO - Generating lecture for: Cellular and Molecular Biology (Session 1/4)
+2025-12-15 09:27:27,672 - src.llm.client - INFO - [lec:1ae82a] 🚀 lec | m=gemma3:4b | p=3372c | t=180s
+2025-12-15 09:27:27,672 - src.llm.client - INFO - [lec:1ae82a] Timeout configuration: connect=5s, read=180s (total limit: 180s)
+2025-12-15 09:27:27,672 - src.llm.client - INFO - [lec:1ae82a] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:27:27,676 - src.llm.client - INFO - [lec:1ae82a] Sending request to Ollama: model=gemma3:4b, operation=lecture, payload=7009 bytes, prompt=3372 chars
+2025-12-15 09:27:27,676 - src.llm.client - INFO - [lec:1ae82a] Waiting for HTTP response (connect timeout: 5s, read timeout: 180s)...
+2025-12-15 09:27:29,618 - src.llm.request_handler - INFO - [lec:1ae82a] ✓ Done 1.94s
+2025-12-15 09:27:29,618 - src.llm.client - INFO - [lec:1ae82a] ✅ HTTP 200 in 1.94s
+2025-12-15 09:27:29,618 - src.llm.client - INFO - [lec:1ae82a] 📡 Stream active (200)
+2025-12-15 09:27:29,619 - src.llm.client - INFO - [lec:1ae82a] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:27:31,621 - src.llm.client - INFO - [lec:1ae82a] 📊 2.0s: 393c @196c/s (70ch, ~98t @49t/s)
+2025-12-15 09:27:33,631 - src.llm.client - INFO - [lec:1ae82a] 📊 4.0s: 805c @201c/s (140ch, ~201t @50t/s)
+2025-12-15 09:27:35,653 - src.llm.client - INFO - [lec:1ae82a] 📊 6.0s: 1132c @188c/s (210ch, ~283t @47t/s)
+2025-12-15 09:27:37,673 - src.llm.client - INFO - [lec:1ae82a] 📊 8.1s: 1423c @177c/s (279ch, ~356t @44t/s)
+2025-12-15 09:27:39,675 - src.llm.client - INFO - [lec:1ae82a] 📊 10.1s: 1764c @175c/s (348ch, ~441t @44t/s)
+2025-12-15 09:27:41,698 - src.llm.client - INFO - [lec:1ae82a] 📊 12.1s: 2137c @177c/s (417ch, ~534t @44t/s)
+2025-12-15 09:27:43,724 - src.llm.client - INFO - [lec:1ae82a] 📊 14.1s: 2383c @169c/s (484ch, ~596t @42t/s)
+2025-12-15 09:27:45,733 - src.llm.client - INFO - [lec:1ae82a] 📊 16.1s: 2709c @168c/s (551ch, ~677t @42t/s)
+2025-12-15 09:27:47,742 - src.llm.client - INFO - [lec:1ae82a] 📊 18.1s: 3014c @166c/s (618ch, ~754t @42t/s)
+2025-12-15 09:27:49,761 - src.llm.client - INFO - [lec:1ae82a] 📊 20.1s: 3348c @166c/s (686ch, ~837t @42t/s)
+2025-12-15 09:27:51,765 - src.llm.client - INFO - [lec:1ae82a] 📊 22.1s: 3731c @168c/s (753ch, ~933t @42t/s)
+2025-12-15 09:27:53,788 - src.llm.client - INFO - [lec:1ae82a] 📊 24.2s: 4056c @168c/s (817ch, ~1014t @42t/s)
+2025-12-15 09:27:55,788 - src.llm.client - INFO - [lec:1ae82a] 📊 26.2s: 4391c @168c/s (881ch, ~1098t @42t/s)
+2025-12-15 09:27:57,799 - src.llm.client - INFO - [lec:1ae82a] 📊 28.2s: 4733c @168c/s (947ch, ~1183t @42t/s)
+2025-12-15 09:27:59,824 - src.llm.client - INFO - [lec:1ae82a] 📊 30.2s: 5057c @167c/s (1013ch, ~1264t @42t/s)
+2025-12-15 09:28:01,853 - src.llm.client - INFO - [lec:1ae82a] 📊 32.2s: 5358c @166c/s (1078ch, ~1340t @42t/s)
+2025-12-15 09:28:03,864 - src.llm.client - INFO - [lec:1ae82a] 📊 34.2s: 5723c @167c/s (1142ch, ~1431t @42t/s)
+2025-12-15 09:28:05,872 - src.llm.client - INFO - [lec:1ae82a] 📊 36.3s: 6098c @168c/s (1206ch, ~1524t @42t/s)
+2025-12-15 09:28:07,885 - src.llm.client - INFO - [lec:1ae82a] 📊 38.3s: 6457c @169c/s (1270ch, ~1614t @42t/s)
+2025-12-15 09:28:08,482 - src.llm.client - INFO - [lec:1ae82a] ✓ Done 40.81s: 6572c (~948w @161c/s)
+2025-12-15 09:28:08,483 - src.generate.formats.lectures - INFO - [NEEDS REVIEW] Lecture generated ⚠️
+2025-12-15 09:28:08,483 - src.generate.formats.lectures - INFO -     - Length: 6813 chars, 983 words
+2025-12-15 09:28:08,483 - src.generate.formats.lectures - INFO -     - Requirements: 1000-1500 words, 5-15 examples, 4-8 sections
+2025-12-15 09:28:08,483 - src.generate.formats.lectures - INFO -     - Structure: 8 sections, 0 subsections
+2025-12-15 09:28:08,483 - src.generate.formats.lectures - INFO -     - Content: 8 examples, 0 terms defined
+2025-12-15 09:28:08,483 - src.generate.formats.lectures - WARNING - [WARNING] Word count (983) below minimum 1000 (need 17 more words - consider regenerating or expanding content) ⚠️
+2025-12-15 09:28:08,483 - src.generate.formats.lectures - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-15 09:28:08,483 - src.generate.formats.lectures - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-15 09:28:08,483 - src.generate.formats.lectures - INFO - Quality score: 93.3/100 (excellent)
+2025-12-15 09:28:08,488 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:28:08,488 - src.generate.orchestration.pipeline - INFO -   → Generating lab...
+2025-12-15 09:28:08,488 - src.generate.formats.labs - INFO - Generating lab 1 for: Cellular and Molecular Biology (Session 1)
+2025-12-15 09:28:08,488 - src.llm.client - INFO - [lab:a63e9b] 🚀 lab | m=gemma3:4b | p=3581c | t=150s
+2025-12-15 09:28:08,488 - src.llm.client - INFO - [lab:a63e9b] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:28:08,488 - src.llm.client - INFO - [lab:a63e9b] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:28:08,490 - src.llm.client - INFO - [lab:a63e9b] Sending request to Ollama: model=gemma3:4b, operation=lab, payload=4045 bytes, prompt=3581 chars
+2025-12-15 09:28:08,490 - src.llm.client - INFO - [lab:a63e9b] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:28:12,098 - src.llm.request_handler - INFO - [lab:a63e9b] ✓ Done 3.61s
+2025-12-15 09:28:12,099 - src.llm.client - INFO - [lab:a63e9b] ✅ HTTP 200 in 3.61s
+2025-12-15 09:28:12,099 - src.llm.client - INFO - [lab:a63e9b] 📡 Stream active (200)
+2025-12-15 09:28:12,100 - src.llm.client - INFO - [lab:a63e9b] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:28:14,105 - src.llm.client - INFO - [lab:a63e9b] 📊 2.0s: 305c @152c/s (65ch, ~76t @38t/s)
+2025-12-15 09:28:16,131 - src.llm.client - INFO - [lab:a63e9b] 📊 4.0s: 675c @167c/s (131ch, ~169t @42t/s)
+2025-12-15 09:28:18,138 - src.llm.client - INFO - [lab:a63e9b] 📊 6.0s: 971c @161c/s (195ch, ~243t @40t/s)
+2025-12-15 09:28:20,140 - src.llm.client - INFO - [lab:a63e9b] 📊 8.0s: 1249c @155c/s (259ch, ~312t @39t/s)
+2025-12-15 09:28:22,170 - src.llm.client - INFO - [lab:a63e9b] 📊 10.1s: 1478c @147c/s (324ch, ~370t @37t/s)
+2025-12-15 09:28:24,197 - src.llm.client - INFO - [lab:a63e9b] 📊 12.1s: 1696c @140c/s (390ch, ~424t @35t/s)
+2025-12-15 09:28:26,202 - src.llm.client - INFO - [lab:a63e9b] 📊 14.1s: 1869c @133c/s (455ch, ~467t @33t/s)
+2025-12-15 09:28:28,227 - src.llm.client - INFO - [lab:a63e9b] 📊 16.1s: 2105c @131c/s (521ch, ~526t @33t/s)
+2025-12-15 09:28:30,236 - src.llm.client - INFO - [lab:a63e9b] 📊 18.1s: 2395c @132c/s (586ch, ~599t @33t/s)
+2025-12-15 09:28:32,255 - src.llm.client - INFO - [lab:a63e9b] 📊 20.2s: 2669c @132c/s (651ch, ~667t @33t/s)
+2025-12-15 09:28:34,277 - src.llm.client - INFO - [lab:a63e9b] 📊 22.2s: 2877c @130c/s (716ch, ~719t @32t/s)
+2025-12-15 09:28:36,306 - src.llm.client - INFO - [lab:a63e9b] 📊 24.2s: 3108c @128c/s (781ch, ~777t @32t/s)
+2025-12-15 09:28:38,325 - src.llm.client - INFO - [lab:a63e9b] 📊 26.2s: 3310c @126c/s (846ch, ~828t @32t/s)
+2025-12-15 09:28:40,344 - src.llm.client - INFO - [lab:a63e9b] 📊 28.2s: 3578c @127c/s (911ch, ~894t @32t/s)
+2025-12-15 09:28:42,346 - src.llm.client - INFO - [lab:a63e9b] 📊 30.2s: 3926c @130c/s (975ch, ~982t @32t/s)
+2025-12-15 09:28:44,373 - src.llm.client - INFO - [lab:a63e9b] 📊 32.3s: 4401c @136c/s (1040ch, ~1100t @34t/s)
+2025-12-15 09:28:46,382 - src.llm.client - INFO - [lab:a63e9b] 📊 34.3s: 4676c @136c/s (1104ch, ~1169t @34t/s)
+2025-12-15 09:28:48,382 - src.llm.client - INFO - [lab:a63e9b] 📊 36.3s: 4959c @137c/s (1168ch, ~1240t @34t/s)
+2025-12-15 09:28:50,401 - src.llm.client - INFO - [lab:a63e9b] 📊 38.3s: 5236c @137c/s (1233ch, ~1309t @34t/s)
+2025-12-15 09:28:52,085 - src.llm.client - INFO - [lab:a63e9b] ✓ Done 43.60s: 5525c (~762w @127c/s)
+2025-12-15 09:28:52,085 - src.generate.formats.labs - INFO - [COMPLIANT] Lab generated ✓
+2025-12-15 09:28:52,085 - src.generate.formats.labs - INFO -     - Length: 5636 chars, 779 words
+2025-12-15 09:28:52,085 - src.generate.formats.labs - INFO -     - Procedure: 12 steps
+2025-12-15 09:28:52,085 - src.generate.formats.labs - INFO -     - Safety: 2 warnings
+2025-12-15 09:28:52,085 - src.generate.formats.labs - INFO -     - Data tables: 4
+2025-12-15 09:28:52,088 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:28:52,089 - src.generate.orchestration.pipeline - INFO -   → Generating study notes...
+2025-12-15 09:28:52,089 - src.generate.formats.study_notes - INFO - Generating study notes for: Cellular and Molecular Biology (Session 1)
+2025-12-15 09:28:52,089 - src.llm.client - INFO - [stu:299840] 🚀 stu | m=gemma3:4b | p=4705c | t=120s
+2025-12-15 09:28:52,089 - src.llm.client - INFO - [stu:299840] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:28:52,089 - src.llm.client - INFO - [stu:299840] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:28:52,090 - src.llm.client - INFO - [stu:299840] Sending request to Ollama: model=gemma3:4b, operation=study_notes, payload=8386 bytes, prompt=4705 chars
+2025-12-15 09:28:52,090 - src.llm.client - INFO - [stu:299840] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:28:56,867 - src.llm.request_handler - INFO - [stu:299840] ✓ Done 4.78s
+2025-12-15 09:28:56,867 - src.llm.client - INFO - [stu:299840] ✅ HTTP 200 in 4.78s
+2025-12-15 09:28:56,867 - src.llm.client - INFO - [stu:299840] 📡 Stream active (200)
+2025-12-15 09:28:56,867 - src.llm.client - INFO - [stu:299840] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:28:58,897 - src.llm.client - INFO - [stu:299840] 📊 2.0s: 380c @187c/s (65ch, ~95t @47t/s)
+2025-12-15 09:29:00,924 - src.llm.client - INFO - [stu:299840] 📊 4.1s: 701c @173c/s (130ch, ~175t @43t/s)
+2025-12-15 09:29:02,938 - src.llm.client - INFO - [stu:299840] 📊 6.1s: 998c @164c/s (195ch, ~250t @41t/s)
+2025-12-15 09:29:04,958 - src.llm.client - INFO - [stu:299840] 📊 8.1s: 1306c @161c/s (260ch, ~326t @40t/s)
+2025-12-15 09:29:06,969 - src.llm.client - INFO - [stu:299840] 📊 10.1s: 1646c @163c/s (325ch, ~412t @41t/s)
+2025-12-15 09:29:08,978 - src.llm.client - INFO - [stu:299840] 📊 12.1s: 1970c @163c/s (390ch, ~492t @41t/s)
+2025-12-15 09:29:10,992 - src.llm.client - INFO - [stu:299840] 📊 14.1s: 2335c @165c/s (455ch, ~584t @41t/s)
+2025-12-15 09:29:13,008 - src.llm.client - INFO - [stu:299840] 📊 16.1s: 2641c @164c/s (520ch, ~660t @41t/s)
+2025-12-15 09:29:15,030 - src.llm.client - INFO - [stu:299840] 📊 18.2s: 2959c @163c/s (585ch, ~740t @41t/s)
+2025-12-15 09:29:17,053 - src.llm.client - INFO - [stu:299840] 📊 20.2s: 3340c @165c/s (650ch, ~835t @41t/s)
+2025-12-15 09:29:19,078 - src.llm.client - INFO - [stu:299840] 📊 22.2s: 3685c @166c/s (715ch, ~921t @41t/s)
+2025-12-15 09:29:19,537 - src.llm.client - INFO - [stu:299840] ✓ Done 27.45s: 3716c (~508w @135c/s)
+2025-12-15 09:29:19,538 - src.generate.formats.study_notes - INFO - [NEEDS REVIEW] Study notes generated ⚠️
+2025-12-15 09:29:19,538 - src.generate.formats.study_notes - INFO -     - Length: 3781 chars, 519 words
+2025-12-15 09:29:19,538 - src.generate.formats.study_notes - INFO -     - Requirements: 3-10 key concepts, max 1200 words
+2025-12-15 09:29:19,538 - src.generate.formats.study_notes - INFO -     - Key concepts: 11
+2025-12-15 09:29:19,538 - src.generate.formats.study_notes - INFO -     - Structure: 3 sections, 2 bullets
+2025-12-15 09:29:19,538 - src.generate.formats.study_notes - WARNING - [WARNING] Too many key concepts (11, maximum 10, 1 excess - consolidate related concepts or remove less critical ones) ⚠️
+2025-12-15 09:29:19,538 - src.generate.formats.study_notes - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-15 09:29:19,538 - src.generate.formats.study_notes - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-15 09:29:19,538 - src.generate.formats.study_notes - INFO - Quality score: 98.0/100 (excellent)
+2025-12-15 09:29:19,540 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:29:19,541 - src.generate.orchestration.pipeline - INFO -   → Generating diagrams...
+2025-12-15 09:29:19,541 - src.generate.formats.diagrams - INFO - Generating diagram for: Prokaryotic vs. Eukaryotic Cells (Cellular and Molecular Biology)
+2025-12-15 09:29:19,541 - src.llm.client - INFO - [dia:c8a9a4] 🚀 dia | m=gemma3:4b | p=5786c | t=120s
+2025-12-15 09:29:19,541 - src.llm.client - INFO - [dia:c8a9a4] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:29:19,541 - src.llm.client - INFO - [dia:c8a9a4] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:29:19,541 - src.generate.formats.diagrams - INFO - Generating diagram for: Cell Organelles (overview) (Cellular and Molecular Biology)
+2025-12-15 09:29:19,542 - src.llm.client - INFO - [dia:fa7268] 🚀 dia | m=gemma3:4b | p=5774c | t=120s
+2025-12-15 09:29:19,542 - src.llm.client - INFO - [dia:fa7268] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:29:19,542 - src.llm.client - INFO - [dia:fa7268] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:29:19,542 - src.generate.formats.diagrams - INFO - Generating diagram for: Cell Wall Composition (Cellular and Molecular Biology)
+2025-12-15 09:29:19,542 - src.llm.client - INFO - [dia:ab0881] 🚀 dia | m=gemma3:4b | p=5764c | t=120s
+2025-12-15 09:29:19,543 - src.llm.client - INFO - [dia:ab0881] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:29:19,543 - src.llm.client - INFO - [dia:ab0881] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:29:19,542 - src.generate.formats.diagrams - INFO - Generating diagram for: Cell Membrane Structure & Transport (Cellular and Molecular Biology)
+2025-12-15 09:29:19,543 - src.llm.client - INFO - [dia:dc1497] 🚀 dia | m=gemma3:4b | p=5792c | t=120s
+2025-12-15 09:29:19,543 - src.llm.client - INFO - [dia:dc1497] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:29:19,543 - src.llm.client - INFO - [dia:dc1497] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:29:19,544 - src.llm.client - INFO - [dia:c8a9a4] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11095 bytes, prompt=5786 chars
+2025-12-15 09:29:19,544 - src.llm.client - INFO - [dia:c8a9a4] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:29:19,544 - src.llm.client - INFO - [dia:fa7268] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11083 bytes, prompt=5774 chars
+2025-12-15 09:29:19,544 - src.llm.client - INFO - [dia:fa7268] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:29:19,545 - src.llm.client - INFO - [dia:dc1497] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11101 bytes, prompt=5792 chars
+2025-12-15 09:29:19,545 - src.llm.client - INFO - [dia:dc1497] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:29:19,545 - src.llm.client - INFO - [dia:ab0881] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11073 bytes, prompt=5764 chars
+2025-12-15 09:29:19,545 - src.llm.client - INFO - [dia:ab0881] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:29:23,159 - src.llm.request_handler - INFO - [dia:dc1497] ✓ Done 3.61s
+2025-12-15 09:29:23,159 - src.llm.client - INFO - [dia:dc1497] ✅ HTTP 200 in 3.61s
+2025-12-15 09:29:23,159 - src.llm.client - INFO - [dia:dc1497] 📡 Stream active (200)
+2025-12-15 09:29:23,159 - src.llm.client - INFO - [dia:dc1497] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:29:25,187 - src.llm.client - INFO - [dia:dc1497] 📊 2.0s: 301c @148c/s (65ch, ~75t @37t/s)
+2025-12-15 09:29:27,198 - src.llm.client - INFO - [dia:dc1497] 📊 4.0s: 582c @144c/s (130ch, ~146t @36t/s)
+2025-12-15 09:29:29,206 - src.llm.client - INFO - [dia:dc1497] 📊 6.0s: 842c @139c/s (195ch, ~210t @35t/s)
+2025-12-15 09:29:31,230 - src.llm.client - INFO - [dia:dc1497] 📊 8.1s: 1092c @135c/s (260ch, ~273t @34t/s)
+2025-12-15 09:29:33,230 - src.llm.client - INFO - [dia:dc1497] 📊 10.1s: 1240c @123c/s (324ch, ~310t @31t/s)
+2025-12-15 09:29:35,244 - src.llm.client - INFO - [dia:dc1497] 📊 12.1s: 1393c @115c/s (389ch, ~348t @29t/s)
+2025-12-15 09:29:37,257 - src.llm.client - INFO - [dia:dc1497] 📊 14.1s: 1549c @110c/s (454ch, ~387t @27t/s)
+2025-12-15 09:29:39,258 - src.llm.client - INFO - [dia:dc1497] 📊 16.1s: 1701c @106c/s (519ch, ~425t @26t/s)
+2025-12-15 09:29:39,443 - src.llm.client - INFO - [dia:dc1497] ✓ Done 19.90s: 1707c (~189w @86c/s)
+2025-12-15 09:29:39,443 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Cell Membrane Structure & Transport (Cellular and Molecular Biology):
+2025-12-15 09:29:39,443 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:29:39,443 - src.generate.formats.diagrams - INFO - [FIXED] Removed linkStyle command (not supported in all renderers) ✓
+2025-12-15 09:29:39,443 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:29:39,444 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:29:39,444 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-15 09:29:39,444 - src.generate.formats.diagrams - INFO -     - Length: 1117 chars (cleaned: 1117 chars)
+2025-12-15 09:29:39,444 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:29:39,444 - src.generate.formats.diagrams - INFO - [OK] Elements: 48 total (nodes: 23, connections: 25) ✓
+2025-12-15 09:29:39,444 - src.generate.formats.diagrams - INFO -   Cleanup summary: 4 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:29:39,444 - src.generate.formats.diagrams - INFO - Generated diagram: 1117 characters
+2025-12-15 09:29:42,693 - src.llm.request_handler - INFO - [dia:c8a9a4] ✓ Done 23.15s
+2025-12-15 09:29:42,693 - src.llm.client - INFO - [dia:c8a9a4] ✅ HTTP 200 in 23.15s
+2025-12-15 09:29:42,693 - src.llm.client - INFO - [dia:c8a9a4] 📡 Stream active (200)
+2025-12-15 09:29:42,693 - src.llm.client - INFO - [dia:c8a9a4] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:29:44,719 - src.llm.client - INFO - [dia:c8a9a4] 📊 2.0s: 204c @101c/s (65ch, ~51t @25t/s)
+2025-12-15 09:29:46,745 - src.llm.client - INFO - [dia:c8a9a4] 📊 4.1s: 414c @102c/s (130ch, ~104t @26t/s)
+2025-12-15 09:29:48,772 - src.llm.client - INFO - [dia:c8a9a4] 📊 6.1s: 669c @110c/s (195ch, ~167t @28t/s)
+2025-12-15 09:29:50,776 - src.llm.client - INFO - [dia:c8a9a4] 📊 8.1s: 890c @110c/s (259ch, ~222t @28t/s)
+2025-12-15 09:29:52,670 - src.llm.client - INFO - [dia:c8a9a4] ✓ Done 33.13s: 1065c (~134w @32c/s)
+2025-12-15 09:29:52,671 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Prokaryotic vs. Eukaryotic Cells (Cellular and Molecular Biology):
+2025-12-15 09:29:52,671 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:29:52,671 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:29:52,671 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:29:52,671 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-15 09:29:52,671 - src.generate.formats.diagrams - INFO -     - Length: 981 chars (cleaned: 981 chars)
+2025-12-15 09:29:52,671 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:29:52,671 - src.generate.formats.diagrams - INFO - [OK] Elements: 56 total (nodes: 23, connections: 33) ✓
+2025-12-15 09:29:52,671 - src.generate.formats.diagrams - INFO -   Cleanup summary: 3 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:29:52,671 - src.generate.formats.diagrams - INFO - Generated diagram: 981 characters
+2025-12-15 09:29:55,939 - src.llm.request_handler - INFO - [dia:fa7268] ✓ Done 36.40s
+2025-12-15 09:29:55,940 - src.llm.client - INFO - [dia:fa7268] ✅ HTTP 200 in 36.40s
+2025-12-15 09:29:55,940 - src.llm.client - INFO - [dia:fa7268] 📡 Stream active (200)
+2025-12-15 09:29:55,940 - src.llm.client - INFO - [dia:fa7268] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:29:57,967 - src.llm.client - INFO - [dia:fa7268] 📊 2.0s: 266c @131c/s (65ch, ~66t @33t/s)
+2025-12-15 09:29:59,994 - src.llm.client - INFO - [dia:fa7268] 📊 4.1s: 493c @122c/s (130ch, ~123t @30t/s)
+2025-12-15 09:30:01,999 - src.llm.client - INFO - [dia:fa7268] 📊 6.1s: 724c @119c/s (194ch, ~181t @30t/s)
+2025-12-15 09:30:04,030 - src.llm.client - INFO - [dia:fa7268] 📊 8.1s: 1004c @124c/s (259ch, ~251t @31t/s)
+2025-12-15 09:30:06,054 - src.llm.client - INFO - [dia:fa7268] 📊 10.1s: 1259c @124c/s (327ch, ~315t @31t/s)
+2025-12-15 09:30:08,059 - src.llm.client - INFO - [dia:fa7268] 📊 12.1s: 1437c @119c/s (395ch, ~359t @30t/s)
+2025-12-15 09:30:10,084 - src.llm.client - INFO - [dia:fa7268] 📊 14.1s: 1590c @112c/s (464ch, ~398t @28t/s)
+2025-12-15 09:30:12,087 - src.llm.client - INFO - [dia:fa7268] 📊 16.1s: 1740c @108c/s (532ch, ~435t @27t/s)
+2025-12-15 09:30:14,106 - src.llm.client - INFO - [dia:fa7268] 📊 18.2s: 1889c @104c/s (601ch, ~472t @26t/s)
+2025-12-15 09:30:14,566 - src.llm.client - INFO - [dia:fa7268] ✓ Done 55.02s: 1910c (~219w @35c/s)
+2025-12-15 09:30:14,566 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Cell Organelles (overview) (Cellular and Molecular Biology):
+2025-12-15 09:30:14,566 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:30:14,566 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:30:14,566 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:30:14,566 - src.generate.formats.diagrams - WARNING - [WARNING] Some node text exceeds 40 characters (keep node labels concise - found 1 long nodes) ⚠️
+2025-12-15 09:30:14,567 - src.generate.formats.diagrams - INFO - [NEEDS REVIEW] Diagram generated ⚠️
+2025-12-15 09:30:14,567 - src.generate.formats.diagrams - INFO -     - Length: 1303 chars (cleaned: 1303 chars)
+2025-12-15 09:30:14,567 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:30:14,567 - src.generate.formats.diagrams - INFO - [WARNING] Elements: 74 total (nodes: 27, connections: 47) ⚠️
+2025-12-15 09:30:14,567 - src.generate.formats.diagrams - WARNING -     - Mermaid syntax warnings: 1 issues fixed (code fences, style commands)
+2025-12-15 09:30:14,567 - src.generate.formats.diagrams - WARNING - [WARNING] Some node text exceeds 40 characters (keep node labels concise - found 1 long nodes) ⚠️
+2025-12-15 09:30:14,567 - src.generate.formats.diagrams - INFO -   Cleanup summary: 4 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:30:14,567 - src.generate.formats.diagrams - INFO - Generated diagram: 1303 characters
+2025-12-15 09:30:17,604 - src.llm.request_handler - INFO - [dia:ab0881] ✓ Done 58.06s
+2025-12-15 09:30:17,605 - src.llm.client - INFO - [dia:ab0881] ✅ HTTP 200 in 58.06s
+2025-12-15 09:30:17,605 - src.llm.client - INFO - [dia:ab0881] 📡 Stream active (200)
+2025-12-15 09:30:17,605 - src.llm.client - INFO - [dia:ab0881] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:30:19,620 - src.llm.client - INFO - [dia:ab0881] 📊 2.0s: 252c @125c/s (67ch, ~63t @31t/s)
+2025-12-15 09:30:21,635 - src.llm.client - INFO - [dia:ab0881] 📊 4.0s: 499c @124c/s (133ch, ~125t @31t/s)
+2025-12-15 09:30:23,649 - src.llm.client - INFO - [dia:ab0881] 📊 6.0s: 761c @126c/s (199ch, ~190t @31t/s)
+2025-12-15 09:30:25,657 - src.llm.client - INFO - [dia:ab0881] 📊 8.1s: 925c @115c/s (265ch, ~231t @29t/s)
+2025-12-15 09:30:27,581 - src.llm.client - INFO - [dia:ab0881] ✓ Done 68.04s: 1065c (~138w @16c/s)
+2025-12-15 09:30:27,582 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Cell Wall Composition (Cellular and Molecular Biology):
+2025-12-15 09:30:27,582 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:30:27,582 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:30:27,582 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:30:27,582 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-15 09:30:27,582 - src.generate.formats.diagrams - INFO -     - Length: 791 chars (cleaned: 791 chars)
+2025-12-15 09:30:27,582 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:30:27,582 - src.generate.formats.diagrams - INFO - [OK] Elements: 36 total (nodes: 11, connections: 25) ✓
+2025-12-15 09:30:27,582 - src.generate.formats.diagrams - INFO -   Cleanup summary: 3 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:30:27,582 - src.generate.formats.diagrams - INFO - Generated diagram: 791 characters
+2025-12-15 09:30:27,583 - src.generate.orchestration.pipeline - INFO -   → Generating questions...
+2025-12-15 09:30:27,583 - src.generate.formats.questions - INFO - Generating 10 questions for: Cellular and Molecular Biology (Session 1)
+2025-12-15 09:30:27,583 - src.llm.client - INFO - [qst:5a7c26] 🚀 qst | m=gemma3:4b | p=7568c | t=150s
+2025-12-15 09:30:27,583 - src.llm.client - INFO - [qst:5a7c26] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:30:27,583 - src.llm.client - INFO - [qst:5a7c26] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:30:27,584 - src.llm.client - INFO - [qst:5a7c26] Sending request to Ollama: model=gemma3:4b, operation=questions, payload=11297 bytes, prompt=7568 chars
+2025-12-15 09:30:27,584 - src.llm.client - INFO - [qst:5a7c26] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:30:32,997 - src.llm.request_handler - INFO - [qst:5a7c26] ✓ Done 5.41s
+2025-12-15 09:30:32,997 - src.llm.client - INFO - [qst:5a7c26] ✅ HTTP 200 in 5.41s
+2025-12-15 09:30:32,997 - src.llm.client - INFO - [qst:5a7c26] 📡 Stream active (200)
+2025-12-15 09:30:32,997 - src.llm.client - INFO - [qst:5a7c26] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:30:35,013 - src.llm.client - INFO - [qst:5a7c26] 📊 2.0s: 322c @160c/s (68ch, ~80t @40t/s)
+2025-12-15 09:30:37,041 - src.llm.client - INFO - [qst:5a7c26] 📊 4.0s: 720c @178c/s (137ch, ~180t @45t/s)
+2025-12-15 09:30:39,049 - src.llm.client - INFO - [qst:5a7c26] 📊 6.1s: 1010c @167c/s (205ch, ~252t @42t/s)
+2025-12-15 09:30:41,078 - src.llm.client - INFO - [qst:5a7c26] 📊 8.1s: 1349c @167c/s (273ch, ~337t @42t/s)
+2025-12-15 09:30:43,101 - src.llm.client - INFO - [qst:5a7c26] 📊 10.1s: 1681c @166c/s (341ch, ~420t @42t/s)
+2025-12-15 09:30:45,121 - src.llm.client - INFO - [qst:5a7c26] 📊 12.1s: 2015c @166c/s (409ch, ~504t @42t/s)
+2025-12-15 09:30:47,141 - src.llm.client - INFO - [qst:5a7c26] 📊 14.1s: 2308c @163c/s (476ch, ~577t @41t/s)
+2025-12-15 09:30:49,144 - src.llm.client - INFO - [qst:5a7c26] 📊 16.1s: 2719c @168c/s (544ch, ~680t @42t/s)
+2025-12-15 09:30:51,152 - src.llm.client - INFO - [qst:5a7c26] 📊 18.2s: 3073c @169c/s (612ch, ~768t @42t/s)
+2025-12-15 09:30:53,168 - src.llm.client - INFO - [qst:5a7c26] 📊 20.2s: 3454c @171c/s (680ch, ~864t @43t/s)
+2025-12-15 09:30:55,177 - src.llm.client - INFO - [qst:5a7c26] 📊 22.2s: 3822c @172c/s (748ch, ~956t @43t/s)
+2025-12-15 09:30:56,214 - src.llm.client - INFO - [qst:5a7c26] ✓ Done 28.63s: 4004c (~569w @140c/s)
+2025-12-15 09:30:56,214 - src.utils.content_analysis.question_fixes - INFO - Auto-fixed 2 question format issues: {'format_standardized': 0, 'question_marks_added': 2, 'mc_options_fixed': 0, 'total_fixes': 2}
+2025-12-15 09:30:56,214 - src.generate.formats.questions - INFO - Applied 2 auto-fixes to questions
+2025-12-15 09:30:56,215 - src.generate.formats.questions - WARNING - [CRITICAL] Content Completeness: Missing explanations: 1 MC questions lack explanations (add **Explanation:** sections for multiple choice questions) 🔴
+2025-12-15 09:30:56,215 - src.generate.formats.questions - WARNING -     Context: Module 1 Session 1
+2025-12-15 09:30:56,215 - src.generate.formats.questions - WARNING -     Impact: Multiple choice questions lack explanations for answers
+2025-12-15 09:30:56,215 - src.generate.formats.questions - WARNING -     Recommendation: Add **Explanation:** sections for all MC questions
+2025-12-15 09:30:56,215 - src.generate.formats.questions - WARNING - [CRITICAL] Structure Issue: MC option count: 1 multiple choice questions do not have exactly 4 options (require A, B, C, D - ensure each MC question has exactly 4 options) 🔴
+2025-12-15 09:30:56,215 - src.generate.formats.questions - WARNING -     Context: Module 1 Session 1
+2025-12-15 09:30:56,215 - src.generate.formats.questions - WARNING -     Impact: MC questions may not have standard format
+2025-12-15 09:30:56,215 - src.generate.formats.questions - WARNING -     Recommendation: Ensure each MC question has exactly 4 options (A, B, C, D)
+2025-12-15 09:30:56,215 - src.generate.formats.questions - WARNING -   Critical issues detected, will retry: 2 issues
+2025-12-15 09:30:56,215 - src.generate.formats.questions - WARNING -   Retry attempt 1/1 for questions: Cellular and Molecular Biology (Session 1)
+2025-12-15 09:30:56,216 - src.generate.formats.questions - WARNING -   Smart retry system suggests skipping retry (low success rate)
+2025-12-15 09:30:56,217 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:30:56,219 - src.generate.orchestration.pipeline - INFO -   ✓ Session 1 completed
+2025-12-15 09:30:56,219 - src.generate.orchestration.pipeline - INFO - 
+[2/4] Session 2: DNA & Protein Structure
+2025-12-15 09:30:56,219 - src.generate.orchestration.pipeline - INFO -   → Generating lecture...
+2025-12-15 09:30:56,219 - src.generate.formats.lectures - INFO - Generating lecture for: Cellular and Molecular Biology (Session 2/4)
+2025-12-15 09:30:56,220 - src.llm.client - INFO - [lec:a0f2c2] 🚀 lec | m=gemma3:4b | p=3317c | t=180s
+2025-12-15 09:30:56,220 - src.llm.client - INFO - [lec:a0f2c2] Timeout configuration: connect=5s, read=180s (total limit: 180s)
+2025-12-15 09:30:56,220 - src.llm.client - INFO - [lec:a0f2c2] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:30:56,221 - src.llm.client - INFO - [lec:a0f2c2] Sending request to Ollama: model=gemma3:4b, operation=lecture, payload=6953 bytes, prompt=3317 chars
+2025-12-15 09:30:56,221 - src.llm.client - INFO - [lec:a0f2c2] Waiting for HTTP response (connect timeout: 5s, read timeout: 180s)...
+2025-12-15 09:30:58,199 - src.llm.request_handler - INFO - [lec:a0f2c2] ✓ Done 1.98s
+2025-12-15 09:30:58,199 - src.llm.client - INFO - [lec:a0f2c2] ✅ HTTP 200 in 1.98s
+2025-12-15 09:30:58,199 - src.llm.client - INFO - [lec:a0f2c2] 📡 Stream active (200)
+2025-12-15 09:30:58,199 - src.llm.client - INFO - [lec:a0f2c2] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:31:00,221 - src.llm.client - INFO - [lec:a0f2c2] 📊 2.0s: 370c @183c/s (68ch, ~92t @46t/s)
+2025-12-15 09:31:02,236 - src.llm.client - INFO - [lec:a0f2c2] 📊 4.0s: 772c @191c/s (135ch, ~193t @48t/s)
+2025-12-15 09:31:04,256 - src.llm.client - INFO - [lec:a0f2c2] 📊 6.1s: 1118c @185c/s (202ch, ~280t @46t/s)
+2025-12-15 09:31:06,270 - src.llm.client - INFO - [lec:a0f2c2] 📊 8.1s: 1420c @176c/s (269ch, ~355t @44t/s)
+2025-12-15 09:31:08,288 - src.llm.client - INFO - [lec:a0f2c2] 📊 10.1s: 1676c @166c/s (336ch, ~419t @42t/s)
+2025-12-15 09:31:10,300 - src.llm.client - INFO - [lec:a0f2c2] 📊 12.1s: 2056c @170c/s (404ch, ~514t @42t/s)
+2025-12-15 09:31:12,313 - src.llm.client - INFO - [lec:a0f2c2] 📊 14.1s: 2375c @168c/s (472ch, ~594t @42t/s)
+2025-12-15 09:31:14,323 - src.llm.client - INFO - [lec:a0f2c2] 📊 16.1s: 2723c @169c/s (540ch, ~681t @42t/s)
+2025-12-15 09:31:16,332 - src.llm.client - INFO - [lec:a0f2c2] 📊 18.1s: 3079c @170c/s (608ch, ~770t @42t/s)
+2025-12-15 09:31:18,335 - src.llm.client - INFO - [lec:a0f2c2] 📊 20.1s: 3436c @171c/s (676ch, ~859t @43t/s)
+2025-12-15 09:31:20,338 - src.llm.client - INFO - [lec:a0f2c2] 📊 22.1s: 3766c @170c/s (744ch, ~942t @43t/s)
+2025-12-15 09:31:22,360 - src.llm.client - INFO - [lec:a0f2c2] 📊 24.2s: 4151c @172c/s (813ch, ~1038t @43t/s)
+2025-12-15 09:31:24,389 - src.llm.client - INFO - [lec:a0f2c2] 📊 26.2s: 4511c @172c/s (882ch, ~1128t @43t/s)
+2025-12-15 09:31:26,394 - src.llm.client - INFO - [lec:a0f2c2] 📊 28.2s: 4856c @172c/s (950ch, ~1214t @43t/s)
+2025-12-15 09:31:28,420 - src.llm.client - INFO - [lec:a0f2c2] 📊 30.2s: 5195c @172c/s (1019ch, ~1299t @43t/s)
+2025-12-15 09:31:30,432 - src.llm.client - INFO - [lec:a0f2c2] 📊 32.2s: 5507c @171c/s (1087ch, ~1377t @43t/s)
+2025-12-15 09:31:32,437 - src.llm.client - INFO - [lec:a0f2c2] 📊 34.2s: 5870c @171c/s (1155ch, ~1468t @43t/s)
+2025-12-15 09:31:34,184 - src.llm.client - INFO - [lec:a0f2c2] ✓ Done 37.96s: 6237c (~942w @164c/s)
+2025-12-15 09:31:34,185 - src.generate.formats.lectures - INFO - [NEEDS REVIEW] Lecture generated ⚠️
+2025-12-15 09:31:34,185 - src.generate.formats.lectures - INFO -     - Length: 6421 chars, 971 words
+2025-12-15 09:31:34,185 - src.generate.formats.lectures - INFO -     - Requirements: 1000-1500 words, 5-15 examples, 4-8 sections
+2025-12-15 09:31:34,185 - src.generate.formats.lectures - INFO -     - Structure: 6 sections, 0 subsections
+2025-12-15 09:31:34,185 - src.generate.formats.lectures - INFO -     - Content: 10 examples, 0 terms defined
+2025-12-15 09:31:34,185 - src.generate.formats.lectures - WARNING - [WARNING] Word count (971) below minimum 1000 (need 29 more words - consider regenerating or expanding content) ⚠️
+2025-12-15 09:31:34,185 - src.generate.formats.lectures - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-15 09:31:34,185 - src.generate.formats.lectures - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-15 09:31:34,185 - src.generate.formats.lectures - INFO - Quality score: 92.1/100 (excellent)
+2025-12-15 09:31:34,188 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:31:34,188 - src.generate.orchestration.pipeline - INFO -   → Generating lab...
+2025-12-15 09:31:34,188 - src.generate.formats.labs - INFO - Generating lab 2 for: Cellular and Molecular Biology (Session 2)
+2025-12-15 09:31:34,188 - src.llm.client - INFO - [lab:d572de] 🚀 lab | m=gemma3:4b | p=3532c | t=150s
+2025-12-15 09:31:34,188 - src.llm.client - INFO - [lab:d572de] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:31:34,188 - src.llm.client - INFO - [lab:d572de] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:31:34,190 - src.llm.client - INFO - [lab:d572de] Sending request to Ollama: model=gemma3:4b, operation=lab, payload=3960 bytes, prompt=3532 chars
+2025-12-15 09:31:34,190 - src.llm.client - INFO - [lab:d572de] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:31:38,029 - src.llm.request_handler - INFO - [lab:d572de] ✓ Done 3.84s
+2025-12-15 09:31:38,029 - src.llm.client - INFO - [lab:d572de] ✅ HTTP 200 in 3.84s
+2025-12-15 09:31:38,029 - src.llm.client - INFO - [lab:d572de] 📡 Stream active (200)
+2025-12-15 09:31:38,029 - src.llm.client - INFO - [lab:d572de] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:31:40,037 - src.llm.client - INFO - [lab:d572de] 📊 2.0s: 344c @171c/s (70ch, ~86t @43t/s)
+2025-12-15 09:31:42,064 - src.llm.client - INFO - [lab:d572de] 📊 4.0s: 692c @171c/s (140ch, ~173t @43t/s)
+2025-12-15 09:31:44,066 - src.llm.client - INFO - [lab:d572de] 📊 6.0s: 1100c @182c/s (209ch, ~275t @46t/s)
+2025-12-15 09:31:46,087 - src.llm.client - INFO - [lab:d572de] 📊 8.1s: 1399c @174c/s (278ch, ~350t @43t/s)
+2025-12-15 09:31:48,101 - src.llm.client - INFO - [lab:d572de] 📊 10.1s: 1555c @154c/s (347ch, ~389t @39t/s)
+2025-12-15 09:31:50,109 - src.llm.client - INFO - [lab:d572de] 📊 12.1s: 1701c @141c/s (416ch, ~425t @35t/s)
+2025-12-15 09:31:52,134 - src.llm.client - INFO - [lab:d572de] 📊 14.1s: 1905c @135c/s (486ch, ~476t @34t/s)
+2025-12-15 09:31:54,158 - src.llm.client - INFO - [lab:d572de] 📊 16.1s: 2141c @133c/s (556ch, ~535t @33t/s)
+2025-12-15 09:31:56,171 - src.llm.client - INFO - [lab:d572de] 📊 18.1s: 2506c @138c/s (625ch, ~626t @35t/s)
+2025-12-15 09:31:58,187 - src.llm.client - INFO - [lab:d572de] 📊 20.2s: 2785c @138c/s (694ch, ~696t @35t/s)
+2025-12-15 09:32:00,213 - src.llm.client - INFO - [lab:d572de] 📊 22.2s: 2966c @134c/s (763ch, ~742t @33t/s)
+2025-12-15 09:32:02,226 - src.llm.client - INFO - [lab:d572de] 📊 24.2s: 3203c @132c/s (832ch, ~801t @33t/s)
+2025-12-15 09:32:04,242 - src.llm.client - INFO - [lab:d572de] 📊 26.2s: 3460c @132c/s (901ch, ~865t @33t/s)
+2025-12-15 09:32:06,265 - src.llm.client - INFO - [lab:d572de] 📊 28.2s: 3732c @132c/s (970ch, ~933t @33t/s)
+2025-12-15 09:32:08,282 - src.llm.client - INFO - [lab:d572de] 📊 30.3s: 4125c @136c/s (1038ch, ~1031t @34t/s)
+2025-12-15 09:32:10,298 - src.llm.client - INFO - [lab:d572de] 📊 32.3s: 4477c @139c/s (1107ch, ~1119t @35t/s)
+2025-12-15 09:32:12,303 - src.llm.client - INFO - [lab:d572de] 📊 34.3s: 4763c @139c/s (1175ch, ~1191t @35t/s)
+2025-12-15 09:32:14,314 - src.llm.client - INFO - [lab:d572de] 📊 36.3s: 5066c @140c/s (1243ch, ~1266t @35t/s)
+2025-12-15 09:32:16,321 - src.llm.client - INFO - [lab:d572de] 📊 38.3s: 5363c @140c/s (1311ch, ~1341t @35t/s)
+2025-12-15 09:32:18,208 - src.llm.client - INFO - [lab:d572de] ✓ Done 44.02s: 5696c (~838w @129c/s)
+2025-12-15 09:32:18,209 - src.generate.formats.labs - INFO - [COMPLIANT] Lab generated ✓
+2025-12-15 09:32:18,209 - src.generate.formats.labs - INFO -     - Length: 5823 chars, 856 words
+2025-12-15 09:32:18,209 - src.generate.formats.labs - INFO -     - Procedure: 12 steps
+2025-12-15 09:32:18,209 - src.generate.formats.labs - INFO -     - Safety: 8 warnings
+2025-12-15 09:32:18,209 - src.generate.formats.labs - INFO -     - Data tables: 9
+2025-12-15 09:32:18,212 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:32:18,212 - src.generate.orchestration.pipeline - INFO -   → Generating study notes...
+2025-12-15 09:32:18,212 - src.generate.formats.study_notes - INFO - Generating study notes for: Cellular and Molecular Biology (Session 2)
+2025-12-15 09:32:18,213 - src.llm.client - INFO - [stu:ffa961] 🚀 stu | m=gemma3:4b | p=4654c | t=120s
+2025-12-15 09:32:18,213 - src.llm.client - INFO - [stu:ffa961] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:32:18,213 - src.llm.client - INFO - [stu:ffa961] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:32:18,215 - src.llm.client - INFO - [stu:ffa961] Sending request to Ollama: model=gemma3:4b, operation=study_notes, payload=8299 bytes, prompt=4654 chars
+2025-12-15 09:32:18,216 - src.llm.client - INFO - [stu:ffa961] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:32:21,832 - src.llm.request_handler - INFO - [stu:ffa961] ✓ Done 3.62s
+2025-12-15 09:32:21,832 - src.llm.client - INFO - [stu:ffa961] ✅ HTTP 200 in 3.62s
+2025-12-15 09:32:21,832 - src.llm.client - INFO - [stu:ffa961] 📡 Stream active (200)
+2025-12-15 09:32:21,832 - src.llm.client - INFO - [stu:ffa961] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:32:23,856 - src.llm.client - INFO - [stu:ffa961] 📊 2.0s: 365c @180c/s (69ch, ~91t @45t/s)
+2025-12-15 09:32:25,880 - src.llm.client - INFO - [stu:ffa961] 📊 4.0s: 782c @193c/s (139ch, ~196t @48t/s)
+2025-12-15 09:32:27,895 - src.llm.client - INFO - [stu:ffa961] 📊 6.1s: 1120c @185c/s (208ch, ~280t @46t/s)
+2025-12-15 09:32:29,908 - src.llm.client - INFO - [stu:ffa961] 📊 8.1s: 1384c @171c/s (277ch, ~346t @43t/s)
+2025-12-15 09:32:31,910 - src.llm.client - INFO - [stu:ffa961] 📊 10.1s: 1709c @170c/s (345ch, ~427t @42t/s)
+2025-12-15 09:32:33,939 - src.llm.client - INFO - [stu:ffa961] 📊 12.1s: 2064c @170c/s (415ch, ~516t @43t/s)
+2025-12-15 09:32:35,949 - src.llm.client - INFO - [stu:ffa961] 📊 14.1s: 2463c @174c/s (484ch, ~616t @44t/s)
+2025-12-15 09:32:37,963 - src.llm.client - INFO - [stu:ffa961] 📊 16.1s: 2836c @176c/s (553ch, ~709t @44t/s)
+2025-12-15 09:32:39,972 - src.llm.client - INFO - [stu:ffa961] 📊 18.1s: 3191c @176c/s (622ch, ~798t @44t/s)
+2025-12-15 09:32:40,628 - src.llm.client - INFO - [stu:ffa961] ✓ Done 22.42s: 3270c (~469w @146c/s)
+2025-12-15 09:32:40,628 - src.generate.formats.study_notes - INFO - [COMPLIANT] Study notes generated ✓
+2025-12-15 09:32:40,628 - src.generate.formats.study_notes - INFO -     - Length: 3335 chars, 480 words
+2025-12-15 09:32:40,628 - src.generate.formats.study_notes - INFO -     - Requirements: 3-10 key concepts, max 1200 words
+2025-12-15 09:32:40,628 - src.generate.formats.study_notes - INFO -     - Key concepts: 9
+2025-12-15 09:32:40,628 - src.generate.formats.study_notes - INFO -     - Structure: 2 sections, 0 bullets
+2025-12-15 09:32:40,628 - src.generate.formats.study_notes - INFO - Quality score: 100.0/100 (excellent)
+2025-12-15 09:32:40,630 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:32:40,630 - src.generate.orchestration.pipeline - INFO -   → Generating diagrams...
+2025-12-15 09:32:40,630 - src.generate.formats.diagrams - INFO - Generating diagram for: DNA Structure & Replication (Cellular and Molecular Biology)
+2025-12-15 09:32:40,631 - src.llm.client - INFO - [dia:146e6d] 🚀 dia | m=gemma3:4b | p=5774c | t=120s
+2025-12-15 09:32:40,631 - src.llm.client - INFO - [dia:146e6d] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:32:40,631 - src.llm.client - INFO - [dia:146e6d] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:32:40,630 - src.generate.formats.diagrams - INFO - Generating diagram for: Protein Structure (primary, secondary, tertiary) (Cellular and Molecular Biology)
+2025-12-15 09:32:40,631 - src.llm.client - INFO - [dia:e861ad] 🚀 dia | m=gemma3:4b | p=5816c | t=120s
+2025-12-15 09:32:40,631 - src.llm.client - INFO - [dia:e861ad] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:32:40,631 - src.llm.client - INFO - [dia:e861ad] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:32:40,630 - src.generate.formats.diagrams - INFO - Generating diagram for: Central Dogma of Molecular Biology (Cellular and Molecular Biology)
+2025-12-15 09:32:40,632 - src.llm.client - INFO - [dia:d2c7ec] 🚀 dia | m=gemma3:4b | p=5788c | t=120s
+2025-12-15 09:32:40,632 - src.llm.client - INFO - [dia:d2c7ec] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:32:40,633 - src.llm.client - INFO - [dia:d2c7ec] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:32:40,634 - src.llm.client - INFO - [dia:146e6d] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11083 bytes, prompt=5774 chars
+2025-12-15 09:32:40,634 - src.llm.client - INFO - [dia:146e6d] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:32:40,634 - src.llm.client - INFO - [dia:e861ad] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11125 bytes, prompt=5816 chars
+2025-12-15 09:32:40,634 - src.llm.client - INFO - [dia:e861ad] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:32:40,636 - src.llm.client - INFO - [dia:d2c7ec] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11097 bytes, prompt=5788 chars
+2025-12-15 09:32:40,636 - src.llm.client - INFO - [dia:d2c7ec] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:32:46,336 - src.llm.request_handler - INFO - [dia:146e6d] ✓ Done 5.70s
+2025-12-15 09:32:46,336 - src.llm.client - INFO - [dia:146e6d] ✅ HTTP 200 in 5.70s
+2025-12-15 09:32:46,336 - src.llm.client - INFO - [dia:146e6d] 📡 Stream active (200)
+2025-12-15 09:32:46,336 - src.llm.client - INFO - [dia:146e6d] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:32:48,348 - src.llm.client - INFO - [dia:146e6d] 📊 2.0s: 253c @126c/s (68ch, ~63t @31t/s)
+2025-12-15 09:32:50,352 - src.llm.client - INFO - [dia:146e6d] 📊 4.0s: 471c @117c/s (136ch, ~118t @29t/s)
+2025-12-15 09:32:52,381 - src.llm.client - INFO - [dia:146e6d] 📊 6.0s: 706c @117c/s (205ch, ~176t @29t/s)
+2025-12-15 09:32:54,400 - src.llm.client - INFO - [dia:146e6d] 📊 8.1s: 918c @114c/s (274ch, ~230t @28t/s)
+2025-12-15 09:32:56,403 - src.llm.client - INFO - [dia:146e6d] 📊 10.1s: 1067c @106c/s (342ch, ~267t @26t/s)
+2025-12-15 09:32:58,431 - src.llm.client - INFO - [dia:146e6d] 📊 12.1s: 1217c @101c/s (411ch, ~304t @25t/s)
+2025-12-15 09:33:00,454 - src.llm.client - INFO - [dia:146e6d] 📊 14.1s: 1376c @97c/s (480ch, ~344t @24t/s)
+2025-12-15 09:33:01,450 - src.llm.client - INFO - [dia:146e6d] ✓ Done 20.82s: 1442c (~173w @69c/s)
+2025-12-15 09:33:01,450 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for DNA Structure & Replication (Cellular and Molecular Biology):
+2025-12-15 09:33:01,450 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:33:01,450 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:33:01,450 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:33:01,450 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-15 09:33:01,450 - src.generate.formats.diagrams - INFO -     - Length: 835 chars (cleaned: 835 chars)
+2025-12-15 09:33:01,450 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:33:01,450 - src.generate.formats.diagrams - INFO - [OK] Elements: 48 total (nodes: 20, connections: 28) ✓
+2025-12-15 09:33:01,450 - src.generate.formats.diagrams - INFO -   Cleanup summary: 3 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:33:01,450 - src.generate.formats.diagrams - INFO - Generated diagram: 835 characters
+2025-12-15 09:33:04,561 - src.llm.request_handler - INFO - [dia:e861ad] ✓ Done 23.93s
+2025-12-15 09:33:04,561 - src.llm.client - INFO - [dia:e861ad] ✅ HTTP 200 in 23.93s
+2025-12-15 09:33:04,561 - src.llm.client - INFO - [dia:e861ad] 📡 Stream active (200)
+2025-12-15 09:33:04,561 - src.llm.client - INFO - [dia:e861ad] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:33:06,586 - src.llm.client - INFO - [dia:e861ad] 📊 2.0s: 264c @130c/s (69ch, ~66t @33t/s)
+2025-12-15 09:33:08,599 - src.llm.client - INFO - [dia:e861ad] 📊 4.0s: 516c @128c/s (138ch, ~129t @32t/s)
+2025-12-15 09:33:10,622 - src.llm.client - INFO - [dia:e861ad] 📊 6.1s: 774c @128c/s (207ch, ~194t @32t/s)
+2025-12-15 09:33:12,633 - src.llm.client - INFO - [dia:e861ad] 📊 8.1s: 951c @118c/s (276ch, ~238t @29t/s)
+2025-12-15 09:33:14,641 - src.llm.client - INFO - [dia:e861ad] 📊 10.1s: 1095c @109c/s (345ch, ~274t @27t/s)
+2025-12-15 09:33:16,646 - src.llm.client - INFO - [dia:e861ad] 📊 12.1s: 1234c @102c/s (413ch, ~308t @26t/s)
+2025-12-15 09:33:18,588 - src.llm.client - INFO - [dia:e861ad] ✓ Done 37.96s: 1363c (~143w @36c/s)
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Protein Structure (primary, secondary, tertiary) (Cellular and Molecular Biology):
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING - [WARNING] Only 8 nodes found (require at least 10, need 2 more - add more nodes to the diagram) ⚠️
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING - [CRITICAL] Content Issue: Only 8 nodes found (require at least 10, need 2 more - add more nodes to the diagram) 🔴
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING -     Context: Module 1 Session 2
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING -     Impact: Diagram lacks sufficient nodes for meaningful visualization
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING -     Recommendation: Add more nodes to the diagram (minimum 10 nodes required)
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING - [CRITICAL] Content Issue: Only 8 nodes found (require at least 10, need 2 more - add more nodes to the diagram) 🔴
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING -     Context: Module 1 Session 2
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING -     Impact: Diagram lacks sufficient nodes for meaningful visualization
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING -     Recommendation: Add more nodes to the diagram (minimum 10 nodes required)
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING -   Critical issues detected, will retry: 2 issues
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING -   Retry attempt 1/1 for diagram: Protein Structure (primary, secondary, tertiary) (Cellular and Molecular Biology)
+2025-12-15 09:33:18,588 - src.generate.formats.diagrams - WARNING -   Smart retry system suggests skipping retry (low success rate)
+2025-12-15 09:33:21,705 - src.llm.request_handler - INFO - [dia:d2c7ec] ✓ Done 41.07s
+2025-12-15 09:33:21,705 - src.llm.client - INFO - [dia:d2c7ec] ✅ HTTP 200 in 41.07s
+2025-12-15 09:33:21,705 - src.llm.client - INFO - [dia:d2c7ec] 📡 Stream active (200)
+2025-12-15 09:33:21,705 - src.llm.client - INFO - [dia:d2c7ec] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:33:23,732 - src.llm.client - INFO - [dia:d2c7ec] 📊 2.0s: 227c @112c/s (69ch, ~57t @28t/s)
+2025-12-15 09:33:25,747 - src.llm.client - INFO - [dia:d2c7ec] 📊 4.0s: 476c @118c/s (137ch, ~119t @29t/s)
+2025-12-15 09:33:26,101 - src.llm.client - INFO - [dia:d2c7ec] ✓ Done 45.47s: 508c (~78w @11c/s)
+2025-12-15 09:33:26,101 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Central Dogma of Molecular Biology (Cellular and Molecular Biology):
+2025-12-15 09:33:26,101 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:33:26,101 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:33:26,101 - src.generate.formats.diagrams - WARNING - [WARNING] Only 6 nodes found (require at least 10, need 4 more - add more nodes to the diagram) ⚠️
+2025-12-15 09:33:26,102 - src.generate.formats.diagrams - WARNING - [CRITICAL] Content Issue: Only 6 nodes found (require at least 10, need 4 more - add more nodes to the diagram) 🔴
+2025-12-15 09:33:26,102 - src.generate.formats.diagrams - WARNING -     Context: Module 1 Session 2
+2025-12-15 09:33:26,102 - src.generate.formats.diagrams - WARNING -     Impact: Diagram lacks sufficient nodes for meaningful visualization
+2025-12-15 09:33:26,102 - src.generate.formats.diagrams - WARNING -     Recommendation: Add more nodes to the diagram (minimum 10 nodes required)
+2025-12-15 09:33:26,102 - src.generate.formats.diagrams - WARNING - [CRITICAL] Content Issue: Only 6 nodes found (require at least 10, need 4 more - add more nodes to the diagram) 🔴
+2025-12-15 09:33:26,102 - src.generate.formats.diagrams - WARNING -     Context: Module 1 Session 2
+2025-12-15 09:33:26,102 - src.generate.formats.diagrams - WARNING -     Impact: Diagram lacks sufficient nodes for meaningful visualization
+2025-12-15 09:33:26,102 - src.generate.formats.diagrams - WARNING -     Recommendation: Add more nodes to the diagram (minimum 10 nodes required)
+2025-12-15 09:33:26,102 - src.generate.formats.diagrams - WARNING -   Critical issues detected, will retry: 2 issues
+2025-12-15 09:33:26,102 - src.generate.formats.diagrams - WARNING -   Retry attempt 1/1 for diagram: Central Dogma of Molecular Biology (Cellular and Molecular Biology)
+2025-12-15 09:33:26,102 - src.generate.formats.diagrams - WARNING -   Smart retry system suggests skipping retry (low success rate)
+2025-12-15 09:33:26,102 - src.generate.orchestration.pipeline - INFO -   → Generating questions...
+2025-12-15 09:33:26,102 - src.generate.formats.questions - INFO - Generating 10 questions for: Cellular and Molecular Biology (Session 2)
+2025-12-15 09:33:26,103 - src.llm.client - INFO - [qst:4dc38f] 🚀 qst | m=gemma3:4b | p=7503c | t=150s
+2025-12-15 09:33:26,103 - src.llm.client - INFO - [qst:4dc38f] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:33:26,103 - src.llm.client - INFO - [qst:4dc38f] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:33:26,105 - src.llm.client - INFO - [qst:4dc38f] Sending request to Ollama: model=gemma3:4b, operation=questions, payload=11237 bytes, prompt=7503 chars
+2025-12-15 09:33:26,105 - src.llm.client - INFO - [qst:4dc38f] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:33:49,951 - src.llm.request_handler - INFO - [qst:4dc38f] ✓ Done 23.85s
+2025-12-15 09:33:49,951 - src.llm.client - INFO - [qst:4dc38f] ✅ HTTP 200 in 23.85s
+2025-12-15 09:33:49,951 - src.llm.client - INFO - [qst:4dc38f] 📡 Stream active (200)
+2025-12-15 09:33:49,952 - src.llm.client - INFO - [qst:4dc38f] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:33:51,967 - src.llm.client - INFO - [qst:4dc38f] 📊 2.0s: 321c @159c/s (69ch, ~80t @40t/s)
+2025-12-15 09:33:53,976 - src.llm.client - INFO - [qst:4dc38f] 📊 4.0s: 641c @159c/s (138ch, ~160t @40t/s)
+2025-12-15 09:33:55,976 - src.llm.client - INFO - [qst:4dc38f] 📊 6.0s: 932c @155c/s (206ch, ~233t @39t/s)
+2025-12-15 09:33:58,005 - src.llm.client - INFO - [qst:4dc38f] 📊 8.1s: 1248c @155c/s (275ch, ~312t @39t/s)
+2025-12-15 09:34:00,012 - src.llm.client - INFO - [qst:4dc38f] 📊 10.1s: 1570c @156c/s (343ch, ~392t @39t/s)
+2025-12-15 09:34:02,021 - src.llm.client - INFO - [qst:4dc38f] 📊 12.1s: 1898c @157c/s (411ch, ~474t @39t/s)
+2025-12-15 09:34:04,022 - src.llm.client - INFO - [qst:4dc38f] 📊 14.1s: 2164c @154c/s (479ch, ~541t @38t/s)
+2025-12-15 09:34:06,035 - src.llm.client - INFO - [qst:4dc38f] 📊 16.1s: 2507c @156c/s (547ch, ~627t @39t/s)
+2025-12-15 09:34:08,043 - src.llm.client - INFO - [qst:4dc38f] 📊 18.1s: 2867c @158c/s (613ch, ~717t @40t/s)
+2025-12-15 09:34:10,046 - src.llm.client - INFO - [qst:4dc38f] 📊 20.1s: 3244c @161c/s (680ch, ~811t @40t/s)
+2025-12-15 09:34:12,057 - src.llm.client - INFO - [qst:4dc38f] 📊 22.1s: 3593c @163c/s (747ch, ~898t @41t/s)
+2025-12-15 09:34:14,075 - src.llm.client - INFO - [qst:4dc38f] 📊 24.1s: 3998c @166c/s (815ch, ~1000t @41t/s)
+2025-12-15 09:34:14,745 - src.llm.client - INFO - [qst:4dc38f] ✓ Done 48.64s: 4131c (~599w @85c/s)
+2025-12-15 09:34:14,745 - src.utils.content_analysis.question_fixes - INFO - Auto-fixed 2 question format issues: {'format_standardized': 0, 'question_marks_added': 2, 'mc_options_fixed': 0, 'total_fixes': 2}
+2025-12-15 09:34:14,745 - src.generate.formats.questions - INFO - Applied 2 auto-fixes to questions
+2025-12-15 09:34:14,746 - src.generate.formats.questions - WARNING - [CRITICAL] Structure Issue: MC option count: 2 multiple choice questions do not have exactly 4 options (require A, B, C, D - ensure each MC question has exactly 4 options) 🔴
+2025-12-15 09:34:14,746 - src.generate.formats.questions - WARNING -     Context: Module 1 Session 2
+2025-12-15 09:34:14,746 - src.generate.formats.questions - WARNING -     Impact: MC questions may not have standard format
+2025-12-15 09:34:14,746 - src.generate.formats.questions - WARNING -     Recommendation: Ensure each MC question has exactly 4 options (A, B, C, D)
+2025-12-15 09:34:14,746 - src.generate.formats.questions - WARNING - Only 9 questions detected (expected 10) for Cellular and Molecular Biology (Session 2)
+2025-12-15 09:34:14,746 - src.generate.formats.questions - WARNING -   Critical issues detected, will retry: 1 issues
+2025-12-15 09:34:14,746 - src.generate.formats.questions - WARNING -   Retry attempt 1/1 for questions: Cellular and Molecular Biology (Session 2)
+2025-12-15 09:34:14,746 - src.generate.formats.questions - WARNING -   Smart retry system suggests skipping retry (low success rate)
+2025-12-15 09:34:14,748 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:34:14,749 - src.generate.orchestration.pipeline - INFO -   ✓ Session 2 completed
+2025-12-15 09:34:14,749 - src.generate.orchestration.pipeline - INFO - 
+2025-12-15 09:34:14,749 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-15 09:34:14,749 - src.generate.orchestration.pipeline - INFO - Module 2: Organisms and Processes (2 sessions)
+2025-12-15 09:34:14,749 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-15 09:34:14,749 - src.generate.orchestration.pipeline - INFO - 
+[3/4] Session 3: Cellular Respiration & Photosynthesis
+2025-12-15 09:34:14,750 - src.generate.orchestration.pipeline - INFO -   → Generating lecture...
+2025-12-15 09:34:14,750 - src.generate.formats.lectures - INFO - Generating lecture for: Organisms and Processes (Session 3/4)
+2025-12-15 09:34:14,750 - src.llm.client - INFO - [lec:295075] 🚀 lec | m=gemma3:4b | p=3327c | t=180s
+2025-12-15 09:34:14,750 - src.llm.client - INFO - [lec:295075] Timeout configuration: connect=5s, read=180s (total limit: 180s)
+2025-12-15 09:34:14,750 - src.llm.client - INFO - [lec:295075] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:34:14,751 - src.llm.client - INFO - [lec:295075] Sending request to Ollama: model=gemma3:4b, operation=lecture, payload=6964 bytes, prompt=3327 chars
+2025-12-15 09:34:14,751 - src.llm.client - INFO - [lec:295075] Waiting for HTTP response (connect timeout: 5s, read timeout: 180s)...
+2025-12-15 09:34:16,689 - src.llm.request_handler - INFO - [lec:295075] ✓ Done 1.94s
+2025-12-15 09:34:16,689 - src.llm.client - INFO - [lec:295075] ✅ HTTP 200 in 1.94s
+2025-12-15 09:34:16,689 - src.llm.client - INFO - [lec:295075] 📡 Stream active (200)
+2025-12-15 09:34:16,690 - src.llm.client - INFO - [lec:295075] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:34:18,696 - src.llm.client - INFO - [lec:295075] 📊 2.0s: 438c @218c/s (69ch, ~110t @55t/s)
+2025-12-15 09:34:20,715 - src.llm.client - INFO - [lec:295075] 📊 4.0s: 826c @205c/s (139ch, ~206t @51t/s)
+2025-12-15 09:34:22,731 - src.llm.client - INFO - [lec:295075] 📊 6.0s: 1204c @199c/s (208ch, ~301t @50t/s)
+2025-12-15 09:34:24,756 - src.llm.client - INFO - [lec:295075] 📊 8.1s: 1507c @187c/s (278ch, ~377t @47t/s)
+2025-12-15 09:34:26,766 - src.llm.client - INFO - [lec:295075] 📊 10.1s: 1855c @184c/s (347ch, ~464t @46t/s)
+2025-12-15 09:34:28,778 - src.llm.client - INFO - [lec:295075] 📊 12.1s: 2198c @182c/s (416ch, ~550t @45t/s)
+2025-12-15 09:34:30,788 - src.llm.client - INFO - [lec:295075] 📊 14.1s: 2538c @180c/s (485ch, ~634t @45t/s)
+2025-12-15 09:34:32,810 - src.llm.client - INFO - [lec:295075] 📊 16.1s: 2928c @182c/s (552ch, ~732t @45t/s)
+2025-12-15 09:34:34,828 - src.llm.client - INFO - [lec:295075] 📊 18.1s: 3284c @181c/s (621ch, ~821t @45t/s)
+2025-12-15 09:34:36,835 - src.llm.client - INFO - [lec:295075] 📊 20.1s: 3623c @180c/s (690ch, ~906t @45t/s)
+2025-12-15 09:34:38,849 - src.llm.client - INFO - [lec:295075] 📊 22.2s: 3971c @179c/s (759ch, ~993t @45t/s)
+2025-12-15 09:34:40,851 - src.llm.client - INFO - [lec:295075] 📊 24.2s: 4291c @178c/s (827ch, ~1073t @44t/s)
+2025-12-15 09:34:42,876 - src.llm.client - INFO - [lec:295075] 📊 26.2s: 4651c @178c/s (896ch, ~1163t @44t/s)
+2025-12-15 09:34:44,897 - src.llm.client - INFO - [lec:295075] 📊 28.2s: 4981c @177c/s (965ch, ~1245t @44t/s)
+2025-12-15 09:34:46,901 - src.llm.client - INFO - [lec:295075] 📊 30.2s: 5391c @178c/s (1033ch, ~1348t @45t/s)
+2025-12-15 09:34:48,904 - src.llm.client - INFO - [lec:295075] 📊 32.2s: 5726c @178c/s (1100ch, ~1432t @44t/s)
+2025-12-15 09:34:50,932 - src.llm.client - INFO - [lec:295075] 📊 34.2s: 6095c @178c/s (1168ch, ~1524t @44t/s)
+2025-12-15 09:34:52,947 - src.llm.client - INFO - [lec:295075] 📊 36.3s: 6469c @178c/s (1235ch, ~1617t @45t/s)
+2025-12-15 09:34:54,304 - src.llm.client - INFO - [lec:295075] ✓ Done 39.55s: 6749c (~973w @171c/s)
+2025-12-15 09:34:54,305 - src.generate.formats.lectures - INFO - [COMPLIANT] Lecture generated ✓
+2025-12-15 09:34:54,305 - src.generate.formats.lectures - INFO -     - Length: 6936 chars, 1001 words
+2025-12-15 09:34:54,305 - src.generate.formats.lectures - INFO -     - Requirements: 1000-1500 words, 5-15 examples, 4-8 sections
+2025-12-15 09:34:54,305 - src.generate.formats.lectures - INFO -     - Structure: 6 sections, 5 subsections
+2025-12-15 09:34:54,305 - src.generate.formats.lectures - INFO -     - Content: 9 examples, 4 terms defined
+2025-12-15 09:34:54,305 - src.generate.formats.lectures - INFO - Quality score: 100.0/100 (excellent)
+2025-12-15 09:34:54,308 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:34:54,309 - src.generate.orchestration.pipeline - INFO -   → Generating lab...
+2025-12-15 09:34:54,309 - src.generate.formats.labs - INFO - Generating lab 3 for: Organisms and Processes (Session 3)
+2025-12-15 09:34:54,309 - src.llm.client - INFO - [lab:a1034c] 🚀 lab | m=gemma3:4b | p=3489c | t=150s
+2025-12-15 09:34:54,309 - src.llm.client - INFO - [lab:a1034c] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:34:54,309 - src.llm.client - INFO - [lab:a1034c] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:34:54,310 - src.llm.client - INFO - [lab:a1034c] Sending request to Ollama: model=gemma3:4b, operation=lab, payload=3915 bytes, prompt=3489 chars
+2025-12-15 09:34:54,310 - src.llm.client - INFO - [lab:a1034c] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:34:56,042 - src.llm.request_handler - INFO - [lab:a1034c] ✓ Done 1.73s
+2025-12-15 09:34:56,042 - src.llm.client - INFO - [lab:a1034c] ✅ HTTP 200 in 1.73s
+2025-12-15 09:34:56,042 - src.llm.client - INFO - [lab:a1034c] 📡 Stream active (200)
+2025-12-15 09:34:56,042 - src.llm.client - INFO - [lab:a1034c] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:34:58,067 - src.llm.client - INFO - [lab:a1034c] 📊 2.0s: 333c @164c/s (69ch, ~83t @41t/s)
+2025-12-15 09:35:00,090 - src.llm.client - INFO - [lab:a1034c] 📊 4.0s: 777c @192c/s (138ch, ~194t @48t/s)
+2025-12-15 09:35:02,110 - src.llm.client - INFO - [lab:a1034c] 📊 6.1s: 1100c @181c/s (206ch, ~275t @45t/s)
+2025-12-15 09:35:04,135 - src.llm.client - INFO - [lab:a1034c] 📊 8.1s: 1365c @169c/s (273ch, ~341t @42t/s)
+2025-12-15 09:35:06,156 - src.llm.client - INFO - [lab:a1034c] 📊 10.1s: 1505c @149c/s (340ch, ~376t @37t/s)
+2025-12-15 09:35:08,170 - src.llm.client - INFO - [lab:a1034c] 📊 12.1s: 1692c @140c/s (407ch, ~423t @35t/s)
+2025-12-15 09:35:10,196 - src.llm.client - INFO - [lab:a1034c] 📊 14.2s: 1891c @134c/s (473ch, ~473t @33t/s)
+2025-12-15 09:35:12,209 - src.llm.client - INFO - [lab:a1034c] 📊 16.2s: 2241c @139c/s (538ch, ~560t @35t/s)
+2025-12-15 09:35:14,229 - src.llm.client - INFO - [lab:a1034c] 📊 18.2s: 2542c @140c/s (603ch, ~636t @35t/s)
+2025-12-15 09:35:16,231 - src.llm.client - INFO - [lab:a1034c] 📊 20.2s: 2763c @137c/s (668ch, ~691t @34t/s)
+2025-12-15 09:35:18,245 - src.llm.client - INFO - [lab:a1034c] 📊 22.2s: 3007c @135c/s (735ch, ~752t @34t/s)
+2025-12-15 09:35:20,274 - src.llm.client - INFO - [lab:a1034c] 📊 24.2s: 3242c @134c/s (802ch, ~810t @33t/s)
+2025-12-15 09:35:22,302 - src.llm.client - INFO - [lab:a1034c] 📊 26.3s: 3530c @134c/s (869ch, ~882t @34t/s)
+2025-12-15 09:35:24,310 - src.llm.client - INFO - [lab:a1034c] 📊 28.3s: 3757c @133c/s (936ch, ~939t @33t/s)
+2025-12-15 09:35:26,312 - src.llm.client - INFO - [lab:a1034c] 📊 30.3s: 3847c @127c/s (1003ch, ~962t @32t/s)
+2025-12-15 09:35:28,339 - src.llm.client - INFO - [lab:a1034c] 📊 32.3s: 3937c @122c/s (1071ch, ~984t @30t/s)
+2025-12-15 09:35:30,351 - src.llm.client - INFO - [lab:a1034c] 📊 34.3s: 4173c @122c/s (1138ch, ~1043t @30t/s)
+2025-12-15 09:35:32,373 - src.llm.client - INFO - [lab:a1034c] 📊 36.3s: 4534c @125c/s (1206ch, ~1134t @31t/s)
+2025-12-15 09:35:34,395 - src.llm.client - INFO - [lab:a1034c] 📊 38.4s: 4910c @128c/s (1274ch, ~1228t @32t/s)
+2025-12-15 09:35:34,655 - src.llm.client - INFO - [lab:a1034c] ✓ Done 40.35s: 4958c (~797w @123c/s)
+2025-12-15 09:35:34,655 - src.generate.formats.labs - INFO - [COMPLIANT] Lab generated ✓
+2025-12-15 09:35:34,655 - src.generate.formats.labs - INFO -     - Length: 5054 chars, 812 words
+2025-12-15 09:35:34,655 - src.generate.formats.labs - INFO -     - Procedure: 13 steps
+2025-12-15 09:35:34,655 - src.generate.formats.labs - INFO -     - Safety: 4 warnings
+2025-12-15 09:35:34,655 - src.generate.formats.labs - INFO -     - Data tables: 12
+2025-12-15 09:35:34,657 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:35:34,658 - src.generate.orchestration.pipeline - INFO -   → Generating study notes...
+2025-12-15 09:35:34,658 - src.generate.formats.study_notes - INFO - Generating study notes for: Organisms and Processes (Session 3)
+2025-12-15 09:35:34,658 - src.llm.client - INFO - [stu:47b5d3] 🚀 stu | m=gemma3:4b | p=4630c | t=120s
+2025-12-15 09:35:34,658 - src.llm.client - INFO - [stu:47b5d3] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:35:34,658 - src.llm.client - INFO - [stu:47b5d3] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:35:34,659 - src.llm.client - INFO - [stu:47b5d3] Sending request to Ollama: model=gemma3:4b, operation=study_notes, payload=8273 bytes, prompt=4630 chars
+2025-12-15 09:35:34,659 - src.llm.client - INFO - [stu:47b5d3] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:35:37,130 - src.llm.request_handler - INFO - [stu:47b5d3] ✓ Done 2.47s
+2025-12-15 09:35:37,131 - src.llm.client - INFO - [stu:47b5d3] ✅ HTTP 200 in 2.47s
+2025-12-15 09:35:37,131 - src.llm.client - INFO - [stu:47b5d3] 📡 Stream active (200)
+2025-12-15 09:35:37,131 - src.llm.client - INFO - [stu:47b5d3] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:35:39,147 - src.llm.client - INFO - [stu:47b5d3] 📊 2.0s: 415c @206c/s (69ch, ~104t @51t/s)
+2025-12-15 09:35:41,151 - src.llm.client - INFO - [stu:47b5d3] 📊 4.0s: 815c @203c/s (138ch, ~204t @51t/s)
+2025-12-15 09:35:43,152 - src.llm.client - INFO - [stu:47b5d3] 📊 6.0s: 1181c @196c/s (207ch, ~295t @49t/s)
+2025-12-15 09:35:45,153 - src.llm.client - INFO - [stu:47b5d3] 📊 8.0s: 1532c @191c/s (275ch, ~383t @48t/s)
+2025-12-15 09:35:47,175 - src.llm.client - INFO - [stu:47b5d3] 📊 10.0s: 1876c @187c/s (343ch, ~469t @47t/s)
+2025-12-15 09:35:49,182 - src.llm.client - INFO - [stu:47b5d3] 📊 12.1s: 2251c @187c/s (410ch, ~563t @47t/s)
+2025-12-15 09:35:51,207 - src.llm.client - INFO - [stu:47b5d3] 📊 14.1s: 2596c @184c/s (478ch, ~649t @46t/s)
+2025-12-15 09:35:53,209 - src.llm.client - INFO - [stu:47b5d3] 📊 16.1s: 2917c @181c/s (545ch, ~729t @45t/s)
+2025-12-15 09:35:55,238 - src.llm.client - INFO - [stu:47b5d3] 📊 18.1s: 3275c @181c/s (612ch, ~819t @45t/s)
+2025-12-15 09:35:57,244 - src.llm.client - INFO - [stu:47b5d3] 📊 20.1s: 3564c @177c/s (679ch, ~891t @44t/s)
+2025-12-15 09:35:59,252 - src.llm.client - INFO - [stu:47b5d3] 📊 22.1s: 3841c @174c/s (746ch, ~960t @43t/s)
+2025-12-15 09:36:01,258 - src.llm.client - INFO - [stu:47b5d3] 📊 24.1s: 4137c @171c/s (813ch, ~1034t @43t/s)
+2025-12-15 09:36:03,261 - src.llm.client - INFO - [stu:47b5d3] 📊 26.1s: 4456c @171c/s (880ch, ~1114t @43t/s)
+2025-12-15 09:36:05,265 - src.llm.client - INFO - [stu:47b5d3] 📊 28.1s: 4830c @172c/s (947ch, ~1208t @43t/s)
+2025-12-15 09:36:07,277 - src.llm.client - INFO - [stu:47b5d3] 📊 30.1s: 5149c @171c/s (1014ch, ~1287t @43t/s)
+2025-12-15 09:36:09,291 - src.llm.client - INFO - [stu:47b5d3] 📊 32.2s: 5476c @170c/s (1081ch, ~1369t @43t/s)
+2025-12-15 09:36:10,472 - src.llm.client - INFO - [stu:47b5d3] ✓ Done 35.81s: 5670c (~800w @158c/s)
+2025-12-15 09:36:10,473 - src.generate.formats.study_notes - INFO - [NEEDS REVIEW] Study notes generated ⚠️
+2025-12-15 09:36:10,473 - src.generate.formats.study_notes - INFO -     - Length: 5728 chars, 810 words
+2025-12-15 09:36:10,473 - src.generate.formats.study_notes - INFO -     - Requirements: 3-10 key concepts, max 1200 words
+2025-12-15 09:36:10,473 - src.generate.formats.study_notes - INFO -     - Key concepts: 11
+2025-12-15 09:36:10,473 - src.generate.formats.study_notes - INFO -     - Structure: 2 sections, 0 bullets
+2025-12-15 09:36:10,473 - src.generate.formats.study_notes - WARNING - [WARNING] Too many key concepts (11, maximum 10, 1 excess - consolidate related concepts or remove less critical ones) ⚠️
+2025-12-15 09:36:10,473 - src.generate.formats.study_notes - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-15 09:36:10,473 - src.generate.formats.study_notes - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-15 09:36:10,473 - src.generate.formats.study_notes - INFO - Quality score: 98.0/100 (excellent)
+2025-12-15 09:36:10,475 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:36:10,476 - src.generate.orchestration.pipeline - INFO -   → Generating diagrams...
+2025-12-15 09:36:10,476 - src.generate.formats.diagrams - INFO - Generating diagram for: Glycolysis (Organisms and Processes)
+2025-12-15 09:36:10,476 - src.llm.client - INFO - [dia:f958b2] 🚀 dia | m=gemma3:4b | p=5747c | t=120s
+2025-12-15 09:36:10,476 - src.llm.client - INFO - [dia:f958b2] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:36:10,476 - src.llm.client - INFO - [dia:f958b2] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:36:10,476 - src.generate.formats.diagrams - INFO - Generating diagram for: Krebs Cycle (Organisms and Processes)
+2025-12-15 09:36:10,477 - src.llm.client - INFO - [dia:dfba05] 🚀 dia | m=gemma3:4b | p=5749c | t=120s
+2025-12-15 09:36:10,477 - src.llm.client - INFO - [dia:dfba05] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:36:10,477 - src.llm.client - INFO - [dia:dfba05] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:36:10,477 - src.generate.formats.diagrams - INFO - Generating diagram for: Electron Transport Chain (Organisms and Processes)
+2025-12-15 09:36:10,477 - src.llm.client - INFO - [dia:79edc0] 🚀 dia | m=gemma3:4b | p=5775c | t=120s
+2025-12-15 09:36:10,477 - src.llm.client - INFO - [dia:79edc0] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:36:10,477 - src.llm.client - INFO - [dia:79edc0] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:36:10,477 - src.generate.formats.diagrams - INFO - Generating diagram for: Photosynthesis (light & dark reactions) (Organisms and Processes)
+2025-12-15 09:36:10,478 - src.llm.client - INFO - [dia:ac8ace] 🚀 dia | m=gemma3:4b | p=5805c | t=120s
+2025-12-15 09:36:10,478 - src.llm.client - INFO - [dia:ac8ace] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:36:10,478 - src.llm.client - INFO - [dia:ac8ace] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:36:10,478 - src.llm.client - INFO - [dia:f958b2] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11056 bytes, prompt=5747 chars
+2025-12-15 09:36:10,478 - src.llm.client - INFO - [dia:f958b2] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:36:10,479 - src.llm.client - INFO - [dia:dfba05] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11058 bytes, prompt=5749 chars
+2025-12-15 09:36:10,479 - src.llm.client - INFO - [dia:dfba05] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:36:10,479 - src.llm.client - INFO - [dia:79edc0] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11084 bytes, prompt=5775 chars
+2025-12-15 09:36:10,479 - src.llm.client - INFO - [dia:ac8ace] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11114 bytes, prompt=5805 chars
+2025-12-15 09:36:10,479 - src.llm.client - INFO - [dia:79edc0] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:36:10,480 - src.llm.client - INFO - [dia:ac8ace] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:36:13,810 - src.llm.request_handler - INFO - [dia:79edc0] ✓ Done 3.33s
+2025-12-15 09:36:13,810 - src.llm.client - INFO - [dia:79edc0] ✅ HTTP 200 in 3.33s
+2025-12-15 09:36:13,810 - src.llm.client - INFO - [dia:79edc0] 📡 Stream active (200)
+2025-12-15 09:36:13,810 - src.llm.client - INFO - [dia:79edc0] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:36:15,829 - src.llm.client - INFO - [dia:79edc0] 📊 2.0s: 212c @105c/s (68ch, ~53t @26t/s)
+2025-12-15 09:36:17,853 - src.llm.client - INFO - [dia:79edc0] 📊 4.0s: 414c @102c/s (137ch, ~104t @26t/s)
+2025-12-15 09:36:19,855 - src.llm.client - INFO - [dia:79edc0] 📊 6.0s: 603c @100c/s (205ch, ~151t @25t/s)
+2025-12-15 09:36:21,883 - src.llm.client - INFO - [dia:79edc0] 📊 8.1s: 778c @96c/s (274ch, ~194t @24t/s)
+2025-12-15 09:36:23,826 - src.llm.client - INFO - [dia:79edc0] ✓ Done 13.35s: 887c (~107w @66c/s)
+2025-12-15 09:36:23,827 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Electron Transport Chain (Organisms and Processes):
+2025-12-15 09:36:23,827 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:36:23,827 - src.generate.formats.diagrams - INFO - [FIXED] Removed linkStyle command (not supported in all renderers) ✓
+2025-12-15 09:36:23,827 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:36:23,827 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:36:23,827 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-15 09:36:23,827 - src.generate.formats.diagrams - INFO -     - Length: 599 chars (cleaned: 599 chars)
+2025-12-15 09:36:23,827 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:36:23,827 - src.generate.formats.diagrams - INFO - [OK] Elements: 35 total (nodes: 15, connections: 20) ✓
+2025-12-15 09:36:23,827 - src.generate.formats.diagrams - INFO -   Cleanup summary: 4 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:36:23,827 - src.generate.formats.diagrams - INFO - Generated diagram: 599 characters
+2025-12-15 09:36:26,965 - src.llm.request_handler - INFO - [dia:f958b2] ✓ Done 16.49s
+2025-12-15 09:36:26,965 - src.llm.client - INFO - [dia:f958b2] ✅ HTTP 200 in 16.49s
+2025-12-15 09:36:26,965 - src.llm.client - INFO - [dia:f958b2] 📡 Stream active (200)
+2025-12-15 09:36:26,965 - src.llm.client - INFO - [dia:f958b2] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:36:28,971 - src.llm.client - INFO - [dia:f958b2] 📊 2.0s: 213c @106c/s (68ch, ~53t @27t/s)
+2025-12-15 09:36:30,996 - src.llm.client - INFO - [dia:f958b2] 📊 4.0s: 394c @98c/s (135ch, ~98t @24t/s)
+2025-12-15 09:36:33,011 - src.llm.client - INFO - [dia:f958b2] 📊 6.0s: 606c @100c/s (202ch, ~152t @25t/s)
+2025-12-15 09:36:35,034 - src.llm.client - INFO - [dia:f958b2] 📊 8.1s: 763c @95c/s (269ch, ~191t @24t/s)
+2025-12-15 09:36:37,041 - src.llm.client - INFO - [dia:f958b2] 📊 10.1s: 870c @86c/s (336ch, ~218t @22t/s)
+2025-12-15 09:36:38,124 - src.llm.client - INFO - [dia:f958b2] ✓ Done 27.65s: 917c (~89w @33c/s)
+2025-12-15 09:36:38,125 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Glycolysis (Organisms and Processes):
+2025-12-15 09:36:38,125 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:36:38,125 - src.generate.formats.diagrams - INFO - [FIXED] Removed linkStyle command (not supported in all renderers) ✓
+2025-12-15 09:36:38,125 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:36:38,125 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:36:38,125 - src.generate.formats.diagrams - WARNING - [WARNING] Some node text exceeds 40 characters (keep node labels concise - found 1 long nodes) ⚠️
+2025-12-15 09:36:38,125 - src.generate.formats.diagrams - INFO - [NEEDS REVIEW] Diagram generated ⚠️
+2025-12-15 09:36:38,126 - src.generate.formats.diagrams - INFO -     - Length: 763 chars (cleaned: 763 chars)
+2025-12-15 09:36:38,126 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:36:38,126 - src.generate.formats.diagrams - INFO - [WARNING] Elements: 47 total (nodes: 24, connections: 23) ⚠️
+2025-12-15 09:36:38,126 - src.generate.formats.diagrams - WARNING -     - Mermaid syntax warnings: 1 issues fixed (code fences, style commands)
+2025-12-15 09:36:38,126 - src.generate.formats.diagrams - WARNING - [WARNING] Some node text exceeds 40 characters (keep node labels concise - found 1 long nodes) ⚠️
+2025-12-15 09:36:38,126 - src.generate.formats.diagrams - INFO -   Cleanup summary: 5 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:36:38,126 - src.generate.formats.diagrams - INFO - Generated diagram: 763 characters
+2025-12-15 09:36:41,377 - src.llm.request_handler - INFO - [dia:ac8ace] ✓ Done 30.90s
+2025-12-15 09:36:41,377 - src.llm.client - INFO - [dia:ac8ace] ✅ HTTP 200 in 30.90s
+2025-12-15 09:36:41,377 - src.llm.client - INFO - [dia:ac8ace] 📡 Stream active (200)
+2025-12-15 09:36:41,377 - src.llm.client - INFO - [dia:ac8ace] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:36:43,402 - src.llm.client - INFO - [dia:ac8ace] 📊 2.0s: 235c @116c/s (67ch, ~59t @29t/s)
+2025-12-15 09:36:45,425 - src.llm.client - INFO - [dia:ac8ace] 📊 4.0s: 447c @110c/s (133ch, ~112t @28t/s)
+2025-12-15 09:36:47,452 - src.llm.client - INFO - [dia:ac8ace] 📊 6.1s: 613c @101c/s (199ch, ~153t @25t/s)
+2025-12-15 09:36:49,453 - src.llm.client - INFO - [dia:ac8ace] 📊 8.1s: 769c @95c/s (264ch, ~192t @24t/s)
+2025-12-15 09:36:51,459 - src.llm.client - INFO - [dia:ac8ace] 📊 10.1s: 926c @92c/s (328ch, ~232t @23t/s)
+2025-12-15 09:36:53,484 - src.llm.client - INFO - [dia:ac8ace] 📊 12.1s: 1085c @90c/s (394ch, ~271t @22t/s)
+2025-12-15 09:36:54,461 - src.llm.client - INFO - [dia:ac8ace] ✓ Done 43.98s: 1158c (~136w @26c/s)
+2025-12-15 09:36:54,461 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Photosynthesis (light & dark reactions) (Organisms and Processes):
+2025-12-15 09:36:54,461 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:36:54,461 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:36:54,461 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:36:54,461 - src.generate.formats.diagrams - WARNING - [WARNING] Some node text exceeds 40 characters (keep node labels concise - found 1 long nodes) ⚠️
+2025-12-15 09:36:54,461 - src.generate.formats.diagrams - INFO - [NEEDS REVIEW] Diagram generated ⚠️
+2025-12-15 09:36:54,461 - src.generate.formats.diagrams - INFO -     - Length: 633 chars (cleaned: 633 chars)
+2025-12-15 09:36:54,461 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:36:54,462 - src.generate.formats.diagrams - INFO - [WARNING] Elements: 30 total (nodes: 15, connections: 15) ⚠️
+2025-12-15 09:36:54,462 - src.generate.formats.diagrams - WARNING -     - Mermaid syntax warnings: 1 issues fixed (code fences, style commands)
+2025-12-15 09:36:54,462 - src.generate.formats.diagrams - WARNING - [WARNING] Some node text exceeds 40 characters (keep node labels concise - found 1 long nodes) ⚠️
+2025-12-15 09:36:54,462 - src.generate.formats.diagrams - INFO -   Cleanup summary: 4 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:36:54,462 - src.generate.formats.diagrams - INFO - Generated diagram: 633 characters
+2025-12-15 09:36:57,760 - src.llm.request_handler - INFO - [dia:dfba05] ✓ Done 47.28s
+2025-12-15 09:36:57,760 - src.llm.client - INFO - [dia:dfba05] ✅ HTTP 200 in 47.28s
+2025-12-15 09:36:57,760 - src.llm.client - INFO - [dia:dfba05] 📡 Stream active (200)
+2025-12-15 09:36:57,760 - src.llm.client - INFO - [dia:dfba05] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:36:59,770 - src.llm.client - INFO - [dia:dfba05] 📊 2.0s: 195c @97c/s (67ch, ~49t @24t/s)
+2025-12-15 09:37:01,787 - src.llm.client - INFO - [dia:dfba05] 📊 4.0s: 380c @94c/s (133ch, ~95t @24t/s)
+2025-12-15 09:37:03,791 - src.llm.client - INFO - [dia:dfba05] 📊 6.0s: 534c @89c/s (199ch, ~134t @22t/s)
+2025-12-15 09:37:05,817 - src.llm.client - INFO - [dia:dfba05] 📊 8.1s: 716c @89c/s (266ch, ~179t @22t/s)
+2025-12-15 09:37:07,827 - src.llm.client - INFO - [dia:dfba05] 📊 10.1s: 914c @91c/s (334ch, ~228t @23t/s)
+2025-12-15 09:37:09,850 - src.llm.client - INFO - [dia:dfba05] 📊 12.1s: 1037c @86c/s (400ch, ~259t @21t/s)
+2025-12-15 09:37:11,851 - src.llm.client - INFO - [dia:dfba05] 📊 14.1s: 1103c @78c/s (466ch, ~276t @20t/s)
+2025-12-15 09:37:13,855 - src.llm.client - INFO - [dia:dfba05] 📊 16.1s: 1170c @73c/s (533ch, ~292t @18t/s)
+2025-12-15 09:37:15,860 - src.llm.client - INFO - [dia:dfba05] 📊 18.1s: 1237c @68c/s (600ch, ~309t @17t/s)
+2025-12-15 09:37:17,887 - src.llm.client - INFO - [dia:dfba05] 📊 20.1s: 1304c @65c/s (667ch, ~326t @16t/s)
+2025-12-15 09:37:19,893 - src.llm.client - INFO - [dia:dfba05] 📊 22.1s: 1371c @62c/s (734ch, ~343t @15t/s)
+2025-12-15 09:37:21,920 - src.llm.client - INFO - [dia:dfba05] 📊 24.2s: 1438c @60c/s (801ch, ~360t @15t/s)
+2025-12-15 09:37:23,940 - src.llm.client - INFO - [dia:dfba05] 📊 26.2s: 1505c @57c/s (868ch, ~376t @14t/s)
+2025-12-15 09:37:25,953 - src.llm.client - INFO - [dia:dfba05] 📊 28.2s: 1571c @56c/s (934ch, ~393t @14t/s)
+2025-12-15 09:37:27,982 - src.llm.client - INFO - [dia:dfba05] 📊 30.2s: 1638c @54c/s (1001ch, ~410t @14t/s)
+2025-12-15 09:37:30,004 - src.llm.client - INFO - [dia:dfba05] 📊 32.2s: 1705c @53c/s (1068ch, ~426t @13t/s)
+2025-12-15 09:37:32,007 - src.llm.client - INFO - [dia:dfba05] 📊 34.2s: 1771c @52c/s (1134ch, ~443t @13t/s)
+2025-12-15 09:37:34,011 - src.llm.client - INFO - [dia:dfba05] 📊 36.3s: 1837c @51c/s (1200ch, ~459t @13t/s)
+2025-12-15 09:37:36,022 - src.llm.client - INFO - [dia:dfba05] 📊 38.3s: 1903c @50c/s (1266ch, ~476t @12t/s)
+2025-12-15 09:37:38,029 - src.llm.client - INFO - [dia:dfba05] 📊 40.3s: 1966c @49c/s (1329ch, ~492t @12t/s)
+2025-12-15 09:37:40,039 - src.llm.client - INFO - [dia:dfba05] 📊 42.3s: 2030c @48c/s (1393ch, ~508t @12t/s)
+2025-12-15 09:37:42,046 - src.llm.client - INFO - [dia:dfba05] 📊 44.3s: 2096c @47c/s (1459ch, ~524t @12t/s)
+2025-12-15 09:37:44,075 - src.llm.client - INFO - [dia:dfba05] 📊 46.3s: 2162c @47c/s (1525ch, ~540t @12t/s)
+2025-12-15 09:37:46,077 - src.llm.client - INFO - [dia:dfba05] 📊 48.3s: 2226c @46c/s (1589ch, ~556t @12t/s)
+2025-12-15 09:37:48,096 - src.llm.client - INFO - [dia:dfba05] 📊 50.3s: 2291c @46c/s (1654ch, ~573t @11t/s)
+2025-12-15 09:37:50,113 - src.llm.client - INFO - [dia:dfba05] 📊 52.4s: 2355c @45c/s (1718ch, ~589t @11t/s)
+2025-12-15 09:37:52,115 - src.llm.client - INFO - [dia:dfba05] 📊 54.4s: 2417c @44c/s (1780ch, ~604t @11t/s)
+2025-12-15 09:37:54,129 - src.llm.client - INFO - [dia:dfba05] 📊 56.4s: 2480c @44c/s (1843ch, ~620t @11t/s)
+2025-12-15 09:37:56,160 - src.llm.client - INFO - [dia:dfba05] 📊 58.4s: 2543c @44c/s (1906ch, ~636t @11t/s)
+2025-12-15 09:37:58,188 - src.llm.client - INFO - [dia:dfba05] 📊 60.4s: 2607c @43c/s (1970ch, ~652t @11t/s)
+2025-12-15 09:38:00,216 - src.llm.client - INFO - [dia:dfba05] 📊 62.5s: 2670c @43c/s (2033ch, ~668t @11t/s)
+2025-12-15 09:38:02,224 - src.llm.client - INFO - [dia:dfba05] 📊 64.5s: 2735c @42c/s (2098ch, ~684t @11t/s)
+2025-12-15 09:38:04,243 - src.llm.client - INFO - [dia:dfba05] 📊 66.5s: 2801c @42c/s (2164ch, ~700t @11t/s)
+2025-12-15 09:38:06,260 - src.llm.client - INFO - [dia:dfba05] 📊 68.5s: 2866c @42c/s (2229ch, ~716t @10t/s)
+2025-12-15 09:38:08,278 - src.llm.client - INFO - [dia:dfba05] 📊 70.5s: 2930c @42c/s (2293ch, ~732t @10t/s)
+2025-12-15 09:38:10,295 - src.llm.client - INFO - [dia:dfba05] 📊 72.5s: 2993c @41c/s (2356ch, ~748t @10t/s)
+2025-12-15 09:38:12,310 - src.llm.client - INFO - [dia:dfba05] 📊 74.6s: 3056c @41c/s (2419ch, ~764t @10t/s)
+2025-12-15 09:38:14,315 - src.llm.client - INFO - [dia:dfba05] 📊 76.6s: 3120c @41c/s (2483ch, ~780t @10t/s)
+2025-12-15 09:38:16,328 - src.llm.client - INFO - [dia:dfba05] 📊 78.6s: 3185c @41c/s (2548ch, ~796t @10t/s)
+2025-12-15 09:38:18,330 - src.llm.client - INFO - [dia:dfba05] 📊 80.6s: 3248c @40c/s (2611ch, ~812t @10t/s)
+2025-12-15 09:38:20,192 - src.llm.client - INFO - [dia:dfba05] ✓ Done 129.72s: 3303c (~107w @25c/s)
+2025-12-15 09:38:20,192 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Krebs Cycle (Organisms and Processes):
+2025-12-15 09:38:20,192 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:38:20,192 - src.generate.formats.diagrams - INFO - [FIXED] Removed linkStyle command (not supported in all renderers) ✓
+2025-12-15 09:38:20,192 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:38:20,192 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-15 09:38:20,192 - src.generate.formats.diagrams - INFO -     - Length: 979 chars (cleaned: 979 chars)
+2025-12-15 09:38:20,192 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:38:20,193 - src.generate.formats.diagrams - INFO - [OK] Elements: 41 total (nodes: 19, connections: 22) ✓
+2025-12-15 09:38:20,193 - src.generate.formats.diagrams - INFO -   Cleanup summary: 3 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:38:20,193 - src.generate.formats.diagrams - INFO - Generated diagram: 979 characters
+2025-12-15 09:38:20,193 - src.generate.orchestration.pipeline - INFO -   → Generating questions...
+2025-12-15 09:38:20,193 - src.generate.formats.questions - INFO - Generating 10 questions for: Organisms and Processes (Session 3)
+2025-12-15 09:38:20,193 - src.llm.client - INFO - [qst:a539dd] 🚀 qst | m=gemma3:4b | p=7484c | t=150s
+2025-12-15 09:38:20,193 - src.llm.client - INFO - [qst:a539dd] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:38:20,193 - src.llm.client - INFO - [qst:a539dd] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:38:20,195 - src.llm.client - INFO - [qst:a539dd] Sending request to Ollama: model=gemma3:4b, operation=questions, payload=11183 bytes, prompt=7484 chars
+2025-12-15 09:38:20,195 - src.llm.client - INFO - [qst:a539dd] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:38:24,436 - src.llm.request_handler - INFO - [qst:a539dd] ✓ Done 4.24s
+2025-12-15 09:38:24,437 - src.llm.client - INFO - [qst:a539dd] ✅ HTTP 200 in 4.24s
+2025-12-15 09:38:24,437 - src.llm.client - INFO - [qst:a539dd] 📡 Stream active (200)
+2025-12-15 09:38:24,437 - src.llm.client - INFO - [qst:a539dd] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:38:26,444 - src.llm.client - INFO - [qst:a539dd] 📊 2.0s: 299c @149c/s (65ch, ~75t @37t/s)
+2025-12-15 09:38:28,444 - src.llm.client - INFO - [qst:a539dd] 📊 4.0s: 599c @149c/s (129ch, ~150t @37t/s)
+2025-12-15 09:38:30,461 - src.llm.client - INFO - [qst:a539dd] 📊 6.0s: 918c @152c/s (196ch, ~230t @38t/s)
+2025-12-15 09:38:32,482 - src.llm.client - INFO - [qst:a539dd] 📊 8.0s: 1192c @148c/s (263ch, ~298t @37t/s)
+2025-12-15 09:38:34,490 - src.llm.client - INFO - [qst:a539dd] 📊 10.1s: 1502c @149c/s (331ch, ~376t @37t/s)
+2025-12-15 09:38:36,508 - src.llm.client - INFO - [qst:a539dd] 📊 12.1s: 1827c @151c/s (399ch, ~457t @38t/s)
+2025-12-15 09:38:38,521 - src.llm.client - INFO - [qst:a539dd] 📊 14.1s: 2132c @151c/s (467ch, ~533t @38t/s)
+2025-12-15 09:38:40,548 - src.llm.client - INFO - [qst:a539dd] 📊 16.1s: 2548c @158c/s (535ch, ~637t @40t/s)
+2025-12-15 09:38:42,572 - src.llm.client - INFO - [qst:a539dd] 📊 18.1s: 2894c @160c/s (603ch, ~724t @40t/s)
+2025-12-15 09:38:44,584 - src.llm.client - INFO - [qst:a539dd] 📊 20.1s: 3274c @163c/s (671ch, ~818t @41t/s)
+2025-12-15 09:38:46,588 - src.llm.client - INFO - [qst:a539dd] 📊 22.2s: 3695c @167c/s (739ch, ~924t @42t/s)
+2025-12-15 09:38:48,608 - src.llm.client - INFO - [qst:a539dd] 📊 24.2s: 4053c @168c/s (807ch, ~1013t @42t/s)
+2025-12-15 09:38:50,659 - src.llm.client - INFO - [qst:a539dd] 📊 26.2s: 4412c @168c/s (873ch, ~1103t @42t/s)
+2025-12-15 09:38:50,659 - src.llm.client - INFO - [qst:a539dd] ✓ Done 30.47s: 4412c (~630w @145c/s)
+2025-12-15 09:38:50,659 - src.utils.content_analysis.question_fixes - INFO - Auto-fixed 4 question format issues: {'format_standardized': 0, 'question_marks_added': 4, 'mc_options_fixed': 0, 'total_fixes': 4}
+2025-12-15 09:38:50,659 - src.generate.formats.questions - INFO - Applied 4 auto-fixes to questions
+2025-12-15 09:38:50,660 - src.generate.formats.questions - INFO - [COMPLIANT] Questions generated ✓
+2025-12-15 09:38:50,660 - src.generate.formats.questions - INFO -     - Total: 10 questions
+2025-12-15 09:38:50,660 - src.generate.formats.questions - INFO -     - Multiple choice: 5 (valid structure: 5, with 4 options: 5)
+2025-12-15 09:38:50,660 - src.generate.formats.questions - INFO -     - Answers: 10, Explanations: 5
+2025-12-15 09:38:50,660 - src.generate.formats.questions - INFO - [OK] Question marks: 10 total, 10 questions with '?' ✓
+2025-12-15 09:38:50,660 - src.generate.formats.questions - INFO -     - Question length: avg 11.7 words (range: 7-22)
+2025-12-15 09:38:50,660 - src.generate.formats.questions - INFO -     - MC explanations: 5/5 have proper length (20-50 words)
+2025-12-15 09:38:50,662 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:38:50,664 - src.generate.orchestration.pipeline - INFO -   ✓ Session 3 completed
+2025-12-15 09:38:50,664 - src.generate.orchestration.pipeline - INFO - 
+[4/4] Session 4: Homeostasis & Biodiversity
+2025-12-15 09:38:50,664 - src.generate.orchestration.pipeline - INFO -   → Generating lecture...
+2025-12-15 09:38:50,664 - src.generate.formats.lectures - INFO - Generating lecture for: Organisms and Processes (Session 4/4)
+2025-12-15 09:38:50,664 - src.llm.client - INFO - [lec:c57100] 🚀 lec | m=gemma3:4b | p=3309c | t=180s
+2025-12-15 09:38:50,664 - src.llm.client - INFO - [lec:c57100] Timeout configuration: connect=5s, read=180s (total limit: 180s)
+2025-12-15 09:38:50,664 - src.llm.client - INFO - [lec:c57100] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:38:50,665 - src.llm.client - INFO - [lec:c57100] Sending request to Ollama: model=gemma3:4b, operation=lecture, payload=6945 bytes, prompt=3309 chars
+2025-12-15 09:38:50,665 - src.llm.client - INFO - [lec:c57100] Waiting for HTTP response (connect timeout: 5s, read timeout: 180s)...
+2025-12-15 09:38:52,676 - src.llm.request_handler - INFO - [lec:c57100] ✓ Done 2.01s
+2025-12-15 09:38:52,676 - src.llm.client - INFO - [lec:c57100] ✅ HTTP 200 in 2.01s
+2025-12-15 09:38:52,676 - src.llm.client - INFO - [lec:c57100] 📡 Stream active (200)
+2025-12-15 09:38:52,676 - src.llm.client - INFO - [lec:c57100] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:38:54,691 - src.llm.client - INFO - [lec:c57100] 📊 2.0s: 414c @205c/s (70ch, ~104t @51t/s)
+2025-12-15 09:38:56,703 - src.llm.client - INFO - [lec:c57100] 📊 4.0s: 874c @217c/s (140ch, ~218t @54t/s)
+2025-12-15 09:38:58,726 - src.llm.client - INFO - [lec:c57100] 📊 6.1s: 1247c @206c/s (209ch, ~312t @52t/s)
+2025-12-15 09:39:00,729 - src.llm.client - INFO - [lec:c57100] 📊 8.1s: 1618c @201c/s (278ch, ~404t @50t/s)
+2025-12-15 09:39:02,752 - src.llm.client - INFO - [lec:c57100] 📊 10.1s: 2008c @199c/s (348ch, ~502t @50t/s)
+2025-12-15 09:39:04,775 - src.llm.client - INFO - [lec:c57100] 📊 12.1s: 2367c @196c/s (418ch, ~592t @49t/s)
+2025-12-15 09:39:06,793 - src.llm.client - INFO - [lec:c57100] 📊 14.1s: 2753c @195c/s (487ch, ~688t @49t/s)
+2025-12-15 09:39:08,817 - src.llm.client - INFO - [lec:c57100] 📊 16.1s: 3089c @191c/s (557ch, ~772t @48t/s)
+2025-12-15 09:39:10,818 - src.llm.client - INFO - [lec:c57100] 📊 18.1s: 3428c @189c/s (626ch, ~857t @47t/s)
+2025-12-15 09:39:12,826 - src.llm.client - INFO - [lec:c57100] 📊 20.1s: 3738c @186c/s (695ch, ~934t @46t/s)
+2025-12-15 09:39:14,846 - src.llm.client - INFO - [lec:c57100] 📊 22.2s: 4079c @184c/s (764ch, ~1020t @46t/s)
+2025-12-15 09:39:16,870 - src.llm.client - INFO - [lec:c57100] 📊 24.2s: 4433c @183c/s (833ch, ~1108t @46t/s)
+2025-12-15 09:39:18,880 - src.llm.client - INFO - [lec:c57100] 📊 26.2s: 4746c @181c/s (902ch, ~1186t @45t/s)
+2025-12-15 09:39:20,884 - src.llm.client - INFO - [lec:c57100] 📊 28.2s: 5139c @182c/s (971ch, ~1285t @46t/s)
+2025-12-15 09:39:22,888 - src.llm.client - INFO - [lec:c57100] 📊 30.2s: 5477c @181c/s (1040ch, ~1369t @45t/s)
+2025-12-15 09:39:24,907 - src.llm.client - INFO - [lec:c57100] 📊 32.2s: 5846c @181c/s (1109ch, ~1462t @45t/s)
+2025-12-15 09:39:26,918 - src.llm.client - INFO - [lec:c57100] 📊 34.2s: 6230c @182c/s (1178ch, ~1558t @45t/s)
+2025-12-15 09:39:28,928 - src.llm.client - INFO - [lec:c57100] 📊 36.3s: 6633c @183c/s (1247ch, ~1658t @46t/s)
+2025-12-15 09:39:30,943 - src.llm.client - INFO - [lec:c57100] 📊 38.3s: 7046c @184c/s (1316ch, ~1762t @46t/s)
+2025-12-15 09:39:32,956 - src.llm.client - INFO - [lec:c57100] 📊 40.3s: 7446c @185c/s (1385ch, ~1862t @46t/s)
+2025-12-15 09:39:34,956 - src.llm.client - INFO - [lec:c57100] 📊 42.3s: 7789c @184c/s (1451ch, ~1947t @46t/s)
+2025-12-15 09:39:35,464 - src.llm.client - INFO - [lec:c57100] ✓ Done 44.80s: 7857c (~1117w @175c/s)
+2025-12-15 09:39:35,465 - src.generate.formats.lectures - INFO - [COMPLIANT] Lecture generated ✓
+2025-12-15 09:39:35,465 - src.generate.formats.lectures - INFO -     - Length: 8024 chars, 1141 words
+2025-12-15 09:39:35,465 - src.generate.formats.lectures - INFO -     - Requirements: 1000-1500 words, 5-15 examples, 4-8 sections
+2025-12-15 09:39:35,465 - src.generate.formats.lectures - INFO -     - Structure: 8 sections, 0 subsections
+2025-12-15 09:39:35,465 - src.generate.formats.lectures - INFO -     - Content: 13 examples, 18 terms defined
+2025-12-15 09:39:35,465 - src.generate.formats.lectures - INFO - Quality score: 100.0/100 (excellent)
+2025-12-15 09:39:35,468 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:39:35,469 - src.generate.orchestration.pipeline - INFO -   → Generating lab...
+2025-12-15 09:39:35,469 - src.generate.formats.labs - INFO - Generating lab 4 for: Organisms and Processes (Session 4)
+2025-12-15 09:39:35,469 - src.llm.client - INFO - [lab:01ce9c] 🚀 lab | m=gemma3:4b | p=3471c | t=150s
+2025-12-15 09:39:35,469 - src.llm.client - INFO - [lab:01ce9c] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:39:35,469 - src.llm.client - INFO - [lab:01ce9c] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:39:35,470 - src.llm.client - INFO - [lab:01ce9c] Sending request to Ollama: model=gemma3:4b, operation=lab, payload=3906 bytes, prompt=3471 chars
+2025-12-15 09:39:35,470 - src.llm.client - INFO - [lab:01ce9c] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:39:37,164 - src.llm.request_handler - INFO - [lab:01ce9c] ✓ Done 1.69s
+2025-12-15 09:39:37,164 - src.llm.client - INFO - [lab:01ce9c] ✅ HTTP 200 in 1.69s
+2025-12-15 09:39:37,164 - src.llm.client - INFO - [lab:01ce9c] 📡 Stream active (200)
+2025-12-15 09:39:37,164 - src.llm.client - INFO - [lab:01ce9c] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:39:39,167 - src.llm.client - INFO - [lab:01ce9c] 📊 2.0s: 327c @163c/s (66ch, ~82t @41t/s)
+2025-12-15 09:39:41,191 - src.llm.client - INFO - [lab:01ce9c] 📊 4.0s: 727c @181c/s (131ch, ~182t @45t/s)
+2025-12-15 09:39:43,219 - src.llm.client - INFO - [lab:01ce9c] 📊 6.1s: 1028c @170c/s (196ch, ~257t @42t/s)
+2025-12-15 09:39:45,233 - src.llm.client - INFO - [lab:01ce9c] 📊 8.1s: 1290c @160c/s (260ch, ~322t @40t/s)
+2025-12-15 09:39:47,263 - src.llm.client - INFO - [lab:01ce9c] 📊 10.1s: 1469c @145c/s (324ch, ~367t @36t/s)
+2025-12-15 09:39:49,269 - src.llm.client - INFO - [lab:01ce9c] 📊 12.1s: 1672c @138c/s (388ch, ~418t @35t/s)
+2025-12-15 09:39:51,299 - src.llm.client - INFO - [lab:01ce9c] 📊 14.1s: 1946c @138c/s (452ch, ~486t @34t/s)
+2025-12-15 09:39:53,303 - src.llm.client - INFO - [lab:01ce9c] 📊 16.1s: 2250c @139c/s (516ch, ~562t @35t/s)
+2025-12-15 09:39:55,328 - src.llm.client - INFO - [lab:01ce9c] 📊 18.2s: 2468c @136c/s (580ch, ~617t @34t/s)
+2025-12-15 09:39:57,339 - src.llm.client - INFO - [lab:01ce9c] 📊 20.2s: 2710c @134c/s (645ch, ~678t @34t/s)
+2025-12-15 09:39:59,349 - src.llm.client - INFO - [lab:01ce9c] 📊 22.2s: 3000c @135c/s (708ch, ~750t @34t/s)
+2025-12-15 09:40:01,351 - src.llm.client - INFO - [lab:01ce9c] 📊 24.2s: 3200c @132c/s (772ch, ~800t @33t/s)
+2025-12-15 09:40:03,373 - src.llm.client - INFO - [lab:01ce9c] 📊 26.2s: 3384c @129c/s (836ch, ~846t @32t/s)
+2025-12-15 09:40:05,383 - src.llm.client - INFO - [lab:01ce9c] 📊 28.2s: 3614c @128c/s (899ch, ~904t @32t/s)
+2025-12-15 09:40:07,394 - src.llm.client - INFO - [lab:01ce9c] 📊 30.2s: 3929c @130c/s (963ch, ~982t @32t/s)
+2025-12-15 09:40:09,417 - src.llm.client - INFO - [lab:01ce9c] 📊 32.3s: 4265c @132c/s (1026ch, ~1066t @33t/s)
+2025-12-15 09:40:11,302 - src.llm.client - INFO - [lab:01ce9c] ✓ Done 35.83s: 4628c (~707w @129c/s)
+2025-12-15 09:40:11,302 - src.generate.formats.labs - INFO - [COMPLIANT] Lab generated ✓
+2025-12-15 09:40:11,302 - src.generate.formats.labs - INFO -     - Length: 4719 chars, 721 words
+2025-12-15 09:40:11,302 - src.generate.formats.labs - INFO -     - Procedure: 10 steps
+2025-12-15 09:40:11,302 - src.generate.formats.labs - INFO -     - Safety: 10 warnings
+2025-12-15 09:40:11,302 - src.generate.formats.labs - INFO -     - Data tables: 9
+2025-12-15 09:40:11,304 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:40:11,305 - src.generate.orchestration.pipeline - INFO -   → Generating study notes...
+2025-12-15 09:40:11,305 - src.generate.formats.study_notes - INFO - Generating study notes for: Organisms and Processes (Session 4)
+2025-12-15 09:40:11,305 - src.llm.client - INFO - [stu:53868c] 🚀 stu | m=gemma3:4b | p=4627c | t=120s
+2025-12-15 09:40:11,305 - src.llm.client - INFO - [stu:53868c] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:40:11,305 - src.llm.client - INFO - [stu:53868c] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:40:11,306 - src.llm.client - INFO - [stu:53868c] Sending request to Ollama: model=gemma3:4b, operation=study_notes, payload=8279 bytes, prompt=4627 chars
+2025-12-15 09:40:11,306 - src.llm.client - INFO - [stu:53868c] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:40:13,857 - src.llm.request_handler - INFO - [stu:53868c] ✓ Done 2.55s
+2025-12-15 09:40:13,857 - src.llm.client - INFO - [stu:53868c] ✅ HTTP 200 in 2.55s
+2025-12-15 09:40:13,857 - src.llm.client - INFO - [stu:53868c] 📡 Stream active (200)
+2025-12-15 09:40:13,857 - src.llm.client - INFO - [stu:53868c] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:40:15,887 - src.llm.client - INFO - [stu:53868c] 📊 2.0s: 363c @179c/s (64ch, ~91t @45t/s)
+2025-12-15 09:40:17,904 - src.llm.client - INFO - [stu:53868c] 📊 4.0s: 741c @183c/s (129ch, ~185t @46t/s)
+2025-12-15 09:40:19,904 - src.llm.client - INFO - [stu:53868c] 📊 6.0s: 1085c @179c/s (194ch, ~271t @45t/s)
+2025-12-15 09:40:21,923 - src.llm.client - INFO - [stu:53868c] 📊 8.1s: 1451c @180c/s (259ch, ~363t @45t/s)
+2025-12-15 09:40:23,937 - src.llm.client - INFO - [stu:53868c] 📊 10.1s: 1820c @181c/s (324ch, ~455t @45t/s)
+2025-12-15 09:40:25,949 - src.llm.client - INFO - [stu:53868c] 📊 12.1s: 2128c @176c/s (388ch, ~532t @44t/s)
+2025-12-15 09:40:27,964 - src.llm.client - INFO - [stu:53868c] 📊 14.1s: 2446c @173c/s (453ch, ~612t @43t/s)
+2025-12-15 09:40:29,977 - src.llm.client - INFO - [stu:53868c] 📊 16.1s: 2772c @172c/s (518ch, ~693t @43t/s)
+2025-12-15 09:40:31,106 - src.llm.client - INFO - [stu:53868c] ✓ Done 19.80s: 2988c (~420w @151c/s)
+2025-12-15 09:40:31,106 - src.generate.formats.study_notes - WARNING -   Critical issues detected, will retry: 1 issues
+2025-12-15 09:40:31,107 - src.generate.formats.study_notes - WARNING -     [CRITICAL] Issue 1: Only 2 key concepts highlighted (require 3-10, need 1 more - format concepts as **Concept Name:** in bullet points)
+2025-12-15 09:40:31,107 - src.generate.formats.study_notes - WARNING -   Retry attempt 1/1 for study notes: Organisms and Processes (Session 4)
+2025-12-15 09:40:31,107 - src.generate.formats.study_notes - WARNING -   Smart retry system suggests skipping retry (low success rate)
+2025-12-15 09:40:31,108 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:40:31,108 - src.generate.orchestration.pipeline - INFO -   → Generating diagrams...
+2025-12-15 09:40:31,108 - src.generate.formats.diagrams - INFO - Generating diagram for: Feedback Mechanisms (Organisms and Processes)
+2025-12-15 09:40:31,109 - src.generate.formats.diagrams - INFO - Generating diagram for: Basic Biodiversity Concepts (Organisms and Processes)
+2025-12-15 09:40:31,109 - src.llm.client - INFO - [dia:dde7ef] 🚀 dia | m=gemma3:4b | p=5770c | t=120s
+2025-12-15 09:40:31,109 - src.llm.client - INFO - [dia:dde7ef] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:40:31,109 - src.llm.client - INFO - [dia:dde7ef] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:40:31,109 - src.llm.client - INFO - [dia:f9017f] 🚀 dia | m=gemma3:4b | p=5754c | t=120s
+2025-12-15 09:40:31,109 - src.llm.client - INFO - [dia:f9017f] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:40:31,109 - src.llm.client - INFO - [dia:f9017f] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:40:31,108 - src.generate.formats.diagrams - INFO - Generating diagram for: Ecological Interactions (symbiosis, competition) (Organisms and Processes)
+2025-12-15 09:40:31,109 - src.llm.client - INFO - [dia:b26531] 🚀 dia | m=gemma3:4b | p=5812c | t=120s
+2025-12-15 09:40:31,109 - src.llm.client - INFO - [dia:b26531] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-15 09:40:31,109 - src.llm.client - INFO - [dia:b26531] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:40:31,111 - src.llm.client - INFO - [dia:f9017f] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11063 bytes, prompt=5754 chars
+2025-12-15 09:40:31,111 - src.llm.client - INFO - [dia:f9017f] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:40:31,111 - src.llm.client - INFO - [dia:dde7ef] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11079 bytes, prompt=5770 chars
+2025-12-15 09:40:31,111 - src.llm.client - INFO - [dia:dde7ef] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:40:31,111 - src.llm.client - INFO - [dia:b26531] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11121 bytes, prompt=5812 chars
+2025-12-15 09:40:31,111 - src.llm.client - INFO - [dia:b26531] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-15 09:40:34,745 - src.llm.request_handler - INFO - [dia:b26531] ✓ Done 3.63s
+2025-12-15 09:40:34,746 - src.llm.client - INFO - [dia:b26531] ✅ HTTP 200 in 3.63s
+2025-12-15 09:40:34,746 - src.llm.client - INFO - [dia:b26531] 📡 Stream active (200)
+2025-12-15 09:40:34,746 - src.llm.client - INFO - [dia:b26531] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:40:36,766 - src.llm.client - INFO - [dia:b26531] 📊 2.0s: 287c @142c/s (65ch, ~72t @36t/s)
+2025-12-15 09:40:38,783 - src.llm.client - INFO - [dia:b26531] 📊 4.0s: 554c @137c/s (130ch, ~138t @34t/s)
+2025-12-15 09:40:40,787 - src.llm.client - INFO - [dia:b26531] 📊 6.0s: 812c @134c/s (194ch, ~203t @34t/s)
+2025-12-15 09:40:42,811 - src.llm.client - INFO - [dia:b26531] 📊 8.1s: 1044c @129c/s (259ch, ~261t @32t/s)
+2025-12-15 09:40:44,837 - src.llm.client - INFO - [dia:b26531] 📊 10.1s: 1183c @117c/s (324ch, ~296t @29t/s)
+2025-12-15 09:40:46,091 - src.llm.client - INFO - [dia:b26531] ✓ Done 14.98s: 1235c (~157w @82c/s)
+2025-12-15 09:40:46,092 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Ecological Interactions (symbiosis, competition) (Organisms and Processes):
+2025-12-15 09:40:46,092 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:40:46,092 - src.generate.formats.diagrams - INFO - [FIXED] Removed linkStyle command (not supported in all renderers) ✓
+2025-12-15 09:40:46,092 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:40:46,092 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:40:46,092 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-15 09:40:46,092 - src.generate.formats.diagrams - INFO -     - Length: 800 chars (cleaned: 800 chars)
+2025-12-15 09:40:46,092 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:40:46,092 - src.generate.formats.diagrams - INFO - [OK] Elements: 38 total (nodes: 14, connections: 24) ✓
+2025-12-15 09:40:46,092 - src.generate.formats.diagrams - INFO -   Cleanup summary: 4 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:40:46,092 - src.generate.formats.diagrams - INFO - Generated diagram: 800 characters
+2025-12-15 09:40:49,503 - src.llm.request_handler - INFO - [dia:f9017f] ✓ Done 18.39s
+2025-12-15 09:40:49,503 - src.llm.client - INFO - [dia:f9017f] ✅ HTTP 200 in 18.39s
+2025-12-15 09:40:49,503 - src.llm.client - INFO - [dia:f9017f] 📡 Stream active (200)
+2025-12-15 09:40:49,503 - src.llm.client - INFO - [dia:f9017f] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:40:51,519 - src.llm.client - INFO - [dia:f9017f] 📊 2.0s: 215c @107c/s (64ch, ~54t @27t/s)
+2025-12-15 09:40:53,546 - src.llm.client - INFO - [dia:f9017f] 📊 4.0s: 452c @112c/s (129ch, ~113t @28t/s)
+2025-12-15 09:40:55,568 - src.llm.client - INFO - [dia:f9017f] 📊 6.1s: 687c @113c/s (193ch, ~172t @28t/s)
+2025-12-15 09:40:57,583 - src.llm.client - INFO - [dia:f9017f] 📊 8.1s: 872c @108c/s (258ch, ~218t @27t/s)
+2025-12-15 09:40:59,072 - src.llm.client - INFO - [dia:f9017f] ✓ Done 27.96s: 989c (~138w @35c/s)
+2025-12-15 09:40:59,072 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Feedback Mechanisms (Organisms and Processes):
+2025-12-15 09:40:59,073 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:40:59,073 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:40:59,073 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:40:59,073 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-15 09:40:59,073 - src.generate.formats.diagrams - INFO -     - Length: 736 chars (cleaned: 736 chars)
+2025-12-15 09:40:59,073 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:40:59,073 - src.generate.formats.diagrams - INFO - [OK] Elements: 45 total (nodes: 10, connections: 35) ✓
+2025-12-15 09:40:59,073 - src.generate.formats.diagrams - INFO -   Cleanup summary: 3 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:40:59,073 - src.generate.formats.diagrams - INFO - Generated diagram: 736 characters
+2025-12-15 09:41:02,487 - src.llm.request_handler - INFO - [dia:dde7ef] ✓ Done 31.38s
+2025-12-15 09:41:02,487 - src.llm.client - INFO - [dia:dde7ef] ✅ HTTP 200 in 31.38s
+2025-12-15 09:41:02,487 - src.llm.client - INFO - [dia:dde7ef] 📡 Stream active (200)
+2025-12-15 09:41:02,487 - src.llm.client - INFO - [dia:dde7ef] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:41:04,496 - src.llm.client - INFO - [dia:dde7ef] 📊 2.0s: 226c @112c/s (64ch, ~56t @28t/s)
+2025-12-15 09:41:06,523 - src.llm.client - INFO - [dia:dde7ef] 📊 4.0s: 470c @116c/s (129ch, ~118t @29t/s)
+2025-12-15 09:41:08,533 - src.llm.client - INFO - [dia:dde7ef] 📊 6.0s: 730c @121c/s (194ch, ~182t @30t/s)
+2025-12-15 09:41:10,558 - src.llm.client - INFO - [dia:dde7ef] 📊 8.1s: 981c @122c/s (259ch, ~245t @30t/s)
+2025-12-15 09:41:12,560 - src.llm.client - INFO - [dia:dde7ef] 📊 10.1s: 1148c @114c/s (323ch, ~287t @28t/s)
+2025-12-15 09:41:14,568 - src.llm.client - INFO - [dia:dde7ef] 📊 12.1s: 1284c @106c/s (388ch, ~321t @27t/s)
+2025-12-15 09:41:16,587 - src.llm.client - INFO - [dia:dde7ef] 📊 14.1s: 1431c @101c/s (452ch, ~358t @25t/s)
+2025-12-15 09:41:18,606 - src.llm.client - INFO - [dia:dde7ef] 📊 16.1s: 1569c @97c/s (517ch, ~392t @24t/s)
+2025-12-15 09:41:20,615 - src.llm.client - INFO - [dia:dde7ef] 📊 18.1s: 1712c @94c/s (584ch, ~428t @24t/s)
+2025-12-15 09:41:22,616 - src.llm.client - INFO - [dia:dde7ef] 📊 20.1s: 1842c @92c/s (651ch, ~460t @23t/s)
+2025-12-15 09:41:24,337 - src.llm.client - INFO - [dia:dde7ef] ✓ Done 53.23s: 1956c (~185w @37c/s)
+2025-12-15 09:41:24,338 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Basic Biodiversity Concepts (Organisms and Processes):
+2025-12-15 09:41:24,338 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-15 09:41:24,338 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-15 09:41:24,338 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-15 09:41:24,338 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-15 09:41:24,338 - src.generate.formats.diagrams - INFO -     - Length: 1015 chars (cleaned: 1015 chars)
+2025-12-15 09:41:24,338 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-15 09:41:24,338 - src.generate.formats.diagrams - INFO - [OK] Elements: 46 total (nodes: 25, connections: 21) ✓
+2025-12-15 09:41:24,338 - src.generate.formats.diagrams - INFO -   Cleanup summary: 3 issues fixed (code fences, style commands, etc.)
+2025-12-15 09:41:24,338 - src.generate.formats.diagrams - INFO - Generated diagram: 1015 characters
+2025-12-15 09:41:24,338 - src.generate.orchestration.pipeline - INFO -   → Generating questions...
+2025-12-15 09:41:24,338 - src.generate.formats.questions - INFO - Generating 10 questions for: Organisms and Processes (Session 4)
+2025-12-15 09:41:24,339 - src.llm.client - INFO - [qst:ab49ec] 🚀 qst | m=gemma3:4b | p=7471c | t=150s
+2025-12-15 09:41:24,339 - src.llm.client - INFO - [qst:ab49ec] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-15 09:41:24,339 - src.llm.client - INFO - [qst:ab49ec] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-15 09:41:24,340 - src.llm.client - INFO - [qst:ab49ec] Sending request to Ollama: model=gemma3:4b, operation=questions, payload=11230 bytes, prompt=7471 chars
+2025-12-15 09:41:24,340 - src.llm.client - INFO - [qst:ab49ec] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-15 09:41:28,366 - src.llm.request_handler - INFO - [qst:ab49ec] ✓ Done 4.03s
+2025-12-15 09:41:28,366 - src.llm.client - INFO - [qst:ab49ec] ✅ HTTP 200 in 4.03s
+2025-12-15 09:41:28,366 - src.llm.client - INFO - [qst:ab49ec] 📡 Stream active (200)
+2025-12-15 09:41:28,366 - src.llm.client - INFO - [qst:ab49ec] Starting stream parsing, waiting for first chunk...
+2025-12-15 09:41:30,385 - src.llm.client - INFO - [qst:ab49ec] 📊 2.0s: 330c @163c/s (67ch, ~82t @41t/s)
+2025-12-15 09:41:32,395 - src.llm.client - INFO - [qst:ab49ec] 📊 4.0s: 674c @167c/s (133ch, ~168t @42t/s)
+2025-12-15 09:41:34,414 - src.llm.client - INFO - [qst:ab49ec] 📊 6.0s: 1025c @169c/s (201ch, ~256t @42t/s)
+2025-12-15 09:41:36,427 - src.llm.client - INFO - [qst:ab49ec] 📊 8.1s: 1334c @165c/s (268ch, ~334t @41t/s)
+2025-12-15 09:41:38,443 - src.llm.client - INFO - [qst:ab49ec] 📊 10.1s: 1671c @166c/s (336ch, ~418t @41t/s)
+2025-12-15 09:41:40,448 - src.llm.client - INFO - [qst:ab49ec] 📊 12.1s: 1999c @165c/s (403ch, ~500t @41t/s)
+2025-12-15 09:41:42,470 - src.llm.client - INFO - [qst:ab49ec] 📊 14.1s: 2309c @164c/s (471ch, ~577t @41t/s)
+2025-12-15 09:41:44,486 - src.llm.client - INFO - [qst:ab49ec] 📊 16.1s: 2602c @161c/s (539ch, ~650t @40t/s)
+2025-12-15 09:41:46,504 - src.llm.client - INFO - [qst:ab49ec] 📊 18.1s: 2982c @164c/s (607ch, ~746t @41t/s)
+2025-12-15 09:41:48,523 - src.llm.client - INFO - [qst:ab49ec] 📊 20.2s: 3334c @165c/s (676ch, ~834t @41t/s)
+2025-12-15 09:41:50,542 - src.llm.client - INFO - [qst:ab49ec] 📊 22.2s: 3716c @168c/s (745ch, ~929t @42t/s)
+2025-12-15 09:41:52,005 - src.llm.client - INFO - [qst:ab49ec] ✓ Done 27.67s: 3985c (~560w @144c/s)
+2025-12-15 09:41:52,006 - src.generate.formats.questions - WARNING - [CRITICAL] Structure Issue: MC option count: 1 multiple choice questions do not have exactly 4 options (require A, B, C, D - ensure each MC question has exactly 4 options) 🔴
+2025-12-15 09:41:52,006 - src.generate.formats.questions - WARNING -     Context: Module 2 Session 4
+2025-12-15 09:41:52,006 - src.generate.formats.questions - WARNING -     Impact: MC questions may not have standard format
+2025-12-15 09:41:52,006 - src.generate.formats.questions - WARNING -     Recommendation: Ensure each MC question has exactly 4 options (A, B, C, D)
+2025-12-15 09:41:52,006 - src.generate.formats.questions - WARNING - Only 9 questions detected (expected 10) for Organisms and Processes (Session 4)
+2025-12-15 09:41:52,006 - src.generate.formats.questions - WARNING -   Critical issues detected, will retry: 1 issues
+2025-12-15 09:41:52,006 - src.generate.formats.questions - WARNING -   Retry attempt 1/1 for questions: Organisms and Processes (Session 4)
+2025-12-15 09:41:52,006 - src.generate.formats.questions - WARNING -   Smart retry system suggests skipping retry (low success rate)
+2025-12-15 09:41:52,008 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -   ✓ Session 4 completed
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - 
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - QUALITY SCORE SUMMARY
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - Average Quality Score: 96.3/100
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - Overall Quality: excellent
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - Quality Distribution: {'excellent': 4}
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - WARNING - Cross-session consistency: 1 issues found
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -   Recommendation: Move 1 basic concepts to earlier sessions
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - 
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - [ALL COMPLIANT] Primary Materials Generation - Summary ✅
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -   Items Processed: 4
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -     - [COMPLIANT] Successful: 4
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -     - [ERROR] Failed: 0
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - 
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -   Compliance Breakdown:
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -     - [COMPLIANT]: 4
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -     - [NEEDS REVIEW]: 0
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -     - [CRITICAL]: 0
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - 
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -   Issue Statistics:
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -     - Total Issues: 0
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -     - Critical Errors: 0
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -     - Warnings: 0
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - 
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -   Recommendations:
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -     - All content generated successfully
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO -     - No issues detected
+2025-12-15 09:41:52,010 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-15 09:41:52,010 - generate_primary - INFO - 
+================================================================================
+2025-12-15 09:41:52,010 - generate_primary - INFO - PRIMARY MATERIALS COMPLETE
+2025-12-15 09:41:52,010 - generate_primary - INFO - ================================================================================
+2025-12-15 09:41:52,010 - generate_primary - INFO - Total sessions processed: 4
+2025-12-15 09:41:52,010 - generate_primary - INFO - Successful: 4
+2025-12-15 09:41:52,010 - generate_primary - INFO - Failed: 0
+2025-12-15 09:41:52,010 - generate_primary - INFO - 
+================================================================================
+2025-12-15 09:41:52,010 - generate_primary - INFO - EXIT CODE: 0 (SUCCESS)
+2025-12-15 09:41:52,010 - generate_primary - INFO - ================================================================================
+2025-12-15 09:41:52,011 - generate_primary - INFO - All sessions processed successfully with no critical issues
+2025-12-15 09:41:52,011 - generate_primary - INFO - ================================================================================

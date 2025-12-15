@@ -1,0 +1,46 @@
+graph LR
+    subgraph Cell Membrane
+        A([Cell Membrane])
+        B(...) Transport Proteins
+        C(...) Phospholipids
+        D(...) Membrane Proteins
+        E(...) Cholesterol
+    end
+
+    subgraph Passive Transport
+        F([Diffusion]) --> G(...) Facilitated Diffusion
+        G --> H(...) Channel Proteins
+        G --> I(...) Carrier Proteins
+        H --> A
+        I --> A
+    end
+
+    subgraph Active Transport
+        J([Primary Active Transport]) --> K(...) ATPase
+        K --> L(...) Sodium/Potassium Gradient
+        L --> M(...) Coupled Transport
+        M --> N(...) ATP Utilization
+        N --> O(...) Proton Pump
+        O --> A
+    end
+
+    subgraph Vesicular Transport
+        P([Endocytosis]) --> Q(...) Phagocytosis
+        Q --> R(...) Membrane Invagination
+        R --> A
+        P --> S(...) Pinocytosis
+        S --> A
+    end
+
+    subgraph Feedback Loops
+        T([Signal Transduction]) --> U(...) G-Protein Coupling
+        U --> V(...) Second Messengers
+        V --> A
+    end
+
+    A --> W(...) Cellular Environment
+    W --> A
+    F --> A
+    J --> A
+    P --> A
+    T --> A

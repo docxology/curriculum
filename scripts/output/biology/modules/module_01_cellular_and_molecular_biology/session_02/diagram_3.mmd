@@ -1,0 +1,15 @@
+graph TD
+    A[DNA] --> B{Transcription}
+    B -- mRNA --> C[Translation]
+    C --> D[Protein Synthesis]
+    D --> E{Feedback - Protein Regulation}
+    E -- Activates Repressors --> B
+    B --> F[RNA Polymerase]
+    F --> B
+    C -- Ribosomes --> C
+    D -- tRNA --> D
+    E -- Epigenetic Modifications --> B
+    B -- Promoter Binding --> B
+    C -- Codon Recognition --> C
+    E -- Signaling Pathways --> B
+    subgraph DNA Processing

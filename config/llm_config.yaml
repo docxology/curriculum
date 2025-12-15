@@ -1,0 +1,1007 @@
+# LLM Configuration for Ollama
+
+llm:
+  provider: "ollama"
+  model: "gemma3:4b"
+  api_url: "http://localhost:11434/api/generate"
+  timeout: 180  # Base timeout for all LLM requests (stream timeout = 270s with 1.5x multiplier)
+  language: "English"  # Default language for course content generation
+  
+  # Operation-specific timeouts (overrides base timeout for specific operations)
+  # If not specified, uses base timeout above
+  operation_timeouts:
+    outline: 240  # Longer timeout for complex JSON outline generation
+    lecture: 180  # Standard timeout for lecture generation
+    lab: 150      # Slightly shorter for lab generation
+    study_notes: 120  # Shorter for study notes
+    diagram: 120  # Shorter for diagram generation
+    questions: 150  # Standard timeout for question generation
+    # Secondary materials timeouts
+    application: 150  # Real-world applications and case studies
+    extension: 120  # Advanced topics beyond core curriculum
+    visualization: 120  # Additional diagrams and concept maps
+    integration: 150  # Cross-module connections and synthesis
+    investigation: 150  # Research questions and experiments
+    open_questions: 150  # Current scientific debates and frontiers
+    default: 180  # Default timeout for operations not listed above
+  
+  # Generation parameters
+  parameters:
+    temperature: 0.7
+    top_p: 0.9
+    top_k: 40
+    num_ctx: 128000      # 128K context window (max capacity)
+    num_predict: 64000   # 64K max output tokens (128K context window allows up to 64K output)
+    repeat_penalty: 1.1
+
+# Outline generation configuration
+outline_generation:
+  # Configurable bounds for items per field (min-max)
+  items_per_field:
+    subtopics:
+      min: 3
+      max: 7
+    learning_objectives:
+      min: 3
+      max: 7
+    key_concepts:
+      min: 3
+      max: 7
+
+# Content generation requirements
+content_generation:
+  lecture:
+    min_examples: 5
+    max_examples: 15
+    min_sections: 4
+    max_sections: 8
+    min_word_count: 1000
+    max_word_count: 1500
+  study_notes:
+    min_key_concepts: 3
+    max_key_concepts: 10
+    max_word_count: 1200
+  diagrams_per_session: 4  # Number of diagrams to generate per session (default: 4)
+  # Secondary materials requirements
+  application:
+    min_applications: 3
+    max_applications: 5
+    min_words_per_application: 150
+    max_words_per_application: 200
+    max_total_words: 1000
+  extension:
+    min_topics: 3
+    max_topics: 4
+    min_words_per_topic: 100
+    max_words_per_topic: 150
+    max_total_words: 600
+  visualization:
+    # Mermaid validation handled separately via validate_mermaid_syntax()
+    min_diagram_elements: 6  # Increased to encourage larger, more comprehensive diagrams
+    min_nodes: 10  # Minimum nodes for comprehensive diagrams
+    min_connections: 8  # Minimum connections to show full relationships
+  integration:
+    min_connections: 3
+    max_total_words: 1000
+  investigation:
+    min_questions: 3
+    max_total_words: 1000
+  open_questions:
+    min_questions: 3
+    max_total_words: 1000
+    
+# Prompt templates for different content types
+prompts:
+  outline:
+    system: "You are an expert curriculum designer. Create a coherent, pedagogically sound course structure. Output ONLY valid JSON."
+    template: |
+      Design a {subject} course with EXACTLY {num_modules} modules and EXACTLY {total_sessions} total sessions.
+      
+      COURSE INFORMATION:
+      - Name: {course_name}
+      - Level: {course_level}
+      - Description: {course_description}
+      - Duration: {course_duration} weeks
+      - Constraints: {additional_constraints}
+      
+      REQUIREMENTS:
+      1. Generate appropriate topics and modules based on the course description and constraints
+      2. Create {num_modules} coherent modules that cover the course scope
+      3. Distribute {total_sessions} sessions across these modules (aim for ~{avg_sessions_per_module} per module)
+      4. Each module should have a clear focus and logical progression
+      5. Sessions within modules should build on each other
+      
+      JSON SCHEMA:
+      {{
+        "course_metadata": {{"name": "{course_name}", "level": "{course_level}", "duration_weeks": {course_duration}, "total_sessions": {total_sessions}, "total_modules": {num_modules}}},
+        "modules": [
+          {{
+            "module_id": 1,
+            "module_name": "Descriptive module title",
+            "module_description": "Brief overview of module scope",
+            "sessions": [
+              {{
+                "session_number": 1,
+                "session_title": "Specific session topic",
+                "subtopics": ["topic1", "topic2", ...],
+                "learning_objectives": ["objective1", "objective2", ...],
+                "key_concepts": ["concept1", "concept2", ...],
+                "rationale": "Why this session is important"
+              }}
+            ]
+          }}
+        ]
+      }}
+      
+      STRICT RULES:
+      1. EXACTLY {num_modules} modules
+      2. EXACTLY {total_sessions} sessions total (distribute evenly)
+      3. Each session: {min_subtopics}-{max_subtopics} subtopics, {min_objectives}-{max_objectives} objectives, {min_concepts}-{max_concepts} concepts
+      4. Ultra-concise text
+      5. Sequential numbering (sessions 1-{total_sessions} globally)
+      
+      OUTPUT: ONLY JSON (no ```json, no markdown, no explanation)
+      
+      Respond in {language} language
+      
+  lecture:
+    system: "You are an expert {subject} professor writing detailed lecture content for undergraduate students. You MUST strictly follow all numerical constraints. Failure to meet minimums will result in rejection."
+    template: |
+      ═══════════════════════════════════════════════════════════════
+      🔴 CRITICAL REQUIREMENTS
+      ═══════════════════════════════════════════════════════════════
+      
+      1. Word Count: {min_word_count}-{max_word_count} words
+      2. Examples: {min_examples}-{max_examples} concrete examples using "for example", "for instance", "such as", "consider", "imagine"
+      3. Sections: {min_sections}-{max_sections} major sections using ## headings (### subsections don't count)
+      4. Key Concepts: Address ALL concepts listed below explicitly
+      5. Technical Terms: Define on first use using **term**: definition format
+      
+      ═══════════════════════════════════════════════════════════════
+      CONTENT CONTEXT
+      ═══════════════════════════════════════════════════════════════
+      
+      Session {session_number} of {total_sessions} | Module: {module_name} | Title: {session_title}
+      
+      Course Context: {outline_context}
+      
+      Subtopics: {subtopics}
+      Learning Objectives: {objectives}
+      Key Concepts (address ALL): {key_concepts}
+      
+      ═══════════════════════════════════════════════════════════════
+      FORMAT SPECIFICATION
+      ═══════════════════════════════════════════════════════════════
+      
+      CORRECT EXAMPLE: "For example, the mitochondrial electron transport chain produces 32-34 ATP molecules per glucose molecule through oxidative phosphorylation."
+      WRONG EXAMPLE: "For example, mitochondria make energy." (too generic)
+      
+      CORRECT TERM: "**Mitochondria**: Double-membraned organelles responsible for ATP synthesis through cellular respiration."
+      WRONG TERM: "Mitochondria are organelles that make energy." (missing ** and :)
+      
+      CORRECT SECTIONS:
+      ## Introduction
+      ## Main Topic 1
+      ### Subsection 1.1 (doesn't count)
+      ## Main Topic 2
+      ## Summary
+      (5 major sections - meets minimum)
+      
+      ═══════════════════════════════════════════════════════════════
+      CONTENT STRUCTURE
+      ═══════════════════════════════════════════════════════════════
+      
+      - Begin with introduction connecting to prior knowledge
+      - Build concepts progressively (simple to complex)
+      - Include examples throughout (minimum {min_examples} required)
+      - Define technical terms on first use: **Term**: definition
+      - Use analogies to connect to familiar concepts
+      - Explicitly address each key concept from list above
+      - End with summary of key takeaways
+      - Use ## for major sections, ### for subsections
+      - Use bullet points for features, numbered lists for processes
+      - Include horizontal rules (---) between major sections
+      
+      ═══════════════════════════════════════════════════════════════
+      VERIFICATION (INTERNAL - DO NOT INCLUDE IN OUTPUT)
+      ═══════════════════════════════════════════════════════════════
+      
+      Before outputting, verify:
+      [ ] Word count: {min_word_count}-{max_word_count} words
+      [ ] Examples: {min_examples}-{max_examples} using example phrases
+      [ ] Sections: {min_sections}-{max_sections} major sections with ## headings
+      [ ] All key concepts explicitly addressed
+      [ ] All technical terms use **term**: format
+      [ ] NO word count statements, meta-commentary, or conversational phrases in output
+      
+      Write the complete lecture content:
+      
+      Respond in {language} language
+      
+  diagram:
+    system: "You are an expert at creating comprehensive, creative educational diagrams using Mermaid syntax. You MUST output ONLY pure Mermaid code - NO code fences or style commands. Output containing these will be REJECTED."
+    template: |
+      ═══════════════════════════════════════════════════════════════
+      🔴 CRITICAL FORMAT REQUIREMENT - READ FIRST
+      ═══════════════════════════════════════════════════════════════
+      
+      Your output will be REJECTED and require regeneration if it contains:
+      - ```mermaid code fences (opening or closing)
+      - style commands (style A fill:#...)
+      - classDef commands
+      - Any markdown formatting
+      - Explanatory text before or after diagram code
+      
+      ═══════════════════════════════════════════════════════════════
+      DIAGRAM SCOPE & SIZE
+      ═══════════════════════════════════════════════════════════════
+      
+      Create a COMPREHENSIVE Mermaid diagram to illustrate:
+      
+      Topic: {topic}
+      Context: {context}
+      
+      SIZE TARGETS:
+      - 15-30 nodes for comprehensive coverage (not just highlights)
+      - 12-25 connections showing full relationships
+      - Show complete processes with intermediate steps
+      - Include feedback loops, parallel pathways, decision points
+      - Show multiple relationship types (primary, secondary, feedback)
+      
+      ═══════════════════════════════════════════════════════════════
+      DIAGRAM TYPE SELECTION
+      ═══════════════════════════════════════════════════════════════
+      
+      Choose the MOST APPROPRIATE diagram type for this topic:
+      
+      - graph TD/LR: Hierarchical processes, workflows, concept hierarchies
+        Example: graph TD
+                 A[Start] --> B[Process 1]
+                 B --> C[Process 2]
+                 C --> D[End]
+      
+      - flowchart TD/LR: Modern flowcharts with decision points, loops
+        Example: flowchart TD
+                 Start([Start]) --> Decision{{Decision?}}
+                 Decision -->|Yes| Process1[Action 1]
+                 Decision -->|No| Process2[Action 2]
+      
+      - sequenceDiagram: Temporal processes, interactions over time
+        Example: sequenceDiagram
+                 participant A
+                 participant B
+                 A->>B: Message
+                 B-->>A: Response
+      
+      - classDiagram: Relationships between concepts, entities, components
+        Example: classDiagram
+                 class Concept1
+                 class Concept2
+                 Concept1 --> Concept2 : relates to
+      
+      - stateDiagram: State transitions, system states, lifecycles
+        Example: stateDiagram-v2
+                 [*] --> State1
+                 State1 --> State2
+                 State2 --> [*]
+      
+      VARIETY REQUIREMENT: Across the 4 diagrams in this session, use DIFFERENT diagram types. Vary layouts, perspectives, and approaches.
+      
+      ═══════════════════════════════════════════════════════════════
+      CREATIVITY & COMPREHENSIVENESS
+      ═══════════════════════════════════════════════════════════════
+      
+      Make this diagram COMPREHENSIVE and CREATIVE:
+      
+      - Show ALL key components and relationships, not just primary pathways
+      - Include intermediate steps and substeps
+      - Show bidirectional relationships when applicable
+      - Include context and environment where relevant
+      - Use different node shapes for variety:
+        * [...] for processes/actions
+        * (...) for concepts/entities
+        * {{...}} for decisions/conditions
+        * ([...]) for start/end points
+        * [[...]] for subprocesses
+      
+      - Use varied connection styles:
+        * --> for primary relationships
+        * ==> for critical pathways
+        * -.-> for optional/conditional
+        * -->|label| for labeled relationships
+      
+      - Include feedback loops, parallel pathways, decision points
+      - Show multiple levels: high-level overview + detailed components
+      - Make it visually interesting with varied layouts (not just linear)
+      
+      ═══════════════════════════════════════════════════════════════
+      COMPREHENSIVE COVERAGE REQUIREMENTS
+      ═══════════════════════════════════════════════════════════════
+      
+      Your diagram MUST show:
+      - Complete processes from start to finish (not just highlights)
+      - All major components and their relationships
+      - Intermediate steps and substeps
+      - Feedback mechanisms and loops where applicable
+      - Parallel or alternative pathways
+      - Context and environment when relevant
+      - Multiple relationship types (direct, indirect, feedback)
+      
+      Think comprehensively: What would a student need to see to fully understand this topic?
+      
+      ═══════════════════════════════════════════════════════════════
+      FORMAT EXAMPLES
+      ═══════════════════════════════════════════════════════════════
+      
+      CORRECT (DO THIS - WILL BE ACCEPTED):
+      flowchart TD
+          Start([Start]) --> Step1[Initial Process]
+          Step1 --> Decision{{Check Condition}}
+          Decision -->|Yes| Step2A[Path A]
+          Decision -->|No| Step2B[Path B]
+          Step2A --> Step3[Continue]
+          Step2B --> Step3
+          Step3 --> Feedback[Feedback Loop]
+          Feedback -.-> Step1
+          Step3 --> End([End])
+      
+      REJECTED EXAMPLES (DO NOT DO THIS):
+      
+      Example 1 - REJECTED (has code fences):
+      ```mermaid
+      graph TD
+          A --> B
+      ```
+      ✗ REJECTED: Contains ```mermaid code fences
+      
+      Example 2 - REJECTED (has style command):
+      graph TD
+          A --> B
+          style A fill:#f9f,stroke:#333
+      ✗ REJECTED: Contains style command
+      
+      Example 3 - REJECTED (too simple, not comprehensive):
+      graph TD
+          A[Start] --> B[End]
+      ✗ REJECTED: Too simple - needs 15-30 nodes showing comprehensive relationships
+      
+      ═══════════════════════════════════════════════════════════════
+      VERIFICATION CHECKLIST (BEFORE OUTPUT)
+      ═══════════════════════════════════════════════════════════════
+      
+      [ ] Output starts with diagram type declaration (NO ```mermaid)
+      [ ] Output ends with last diagram line (NO closing ```)
+      [ ] NO style commands anywhere (search for "style ")
+      [ ] NO classDef commands anywhere (search for "classDef")
+      [ ] NO explanatory text before or after
+      [ ] Pure Mermaid syntax only
+      [ ] 15-30 nodes for comprehensive coverage
+      [ ] 12-25 connections showing full relationships
+      [ ] Includes feedback loops, parallel pathways, or decision points
+      [ ] Shows complete process, not just highlights
+      
+      ═══════════════════════════════════════════════════════════════
+      
+      Generate comprehensive diagram code (ONLY the Mermaid syntax, nothing else):
+      
+      Respond in {language} language
+      
+  questions:
+    system: "You are an expert {subject} educator creating comprehensive assessments spanning recall, understanding, and application."
+    template: |
+      ═══════════════════════════════════════════════════════════════
+      🔴 CRITICAL REQUIREMENTS (NON-NEGOTIABLE)
+      ═══════════════════════════════════════════════════════════════
+      
+      1. EVERY question text MUST end with "?" (exactly {num_questions} question marks)
+      2. EVERY MC question MUST have exactly 4 options: A), B), C), D)
+      3. EVERY MC question MUST include **Explanation:** (20-50 words, 2-3 sentences)
+      4. Format: **Question N:** [text?] (colon after number, question mark at end)
+      5. Distribution: {mc_count} MC, {sa_count} SA, {essay_count} Essay
+      
+      ═══════════════════════════════════════════════════════════════
+      CONTENT CONTEXT
+      ═══════════════════════════════════════════════════════════════
+      
+      Module: {module_name}
+      Subtopics: {subtopics}
+      Learning Objectives: {objectives}
+      
+      Lecture Summary: {lecture_summary}
+      Lab Summary: {lab_summary}
+      
+      ═══════════════════════════════════════════════════════════════
+      FORMAT SPECIFICATION
+      ═══════════════════════════════════════════════════════════════
+      
+      CORRECT FORMAT (MUST USE):
+      
+      **Question 1:** What is the primary function of mitochondria?
+      A) Protein synthesis
+      B) ATP production
+      C) DNA storage
+      D) Waste removal
+      **Answer:** B
+      **Explanation:** Mitochondria are the powerhouses of the cell, producing ATP through cellular respiration. They contain the electron transport chain and ATP synthase complexes that generate energy from glucose breakdown.
+      
+      **Question 2:** Explain the difference between prokaryotic and eukaryotic cells?
+      **Answer:** Prokaryotic cells lack a membrane-bound nucleus and organelles, while eukaryotic cells have both. Prokaryotes are generally smaller and simpler in structure.
+      
+      FORMAT RULES:
+      - Use **Question N:** format (colon after number) - NOT "Question 1" or "## Question 1"
+      - End every question with "?"
+      - MC: Include exactly 4 options (A, B, C, D), **Answer:**, and **Explanation:** (20-50 words)
+      - SA/Essay: Include **Answer:** section
+      - NO meta-commentary, verification sections, or word count statements in output
+      
+      ═══════════════════════════════════════════════════════════════
+      CONTENT REQUIREMENTS
+      ═══════════════════════════════════════════════════════════════
+      
+      Multiple Choice ({mc_count} questions):
+      - Clear question stem ending with "?"
+      - Exactly 4 options of similar length
+      - One correct answer, 3 plausible distractors
+      - **Explanation:** section (20-50 words) explaining why answer is correct
+      
+      Short Answer ({sa_count} questions):
+      - Question ending with "?"
+      - Requires 2-4 sentence response
+      - **Answer:** with model answer and key points
+      
+      Essay ({essay_count} questions):
+      - Question ending with "?"
+      - Requires synthesis of multiple concepts
+      - **Answer:** with rubric or key elements
+      
+      Content Distribution:
+      - 50% reference lab procedures/observations
+      - 30% connect to real-world applications
+      - 20% integrate across topics
+      
+      ═══════════════════════════════════════════════════════════════
+      VERIFICATION (INTERNAL - DO NOT INCLUDE IN OUTPUT)
+      ═══════════════════════════════════════════════════════════════
+      
+      Before outputting, verify:
+      [ ] Exactly {num_questions} questions, each ending with "?"
+      [ ] All use **Question N:** format
+      [ ] {mc_count} MC questions with exactly 4 options each
+      [ ] All MC questions have **Explanation:** sections (20-50 words)
+      [ ] All questions have **Answer:** sections
+      [ ] NO verification sections, word counts, or meta-commentary in output
+      
+      Generate the complete question set:
+      
+      Respond in {language} language
+      
+  study_notes:
+    system: "You are an expert {subject} educator creating study materials. You MUST strictly follow all numerical constraints. Exceeding maximums or falling below minimums will result in rejection."
+    template: |
+      ═══════════════════════════════════════════════════════════════
+      🔴 CRITICAL REQUIREMENTS
+      ═══════════════════════════════════════════════════════════════
+      
+      1. Key Concepts: EXACTLY {min_key_concepts} to {max_key_concepts} concepts using **Concept Name**: format
+      2. Word Count: Maximum {max_word_count} words (target: 800-1000)
+      3. Format: Each concept MUST use **Concept Name**: definition (colon after bold name)
+      
+      ═══════════════════════════════════════════════════════════════
+      CONTENT CONTEXT
+      ═══════════════════════════════════════════════════════════════
+      
+      Module: {module_name}
+      Topics: {subtopics}
+      Learning Objectives: {objectives}
+      Key Concepts to Highlight: {key_concepts}
+      
+      Lecture Summary: {lecture_summary}
+      
+      ═══════════════════════════════════════════════════════════════
+      FORMAT SPECIFICATION
+      ═══════════════════════════════════════════════════════════════
+      
+      CORRECT FORMAT (under "## Key Concepts" section):
+      - **ATP**: Adenosine triphosphate, the primary energy currency of cells
+      - **Glycolysis**: Ten-step metabolic pathway that converts glucose to pyruvate, producing 2 ATP molecules
+      - **Mitochondrial Matrix**: Inner compartment where the citric acid cycle occurs
+      
+      WRONG FORMATS (will NOT be detected):
+      - ATP is the energy currency (missing ** and :)
+      - ATP - energy molecule (using - instead of :)
+      - ATP: energy molecule (missing ** around name)
+      
+      ═══════════════════════════════════════════════════════════════
+      CONTENT REQUIREMENTS
+      ═══════════════════════════════════════════════════════════════
+      
+      - Select {min_key_concepts} to {max_key_concepts} most important concepts from the list above
+      - If list has more than {max_key_concepts}, select only the {max_key_concepts} most important
+      - If list has fewer than {min_key_concepts}, add concepts from lecture content
+      - Each concept uses **Concept Name**: definition format
+      - Summarize additional points in bullet format
+      - Define terms using **term**: definition format
+      - Include mnemonics or memory aids where helpful
+      - Use structured markdown with headers and bullets
+      
+      ═══════════════════════════════════════════════════════════════
+      VERIFICATION (INTERNAL - DO NOT INCLUDE IN OUTPUT)
+      ═══════════════════════════════════════════════════════════════
+      
+      Before outputting, verify:
+      [ ] Exactly {min_key_concepts} to {max_key_concepts} **Concept Name**: formatted items
+      [ ] Word count under {max_word_count} words
+      [ ] All concepts use **Name**: format (not - or other formats)
+      [ ] NO word count statements, meta-commentary, or conversational phrases in output
+      
+      Write the complete study notes:
+      
+      Respond in {language} language
+      
+  lab:
+    system: "You are an expert {subject} educator designing laboratory exercises. Focus on practical procedures, safety, and clear data collection."
+    template: |
+      Related Lecture Content (for context):
+      {lecture_summary}
+      
+      Design a hands-on laboratory exercise:
+      
+      Module: {module_name}
+      Lab Number: {lab_number}
+      Lab Focus: {lab_focus}
+      
+      Related Topics:
+      {subtopics}
+      
+      Learning Objectives:
+      {objectives}
+      
+      STRUCTURE REQUIREMENTS (in this order):
+      1. Brief background (50-100 words connecting to lecture)
+      2. Lab objectives (3-5 bullet points with action verbs)
+      3. Materials and Equipment (organized by category)
+      4. Safety Considerations (⚠️ warnings with specific hazards)
+      5. Procedure (numbered steps with clear action verbs)
+      6. Data Collection (include markdown table template for observations)
+      7. Analysis Questions (3-5 questions connecting observations to concepts)
+      8. Expected Results (what students should observe and why)
+      
+      SAFETY REQUIREMENTS:
+      - List specific hazards (chemical, biological, physical)
+      - Specify PPE requirements (not just "wear goggles")
+      - Include time-sensitive steps if applicable
+      
+      FORMATTING RULES:
+      - Output ONLY the lab content - NO meta-commentary
+      - NO conversational phrases
+      - Use generic placeholders: "[INSTRUCTOR]" for instructor notes
+      - Include specific quantities, temperatures, times (not "some" or "a bit")
+      - Write professional content suitable for direct use
+      
+      Design the complete laboratory exercise:
+      
+      Respond in {language} language
+      
+  # Secondary materials (session-level synthesis)
+  secondary_application:
+    system: "You are an expert {subject} educator creating real-world applications."
+    template: |
+      Based on the complete session content below, create 3-5 real-world applications.
+      
+      SESSION CONTENT:
+      {session_content}
+      
+      OUTLINE CONTEXT:
+      {outline}
+      
+      Requirements:
+      - Each application: 150-200 words
+      - Focus on current research, medical applications, or environmental impact
+      - Include specific examples and real-world scenarios
+      - Use markdown formatting with clear headings (## Application 1, etc.)
+      
+      CRITICAL FORMATTING RULES:
+      - NO conversational artifacts or meta-commentary
+      - NO phrases like "Okay, here's...", "Would you like...", "Here are...", "Below are...", "are 5 real-world applications..."
+      - Content must start directly with the first application heading (## Application 1:)
+      - NO word count statements - DO NOT include: "(Word Count: 187)", "(187 words)", "Word Count: 187", "187 words", or any variation
+      - NO invented citations - DO NOT create fake journal names, publication dates, author names, or specific research citations
+      - Write professional content suitable for direct use
+      - Maintain consistent formatting throughout
+      
+      ═══════════════════════════════════════════════════════════════
+      DO NOT INCLUDE IN OUTPUT:
+      ═══════════════════════════════════════════════════════════════
+      
+      ❌ Conversational starts: "are 5 real-world applications", "Here are", "Below are", "Okay, here's"
+      ❌ Word count variations: "(Word Count: 187)", "(187 words)", "Word Count: 187", etc.
+      ❌ Invented citations: "*Journal Name* (2023)", "Research published in...", fake author names
+      ❌ Meta-commentary: "adhering to the specified formatting", "based on the provided session content"
+      
+      ✅ CORRECT START: Content begins immediately with "## Application 1: [Title]"
+      
+      Respond in {language} language
+  
+  secondary_extension:
+    system: "You are an expert {subject} educator creating extension materials for advanced study. You MUST strictly follow format requirements."
+    template: |
+      ═══════════════════════════════════════════════════════════════
+      🔴 CRITICAL FORMAT REQUIREMENT - READ FIRST
+      ═══════════════════════════════════════════════════════════════
+      
+      You MUST use EXACT format: ## Topic 1: Title (not **1. Title** or other formats)
+      Your output will be REJECTED if topics are not formatted as ## Topic N: headings
+      
+      ═══════════════════════════════════════════════════════════════
+      
+      Based on the session content below, create extension materials for advanced students.
+      
+      SESSION CONTENT:
+      {session_content}
+      
+      ═══════════════════════════════════════════════════════════════
+      REQUIREMENTS:
+      ═══════════════════════════════════════════════════════════════
+      
+      - Create EXACTLY 3-4 advanced topics
+      - Each topic: 100-150 words (target length)
+      - Discuss current research directions and emerging areas
+      - Suggest further reading or investigation paths
+      - DO NOT invent specific journal citations, publication dates, author names, or fake research references
+      
+      ═══════════════════════════════════════════════════════════════
+      FORMAT SPECIFICATION (MANDATORY):
+      ═══════════════════════════════════════════════════════════════
+      
+      CORRECT FORMAT (DO THIS):
+      ## Topic 1: Advanced Topic Title
+      Content for topic 1 (100-150 words)...
+      
+      ## Topic 2: Another Advanced Topic
+      Content for topic 2 (100-150 words)...
+      
+      ## Topic 3: Third Advanced Topic
+      Content for topic 3 (100-150 words)...
+      
+      WRONG FORMATS (DO NOT USE):
+      **1. Topic Title** (missing ## and colon)
+      ### Topic 1 (wrong heading level)
+      Topic 1: Title (missing ##)
+      
+      ═══════════════════════════════════════════════════════════════
+      VERIFICATION CHECKLIST (BEFORE OUTPUT):
+      ═══════════════════════════════════════════════════════════════
+      
+      [ ] Verify you have 3-4 ## Topic N: headings
+      [ ] Each topic section is approximately 100-150 words
+      [ ] No conversational artifacts or meta-commentary
+      [ ] All topics use EXACT format: ## Topic N: Title
+      [ ] NO word count statements in output - we calculate this automatically
+      
+      ═══════════════════════════════════════════════════════════════
+      
+      CRITICAL FORMATTING RULES:
+      - NO conversational artifacts
+      - NO word count statements - DO NOT include: "(Word Count: 150)", "(150 words)", "Word Count: 150", or any variation
+      - NO invented citations - DO NOT create fake journal names (e.g., "*Journal Name* (2023)"), publication dates, author names, or specific research citations
+      - Content must start directly with the first topic heading (## Topic 1:)
+      - Write professional content suitable for direct use
+      - Use EXACT format: ## Topic 1:, ## Topic 2:, ## Topic 3:, etc.
+      
+      ═══════════════════════════════════════════════════════════════
+      DO NOT INCLUDE IN OUTPUT:
+      ═══════════════════════════════════════════════════════════════
+      
+      ❌ Word count variations: "(Word Count: 150)", "(150 words)", "Word Count: 150", etc.
+      ❌ Invented citations: "*Journal Name* (2023)", "Research published in...", "Gomper, J., et al. (2011)", fake author names
+      ❌ Conversational starts: "Here are", "Below are", "Okay, here's"
+      ❌ Reference format: "(Reference: Author et al. 'Title.' *Journal* Year)" - DO NOT include specific citations
+      
+      ✅ CORRECT: Discuss research directions generally (e.g., "Recent research suggests...", "Current investigations focus on...")
+      ✅ CORRECT START: Content begins immediately with "## Topic 1: [Title]"
+      
+      Respond in {language} language
+  
+  secondary_visualization:
+    system: "You are an expert at creating educational diagrams using Mermaid syntax. You MUST output ONLY pure Mermaid code - NO code fences or style commands."
+    template: |
+      ═══════════════════════════════════════════════════════════════
+      🔴 CRITICAL FORMAT REQUIREMENT - READ FIRST
+      ═══════════════════════════════════════════════════════════════
+      
+      Your output will be REJECTED and require regeneration if it contains:
+      - ```mermaid code fences
+      - style commands (style A fill:#...)
+      - classDef commands
+      - Any markdown formatting
+      - Explanatory text before or after diagram code
+      
+      ═══════════════════════════════════════════════════════════════
+      
+      Create a comprehensive Mermaid diagram that synthesizes the session content.
+      
+      SESSION CONTENT:
+      {session_content}
+      
+      ═══════════════════════════════════════════════════════════════
+      REQUIREMENTS:
+      ═══════════════════════════════════════════════════════════════
+      
+      - Create a concept map or flowchart showing relationships between key concepts
+      - Use appropriate Mermaid diagram type (graph TD, graph LR, etc.)
+      - Include all major concepts from the session
+      - Keep node text concise (< 40 characters)
+      
+      ═══════════════════════════════════════════════════════════════
+      FORMAT SPECIFICATION (MANDATORY):
+      ═══════════════════════════════════════════════════════════════
+      
+      CORRECT FORMAT (DO THIS):
+      graph TD
+          A[Concept1] --> B[Concept2]
+          B --> C[Concept3]
+          C --> D[Concept4]
+      
+      WRONG FORMATS (DO NOT USE - WILL BE REJECTED):
+      ```mermaid
+      graph TD
+          A --> B
+      ```
+      (REJECTED: contains code fences)
+      
+      graph TD
+          A --> B
+          style A fill:#f9f
+      (REJECTED: contains style command)
+      
+      Here's a diagram:
+      graph TD
+          A --> B
+      (REJECTED: contains explanatory text)
+      
+      ═══════════════════════════════════════════════════════════════
+      VERIFICATION CHECKLIST (BEFORE OUTPUT):
+      ═══════════════════════════════════════════════════════════════
+      
+      [ ] Output starts with "graph TD" or "graph LR" (no ```mermaid)
+      [ ] Output ends with last diagram line (no closing ```)
+      [ ] NO style commands anywhere
+      [ ] NO classDef commands anywhere
+      [ ] NO explanatory text before or after
+      [ ] Pure Mermaid syntax only
+      
+      ═══════════════════════════════════════════════════════════════
+      
+      CRITICAL FORMATTING RULES:
+      - Output ONLY valid Mermaid code - NO markdown, NO fences, NO styles
+      - Start directly with "graph TD" or "graph LR"
+      - End with the last diagram line
+      - NO explanatory text before or after the diagram code
+      
+      Respond in {language} language
+  
+  secondary_integration:
+    system: "You are an expert {subject} educator showing connections across topics. You MUST explicitly reference other modules."
+    template: |
+      ═══════════════════════════════════════════════════════════════
+      🔴 CRITICAL REQUIREMENT - READ FIRST
+      ═══════════════════════════════════════════════════════════════
+      
+      You MUST explicitly reference other modules using phrases like:
+      - "Module N" or "module N"
+      - "connects to Module N"
+      - "relates to Module N"
+      - "builds on Module N"
+      - "extends Module N"
+      
+      Your output will be REJECTED if it has fewer than 3 explicit module references
+      
+      ═══════════════════════════════════════════════════════════════
+      
+      Create integration notes showing how this session connects to other {subject} concepts.
+      
+      SESSION CONTENT:
+      {session_content}
+      
+      ═══════════════════════════════════════════════════════════════
+      REQUIREMENTS:
+      ═══════════════════════════════════════════════════════════════
+      
+      - Identify at least 3 connections to other modules/topics
+      - Explain how concepts integrate with broader {subject} principles
+      - Each connection: 75-100 words
+      - Use explicit module references (see format examples below)
+      
+      ═══════════════════════════════════════════════════════════════
+      FORMAT EXAMPLES (MANDATORY):
+      ═══════════════════════════════════════════════════════════════
+      
+      CORRECT (with explicit references):
+      This session's focus on cell structure connects to Module 2's exploration of genetics, as DNA replication occurs within the nucleus. The concepts also relate to Module 3's discussion of evolution, since organelle origins reflect evolutionary processes.
+      
+      This topic builds on Module 1's foundation and extends to Module 4's application of these principles in physiological systems.
+      
+      WRONG (vague references):
+      This connects to genetics and evolution. (too vague, no "Module N")
+      Related topics include cellular processes. (no explicit module reference)
+      
+      ═══════════════════════════════════════════════════════════════
+      VERIFICATION CHECKLIST (BEFORE OUTPUT):
+      ═══════════════════════════════════════════════════════════════
+      
+      [ ] Count explicit "Module N" references - must have at least 3
+      [ ] Count phrases like "connects to", "relates to", "builds on" - should have multiple
+      [ ] Each connection explains integration clearly (75-100 words)
+      [ ] No conversational artifacts or meta-commentary
+      [ ] Content starts directly with substantive content (no introductory phrases)
+      
+      ═══════════════════════════════════════════════════════════════
+      
+      CRITICAL FORMATTING RULES:
+      - NO conversational artifacts - DO NOT start with "Okay, here's", "Here is", "Below is", "Here's an integrated", etc.
+      - Content must start directly with substantive content about the session and its connections
+      - NO decorative separators (like ════) in the output - these are only for prompt formatting
+      - NO word count statements - DO NOT include: "(Word Count: X)", "(X words)", "Word Count: X", or any variation
+      - Write professional content suitable for direct use
+      - Explicitly reference other modules using "Module N" format
+      
+      ═══════════════════════════════════════════════════════════════
+      DO NOT INCLUDE IN OUTPUT:
+      ═══════════════════════════════════════════════════════════════
+      
+      ❌ Conversational starts: "Okay, here's an integrated session notes document", "Here is", "Below is"
+      ❌ Word count variations: "(Word Count: 1000)", "(1000 words)", "Word Count: 1000", etc.
+      ❌ Decorative separators: "═══════════════════════════════════════════════════════════════"
+      ❌ Meta-commentary: "meeting all the specified requirements", "adhering to the specified formatting"
+      
+      ✅ CORRECT START: Content begins immediately with substantive text about the session (e.g., "This session's focus on...", "The concepts covered in this session...")
+      
+      Respond in {language} language
+  
+  secondary_investigation:
+    system: "You are an expert {subject} educator designing research activities. You MUST strictly follow format requirements."
+    template: |
+      ═══════════════════════════════════════════════════════════════
+      🔴 CRITICAL FORMAT REQUIREMENT - READ FIRST
+      ═══════════════════════════════════════════════════════════════
+      
+      You MUST use EXACT format: ## Research Question 1: Title
+      Questions must be section headings, NOT embedded in prose
+      Your output will be REJECTED if questions are not formatted as ## Research Question N: headings
+      
+      ═══════════════════════════════════════════════════════════════
+      
+      Design 3 investigation activities for students to explore session concepts further.
+      
+      SESSION CONTENT:
+      {session_content}
+      
+      ═══════════════════════════════════════════════════════════════
+      REQUIREMENTS:
+      ═══════════════════════════════════════════════════════════════
+      
+      - Create EXACTLY 3 research questions
+      - Each investigation: 150-200 words (target length)
+      - Include research question, methodology, and expected outcomes
+      - Make activities feasible for undergraduate students
+      
+      ═══════════════════════════════════════════════════════════════
+      FORMAT SPECIFICATION (MANDATORY):
+      ═══════════════════════════════════════════════════════════════
+      
+      CORRECT FORMAT (DO THIS):
+      ## Research Question 1: How does X relate to Y?
+      Methodology: [description]
+      Expected Outcomes: [description]
+      (150-200 words total)
+      
+      ## Research Question 2: What is the effect of Z?
+      Methodology: [description]
+      Expected Outcomes: [description]
+      (150-200 words total)
+      
+      ## Research Question 3: How can we measure W?
+      Methodology: [description]
+      Expected Outcomes: [description]
+      (150-200 words total)
+      
+      WRONG FORMATS (DO NOT USE):
+      **Research Question:** How does X work? (not a heading)
+      Research Question 1: How does X work? (missing ##)
+      ### Research Question 1 (wrong heading level)
+      
+      ═══════════════════════════════════════════════════════════════
+      VERIFICATION CHECKLIST (BEFORE OUTPUT):
+      ═══════════════════════════════════════════════════════════════
+      
+      [ ] Verify you have 3 ## Research Question N: headings
+      [ ] Each investigation is approximately 150-200 words
+      [ ] Questions are section headings, not embedded in prose
+      [ ] No conversational artifacts or meta-commentary
+      [ ] NO word count statements in output - we calculate this automatically
+      
+      ═══════════════════════════════════════════════════════════════
+      
+      CRITICAL FORMATTING RULES:
+      - NO conversational artifacts
+      - NO word count statements (e.g., "Word Count: X words") - we calculate this automatically
+      - Write professional content suitable for direct use
+      - Use EXACT format: ## Research Question 1:, ## Research Question 2:, etc.
+      
+      Respond in {language} language
+  
+  secondary_open_questions:
+    system: "You are an expert {subject} educator identifying cutting-edge research questions. You MUST strictly follow format requirements."
+    template: |
+      ═══════════════════════════════════════════════════════════════
+      🔴 CRITICAL FORMAT REQUIREMENT - READ FIRST
+      ═══════════════════════════════════════════════════════════════
+      
+      You MUST use EXACT format: ## Open Question 1: Title
+      Questions must be section headings, NOT embedded in prose
+      Your output will be REJECTED if questions are not formatted as ## Open Question N: headings
+      
+      ═══════════════════════════════════════════════════════════════
+      
+      Identify 3 open questions in {subject} related to this session's content.
+      
+      SESSION CONTENT:
+      {session_content}
+      
+      ═══════════════════════════════════════════════════════════════
+      REQUIREMENTS:
+      ═══════════════════════════════════════════════════════════════
+      
+      - Create EXACTLY 3 open questions
+      - Each question should represent current research frontiers
+      - Provide brief context (50-75 words) for why the question is important
+      - Cite the type of research being conducted (if applicable)
+      
+      ═══════════════════════════════════════════════════════════════
+      FORMAT SPECIFICATION (MANDATORY):
+      ═══════════════════════════════════════════════════════════════
+      
+      CORRECT FORMAT (DO THIS):
+      ## Open Question 1: What is the mechanism of X?
+      Context explaining why this question is important (50-75 words)...
+      Current research: [type of research being conducted]
+      
+      ## Open Question 2: How does Y affect Z?
+      Context explaining why this question is important (50-75 words)...
+      Current research: [type of research being conducted]
+      
+      ## Open Question 3: What are the implications of W?
+      Context explaining why this question is important (50-75 words)...
+      Current research: [type of research being conducted]
+      
+      WRONG FORMATS (DO NOT USE):
+      **Open Question:** What is X? (not a heading)
+      Open Question 1: What is X? (missing ##)
+      ### Open Question 1 (wrong heading level)
+      
+      ═══════════════════════════════════════════════════════════════
+      VERIFICATION CHECKLIST (BEFORE OUTPUT):
+      ═══════════════════════════════════════════════════════════════
+      
+      [ ] Verify you have 3 ## Open Question N: headings
+      [ ] Each question has context (approximately 50-75 words)
+      [ ] Questions are section headings, not embedded in prose
+      [ ] No conversational artifacts or meta-commentary
+      [ ] NO word count statements in output - we calculate this automatically
+      
+      ═══════════════════════════════════════════════════════════════
+      
+      CRITICAL FORMATTING RULES:
+      - NO conversational artifacts
+      - NO word count statements (e.g., "Word Count: X words") - we calculate this automatically
+      - Write professional content suitable for direct use
+      - Use EXACT format: ## Open Question 1:, ## Open Question 2:, etc.
+      
+      Respond in {language} language
+
+# Retry configuration
+retry:
+  max_attempts: 3
+  backoff_factor: 2
+  initial_delay: 1
+

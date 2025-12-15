@@ -1,0 +1,115 @@
+{
+  "course_metadata": {
+    "name": "Introductory Biology",
+    "level": "Undergraduate Introductory",
+    "duration_weeks": "Not specified",
+    "total_sessions": 4,
+    "total_modules": 2,
+    "course_template": "biology",
+    "quality_score": 100.0,
+    "quality_level": "excellent",
+    "quality_validation": {
+      "overlap_count": 0,
+      "progression_issue_count": 0,
+      "balance_issue_count": 0
+    }
+  },
+  "modules": [
+    {
+      "module_id": 1,
+      "module_name": "Cellular and Molecular Biology",
+      "module_description": "Introduction to cell structure, function, and molecular processes.",
+      "sessions": [
+        {
+          "session_number": 1,
+          "session_title": "Cell Structure & Function",
+          "subtopics": [
+            "Prokaryotic vs. Eukaryotic Cells",
+            "Cell Organelles (overview)",
+            "Cell Membrane Structure & Transport",
+            "Cell Wall Composition"
+          ],
+          "learning_objectives": [
+            "Identify key differences between prokaryotic and eukaryotic cells.",
+            "Describe the function of major cell organelles.",
+            "Explain the mechanisms of passive and active transport."
+          ],
+          "key_concepts": [
+            "Cell theory",
+            "Membrane potential",
+            "Osmosis"
+          ],
+          "rationale": "Establishes foundational cell biology concepts."
+        },
+        {
+          "session_number": 2,
+          "session_title": "DNA & Protein Structure",
+          "subtopics": [
+            "DNA Structure & Replication",
+            "Protein Structure (primary, secondary, tertiary)",
+            "Central Dogma of Molecular Biology"
+          ],
+          "learning_objectives": [
+            "Describe the structure of DNA.",
+            "Explain the concept of protein structure.",
+            "Outline the flow of genetic information."
+          ],
+          "key_concepts": [
+            "Base pairing",
+            "Amino acids",
+            "Transcription & Translation"
+          ],
+          "rationale": "Introduces core molecular biological processes."
+        }
+      ]
+    },
+    {
+      "module_id": 2,
+      "module_name": "Organisms and Processes",
+      "module_description": "Exploration of biological diversity, energy transformations, and homeostasis.",
+      "sessions": [
+        {
+          "session_number": 3,
+          "session_title": "Cellular Respiration & Photosynthesis",
+          "subtopics": [
+            "Glycolysis",
+            "Krebs Cycle",
+            "Electron Transport Chain",
+            "Photosynthesis (light & dark reactions)"
+          ],
+          "learning_objectives": [
+            "Describe the steps of cellular respiration.",
+            "Explain the process of photosynthesis.",
+            "Relate energy flow to metabolic pathways"
+          ],
+          "key_concepts": [
+            "ATP production",
+            "Redox reactions",
+            "Light absorption"
+          ],
+          "rationale": "Covers essential energy transformation processes."
+        },
+        {
+          "session_number": 4,
+          "session_title": "Homeostasis & Biodiversity",
+          "subtopics": [
+            "Feedback Mechanisms",
+            "Ecological Interactions (symbiosis, competition)",
+            "Basic Biodiversity Concepts"
+          ],
+          "learning_objectives": [
+            "Explain the concept of homeostasis.",
+            "Describe ecological relationships.",
+            "Understand the diversity of life"
+          ],
+          "key_concepts": [
+            "Thermoregulation",
+            "Population dynamics",
+            "Species interactions"
+          ],
+          "rationale": "Introduces biological regulation and diverse life forms."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+graph TD
+    A([Organism]) -- Homeostasis --> B{Sensor}
+    B -- Detects Change --> C{Control Center}
+    C -- Analyzes Data --> D{Effector}
+    D -- Triggers Response --> E(Physiological Change)
+    E -- Alters Internal State --> F{Feedback Loop}
+    F -- Detects Change --> B
+    C ==> E
+    B -- Receives Input --> G{External Environment}
+    G -- Impacts Organism --> E
+    E -- Influences Control --> C
+    C -- Modifies Effector --> D
+    D -- Sends Signal --> E
+    E -- Alters State --> F
+    F -- Completes Loop --> B
+    B -- Continues Monitoring --> F
+    subgraph Biodiversity
+        H((Species 1)) -- Competition --> I((Species 2))
+        I -- Predation --> J((Apex Predator))
+        J -- Impacts Ecosystem --> H
+    end

@@ -1,0 +1,31 @@
+graph LR
+    A([Start: Light Absorption])
+    B((Chloroplast))
+    C([Light-Dependent Reactions])
+    D([Water Splitting])
+    E((Oxygen Released))
+    F([ATP & NADPH Production])
+    G((Dark Reactions / Calvin Cycle))
+    H([CO2 Fixation])
+    I((Glucose Synthesis))
+    J([ATP & NADPH Utilization])
+    K([Feedback Loop: ATP/NADPH to Light Reactions])
+    L([RuBP Regeneration])
+    M([CO2 Intake])
+    N((Glucose Output))
+    O([End: Stored Glucose])
+    A --> C
+    C --> D
+    D --> E
+    C --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    J --> K
+    K --> C
+    G --> L
+    L --> G
+    M --> G
+    N --> O
+    O --> A

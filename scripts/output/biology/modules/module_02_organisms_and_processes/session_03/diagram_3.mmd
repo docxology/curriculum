@@ -1,0 +1,23 @@
+graph TD
+    A([Start]) --> B{Glycolysis};
+    B --> C{Krebs Cycle};
+    C --> D{Electron Transport Chain};
+    D --> E{ATP Synthase};
+    E --> F{Oxidative Phosphorylation};
+    F --> G{ATP Production};
+    B --> H{Pyruvate Formation};
+    H --> I{Acetyl-CoA Formation};
+    I --> C;
+    C --> J{NADH & FADH2 Production};
+    J --> D;
+    D --> K{Proton Gradient};
+    K --> L{ATP Synthase Activation};
+    L --> E;
+    D --> M{Proton Leakage};
+    M --> K;
+    B --> N{Anaerobic Glycolysis};
+    N --> O{Lactic Acid Production};
+    O --> B;
+    subgraph Anaerobic Pathway
+        N --> O;
+    end

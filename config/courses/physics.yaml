@@ -1,0 +1,20 @@
+# Educational Course Configuration - Physics
+# Introductory Physics course template
+
+course:
+  name: "Introductory Physics"
+  subject: "General Physics"  # Subject/expertise area
+  description: "Comprehensive introduction covering fundamental concepts and principles of Physics, including mechanics, thermodynamics, and electromagnetism"
+  level: "Undergraduate Introductory"
+  additional_constraints: ""  # Optional: pedagogical, practical, or thematic constraints
+  
+  # Configurable defaults (all overwritable in interactive mode)
+  defaults:
+    num_modules: 4           # Number of modules to generate
+    total_sessions: 8       # Total sessions across all modules
+    sessions_per_module: null  # Auto-calculated if null
+
+
+
+
+

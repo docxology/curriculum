@@ -1,0 +1,58 @@
+graph TD
+    %% Cell Structure Overview
+    Cell[Cell] --> Membrane[Cell Membrane]
+    Cell --> Cytoplasm[Cytoplasm]
+    Cell --> Nucleus[Nucleus]
+    
+    %% Nucleus Details
+    Nucleus --> NuclearEnvelope[Nuclear Envelope]
+    Nucleus --> Chromatin[Chromatin/DNA]
+    Nucleus --> Nucleolus[Nucleolus]
+    
+    %% Cytoplasm and Organelles
+    Cytoplasm --> Mitochondria[Mitochondria]
+    Cytoplasm --> RER[Rough ER]
+    Cytoplasm --> SER[Smooth ER]
+    Cytoplasm --> Golgi[Golgi Apparatus]
+    Cytoplasm --> Ribosomes[Ribosomes]
+    Cytoplasm --> Lysosomes[Lysosomes]
+    Cytoplasm --> Cytoskeleton[Cytoskeleton]
+    
+    %% Mitochondria Function
+    Mitochondria --> ATP[ATP Production<br/>Cellular Respiration]
+    
+    %% ER Functions
+    RER --> ProteinSynthesis[Protein Synthesis]
+    SER --> LipidSynthesis[Lipid Synthesis]
+    
+    %% Golgi Function
+    Golgi --> ProteinPackaging[Protein Modification<br/>& Packaging]
+    
+    %% Ribosome Function
+    Ribosomes --> Proteins[Protein Production]
+    
+    %% Lysosome Function
+    Lysosomes --> Digestion[Cellular Digestion<br/>Waste Removal]
+    
+    %% Membrane Functions
+    Membrane --> Transport[Transport:<br/>Passive & Active]
+    Membrane --> Recognition[Cell Recognition]
+    Membrane --> Communication[Cell Communication]
+    
+    %% Styling
+    classDef organelle fill:#e1f5ff,stroke:#1976d2,stroke-width:2px
+    classDef function fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef main fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px
+    
+    class Cell,Nucleus,Cytoplasm,Membrane main
+    class Mitochondria,RER,SER,Golgi,Ribosomes,Lysosomes,Cytoskeleton,NuclearEnvelope,Chromatin,Nucleolus organelle
+    class ATP,ProteinSynthesis,LipidSynthesis,ProteinPackaging,Proteins,Digestion,Transport,Recognition,Communication function
+
+
+
+
+
+
+
+
+

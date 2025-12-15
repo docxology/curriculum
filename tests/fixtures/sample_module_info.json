@@ -1,0 +1,45 @@
+{
+  "id": 1,
+  "name": "Cell Biology",
+  "description": "Introduction to cellular structure and function",
+  "subtopics": [
+    "Cell structure and organization",
+    "Membrane structure and function",
+    "Organelles and their roles",
+    "Cell division and reproduction"
+  ],
+  "learning_objectives": [
+    "Understand basic cell structure",
+    "Explain organelle functions",
+    "Describe membrane properties",
+    "Understand cell division processes"
+  ],
+  "content_length": 2000,
+  "num_diagrams": 3,
+  "num_questions": 5,
+  "sessions": [
+    {
+      "session_number": 1,
+      "session_title": "Introduction to Cells",
+      "subtopics": ["Cell theory", "Cell types"],
+      "learning_objectives": ["Understand cell theory"],
+      "key_concepts": ["Cell membrane", "Nucleus"]
+    },
+    {
+      "session_number": 2,
+      "session_title": "Cell Membrane",
+      "subtopics": ["Membrane structure", "Transport"],
+      "learning_objectives": ["Describe membrane structure"],
+      "key_concepts": ["Phospholipid bilayer", "Transport proteins"]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+

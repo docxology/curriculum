@@ -1,0 +1,72 @@
+# Output Configuration
+
+output:
+  # Base directory for all generated content
+  base_directory: "output"
+  
+  # Directory structure
+  directories:
+    outlines: "outlines"
+    modules: "modules"
+    logs: "logs"
+    website: "website"
+    
+  # File naming conventions
+  file_naming:
+    outline: "course_outline_{timestamp}.md"
+    lecture: "module_{module_id:02d}_{module_name_slug}.md"
+    diagram: "diagram_{module_id:02d}_{diagram_num}_{topic_slug}.mmd"
+    questions: "questions_{module_id:02d}_{module_name_slug}.md"
+    module_combined: "module_{module_id:02d}_complete.md"
+    
+  # Output formats
+  formats:
+    lectures:
+      include_toc: true
+      include_objectives: true
+      include_summary: true
+      heading_level_start: 1
+      
+    diagrams:
+      format: "mermaid"
+      standalone: true
+      include_description: true
+      
+    questions:
+      group_by_type: true
+      include_answer_key: true
+      separate_answers: false
+      randomize_options: false
+      
+  # Module compilation settings
+  module_compilation:
+    enabled: true
+    include_components:
+      - lecture
+      - diagrams
+      - questions
+    order:
+      - "learning_objectives"
+      - "lecture"
+      - "diagrams"
+      - "questions"
+    add_page_breaks: false
+    
+  # Logging
+  logging:
+    level: "INFO"  # Default log level (DEBUG, INFO, WARNING, ERROR)
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    file: "output/generation.log"
+    console: true
+    verbose_llm: false  # Set to true for DEBUG-level LLM logs (detailed request/response info)
+    show_progress: false  # Set to true for stream progress updates at INFO level (default: DEBUG)
+    # Logging interval configuration
+    heartbeat_interval: 5  # Heartbeat logs for long requests (seconds, default: 5). Adjust to control frequency of "Request in progress" messages during long LLM operations.
+    progress_log_interval: 2  # Stream progress update frequency (seconds, default: 2). Adjust to control frequency of "Stream: X.Xs | Chunks: ..." messages during streaming responses. Note: For less verbose logging, consider increasing to 5 seconds.
+    
+  # Progress tracking
+  progress:
+    save_checkpoints: true
+    checkpoint_file: "output/.checkpoint.json"
+    resume_on_failure: true
+

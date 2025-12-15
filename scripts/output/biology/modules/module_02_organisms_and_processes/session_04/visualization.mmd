@@ -1,0 +1,16 @@
+graph TD
+    A[Homeostasis] --> B{Sensor}
+    B --> C[Control Center]
+    C --> D{Effector}
+    D --> E(Physiological Change)
+    E --> F{Feedback Loop}
+    F --> B
+    A -- Detects Change --> B
+    C --> E
+    B -- Receives Input --> G(External Environment)
+    G -- Impacts Organism --> E
+    E -- Alters State --> F
+    F -- Completes Loop --> B
+    B -- Continues Monitoring --> F
+    A -- Key Concept --> B
+    C -- Key Concept --> D

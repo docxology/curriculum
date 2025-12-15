@@ -1,0 +1,36 @@
+# Educational Course Configuration - Free Energy Principle
+# Comprehensive long course on the Free Energy Principle and its applications
+
+course:
+  name: "The Free Energy Principle: From Physics to Mind"
+  subject: "Theoretical Neuroscience and Systems Biology"  # Subject/expertise area
+  description: |
+    An in-depth examination of the Free Energy Principle (FEP), a fundamental principle that proposes that all adaptive 
+    systems (biological, cognitive, and even artificial) must minimize a quantity called variational free energy to 
+    maintain their structural and functional integrity over time. This course explores how the FEP provides a unified 
+    account of life, mind, and behavior by explaining how systems resist the natural tendency toward disorder (entropy) 
+    through active engagement with their environment. Students will learn the mathematical foundations of the principle, 
+    including its derivation from statistical physics and information theory, the relationship between free energy and 
+    entropy, and how minimizing free energy is equivalent to maximizing Bayesian model evidence. The course covers the 
+    FEP's application to perception (as Bayesian inference), action (as active inference), learning (as model optimization), 
+    and attention (as precision weighting), showing how these processes emerge naturally from the imperative to minimize 
+    free energy. Topics include the mathematical formulation of variational free energy and its relationship to surprise 
+    and model evidence, the role of generative models in creating predictions about sensory inputs, the hierarchical 
+    structure of these models and their temporal dynamics, the distinction between perceptual inference (updating beliefs) 
+    and active inference (sampling data), and how the FEP explains phenomena ranging from simple reflexes to complex 
+    cognitive behaviors. The course also examines the FEP's implications for understanding biological organization, 
+    evolution, development, and pathology, as well as its applications in artificial intelligence, robotics, and 
+    therapeutic interventions. Students will explore how the FEP bridges physics, biology, neuroscience, and cognitive 
+    science, providing a principled framework for understanding adaptive systems at multiple scales of organization.
+  level: "Graduate / Advanced Undergraduate"
+  additional_constraints: |
+    Maintain mathematical rigor while providing intuitive explanations and biological examples. Include derivations and 
+    computational exercises. Connect the abstract principle to concrete biological and cognitive phenomena. Address 
+    both theoretical foundations and empirical applications. Explore the philosophical implications of the FEP for 
+    understanding life, mind, and agency. Include critical perspectives and open questions in the field.
+  
+  # Configurable defaults (all overwritable in interactive mode)
+  defaults:
+    num_modules: 10          # Number of modules to generate
+    total_sessions: 20       # Total sessions across all modules
+    sessions_per_module: null  # Auto-calculated if null

@@ -1,0 +1,14 @@
+graph TD
+    A[Glycolysis] --> B(Krebs Cycle);
+    B --> C{Electron Transport Chain};
+    C --> D[ATP Synthase];
+    D --> E(Oxidative Phosphorylation);
+    E --> F(ATP Production);
+    A --> G(Pyruvate Formation);
+    G --> H(Acetyl-CoA Formation);
+    H --> B;
+    B --> I(NADH & FADH2 Production);
+    I --> C;
+    C --> J(Proton Gradient);
+    J --> K(ATP Synthase Activation);
+    K --> D;

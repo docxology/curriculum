@@ -1,0 +1,25 @@
+graph LR
+    center((Glycolysis))
+    A[Glucose] --> center
+    B([Hexose Phosphate Isomerase]) --> center
+    C([Phosphofructokinase-1]) --> center
+    D([Fructose-6-Phosphate]) --> C
+    E([Fructose-1,6-Bisphosphate]) --> C
+    F([Aldolase]) --> E
+    G([3-Phosphoglycerate]) --> C
+    H([Glyceraldehyde-3-Phosphate Dehydrogenase]) --> C
+    I([1,3-Bisphosphoglycerate]) --> G
+    J([Phosphoglycerate Kinase]) --> I
+    K([3-Phosphoglycerate]) --> G
+    L([Dihydroxyacetone Phosphate]) --> H
+    M([Triose Phosphate Isomerase]) --> L
+    N([Pyruvate]) --> center
+    O([Pyruvate Kinase]) --> N
+    P([ATP]) --> O
+    Q([NAD+]) --> H
+    R([NADP+]) --> M
+    S([ATP Synthase]) --> center
+    T([ADP]) --> S
+    U([Pi]) --> S
+    V([F6P]) --> D
+    W([G3P]) --> G

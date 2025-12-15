@@ -1,0 +1,14 @@
+graph LR
+    A([Cell Wall Start]) -- Initial Synthesis of Polysaccharides --> B{Glycoprotein & Glycocalyx Assembly}
+    B -- Presence of Specific Carbohydrates --> C{Cell Wall Permeability Check}
+    C -- Permeable --> D{Murein Synthesis (Peptidoglycan)}
+    C -- Not Permeable --> E{Cell Wall Modification/Repair}
+    D -- Cross-linking of Peptidoglycan Chains --> F{Murein Layer Formation}
+    E -- Detection of Defects --> F
+    F -- Ongoing Maintenance & Growth --> G{Cell Expansion & New Wall Formation}
+    G -- Feedback: Monitoring Wall Integrity --> B
+    B --  Signal Transduction --> H{Regulation of Synthesis}
+    H -- Controls Carbohydrate Production --> B
+    F --  External Stress (e.g., infection) --> E
+    E --  Immune Response --> G
+    G --> Cell Wall End([Cell Wall End])
