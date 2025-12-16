@@ -8,6 +8,8 @@ from src.generate.orchestration.pipeline import ContentGenerator
 
 
 # Integration tests - conftest.py ensures Ollama is running
+# Tests that generate content are slow (>10s each)
+# Unit tests (init, setup, etc.) are fast and don't need markers
 
 
 @pytest.fixture
@@ -23,8 +25,8 @@ def test_config(tmp_path):
             "provider": "ollama",
             "model": "gemma3:4b",
             "api_url": "http://localhost:11434/api/generate",
-            "timeout": 60,
-            "parameters": {"temperature": 0.7, "num_predict": 200, "format": "json"}
+            "timeout": 120,  # Increased for reliability
+            "parameters": {"temperature": 0.7, "num_predict": 1500}  # Reduced for faster tests, removed format:json (causes issues)
         },
         "prompts": {
             "outline": {
@@ -186,6 +188,8 @@ class TestContentGenerator:
         assert 'questions' in dirs
         assert 'modules' in dirs
         
+    @pytest.mark.integration
+    @pytest.mark.slow
     def test_stage1_generate_outline(self, test_config, tmp_path, skip_if_no_ollama):
         """Test Stage 1: outline generation."""
         import json
@@ -255,6 +259,8 @@ class TestContentGenerator:
         assert outline_path is not None, "Outline generation failed after all retries"
         assert outline_path.exists(), "Outline file was not created"
         
+    @pytest.mark.integration
+    @pytest.mark.slow
     def test_run_full_pipeline(self, test_config, tmp_path, skip_if_no_ollama):
         """Test running pipeline stages (focused test - not full 5-stage)."""
         import json
@@ -349,6 +355,8 @@ class TestContentGenerator:
         # 3. Pipeline structure is functional
         # We don't test all 5 stages here as that would be too slow for a unit test
     
+    @pytest.mark.integration
+    @pytest.mark.slow
     def test_stage2_generate_content_multiple_modules(self, test_config, tmp_path, skip_if_no_ollama):
         """Test stage2 with multiple modules."""
         import json
@@ -388,6 +396,8 @@ class TestContentGenerator:
         module_dirs = list(modules_dir.glob('module_*'))
         assert len(module_dirs) > 0
     
+    @pytest.mark.integration
+    @pytest.mark.slow
     def test_stage2_with_module_filtering(self, test_config, tmp_path, skip_if_no_ollama):
         """Test stage2 with module ID filtering."""
         import json
@@ -436,10 +446,13 @@ class TestContentGenerator:
                 if second_module_id is not None:
                     assert second_module_id not in result_module_ids, f"Second module ID {second_module_id} should not be in filtered results"
     
+    @pytest.mark.integration
+    @pytest.mark.slow
     def test_stage2_content_structure(self, test_config, tmp_path, skip_if_no_ollama):
         """Test that stage2 generates all required content types."""
         import json
         import logging
+        import time
         
         logger = logging.getLogger(__name__)
         generator = ContentGenerator(test_config)
@@ -450,15 +463,26 @@ class TestContentGenerator:
         for attempt in range(max_retries):
             try:
                 outline_path = generator.stage1_generate_outline(num_modules=1, total_sessions=2)
-                assert outline_path.exists()
+                assert outline_path.exists(), f"Outline markdown file not found: {outline_path}"
+                
+                # Verify JSON companion file exists
+                json_path = outline_path.with_suffix('.json')
+                assert json_path.exists(), f"Outline JSON file not found: {json_path}"
+                
+                # Small delay to ensure file system sync
+                time.sleep(0.1)
+                
                 break
             except Exception as e:
                 if attempt == max_retries - 1:
                     pytest.skip(f"Could not generate outline: {e}")
                 logger.warning(f"Outline generation attempt {attempt + 1} failed, retrying...")
         
-        # Generate content for first module
+        # Verify outline files exist before proceeding
         json_path = outline_path.with_suffix('.json')
+        assert json_path.exists(), f"JSON outline not found at {json_path}"
+        
+        # Load outline data
         outline_data = json.loads(json_path.read_text(encoding='utf-8'))
         modules = outline_data.get('modules', [])
         
@@ -550,10 +574,13 @@ class TestContentGenerator:
         with pytest.raises(ValueError, match="No JSON outline found|No outline JSON found"):
             generator.stage2_generate_content_by_session()
     
+    @pytest.mark.integration
+    @pytest.mark.slow
     def test_pipeline_progress_tracking(self, test_config, tmp_path, skip_if_no_ollama):
         """Test that pipeline tracks progress correctly."""
         import json
         import logging
+        import time
         
         logger = logging.getLogger(__name__)
         generator = ContentGenerator(test_config)
@@ -564,15 +591,26 @@ class TestContentGenerator:
         for attempt in range(max_retries):
             try:
                 outline_path = generator.stage1_generate_outline(num_modules=1, total_sessions=2)
-                assert outline_path.exists()
+                assert outline_path.exists(), f"Outline markdown file not found: {outline_path}"
+                
+                # Verify JSON companion file exists
+                json_path = outline_path.with_suffix('.json')
+                assert json_path.exists(), f"Outline JSON file not found: {json_path}"
+                
+                # Small delay to ensure file system sync
+                time.sleep(0.1)
+                
                 break
             except Exception as e:
                 if attempt == max_retries - 1:
                     pytest.skip(f"Could not generate outline: {e}")
                 logger.warning(f"Outline generation attempt {attempt + 1} failed, retrying...")
         
-        # Generate content
+        # Verify outline files exist before proceeding
         json_path = outline_path.with_suffix('.json')
+        assert json_path.exists(), f"JSON outline not found at {json_path}"
+        
+        # Load outline data
         outline_data = json.loads(json_path.read_text(encoding='utf-8'))
         modules = outline_data.get('modules', [])
         

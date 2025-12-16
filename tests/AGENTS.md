@@ -116,14 +116,17 @@ This directory contains the comprehensive test suite for the educational course 
 - `test_website_scripts_interaction.py`
 - `test_website_styles.py`
 
-**Slow (require Ollama, 10-30s each)**:
-- `test_llm_client.py`
-- `test_outline_generator.py`
-- `test_content_generators.py`
-- `test_new_generators.py`
-- `test_pipeline.py`
+**Slow (require Ollama, 10-30s each, marked with `@pytest.mark.slow` and `@pytest.mark.integration`)**:
+- `test_llm_client.py` (some tests)
+- `test_outline_generator.py` (all tests)
+- `test_content_generators.py` (all tests)
+- `test_new_generators.py` (all tests)
+- `test_pipeline.py` (content generation tests)
+- `test_pipeline_integration.py` (all tests)
 - `test_json_outline_integration.py`
 - `test_pipeline_extended.py`
+
+**Note**: Test scope has been optimized (reduced to 1 module, 2 sessions) to improve performance while maintaining coverage.
 
 ## Running Tests
 

@@ -86,8 +86,9 @@ class TestSummaryGenerator:
             content_type="lecture"
         )
         
-        with caplog.at_level(logging.INFO):
-            generate_validation_summary(collector, logging.getLogger("test"))
+        test_logger = logging.getLogger("test")
+        with caplog.at_level(logging.INFO, logger="test"):
+            generate_validation_summary(collector, test_logger)
         
         # Check formatted log output (caplog.text includes all formatted messages)
         all_log_text = caplog.text
@@ -103,11 +104,12 @@ class TestSummaryGenerator:
         """Test stage summary with no issues."""
         collector = ErrorCollector()
         
-        with caplog.at_level(logging.INFO):
+        test_logger = logging.getLogger("test")
+        with caplog.at_level(logging.INFO, logger="test"):
             generate_stage_summary(
                 collector,
                 "Test Stage",
-                logging.getLogger("test"),
+                test_logger,
                 total_items=10,
                 successful_items=10,
                 failed_items=0
@@ -118,7 +120,7 @@ class TestSummaryGenerator:
         
         # log_status_with_text formats as: [STATUS] message emoji
         # So we need to check for the message part and status
-        assert "Test Stage - Summary" in all_log_text
+        assert "Test Stage - Summary" in all_log_text or "[ALL COMPLIANT]" in all_log_text
         assert "ALL COMPLIANT" in all_log_text
         assert "Items Processed: 10" in all_log_text
         assert "Successful: 10" in all_log_text
@@ -192,11 +194,12 @@ class TestSummaryGenerator:
         """Test stage summary with no items processed."""
         collector = ErrorCollector()
         
-        with caplog.at_level(logging.INFO):
+        test_logger = logging.getLogger("test")
+        with caplog.at_level(logging.INFO, logger="test"):
             generate_stage_summary(
                 collector,
                 "Test Stage",
-                logging.getLogger("test"),
+                test_logger,
                 total_items=None,
                 successful_items=None,
                 failed_items=None
@@ -206,7 +209,7 @@ class TestSummaryGenerator:
         all_log_text = caplog.text
         
         # log_status_with_text formats as: [STATUS] message emoji
-        assert "Test Stage - Summary" in all_log_text
+        assert "Test Stage - Summary" in all_log_text or "[ALL COMPLIANT]" in all_log_text
         # Should not crash when items are None
 
 

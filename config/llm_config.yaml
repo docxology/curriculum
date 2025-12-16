@@ -93,8 +93,22 @@ content_generation:
 # Prompt templates for different content types
 prompts:
   outline:
-    system: "You are an expert curriculum designer. Create a coherent, pedagogically sound course structure. Output ONLY valid JSON."
+    system: "You are an expert curriculum designer. Create a coherent, pedagogically sound course structure. You MUST output ONLY valid JSON - no markdown, no code fences, no explanations, no text before or after. Start with { and end with }."
     template: |
+      ═══════════════════════════════════════════════════════════════
+      🔴 CRITICAL FORMAT REQUIREMENT - READ FIRST
+      ═══════════════════════════════════════════════════════════════
+      
+      You MUST output ONLY valid JSON. Your response will be REJECTED if it contains:
+      - Markdown code fences (```json or ```)
+      - Explanatory text before or after the JSON
+      - Any text outside the JSON object
+      - Comments or notes
+      
+      Your output MUST start with {{ and end with }}. Nothing else.
+      
+      ═══════════════════════════════════════════════════════════════
+      
       Design a {subject} course with EXACTLY {num_modules} modules and EXACTLY {total_sessions} total sessions.
       
       COURSE INFORMATION:
@@ -111,7 +125,7 @@ prompts:
       4. Each module should have a clear focus and logical progression
       5. Sessions within modules should build on each other
       
-      JSON SCHEMA:
+      JSON SCHEMA (copy this structure exactly):
       {{
         "course_metadata": {{"name": "{course_name}", "level": "{course_level}", "duration_weeks": {course_duration}, "total_sessions": {total_sessions}, "total_modules": {num_modules}}},
         "modules": [
@@ -140,7 +154,27 @@ prompts:
       4. Ultra-concise text
       5. Sequential numbering (sessions 1-{total_sessions} globally)
       
-      OUTPUT: ONLY JSON (no ```json, no markdown, no explanation)
+      ═══════════════════════════════════════════════════════════════
+      OUTPUT FORMAT (MANDATORY)
+      ═══════════════════════════════════════════════════════════════
+      
+      Your response MUST be:
+      - ONLY the JSON object (starting with {{ and ending with }})
+      - NO markdown code fences
+      - NO explanatory text
+      - NO comments
+      - NO text before or after the JSON
+      
+      CORRECT OUTPUT:
+      {{"course_metadata": {{...}}, "modules": [...]}}
+      
+      WRONG OUTPUT (will be REJECTED):
+      ```json
+      {{"course_metadata": {{...}}}}
+      ```
+      
+      Here's the outline:
+      {{"course_metadata": {{...}}}}
       
       Respond in {language} language
       

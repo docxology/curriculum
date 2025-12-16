@@ -279,16 +279,19 @@ class ContentGenerator:
         
         logger.info(f"Cleared {cleared_count} items from output directories")
         
-    def _load_latest_outline_json(self) -> Optional[Dict[str, Any]]:
+    def _load_latest_outline_json(self, course_name: Optional[str] = None) -> Optional[Dict[str, Any]]:
         """Load the most recent JSON outline.
         
         Delegates to ConfigLoader to find the outline file, then loads and parses it.
+        
+        Args:
+            course_name: Optional course template name to search in course-specific directory
         
         Returns:
             Parsed JSON outline data or None if not found
         """
         # Use ConfigLoader to find the latest outline
-        outline_path = self.config_loader._find_latest_outline_json()
+        outline_path = self.config_loader._find_latest_outline_json(course_name=course_name)
         
         if not outline_path:
             logger.warning("No JSON outline found")
@@ -398,14 +401,27 @@ class ContentGenerator:
         """
         log_section_header(logger, "STAGE 2: Generating Primary Content (Session-Based)", major=True)
         
-        # Load JSON outline to get session structure
-        outline_data = self._load_latest_outline_json()
+        # Try to get course name from config first (for better path resolution)
+        course_name = self.config_loader.get_current_course_template()
+        # If not set, derive from course config (for test configs)
+        if not course_name:
+            try:
+                course_info = self.config_loader.get_course_info()
+                from src.utils.helpers import slugify
+                course_name = slugify(course_info.get('name', ''))
+            except Exception:
+                course_name = None
+        
+        # Load JSON outline to get session structure (pass course_name for better path resolution)
+        outline_data = self._load_latest_outline_json(course_name=course_name)
         if not outline_data:
             raise ValueError("No JSON outline found. Run stage 1 (outline generation) first.")
         
-        # Extract course name from outline metadata
+        # Extract course name from outline metadata (may override config value)
         course_metadata = outline_data.get('course_metadata', {})
-        course_name = course_metadata.get('course_template')
+        outline_course_name = course_metadata.get('course_template')
+        if outline_course_name:
+            course_name = outline_course_name
         
         modules = outline_data.get('modules', [])
         

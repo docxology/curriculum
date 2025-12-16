@@ -9,6 +9,8 @@ import requests
 
 
 # Integration tests - conftest.py ensures Ollama is running
+# All tests in this file require Ollama and are slow (>10s each)
+pytestmark = [pytest.mark.integration, pytest.mark.slow]
 
 
 @pytest.fixture
@@ -63,8 +65,7 @@ def config_loader(tmp_path):
             "timeout": 60,
             "parameters": {
                 "temperature": 0.7,
-                "num_predict": 500,
-                "format": "json"
+                "num_predict": 2000  # Increased for reliability, removed format:json (causes early stopping)
             }
         },
         "prompts": {
@@ -170,8 +171,8 @@ class TestOutlineGenerator:
         generator = OutlineGenerator(config_loader, llm_client)
         
         # Use minimal parameters for faster testing
-        num_modules = 2
-        total_sessions = 4
+        num_modules = 1
+        total_sessions = 2
         
         # Retry logic for JSON generation variability
         max_retries = 3
@@ -267,8 +268,8 @@ class TestOutlineGenerator:
         generator = OutlineGenerator(config_loader, llm_client)
         
         # Use minimal parameters for faster testing
-        num_modules = 2
-        total_sessions = 4
+        num_modules = 1
+        total_sessions = 2
         
         # Retry logic for JSON generation variability
         max_retries = 3

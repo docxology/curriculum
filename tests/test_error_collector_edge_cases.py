@@ -216,8 +216,9 @@ class TestErrorCollectorEdgeCases:
                 content_type=["questions", "lecture", "diagram"][i % 3]
             )
         
-        with caplog.at_level(logging.INFO):
-            generate_validation_summary(collector, logging.getLogger("test"))
+        test_logger = logging.getLogger("test")
+        with caplog.at_level(logging.INFO, logger="test"):
+            generate_validation_summary(collector, test_logger)
         
         all_log_text = caplog.text
         assert "[VALIDATION SUMMARY]" in all_log_text

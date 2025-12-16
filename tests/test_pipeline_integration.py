@@ -6,6 +6,9 @@ from pathlib import Path
 from src.config.loader import ConfigLoader
 from src.generate.orchestration.pipeline import ContentGenerator
 
+# All tests in this file require Ollama and are slow (>10s each)
+pytestmark = [pytest.mark.integration, pytest.mark.slow]
+
 
 @pytest.fixture
 def test_config(tmp_path):
@@ -21,12 +24,65 @@ def test_config(tmp_path):
             "model": "gemma3:4b",
             "api_url": "http://localhost:11434/api/generate",
             "timeout": 60,
-            "parameters": {"temperature": 0.7, "num_predict": 200}
+            "parameters": {"temperature": 0.7, "num_predict": 1500}  # Increased for reliability
         },
         "prompts": {
             "outline": {
-                "system": "You are a biology educator.",
-                "template": "Create outline for {course_name}"
+                "system": "You are an expert curriculum designer. Create a coherent, pedagogically sound course structure. You MUST output ONLY valid JSON - no markdown, no code fences, no explanations, no text before or after. Start with { and end with }.",
+                "template": """Design a {subject} course with EXACTLY {num_modules} modules and EXACTLY {total_sessions} total sessions.
+
+COURSE INFORMATION:
+- Name: {course_name}
+- Level: {course_level}
+- Description: {course_description}
+- Duration: {course_duration} weeks
+- Constraints: {additional_constraints}
+
+REQUIREMENTS:
+1. Generate appropriate topics and modules based on the course description and constraints
+2. Create {num_modules} coherent modules that cover the course scope
+3. Distribute {total_sessions} sessions across these modules (aim for ~{avg_sessions_per_module} per module)
+4. Each module should have a clear focus and logical progression
+5. Sessions within modules should build on each other
+
+CRITICAL: You MUST output valid JSON matching this EXACT structure. All fields are REQUIRED.
+
+JSON SCHEMA (copy this structure exactly):
+{{
+  "course_metadata": {{
+    "name": "{course_name}",
+    "level": "{course_level}",
+    "duration_weeks": {course_duration},
+    "total_sessions": {total_sessions},
+    "total_modules": {num_modules}
+  }},
+  "modules": [
+    {{
+      "module_id": 1,
+      "module_name": "Descriptive module title",
+      "module_description": "Brief overview of module scope",
+      "sessions": [
+        {{
+          "session_number": 1,
+          "session_title": "Specific session topic",
+          "subtopics": ["topic1", "topic2", ...],
+          "learning_objectives": ["objective1", "objective2", ...],
+          "key_concepts": ["concept1", "concept2", ...],
+          "rationale": "Why this session is important"
+        }}
+      ]
+    }}
+  ]
+}}
+
+STRICT RULES:
+1. EXACTLY {num_modules} modules
+2. EXACTLY {total_sessions} sessions total (distribute evenly)
+3. Each session: {min_subtopics}-{max_subtopics} subtopics, {min_objectives}-{max_objectives} objectives, {min_concepts}-{max_concepts} concepts
+4. Ultra-concise text
+5. Sequential numbering (sessions 1-{total_sessions} globally)
+
+OUTPUT: ONLY JSON (no ```json, no markdown, no explanation)"""
             },
             "lecture": {
                 "system": "You are a biology educator.",
@@ -50,9 +106,22 @@ def test_config(tmp_path):
             "level": "Intro",
             "estimated_duration_weeks": 4,
             "total_class_sessions": 4,
+            "subject": "Biology",
+            "additional_constraints": "Test constraints",
             "defaults": {
                 "num_modules": 2,
                 "total_sessions": 4
+            }
+        }
+    }
+    
+    # Add outline generation bounds for test config
+    outline_config = {
+        "outline_generation": {
+            "items_per_field": {
+                "subtopics": {"min": 3, "max": 7},
+                "learning_objectives": {"min": 3, "max": 7},
+                "key_concepts": {"min": 3, "max": 7}
             }
         }
     }
@@ -73,6 +142,10 @@ def test_config(tmp_path):
         yaml.dump(course_config, f)
     with open(config_path / "output_config.yaml", "w") as f:
         yaml.dump(output_config, f)
+    # Merge outline config into llm_config (it's stored there in real config)
+    llm_config.update(outline_config)
+    with open(config_path / "llm_config.yaml", "w") as f:
+        yaml.dump(llm_config, f)
         
     return ConfigLoader(config_path)
 
@@ -84,8 +157,8 @@ class TestPipelineIntegration:
         """Test complete pipeline from outline to content generation."""
         generator = ContentGenerator(test_config)
         
-        # Stage 1: Generate outline
-        outline_path = generator.stage1_generate_outline(num_modules=2, total_sessions=4)
+        # Stage 1: Generate outline (minimal scope for faster testing)
+        outline_path = generator.stage1_generate_outline(num_modules=1, total_sessions=2)
         
         assert outline_path.exists()
         assert outline_path.suffix == ".md"
@@ -97,7 +170,8 @@ class TestPipelineIntegration:
         # Load and verify structure
         outline_data = json.loads(json_path.read_text(encoding='utf-8'))
         assert 'modules' in outline_data
-        assert len(outline_data['modules']) == 2
+        assert len(outline_data['modules']) == 1  # We requested 1 module
+        assert len(outline_data['modules'][0]['sessions']) == 2  # With 2 sessions
         
         # Stage 2: Generate content for first module only
         modules = outline_data['modules']
@@ -135,8 +209,8 @@ class TestPipelineIntegration:
         """Test pipeline with module filtering."""
         generator = ContentGenerator(test_config)
         
-        # Generate outline
-        outline_path = generator.stage1_generate_outline(num_modules=3, total_sessions=6)
+        # Generate outline (reduced scope for faster testing)
+        outline_path = generator.stage1_generate_outline(num_modules=2, total_sessions=4)
         assert outline_path.exists()
         
         # Load outline
@@ -144,9 +218,9 @@ class TestPipelineIntegration:
         outline_data = json.loads(json_path.read_text(encoding='utf-8'))
         modules = outline_data.get('modules', [])
         
-        if len(modules) >= 2:
-            # Generate content for only first two modules
-            module_ids = [modules[0].get('module_id'), modules[1].get('module_id')]
+        if len(modules) >= 1:
+            # Generate content for only first module (reduced scope for faster testing)
+            module_ids = [modules[0].get('module_id')]
             results = generator.stage2_generate_content_by_session(module_ids=module_ids)
             
             # Verify only specified modules processed

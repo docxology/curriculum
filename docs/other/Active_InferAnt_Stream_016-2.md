@@ -13,6 +13,8 @@ This livestream explores the intersection of human expertise and generative AI i
 
 The presentation provides open source resources and methods for people who want to apply these tools today, and also provides a space for discussion and envisioning the future of generative education and research.
 
+In the YouTube livechat, provide any suggestions, questions, comments, or prompts. And during the stream we can pick one or more topics to write curriculum for, do literature meta-analysis on, and write a software package + paper for.  
+
 We will look at what is at hand, and almost at hand, for three areas of Generative education and research:
 
 - 📚 **Custom modular curriculum** — [curriculum](https://github.com/docxology/curriculum)
@@ -41,9 +43,7 @@ Open for all to fork, contribute, improve!
 
 ---
 
-### The Next Hills
 
-As many "Oughts" — *What should we do with these capabilities?* — as there are "Is"'s — *What is true, what would support accurate, effective, and aligned generative synthetic intelligence?*
 
 ---
 
@@ -89,7 +89,11 @@ As many "Oughts" — *What should we do with these capabilities?* — as there a
 - This recursive (and quantum) cognitive effect arises through learning and applying **Active Inference**.
 - That pattern/pump applies to "individual" (top-down, many-as-one, High Road) and the group (bottom-up, Low Road).
 - Debatably and engagingly, the pattern applies to the analytical (axiomatic), empirical (evidential), and phenomenological (Husserlian shared protentions).
-- Augmented cognition in the niche where "The Body and the Niche Keep The Score" while playing the game.
+- Augmented cognition in the niche where "The Body and the Niche Keep The Score" while playing the game as well.
+
+### The Next Hills
+
+As many "Oughts" — *What should we do with these capabilities?* — as there are "Is"'s — *What is true, what would support accurate, effective, and aligned generative synthetic intelligence?*
 
 ---
 

@@ -7,6 +7,9 @@ from src.llm.client import OllamaClient
 from src.generate.formats.study_notes import StudyNotesGenerator
 from src.generate.formats.labs import LabGenerator
 
+# All tests in this file require Ollama and are slow (>10s each)
+pytestmark = [pytest.mark.integration, pytest.mark.slow]
+
 
 @pytest.fixture
 def test_config(tmp_path):

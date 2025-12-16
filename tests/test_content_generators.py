@@ -12,6 +12,8 @@ from src.generate.formats.questions import QuestionGenerator
 
 
 # Integration tests - conftest.py ensures Ollama is running
+# All tests in this file require Ollama and are slow (>10s each)
+pytestmark = [pytest.mark.integration, pytest.mark.slow]
 
 
 @pytest.fixture

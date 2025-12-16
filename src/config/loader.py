@@ -352,9 +352,11 @@ class ConfigLoader:
         if course_name:
             try:
                 output_config = self.get_output_paths(course_name)
-                base_dir = Path(output_config.get('base_directory', 'output'))
                 directories = output_config.get('directories', {})
-                course_outline_dir = Path(directories.get('outlines', 'outlines'))
+                # get_output_paths already returns course-specific paths in directories
+                # (e.g., "outlines": "output/test_biology/outlines")
+                course_outline_dir_str = directories.get('outlines', 'outlines')
+                course_outline_dir = Path(course_outline_dir_str).resolve()  # Make absolute
                 if course_outline_dir not in search_paths:
                     search_paths.append(course_outline_dir)
                 logger.debug(f"Added course-specific search path: {course_outline_dir}")
@@ -368,9 +370,12 @@ class ConfigLoader:
             base_dir_raw = output_config.get('output', {}).get('base_directory', 'output')
             config_base_dir = Path(base_dir_raw).resolve()  # Store for comparison (absolute path)
             directories = output_config.get('output', {}).get('directories', {})
+            # Construct absolute path: base_directory / outlines
             config_outline_dir = Path(base_dir_raw) / directories.get('outlines', 'outlines')
+            config_outline_dir = config_outline_dir.resolve()  # Make absolute
             if config_outline_dir not in search_paths:
                 search_paths.append(config_outline_dir)
+                logger.debug(f"Added config-specified outline directory: {config_outline_dir}")
         except Exception as e:
             logger.debug(f"Could not get config outline directory: {e}")
         

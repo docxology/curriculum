@@ -11,7 +11,7 @@ import re
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import Dict, Any, Optional
 
 from src.config.loader import ConfigLoader
 from src.llm.client import OllamaClient
@@ -22,11 +22,7 @@ from src.utils.logging_setup import (
     log_validation_results,
 )
 from src.generate.stages.outline_quality import (
-    validate_outline_quality,
-    detect_topic_overlap,
-    validate_learning_progression,
-    validate_balance,
-    calculate_quality_score
+    validate_outline_quality
 )
 
 
@@ -137,9 +133,84 @@ class OutlineGenerator:
         except json.JSONDecodeError:
             pass
         
-        # All strategies failed
+        # Strategy 5: Try to find JSON after common prefixes
+        # Look for JSON after phrases like "Here's the outline:", "JSON:", etc.
+        prefix_patterns = [
+            r'(?:Here\'?s?|Here is|The outline|JSON|Output|Response)[\s:]*\n*(\{)',
+            r'```(?:json|text)?[\s\n]*(\{)',
+            r'\{[\s\n]*"course_metadata"',
+        ]
+        for pattern in prefix_patterns:
+            match = re.search(pattern, response, re.IGNORECASE | re.DOTALL)
+            if match:
+                start_idx = match.start(1) if match.groups() else match.start()
+                # Find matching closing brace
+                brace_count = 0
+                for i in range(start_idx, len(response)):
+                    if response[i] == '{':
+                        brace_count += 1
+                    elif response[i] == '}':
+                        brace_count -= 1
+                        if brace_count == 0:
+                            candidate = response[start_idx:i+1]
+                            try:
+                                parsed = json.loads(candidate)
+                                logger.debug("Found JSON using prefix pattern strategy")
+                                return parsed
+                            except json.JSONDecodeError:
+                                break
+        
+        # Strategy 6: Extract JSON from lines that look like JSON (start with {, end with })
+        # Find all lines that start with { and try to find matching }
+        lines = response.split('\n')
+        json_candidates = []
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            if stripped.startswith('{'):
+                # Try to find complete JSON object starting from this line
+                brace_count = 0
+                json_text = ""
+                for j in range(i, len(lines)):
+                    json_text += lines[j] + '\n'
+                    for char in lines[j]:
+                        if char == '{':
+                            brace_count += 1
+                        elif char == '}':
+                            brace_count -= 1
+                            if brace_count == 0:
+                                try:
+                                    parsed = json.loads(json_text.strip())
+                                    json_candidates.append((len(json_text), parsed))
+                                except json.JSONDecodeError:
+                                    pass
+                                break
+                    if brace_count == 0:
+                        break
+        
+        # Use the largest valid JSON candidate
+        if json_candidates:
+            json_candidates.sort(key=lambda x: x[0], reverse=True)
+            logger.debug("Found JSON using line-based strategy")
+            return json_candidates[0][1]
+        
+        # All strategies failed - provide detailed error message
         logger.error("Failed to extract valid JSON from LLM response")
-        logger.debug(f"Response preview (first 1000 chars): {response[:1000]}...")
+        logger.error(f"Response length: {len(response)} characters")
+        logger.error(f"Response preview (first 500 chars): {response[:500]}")
+        logger.error(f"Response preview (last 500 chars): {response[-500:]}")
+        
+        # Check if response contains any JSON-like structures
+        has_braces = '{' in response and '}' in response
+        has_quotes = '"' in response
+        has_brackets = '[' in response and ']' in response
+        
+        logger.error(f"Response analysis: braces={has_braces}, quotes={has_quotes}, brackets={has_brackets}")
+        
+        if not has_braces:
+            logger.error("Response does not contain any JSON-like structures (no braces found)")
+        elif not has_quotes:
+            logger.error("Response contains braces but no quotes - may not be valid JSON")
+        
         return None
     
     def _normalize_session_numbering(self, data: Dict[str, Any]) -> Dict[str, Any]:
@@ -433,6 +504,11 @@ class OutlineGenerator:
         system_prompt = prompt_config['system']
         template = prompt_config['template']
         
+        # Debug: Log template before formatting
+        logger.debug(f"Raw template length: {len(template)} characters")
+        logger.debug(f"Raw template preview (first 200 chars): {template[:200]}...")
+        logger.debug(f"Template variables needed: {self.llm_client._extract_template_variables(template)}")
+        
         # Get bounds (use override or config defaults)
         if bounds_override:
             bounds = bounds_override
@@ -508,6 +584,14 @@ class OutlineGenerator:
         # Log prompt details before generation
         formatted_prompt = self.llm_client.format_prompt(template, variables)
         logger.info(f"Formatted prompt size: {len(formatted_prompt)} characters")
+        
+        # Log actual prompt preview for debugging (first 500 chars)
+        if len(formatted_prompt) < 100:
+            logger.warning(f"⚠️  Prompt is suspiciously short ({len(formatted_prompt)} chars). Preview: {repr(formatted_prompt)}")
+            logger.warning("This may indicate template formatting issues. Check template variables.")
+        else:
+            logger.debug(f"Prompt preview (first 200 chars): {formatted_prompt[:200]}...")
+        
         logger.info(f"System prompt size: {len(system_prompt)} characters" if system_prompt else "No system prompt")
         logger.info(f"Template variables: {len(variables)} variables provided")
         
@@ -527,12 +611,15 @@ class OutlineGenerator:
         # Optimize parameters for outline generation to improve performance
         # - num_ctx: 32000 (reduced from 128K) - outline prompts are ~400-500 tokens, 32K is sufficient
         # - num_predict: 4000 (reduced from 64K) - typical outline JSON is 2-4K tokens
+        # - format: "json" - enforce JSON output format (Ollama supports this, but may cause issues with some models)
         # These optimizations significantly improve generation speed
         outline_params = {
             "num_ctx": 32000,
             "num_predict": 4000
+            # Note: format: "json" removed - some models (like gemma3:4b) may stop early with this parameter
+            # We'll rely on prompt instructions instead
         }
-        logger.info(f"Using optimized parameters for outline generation: num_ctx=32000, num_predict=4000 (reduced from default 128K/64K for faster generation)")
+        logger.info("Using optimized parameters for outline generation: num_ctx=32000, num_predict=4000 (reduced from default 128K/64K for faster generation, format:json removed for compatibility)")
         
         # Check Ollama connection and performance before generation
         logger.info("Checking Ollama service connection and performance...")
@@ -590,6 +677,17 @@ class OutlineGenerator:
             logger.info(f"LLM generation completed (received {len(raw_response)} characters)")
             logger.info(f"Generation took {generation_time:.2f} seconds")
             
+            # Validate response length - outline JSON should be at least 200 characters
+            min_expected_length = 200
+            if len(raw_response) < min_expected_length:
+                logger.error(f"Response too short: {len(raw_response)} characters (expected at least {min_expected_length})")
+                logger.error(f"Response content: {repr(raw_response)}")
+                logger.error("This suggests the LLM stopped early or the prompt was not formatted correctly.")
+                raise ValueError(
+                    f"LLM response too short ({len(raw_response)} chars, expected {min_expected_length}+). "
+                    f"Response: {repr(raw_response[:100])}. Check prompt formatting and LLM model behavior."
+                )
+            
             # Performance diagnostics
             chars_per_sec = len(raw_response) / generation_time if generation_time > 0 else 0
             logger.info(f"Generation rate: {chars_per_sec:.1f} chars/s")
@@ -630,22 +728,88 @@ class OutlineGenerator:
                 )
             raise
         
-        # Parse JSON from response
+        # Parse JSON from response with enhanced retry logic
         logger.info("-" * 80)
         logger.info("Parsing JSON response...")
         outline_data = self._extract_json_from_response(raw_response)
         
+        # Multi-strategy retry if extraction or validation fails
+        max_retries = 3
+        retry_attempt = 0
+        
+        while (outline_data is None or 
+               (outline_data is not None and not self._validate_outline_json(outline_data, expected_module_count))) and \
+              retry_attempt < max_retries:
+            
+            retry_attempt += 1
+            logger.warning(f"Attempt {retry_attempt}/{max_retries}: {'JSON extraction' if outline_data is None else 'JSON validation'} failed. Retrying...")
+            
+            # Strategy 1: Retry with more explicit prompt (same params)
+            if retry_attempt == 1:
+                retry_system_prompt = "You are a JSON generator. Output ONLY valid JSON. No markdown, no code fences, no explanations. Start with { and end with }."
+                retry_params = outline_params.copy()
+            # Strategy 2: Retry with increased num_predict (maybe model stopped early)
+            elif retry_attempt == 2:
+                retry_system_prompt = system_prompt
+                retry_params = outline_params.copy()
+                retry_params["num_predict"] = 6000  # Increase prediction limit
+                logger.info("Retry strategy 2: Increased num_predict to 6000")
+            # Strategy 3: Retry with simplified prompt
+            else:
+                retry_system_prompt = "You are a JSON generator. Output ONLY valid JSON starting with { and ending with }."
+                retry_params = outline_params.copy()
+                retry_params["num_predict"] = 8000  # Further increase
+                logger.info("Retry strategy 3: Simplified prompt and increased num_predict to 8000")
+            
+            try:
+                # Add exponential backoff
+                if retry_attempt > 1:
+                    backoff_time = 2 ** (retry_attempt - 1)  # 2s, 4s, 8s
+                    logger.info(f"Waiting {backoff_time}s before retry...")
+                    time.sleep(backoff_time)
+                
+                retry_response = self.llm_client.generate_with_template(
+                    template,
+                    variables,
+                    system_prompt=retry_system_prompt,
+                    params=retry_params,
+                    operation="outline",
+                    timeout_override=operation_timeout
+                )
+                
+                # Validate retry response length
+                if len(retry_response) < 200:
+                    logger.error(f"Retry {retry_attempt} also returned short response: {len(retry_response)} chars")
+                    logger.error(f"Response: {repr(retry_response)}")
+                    continue
+                
+                outline_data = self._extract_json_from_response(retry_response)
+                
+                if outline_data is not None:
+                    # Validate structure
+                    if self._validate_outline_json(outline_data, expected_module_count):
+                        logger.info(f"JSON extraction and validation successful on retry attempt {retry_attempt}")
+                        break
+                    else:
+                        logger.warning(f"Retry {retry_attempt}: JSON extracted but validation failed")
+                        outline_data = None  # Continue to next retry
+                else:
+                    logger.warning(f"Retry {retry_attempt}: JSON extraction failed")
+                    
+            except Exception as retry_error:
+                logger.error(f"Retry attempt {retry_attempt} failed: {retry_error}")
+                outline_data = None
+        
         if outline_data is None:
-            logger.error("Failed to extract valid JSON from LLM response")
+            logger.error("Failed to extract valid JSON from LLM response after all retries")
             logger.error(f"Raw response preview: {raw_response[:500]}...")
-            raise ValueError("LLM did not return valid JSON. Check logs for details.")
+            raise ValueError("LLM did not return valid JSON after multiple retry attempts. Check logs for details.")
         
-        logger.info("JSON parsed successfully")
-        
-        # Validate outline structure
-        logger.info("Validating outline structure...")
         if not self._validate_outline_json(outline_data, expected_module_count):
+            logger.error("JSON validation failed after all retries")
             raise ValueError("Generated outline JSON failed validation. Check logs for details.")
+        
+        logger.info("JSON parsed and validated successfully")
         
         # Normalize session numbering to be global (1-N)
         logger.info("Normalizing session numbering to global sequence...")
@@ -741,7 +905,7 @@ class OutlineGenerator:
             logger.info(f"     • Balance Issues: {quality_result['balance_issue_count']}")
             
             if quality_score['overall_score'] < 75:
-                logger.warning(f"     ⚠️  Quality score below 75 - consider reviewing outline")
+                logger.warning("     ⚠️  Quality score below 75 - consider reviewing outline")
         
         logger.info("═" * 80)
         

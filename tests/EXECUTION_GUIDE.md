@@ -48,16 +48,17 @@ Fast tests that don't require Ollama:
 ### Integration Tests (`@pytest.mark.integration`)
 
 Tests that require Ollama and LLM model:
-- `test_llm_client.py`
-- `test_outline_generator.py`
-- `test_content_generators.py`
-- `test_new_generators.py`
-- `test_pipeline.py`
+- `test_llm_client.py` (some tests are slow)
+- `test_outline_generator.py` (all marked slow)
+- `test_content_generators.py` (all marked slow)
+- `test_new_generators.py` (all marked slow)
+- `test_pipeline.py` (content generation tests marked slow)
+- `test_pipeline_integration.py` (all marked slow)
 - `test_json_outline_integration.py`
 
 **Run with**: `uv run pytest -m integration`
 
-**Expected time**: ~4-5 minutes
+**Expected time**: ~5-6 minutes (reduced from 9+ minutes with scope optimizations)
 
 **Prerequisites**: 
 - Ollama installed and running
@@ -66,13 +67,18 @@ Tests that require Ollama and LLM model:
 ### Slow Tests (`@pytest.mark.slow`)
 
 Tests that take longer than 10 seconds:
-- Full pipeline tests
+- All outline generation tests (LLM calls for JSON generation)
+- All content generation tests (lectures, labs, diagrams, questions, study notes)
+- Full pipeline tests (stage 1 → stage 2 workflows)
 - Multi-module generation tests
-- Large content generation tests
+
+**Note**: Most integration tests are also marked as slow. Use `-m "integration and not slow"` to run only fast integration tests (if any).
 
 **Run with**: `uv run pytest -m slow`
 
-**Skip with**: `uv run pytest -m "not slow"`
+**Skip with**: `uv run pytest -m "not slow"` (recommended for quick feedback during development)
+
+**Performance improvements**: Test scope has been reduced (1 module, 2 sessions instead of 2-3 modules, 4-6 sessions) to speed up execution while maintaining coverage.
 
 ## Test Execution Strategies
 
@@ -206,9 +212,16 @@ uv run pytest -k "test_setup_logging"
 
 ## Test Markers Reference
 
-- `@pytest.mark.unit` - Unit tests (no Ollama)
-- `@pytest.mark.integration` - Integration tests (requires Ollama)
-- `@pytest.mark.slow` - Slow tests (>10s)
+Markers are registered in `pytest.ini` and can be used to filter tests:
+
+- `@pytest.mark.unit` - Unit tests (no Ollama, fast <2s each)
+- `@pytest.mark.integration` - Integration tests (requires Ollama, 10-30s each)
+- `@pytest.mark.slow` - Slow tests (>10s, includes most integration tests)
+
+**Marker combinations**:
+- Most integration tests are also marked `slow`
+- Use `-m "integration and not slow"` to run only fast integration tests
+- Use `-m "unit"` for fastest feedback (no Ollama needed)
 
 **Usage**:
 ```python
