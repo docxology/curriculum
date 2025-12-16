@@ -80,3 +80,12 @@
 2025-12-16 11:25:53,179 - __main__ - INFO - 📑 STAGE 03: Outline Generation
 2025-12-16 11:25:53,179 - __main__ - INFO - ────────────────────────────────────────────────────────────
 2025-12-16 11:25:53,179 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/03_generate_outline.py --config-dir /Users/4d/Documents/GitHub/curriculum/config --course tree_grafting
+2025-12-16 11:27:02,178 - __main__ - INFO - ✅ Stage 03 complete
+2025-12-16 11:27:02,181 - __main__ - INFO - 
+2025-12-16 11:27:02,181 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:27:02,186 - src.config.loader - INFO - Found most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json
+2025-12-16 11:27:02,186 - __main__ - INFO - Using outline for subsequent stages: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json
+2025-12-16 11:27:02,186 - __main__ - INFO - 
+2025-12-16 11:27:02,186 - __main__ - INFO - 📚 STAGE 04: Primary Materials Generation
+2025-12-16 11:27:02,186 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:27:02,186 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/04_generate_primary.py --config-dir /Users/4d/Documents/GitHub/curriculum/config --outline /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json --all

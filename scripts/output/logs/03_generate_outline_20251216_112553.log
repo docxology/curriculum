@@ -174,3 +174,73 @@ te...
 2025-12-16 11:26:38,204 - src.llm.client - INFO - [out:1a8f65] 📊 4.0s: 922c @230c/s (243ch, ~230t @58t/s)
 2025-12-16 11:26:40,207 - src.llm.client - INFO - [out:1a8f65] 📊 6.0s: 1378c @229c/s (366ch, ~344t @57t/s)
 2025-12-16 11:26:42,222 - src.llm.client - INFO - [out:1a8f65] 📊 8.0s: 1831c @228c/s (489ch, ~458t @57t/s)
+2025-12-16 11:26:44,222 - src.llm.client - INFO - [out:1a8f65] 📊 10.0s: 2294c @229c/s (607ch, ~574t @57t/s)
+2025-12-16 11:26:46,228 - src.llm.client - INFO - [out:1a8f65] 📊 12.0s: 2768c @230c/s (723ch, ~692t @58t/s)
+2025-12-16 11:26:48,233 - src.llm.client - INFO - [out:1a8f65] 📊 14.0s: 3123c @223c/s (819ch, ~781t @56t/s)
+2025-12-16 11:26:50,247 - src.llm.client - INFO - [out:1a8f65] 📊 16.0s: 3557c @222c/s (935ch, ~889t @55t/s)
+2025-12-16 11:26:52,257 - src.llm.client - INFO - [out:1a8f65] 📊 18.1s: 4028c @223c/s (1051ch, ~1007t @56t/s)
+2025-12-16 11:26:54,267 - src.llm.client - INFO - [out:1a8f65] 📊 20.1s: 4501c @224c/s (1168ch, ~1125t @56t/s)
+2025-12-16 11:26:56,281 - src.llm.client - INFO - [out:1a8f65] 📊 22.1s: 4934c @223c/s (1280ch, ~1234t @56t/s)
+2025-12-16 11:26:58,295 - src.llm.client - INFO - [out:1a8f65] 📊 24.1s: 5370c @223c/s (1394ch, ~1342t @56t/s)
+2025-12-16 11:27:00,305 - src.llm.client - INFO - [out:1a8f65] 📊 26.1s: 5848c @224c/s (1507ch, ~1462t @56t/s)
+2025-12-16 11:27:02,139 - src.llm.client - INFO - [out:1a8f65] ✓ Done 29.92s: 6250c (~554w @209c/s)
+2025-12-16 11:27:02,140 - src.generate.stages.stage1_outline - WARNING - Session count mismatch in metadata: metadata says 20, actual is 10
+2025-12-16 11:27:02,140 - src.generate.stages.stage1_outline - INFO - Updated course_metadata.total_sessions to 10
+2025-12-16 11:27:02,140 - src.generate.stages.stage1_outline - INFO - Outline JSON validation successful
+2025-12-16 11:27:02,140 - src.generate.stages.stage1_outline - INFO - JSON extraction and validation successful on retry attempt 1
+2025-12-16 11:27:02,140 - src.generate.stages.stage1_outline - INFO - Outline JSON validation successful
+2025-12-16 11:27:02,140 - src.generate.stages.stage1_outline - INFO - JSON parsed and validated successfully
+2025-12-16 11:27:02,140 - src.generate.stages.stage1_outline - INFO - Normalizing session numbering to global sequence...
+2025-12-16 11:27:02,140 - src.generate.stages.stage1_outline - INFO - Normalized session numbering: 1-10 across 10 modules
+2025-12-16 11:27:02,140 - src.generate.stages.stage1_outline - INFO - Running outline quality validation...
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - Outline quality score: 97.0/100 (excellent)
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - WARNING - Found 1 quality issues:
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - WARNING -   - Session count mismatch: expected 20, got 10
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - Quality recommendations:
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -   [MEDIUM] Found 1 balance issues. Consider redistributing sessions/concepts/objectives.
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - GENERATION & VALIDATION SUMMARY
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - Generated Output:
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -   • Modules: 10/10
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -   • Sessions: 10/20 (range: 1-10)
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -   • Avg Sessions/Module: 1.00
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -   • Learning Objectives: 11 total (1.10/session)
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -   • Key Concepts: 13 total (1.30/session)
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -   ✓ Module count: 10
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - WARNING -   ⚠️  Session count: 10 (expected 20)
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - WARNING -   ⚠️  Validation Warning (see above)
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -   📊 Quality Validation:
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -      • Overall Score: 97.0/100 (excellent)
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -      • Topic Overlaps: 0
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -      • Progression Issues: 0
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO -      • Balance Issues: 1
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:27:02,142 - src.generate.stages.stage1_outline - INFO - Converting JSON to markdown format...
+2025-12-16 11:27:02,143 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:27:02,143 - src.generate.stages.stage1_outline - INFO - OUTLINE GENERATION COMPLETE
+2025-12-16 11:27:02,143 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:27:02,143 - src.generate.stages.stage1_outline - INFO -   • Modules: 10/10
+2025-12-16 11:27:02,143 - src.generate.stages.stage1_outline - INFO -   • Sessions: 10
+2025-12-16 11:27:02,143 - src.generate.stages.stage1_outline - INFO -   • Size: 875 words, 256 lines
+2025-12-16 11:27:02,143 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO - Saved outline (markdown) to: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.md
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO - Saved outline (JSON) to: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO - ✅ FILES SAVED
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO -   📄 /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.md
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO -   📄 /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO - 📊 OUTLINE STATISTICS:
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO -   • Modules: 10
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO -   • Sessions: 10
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO -   • Words: 875
+2025-12-16 11:27:02,144 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:27:02,144 - src.generate.orchestration.pipeline - INFO - Stage 1 complete. Outline saved to: output/tree_grafting/outlines/course_outline_20251216_112702.md
+2025-12-16 11:27:02,144 - generate_outline - INFO - 
+2025-12-16 11:27:02,144 - generate_outline - INFO -   ✅ Outline Generated Successfully: output/tree_grafting/outlines/course_outline_20251216_112702.md

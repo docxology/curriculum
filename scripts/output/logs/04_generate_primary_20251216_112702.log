@@ -1,0 +1,62 @@
+2025-12-16 11:27:02,412 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/04_generate_primary_20251216_112702.log
+2025-12-16 11:27:02,412 - generate_primary - INFO - 
+2025-12-16 11:27:02,412 - generate_primary - INFO - 📚 STAGE 04: PRIMARY MATERIALS (Session-Based)
+2025-12-16 11:27:02,412 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:27:02,412 - generate_primary - INFO - Generating materials PER SESSION (not per module)
+2025-12-16 11:27:02,412 - generate_primary - INFO - Output structure: output/modules/module_XX/session_YY/[material].md
+2025-12-16 11:27:02,412 - generate_primary - INFO - 
+2025-12-16 11:27:02,412 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:27:02,413 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 11:27:02,426 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 11:27:02,427 - generate_primary - INFO - PRIMARY ARTIFACTS GENERATED PER SESSION:
+2025-12-16 11:27:02,427 - generate_primary - INFO -   1. lecture.md - Comprehensive instructional content
+2025-12-16 11:27:02,427 - generate_primary - INFO -   2. lab.md - Laboratory exercise with procedures
+2025-12-16 11:27:02,427 - generate_primary - INFO -   3. study_notes.md - Concise session summary
+2025-12-16 11:27:02,427 - generate_primary - INFO -   4. diagram_1.mmd, diagram_2.mmd, ... (up to 4 diagrams)
+2025-12-16 11:27:02,427 - generate_primary - INFO -   5. questions.md - Comprehension assessment questions
+2025-12-16 11:27:02,427 - generate_primary - INFO - 
+2025-12-16 11:27:02,427 - generate_primary - INFO - 
+2025-12-16 11:27:02,427 - generate_primary - INFO - ⚙️ CONFIGURATION
+2025-12-16 11:27:02,427 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:27:02,427 - generate_primary - INFO -   • Diagrams per Session: 4
+2025-12-16 11:27:02,427 - generate_primary - INFO -   • Log File: output/logs/04_generate_primary_20251216_112702.log
+2025-12-16 11:27:02,427 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:27:02,427 - generate_primary - INFO - Using specified outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json
+2025-12-16 11:27:02,427 - generate_primary - INFO - 
+2025-12-16 11:27:02,427 - generate_primary - INFO - Processing ALL modules from outline
+2025-12-16 11:27:02,427 - src.generate.orchestration.pipeline - INFO - Initializing Educational Course Generator pipeline...
+2025-12-16 11:27:02,427 - src.llm.client - INFO - Initialized OllamaClient: model=gemma3:4b, url=http://localhost:11434/api/generate
+2025-12-16 11:27:02,427 - src.generate.stages.stage1_outline - INFO - Initialized OutlineGenerator
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - Pipeline initialized successfully
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - STAGE 2: Generating Primary Content (Session-Based)
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - Using explicit outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - Processing 10 modules with session-based generation
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - Using course-specific output directory: output/tree_grafting/
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - Module 1: Grafting Theory & Biological Principles (1 sessions)
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO - 
+[1/10] Session 1: Cambial Activity & Wound Response
+2025-12-16 11:27:02,428 - src.generate.orchestration.pipeline - INFO -   → Generating lecture...
+2025-12-16 11:27:02,429 - src.generate.formats.lectures - INFO - Generating lecture for: Grafting Theory & Biological Principles (Session 1/10)
+2025-12-16 11:27:02,429 - src.llm.client - INFO - [lec:8fa8e9] 🚀 lec | m=gemma3:4b | p=3250c | t=180s
+2025-12-16 11:27:02,429 - src.llm.client - INFO - [lec:8fa8e9] Timeout configuration: connect=5s, read=180s (total limit: 180s)
+2025-12-16 11:27:02,429 - src.llm.client - INFO - [lec:8fa8e9] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 11:27:02,437 - src.llm.client - INFO - [lec:8fa8e9] Sending request to Ollama: model=gemma3:4b, operation=lecture, payload=6885 bytes, prompt=3250 chars
+2025-12-16 11:27:02,437 - src.llm.client - INFO - [lec:8fa8e9] Waiting for HTTP response (connect timeout: 5s, read timeout: 180s)...
+2025-12-16 11:27:03,654 - src.llm.request_handler - INFO - [lec:8fa8e9] ✓ Done 1.22s
+2025-12-16 11:27:03,654 - src.llm.client - INFO - [lec:8fa8e9] ✅ HTTP 200 in 1.22s
+2025-12-16 11:27:03,654 - src.llm.client - INFO - [lec:8fa8e9] 📡 Stream active (200)
+2025-12-16 11:27:03,654 - src.llm.client - INFO - [lec:8fa8e9] Starting stream parsing, waiting for first chunk...
+2025-12-16 11:27:05,660 - src.llm.client - INFO - [lec:8fa8e9] 📊 2.0s: 690c @344c/s (114ch, ~172t @86t/s)
+2025-12-16 11:27:07,661 - src.llm.client - INFO - [lec:8fa8e9] 📊 4.0s: 1300c @324c/s (230ch, ~325t @81t/s)
+2025-12-16 11:27:09,666 - src.llm.client - INFO - [lec:8fa8e9] 📊 6.0s: 1864c @310c/s (350ch, ~466t @78t/s)
+2025-12-16 11:27:11,669 - src.llm.client - INFO - [lec:8fa8e9] 📊 8.0s: 2502c @312c/s (470ch, ~626t @78t/s)
+2025-12-16 11:27:13,684 - src.llm.client - INFO - [lec:8fa8e9] 📊 10.0s: 3108c @310c/s (588ch, ~777t @77t/s)
+2025-12-16 11:27:15,699 - src.llm.client - INFO - [lec:8fa8e9] 📊 12.0s: 3805c @316c/s (708ch, ~951t @79t/s)
+2025-12-16 11:27:17,710 - src.llm.client - INFO - [lec:8fa8e9] 📊 14.1s: 4417c @314c/s (827ch, ~1104t @79t/s)
+2025-12-16 11:27:19,711 - src.llm.client - INFO - [lec:8fa8e9] 📊 16.1s: 5040c @314c/s (940ch, ~1260t @78t/s)
+2025-12-16 11:27:21,722 - src.llm.client - INFO - [lec:8fa8e9] 📊 18.1s: 5774c @320c/s (1061ch, ~1444t @80t/s)

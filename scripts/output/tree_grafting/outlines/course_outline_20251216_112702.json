@@ -1,0 +1,246 @@
+{
+  "course_metadata": {
+    "name": "Tree Grafting: Fundamentals to Advanced Techniques",
+    "level": "Undergraduate / Professional Development",
+    "duration_weeks": "Not specified",
+    "total_sessions": 10,
+    "total_modules": 10,
+    "course_template": "tree_grafting",
+    "quality_score": 97.0,
+    "quality_level": "excellent",
+    "quality_validation": {
+      "overlap_count": 0,
+      "progression_issue_count": 0,
+      "balance_issue_count": 1
+    }
+  },
+  "modules": [
+    {
+      "module_id": 1,
+      "module_name": "Grafting Theory & Biological Principles",
+      "module_description": "Foundational understanding of cambial activity, callus formation, and graft compatibility.",
+      "sessions": [
+        {
+          "session_number": 1,
+          "session_title": "Cambial Activity & Wound Response",
+          "subtopics": [
+            "Cambial Zone Definition",
+            "Wound Healing Stages",
+            "Cellular Mechanisms"
+          ],
+          "learning_objectives": [
+            "Explain cambial activity",
+            "Describe wound response phases"
+          ],
+          "key_concepts": [
+            "Cambium",
+            "Callus",
+            "Phyllokinesis"
+          ],
+          "rationale": "Establishes the biological basis for grafting."
+        }
+      ]
+    },
+    {
+      "module_id": 2,
+      "module_name": "Basic Grafting Techniques: Whip & Tongue",
+      "module_description": "Practical application of whip-and-tongue grafting on common fruit trees.",
+      "sessions": [
+        {
+          "session_number": 2,
+          "session_title": "Whip-and-Tongue Grafting \u2013 Demonstration & Practice",
+          "subtopics": [
+            "Tool Selection",
+            "Blade Angle",
+            "Correct Alignment"
+          ],
+          "learning_objectives": [
+            "Perform whip-and-tongue grafting"
+          ],
+          "key_concepts": [
+            "Cambial Contact",
+            "Graft Union"
+          ],
+          "rationale": "Introduces the fundamental grafting technique."
+        }
+      ]
+    },
+    {
+      "module_id": 3,
+      "module_name": "Cleft Grafting & Crust Grafting",
+      "module_description": "Techniques for creating single-branch grafts.",
+      "sessions": [
+        {
+          "session_number": 3,
+          "session_title": "Cleft & Crust Grafting \u2013 Technique & Considerations",
+          "subtopics": [
+            "Preparing the Cleft",
+            "Binding Methods"
+          ],
+          "learning_objectives": [
+            "Execute cleft grafting"
+          ],
+          "key_concepts": [
+            "Graft Acceptance Rates"
+          ],
+          "rationale": "Provides alternative grafting methods for different scion sizes."
+        }
+      ]
+    },
+    {
+      "module_id": 4,
+      "module_name": "Bark Grafting (Bark Grafting)",
+      "module_description": "Creating grafts using bark strips.",
+      "sessions": [
+        {
+          "session_number": 4,
+          "session_title": "Bark Grafting \u2013 Procedure & Troubleshooting",
+          "subtopics": [
+            "Bark Preparation",
+            "Binding Techniques"
+          ],
+          "learning_objectives": [
+            "Perform bark grafting"
+          ],
+          "key_concepts": [
+            "Graft Collar"
+          ],
+          "rationale": "Explores a technique suited for larger scions."
+        }
+      ]
+    },
+    {
+      "module_id": 5,
+      "module_name": "Budding Techniques (T-Budding)",
+      "module_description": "Introduction to budding, specifically T-budding.",
+      "sessions": [
+        {
+          "session_number": 5,
+          "session_title": "T-Budding \u2013 Demonstration & Application",
+          "subtopics": [
+            "Scion Preparation",
+            "Insertion Technique"
+          ],
+          "learning_objectives": [
+            "Perform T-budding"
+          ],
+          "key_concepts": [
+            "Bud Shield"
+          ],
+          "rationale": "Introduces a common budding technique."
+        }
+      ]
+    },
+    {
+      "module_id": 6,
+      "module_name": "Bridge Grafting \u2013 Intermediate Technique",
+      "module_description": "Combining elements of cleft and bark grafting.",
+      "sessions": [
+        {
+          "session_number": 6,
+          "session_title": "Bridge Grafting \u2013 Technique & Best Practices",
+          "subtopics": [
+            "Preparing the Rootstock",
+            "Binding String"
+          ],
+          "learning_objectives": [
+            "Execute bridge grafting"
+          ],
+          "key_concepts": [
+            "Graft Union Success"
+          ],
+          "rationale": "Offers increased compatibility in specific scenarios."
+        }
+      ]
+    },
+    {
+      "module_id": 7,
+      "module_name": "Inarching \u2013 Expanding Grafting Options",
+      "module_description": "Grafting using side shoots.",
+      "sessions": [
+        {
+          "session_number": 7,
+          "session_title": "Inarching \u2013 Procedure & Considerations",
+          "subtopics": [
+            "Rootstock Selection",
+            "Timing of Grafting"
+          ],
+          "learning_objectives": [
+            "Perform inarching"
+          ],
+          "key_concepts": [
+            "Graft Contact Area"
+          ],
+          "rationale": "Provides an alternative method for grafting onto established trees."
+        }
+      ]
+    },
+    {
+      "module_id": 8,
+      "module_name": "Topworking \u2013 Advanced Grafting",
+      "module_description": "Grafting for crown shaping and fruit production.",
+      "sessions": [
+        {
+          "session_number": 8,
+          "session_title": "Topworking \u2013 Technique & Timing",
+          "subtopics": [
+            "Scion Selection",
+            "Graft Placement"
+          ],
+          "learning_objectives": [
+            "Perform topworking"
+          ],
+          "key_concepts": [
+            "Crown Architecture"
+          ],
+          "rationale": "Allows for controlled growth and fruit production."
+        }
+      ]
+    },
+    {
+      "module_id": 9,
+      "module_name": "Frameworking \u2013 Enhancing Tree Structure",
+      "module_description": "Grafting for structural support and aesthetic design.",
+      "sessions": [
+        {
+          "session_number": 9,
+          "session_title": "Frameworking \u2013 Grafting for Stability",
+          "subtopics": [
+            "Scion Size & Placement",
+            "Binding Strength"
+          ],
+          "learning_objectives": [
+            "Perform framework grafting"
+          ],
+          "key_concepts": [
+            "Graft Stability"
+          ],
+          "rationale": "Provides structural reinforcement and improved tree architecture."
+        }
+      ]
+    },
+    {
+      "module_id": 10,
+      "module_name": "Grafting Troubleshooting & Maintenance",
+      "module_description": "Diagnosing and addressing common grafting problems.",
+      "sessions": [
+        {
+          "session_number": 10,
+          "session_title": "Graft Failure Analysis & Remediation",
+          "subtopics": [
+            "Desiccation",
+            "Disease Transmission",
+            "Poor Cambial Contact"
+          ],
+          "learning_objectives": [
+            "Diagnose graft failures"
+          ],
+          "key_concepts": [
+            "Graft Management"
+          ],
+          "rationale": "Ensures graft success and optimal tree health."
+        }
+      ]
+    }
+  ]
+}
