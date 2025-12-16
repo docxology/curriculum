@@ -1,0 +1,33 @@
+2025-12-16 11:13:34,572 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/05_generate_secondary_20251216_111334.log
+2025-12-16 11:13:34,572 - generate_secondary - INFO - 
+2025-12-16 11:13:34,572 - generate_secondary - INFO - 🔬 STAGE 05: SECONDARY MATERIALS (Session-Level Synthesis)
+2025-12-16 11:13:34,572 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:13:34,572 - generate_secondary - INFO - Generating materials PER SESSION (with full session context)
+2025-12-16 11:13:34,572 - generate_secondary - INFO - Reading all content from: [course-specific]/modules/module_XX/session_YY/
+2025-12-16 11:13:34,572 - generate_secondary - INFO - Output structure: [course-specific]/modules/module_XX/session_YY/[type].md
+2025-12-16 11:13:34,572 - generate_secondary - INFO - 
+2025-12-16 11:13:34,572 - generate_secondary - INFO - SECONDARY TYPES GENERATED PER SESSION:
+2025-12-16 11:13:34,572 - generate_secondary - INFO -   1. application.md - Real-world applications and case studies
+2025-12-16 11:13:34,572 - generate_secondary - INFO -   2. extension.md - Advanced topics beyond core curriculum
+2025-12-16 11:13:34,572 - generate_secondary - INFO -   3. visualization.mmd - Additional diagrams and concept maps (Mermaid format)
+2025-12-16 11:13:34,572 - generate_secondary - INFO -   4. integration.md - Cross-module connections and synthesis
+2025-12-16 11:13:34,572 - generate_secondary - INFO -   5. investigation.md - Research questions and experiments
+2025-12-16 11:13:34,572 - generate_secondary - INFO -   6. open_questions.md - Current scientific debates and frontiers
+2025-12-16 11:13:34,572 - generate_secondary - INFO - 
+2025-12-16 11:13:34,572 - generate_secondary - INFO - 
+2025-12-16 11:13:34,572 - generate_secondary - INFO - ⚙️ CONFIGURATION
+2025-12-16 11:13:34,572 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:13:34,572 - generate_secondary - INFO -   • Content Validation: DISABLED
+2025-12-16 11:13:34,573 - generate_secondary - INFO -   • Dry Run: DISABLED
+2025-12-16 11:13:34,573 - generate_secondary - INFO -   • Log File: output/logs/05_generate_secondary_20251216_111334.log
+2025-12-16 11:13:34,573 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:13:34,573 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:13:34,573 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 11:13:34,587 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 11:13:34,587 - generate_secondary - INFO - Using most recent outline from output/outlines/ or scripts/output/outlines/
+2025-12-16 11:13:34,587 - src.config.loader - INFO - Found most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/outlines/course_outline_20251216_104720.json
+2025-12-16 11:13:34,588 - src.config.loader - INFO - Found most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/outlines/course_outline_20251216_104720.json
+2025-12-16 11:13:34,588 - src.config.loader - INFO - Loaded 0 modules from outline: course_outline_20251216_104720.json
+2025-12-16 11:13:34,588 - generate_secondary - ERROR - No outline found or outline contains no modules
+2025-12-16 11:13:34,588 - generate_secondary - ERROR - Generate an outline first:
+2025-12-16 11:13:34,588 - generate_secondary - ERROR -   uv run python3 scripts/03_generate_outline.py

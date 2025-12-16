@@ -1,0 +1,119 @@
+2025-12-16 11:03:09,247 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/01_setup_environment_20251216_110309.log
+2025-12-16 11:03:09,247 - setup_environment - INFO - 
+2025-12-16 11:03:09,247 - setup_environment - INFO - 🔧 EDUCATIONAL COURSE GENERATOR - ENVIRONMENT SETUP
+2025-12-16 11:03:09,247 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,247 - setup_environment - INFO - 📝 Log file: output/logs/01_setup_environment_20251216_110309.log
+2025-12-16 11:03:09,247 - setup_environment - INFO - 
+2025-12-16 11:03:09,260 - setup_environment - INFO - 
+2025-12-16 11:03:09,260 - setup_environment - INFO - 💻 System Information
+2025-12-16 11:03:09,260 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,260 - setup_environment - INFO -   • Python Version: 3.13.11
+2025-12-16 11:03:09,260 - setup_environment - INFO -   • Python Executable: /opt/homebrew/opt/python@3.13/bin/python3.13
+2025-12-16 11:03:09,260 - setup_environment - INFO -   • Platform: macOS-26.2-arm64-arm-64bit-Mach-O
+2025-12-16 11:03:09,260 - setup_environment - INFO -   • OS: Darwin
+2025-12-16 11:03:09,260 - setup_environment - INFO -   • Architecture: arm64
+2025-12-16 11:03:09,260 - setup_environment - INFO -   • Hostname: timelock.local
+2025-12-16 11:03:09,260 - setup_environment - INFO -   • Repository Root: /Users/4d/Documents/GitHub/curriculum
+2025-12-16 11:03:09,260 - setup_environment - INFO -   • Disk Free: 128.7 GB
+2025-12-16 11:03:09,260 - setup_environment - INFO -   • Disk Usage: 72.1%
+2025-12-16 11:03:09,260 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,260 - setup_environment - INFO - 
+2025-12-16 11:03:09,260 - setup_environment - INFO - 
+2025-12-16 11:03:09,260 - setup_environment - INFO - 🔧 Tool Availability
+2025-12-16 11:03:09,260 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,321 - setup_environment - INFO -   ✅ uv................ uv 0.9.17 (Homebrew 2025-12-09)
+2025-12-16 11:03:09,365 - setup_environment - INFO -   ✅ python3........... Python 3.13.11
+2025-12-16 11:03:09,375 - setup_environment - INFO -   ✅ git............... git version 2.50.1 (Apple Git-155)
+2025-12-16 11:03:09,395 - setup_environment - INFO -   ✅ ollama............ ollama version is 0.13.3
+2025-12-16 11:03:09,395 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,395 - setup_environment - INFO - 
+2025-12-16 11:03:09,395 - setup_environment - INFO - 
+2025-12-16 11:03:09,395 - setup_environment - INFO - ⚙️  Configuration Validation
+2025-12-16 11:03:09,395 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,395 - setup_environment - INFO -   📁 Config directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:03:09,395 - setup_environment - INFO - 
+2025-12-16 11:03:09,395 - setup_environment - INFO -   📄 Configuration Files:
+2025-12-16 11:03:09,395 - setup_environment - INFO -     ✅ course_config.yaml....... Course structure (  880 bytes)
+2025-12-16 11:03:09,395 - setup_environment - INFO -     ✅ llm_config.yaml.......... LLM settings... (59,366 bytes)
+2025-12-16 11:03:09,396 - setup_environment - INFO -     ✅ output_config.yaml....... Output paths... (2,276 bytes)
+2025-12-16 11:03:09,396 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:03:09,396 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 11:03:09,411 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 11:03:09,411 - setup_environment - INFO -   ✅ All configurations validated
+2025-12-16 11:03:09,411 - setup_environment - INFO - 
+2025-12-16 11:03:09,412 - src.config.loader - INFO - Found most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/outlines/course_outline_20251216_104720.json
+2025-12-16 11:03:09,412 - src.config.loader - INFO - Loaded 0 modules from outline: course_outline_20251216_104720.json
+2025-12-16 11:03:09,412 - setup_environment - INFO -   📚 Course Information:
+2025-12-16 11:03:09,412 - setup_environment - INFO -     • Course: Introductory Biology
+2025-12-16 11:03:09,412 - setup_environment - INFO -     • Level:  Undergraduate Introductory
+2025-12-16 11:03:09,412 - setup_environment - INFO -     • Modules loaded: 0
+2025-12-16 11:03:09,412 - setup_environment - INFO - 
+2025-12-16 11:03:09,412 - setup_environment - INFO -   🤖 LLM Configuration:
+2025-12-16 11:03:09,412 - setup_environment - INFO -     • Model: gemma3:4b
+2025-12-16 11:03:09,412 - setup_environment - INFO -     • Temperature: 0.7, Max Tokens: 64000
+2025-12-16 11:03:09,413 - setup_environment - INFO - 
+2025-12-16 11:03:09,413 - setup_environment - INFO -   📂 Output base: output (4 directories)
+2025-12-16 11:03:09,413 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,413 - setup_environment - INFO - 
+2025-12-16 11:03:09,413 - setup_environment - INFO - 
+2025-12-16 11:03:09,413 - setup_environment - INFO - 📂 Output Directory Structure
+2025-12-16 11:03:09,413 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,414 - setup_environment - INFO -   ✅ Base exists: output
+2025-12-16 11:03:09,414 - setup_environment - INFO -   📁 Default directory structure
+2025-12-16 11:03:09,414 - setup_environment - INFO -   ✅ Exists:  logs.............. → logs (39 files)
+2025-12-16 11:03:09,415 - setup_environment - INFO -   ✅ Exists:  modules........... → modules
+2025-12-16 11:03:09,415 - setup_environment - INFO -   ✅ Exists:  outlines.......... → outlines (11 files)
+2025-12-16 11:03:09,415 - setup_environment - INFO -   ✅ Exists:  website........... → website
+2025-12-16 11:03:09,415 - setup_environment - INFO - 
+2025-12-16 11:03:09,415 - setup_environment - INFO -   📊 Total directories: 5 (created: 0)
+2025-12-16 11:03:09,415 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,415 - setup_environment - INFO - 
+2025-12-16 11:03:09,415 - setup_environment - INFO - 
+2025-12-16 11:03:09,415 - setup_environment - INFO - 🤖 Ollama Service Status
+2025-12-16 11:03:09,415 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,420 - setup_environment - INFO -   ✅ Service is running
+2025-12-16 11:03:09,420 - setup_environment - INFO -   📋 Checking available models...
+2025-12-16 11:03:09,439 - setup_environment - INFO -     • embeddinggemma:latest
+2025-12-16 11:03:09,439 - setup_environment - INFO -     • deepcoder:1.5b
+2025-12-16 11:03:09,439 - setup_environment - INFO -     • gemma3:4b
+2025-12-16 11:03:09,439 - setup_environment - INFO -     • ministral-3:3b
+2025-12-16 11:03:09,439 - setup_environment - INFO -     • qwen3-vl:2b
+2025-12-16 11:03:09,439 - setup_environment - INFO -   📊 Total models: 5
+2025-12-16 11:03:09,439 - setup_environment - INFO - 
+2025-12-16 11:03:09,439 - setup_environment - INFO -   🎯 Configured model: gemma3:4b
+2025-12-16 11:03:09,452 - setup_environment - INFO -   ✅ Model 'gemma3:4b' is available
+2025-12-16 11:03:09,453 - setup_environment - INFO - 
+2025-12-16 11:03:09,453 - setup_environment - INFO -   🎮 Checking GPU acceleration...
+2025-12-16 11:03:09,465 - setup_environment - INFO -   ℹ️  No models currently loaded (GPU check requires active model)
+2025-12-16 11:03:09,465 - setup_environment - INFO -   💡 GPU will be verified when model is first used
+2025-12-16 11:03:09,465 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,465 - setup_environment - INFO - 
+2025-12-16 11:03:09,465 - setup_environment - INFO - 
+2025-12-16 11:03:09,465 - setup_environment - INFO - 📊 ENVIRONMENT SETUP SUMMARY
+2025-12-16 11:03:09,465 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,465 - setup_environment - INFO - ✅ Overall Status: READY
+2025-12-16 11:03:09,465 - setup_environment - INFO - 
+2025-12-16 11:03:09,465 - setup_environment - INFO - 💻 System:
+2025-12-16 11:03:09,465 - setup_environment - INFO -   • Python: 3.13.11
+2025-12-16 11:03:09,465 - setup_environment - INFO -   • Platform: macOS-26.2-arm64-arm-64bit-Mach-O
+2025-12-16 11:03:09,465 - setup_environment - INFO -   • Disk Free: 128.7 GB
+2025-12-16 11:03:09,465 - setup_environment - INFO - 
+2025-12-16 11:03:09,465 - setup_environment - INFO - 🔧 Tools:
+2025-12-16 11:03:09,465 - setup_environment - INFO -   ✅ uv: uv 0.9.17 (Homebrew 2025-12-09)
+2025-12-16 11:03:09,465 - setup_environment - INFO -   ✅ python3: Python 3.13.11
+2025-12-16 11:03:09,465 - setup_environment - INFO -   ✅ git: git version 2.50.1 (Apple Git-155)
+2025-12-16 11:03:09,465 - setup_environment - INFO -   ✅ ollama: ollama version is 0.13.3
+2025-12-16 11:03:09,465 - setup_environment - INFO - 
+2025-12-16 11:03:09,465 - setup_environment - INFO - ⚙️  Configuration:
+2025-12-16 11:03:09,465 - setup_environment - INFO -   • Modules: 0
+2025-12-16 11:03:09,465 - setup_environment - INFO -   • LLM Model: gemma3:4b
+2025-12-16 11:03:09,465 - setup_environment - INFO -   • Output Directories: 4
+2025-12-16 11:03:09,465 - setup_environment - INFO - 
+2025-12-16 11:03:09,465 - setup_environment - INFO - 🤖 Ollama:
+2025-12-16 11:03:09,465 - setup_environment - INFO -   ✅ Service: Running
+2025-12-16 11:03:09,465 - setup_environment - INFO -   📊 Available Models: 5
+2025-12-16 11:03:09,465 - setup_environment - INFO -   ✅ Configured Model: Available
+2025-12-16 11:03:09,465 - setup_environment - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:03:09,465 - setup_environment - INFO - 
+2025-12-16 11:03:09,465 - setup_environment - INFO - ✅ Environment is ready for validation and testing
+2025-12-16 11:03:09,465 - setup_environment - INFO -   💡 Next step: uv run python3 scripts/02_run_tests.py

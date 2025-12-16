@@ -210,7 +210,11 @@ Generates primary materials for each session: lectures, labs, study notes, diagr
 
 **Outline discovery**:
 ```python
-# Automatic (preferred for hands-off):
+# Priority 1: Explicit path (if --outline provided)
+# The specified outline path is passed to ContentGenerator and takes precedence
+--outline path/to/specific_outline.json
+
+# Priority 2: Automatic discovery (if --outline not provided)
 # Searches multiple locations in order:
 # 1. Course-specific: output/{course_name}/outlines/
 # 2. Config-specified: {base_directory}/outlines/
@@ -218,10 +222,9 @@ Generates primary materials for each session: lectures, labs, study notes, diagr
 # 4. Scripts: scripts/output/outlines/
 # 5. All course dirs: output/{course}/outlines/ (batch mode)
 # Selects: Most recent course_outline_*.json by modification time
-
-# Manual override:
---outline path/to/specific_outline.json
 ```
+
+**Note**: When `--outline` is provided, it is passed to `ContentGenerator` during initialization and takes precedence over auto-discovery. This ensures consistent outline usage throughout the generation process.
 
 **Hands-off usage**:
 ```bash

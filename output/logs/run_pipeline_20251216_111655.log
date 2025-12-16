@@ -1,0 +1,20 @@
+2025-12-16 11:16:55,025 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/output/logs/run_pipeline_20251216_111655.log
+2025-12-16 11:16:55,025 - __main__ - INFO - 
+2025-12-16 11:16:55,025 - __main__ - INFO - 🚀 EDUCATIONAL COURSE GENERATOR - Full Pipeline
+2025-12-16 11:16:55,025 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:16:55,025 - __main__ - INFO - 📝 Log file: output/logs/run_pipeline_20251216_111655.log
+2025-12-16 11:16:55,025 - __main__ - INFO - 
+2025-12-16 11:16:55,025 - __main__ - INFO - 
+2025-12-16 11:16:55,025 - __main__ - INFO - ⚙️ Configuration
+2025-12-16 11:16:55,025 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:16:55,025 - __main__ - INFO -   • Config Directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:16:55,025 - __main__ - INFO -   • Project Root: /Users/4d/Documents/GitHub/curriculum
+2025-12-16 11:16:55,025 - __main__ - INFO -   • Python Executable: /Users/4d/Documents/GitHub/curriculum/.venv/bin/python3
+2025-12-16 11:16:55,025 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:16:55,025 - __main__ - INFO - ⏭️  Skipping Stage 01 (environment setup)
+2025-12-16 11:16:55,025 - __main__ - INFO - ⏭️  Skipping Stage 02 (validation/testing)
+2025-12-16 11:16:55,025 - __main__ - INFO - 
+2025-12-16 11:16:55,025 - __main__ - INFO - 📑 STAGE 03: Outline Generation
+2025-12-16 11:16:55,025 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:16:55,025 - __main__ - INFO - Running: /Users/4d/Documents/GitHub/curriculum/.venv/bin/python3 /Users/4d/Documents/GitHub/curriculum/scripts/03_generate_outline.py --config-dir /Users/4d/Documents/GitHub/curriculum/config --no-interactive --course tree_grafting
+2025-12-16 11:18:01,646 - __main__ - ERROR - ❌ Stage 03 failed with exit code 120

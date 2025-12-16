@@ -19,6 +19,7 @@ import argparse
 import logging
 import os
 import subprocess
+from typing import Optional
 from src.config.loader import ConfigLoader
 from src.generate.orchestration.batch import BatchCourseProcessor
 from src.utils.course_selection import select_course_template, GENERATE_ALL_COURSES
@@ -126,13 +127,14 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def run_script(script_name: str, args: argparse.Namespace, logger: logging.Logger) -> int:
+def run_script(script_name: str, args: argparse.Namespace, logger: logging.Logger, outline_path: Optional[Path] = None) -> int:
     """Run a numbered script and return exit code.
     
     Args:
         script_name: Name of script to run (e.g., '01_setup_environment.py')
         args: Parsed command-line arguments
         logger: Logger instance
+        outline_path: Optional path to outline file (for stages 04-06)
         
     Returns:
         Exit code from the script
@@ -157,6 +159,8 @@ def run_script(script_name: str, args: argparse.Namespace, logger: logging.Logge
             cmd.extend(['--course', args.course])
     
     elif script_name == '04_generate_primary.py':
+        if outline_path:
+            cmd.extend(['--outline', str(outline_path)])
         if args.modules:
             cmd.append('--modules')
             cmd.extend([str(m) for m in args.modules])
@@ -164,6 +168,8 @@ def run_script(script_name: str, args: argparse.Namespace, logger: logging.Logge
             cmd.append('--all')
     
     elif script_name == '05_generate_secondary.py':
+        if outline_path:
+            cmd.extend(['--outline', str(outline_path)])
         if args.modules:
             cmd.append('--modules')
             cmd.extend([str(m) for m in args.modules])
@@ -174,8 +180,8 @@ def run_script(script_name: str, args: argparse.Namespace, logger: logging.Logge
             cmd.extend(['--types'] + args.types)
     
     elif script_name == '06_website.py':
-        # No special arguments needed for website script
-        pass
+        if outline_path:
+            cmd.extend(['--outline', str(outline_path)])
     
     logger.info(f"Running: {' '.join(str(c) for c in cmd)}")
     
@@ -295,6 +301,7 @@ def main() -> int:
         args.course = selected_course
     
     # Stage 03: Outline Generation
+    outline_path = None
     if not args.skip_outline:
         log_section_clean(logger, "STAGE 03: Outline Generation", emoji="📑")
         rc = run_script('03_generate_outline.py', args, logger)
@@ -304,13 +311,22 @@ def main() -> int:
             stages_failed += 1
             return rc
         logger.info("✅ Stage 03 complete")
+        logger.info("")
+        
+        # Find the generated outline to pass to subsequent stages
+        config_loader = ConfigLoader(args.config_dir)
+        outline_path = config_loader._find_latest_outline_json(course_name=args.course)
+        if outline_path:
+            logger.info(f"Using outline for subsequent stages: {outline_path}")
+        else:
+            logger.warning("Could not find generated outline - stages 04-06 may fail")
     else:
         logger.info("⏭️  Skipping Stage 03 (outline generation)")
     
     # Stage 04: Primary Materials
     if not args.skip_primary:
         log_section_clean(logger, "STAGE 04: Primary Materials Generation", emoji="📚")
-        rc = run_script('04_generate_primary.py', args, logger)
+        rc = run_script('04_generate_primary.py', args, logger, outline_path)
         stages_run += 1
         if rc != 0:
             logger.error(f"❌ Stage 04 failed with exit code {rc}")
@@ -324,7 +340,7 @@ def main() -> int:
     # Stage 05: Secondary Materials
     if not args.skip_secondary:
         log_section_clean(logger, "STAGE 05: Secondary Materials Generation", emoji="📖")
-        rc = run_script('05_generate_secondary.py', args, logger)
+        rc = run_script('05_generate_secondary.py', args, logger, outline_path)
         stages_run += 1
         if rc != 0:
             logger.error(f"❌ Stage 05 failed with exit code {rc}")
@@ -337,7 +353,7 @@ def main() -> int:
     # Stage 06: Website Generation
     if not args.skip_website:
         log_section_clean(logger, "STAGE 06: Website Generation", emoji="🌐")
-        rc = run_script('06_website.py', args, logger)
+        rc = run_script('06_website.py', args, logger, outline_path)
         stages_run += 1
         if rc != 0:
             logger.error(f"❌ Stage 06 failed with exit code {rc}")

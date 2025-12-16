@@ -51,13 +51,17 @@ class ContentGenerator:
         question_generator: Question generator
     """
     
-    def __init__(self, config_loader: ConfigLoader):
+    def __init__(self, config_loader: ConfigLoader, outline_path: Optional[Path] = None):
         """Initialize the pipeline.
         
         Args:
             config_loader: Configuration loader instance
+            outline_path: Optional explicit path to outline JSON file.
+                         If provided, this outline will be used for all operations.
+                         If None, auto-discovery will be used.
         """
         self.config_loader = config_loader
+        self.outline_path = outline_path  # Store for use in all methods
         self.error_collector = ErrorCollector()
         
         # Setup logging
@@ -282,7 +286,9 @@ class ContentGenerator:
     def _load_latest_outline_json(self, course_name: Optional[str] = None) -> Optional[Dict[str, Any]]:
         """Load the most recent JSON outline.
         
-        Delegates to ConfigLoader to find the outline file, then loads and parses it.
+        Priority:
+        1. Use self.outline_path if explicitly provided during initialization
+        2. Fall back to auto-discovery (course-aware search)
         
         Args:
             course_name: Optional course template name to search in course-specific directory
@@ -290,7 +296,20 @@ class ContentGenerator:
         Returns:
             Parsed JSON outline data or None if not found
         """
-        # Use ConfigLoader to find the latest outline
+        # Priority 1: Use explicit path if provided
+        if self.outline_path:
+            if not self.outline_path.exists():
+                logger.error(f"Explicit outline path not found: {self.outline_path}")
+                return None
+            try:
+                with open(self.outline_path, 'r', encoding='utf-8') as f:
+                    logger.info(f"Using explicit outline: {self.outline_path}")
+                    return json.load(f)
+            except Exception as e:
+                logger.error(f"Failed to load explicit outline: {e}")
+                return None
+        
+        # Priority 2: Auto-discovery (course-aware search)
         outline_path = self.config_loader._find_latest_outline_json(course_name=course_name)
         
         if not outline_path:

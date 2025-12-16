@@ -20,6 +20,11 @@ from src.generate.orchestration.pipeline import ContentGenerator
 loader = ConfigLoader("config")
 generator = ContentGenerator(loader)
 
+# Initialize with explicit outline path (optional)
+# If provided, this outline will be used for all operations instead of auto-discovery
+outline_path = Path("output/tree_grafting/outlines/course_outline_20251216.json")
+generator = ContentGenerator(loader, outline_path=outline_path)
+
 # Automatically initializes:
 # - OllamaClient (from LLM config)
 # - OutlineGenerator
@@ -29,6 +34,14 @@ generator = ContentGenerator(loader)
 # - DiagramGenerator
 # - QuestionGenerator
 ```
+
+**Outline Path Priority**:
+- If `outline_path` is provided during initialization, it takes precedence over auto-discovery
+- If `outline_path` is `None` (default), the system uses course-aware auto-discovery:
+  1. Course-specific directory: `output/{course_name}/outlines/`
+  2. Config-specified directory
+  3. Project root: `output/outlines/`
+  4. Scripts directory: `scripts/output/outlines/`
 
 ### Workflow Methods
 

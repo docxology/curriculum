@@ -1,0 +1,192 @@
+{
+  "course_metadata": {
+    "name": "Tree Grafting: From Introduction to Advanced",
+    "level": "Graduate comprehensive",
+    "duration_weeks": "Not specified",
+    "total_sessions": 8,
+    "total_modules": 4,
+    "course_template": "active_inference",
+    "quality_score": 100.0,
+    "quality_level": "excellent",
+    "quality_validation": {
+      "overlap_count": 1,
+      "progression_issue_count": 0,
+      "balance_issue_count": 0
+    }
+  },
+  "modules": [
+    {
+      "module_id": 1,
+      "module_name": "Historical & Biological Foundations of Grafting",
+      "module_description": "Exploring the historical roots of grafting techniques and fundamental biological principles underlying graft success.",
+      "sessions": [
+        {
+          "session_number": 1,
+          "session_title": "Ancient Grafting Practices",
+          "subtopics": [
+            "Ancient Chinese grafting techniques",
+            "Roman viticulture & grafting",
+            "Medieval European grafting innovations"
+          ],
+          "learning_objectives": [
+            "Identify key historical grafting methods",
+            "Analyze the cultural significance of early grafting"
+          ],
+          "key_concepts": [
+            "Cambium layer",
+            "Wood anatomy",
+            "Vegetative propagation"
+          ],
+          "rationale": "Establishes the context of grafting's evolution."
+        },
+        {
+          "session_number": 2,
+          "session_title": "Plant Physiology & Graft Success",
+          "subtopics": [
+            "Cellular responses to wounding",
+            "Nutrient uptake & translocation",
+            "Hormonal regulation of grafting"
+          ],
+          "learning_objectives": [
+            "Explain the physiological processes involved in graft integration",
+            "Describe how environmental factors affect graft healing"
+          ],
+          "key_concepts": [
+            "Phloem transport",
+            "Xylem transport",
+            "Wound healing stages"
+          ],
+          "rationale": "Provides a scientific basis for understanding graft integration."
+        }
+      ]
+    },
+    {
+      "module_id": 2,
+      "module_name": "Grafting Techniques: Practical Application",
+      "module_description": "Hands-on training in various grafting methods, focusing on precision and technique.",
+      "sessions": [
+        {
+          "session_number": 3,
+          "session_title": "Budding Techniques",
+          "subtopics": [
+            "T-budding",
+            "Chip budding",
+            "Whip & bend budding"
+          ],
+          "learning_objectives": [
+            "Execute various budding methods correctly",
+            "Assess the suitability of different methods for various species"
+          ],
+          "key_concepts": [
+            "Scion physiology",
+            "Rootstock compatibility"
+          ],
+          "rationale": "Develops core grafting skills."
+        },
+        {
+          "session_number": 4,
+          "session_title": "Whip & Bend Grafting",
+          "subtopics": [
+            "Creating whip grafts",
+            "Securing graft unions",
+            "Evaluating graft strength"
+          ],
+          "learning_objectives": [
+            "Perform whip & bend grafts effectively",
+            "Understand techniques for securing the graft"
+          ],
+          "key_concepts": [
+            "Wood stress",
+            "Graft union mechanics"
+          ],
+          "rationale": "Addresses a common and versatile grafting technique."
+        }
+      ]
+    },
+    {
+      "module_id": 3,
+      "module_name": "Advanced Grafting & Rootstock Selection",
+      "module_description": "Exploring specialized grafting techniques and the critical role of rootstock selection in achieving graft success.",
+      "sessions": [
+        {
+          "session_number": 5,
+          "session_title": "Approach Grafting & Cleft Grafting",
+          "subtopics": [
+            "Techniques for large graft unions",
+            "Precise scion placement"
+          ],
+          "learning_objectives": [
+            "Implement approach & cleft grafting strategies",
+            "Optimize scion exposure"
+          ],
+          "key_concepts": [
+            "Graft union volume",
+            "Light interception"
+          ],
+          "rationale": "Expands grafting capabilities to accommodate diverse tree forms."
+        },
+        {
+          "session_number": 6,
+          "session_title": "Rootstock Selection Criteria",
+          "subtopics": [
+            "Disease resistance",
+            "Growth rate",
+            "Compatibility with scion"
+          ],
+          "learning_objectives": [
+            "Analyze rootstock characteristics",
+            "Match rootstock to scion needs"
+          ],
+          "key_concepts": [
+            "Genetic diversity",
+            "Epigenetics"
+          ],
+          "rationale": "Highlights the strategic importance of rootstock choice."
+        }
+      ]
+    },
+    {
+      "module_id": 4,
+      "module_name": "Agro-Economics & Cultural Significance of Tree Grafting",
+      "module_description": "Examining the economic implications of tree grafting and its role in cultural traditions.",
+      "sessions": [
+        {
+          "session_number": 7,
+          "session_title": "Economic Impacts of Grafting",
+          "subtopics": [
+            "Grafting for orchard productivity",
+            "Market value of grafted trees",
+            "Investment analysis"
+          ],
+          "learning_objectives": [
+            "Assess the economic viability of grafting programs",
+            "Understand market dynamics"
+          ],
+          "key_concepts": [
+            "Return on investment",
+            "Production costs"
+          ],
+          "rationale": "Provides a practical economic perspective."
+        },
+        {
+          "session_number": 8,
+          "session_title": "Cultural Traditions & Esoteric Aspects",
+          "subtopics": [
+            "Traditional grafting practices in different cultures",
+            "The symbolic significance of grafting",
+            "Modern interpretations"
+          ],
+          "learning_objectives": [
+            "Explore the cultural context of grafting",
+            "Understand the spiritual significance"
+          ],
+          "key_concepts": [
+            "Folklore",
+            "Ritualistic practices"
+          ],
+          "rationale": "Offers a holistic view encompassing the historical and cultural dimensions."
+        }
+      ]
+    }
+  ]
+}

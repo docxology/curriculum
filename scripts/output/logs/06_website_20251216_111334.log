@@ -1,0 +1,21 @@
+2025-12-16 11:13:34,712 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/06_website_20251216_111334.log
+2025-12-16 11:13:34,712 - generate_website - INFO - 
+2025-12-16 11:13:34,712 - generate_website - INFO - 🌐 STAGE 06: WEBSITE GENERATION
+2025-12-16 11:13:34,712 - generate_website - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:13:34,712 - generate_website - INFO - Generating single HTML website for course materials
+2025-12-16 11:13:34,712 - generate_website - INFO - Output: output/website/index.html
+2025-12-16 11:13:34,712 - generate_website - INFO - 
+2025-12-16 11:13:34,712 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:13:34,713 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 11:13:34,728 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 11:13:34,728 - generate_website - INFO - 
+2025-12-16 11:13:34,728 - generate_website - INFO - ⚙️ CONFIGURATION
+2025-12-16 11:13:34,728 - generate_website - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:13:34,728 - generate_website - INFO -   • Config Directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:13:34,728 - generate_website - INFO -   • Log File: output/logs/06_website_20251216_111334.log
+2025-12-16 11:13:34,728 - generate_website - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:13:34,728 - src.config.loader - INFO - Found most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/outlines/course_outline_20251216_104720.json
+2025-12-16 11:13:34,728 - generate_website - INFO - Using most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/outlines/course_outline_20251216_104720.json
+2025-12-16 11:13:34,728 - generate_website - INFO - 
+2025-12-16 11:13:34,728 - src.website.generator - INFO - Loading outline from: /Users/4d/Documents/GitHub/curriculum/scripts/output/outlines/course_outline_20251216_104720.json
+2025-12-16 11:13:34,728 - generate_website - ERROR - Invalid data: No modules found in outline

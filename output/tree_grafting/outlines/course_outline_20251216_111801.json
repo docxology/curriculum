@@ -1,0 +1,269 @@
+{
+  "course_metadata": {
+    "name": "Tree Grafting: Fundamentals to Advanced Techniques",
+    "level": "Undergraduate / Professional Development",
+    "duration_weeks": "Not specified",
+    "total_sessions": 10,
+    "total_modules": 10,
+    "course_template": "tree_grafting",
+    "quality_score": 93.0,
+    "quality_level": "excellent",
+    "quality_validation": {
+      "overlap_count": 3,
+      "progression_issue_count": 0,
+      "balance_issue_count": 1
+    }
+  },
+  "modules": [
+    {
+      "module_id": 1,
+      "module_name": "Grafting Theory & Biological Principles",
+      "module_description": "Fundamental biology of graft compatibility: cambial alignment, callus formation, vascular reconnection.",
+      "sessions": [
+        {
+          "session_number": 1,
+          "session_title": "Introduction to Grafting - The Science",
+          "subtopics": [
+            "Grafting Definitions",
+            "Cambial Theory",
+            "Callus Formation",
+            "Vascular Reconnection"
+          ],
+          "learning_objectives": [
+            "Understand grafting terminology",
+            "Explain the biological basis of graft success",
+            "Describe the role of callus"
+          ],
+          "key_concepts": [
+            "Cambium",
+            "Callus",
+            "Vascular Union"
+          ],
+          "rationale": "Establishes the foundational biological principles."
+        }
+      ]
+    },
+    {
+      "module_id": 2,
+      "module_name": "Basic Grafting Techniques - Whip & Tongue",
+      "module_description": "Hands-on practice with whip-and-tongue grafting \u2013 foundational technique.",
+      "sessions": [
+        {
+          "session_number": 2,
+          "session_title": "Whip-and-Tongue Grafting - Technique",
+          "subtopics": [
+            "Knife Skills - Preparation",
+            "Whip-and-Tongue Formation",
+            "Binding Methods"
+          ],
+          "learning_objectives": [
+            "Properly prepare grafting materials",
+            "Create a whip-and-tongue graft"
+          ],
+          "key_concepts": [
+            "Cambial Alignment",
+            "Binding Materials"
+          ],
+          "rationale": "Provides a practical introduction to a common grafting technique."
+        }
+      ]
+    },
+    {
+      "module_id": 3,
+      "module_name": "Cleft Grafting & Bark Grafting",
+      "module_description": "Introduction to Cleft and Bark grafting \u2013 adapting to different wood conditions.",
+      "sessions": [
+        {
+          "session_number": 3,
+          "session_title": "Cleft Grafting - Technique & Considerations",
+          "subtopics": [
+            "Cleft Formation",
+            "Species-Specific Adaptations",
+            "Rootstock Selection"
+          ],
+          "learning_objectives": [
+            "Perform a cleft graft correctly",
+            "Understand species-specific considerations"
+          ],
+          "key_concepts": [
+            "Rootstock Influence",
+            "Vulnerability"
+          ],
+          "rationale": "Introduces alternative grafting methods and their adaptations."
+        }
+      ]
+    },
+    {
+      "module_id": 4,
+      "module_name": "Budding \u2013 T-Budding & Chip Budding",
+      "module_description": "Introduction to budding \u2013 utilizing scion buds for quick propagation.",
+      "sessions": [
+        {
+          "session_number": 4,
+          "session_title": "T-Budding \u2013 Technique and Applications",
+          "subtopics": [
+            "T-Bud Formation",
+            "Matching Bud Quality",
+            "Post-Budding Care"
+          ],
+          "learning_objectives": [
+            "Create a T-bud graft effectively",
+            "Assess bud quality"
+          ],
+          "key_concepts": [
+            "Scion Bud",
+            "Cambium Contact"
+          ],
+          "rationale": "Provides a technique for efficient scion propagation."
+        }
+      ]
+    },
+    {
+      "module_id": 5,
+      "module_name": "Bridge Grafting \u2013 Principles and Practice",
+      "module_description": "Utilizing a bridge of wood to facilitate cambial contact.",
+      "sessions": [
+        {
+          "session_number": 5,
+          "session_title": "Bridge Grafting \u2013 Technique Demonstration",
+          "subtopics": [
+            "Bridge Wood Selection",
+            "Graft Placement",
+            "Binding Methods"
+          ],
+          "learning_objectives": [
+            "Construct a bridge graft",
+            "Apply appropriate binding techniques"
+          ],
+          "key_concepts": [
+            "Cambial Gap",
+            "Binding Strength"
+          ],
+          "rationale": "Introduces a method for overcoming specific wood conditions."
+        }
+      ]
+    },
+    {
+      "module_id": 6,
+      "module_name": "Inarching \u2013 Technique and Applications",
+      "module_description": "Layering graft \u2013 promoting multiple unions for vigor.",
+      "sessions": [
+        {
+          "session_number": 6,
+          "session_title": "Inarching Graft - Application",
+          "subtopics": [
+            "Bud Selection",
+            "Stem Alignment",
+            "Binding Considerations"
+          ],
+          "learning_objectives": [
+            "Perform an inarching graft"
+          ],
+          "key_concepts": [
+            "Continuous Cambium Contact"
+          ],
+          "rationale": "Demonstrates a grafting method for increased vigor."
+        }
+      ]
+    },
+    {
+      "module_id": 7,
+      "module_name": "Topworking \u2013 Advanced Grafting Techniques",
+      "module_description": "Adding secondary varieties to established trees.",
+      "sessions": [
+        {
+          "session_number": 7,
+          "session_title": "Topworking \u2013 Preparation & Graft Placement",
+          "subtopics": [
+            "Species Considerations",
+            "Graft Selection",
+            "Timing"
+          ],
+          "learning_objectives": [
+            "Apply topworking principles",
+            "Select appropriate scions"
+          ],
+          "key_concepts": [
+            "Tree Architecture",
+            "Scion Compatibility"
+          ],
+          "rationale": "Introduces a complex grafting technique for multi-varietal trees."
+        }
+      ]
+    },
+    {
+      "module_id": 8,
+      "module_name": "Framework Grafting \u2013 Structural Integration",
+      "module_description": "Creating complex frameworks for tree architecture.",
+      "sessions": [
+        {
+          "session_number": 8,
+          "session_title": "Framework Grafting - Design Principles",
+          "subtopics": [
+            "Structural Analysis",
+            "Graft Selection",
+            "Spacing"
+          ],
+          "learning_objectives": [
+            "Understand structural integration",
+            "Apply grafting to tree architecture"
+          ],
+          "key_concepts": [
+            "Tree Strength",
+            "Growth Potential"
+          ],
+          "rationale": "Explores advanced grafting for shaping tree growth."
+        }
+      ]
+    },
+    {
+      "module_id": 9,
+      "module_name": "Multi-Varietal Grafting \u2013 Complex Systems",
+      "module_description": "Combining multiple varieties through complex grafting schemes.",
+      "sessions": [
+        {
+          "session_number": 9,
+          "session_title": "Multi-Varietal Grafting - Design & Execution",
+          "subtopics": [
+            "Compatibility Assessment",
+            "Graft Arrangement",
+            "Monitoring"
+          ],
+          "learning_objectives": [
+            "Create a multi-varietal graft system"
+          ],
+          "key_concepts": [
+            "Genetic Interaction",
+            "Success Rate"
+          ],
+          "rationale": "Addresses the complexities of combining multiple varieties."
+        }
+      ]
+    },
+    {
+      "module_id": 10,
+      "module_name": "Grafting Troubleshooting & Maintenance",
+      "module_description": "Identifying and addressing common grafting failures.",
+      "sessions": [
+        {
+          "session_number": 10,
+          "session_title": "Troubleshooting Graft Failure",
+          "subtopics": [
+            "Desiccation",
+            "Disease Transmission",
+            "Poor Cambial Contact"
+          ],
+          "learning_objectives": [
+            "Diagnose common grafting failures",
+            "Implement corrective measures"
+          ],
+          "key_concepts": [
+            "Environmental Factors",
+            "Pest and Disease Management"
+          ],
+          "rationale": "Provides practical guidance for successful grafting outcomes."
+        }
+      ]
+    }
+  ]
+}

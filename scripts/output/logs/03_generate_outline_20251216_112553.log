@@ -1,0 +1,176 @@
+2025-12-16 11:25:53,299 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/03_generate_outline_20251216_112553.log
+2025-12-16 11:25:53,299 - generate_outline - INFO - 
+2025-12-16 11:25:53,299 - generate_outline - INFO - 📝 STAGE 03: OUTLINE GENERATION
+2025-12-16 11:25:53,299 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:53,300 - generate_outline - INFO - 
+2025-12-16 11:25:53,300 - generate_outline - INFO - ⚙️ CONFIGURATION
+2025-12-16 11:25:53,300 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:53,300 - generate_outline - INFO -   • Config Directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:25:53,300 - generate_outline - INFO -   • Log File: output/logs/03_generate_outline_20251216_112553.log
+2025-12-16 11:25:53,300 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:53,300 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:25:53,301 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 11:25:53,314 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 11:25:53,314 - generate_outline - INFO - Loading course template: tree_grafting
+2025-12-16 11:25:53,315 - src.config.loader - INFO - Loaded course template: tree_grafting
+2025-12-16 11:25:53,316 - src.config.loader - INFO - Loaded course template: tree_grafting
+2025-12-16 11:25:53,316 - generate_outline - INFO - 
+2025-12-16 11:25:53,316 - generate_outline - INFO - 
+2025-12-16 11:25:53,316 - generate_outline - INFO - ✏️ INTERACTIVE MODE: Customize Course Metadata
+2025-12-16 11:25:53,316 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:53,316 - generate_outline - INFO - Starting interactive course configuration...
+2025-12-16 11:25:53,316 - generate_outline - INFO - Current defaults loaded from config/course_config.yaml
+2025-12-16 11:25:53,316 - generate_outline - INFO - Press Enter to accept defaults, or type new values
+2025-12-16 11:25:53,316 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 11:25:54,262 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 11:25:54,262 - generate_outline - INFO - MODULE AND SESSION STRUCTURE
+2025-12-16 11:25:54,262 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 11:25:54,548 - generate_outline - INFO - Configuration: 10 modules, 20 sessions
+2025-12-16 11:25:54,548 - generate_outline - INFO - Average: 2.0 sessions per module
+2025-12-16 11:25:54,548 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 11:25:54,548 - generate_outline - INFO - CONTENT ITEM BOUNDS
+2025-12-16 11:25:54,548 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 11:25:56,993 - generate_outline - INFO - Clear output: No
+2025-12-16 11:25:56,993 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 11:25:56,993 - generate_outline - INFO - Interactive configuration complete
+2025-12-16 11:25:56,993 - generate_outline - INFO - 
+2025-12-16 11:25:56,993 - generate_outline - INFO - 
+2025-12-16 11:25:56,993 - generate_outline - INFO - 📋 FINAL COURSE CONFIGURATION
+2025-12-16 11:25:56,993 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:56,993 - generate_outline - INFO -   • Course Name: Tree Grafting: Fundamentals to Advanced Techniques
+2025-12-16 11:25:56,993 - generate_outline - INFO -   • Course Level: Undergraduate / Professional Development
+2025-12-16 11:25:56,993 - generate_outline - INFO -   • Description: A comprehensive course on tree grafting theory and practice, covering the biological principles, 
+te...
+2025-12-16 11:25:56,993 - generate_outline - INFO -   • Additional Constraints: Balance theoretical biology with practical technique instruction. Include species-specific protocols...
+2025-12-16 11:25:56,993 - generate_outline - INFO -   • Number of Modules: 10
+2025-12-16 11:25:56,993 - generate_outline - INFO -   • Total Sessions: 20
+2025-12-16 11:25:56,993 - generate_outline - INFO -   • Avg Sessions per Module: 2.0
+2025-12-16 11:25:56,993 - generate_outline - INFO -   • Subtopics per Session: 3-7
+2025-12-16 11:25:56,993 - generate_outline - INFO -   • Learning Objectives per Session: 3-7
+2025-12-16 11:25:56,993 - generate_outline - INFO -   • Key Concepts per Session: 3-7
+2025-12-16 11:25:56,994 - generate_outline - INFO -   • Output Directory: output
+2025-12-16 11:25:56,994 - generate_outline - INFO -   • Clear Output: No
+2025-12-16 11:25:56,994 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:56,994 - src.generate.orchestration.pipeline - INFO - Initializing Educational Course Generator pipeline...
+2025-12-16 11:25:56,994 - src.llm.client - INFO - Initialized OllamaClient: model=gemma3:4b, url=http://localhost:11434/api/generate
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - Initialized OutlineGenerator
+2025-12-16 11:25:56,994 - src.generate.orchestration.pipeline - INFO - Pipeline initialized successfully
+2025-12-16 11:25:56,994 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,994 - src.generate.orchestration.pipeline - INFO - STAGE 1: Generating Course Outline
+2025-12-16 11:25:56,994 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - OUTLINE GENERATION PROCESS (JSON-STRUCTURED)
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - Course Title: 'Tree Grafting: Fundamentals to Advanced Techniques'
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - Course Level: 'Undergraduate / Professional Development'
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - Description: 2280 characters
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - Modules to Generate: 10
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - Topic Areas: LLM will generate based on course description and constraints
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - Additional Constraints: Balance theoretical biology with practical technique instruction. Include species-specific protocols...
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - SESSION/MODULE CONFIGURATION
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,994 - src.generate.stages.stage1_outline - INFO - Modules: 10
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - Total Sessions: 20
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - Average: 2.00 sessions per module
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - ✓ Balanced distribution
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - OUTLINE GENERATION ITEM BOUNDS
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   • Subtopics per session: 3-7
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   • Learning objectives per session: 3-7
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   • Key concepts per session: 3-7
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - LLM GENERATION PARAMETERS
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - Model Configuration:
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   • Model: gemma3:4b
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   • Format: JSON structured
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   • Prompt: 'You are an expert curriculum designer. Create a coherent, pedagogically sound co...'
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - Template Variables (16 provided):
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ additional_constraints  : "Balance theoretical biology with practical technique inst..."
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ avg_sessions_per_module : "2.0"
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ course_description      : "A comprehensive course on tree grafting theory and practi..."
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ course_duration         : "Not specified"
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ course_level            : "Undergraduate / Professional Development"
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ course_name             : "Tree Grafting: Fundamentals to Advanced Techniques"
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ language                : "English"
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ max_concepts            : 7
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ max_objectives          : 7
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ max_subtopics           : 7
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ min_concepts            : 3
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ min_objectives          : 3
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ min_subtopics           : 3
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ num_modules             : 10
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ subject                 : "Horticulture and Plant Propagation"
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ total_sessions          : 20
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - Template Validation:
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ All 16 required variables provided
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ No missing variables
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO -   ✓ No extra variables
+2025-12-16 11:25:56,995 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:25:56,996 - src.generate.stages.stage1_outline - INFO - Sending JSON generation request to LLM...
+2025-12-16 11:25:56,996 - src.generate.stages.stage1_outline - INFO - Requesting structured outline for: 'Tree Grafting: Fundamentals to Advanced Techniques'
+2025-12-16 11:25:56,996 - src.generate.stages.stage1_outline - INFO - Generating 10 modules with 20 total sessions
+2025-12-16 11:25:56,996 - src.generate.stages.stage1_outline - INFO - Formatted prompt size: 6436 characters
+2025-12-16 11:25:56,996 - src.generate.stages.stage1_outline - INFO - System prompt size: 229 characters
+2025-12-16 11:25:56,996 - src.generate.stages.stage1_outline - INFO - Template variables: 16 variables provided
+2025-12-16 11:25:56,996 - src.generate.stages.stage1_outline - INFO - LLM model: gemma3:4b
+2025-12-16 11:25:56,996 - src.generate.stages.stage1_outline - INFO - LLM timeout: 240s (operation-specific, base: 180s)
+2025-12-16 11:25:56,996 - src.generate.stages.stage1_outline - INFO - LLM API URL: http://localhost:11434/api/generate
+2025-12-16 11:25:56,996 - src.generate.stages.stage1_outline - INFO - Using optimized parameters for outline generation: num_ctx=32000, num_predict=4000 (reduced from default 128K/64K for faster generation, format:json removed for compatibility)
+2025-12-16 11:25:56,996 - src.generate.stages.stage1_outline - INFO - Checking Ollama service connection and performance...
+2025-12-16 11:25:57,005 - src.generate.stages.stage1_outline - INFO - Ollama connection check successful (response time: 0.008s)
+2025-12-16 11:25:57,005 - src.generate.stages.stage1_outline - INFO - Checking GPU acceleration status...
+2025-12-16 11:25:57,034 - src.generate.stages.stage1_outline - INFO - GPU acceleration active: 100% GPU
+2025-12-16 11:25:57,034 - src.llm.client - INFO - [out:c7882d] 🚀 out | m=gemma3:4b | p=6436c | t=240s
+2025-12-16 11:25:57,034 - src.llm.client - INFO - [out:c7882d] Timeout configuration: connect=5s, read=240s (total limit: 240s)
+2025-12-16 11:25:57,035 - src.llm.client - INFO - [out:c7882d] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 11:25:57,037 - src.llm.client - INFO - [out:c7882d] Sending request to Ollama: model=gemma3:4b, operation=outline, payload=8622 bytes, prompt=6436 chars
+2025-12-16 11:25:57,039 - src.llm.client - INFO - [out:c7882d] Waiting for HTTP response (connect timeout: 5s, read timeout: 240s)...
+2025-12-16 11:25:59,008 - src.llm.request_handler - INFO - [out:c7882d] ✓ Done 1.97s
+2025-12-16 11:25:59,008 - src.llm.client - INFO - [out:c7882d] ✅ HTTP 200 in 1.97s
+2025-12-16 11:25:59,008 - src.llm.client - INFO - [out:c7882d] 📡 Stream active (200)
+2025-12-16 11:25:59,008 - src.llm.client - INFO - [out:c7882d] Starting stream parsing, waiting for first chunk...
+2025-12-16 11:26:01,020 - src.llm.client - INFO - [out:c7882d] 📊 2.0s: 376c @187c/s (113ch, ~94t @47t/s)
+2025-12-16 11:26:03,025 - src.llm.client - INFO - [out:c7882d] 📊 4.0s: 916c @228c/s (230ch, ~229t @57t/s)
+2025-12-16 11:26:05,026 - src.llm.client - INFO - [out:c7882d] 📊 6.0s: 1384c @230c/s (351ch, ~346t @57t/s)
+2025-12-16 11:26:07,030 - src.llm.client - INFO - [out:c7882d] 📊 8.0s: 1905c @237c/s (475ch, ~476t @59t/s)
+2025-12-16 11:26:09,033 - src.llm.client - INFO - [out:c7882d] 📊 10.0s: 2424c @242c/s (598ch, ~606t @60t/s)
+2025-12-16 11:26:11,040 - src.llm.client - INFO - [out:c7882d] 📊 12.0s: 2885c @240c/s (720ch, ~721t @60t/s)
+2025-12-16 11:26:13,041 - src.llm.client - INFO - [out:c7882d] 📊 14.0s: 3377c @241c/s (842ch, ~844t @60t/s)
+2025-12-16 11:26:15,047 - src.llm.client - INFO - [out:c7882d] 📊 16.0s: 3858c @241c/s (957ch, ~964t @60t/s)
+2025-12-16 11:26:17,056 - src.llm.client - INFO - [out:c7882d] 📊 18.0s: 4357c @241c/s (1077ch, ~1089t @60t/s)
+2025-12-16 11:26:19,057 - src.llm.client - INFO - [out:c7882d] 📊 20.0s: 4850c @242c/s (1189ch, ~1212t @60t/s)
+2025-12-16 11:26:21,068 - src.llm.client - INFO - [out:c7882d] 📊 22.1s: 5261c @238c/s (1300ch, ~1315t @60t/s)
+2025-12-16 11:26:23,078 - src.llm.client - INFO - [out:c7882d] 📊 24.1s: 5783c @240c/s (1419ch, ~1446t @60t/s)
+2025-12-16 11:26:25,079 - src.llm.client - INFO - [out:c7882d] 📊 26.1s: 6355c @244c/s (1544ch, ~1589t @61t/s)
+2025-12-16 11:26:27,088 - src.llm.client - INFO - [out:c7882d] 📊 28.1s: 6775c @241c/s (1655ch, ~1694t @60t/s)
+2025-12-16 11:26:29,101 - src.llm.client - INFO - [out:c7882d] 📊 30.1s: 7337c @244c/s (1778ch, ~1834t @61t/s)
+2025-12-16 11:26:31,107 - src.llm.client - INFO - [out:c7882d] 📊 32.1s: 7953c @248c/s (1901ch, ~1988t @62t/s)
+2025-12-16 11:26:32,221 - src.llm.client - INFO - [out:c7882d] ✓ Done 35.19s: 8231c (~781w @234c/s)
+2025-12-16 11:26:32,221 - src.generate.stages.stage1_outline - INFO - LLM generation completed (received 8231 characters)
+2025-12-16 11:26:32,221 - src.generate.stages.stage1_outline - INFO - Generation took 35.19 seconds
+2025-12-16 11:26:32,221 - src.generate.stages.stage1_outline - INFO - Generation rate: 233.9 chars/s
+2025-12-16 11:26:32,221 - src.generate.stages.stage1_outline - INFO - Generation performance: 35.19s (within expected range)
+2025-12-16 11:26:32,221 - src.generate.stages.stage1_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 11:26:32,221 - src.generate.stages.stage1_outline - INFO - Parsing JSON response...
+2025-12-16 11:26:32,223 - src.generate.stages.stage1_outline - ERROR - Missing required top-level keys: course_metadata or modules
+2025-12-16 11:26:32,223 - src.generate.stages.stage1_outline - WARNING - Attempt 1/3: JSON validation failed. Retrying...
+2025-12-16 11:26:32,223 - src.llm.client - INFO - [out:1a8f65] 🚀 out | m=gemma3:4b | p=6436c | t=240s
+2025-12-16 11:26:32,223 - src.llm.client - INFO - [out:1a8f65] Timeout configuration: connect=5s, read=240s (total limit: 240s)
+2025-12-16 11:26:32,224 - src.llm.client - INFO - [out:1a8f65] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 11:26:32,225 - src.llm.client - INFO - [out:1a8f65] Sending request to Ollama: model=gemma3:4b, operation=outline, payload=8517 bytes, prompt=6436 chars
+2025-12-16 11:26:32,225 - src.llm.client - INFO - [out:1a8f65] Waiting for HTTP response (connect timeout: 5s, read timeout: 240s)...
+2025-12-16 11:26:34,200 - src.llm.request_handler - INFO - [out:1a8f65] ✓ Done 1.98s
+2025-12-16 11:26:34,201 - src.llm.client - INFO - [out:1a8f65] ✅ HTTP 200 in 1.98s
+2025-12-16 11:26:34,201 - src.llm.client - INFO - [out:1a8f65] 📡 Stream active (200)
+2025-12-16 11:26:34,201 - src.llm.client - INFO - [out:1a8f65] Starting stream parsing, waiting for first chunk...
+2025-12-16 11:26:36,202 - src.llm.client - INFO - [out:1a8f65] 📊 2.0s: 423c @211c/s (123ch, ~106t @53t/s)
+2025-12-16 11:26:38,204 - src.llm.client - INFO - [out:1a8f65] 📊 4.0s: 922c @230c/s (243ch, ~230t @58t/s)
+2025-12-16 11:26:40,207 - src.llm.client - INFO - [out:1a8f65] 📊 6.0s: 1378c @229c/s (366ch, ~344t @57t/s)
+2025-12-16 11:26:42,222 - src.llm.client - INFO - [out:1a8f65] 📊 8.0s: 1831c @228c/s (489ch, ~458t @57t/s)

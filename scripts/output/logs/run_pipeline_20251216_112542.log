@@ -1,0 +1,82 @@
+2025-12-16 11:25:42,004 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/run_pipeline_20251216_112542.log
+2025-12-16 11:25:42,005 - __main__ - INFO - 
+2025-12-16 11:25:42,005 - __main__ - INFO - 🚀 EDUCATIONAL COURSE GENERATOR - Full Pipeline
+2025-12-16 11:25:42,005 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:42,005 - __main__ - INFO - 📝 Log file: output/logs/run_pipeline_20251216_112542.log
+2025-12-16 11:25:42,005 - __main__ - INFO - 
+2025-12-16 11:25:42,005 - __main__ - INFO - 
+2025-12-16 11:25:42,005 - __main__ - INFO - ⚙️ Configuration
+2025-12-16 11:25:42,005 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:42,005 - __main__ - INFO -   • Config Directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:25:42,005 - __main__ - INFO -   • Project Root: /Users/4d/Documents/GitHub/curriculum
+2025-12-16 11:25:42,005 - __main__ - INFO -   • Python Executable: /opt/homebrew/opt/python@3.13/bin/python3.13
+2025-12-16 11:25:42,005 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:42,005 - __main__ - INFO - 
+2025-12-16 11:25:42,005 - __main__ - INFO - 🔧 STAGE 01: Environment Setup
+2025-12-16 11:25:42,005 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:42,005 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/01_setup_environment.py --config-dir /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:25:42,346 - __main__ - INFO - ✅ Stage 01 complete
+2025-12-16 11:25:42,346 - __main__ - INFO - 
+2025-12-16 11:25:42,346 - __main__ - INFO - 🧪 STAGE 02: Validation & Testing
+2025-12-16 11:25:42,346 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:42,346 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/02_run_tests.py --config-dir /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:25:51,379 - __main__ - INFO - ✅ Stage 02 complete
+2025-12-16 11:25:51,381 - __main__ - INFO - 
+2025-12-16 11:25:51,381 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:25:51,388 - src.config.loader - INFO - Found 7 course template(s) in /Users/4d/Documents/GitHub/curriculum/config/courses
+2025-12-16 11:25:51,388 - __main__ - INFO - 
+2025-12-16 11:25:51,388 - __main__ - INFO - ================================================================================
+2025-12-16 11:25:51,388 - __main__ - INFO - COURSE TEMPLATE SELECTION
+2025-12-16 11:25:51,388 - __main__ - INFO - ================================================================================
+2025-12-16 11:25:51,388 - __main__ - INFO - Available course templates:
+2025-12-16 11:25:51,388 - __main__ - INFO - 
+2025-12-16 11:25:51,388 - __main__ - INFO -   1. Active Inference: Theory and Applications
+2025-12-16 11:25:51,389 - __main__ - INFO -      Subject: Cognitive Science and Neuroscience
+2025-12-16 11:25:51,389 - __main__ - INFO -      Level: Graduate / Advanced Undergraduate
+2025-12-16 11:25:51,389 - __main__ - INFO -      Length: 10 modules, 20 sessions
+2025-12-16 11:25:51,389 - __main__ - INFO -      Description: A comprehensive exploration of Active Inference, a unifying theoretical framewor...
+2025-12-16 11:25:51,389 - __main__ - INFO - 
+2025-12-16 11:25:51,389 - __main__ - INFO -   2. Active Inference and Probabilistic Dynamical Systems
+2025-12-16 11:25:51,389 - __main__ - INFO -      Subject: Cognitive Science, Statistics, and Systems Biology
+2025-12-16 11:25:51,389 - __main__ - INFO -      Level: Undergraduate
+2025-12-16 11:25:51,389 - __main__ - INFO -      Length: 15 modules, 30 sessions
+2025-12-16 11:25:51,389 - __main__ - INFO -      Description: A comprehensive undergraduate course on Active Inference, Bayesian statistics, a...
+2025-12-16 11:25:51,389 - __main__ - INFO - 
+2025-12-16 11:25:51,389 - __main__ - INFO -   3. Introductory Biology
+2025-12-16 11:25:51,389 - __main__ - INFO -      Subject: General Biology
+2025-12-16 11:25:51,389 - __main__ - INFO -      Level: Undergraduate Introductory
+2025-12-16 11:25:51,389 - __main__ - INFO -      Length: 2 modules, 4 sessions
+2025-12-16 11:25:51,389 - __main__ - INFO -      Description: Comprehensive introduction covering fundamental concepts and principles of Biolo...
+2025-12-16 11:25:51,389 - __main__ - INFO - 
+2025-12-16 11:25:51,389 - __main__ - INFO -   4. Introductory Chemistry
+2025-12-16 11:25:51,389 - __main__ - INFO -      Subject: General Chemistry
+2025-12-16 11:25:51,389 - __main__ - INFO -      Level: Undergraduate Introductory
+2025-12-16 11:25:51,389 - __main__ - INFO -      Length: 3 modules, 6 sessions
+2025-12-16 11:25:51,389 - __main__ - INFO -      Description: Comprehensive introduction covering fundamental concepts and principles of Chemi...
+2025-12-16 11:25:51,389 - __main__ - INFO - 
+2025-12-16 11:25:51,389 - __main__ - INFO -   5. The Free Energy Principle: From Physics to Mind
+2025-12-16 11:25:51,389 - __main__ - INFO -      Subject: Theoretical Neuroscience and Systems Biology
+2025-12-16 11:25:51,389 - __main__ - INFO -      Level: Graduate / Advanced Undergraduate
+2025-12-16 11:25:51,389 - __main__ - INFO -      Length: 10 modules, 20 sessions
+2025-12-16 11:25:51,389 - __main__ - INFO -      Description: An in-depth examination of the Free Energy Principle (FEP), a fundamental princi...
+2025-12-16 11:25:51,389 - __main__ - INFO - 
+2025-12-16 11:25:51,389 - __main__ - INFO -   6. Introductory Physics
+2025-12-16 11:25:51,389 - __main__ - INFO -      Subject: General Physics
+2025-12-16 11:25:51,389 - __main__ - INFO -      Level: Undergraduate Introductory
+2025-12-16 11:25:51,389 - __main__ - INFO -      Length: 4 modules, 8 sessions
+2025-12-16 11:25:51,389 - __main__ - INFO -      Description: Comprehensive introduction covering fundamental concepts and principles of Physi...
+2025-12-16 11:25:51,389 - __main__ - INFO - 
+2025-12-16 11:25:51,389 - __main__ - INFO -   7. Tree Grafting: Fundamentals to Advanced Techniques
+2025-12-16 11:25:51,389 - __main__ - INFO -      Subject: Horticulture and Plant Propagation
+2025-12-16 11:25:51,389 - __main__ - INFO -      Level: Undergraduate / Professional Development
+2025-12-16 11:25:51,389 - __main__ - INFO -      Length: 10 modules, 20 sessions
+2025-12-16 11:25:51,389 - __main__ - INFO -      Description: A comprehensive course on tree grafting theory and practice, covering the biolog...
+2025-12-16 11:25:51,389 - __main__ - INFO - 
+2025-12-16 11:25:51,389 - __main__ - INFO -   8. Use default (course_config.yaml)
+2025-12-16 11:25:51,389 - __main__ - INFO -   9. Generate all courses
+2025-12-16 11:25:51,389 - __main__ - INFO - 
+2025-12-16 11:25:53,179 - __main__ - INFO - Selected course template: tree_grafting
+2025-12-16 11:25:53,179 - __main__ - INFO - 
+2025-12-16 11:25:53,179 - __main__ - INFO - 📑 STAGE 03: Outline Generation
+2025-12-16 11:25:53,179 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:25:53,179 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/03_generate_outline.py --config-dir /Users/4d/Documents/GitHub/curriculum/config --course tree_grafting

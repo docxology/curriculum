@@ -1,0 +1,141 @@
+2025-12-16 11:20:38,725 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/05_generate_secondary_20251216_112038.log
+2025-12-16 11:20:38,726 - generate_secondary - INFO - 
+2025-12-16 11:20:38,726 - generate_secondary - INFO - 🔬 STAGE 05: SECONDARY MATERIALS (Session-Level Synthesis)
+2025-12-16 11:20:38,726 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:20:38,726 - generate_secondary - INFO - Generating materials PER SESSION (with full session context)
+2025-12-16 11:20:38,726 - generate_secondary - INFO - Reading all content from: [course-specific]/modules/module_XX/session_YY/
+2025-12-16 11:20:38,726 - generate_secondary - INFO - Output structure: [course-specific]/modules/module_XX/session_YY/[type].md
+2025-12-16 11:20:38,726 - generate_secondary - INFO - 
+2025-12-16 11:20:38,726 - generate_secondary - INFO - SECONDARY TYPES GENERATED PER SESSION:
+2025-12-16 11:20:38,726 - generate_secondary - INFO -   1. application.md - Real-world applications and case studies
+2025-12-16 11:20:38,726 - generate_secondary - INFO -   2. extension.md - Advanced topics beyond core curriculum
+2025-12-16 11:20:38,726 - generate_secondary - INFO -   3. visualization.mmd - Additional diagrams and concept maps (Mermaid format)
+2025-12-16 11:20:38,726 - generate_secondary - INFO -   4. integration.md - Cross-module connections and synthesis
+2025-12-16 11:20:38,726 - generate_secondary - INFO -   5. investigation.md - Research questions and experiments
+2025-12-16 11:20:38,726 - generate_secondary - INFO -   6. open_questions.md - Current scientific debates and frontiers
+2025-12-16 11:20:38,726 - generate_secondary - INFO - 
+2025-12-16 11:20:38,726 - generate_secondary - INFO - 
+2025-12-16 11:20:38,726 - generate_secondary - INFO - ⚙️ CONFIGURATION
+2025-12-16 11:20:38,726 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:20:38,726 - generate_secondary - INFO -   • Content Validation: DISABLED
+2025-12-16 11:20:38,726 - generate_secondary - INFO -   • Dry Run: DISABLED
+2025-12-16 11:20:38,726 - generate_secondary - INFO -   • Log File: output/logs/05_generate_secondary_20251216_112038.log
+2025-12-16 11:20:38,726 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:20:38,726 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:20:38,726 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 11:20:38,741 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 11:20:38,742 - generate_secondary - INFO - Using specified outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112038.json
+2025-12-16 11:20:38,742 - src.config.loader - INFO - Using specified outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112038.json
+2025-12-16 11:20:38,742 - src.config.loader - INFO - Loaded 10 modules from outline: course_outline_20251216_112038.json
+2025-12-16 11:20:38,742 - generate_secondary - INFO - Using course-specific output directory: output/tree_grafting/
+2025-12-16 11:20:38,742 - generate_secondary - INFO - Processing ALL modules
+2025-12-16 11:20:38,742 - generate_secondary - INFO - Processing 10 modules (10 total sessions)
+2025-12-16 11:20:38,742 - generate_secondary - INFO - Secondary types: application, extension, visualization, integration, investigation, open_questions
+2025-12-16 11:20:38,742 - src.llm.client - INFO - Initialized OllamaClient: model=gemma3:4b, url=http://localhost:11434/api/generate
+2025-12-16 11:20:38,742 - generate_secondary - INFO - 
+============================================================
+2025-12-16 11:20:38,742 - generate_secondary - INFO - [1/10] Module 1: Grafting Biology & Theory (1 sessions)
+2025-12-16 11:20:38,742 - generate_secondary - INFO - ============================================================
+2025-12-16 11:20:38,742 - generate_secondary - INFO - 
+  Session 1/10: Cambial Alignment & Callus Formation
+2025-12-16 11:20:38,742 - generate_secondary - WARNING -   ⚠ Session directory not found: output/tree_grafting/modules/module_01_grafting_biology_theory/session_01
+2025-12-16 11:20:38,742 - generate_secondary - INFO - 
+============================================================
+2025-12-16 11:20:38,742 - generate_secondary - INFO - [2/10] Module 2: Basic Grafting Techniques - Whip & Tongue (1 sessions)
+2025-12-16 11:20:38,742 - generate_secondary - INFO - ============================================================
+2025-12-16 11:20:38,742 - generate_secondary - INFO - 
+  Session 2/10: Whip-and-Tongue Graft Preparation
+2025-12-16 11:20:38,742 - generate_secondary - WARNING -   ⚠ Session directory not found: output/tree_grafting/modules/module_02_basic_grafting_techniques_whip_tongue/session_02
+2025-12-16 11:20:38,742 - generate_secondary - INFO - 
+============================================================
+2025-12-16 11:20:38,742 - generate_secondary - INFO - [3/10] Module 3: Cleft Grafting & Fork Grafting (1 sessions)
+2025-12-16 11:20:38,742 - generate_secondary - INFO - ============================================================
+2025-12-16 11:20:38,742 - generate_secondary - INFO - 
+  Session 3/10: Cleft Graft Technique – Procedure
+2025-12-16 11:20:38,742 - generate_secondary - WARNING -   ⚠ Session directory not found: output/tree_grafting/modules/module_03_cleft_grafting_fork_grafting/session_03
+2025-12-16 11:20:38,742 - generate_secondary - INFO - 
+============================================================
+2025-12-16 11:20:38,742 - generate_secondary - INFO - [4/10] Module 4: Bark Grafting & Bridge Grafting (1 sessions)
+2025-12-16 11:20:38,742 - generate_secondary - INFO - ============================================================
+2025-12-16 11:20:38,742 - generate_secondary - INFO - 
+  Session 4/10: Bark Grafting – Technique & Considerations
+2025-12-16 11:20:38,742 - generate_secondary - WARNING -   ⚠ Session directory not found: output/tree_grafting/modules/module_04_bark_grafting_bridge_grafting/session_04
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - [5/10] Module 5: Budding – T-Budding & Chip Budding (1 sessions)
+2025-12-16 11:20:38,743 - generate_secondary - INFO - ============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+  Session 5/10: T-Budding – Procedure & Optimization
+2025-12-16 11:20:38,743 - generate_secondary - WARNING -   ⚠ Session directory not found: output/tree_grafting/modules/module_05_budding_t_budding_chip_budding/session_05
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - [6/10] Module 6: Inarching Grafting – Basics (1 sessions)
+2025-12-16 11:20:38,743 - generate_secondary - INFO - ============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+  Session 6/10: Inarching Graft Preparation & Staggering
+2025-12-16 11:20:38,743 - generate_secondary - WARNING -   ⚠ Session directory not found: output/tree_grafting/modules/module_06_inarching_grafting_basics/session_06
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - [7/10] Module 7: Bridge Grafting – Application (1 sessions)
+2025-12-16 11:20:38,743 - generate_secondary - INFO - ============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+  Session 7/10: Bridge Graft Construction and Binding
+2025-12-16 11:20:38,743 - generate_secondary - WARNING -   ⚠ Session directory not found: output/tree_grafting/modules/module_07_bridge_grafting_application/session_07
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - [8/10] Module 8: Topworking & Frameworking – Overview (1 sessions)
+2025-12-16 11:20:38,743 - generate_secondary - INFO - ============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+  Session 8/10: Principles of Topworking Grafting
+2025-12-16 11:20:38,743 - generate_secondary - WARNING -   ⚠ Session directory not found: output/tree_grafting/modules/module_08_topworking_frameworking_overview/session_08
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - [9/10] Module 9: Multi-Varietal Grafting – Considerations (1 sessions)
+2025-12-16 11:20:38,743 - generate_secondary - INFO - ============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+  Session 9/10: Strategic Multi-Varietal Grafting
+2025-12-16 11:20:38,743 - generate_secondary - WARNING -   ⚠ Session directory not found: output/tree_grafting/modules/module_09_multi_varietal_grafting_considerations/session_09
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - [10/10] Module 10: Grafting Troubleshooting & Maintenance (1 sessions)
+2025-12-16 11:20:38,743 - generate_secondary - INFO - ============================================================
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+  Session 10/10: Graft Failure Analysis & Management
+2025-12-16 11:20:38,743 - generate_secondary - WARNING -   ⚠ Session directory not found: output/tree_grafting/modules/module_10_grafting_troubleshooting_maintenance/session_10
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+2025-12-16 11:20:38,743 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:20:38,743 - generate_secondary - INFO - [ALL COMPLIANT] Secondary Materials Generation - Summary ✅
+2025-12-16 11:20:38,743 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:20:38,743 - generate_secondary - INFO -   Items Processed: 10
+2025-12-16 11:20:38,743 - generate_secondary - INFO -     - [COMPLIANT] Successful: 0
+2025-12-16 11:20:38,743 - generate_secondary - INFO -     - [ERROR] Failed: 10
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+2025-12-16 11:20:38,743 - generate_secondary - INFO -   Compliance Breakdown:
+2025-12-16 11:20:38,743 - generate_secondary - INFO -     - [COMPLIANT]: 10
+2025-12-16 11:20:38,743 - generate_secondary - INFO -     - [NEEDS REVIEW]: 0
+2025-12-16 11:20:38,743 - generate_secondary - INFO -     - [CRITICAL]: 0
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+2025-12-16 11:20:38,743 - generate_secondary - INFO -   Issue Statistics:
+2025-12-16 11:20:38,743 - generate_secondary - INFO -     - Total Issues: 0
+2025-12-16 11:20:38,743 - generate_secondary - INFO -     - Critical Errors: 0
+2025-12-16 11:20:38,743 - generate_secondary - INFO -     - Warnings: 0
+2025-12-16 11:20:38,743 - generate_secondary - INFO - 
+2025-12-16 11:20:38,743 - generate_secondary - INFO -   Recommendations:
+2025-12-16 11:20:38,743 - generate_secondary - INFO -     - All content generated successfully
+2025-12-16 11:20:38,743 - generate_secondary - INFO -     - No issues detected
+2025-12-16 11:20:38,743 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:20:38,743 - generate_secondary - ERROR - 
+================================================================================
+2025-12-16 11:20:38,743 - generate_secondary - ERROR - EXIT CODE: 1 (FAILURE)
+2025-12-16 11:20:38,743 - generate_secondary - ERROR - ================================================================================
+2025-12-16 11:20:38,743 - generate_secondary - ERROR - Reason: 10 session(s) failed during generation
+2025-12-16 11:20:38,743 - generate_secondary - ERROR - 
+2025-12-16 11:20:38,743 - generate_secondary - ERROR - Failed sessions details:
+2025-12-16 11:20:38,743 - generate_secondary - ERROR -   (Error details not captured - check log file for full traceback)
+2025-12-16 11:20:38,743 - generate_secondary - ERROR - 
+2025-12-16 11:20:38,743 - generate_secondary - ERROR - Troubleshooting:
+2025-12-16 11:20:38,743 - generate_secondary - ERROR -   1. Check log file for detailed error messages and request IDs
+2025-12-16 11:20:38,743 - generate_secondary - ERROR -   2. Review docs/TROUBLESHOOTING.md for common issues
+2025-12-16 11:20:38,743 - generate_secondary - ERROR -   3. For timeout errors, see timeout troubleshooting section
+2025-12-16 11:20:38,743 - generate_secondary - ERROR -   4. Use request IDs to filter logs: grep '[REQUEST_ID]' output/logs/*.log
+2025-12-16 11:20:38,743 - generate_secondary - ERROR - ================================================================================

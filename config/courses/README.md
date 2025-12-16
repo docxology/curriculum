@@ -16,6 +16,7 @@ Templates are automatically discovered from `.yaml` files in this directory. Cur
 - `active_inference.yaml` - Active Inference
 - `active_inference_college.yaml` - Active Inference and Probabilistic Dynamical Systems (Undergraduate)
 - `free_energy_principle.yaml` - Free Energy Principle
+- `tree_grafting.yaml` - Tree Grafting: Fundamentals to Advanced Techniques
 
 ## Using Templates
 

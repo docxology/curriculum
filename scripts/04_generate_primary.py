@@ -144,7 +144,7 @@ def main() -> int:
             module_ids = args.modules
             logger.info(f"Processing specific modules: {module_ids}")
 
-        generator = ContentGenerator(config_loader)
+        generator = ContentGenerator(config_loader, outline_path=outline_path)
 
         # Use new session-based generation
         results = generator.stage2_generate_content_by_session(module_ids)

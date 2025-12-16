@@ -1,0 +1,47 @@
+# Educational Course Configuration - Tree Grafting
+# Comprehensive course on grafting techniques from fundamentals through advanced applications
+
+course:
+  name: "Tree Grafting: Fundamentals to Advanced Techniques"
+  subject: "Horticulture and Plant Propagation"  # Subject/expertise area
+  description: |
+    A comprehensive course on tree grafting theory and practice, covering the biological principles, 
+    techniques, and applications of joining plant tissues to create functional unions between different 
+    genetic individuals. Students will learn the fundamental biology of graft compatibility, including 
+    cambial alignment, callus formation, and vascular reconnection, as well as the physiological factors 
+    that influence graft success such as timing, temperature, and plant vigor. The course progresses from 
+    basic techniques (whip-and-tongue, cleft grafting, bark grafting) through intermediate methods 
+    (budding, bridge grafting, inarching) to advanced specialized applications (topworking, frameworking, 
+    multi-varietal grafting). Students will understand rootstock selection and its effects on tree size, 
+    vigor, disease resistance, and environmental adaptation, as well as scion selection for desired fruit 
+    quality, growth characteristics, and production traits. The course covers species-specific 
+    considerations for fruit trees (apple, pear, stone fruits, citrus), ornamental trees, and specialty 
+    applications including rare species propagation and cultivar preservation. Practical topics include 
+    tool selection and maintenance, preparing grafting materials, proper storage of scionwood, optimal 
+    timing for different techniques, post-graft care and management, troubleshooting failed grafts, and 
+    recognizing and addressing graft incompatibility. Students will learn to diagnose common problems 
+    such as poor cambial contact, desiccation, disease transmission, and delayed incompatibility. The 
+    course emphasizes both theoretical understanding and hands-on skill development, with detailed 
+    instruction on knife skills, binding materials, sealing compounds, and environmental management 
+    during the healing process. Advanced topics include grafting to control tree architecture, creating 
+    family trees with multiple varieties, bench grafting versus field grafting, producing specialty 
+    nursery stock, and adapting traditional techniques to contemporary orchard systems and climate 
+    challenges. Applications span home orchards, commercial fruit production, ornamental horticulture, 
+    germplasm conservation, and specialty plant propagation for research and breeding programs.
+  level: "Undergraduate / Professional Development"
+  additional_constraints: |
+    Balance theoretical biology with practical technique instruction. Include species-specific protocols 
+    and regional timing considerations. Emphasize hands-on skill development through detailed procedural 
+    guidance and visual references. Progress systematically from simple to complex techniques. Address 
+    both why grafts work (biological principles) and how to perform them (practical skills). Include 
+    troubleshooting guidance based on common failure modes. Connect traditional practices with current 
+    scientific understanding. Incorporate considerations for organic production, climate adaptation, and 
+    disease management. Suitable for students pursuing careers in fruit production, nursery operations, 
+    landscape horticulture, or advanced home orcharding.
+  
+  # Configurable defaults (all overwritable in interactive mode)
+  defaults:
+    num_modules: 10          # Number of modules to generate
+    total_sessions: 20       # Total sessions across all modules
+    sessions_per_module: null  # Auto-calculated if null
+

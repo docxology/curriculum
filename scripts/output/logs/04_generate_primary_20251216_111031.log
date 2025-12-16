@@ -1,0 +1,72 @@
+2025-12-16 11:10:31,996 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/04_generate_primary_20251216_111031.log
+2025-12-16 11:10:31,996 - generate_primary - INFO - 
+2025-12-16 11:10:31,996 - generate_primary - INFO - 📚 STAGE 04: PRIMARY MATERIALS (Session-Based)
+2025-12-16 11:10:31,996 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:10:31,996 - generate_primary - INFO - Generating materials PER SESSION (not per module)
+2025-12-16 11:10:31,996 - generate_primary - INFO - Output structure: output/modules/module_XX/session_YY/[material].md
+2025-12-16 11:10:31,996 - generate_primary - INFO - 
+2025-12-16 11:10:31,996 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:10:31,997 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 11:10:32,010 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 11:10:32,010 - generate_primary - INFO - PRIMARY ARTIFACTS GENERATED PER SESSION:
+2025-12-16 11:10:32,010 - generate_primary - INFO -   1. lecture.md - Comprehensive instructional content
+2025-12-16 11:10:32,010 - generate_primary - INFO -   2. lab.md - Laboratory exercise with procedures
+2025-12-16 11:10:32,010 - generate_primary - INFO -   3. study_notes.md - Concise session summary
+2025-12-16 11:10:32,010 - generate_primary - INFO -   4. diagram_1.mmd, diagram_2.mmd, ... (up to 4 diagrams)
+2025-12-16 11:10:32,010 - generate_primary - INFO -   5. questions.md - Comprehension assessment questions
+2025-12-16 11:10:32,010 - generate_primary - INFO - 
+2025-12-16 11:10:32,010 - generate_primary - INFO - 
+2025-12-16 11:10:32,010 - generate_primary - INFO - ⚙️ CONFIGURATION
+2025-12-16 11:10:32,010 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:10:32,010 - generate_primary - INFO -   • Diagrams per Session: 4
+2025-12-16 11:10:32,010 - generate_primary - INFO -   • Log File: output/logs/04_generate_primary_20251216_111031.log
+2025-12-16 11:10:32,010 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:10:32,011 - src.config.loader - INFO - Found most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/outlines/course_outline_20251216_104720.json
+2025-12-16 11:10:32,013 - generate_primary - INFO - Using most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/outlines/course_outline_20251216_104720.json
+2025-12-16 11:10:32,013 - generate_primary - INFO - 
+2025-12-16 11:10:32,013 - generate_primary - INFO - Processing ALL modules from outline
+2025-12-16 11:10:32,013 - src.generate.orchestration.pipeline - INFO - Initializing Educational Course Generator pipeline...
+2025-12-16 11:10:32,014 - src.llm.client - INFO - Initialized OllamaClient: model=gemma3:4b, url=http://localhost:11434/api/generate
+2025-12-16 11:10:32,014 - src.generate.stages.stage1_outline - INFO - Initialized OutlineGenerator
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO - Pipeline initialized successfully
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO - STAGE 2: Generating Primary Content (Session-Based)
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:10:32,014 - src.config.loader - INFO - Found most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/outlines/course_outline_20251216_104720.json
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO - Processing 0 modules with session-based generation
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO - Using course-specific output directory: output/biology/
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO - [ALL COMPLIANT] Primary Materials Generation - Summary ✅
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO -   Items Processed: 0
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO -     - [COMPLIANT] Successful: 0
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO -     - [ERROR] Failed: 0
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO -   Compliance Breakdown:
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO -     - [COMPLIANT]: N/A
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO -     - [NEEDS REVIEW]: 0
+2025-12-16 11:10:32,014 - src.generate.orchestration.pipeline - INFO -     - [CRITICAL]: 0
+2025-12-16 11:10:32,015 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 11:10:32,015 - src.generate.orchestration.pipeline - INFO -   Issue Statistics:
+2025-12-16 11:10:32,015 - src.generate.orchestration.pipeline - INFO -     - Total Issues: 0
+2025-12-16 11:10:32,015 - src.generate.orchestration.pipeline - INFO -     - Critical Errors: 0
+2025-12-16 11:10:32,015 - src.generate.orchestration.pipeline - INFO -     - Warnings: 0
+2025-12-16 11:10:32,015 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 11:10:32,015 - src.generate.orchestration.pipeline - INFO -   Recommendations:
+2025-12-16 11:10:32,015 - src.generate.orchestration.pipeline - INFO -     - All content generated successfully
+2025-12-16 11:10:32,015 - src.generate.orchestration.pipeline - INFO -     - No issues detected
+2025-12-16 11:10:32,015 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 11:10:32,015 - generate_primary - INFO - 
+================================================================================
+2025-12-16 11:10:32,015 - generate_primary - INFO - PRIMARY MATERIALS COMPLETE
+2025-12-16 11:10:32,015 - generate_primary - INFO - ================================================================================
+2025-12-16 11:10:32,015 - generate_primary - INFO - Total sessions processed: 0
+2025-12-16 11:10:32,015 - generate_primary - INFO - Successful: 0
+2025-12-16 11:10:32,015 - generate_primary - INFO - Failed: 0
+2025-12-16 11:10:32,015 - generate_primary - INFO - 
+================================================================================
+2025-12-16 11:10:32,015 - generate_primary - INFO - EXIT CODE: 0 (SUCCESS)
+2025-12-16 11:10:32,015 - generate_primary - INFO - ================================================================================
+2025-12-16 11:10:32,015 - generate_primary - INFO - All sessions processed successfully with no critical issues
+2025-12-16 11:10:32,015 - generate_primary - INFO - ================================================================================

@@ -120,10 +120,14 @@ prompts:
       
       REQUIREMENTS:
       1. Generate appropriate topics and modules based on the course description and constraints
-      2. Create {num_modules} coherent modules that cover the course scope
-      3. Distribute {total_sessions} sessions across these modules (aim for ~{avg_sessions_per_module} per module)
-      4. Each module should have a clear focus and logical progression
-      5. Sessions within modules should build on each other
+      2. Create EXACTLY {num_modules} modules that cover the course scope
+      3. CRITICAL: Distribute EXACTLY {total_sessions} sessions total across these {num_modules} modules
+      4. Target average: {avg_sessions_per_module} sessions per module
+      5. Each module MUST have at least 1 session
+      6. Sessions should be distributed as evenly as possible (most modules get {avg_sessions_per_module} sessions, some may have ±1 to reach exactly {total_sessions} total)
+      7. YOU MUST output {total_sessions} sessions total - count them carefully before outputting
+      8. Each module should have a clear focus and logical progression
+      9. Sessions within modules should build on each other
       
       JSON SCHEMA (copy this structure exactly):
       {{
@@ -148,11 +152,14 @@ prompts:
       }}
       
       STRICT RULES:
-      1. EXACTLY {num_modules} modules
-      2. EXACTLY {total_sessions} sessions total (distribute evenly)
-      3. Each session: {min_subtopics}-{max_subtopics} subtopics, {min_objectives}-{max_objectives} objectives, {min_concepts}-{max_concepts} concepts
-      4. Ultra-concise text
-      5. Sequential numbering (sessions 1-{total_sessions} globally)
+      1. EXACTLY {num_modules} modules (count them)
+      2. EXACTLY {total_sessions} sessions total across ALL modules (count them - this is MANDATORY)
+      3. Session distribution: Most modules should have {avg_sessions_per_module} sessions, but you may vary by ±1 to reach exactly {total_sessions} total
+      4. Example for {num_modules} modules with {total_sessions} sessions: If avg is {avg_sessions_per_module}, some modules get {avg_sessions_per_module} sessions, others get {avg_sessions_per_module}+1 or {avg_sessions_per_module}-1 to sum to exactly {total_sessions}
+      5. Each session: {min_subtopics}-{max_subtopics} subtopics, {min_objectives}-{max_objectives} objectives, {min_concepts}-{max_concepts} concepts
+      6. Ultra-concise text
+      7. Sequential numbering (sessions 1-{total_sessions} globally)
+      8. VERIFY: Before outputting, count your sessions - they MUST total exactly {total_sessions}
       
       ═══════════════════════════════════════════════════════════════
       OUTPUT FORMAT (MANDATORY)
