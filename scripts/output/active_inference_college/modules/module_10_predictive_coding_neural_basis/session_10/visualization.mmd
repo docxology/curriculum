@@ -1,0 +1,11 @@
+graph TD
+    A[Sensory Input] --> B{Prediction Generation}
+    B --> C{Compare Prediction}
+    C -- Prediction Error --> B
+    B --> D[Adjust Model Parameters]
+    D --> A
+    A --> E[Higher-Level Prediction]
+    E --> C
+    C -- Prediction Accurate --> E
+    C --> F[Internal Model]
+    F --> A

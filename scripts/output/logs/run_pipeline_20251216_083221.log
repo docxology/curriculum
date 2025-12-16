@@ -84,3 +84,25 @@
 2025-12-16 08:57:24,584 - __main__ - INFO - 📖 STAGE 05: Secondary Materials Generation
 2025-12-16 08:57:24,584 - __main__ - INFO - ────────────────────────────────────────────────────────────
 2025-12-16 08:57:24,584 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/05_generate_secondary.py --config-dir /Users/4d/Documents/GitHub/curriculum/config --all
+2025-12-16 09:24:59,844 - __main__ - ERROR - ❌ Stage 05 failed with exit code 1
+2025-12-16 09:24:59,844 - __main__ - INFO - 
+2025-12-16 09:24:59,844 - __main__ - INFO - 🌐 STAGE 06: Website Generation
+2025-12-16 09:24:59,844 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 09:24:59,845 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/06_website.py --config-dir /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 09:25:01,320 - __main__ - INFO - ✅ Stage 06 complete
+2025-12-16 09:25:01,320 - __main__ - INFO - 
+2025-12-16 09:25:01,320 - __main__ - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 09:25:01,320 - __main__ - INFO - [FINAL SUMMARY] Pipeline Execution Complete
+2025-12-16 09:25:01,320 - __main__ - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 09:25:01,320 - __main__ - INFO -   • Stages run: 6
+2025-12-16 09:25:01,320 - __main__ - INFO -   • Stages failed: 1
+2025-12-16 09:25:01,320 - __main__ - WARNING -   [WARNING] 1 stage(s) failed
+2025-12-16 09:25:01,320 - __main__ - WARNING - 
+2025-12-16 09:25:01,320 - __main__ - WARNING -   Please review:
+2025-12-16 09:25:01,320 - __main__ - WARNING -     - Error messages above for failed stages
+2025-12-16 09:25:01,320 - __main__ - WARNING -     - Stage summaries for validation issues
+2025-12-16 09:25:01,320 - __main__ - WARNING -     - Log file for detailed error information
+2025-12-16 09:25:01,320 - __main__ - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 09:25:01,320 - __main__ - INFO - 
+2025-12-16 09:25:01,320 - __main__ - INFO - 📝 Full log available at: output/logs/run_pipeline_20251216_083221.log
+2025-12-16 09:25:01,320 - __main__ - INFO - 

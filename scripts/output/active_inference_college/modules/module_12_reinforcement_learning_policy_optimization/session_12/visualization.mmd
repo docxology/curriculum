@@ -1,0 +1,10 @@
+graph TD
+    A[MDP Components] --> B{States (S)};
+    B --> C{Actions (A)};
+    C --> D{Transition Probabilities (P)};
+    D --> E{Rewards (R)};
+    E --> F{Discount Factor (γ)};
+    A --> G[Learning Process];
+    G --> H{Policy Evaluation};
+    H --> I{Policy Improvement};
+    I --> H;

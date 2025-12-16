@@ -1,0 +1,16 @@
+graph TD
+    A[Start: Model Selection] --> B{Bayesian Inference};
+    B --> C[Model Specification];
+    C --> D{Likelihood Ratio};
+    D --> E[Prior Distributions];
+    E --> F[Model Complexity];
+    F --> G[Data Term];
+    G --> H[Model Selection Criteria];
+    H --> I[AIC/BIC];
+    I --> J[Evaluate Model Fit];
+    J --> K[Compare Models];
+    K --> L[Select Best Model];
+    L --> M[Model Deployment];
+    M --> N[Monitor Performance];
+    N --> O[Feedback Loop];
+    O --> B;

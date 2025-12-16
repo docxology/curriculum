@@ -1,0 +1,18 @@
+graph TD
+    A[Start] --> B{Gather Initial Data}
+    B --> C{Assess State Precision}
+    C -- High Precision --> D[Apply Precision Weighting]
+    C -- Medium Precision --> E[Adjust Attention]
+    C -- Low Precision --> F[Re-evaluate State]
+    D --> G[Update Model]
+    E --> G
+    F --> C
+    G --> H{Evaluate Outcome}
+    H -- Positive --> I[Continue with Optimized State]
+    H -- Negative --> J[Trigger Recalibration]
+    J --> B
+    I --> K([End - Stable State])
+    K --> L{Monitor & Feedback}
+    L -- Anomaly Detected --> B
+    B --> L
+    I --> L
