@@ -1,0 +1,16 @@
+graph TD
+    A([Start]) --> B(Environment Perception);
+    B --> C{Is Goal Achieved?};
+    C -- Yes --> D(Execute Action);
+    C -- No --> E(Update Internal Model);
+    E --> B;
+    D --> F{Action Successful?};
+    F -- Yes --> G(Goal Achieved);
+    F -- No --> H(Re-evaluate Action);
+    H --> D;
+    E --> I(Sensory Input);
+    I --> B;
+    E --> J(Belief Update);
+    J --> E;
+    B --> K(External Stimuli);
+    K --> B;

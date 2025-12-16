@@ -1,0 +1,21 @@
+graph TD
+    A[Large Language Model] --> B{Encoding & Embedding}
+    B --> C[Attention Mechanism (Self-Attention)]
+    C --> D[Contextualized Representation]
+    D --> E[Predictive Coding - Generating Next Token]
+    E --> F{Evaluation & Reward}
+    F -- Positive --> E
+    F -- Negative --> G[Refine Attention Weights]
+    G --> C
+    C --> H[Intermediate Representations]
+    H --> I[Decoding & Generation]
+    I --> J[Output Text]
+    J --> K[Feedback Loop - Language Model Evaluation]
+    K --> L{Adjust Attention Heads}
+    L --> C
+    B --> M[External Knowledge Retrieval]
+    M --> C
+    C --> N[Hierarchical Attention]
+    N --> O[Long-Range Dependencies]
+    O --> E
+    subgraph Active Inference

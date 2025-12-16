@@ -1,0 +1,57 @@
+graph LR
+    A([Start: LLM Context])
+    B((Generative Model))
+    C((Active Inference))
+    D((World Model))
+    E((Perception))
+    F((Prediction))
+    G((Error Signal))
+    H((Model Adjustment))
+    I((Prior Knowledge))
+    J((External Input))
+    K((RL Policy))
+    L((Reward Signal))
+    M((Action Execution))
+    N((Environment Interaction))
+    O((Feedback Loop - Prediction Error))
+    P((Adaptive Learning))
+    Q((Prioritization of Sensory Input))
+    R((Hierarchical Structure))
+    S((Parallel Pathways - Perception & Prediction))
+    T((RL Policy Optimization))
+    U((World Model Refinement))
+    V((Contextual Adaptation))
+    W((LLM as World Model))
+    X((RL Training - Exploration & Exploitation))
+    Y((Model-Based Policy Learning))
+    Z([End: Closed Loop])
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    J --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> K
+    K --> L
+    L --> M
+    M --> N
+    N --> E
+    E --> F
+    F --> G
+    G --> K
+    K --> L
+    L --> M
+    M --> N
+    N --> K
+    K --> L
+    L --> M
+    M --> N
+    N --> Z

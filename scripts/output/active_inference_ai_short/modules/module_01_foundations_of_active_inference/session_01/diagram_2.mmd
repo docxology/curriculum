@@ -1,0 +1,17 @@
+graph TD
+    A([Start]) --> B{Sensory Input};
+    B -- Process 1 --> C((Predictive Model));
+    C -- Hypothesis --> D{Compare Prediction};
+    D -- Match --> E[Reinforce Prediction];
+    D -- Mismatch --> F[Error Signal];
+    F -- Adjust Model --> C;
+    C -- Process 2 --> B;
+    B -- Contextual Input --> G{Environment};
+    G -- Influence --> C;
+    C -- Action Generation --> H[Motor Output];
+    H -- Interaction --> B;
+    E -- Feedback --> C;
+    C -- Decision Point --> I{Refine Prediction};
+    I -- Yes --> C;
+    I -- No --> B;
+    B --> J([End]);

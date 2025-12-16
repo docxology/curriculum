@@ -1,0 +1,46 @@
+graph TD
+    Start([Active Inference])
+    AI([Large Language Models])
+    PW([Precision Weighting])
+    CW([Contextual Weighting])
+    IN([Inference])
+    GA([Generative AI])
+    AW([Attention Weighting])
+    CF([Confidence Feedback])
+    W([Weighting Process])
+    EP([Encoding Process])
+    RP([Retrieval Process])
+    WW([World Model])
+    W1([Weighting 1])
+    W2([Weighting 2])
+    W3([Weighting 3])
+    CW -->> PW
+    PW -->> W
+    W -->> IN
+    IN -->> GA
+    GA -->> WW
+    WW -->> AW
+    AW -->> CF
+    CF -->> PW
+    PW -->> WW
+    W1 -->> PW
+    W2 -->> PW
+    W3 -->> PW
+    CW -->> W1
+    CW -->> W2
+    CW -->> W3
+    CW -->> W
+    EP -->> CW
+    RP -->> CW
+    WW -->> EP
+    WW -->> RP
+    Start -->> AI
+    AI -->> PW
+    PW -->> IN
+    IN -->> GA
+    GA -->> WW
+    WW -->> AW
+    AW -->> CF
+    CF -->> PW
+    PW -->> WW
+    W -->> Start

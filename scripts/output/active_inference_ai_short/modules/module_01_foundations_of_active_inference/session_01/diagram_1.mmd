@@ -1,0 +1,18 @@
+graph LR
+    A([Start]) --> B{Environment Perception}
+    B --> C(Sensory Input)
+    C --> D{Prior Beliefs}
+    D --> E{Prediction}
+    E --> F{Compare Prediction with Reality}
+    F -- Match --> G(Reward Signal)
+    F -- Mismatch --> H(Error Signal)
+    H --> I{Update Internal Model}
+    I --> J(Refine Prediction)
+    J --> K(Continue Cycle)
+    K --> B
+    B --> L{Active Exploration}
+    L --> M{Generate Action}
+    M --> N(Execute Action)
+    N --> O(Observe Outcome)
+    O --> B
+    B -- Feedback Loop --> I

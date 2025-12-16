@@ -1,0 +1,26 @@
+graph LR
+    A([Start: Sensory Input])
+    B((Environment))
+    C((Perception: Feature Extraction))
+    D((Active Inference: Hypotheses Generation))
+    E((Action Selection: Motor Command))
+    F((Motor Execution))
+    G((Feedback: Sensory Re-evaluation))
+    H((Internal Model))
+    I((Contextual Awareness))
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> C
+    C --> H
+    H --> I
+    I --> A
+
+    E ==> G
+    G --> A
+    C --> H
+    H --> I
