@@ -1,0 +1,26 @@
+graph LR
+    A([Start: Reactant]) --> B{Reaction Type?}
+    B -- "Synthesis" --> C((Reactant1 + Reactant2 -> Product))
+    B -- "Decomposition" --> D((Reactant -> Product + Product))
+    B -- "Displacement" --> E((Reactant1 + Reactant2 -> Reactant3 + Reactant4))
+    B -- "Neutralization" --> F((Acid + Base -> Salt + Water))
+
+    C -- "Stoichiometry" --> G{Balanced Equation?}
+    G -- "Yes" --> H((Product1: 1 mole))
+    G -- "No" --> I{Re-balance}
+    I --> G
+
+    H --> J([End: Product])
+    J --> K{Feedback Loop?}
+    K -- "Catalyst" --> C
+    C --> J
+
+    E --> L{Intermediate Product?}
+    L -- "Yes" --> C
+    L -- "No" --> D
+
+    F --> M{Reaction Rate?}
+    M -- "High" --> C
+    M -- "Low" --> N{Increase Temperature?}
+    N --> C
+    N -- "No" --> C

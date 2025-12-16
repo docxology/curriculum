@@ -1,0 +1,23 @@
+graph LR
+    A([Start: Solid Matter])
+    B((Gas)) --> C{Phase Change: Evaporation?}
+    D((Liquid)) --> C
+    E((Solid)) --> C
+    C -- Yes --> F(Gas Vapor)
+    C -- No --> G(Liquid Phase)
+    F -- Heat --> H(Gas)
+    G -- Cooling --> I(Liquid)
+    I -- Cooling --> J(Solid)
+    H -- Expansion --> K(Gas Expansion)
+    K -- Compression --> L(Liquid Compression)
+    L -- Heating --> M(Gas)
+    M -- Cooling --> N(Solid)
+    O((Plasma)) --> C
+    N -- Cooling --> Q(Solid)
+    Q -- Cooling --> R(Solid)
+    R -- Cooling --> S(Solid)
+    S --> T([End: Different States])
+    C -- Back to Solid --> U(Solid)
+    U -- Cooling --> V(Solid)
+    V -- Cooling --> W(Solid)
+    W --> T

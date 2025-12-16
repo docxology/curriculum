@@ -2,7 +2,7 @@
 
 ## Repository Overview
 
-Educational course materials generator using Ollama (gemma3:4b) to create comprehensive educational content.
+Educational course materials generator using Ollama (gemma3:4b) to create educational content.
 
 **Key capabilities**: Generate course outlines, lectures, labs, study notes, diagrams, questions, and secondary materials (application, extension, visualization, integration, investigation, open questions).
 
@@ -156,7 +156,7 @@ See **[docs/PIPELINE_GUIDE.md](docs/PIPELINE_GUIDE.md)** for detailed script doc
 
 ## System Status
 
-✅ **Fully implemented and tested**:
+✅ **Implemented and tested**:
 - Configuration management (YAML-based, validated)
 - **JSON Outline Integration** (dynamic module generation, multi-location search, automatic discovery)
 - LLM client (Ollama integration with retry logic)
@@ -185,8 +185,8 @@ See **[docs/PIPELINE_GUIDE.md](docs/PIPELINE_GUIDE.md)** for detailed script doc
 # Stage 01: Setup environment
 uv run python3 scripts/01_setup_environment.py
 
-# Stage 02: Validation and testing
-uv run python3 scripts/02_run_tests.py --run-tests
+# Stage 02: Validation and testing (tests run by default)
+uv run python3 scripts/02_run_tests.py
 
 # Stage 03: Generate outline (creates JSON + Markdown)
 uv run python3 scripts/03_generate_outline.py
@@ -230,16 +230,16 @@ uv run python3 scripts/run_pipeline.py --log-level DEBUG
 ```bash
 # 1. Generate outline with LLM (creates JSON structure)
 uv run python3 scripts/03_generate_outline.py
-# Creates: output/outlines/course_outline_TIMESTAMP.json
+# Creates: output/{course_name}/outlines/course_outline_TIMESTAMP.json (or output/outlines/ if course_name not available)
 # Contains: course_metadata + modules array with sessions
 
 # 2. Verify outline structure
-cat output/outlines/course_outline_*.json | jq '.modules[0]'
+cat output/{course_name}/outlines/course_outline_*.json | jq '.modules[0]'  # Or output/outlines/ if course_name not available
 
 # 3. Generate content (automatically finds latest outline)
 uv run python3 scripts/04_generate_primary.py --modules 1
 
-# 4. Output structure (session-based)
+# 4. Output structure (session-based, course-specific)
 # output/{course_name}/modules/module_01_name/
 #   session_01/
 #     lecture.md, lab.md, study_notes.md, diagram_1.mmd, diagram_2.mmd, questions.md
@@ -251,6 +251,7 @@ uv run python3 scripts/04_generate_primary.py --modules 1
 #     open_questions.md
 #   session_02/
 #     ...
+# Note: {course_name} is derived from outline metadata or default course config
 ```
 
 ### Running Tests
@@ -338,8 +339,9 @@ uv run pytest tests/test_llm_client.py tests/test_outline_generator.py tests/tes
 | **`tests/`** | Test suite | 25 test files, `conftest.py` (auto-start Ollama) |
 | **`docs/`** | Technical documentation | `ARCHITECTURE.md`, `PIPELINE_GUIDE.md`, `CONFIGURATION.md`, etc. |
 | **`output/outlines/`** | Generated outlines | `course_outline_TIMESTAMP.json`, `course_outline_TIMESTAMP.md` |
-| **`output/{course_name}/modules/`** | Generated content | `module_XX_name/session_YY/` (primary + secondary, both session-level) |
-| **`output/website/`** | Generated website | `index.html` (single self-contained file) |
+| **`output/{course_name}/modules/`** | Generated content | `module_XX_name/session_YY/` (primary + secondary, both session-level, course-specific) |
+| **`output/{course_name}/website/`** | Generated website | `index.html` (single self-contained file, course-specific if course_name available) |
+| **`output/website/`** | Generated website (fallback) | `index.html` (when course_name not available) |
 | **`.cursorrules/`** | Development rules | 12 numbered rule files (00-11) + README |
 
 ### Module Dependency Chain
@@ -519,7 +521,7 @@ for module_id in range(1, 6):
             session_number=session_num,
             num_labs=2
         )
-        # Saves to: output/modules/module_XX_name/session_YY/
+        # Saves to: output/{course_name}/modules/module_XX_name/session_YY/
 ```
 
 ### Error Handling Pattern

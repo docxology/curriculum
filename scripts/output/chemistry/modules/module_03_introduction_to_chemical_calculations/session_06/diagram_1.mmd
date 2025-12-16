@@ -1,0 +1,22 @@
+graph LR
+    A([Start: Problem Definition]) --> B{Is Reaction Balanced?}
+    B -- Yes --> C[Calculate Stoichiometry]
+    B -- No --> D[Balance Equation]
+    D --> C
+    C --> E{Calculate Moles of Reactant}
+    E --> F[Use Ideal Gas Law (PV=nRT) to Calculate Moles]
+    F --> G{Calculate Moles of Product}
+    G --> H[Consider Excess Reactant]
+    H --> I[Determine Limiting Reactant]
+    I --> J[Adjust Calculations Based on Limiting Reactant]
+    J --> K[Calculate Percent Yield]
+    K --> L[Address Errors & Uncertainty]
+    L --> M[Report Results & Conclusion]
+    M --> N([End: Final Answer])
+
+    N -.-> O[Iteration: Re-evaluate assumptions]
+    O --> A
+    C ==> F
+    J --> I
+    I --> E
+    E --> C

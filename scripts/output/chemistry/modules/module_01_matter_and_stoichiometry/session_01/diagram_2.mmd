@@ -1,0 +1,26 @@
+graph LR
+    A([Start: Initial Observation]) -- 1. Observation --> B{Is there a change?}
+    B -- Yes --> C[Chemical Change: Reaction]
+    B -- No --> D[Physical Change: Transformation]
+    C -- Reactants --> E[Chemical Equation]
+    E -- Products --> F[New Substances Formed]
+    F -- Energy Change --> G[Exothermic/Endothermic]
+    G -- Feedback --> H[Reversibility?]
+    H -- Yes --> I[Reversible Reaction]
+    I -- Catalyst --> J[Speed Up Reaction]
+    J -- Equilibrium --> K[Dynamic Equilibrium]
+    K -- Shift --> L[Le Chatelier's Principle]
+    L -- Pressure/Temperature --> M[Changes in Equilibrium]
+    M -- Feedback --> C
+    D -- Change in State --> N[Solid, Liquid, Gas]
+    N -- Heat/Cooling --> O[Phase Change]
+    O -- No Chemical Bonds Broken --> P[Same Substance]
+    P -- Same Molecular Formula --> Q[Physical Properties Remain]
+    Q -- No New Substance --> R[Physical Change]
+    R --  Same Molecular Formula --> S[Physical Change]
+    S --> T([End: Change Identified])
+    B -- Decomposition --> U[Complex to Simple]
+    U --> C
+    C -- Polymerization --> V[Large to Small]
+    V --> C
+    class C,U,V process

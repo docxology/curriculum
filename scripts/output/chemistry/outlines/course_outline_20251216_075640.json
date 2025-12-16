@@ -1,0 +1,151 @@
+{
+  "course_metadata": {
+    "name": "Introductory Chemistry",
+    "level": "Undergraduate Introductory",
+    "duration_weeks": "Not specified",
+    "total_sessions": 6,
+    "total_modules": 3,
+    "course_template": "chemistry",
+    "quality_score": 98.0,
+    "quality_level": "excellent",
+    "quality_validation": {
+      "overlap_count": 1,
+      "progression_issue_count": 0,
+      "balance_issue_count": 0
+    }
+  },
+  "modules": [
+    {
+      "module_id": 1,
+      "module_name": "Matter and Stoichiometry",
+      "module_description": "Introduction to matter, atomic structure, and basic chemical calculations.",
+      "sessions": [
+        {
+          "session_number": 1,
+          "session_title": "Matter Classification",
+          "subtopics": [
+            "States of Matter",
+            "Physical vs. Chemical Changes",
+            "Properties of Matter"
+          ],
+          "learning_objectives": [
+            "Define states of matter",
+            "Differentiate physical and chemical changes",
+            "Identify physical and chemical properties"
+          ],
+          "key_concepts": [
+            "Mixture",
+            "Pure Substance",
+            "Compound"
+          ],
+          "rationale": "Establishes fundamental concepts of matter."
+        },
+        {
+          "session_number": 2,
+          "session_title": "Atomic Structure",
+          "subtopics": [
+            "Protons, Neutrons, Electrons",
+            "Atomic Number, Mass Number",
+            "Isotopes"
+          ],
+          "learning_objectives": [
+            "Describe atomic components",
+            "Calculate atomic number and mass",
+            "Understand isotopes"
+          ],
+          "key_concepts": [
+            "Nucleus",
+            "Electron Shells"
+          ],
+          "rationale": "Explains the building blocks of atoms."
+        }
+      ]
+    },
+    {
+      "module_id": 2,
+      "module_name": "Chemical Reactions and Stoichiometry",
+      "module_description": "Chemical equations, balancing, mole concept, and basic stoichiometric calculations.",
+      "sessions": [
+        {
+          "session_number": 3,
+          "session_title": "Chemical Equations",
+          "subtopics": [
+            "Reactants, Products",
+            "Balancing Equations",
+            "Types of Reactions"
+          ],
+          "learning_objectives": [
+            "Write balanced chemical equations",
+            "Identify reaction types",
+            "Understand conservation of mass"
+          ],
+          "key_concepts": [
+            "Chemical Formula",
+            "Balanced Equation"
+          ],
+          "rationale": "Introduces the language of chemistry."
+        },
+        {
+          "session_number": 4,
+          "session_title": "The Mole Concept",
+          "subtopics": [
+            "Avogadro's Number",
+            "Molar Mass",
+            "Converting between grams and moles"
+          ],
+          "learning_objectives": [
+            "Define Avogadro's number",
+            "Calculate molar mass",
+            "Convert between grams and moles"
+          ],
+          "key_concepts": [
+            "Mole",
+            "Stoichiometry"
+          ],
+          "rationale": "Establishes the mole as a central unit."
+        }
+      ]
+    },
+    {
+      "module_id": 3,
+      "module_name": "Introduction to Chemical Calculations",
+      "module_description": "Applying stoichiometry to solve quantitative problems.",
+      "sessions": [
+        {
+          "session_number": 5,
+          "session_title": "Stoichiometric Calculations",
+          "subtopics": [
+            "Limiting Reactants",
+            "Percent Yield"
+          ],
+          "learning_objectives": [
+            "Determine limiting reactants",
+            "Calculate percent yield"
+          ],
+          "key_concepts": [
+            "Theoretical Yield",
+            "Actual Yield"
+          ],
+          "rationale": "Applies stoichiometric principles."
+        },
+        {
+          "session_number": 6,
+          "session_title": "Reaction Problem Solving",
+          "subtopics": [
+            "Step-by-step problem solving",
+            "Applying the mole concept"
+          ],
+          "learning_objectives": [
+            "Solve stoichiometry problems",
+            "Apply mole calculations"
+          ],
+          "key_concepts": [
+            "Balanced Equations",
+            "Mole Ratios"
+          ],
+          "rationale": "Reinforces problem-solving skills."
+        }
+      ]
+    }
+  ]
+}

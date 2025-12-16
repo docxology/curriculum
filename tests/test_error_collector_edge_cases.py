@@ -187,7 +187,7 @@ class TestErrorCollectorEdgeCases:
                 session_num=(i % 3) + 1
             )
         
-        with caplog.at_level(logging.INFO, logging.WARNING):
+        with caplog.at_level(logging.INFO):
             generate_stage_summary(
                 collector,
                 "Test Stage",
@@ -216,7 +216,7 @@ class TestErrorCollectorEdgeCases:
                 content_type=["questions", "lecture", "diagram"][i % 3]
             )
         
-        with caplog.at_level(logging.INFO, logging.WARNING):
+        with caplog.at_level(logging.INFO):
             generate_validation_summary(collector, logging.getLogger("test"))
         
         all_log_text = caplog.text

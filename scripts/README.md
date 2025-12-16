@@ -153,20 +153,23 @@ Validation and test reporting.
 # Validation only
 uv run python3 scripts/02_run_tests.py
 
-# Validation + modular test suite
-uv run python3 scripts/02_run_tests.py --run-tests
+# Validation + modular test suite (runs by default)
+uv run python3 scripts/02_run_tests.py
 
 # Verbose test output
-uv run python3 scripts/02_run_tests.py --run-tests --verbose
+uv run python3 scripts/02_run_tests.py --verbose
+
+# Full test suite including integration tests
+uv run python3 scripts/02_run_tests.py --include-ollama
 
 # Custom output directory
-uv run python3 scripts/02_run_tests.py --run-tests --output-dir ./my_test_reports
+uv run python3 scripts/02_run_tests.py --output-dir ./my_test_reports
 ```
 
 **What it does**:
 - Validates configuration files using modular imports
 - Tests Ollama connectivity
-- Optionally runs full pytest suite on modular codebase
+- Runs full pytest suite on modular codebase by default (use `--skip-tests` to skip)
 - **Saves complete test output** to timestamped log file
 - Parses and reports test statistics (passed, failed, skipped, errors, warnings)
 - Extracts and displays warning details (first 10)
@@ -176,7 +179,8 @@ uv run python3 scripts/02_run_tests.py --run-tests --output-dir ./my_test_report
 - Provides helpful troubleshooting tips
 
 **Arguments**:
-- `--run-tests` - Run pytest after validation
+- `--skip-tests` - Skip pytest tests (validation only)
+- `--include-ollama` - Run all tests including integration tests
 - `--skip-validation` - Skip validation, only run tests
 - `--verbose` / `-v` - Show verbose test output
 - `--no-save-output` - Don't save test output to file (saves by default)
@@ -289,9 +293,9 @@ uv run python3 scripts/04_generate_primary.py --all --sessions 3
 - `--sessions N` - Override number of sessions per module
 - `--config-dir PATH` - Custom configuration directory
 
-**Output Structure** (session-based):
+**Output Structure** (session-based, course-specific):
 ```
-output/modules/module_01_cell_biology/
+output/{course_name}/modules/module_01_cell_biology/
   session_01/
     lecture.md
     lab.md
@@ -303,6 +307,8 @@ output/modules/module_01_cell_biology/
     lecture.md
     ...
 ```
+
+**Note**: Output is saved to course-specific directories: `output/{course_name}/modules/` where `{course_name}` is derived from the outline metadata or default course config.
 
 **Troubleshooting**:
 - **Error: "No outline JSON found"** → Run: `uv run python3 scripts/03_generate_outline.py`
@@ -360,9 +366,9 @@ uv run python3 scripts/05_generate_secondary.py --all --validate
 - `--dry-run` - Show what would be generated without calling LLM
 - `--config-dir PATH` - Custom configuration directory
 
-**Output Structure**:
+**Output Structure** (course-specific):
 ```
-output/modules/module_01_cell_biology/
+output/{course_name}/modules/module_01_cell_biology/
   session_01/          # Primary materials (from Stage 04)
     lecture.md
     lab.md
@@ -380,6 +386,8 @@ output/modules/module_01_cell_biology/
   session_02/
     ...
 ```
+
+**Note**: Output is saved to course-specific directories: `output/{course_name}/modules/` where `{course_name}` is derived from the outline metadata or default course config.
 
 **Troubleshooting**:
 - **Error: "No outline found or outline contains no modules"** → Run: `uv run python3 scripts/03_generate_outline.py`
@@ -426,7 +434,7 @@ uv run python3 scripts/06_website.py --open-browser
 - `--open-browser` - Open generated website in default browser
 
 **Output**:
-- Single HTML file: `output/website/index.html`
+- Single HTML file: `output/{course_name}/website/index.html` or `output/website/index.html` (course-specific if course_name available, otherwise default)
 - Self-contained (embedded CSS, JavaScript, content)
 - Responsive, accessible design
 - Mermaid.js integration for diagrams
@@ -459,8 +467,8 @@ uv run python3 scripts/run_pipeline.py --types application visualization
 # Non-interactive outline generation
 uv run python3 scripts/run_pipeline.py --no-interactive
 
-# Run tests in stage 02
-uv run python3 scripts/run_pipeline.py --run-tests
+# Run pipeline (tests run automatically in stage 02)
+uv run python3 scripts/run_pipeline.py
 
 # Use specific language
 uv run python3 scripts/run_pipeline.py --no-interactive --language Spanish
@@ -479,7 +487,7 @@ uv run python3 scripts/run_pipeline.py --no-interactive --language Spanish
 - `--no-interactive` - Non-interactive outline (stage 03)
 - `--course NAME` - Course template name (e.g., "biology", "chemistry")
 - `--language LANGUAGE` - Language for course content (e.g., "English", "Spanish", "French")
-- `--run-tests` - Run pytest (stage 02)
+- `--run-tests` - (Deprecated - no effect) Tests run automatically in stage 02
 - `--log-level LEVEL` - Set logging level (DEBUG, INFO, WARNING, ERROR)
 
 **Process**:
@@ -498,10 +506,10 @@ uv run python3 scripts/run_pipeline.py --no-interactive --language Spanish
 |--------|-------|---------|------------|
 | `01_setup_environment.py` | 01 | Setup | Environment validated |
 | `02_run_tests.py` | 02 | Validation | Tests passed |
-| `03_generate_outline.py` | 03 | Outline | `output/outlines/*.md` |
-| `04_generate_primary.py` | 04 | Primary | `output/{lectures,labs,...}/*.md` |
-| `05_generate_secondary.py` | 05 | Secondary | `output/module_*/{application,...}/*.md` |
-| `06_website.py` | 06 | Website | `output/website/index.html` |
+| `03_generate_outline.py` | 03 | Outline | `output/{course_name}/outlines/*.{json,md}` |
+| `04_generate_primary.py` | 04 | Primary | `output/{course_name}/modules/module_*/session_*/*.md` |
+| `05_generate_secondary.py` | 05 | Secondary | `output/{course_name}/modules/module_*/session_*/{application,...}.*` |
+| `06_website.py` | 06 | Website | `output/{course_name}/website/index.html` |
 | `run_pipeline.py` | 01-06 | All stages | All above |
 
 ## Workflow Examples
@@ -514,7 +522,7 @@ uv run python3 scripts/run_pipeline.py
 ### Example 2: Manual Control (Stage by Stage)
 ```bash
 uv run python3 scripts/01_setup_environment.py
-uv run python3 scripts/02_run_tests.py --run-tests
+uv run python3 scripts/02_run_tests.py
 uv run python3 scripts/03_generate_outline.py
 # Review outline...
 uv run python3 scripts/04_generate_primary.py --modules 1 2 3

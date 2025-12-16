@@ -146,8 +146,9 @@ def run_script(script_name: str, args: argparse.Namespace, logger: logging.Logge
     
     # Script-specific argument forwarding
     if script_name == '02_run_tests.py':
-        if args.run_tests:
-            cmd.append('--run-tests')
+        # Tests run by default in 02_run_tests.py, no --run-tests argument needed
+        # If --run-tests was passed, it's ignored (backward compatibility)
+        pass
     
     elif script_name == '03_generate_outline.py':
         if args.no_interactive:

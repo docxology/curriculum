@@ -1,0 +1,24 @@
+graph LR
+    A([Start: Stoichiometry & Molar Mass]) --> B{Determine Empirical Formula};
+    B --> C{Calculate Molar Mass of Each Element};
+    C --> D{Calculate the Overall Molar Mass of the Compound};
+    D --> E{Balance the Chemical Equation};
+    E --> F{Apply Mole Concept: Moles = Mass / Molar Mass};
+    F --> G{Convert Moles to Number of Moles of the Target Compound};
+    G --> H{Determine the Balanced Chemical Equation Based on Moles};
+    H --> I{Consider Stoichiometric Ratios and Mass Relationships};
+    I --> J{Feedback Loop: Adjust Molar Mass Calculations};
+    J --> C;
+    B --> K{Check for Integer Ratios};
+    K --> C;
+    C --> L{Verify Element Percentages};
+    L --> C;
+    E --> M{Relate to Reaction Equations};
+    M --> F;
+    A -- "Context: Chemical Reactions" --> B;
+    B -- "Intermediate Steps" --> K;
+    C -- "Parallel Pathway" --> L;
+    F -- "Critical Pathway" --> G;
+    G -- "Feedback" --> F;
+    I -- "Relationship" --> H;
+    J -- "Complete Process" --> A;

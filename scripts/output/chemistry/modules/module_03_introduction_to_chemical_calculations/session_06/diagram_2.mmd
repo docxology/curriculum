@@ -1,0 +1,18 @@
+graph LR
+    A([Start: Balanced Chemical Equation]) --> B{Analyze Given Equation}
+    B --> C{Identify Reactants & Products}
+    C --> D{Calculate Moles of Reactants}
+    D --> E{Use Stoichiometry to Determine Product Yield}
+    E --> F{Account for Excess Reactants (Limiting Reactant)}
+    F --> G{Calculate Moles of Product}
+    G --> H{Convert Moles to Mass (grams)}
+    H --> I{Consider % Yield if Applicable}
+    I --> J([End: Final Product Mass])
+    B -- "Reverse Stoichiometry" --> C
+    C -- "Apply Mole Ratio" --> D
+    D -- "Ideal Gas Law" --> E
+    E -- "Adjust for % Yield" --> F
+    F -- "Iterative Calculation" --> G
+    G -- "Mass to Moles Conversion" --> H
+    H --> I
+    I --> J

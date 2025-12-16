@@ -1,0 +1,54 @@
+graph LR
+    A([Matter Classification - Properties])
+    B((Phases of Matter))
+    C((Solid))
+    D((Liquid))
+    E((Gas))
+    F((Plasma))
+    G((Density))
+    H((Specific Heat))
+    I((Thermal Expansion))
+    J((Viscosity))
+    K((Compressibility))
+    L((Intermolecular Forces))
+    M((Kinetic Energy))
+    N((Changes of State - Melting, Boiling, Condensation, Sublimation, Deposition))
+    O((Heat Transfer - Conduction, Convection, Radiation))
+    P((Thermodynamics - Laws of Thermodynamics))
+    Q((Feedback Loop - Temperature Changes affecting State))
+    R((Parallel Pathway - Calculating Heat))
+    S((Decision - Is it a pure substance?))
+    T((End))
+
+    A --> B
+    B --> C
+    B --> D
+    B --> E
+    B --> F
+
+    C --> G
+    D --> H
+    E --> I
+    F --> J
+
+    G --> L
+    H --> M
+    I --> L
+    J --> L
+    L --> M
+
+    N --> O
+    O --> P
+    P --> Q
+    Q --> N
+
+    S --> N
+    N --> S
+
+    R --> N
+    N --> R
+
+    B --> T
+    N --> T
+    S --> T
+    R --> T

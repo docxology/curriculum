@@ -67,13 +67,13 @@ Validates configuration and optionally runs pytest suite with detailed reporting
 - Displays per-module test results
 
 **Default behavior**:
-- Runs validation + fast unit tests only
-- Skips integration tests requiring Ollama
+- Runs validation + fast unit tests by default
+- Skips integration tests requiring Ollama (use `--include-ollama` to include them)
 - Saves test output to `scripts/test_reports/test_results_TIMESTAMP.log`
 - Shows pass rate and warnings
 
 **Command-line options**:
-- `--run-tests` - Actually run pytest (without this, validation only)
+- `--skip-tests` - Skip pytest tests (validation only)
 - `--include-ollama` - Run all tests including integration tests
 - `--skip-validation` - Skip config validation, only run tests
 - `--skip-tests` - Skip tests, only validate config
@@ -91,11 +91,14 @@ Validates configuration and optionally runs pytest suite with detailed reporting
 
 **Hands-off usage**:
 ```bash
-# Fast validation + unit tests
-uv run python3 scripts/02_run_tests.py --run-tests
+# Fast validation + unit tests (runs by default)
+uv run python3 scripts/02_run_tests.py
 
-# Full test suite
-uv run python3 scripts/02_run_tests.py --run-tests --include-ollama
+# Full test suite including integration tests
+uv run python3 scripts/02_run_tests.py --include-ollama
+
+# Validation only (skip tests)
+uv run python3 scripts/02_run_tests.py --skip-tests
 ```
 
 ### 03_generate_outline.py
@@ -106,7 +109,7 @@ Generates course outline with LLM. Interactive by default, allowing customizatio
 **What it does**:
 - **Shows course template selection menu** (if templates available)
 - Loads course configuration (from template or default)
-- **Interactively** prompts for course metadata (name, level, description)
+- **Interactively** prompts for course metadata (name, subject, level, description, language)
 - Prompts for structure (num_modules, total_sessions)
 - Prompts for content bounds (subtopics, objectives, concepts per session)
 - Generates outline using Ollama
@@ -148,16 +151,21 @@ uv run python3 scripts/03_generate_outline.py --no-interactive --course biology
    - Option to use default `course_config.yaml`
    - **Option to generate all courses** - Processes all available course templates sequentially
 2. Course name [default from config/template]
-3. Course level [default from config/template]
-4. Number of modules [default from config/template]
-5. Total sessions [default from config/template]
-6. Subtopics bounds (min-max) [default from llm_config]
-7. Learning objectives bounds [default from llm_config]
-8. Key concepts bounds [default from llm_config]
-9. Course description [default from config/template]
-10. Additional constraints [optional]
-11. Output base directory [default from config]
-11. Clear output? (y/n) [n]
+3. Subject/Expertise area [default from config/template]
+4. Course level [default from config/template]
+5. Language for course content generation [default from config, typically "English"]
+6. Number of modules [default from config/template]
+7. Total sessions [default from config/template]
+8. Minimum subtopics per session [default from llm_config]
+9. Maximum subtopics per session [default from llm_config]
+10. Minimum learning objectives per session [default from llm_config]
+11. Maximum learning objectives per session [default from llm_config]
+12. Minimum key concepts per session [default from llm_config]
+13. Maximum key concepts per session [default from llm_config]
+14. Course description [default from config/template]
+15. Additional constraints [optional, press Enter to skip]
+16. Output base directory [default from config]
+17. Clear output directory? (y/n) [n]
 
 ### 04_generate_primary.py
 **Stage 04: Primary Materials Generation (Session-Based)**
@@ -175,13 +183,15 @@ Generates primary materials for each session: lectures, labs, study notes, diagr
   3. `study_notes.md` - Concise session summary
   4. `diagram_1.mmd`, `diagram_2.mmd`, ... - Mermaid diagrams (number from config, typically 1-2)
   5. `questions.md` - Comprehension assessment questions
-- Saves to `output/modules/module_XX/session_YY/`
+- Saves to `output/{course_name}/modules/module_XX/session_YY/` (course-specific directory)
 
 **Default behavior**:
-- **Searches for JSON outline** in multiple locations:
-  1. `output/outlines/course_outline_*.json`
-  2. `scripts/output/outlines/course_outline_*.json`
-  3. Config-specified directory
+- **Searches for JSON outline** in multiple locations (in order):
+  1. Course-specific: `output/{course_name}/outlines/course_outline_*.json` (if course_name known)
+  2. Config-specified: `{base_directory}/outlines/course_outline_*.json`
+  3. Project root: `output/outlines/course_outline_*.json`
+  4. Scripts directory: `scripts/output/outlines/course_outline_*.json`
+  5. All course-specific directories: `output/{course}/outlines/` (when batch processing)
 - **Selects most recent** by modification time
 - **Processes ALL modules** if no `--modules` specified
 - Logs which outline file is used
@@ -201,7 +211,12 @@ Generates primary materials for each session: lectures, labs, study notes, diagr
 **Outline discovery**:
 ```python
 # Automatic (preferred for hands-off):
-# Searches: output/outlines/, scripts/output/outlines/, config-specified
+# Searches multiple locations in order:
+# 1. Course-specific: output/{course_name}/outlines/
+# 2. Config-specified: {base_directory}/outlines/
+# 3. Project root: output/outlines/
+# 4. Scripts: scripts/output/outlines/
+# 5. All course dirs: output/{course}/outlines/ (batch mode)
 # Selects: Most recent course_outline_*.json by modification time
 
 # Manual override:
@@ -217,9 +232,9 @@ uv run python3 scripts/04_generate_primary.py
 uv run python3 scripts/04_generate_primary.py --modules 1 2 3
 ```
 
-**Output structure**:
+**Output structure** (course-specific):
 ```
-output/modules/
+output/{course_name}/modules/
   module_01_molecular_foundations/
     session_01/
       lecture.md
@@ -231,6 +246,8 @@ output/modules/
     session_02/
       ...
 ```
+
+**Note**: Output is saved to course-specific directories: `output/{course_name}/modules/` where `{course_name}` is derived from the outline metadata or default course config.
 
 ### 05_generate_secondary.py
 **Stage 05: Secondary Materials Generation (Session-Level)**
@@ -248,7 +265,7 @@ Generates secondary materials per session, synthesizing session context: applica
   4. `integration.md` - Cross-module connections and synthesis
   5. `investigation.md` - Research questions and experiments
   6. `open_questions.md` - Current scientific debates and frontiers
-- Saves to `output/modules/module_XX/session_YY/[type].md` (or `.mmd` for visualization)
+- Saves to `output/{course_name}/modules/module_XX/session_YY/[type].md` (or `.mmd` for visualization) (course-specific directory)
 
 **Default behavior**:
 - **Searches for JSON outline** (same as Stage 04)
@@ -280,9 +297,9 @@ uv run python3 scripts/05_generate_secondary.py
 uv run python3 scripts/05_generate_secondary.py --modules 1 2 --types application visualization
 ```
 
-**Output structure**:
+**Output structure** (course-specific):
 ```
-output/modules/
+output/{course_name}/modules/
   module_01_molecular_foundations/
     session_01/        # From Stage 04
       lecture.md
@@ -302,6 +319,8 @@ output/modules/
       ...
 ```
 
+**Note**: Output is saved to course-specific directories: `output/{course_name}/modules/` where `{course_name}` is derived from the outline metadata or default course config.
+
 ### 06_website.py
 **Stage 06: Website Generation**
 
@@ -315,7 +334,7 @@ Generates a single, self-contained HTML website that serves as an entry point to
 - Generates single HTML file with embedded CSS and JavaScript
 - Includes Mermaid.js for client-side diagram rendering
 - Creates intuitive navigation (Course → Module → Session → Content Type)
-- Saves to `output/website/index.html`
+- Saves to `output/{course_name}/website/index.html` or `output/website/index.html` (course-specific if course_name available, otherwise default)
 
 **Default behavior**:
 - **Searches for JSON outline** (same as Stages 04/05)
@@ -326,7 +345,7 @@ Generates a single, self-contained HTML website that serves as an entry point to
 
 **Command-line options**:
 - `--outline PATH` - Use specific outline JSON (default: auto-discover)
-- `--output PATH` - Custom output path for HTML file (default: `output/website/index.html`)
+- `--output PATH` - Custom output path for HTML file (default: `output/{course_name}/website/index.html` or `output/website/index.html`)
 - `--config-dir PATH` - Custom configuration directory
 - `--open-browser` - Open generated website in default browser after generation
 
@@ -348,8 +367,11 @@ uv run python3 scripts/06_website.py --open-browser
 
 **Output structure**:
 ```
+output/{course_name}/website/
+  index.html       # Single self-contained HTML file (course-specific if course_name available)
+# OR
 output/website/
-  index.html       # Single self-contained HTML file
+  index.html       # Default location if course_name not available
 ```
 
 **Website features**:
@@ -393,7 +415,7 @@ Runs all pipeline stages sequentially with logging and error handling.
 - `--no-interactive` - **CRITICAL FOR AUTOMATION** - Pass to stage 03
 - `--course NAME` - **Course template name** - Pass to stage 03 (e.g., `--course biology`)
 - `--language LANGUAGE` - Language for course content generation (e.g., "English", "Spanish", "French"). Defaults to config value or prompts for input
-- `--run-tests` - Pass to stage 02 (actually run pytest)
+- `--run-tests` - (Deprecated - tests run by default) Pass to stage 02 (no effect, tests run automatically)
 - `--log-level LEVEL` - Set logging level (DEBUG, INFO, WARNING, ERROR)
 
 **Exit codes**:
@@ -403,7 +425,7 @@ Runs all pipeline stages sequentially with logging and error handling.
 **Hands-off usage** (fully automated):
 ```bash
 # Complete hands-off execution (NO USER INTERACTION)
-uv run python3 scripts/run_pipeline.py --no-interactive --run-tests
+uv run python3 scripts/run_pipeline.py --no-interactive
 
 # Use specific course template
 uv run python3 scripts/run_pipeline.py --no-interactive --course biology
@@ -460,9 +482,11 @@ Both primary and secondary generation scripts automatically find outlines:
 
 **Search order**:
 1. Explicit `--outline PATH` (if provided)
-2. Config-specified: `{base_directory}/outlines/course_outline_*.json`
-3. Project root: `output/outlines/course_outline_*.json`
-4. Scripts directory: `scripts/output/outlines/course_outline_*.json`
+2. Course-specific directory (if course_name known): `output/{course_name}/outlines/course_outline_*.json`
+3. Config-specified: `{base_directory}/outlines/course_outline_*.json`
+4. Project root: `output/outlines/course_outline_*.json`
+5. Scripts directory: `scripts/output/outlines/course_outline_*.json`
+6. All course-specific directories: `output/{course}/outlines/course_outline_*.json` (when batch processing, searches all courses)
 
 **Selection logic**:
 - Finds all matching `course_outline_*.json` files
@@ -556,11 +580,11 @@ output/logs/run_pipeline_YYYYMMDD_HHMMSS.log
 ### Pattern 1: Complete Automation
 ```bash
 # Zero user interaction, full pipeline
-uv run python3 scripts/run_pipeline.py \
-  --no-interactive \
-  --run-tests \
-  --auto-install \
-  --start-ollama
+uv run python3 scripts/run_pipeline.py --no-interactive
+
+# With stage 01 options (run stage 01 separately first):
+uv run python3 scripts/01_setup_environment.py --auto-install --start-ollama
+uv run python3 scripts/run_pipeline.py --no-interactive --skip-setup
 ```
 
 ### Pattern 2: Content Generation Only
@@ -592,7 +616,7 @@ uv run python3 scripts/05_generate_secondary.py \
 ```bash
 # Suitable for continuous integration
 uv run python3 scripts/01_setup_environment.py --auto-install
-uv run python3 scripts/02_run_tests.py --run-tests --no-save-output
+uv run python3 scripts/02_run_tests.py --no-save-output
 # Only run generation if tests pass
 if [ $? -eq 0 ]; then
   uv run python3 scripts/run_pipeline.py --no-interactive --skip-setup --skip-validation
@@ -604,7 +628,7 @@ fi
 ### Quick Validation (no generation)
 ```bash
 uv run python3 scripts/01_setup_environment.py
-uv run python3 scripts/02_run_tests.py --run-tests
+uv run python3 scripts/02_run_tests.py
 ```
 
 ### Test Generation (small scale)
@@ -652,7 +676,7 @@ uv run python3 scripts/05_generate_secondary.py --modules 1 --dry-run
 #### 02_run_tests.py
 | Option | Description | Default |
 |--------|-------------|---------|
-| `--run-tests` | Actually run pytest (without this, validation only) | No |
+| `--skip-tests` | Skip pytest tests (validation only) | No (tests run by default) |
 | `--include-ollama` | Run all tests including integration tests | No |
 | `--skip-validation` | Skip config validation, only run tests | No |
 | `--skip-tests` | Skip tests, only validate config | No |
@@ -697,7 +721,7 @@ uv run python3 scripts/05_generate_secondary.py --modules 1 --dry-run
 | Option | Description | Default |
 |--------|-------------|---------|
 | `--outline PATH` | Use specific outline JSON | Auto-discover latest |
-| `--output PATH` | Custom output path for HTML file | `output/website/index.html` |
+| `--output PATH` | Custom output path for HTML file | `output/{course_name}/website/index.html` or `output/website/index.html` |
 | `--open-browser` | Open generated website in default browser | No |
 
 #### run_pipeline.py
@@ -710,7 +734,7 @@ uv run python3 scripts/05_generate_secondary.py --modules 1 --dry-run
 | `--skip-secondary` | Skip Stage 05 | No |
 | `--skip-website` | Skip Stage 06 | No |
 | `--no-interactive` | **CRITICAL FOR AUTOMATION** - Pass to stage 03 | Interactive |
-| `--run-tests` | Pass to stage 02 (actually run pytest) | No |
+| `--run-tests` | (Deprecated - no effect) Tests run automatically in stage 02 | No |
 | `--modules ID [ID ...]` | Pass to stages 04 and 05 | All modules |
 | `--types TYPE [TYPE ...]` | Pass to stage 05 | All types |
 | `--language LANGUAGE` | Language for course content (e.g., "English", "Spanish") | From config or prompts |
@@ -772,8 +796,8 @@ uv run python3 scripts/run_pipeline.py --config-dir /path/to/config
 ollama serve
 ollama pull gemma3:4b
 
-# Run with --include-ollama
-uv run python3 scripts/02_run_tests.py --run-tests --include-ollama
+# Run with --include-ollama (tests run by default)
+uv run python3 scripts/02_run_tests.py --include-ollama
 ```
 
 ## See Also

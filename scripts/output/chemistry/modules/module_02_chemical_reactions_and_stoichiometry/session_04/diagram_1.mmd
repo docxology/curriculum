@@ -1,0 +1,17 @@
+graph LR
+    A([Start: Balanced Chemical Equation]) --> B{Identify Reactants & Products}
+    B --> C{Determine Stoichiometric Ratios}
+    C --> D{Calculate Moles of Reactants}
+    D --> E{Apply Mole-to-Mole Ratio}
+    E --> F{Calculate Moles of Products}
+    F --> G{Convert Moles to Mass (grams)}
+    G --> H{Repeat for Each Reactant and Product}
+    H --> I{Feedback Loop: Adjust Calculations}
+    I --> H
+    J([End: Stoichiometric Calculation Complete])
+    C -- ==>  Relates to  --  D
+    E -- ==>  Relates to  --  F
+    B -- ==>  Relates to  --  C
+    I -- ==>  Relates to  --  B
+    H -- ==> Relates to  J
+    A -- ==> Relates to  H

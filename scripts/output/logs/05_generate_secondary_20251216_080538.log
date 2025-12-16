@@ -1,0 +1,926 @@
+2025-12-16 08:05:38,420 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/05_generate_secondary_20251216_080538.log
+2025-12-16 08:05:38,420 - generate_secondary - INFO - 
+2025-12-16 08:05:38,420 - generate_secondary - INFO - 🔬 STAGE 05: SECONDARY MATERIALS (Session-Level Synthesis)
+2025-12-16 08:05:38,420 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:05:38,420 - generate_secondary - INFO - Generating materials PER SESSION (with full session context)
+2025-12-16 08:05:38,420 - generate_secondary - INFO - Reading all content from: [course-specific]/modules/module_XX/session_YY/
+2025-12-16 08:05:38,420 - generate_secondary - INFO - Output structure: [course-specific]/modules/module_XX/session_YY/[type].md
+2025-12-16 08:05:38,420 - generate_secondary - INFO - 
+2025-12-16 08:05:38,420 - generate_secondary - INFO - SECONDARY TYPES GENERATED PER SESSION:
+2025-12-16 08:05:38,420 - generate_secondary - INFO -   1. application.md - Real-world applications and case studies
+2025-12-16 08:05:38,420 - generate_secondary - INFO -   2. extension.md - Advanced topics beyond core curriculum
+2025-12-16 08:05:38,420 - generate_secondary - INFO -   3. visualization.mmd - Additional diagrams and concept maps (Mermaid format)
+2025-12-16 08:05:38,420 - generate_secondary - INFO -   4. integration.md - Cross-module connections and synthesis
+2025-12-16 08:05:38,420 - generate_secondary - INFO -   5. investigation.md - Research questions and experiments
+2025-12-16 08:05:38,420 - generate_secondary - INFO -   6. open_questions.md - Current scientific debates and frontiers
+2025-12-16 08:05:38,420 - generate_secondary - INFO - 
+2025-12-16 08:05:38,420 - generate_secondary - INFO - 
+2025-12-16 08:05:38,420 - generate_secondary - INFO - ⚙️ CONFIGURATION
+2025-12-16 08:05:38,420 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:05:38,420 - generate_secondary - INFO -   • Content Validation: DISABLED
+2025-12-16 08:05:38,420 - generate_secondary - INFO -   • Dry Run: DISABLED
+2025-12-16 08:05:38,420 - generate_secondary - INFO -   • Log File: output/logs/05_generate_secondary_20251216_080538.log
+2025-12-16 08:05:38,420 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:05:38,420 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 08:05:38,421 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 08:05:38,434 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 08:05:38,434 - generate_secondary - INFO - Using most recent outline from output/outlines/ or scripts/output/outlines/
+2025-12-16 08:05:38,435 - src.config.loader - INFO - Found most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/chemistry/outlines/course_outline_20251216_075640.json
+2025-12-16 08:05:38,435 - src.config.loader - INFO - Found most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/chemistry/outlines/course_outline_20251216_075640.json
+2025-12-16 08:05:38,435 - src.config.loader - INFO - Loaded 3 modules from outline: course_outline_20251216_075640.json
+2025-12-16 08:05:38,435 - generate_secondary - INFO - Using course-specific output directory: output/chemistry/
+2025-12-16 08:05:38,435 - generate_secondary - INFO - Processing ALL modules
+2025-12-16 08:05:38,435 - generate_secondary - INFO - Processing 3 modules (6 total sessions)
+2025-12-16 08:05:38,435 - generate_secondary - INFO - Secondary types: application, extension, visualization, integration, investigation, open_questions
+2025-12-16 08:05:38,436 - src.llm.client - INFO - Initialized OllamaClient: model=gemma3:4b, url=http://localhost:11434/api/generate
+2025-12-16 08:05:38,436 - generate_secondary - INFO - 
+============================================================
+2025-12-16 08:05:38,436 - generate_secondary - INFO - [1/3] Module 1: Matter and Stoichiometry (2 sessions)
+2025-12-16 08:05:38,436 - generate_secondary - INFO - ============================================================
+2025-12-16 08:05:38,436 - generate_secondary - INFO - 
+  Session 1/6: Matter Classification
+2025-12-16 08:05:38,438 - generate_secondary - INFO - Generating application for session 1: Matter Classification...
+2025-12-16 08:05:38,438 - src.llm.client - INFO - [app:776c71] 🚀 app | m=gemma3:4b | p=28213c | t=150s
+2025-12-16 08:05:38,438 - src.llm.client - INFO - [app:776c71] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:05:38,438 - src.llm.client - INFO - [app:776c71] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:05:38,443 - src.llm.client - INFO - [app:776c71] Sending request to Ollama: model=gemma3:4b, operation=application, payload=30036 bytes, prompt=28213 chars
+2025-12-16 08:05:38,443 - src.llm.client - INFO - [app:776c71] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:05:43,171 - src.llm.request_handler - INFO - [app:776c71] ✓ Done 4.73s
+2025-12-16 08:05:43,171 - src.llm.client - INFO - [app:776c71] ✅ HTTP 200 in 4.73s
+2025-12-16 08:05:43,171 - src.llm.client - INFO - [app:776c71] 📡 Stream active (200)
+2025-12-16 08:05:43,171 - src.llm.client - INFO - [app:776c71] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:05:45,176 - src.llm.client - INFO - [app:776c71] 📊 2.0s: 823c @411c/s (135ch, ~206t @103t/s)
+2025-12-16 08:05:47,178 - src.llm.client - INFO - [app:776c71] 📊 4.0s: 1659c @414c/s (273ch, ~415t @103t/s)
+2025-12-16 08:05:49,182 - src.llm.client - INFO - [app:776c71] 📊 6.0s: 2524c @420c/s (414ch, ~631t @105t/s)
+2025-12-16 08:05:51,196 - src.llm.client - INFO - [app:776c71] 📊 8.0s: 3400c @424c/s (555ch, ~850t @106t/s)
+2025-12-16 08:05:53,210 - src.llm.client - INFO - [app:776c71] 📊 10.0s: 4294c @428c/s (696ch, ~1074t @107t/s)
+2025-12-16 08:05:55,072 - src.llm.client - INFO - [app:776c71] ✓ Done 16.63s: 5029c (~651w @302c/s)
+2025-12-16 08:05:55,076 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:05:55,076 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-16 08:05:55,076 - generate_secondary - INFO -     - Length: 5028 chars, 651 words
+2025-12-16 08:05:55,076 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 08:05:55,076 - generate_secondary - INFO -     - Applications: 5
+2025-12-16 08:05:55,076 - generate_secondary - INFO -     - Avg words per application: 125
+2025-12-16 08:05:55,076 - generate_secondary - WARNING - [WARNING] Application 2 has 133 words (require 150-200, need 17 more words) ⚠️
+2025-12-16 08:05:55,076 - generate_secondary - WARNING - [WARNING] Application 3 has 127 words (require 150-200, need 23 more words) ⚠️
+2025-12-16 08:05:55,076 - generate_secondary - WARNING - [WARNING] Application 4 has 107 words (require 150-200, need 43 more words) ⚠️
+2025-12-16 08:05:55,076 - generate_secondary - WARNING - [WARNING] Application 5 has 94 words (require 150-200, need 56 more words) ⚠️
+2025-12-16 08:05:55,077 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_01/application.md
+2025-12-16 08:05:55,077 - generate_secondary - INFO - Generating extension for session 1: Matter Classification...
+2025-12-16 08:05:55,077 - src.llm.client - INFO - [ext:a1d8a2] 🚀 ext | m=gemma3:4b | p=27247c | t=120s
+2025-12-16 08:05:55,077 - src.llm.client - INFO - [ext:a1d8a2] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:05:55,077 - src.llm.client - INFO - [ext:a1d8a2] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:05:55,079 - src.llm.client - INFO - [ext:a1d8a2] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=32187 bytes, prompt=27247 chars
+2025-12-16 08:05:55,079 - src.llm.client - INFO - [ext:a1d8a2] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:05:59,676 - src.llm.request_handler - INFO - [ext:a1d8a2] ✓ Done 4.60s
+2025-12-16 08:05:59,677 - src.llm.client - INFO - [ext:a1d8a2] ✅ HTTP 200 in 4.60s
+2025-12-16 08:05:59,677 - src.llm.client - INFO - [ext:a1d8a2] 📡 Stream active (200)
+2025-12-16 08:05:59,677 - src.llm.client - INFO - [ext:a1d8a2] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:06:01,689 - src.llm.client - INFO - [ext:a1d8a2] 📊 2.0s: 857c @426c/s (142ch, ~214t @106t/s)
+2025-12-16 08:06:03,701 - src.llm.client - INFO - [ext:a1d8a2] 📊 4.0s: 1729c @430c/s (285ch, ~432t @107t/s)
+2025-12-16 08:06:05,714 - src.llm.client - INFO - [ext:a1d8a2] 📊 6.0s: 2689c @445c/s (428ch, ~672t @111t/s)
+2025-12-16 08:06:07,726 - src.llm.client - INFO - [ext:a1d8a2] 📊 8.0s: 3679c @457c/s (571ch, ~920t @114t/s)
+2025-12-16 08:06:08,431 - src.llm.client - INFO - [ext:a1d8a2] ✓ Done 13.35s: 3905c (~490w @292c/s)
+2025-12-16 08:06:08,432 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:06:08,433 - generate_secondary - INFO - [NEEDS REVIEW] Extension generated ⚠️
+2025-12-16 08:06:08,433 - generate_secondary - INFO -     - Length: 3905 chars, 490 words
+2025-12-16 08:06:08,433 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 08:06:08,433 - generate_secondary - INFO -     - Topics: 3
+2025-12-16 08:06:08,433 - generate_secondary - INFO -     - Avg words per topic: 158
+2025-12-16 08:06:08,433 - generate_secondary - WARNING - [WARNING] Topic 1 has 152 words (exceeds 150 by 2 words - consider condensing) ⚠️
+2025-12-16 08:06:08,433 - generate_secondary - WARNING - [WARNING] Topic 2 has 163 words (exceeds 150 by 13 words - consider condensing) ⚠️
+2025-12-16 08:06:08,433 - generate_secondary - WARNING - [WARNING] Topic 3 has 158 words (exceeds 150 by 8 words - consider condensing) ⚠️
+2025-12-16 08:06:08,433 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_01/extension.md
+2025-12-16 08:06:08,433 - generate_secondary - INFO - Generating visualization for session 1: Matter Classification...
+2025-12-16 08:06:08,433 - src.llm.client - INFO - [viz:748054] 🚀 viz | m=gemma3:4b | p=26207c | t=120s
+2025-12-16 08:06:08,433 - src.llm.client - INFO - [viz:748054] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:06:08,433 - src.llm.client - INFO - [viz:748054] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:06:08,435 - src.llm.client - INFO - [viz:748054] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=30469 bytes, prompt=26207 chars
+2025-12-16 08:06:08,435 - src.llm.client - INFO - [viz:748054] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:06:12,997 - src.llm.request_handler - INFO - [viz:748054] ✓ Done 4.56s
+2025-12-16 08:06:12,998 - src.llm.client - INFO - [viz:748054] ✅ HTTP 200 in 4.56s
+2025-12-16 08:06:12,998 - src.llm.client - INFO - [viz:748054] 📡 Stream active (200)
+2025-12-16 08:06:12,998 - src.llm.client - INFO - [viz:748054] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:06:15,008 - src.llm.client - INFO - [viz:748054] 📊 2.0s: 404c @201c/s (143ch, ~101t @50t/s)
+2025-12-16 08:06:15,227 - src.llm.client - INFO - [viz:748054] ✓ Done 6.79s: 408c (~55w @60c/s)
+2025-12-16 08:06:15,227 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:06:15,228 - generate_secondary - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-16 08:06:15,228 - generate_secondary - INFO -     - Length: 391 chars (cleaned: 391 chars)
+2025-12-16 08:06:15,228 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 08:06:15,228 - generate_secondary - INFO - [OK] Elements: 27 total (nodes: 12, connections: 15) ✓
+2025-12-16 08:06:15,228 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_01/visualization.mmd
+2025-12-16 08:06:15,228 - generate_secondary - INFO - Generating integration for session 1: Matter Classification...
+2025-12-16 08:06:15,228 - src.llm.client - INFO - [int:e92b42] 🚀 int | m=gemma3:4b | p=27556c | t=150s
+2025-12-16 08:06:15,228 - src.llm.client - INFO - [int:e92b42] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:06:15,228 - src.llm.client - INFO - [int:e92b42] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:06:15,230 - src.llm.client - INFO - [int:e92b42] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=32835 bytes, prompt=27556 chars
+2025-12-16 08:06:15,230 - src.llm.client - INFO - [int:e92b42] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:06:19,788 - src.llm.request_handler - INFO - [int:e92b42] ✓ Done 4.56s
+2025-12-16 08:06:19,788 - src.llm.client - INFO - [int:e92b42] ✅ HTTP 200 in 4.56s
+2025-12-16 08:06:19,788 - src.llm.client - INFO - [int:e92b42] 📡 Stream active (200)
+2025-12-16 08:06:19,788 - src.llm.client - INFO - [int:e92b42] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:06:21,799 - src.llm.client - INFO - [int:e92b42] 📊 2.0s: 810c @403c/s (142ch, ~202t @101t/s)
+2025-12-16 08:06:23,804 - src.llm.client - INFO - [int:e92b42] 📊 4.0s: 1630c @406c/s (285ch, ~408t @101t/s)
+2025-12-16 08:06:25,809 - src.llm.client - INFO - [int:e92b42] 📊 6.0s: 2442c @406c/s (426ch, ~610t @101t/s)
+2025-12-16 08:06:27,821 - src.llm.client - INFO - [int:e92b42] 📊 8.0s: 3254c @405c/s (567ch, ~814t @101t/s)
+2025-12-16 08:06:29,824 - src.llm.client - INFO - [int:e92b42] 📊 10.0s: 4054c @404c/s (706ch, ~1014t @101t/s)
+2025-12-16 08:06:30,302 - src.llm.client - INFO - [int:e92b42] ✓ Done 15.07s: 4152c (~572w @275c/s)
+2025-12-16 08:06:30,303 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:06:30,304 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-16 08:06:30,304 - generate_secondary - INFO -     - Length: 4132 chars, 570 words
+2025-12-16 08:06:30,304 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-16 08:06:30,304 - generate_secondary - INFO -     - Connections: 42
+2025-12-16 08:06:30,304 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-16 08:06:30,304 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_01/integration.md
+2025-12-16 08:06:30,304 - generate_secondary - INFO - Generating investigation for session 1: Matter Classification...
+2025-12-16 08:06:30,304 - src.llm.client - INFO - [inv:f4bbdb] 🚀 inv | m=gemma3:4b | p=26469c | t=150s
+2025-12-16 08:06:30,304 - src.llm.client - INFO - [inv:f4bbdb] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:06:30,304 - src.llm.client - INFO - [inv:f4bbdb] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:06:30,306 - src.llm.client - INFO - [inv:f4bbdb] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=30691 bytes, prompt=26469 chars
+2025-12-16 08:06:30,306 - src.llm.client - INFO - [inv:f4bbdb] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:06:34,875 - src.llm.request_handler - INFO - [inv:f4bbdb] ✓ Done 4.57s
+2025-12-16 08:06:34,875 - src.llm.client - INFO - [inv:f4bbdb] ✅ HTTP 200 in 4.57s
+2025-12-16 08:06:34,875 - src.llm.client - INFO - [inv:f4bbdb] 📡 Stream active (200)
+2025-12-16 08:06:34,875 - src.llm.client - INFO - [inv:f4bbdb] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:06:36,878 - src.llm.client - INFO - [inv:f4bbdb] 📊 2.0s: 666c @333c/s (142ch, ~166t @83t/s)
+2025-12-16 08:06:38,883 - src.llm.client - INFO - [inv:f4bbdb] 📊 4.0s: 1316c @328c/s (284ch, ~329t @82t/s)
+2025-12-16 08:06:40,896 - src.llm.client - INFO - [inv:f4bbdb] 📊 6.0s: 2070c @344c/s (426ch, ~518t @86t/s)
+2025-12-16 08:06:42,909 - src.llm.client - INFO - [inv:f4bbdb] 📊 8.0s: 2823c @351c/s (568ch, ~706t @88t/s)
+2025-12-16 08:06:44,920 - src.llm.client - INFO - [inv:f4bbdb] 📊 10.0s: 3517c @350c/s (711ch, ~879t @88t/s)
+2025-12-16 08:06:45,317 - src.llm.client - INFO - [inv:f4bbdb] ✓ Done 15.01s: 3560c (~553w @237c/s)
+2025-12-16 08:06:45,318 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:06:45,319 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-16 08:06:45,319 - generate_secondary - INFO -     - Length: 3555 chars, 553 words
+2025-12-16 08:06:45,319 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:06:45,319 - generate_secondary - INFO -     - Research questions: 3
+2025-12-16 08:06:45,319 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:06:45,319 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_01/investigation.md
+2025-12-16 08:06:45,319 - generate_secondary - INFO - Generating open_questions for session 1: Matter Classification...
+2025-12-16 08:06:45,319 - src.llm.client - INFO - [opq:cfe54f] 🚀 opq | m=gemma3:4b | p=26555c | t=150s
+2025-12-16 08:06:45,319 - src.llm.client - INFO - [opq:cfe54f] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:06:45,319 - src.llm.client - INFO - [opq:cfe54f] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:06:45,324 - src.llm.client - INFO - [opq:cfe54f] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=30788 bytes, prompt=26555 chars
+2025-12-16 08:06:45,324 - src.llm.client - INFO - [opq:cfe54f] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:06:49,890 - src.llm.request_handler - INFO - [opq:cfe54f] ✓ Done 4.57s
+2025-12-16 08:06:49,890 - src.llm.client - INFO - [opq:cfe54f] ✅ HTTP 200 in 4.57s
+2025-12-16 08:06:49,891 - src.llm.client - INFO - [opq:cfe54f] 📡 Stream active (200)
+2025-12-16 08:06:49,891 - src.llm.client - INFO - [opq:cfe54f] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:06:51,893 - src.llm.client - INFO - [opq:cfe54f] 📊 2.0s: 872c @435c/s (142ch, ~218t @109t/s)
+2025-12-16 08:06:53,907 - src.llm.client - INFO - [opq:cfe54f] 📊 4.0s: 1740c @433c/s (285ch, ~435t @108t/s)
+2025-12-16 08:06:55,479 - src.llm.client - INFO - [opq:cfe54f] ✓ Done 10.16s: 2320c (~297w @228c/s)
+2025-12-16 08:06:55,480 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:06:55,480 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-16 08:06:55,481 - generate_secondary - INFO -     - Length: 2308 chars, 295 words
+2025-12-16 08:06:55,481 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:06:55,481 - generate_secondary - INFO -     - Open questions: 3
+2025-12-16 08:06:55,481 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:06:55,481 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_01/open_questions.md
+2025-12-16 08:06:55,481 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-16 08:06:55,481 - generate_secondary - INFO - 
+  Session 2/6: Atomic Structure
+2025-12-16 08:06:55,483 - generate_secondary - INFO - Generating application for session 2: Atomic Structure...
+2025-12-16 08:06:55,483 - src.llm.client - INFO - [app:7d402c] 🚀 app | m=gemma3:4b | p=27317c | t=150s
+2025-12-16 08:06:55,483 - src.llm.client - INFO - [app:7d402c] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:06:55,483 - src.llm.client - INFO - [app:7d402c] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:06:55,484 - src.llm.client - INFO - [app:7d402c] Sending request to Ollama: model=gemma3:4b, operation=application, payload=29227 bytes, prompt=27317 chars
+2025-12-16 08:06:55,484 - src.llm.client - INFO - [app:7d402c] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:07:00,039 - src.llm.request_handler - INFO - [app:7d402c] ✓ Done 4.55s
+2025-12-16 08:07:00,040 - src.llm.client - INFO - [app:7d402c] ✅ HTTP 200 in 4.56s
+2025-12-16 08:07:00,040 - src.llm.client - INFO - [app:7d402c] 📡 Stream active (200)
+2025-12-16 08:07:00,040 - src.llm.client - INFO - [app:7d402c] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:07:02,052 - src.llm.client - INFO - [app:7d402c] 📊 2.0s: 780c @388c/s (143ch, ~195t @97t/s)
+2025-12-16 08:07:04,065 - src.llm.client - INFO - [app:7d402c] 📊 4.0s: 1522c @378c/s (286ch, ~380t @95t/s)
+2025-12-16 08:07:06,070 - src.llm.client - INFO - [app:7d402c] 📊 6.0s: 2302c @382c/s (428ch, ~576t @95t/s)
+2025-12-16 08:07:08,081 - src.llm.client - INFO - [app:7d402c] 📊 8.0s: 3071c @382c/s (570ch, ~768t @95t/s)
+2025-12-16 08:07:10,095 - src.llm.client - INFO - [app:7d402c] 📊 10.1s: 3873c @385c/s (712ch, ~968t @96t/s)
+2025-12-16 08:07:11,177 - src.llm.client - INFO - [app:7d402c] ✓ Done 15.69s: 4256c (~578w @271c/s)
+2025-12-16 08:07:11,179 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:07:11,179 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-16 08:07:11,179 - generate_secondary - INFO -     - Length: 4255 chars, 578 words
+2025-12-16 08:07:11,179 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 08:07:11,179 - generate_secondary - INFO -     - Applications: 5
+2025-12-16 08:07:11,179 - generate_secondary - INFO -     - Avg words per application: 111
+2025-12-16 08:07:11,179 - generate_secondary - WARNING - [WARNING] Application 1 has 136 words (require 150-200, need 14 more words) ⚠️
+2025-12-16 08:07:11,179 - generate_secondary - WARNING - [WARNING] Application 2 has 127 words (require 150-200, need 23 more words) ⚠️
+2025-12-16 08:07:11,179 - generate_secondary - WARNING - [WARNING] Application 3 has 104 words (require 150-200, need 46 more words) ⚠️
+2025-12-16 08:07:11,179 - generate_secondary - WARNING - [WARNING] Application 4 has 95 words (require 150-200, need 55 more words) ⚠️
+2025-12-16 08:07:11,179 - generate_secondary - WARNING - [WARNING] Application 5 has 93 words (require 150-200, need 57 more words) ⚠️
+2025-12-16 08:07:11,179 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_02/application.md
+2025-12-16 08:07:11,179 - generate_secondary - INFO - Generating extension for session 2: Atomic Structure...
+2025-12-16 08:07:11,180 - src.llm.client - INFO - [ext:9d013e] 🚀 ext | m=gemma3:4b | p=26351c | t=120s
+2025-12-16 08:07:11,180 - src.llm.client - INFO - [ext:9d013e] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:07:11,180 - src.llm.client - INFO - [ext:9d013e] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:07:11,181 - src.llm.client - INFO - [ext:9d013e] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=31378 bytes, prompt=26351 chars
+2025-12-16 08:07:11,181 - src.llm.client - INFO - [ext:9d013e] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:07:15,772 - src.llm.request_handler - INFO - [ext:9d013e] ✓ Done 4.59s
+2025-12-16 08:07:15,772 - src.llm.client - INFO - [ext:9d013e] ✅ HTTP 200 in 4.59s
+2025-12-16 08:07:15,772 - src.llm.client - INFO - [ext:9d013e] 📡 Stream active (200)
+2025-12-16 08:07:15,772 - src.llm.client - INFO - [ext:9d013e] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:07:17,775 - src.llm.client - INFO - [ext:9d013e] 📊 2.0s: 875c @437c/s (142ch, ~219t @109t/s)
+2025-12-16 08:07:19,787 - src.llm.client - INFO - [ext:9d013e] 📊 4.0s: 1738c @433c/s (284ch, ~434t @108t/s)
+2025-12-16 08:07:21,788 - src.llm.client - INFO - [ext:9d013e] 📊 6.0s: 2641c @439c/s (426ch, ~660t @110t/s)
+2025-12-16 08:07:23,800 - src.llm.client - INFO - [ext:9d013e] 📊 8.0s: 3602c @449c/s (569ch, ~900t @112t/s)
+2025-12-16 08:07:25,094 - src.llm.client - INFO - [ext:9d013e] ✓ Done 13.91s: 4062c (~516w @292c/s)
+2025-12-16 08:07:25,096 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:07:25,096 - generate_secondary - INFO - [COMPLIANT] Extension generated ✓
+2025-12-16 08:07:25,096 - generate_secondary - INFO -     - Length: 4049 chars, 514 words
+2025-12-16 08:07:25,096 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 08:07:25,096 - generate_secondary - INFO -     - Topics: 4
+2025-12-16 08:07:25,096 - generate_secondary - INFO -     - Avg words per topic: 119
+2025-12-16 08:07:25,096 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_02/extension.md
+2025-12-16 08:07:25,096 - generate_secondary - INFO - Generating visualization for session 2: Atomic Structure...
+2025-12-16 08:07:25,096 - src.llm.client - INFO - [viz:c97034] 🚀 viz | m=gemma3:4b | p=25311c | t=120s
+2025-12-16 08:07:25,096 - src.llm.client - INFO - [viz:c97034] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:07:25,096 - src.llm.client - INFO - [viz:c97034] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:07:25,098 - src.llm.client - INFO - [viz:c97034] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=29660 bytes, prompt=25311 chars
+2025-12-16 08:07:25,098 - src.llm.client - INFO - [viz:c97034] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:07:29,662 - src.llm.request_handler - INFO - [viz:c97034] ✓ Done 4.56s
+2025-12-16 08:07:29,663 - src.llm.client - INFO - [viz:c97034] ✅ HTTP 200 in 4.57s
+2025-12-16 08:07:29,663 - src.llm.client - INFO - [viz:c97034] 📡 Stream active (200)
+2025-12-16 08:07:29,663 - src.llm.client - INFO - [viz:c97034] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:07:31,670 - src.llm.client - INFO - [viz:c97034] 📊 2.0s: 512c @255c/s (142ch, ~128t @64t/s)
+2025-12-16 08:07:33,677 - src.llm.client - INFO - [viz:c97034] 📊 4.0s: 1040c @259c/s (283ch, ~260t @65t/s)
+2025-12-16 08:07:35,691 - src.llm.client - INFO - [viz:c97034] 📊 6.0s: 1679c @279c/s (418ch, ~420t @70t/s)
+2025-12-16 08:07:36,123 - src.llm.client - INFO - [viz:c97034] ✓ Done 11.03s: 1735c (~245w @157c/s)
+2025-12-16 08:07:36,124 - src.generate.processors.cleanup - INFO - Cleanup complete: 2 issues before, 0 issues after
+2025-12-16 08:07:36,124 - generate_secondary - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-16 08:07:36,124 - generate_secondary - INFO -     - Length: 691 chars (cleaned: 691 chars)
+2025-12-16 08:07:36,124 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 08:07:36,124 - generate_secondary - INFO - [OK] Elements: 41 total (nodes: 21, connections: 20) ✓
+2025-12-16 08:07:36,124 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_02/visualization.mmd
+2025-12-16 08:07:36,124 - generate_secondary - INFO - Generating integration for session 2: Atomic Structure...
+2025-12-16 08:07:36,125 - src.llm.client - INFO - [int:74360e] 🚀 int | m=gemma3:4b | p=26660c | t=150s
+2025-12-16 08:07:36,125 - src.llm.client - INFO - [int:74360e] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:07:36,125 - src.llm.client - INFO - [int:74360e] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:07:36,126 - src.llm.client - INFO - [int:74360e] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=32026 bytes, prompt=26660 chars
+2025-12-16 08:07:36,126 - src.llm.client - INFO - [int:74360e] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:07:40,762 - src.llm.request_handler - INFO - [int:74360e] ✓ Done 4.64s
+2025-12-16 08:07:40,762 - src.llm.client - INFO - [int:74360e] ✅ HTTP 200 in 4.64s
+2025-12-16 08:07:40,763 - src.llm.client - INFO - [int:74360e] 📡 Stream active (200)
+2025-12-16 08:07:40,763 - src.llm.client - INFO - [int:74360e] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:07:42,776 - src.llm.client - INFO - [int:74360e] 📊 2.0s: 811c @403c/s (141ch, ~203t @101t/s)
+2025-12-16 08:07:44,783 - src.llm.client - INFO - [int:74360e] 📊 4.0s: 1618c @403c/s (283ch, ~404t @101t/s)
+2025-12-16 08:07:46,785 - src.llm.client - INFO - [int:74360e] 📊 6.0s: 2418c @401c/s (424ch, ~604t @100t/s)
+2025-12-16 08:07:48,790 - src.llm.client - INFO - [int:74360e] 📊 8.0s: 3198c @398c/s (563ch, ~800t @100t/s)
+2025-12-16 08:07:50,797 - src.llm.client - INFO - [int:74360e] 📊 10.0s: 3990c @398c/s (701ch, ~998t @99t/s)
+2025-12-16 08:07:52,804 - src.llm.client - INFO - [int:74360e] 📊 12.0s: 4811c @400c/s (841ch, ~1203t @100t/s)
+2025-12-16 08:07:54,819 - src.llm.client - INFO - [int:74360e] 📊 14.1s: 5602c @399c/s (983ch, ~1400t @100t/s)
+2025-12-16 08:07:56,826 - src.llm.client - INFO - [int:74360e] 📊 16.1s: 6391c @398c/s (1122ch, ~1598t @99t/s)
+2025-12-16 08:07:58,833 - src.llm.client - INFO - [int:74360e] 📊 18.1s: 7211c @399c/s (1264ch, ~1803t @100t/s)
+2025-12-16 08:08:00,834 - src.llm.client - INFO - [int:74360e] 📊 20.1s: 8010c @399c/s (1405ch, ~2002t @100t/s)
+2025-12-16 08:08:02,848 - src.llm.client - INFO - [int:74360e] 📊 22.1s: 8810c @399c/s (1547ch, ~2202t @100t/s)
+2025-12-16 08:08:04,859 - src.llm.client - INFO - [int:74360e] 📊 24.1s: 9631c @400c/s (1689ch, ~2408t @100t/s)
+2025-12-16 08:08:06,863 - src.llm.client - INFO - [int:74360e] 📊 26.1s: 10439c @400c/s (1830ch, ~2610t @100t/s)
+2025-12-16 08:08:08,872 - src.llm.client - INFO - [int:74360e] 📊 28.1s: 11235c @400c/s (1971ch, ~2809t @100t/s)
+2025-12-16 08:08:10,882 - src.llm.client - INFO - [int:74360e] 📊 30.1s: 12043c @400c/s (2112ch, ~3011t @100t/s)
+2025-12-16 08:08:12,884 - src.llm.client - INFO - [int:74360e] 📊 32.1s: 12839c @400c/s (2254ch, ~3210t @100t/s)
+2025-12-16 08:08:14,884 - src.llm.client - INFO - [int:74360e] 📊 34.1s: 13652c @400c/s (2396ch, ~3413t @100t/s)
+2025-12-16 08:08:16,889 - src.llm.client - INFO - [int:74360e] 📊 36.1s: 14454c @400c/s (2538ch, ~3614t @100t/s)
+2025-12-16 08:08:18,892 - src.llm.client - INFO - [int:74360e] 📊 38.1s: 15257c @400c/s (2679ch, ~3814t @100t/s)
+2025-12-16 08:08:20,897 - src.llm.client - INFO - [int:74360e] 📊 40.1s: 16061c @400c/s (2820ch, ~4015t @100t/s)
+2025-12-16 08:08:22,903 - src.llm.client - INFO - [int:74360e] 📊 42.1s: 16891c @401c/s (2962ch, ~4223t @100t/s)
+2025-12-16 08:08:24,917 - src.llm.client - INFO - [int:74360e] 📊 44.2s: 17686c @401c/s (3104ch, ~4422t @100t/s)
+2025-12-16 08:08:26,930 - src.llm.client - INFO - [int:74360e] 📊 46.2s: 18492c @401c/s (3246ch, ~4623t @100t/s)
+2025-12-16 08:08:28,943 - src.llm.client - INFO - [int:74360e] 📊 48.2s: 19296c @400c/s (3386ch, ~4824t @100t/s)
+2025-12-16 08:08:30,952 - src.llm.client - INFO - [int:74360e] 📊 50.2s: 20093c @400c/s (3526ch, ~5023t @100t/s)
+2025-12-16 08:08:32,960 - src.llm.client - INFO - [int:74360e] 📊 52.2s: 20879c @400c/s (3666ch, ~5220t @100t/s)
+2025-12-16 08:08:34,963 - src.llm.client - INFO - [int:74360e] 📊 54.2s: 21684c @400c/s (3806ch, ~5421t @100t/s)
+2025-12-16 08:08:36,965 - src.llm.client - INFO - [int:74360e] 📊 56.2s: 22495c @400c/s (3947ch, ~5624t @100t/s)
+2025-12-16 08:08:38,965 - src.llm.client - INFO - [int:74360e] 📊 58.2s: 23290c @400c/s (4088ch, ~5822t @100t/s)
+2025-12-16 08:08:40,978 - src.llm.client - INFO - [int:74360e] 📊 60.2s: 24112c @400c/s (4231ch, ~6028t @100t/s)
+2025-12-16 08:08:42,988 - src.llm.client - INFO - [int:74360e] 📊 62.2s: 24909c @400c/s (4374ch, ~6227t @100t/s)
+2025-12-16 08:08:45,001 - src.llm.client - INFO - [int:74360e] 📊 64.2s: 25735c @401c/s (4517ch, ~6434t @100t/s)
+2025-12-16 08:08:47,013 - src.llm.client - INFO - [int:74360e] 📊 66.3s: 26544c @401c/s (4660ch, ~6636t @100t/s)
+2025-12-16 08:08:49,025 - src.llm.client - INFO - [int:74360e] 📊 68.3s: 27345c @401c/s (4803ch, ~6836t @100t/s)
+2025-12-16 08:08:51,591 - src.llm.client - INFO - [int:74360e] 📊 70.8s: 28151c @397c/s (4944ch, ~7038t @99t/s)
+2025-12-16 08:08:51,592 - src.llm.client - INFO - [int:74360e] ✓ Done 75.47s: 28151c (~4003w @373c/s)
+2025-12-16 08:08:51,602 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:08:51,604 - generate_secondary - INFO - [NEEDS REVIEW] Integration generated ⚠️
+2025-12-16 08:08:51,606 - generate_secondary - INFO -     - Length: 28081 chars, 4003 words
+2025-12-16 08:08:51,606 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-16 08:08:51,606 - generate_secondary - INFO -     - Connections: 240
+2025-12-16 08:08:51,606 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-16 08:08:51,606 - generate_secondary - WARNING - [WARNING] Total word count (4003) exceeds maximum 1000 (exceeds by 3003 words - condense content) ⚠️
+2025-12-16 08:08:51,606 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-16 08:08:51,606 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-16 08:08:51,607 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_02/integration.md
+2025-12-16 08:08:51,607 - generate_secondary - INFO - Generating investigation for session 2: Atomic Structure...
+2025-12-16 08:08:51,607 - src.llm.client - INFO - [inv:2d007a] 🚀 inv | m=gemma3:4b | p=25573c | t=150s
+2025-12-16 08:08:51,607 - src.llm.client - INFO - [inv:2d007a] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:08:51,607 - src.llm.client - INFO - [inv:2d007a] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:08:51,608 - src.llm.client - INFO - [inv:2d007a] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=29882 bytes, prompt=25573 chars
+2025-12-16 08:08:51,608 - src.llm.client - INFO - [inv:2d007a] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:08:56,170 - src.llm.request_handler - INFO - [inv:2d007a] ✓ Done 4.56s
+2025-12-16 08:08:56,170 - src.llm.client - INFO - [inv:2d007a] ✅ HTTP 200 in 4.56s
+2025-12-16 08:08:56,171 - src.llm.client - INFO - [inv:2d007a] 📡 Stream active (200)
+2025-12-16 08:08:56,171 - src.llm.client - INFO - [inv:2d007a] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:08:58,176 - src.llm.client - INFO - [inv:2d007a] 📊 2.0s: 673c @336c/s (138ch, ~168t @84t/s)
+2025-12-16 08:09:00,188 - src.llm.client - INFO - [inv:2d007a] 📊 4.0s: 1482c @369c/s (280ch, ~370t @92t/s)
+2025-12-16 08:09:02,198 - src.llm.client - INFO - [inv:2d007a] 📊 6.0s: 2205c @366c/s (423ch, ~551t @91t/s)
+2025-12-16 08:09:04,210 - src.llm.client - INFO - [inv:2d007a] 📊 8.0s: 3030c @377c/s (566ch, ~758t @94t/s)
+2025-12-16 08:09:06,223 - src.llm.client - INFO - [inv:2d007a] 📊 10.1s: 3895c @387c/s (708ch, ~974t @97t/s)
+2025-12-16 08:09:06,814 - src.llm.client - INFO - [inv:2d007a] ✓ Done 15.21s: 3975c (~533w @261c/s)
+2025-12-16 08:09:06,816 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:09:06,816 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-16 08:09:06,816 - generate_secondary - INFO -     - Length: 3963 chars, 531 words
+2025-12-16 08:09:06,816 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:09:06,816 - generate_secondary - INFO -     - Research questions: 3
+2025-12-16 08:09:06,816 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:09:06,816 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_02/investigation.md
+2025-12-16 08:09:06,816 - generate_secondary - INFO - Generating open_questions for session 2: Atomic Structure...
+2025-12-16 08:09:06,816 - src.llm.client - INFO - [opq:bc491c] 🚀 opq | m=gemma3:4b | p=25659c | t=150s
+2025-12-16 08:09:06,816 - src.llm.client - INFO - [opq:bc491c] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:09:06,816 - src.llm.client - INFO - [opq:bc491c] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:09:06,818 - src.llm.client - INFO - [opq:bc491c] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=29979 bytes, prompt=25659 chars
+2025-12-16 08:09:06,818 - src.llm.client - INFO - [opq:bc491c] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:09:11,374 - src.llm.request_handler - INFO - [opq:bc491c] ✓ Done 4.56s
+2025-12-16 08:09:11,374 - src.llm.client - INFO - [opq:bc491c] ✅ HTTP 200 in 4.56s
+2025-12-16 08:09:11,374 - src.llm.client - INFO - [opq:bc491c] 📡 Stream active (200)
+2025-12-16 08:09:11,374 - src.llm.client - INFO - [opq:bc491c] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:09:13,386 - src.llm.client - INFO - [opq:bc491c] 📊 2.0s: 781c @388c/s (142ch, ~195t @97t/s)
+2025-12-16 08:09:15,393 - src.llm.client - INFO - [opq:bc491c] 📊 4.0s: 1696c @422c/s (283ch, ~424t @106t/s)
+2025-12-16 08:09:16,388 - src.llm.client - INFO - [opq:bc491c] ✓ Done 9.57s: 2038c (~273w @213c/s)
+2025-12-16 08:09:16,389 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:09:16,390 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-16 08:09:16,390 - generate_secondary - INFO -     - Length: 2026 chars, 271 words
+2025-12-16 08:09:16,390 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:09:16,390 - generate_secondary - INFO -     - Open questions: 3
+2025-12-16 08:09:16,390 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:09:16,390 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_01_matter_and_stoichiometry/session_02/open_questions.md
+2025-12-16 08:09:16,390 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-16 08:09:16,390 - generate_secondary - INFO - 
+============================================================
+2025-12-16 08:09:16,390 - generate_secondary - INFO - [2/3] Module 2: Chemical Reactions and Stoichiometry (2 sessions)
+2025-12-16 08:09:16,390 - generate_secondary - INFO - ============================================================
+2025-12-16 08:09:16,390 - generate_secondary - INFO - 
+  Session 3/6: Chemical Equations
+2025-12-16 08:09:16,392 - generate_secondary - INFO - Generating application for session 3: Chemical Equations...
+2025-12-16 08:09:16,392 - src.llm.client - INFO - [app:e3fba7] 🚀 app | m=gemma3:4b | p=23616c | t=150s
+2025-12-16 08:09:16,392 - src.llm.client - INFO - [app:e3fba7] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:09:16,392 - src.llm.client - INFO - [app:e3fba7] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:09:16,394 - src.llm.client - INFO - [app:e3fba7] Sending request to Ollama: model=gemma3:4b, operation=application, payload=25766 bytes, prompt=23616 chars
+2025-12-16 08:09:16,394 - src.llm.client - INFO - [app:e3fba7] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:09:20,952 - src.llm.request_handler - INFO - [app:e3fba7] ✓ Done 4.56s
+2025-12-16 08:09:20,952 - src.llm.client - INFO - [app:e3fba7] ✅ HTTP 200 in 4.56s
+2025-12-16 08:09:20,952 - src.llm.client - INFO - [app:e3fba7] 📡 Stream active (200)
+2025-12-16 08:09:20,952 - src.llm.client - INFO - [app:e3fba7] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:09:22,954 - src.llm.client - INFO - [app:e3fba7] 📊 2.0s: 783c @391c/s (141ch, ~196t @98t/s)
+2025-12-16 08:09:24,958 - src.llm.client - INFO - [app:e3fba7] 📊 4.0s: 1700c @424c/s (283ch, ~425t @106t/s)
+2025-12-16 08:09:26,963 - src.llm.client - INFO - [app:e3fba7] 📊 6.0s: 2548c @424c/s (425ch, ~637t @106t/s)
+2025-12-16 08:09:28,971 - src.llm.client - INFO - [app:e3fba7] 📊 8.0s: 3458c @431c/s (565ch, ~864t @108t/s)
+2025-12-16 08:09:30,985 - src.llm.client - INFO - [app:e3fba7] 📊 10.0s: 4230c @422c/s (708ch, ~1058t @105t/s)
+2025-12-16 08:09:32,989 - src.llm.client - INFO - [app:e3fba7] 📊 12.0s: 5071c @421c/s (850ch, ~1268t @105t/s)
+2025-12-16 08:09:34,991 - src.llm.client - INFO - [app:e3fba7] 📊 14.0s: 5949c @424c/s (992ch, ~1487t @106t/s)
+2025-12-16 08:09:37,002 - src.llm.client - INFO - [app:e3fba7] 📊 16.1s: 6773c @422c/s (1133ch, ~1693t @105t/s)
+2025-12-16 08:09:39,004 - src.llm.client - INFO - [app:e3fba7] 📊 18.1s: 7651c @424c/s (1274ch, ~1913t @106t/s)
+2025-12-16 08:09:40,630 - src.llm.client - INFO - [app:e3fba7] ✓ Done 24.24s: 8264c (~1074w @341c/s)
+2025-12-16 08:09:40,633 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:09:40,633 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-16 08:09:40,633 - generate_secondary - INFO -     - Length: 8263 chars, 1074 words
+2025-12-16 08:09:40,633 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 08:09:40,634 - generate_secondary - INFO -     - Applications: 5
+2025-12-16 08:09:40,634 - generate_secondary - INFO -     - Avg words per application: 213
+2025-12-16 08:09:40,634 - generate_secondary - WARNING - [WARNING] Application 1 has 220 words (exceeds 200 by 20 words - consider condensing) ⚠️
+2025-12-16 08:09:40,634 - generate_secondary - WARNING - [WARNING] Application 2 has 231 words (exceeds 200 by 31 words - consider condensing) ⚠️
+2025-12-16 08:09:40,634 - generate_secondary - WARNING - [WARNING] Application 3 has 206 words (exceeds 200 by 6 words - consider condensing) ⚠️
+2025-12-16 08:09:40,634 - generate_secondary - WARNING - [WARNING] Application 4 has 211 words (exceeds 200 by 11 words - consider condensing) ⚠️
+2025-12-16 08:09:40,634 - generate_secondary - WARNING - [WARNING] Total word count (1074) exceeds maximum 1000 (exceeds by 74 words - condense content) ⚠️
+2025-12-16 08:09:40,634 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-16 08:09:40,634 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-16 08:09:40,634 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_03/application.md
+2025-12-16 08:09:40,634 - generate_secondary - INFO - Generating extension for session 3: Chemical Equations...
+2025-12-16 08:09:40,634 - src.llm.client - INFO - [ext:9db68d] 🚀 ext | m=gemma3:4b | p=22650c | t=120s
+2025-12-16 08:09:40,634 - src.llm.client - INFO - [ext:9db68d] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:09:40,634 - src.llm.client - INFO - [ext:9db68d] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:09:40,636 - src.llm.client - INFO - [ext:9db68d] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=27917 bytes, prompt=22650 chars
+2025-12-16 08:09:40,636 - src.llm.client - INFO - [ext:9db68d] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:09:45,208 - src.llm.request_handler - INFO - [ext:9db68d] ✓ Done 4.57s
+2025-12-16 08:09:45,209 - src.llm.client - INFO - [ext:9db68d] ✅ HTTP 200 in 4.57s
+2025-12-16 08:09:45,209 - src.llm.client - INFO - [ext:9db68d] 📡 Stream active (200)
+2025-12-16 08:09:45,209 - src.llm.client - INFO - [ext:9db68d] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:09:47,222 - src.llm.client - INFO - [ext:9db68d] 📊 2.0s: 908c @451c/s (143ch, ~227t @113t/s)
+2025-12-16 08:09:49,229 - src.llm.client - INFO - [ext:9db68d] 📊 4.0s: 1807c @450c/s (285ch, ~452t @112t/s)
+2025-12-16 08:09:51,229 - src.llm.client - INFO - [ext:9db68d] 📊 6.0s: 2654c @441c/s (427ch, ~664t @110t/s)
+2025-12-16 08:09:53,332 - src.llm.client - INFO - [ext:9db68d] 📊 8.1s: 3552c @437c/s (562ch, ~888t @109t/s)
+2025-12-16 08:09:53,333 - src.llm.client - INFO - [ext:9db68d] ✓ Done 12.70s: 3552c (~445w @280c/s)
+2025-12-16 08:09:53,334 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:09:53,334 - generate_secondary - INFO - [COMPLIANT] Extension generated ✓
+2025-12-16 08:09:53,334 - generate_secondary - INFO -     - Length: 3538 chars, 443 words
+2025-12-16 08:09:53,334 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 08:09:53,334 - generate_secondary - INFO -     - Topics: 3
+2025-12-16 08:09:53,335 - generate_secondary - INFO -     - Avg words per topic: 140
+2025-12-16 08:09:53,335 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_03/extension.md
+2025-12-16 08:09:53,335 - generate_secondary - INFO - Generating visualization for session 3: Chemical Equations...
+2025-12-16 08:09:53,335 - src.llm.client - INFO - [viz:e6407f] 🚀 viz | m=gemma3:4b | p=21610c | t=120s
+2025-12-16 08:09:53,335 - src.llm.client - INFO - [viz:e6407f] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:09:53,335 - src.llm.client - INFO - [viz:e6407f] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:09:53,336 - src.llm.client - INFO - [viz:e6407f] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=26199 bytes, prompt=21610 chars
+2025-12-16 08:09:53,337 - src.llm.client - INFO - [viz:e6407f] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:09:58,032 - src.llm.request_handler - INFO - [viz:e6407f] ✓ Done 4.70s
+2025-12-16 08:09:58,032 - src.llm.client - INFO - [viz:e6407f] ✅ HTTP 200 in 4.70s
+2025-12-16 08:09:58,032 - src.llm.client - INFO - [viz:e6407f] 📡 Stream active (200)
+2025-12-16 08:09:58,032 - src.llm.client - INFO - [viz:e6407f] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:09:59,242 - src.llm.client - INFO - [viz:e6407f] ✓ Done 5.91s: 217c (~31w @37c/s)
+2025-12-16 08:09:59,243 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:09:59,243 - generate_secondary - INFO - [NEEDS REVIEW] Diagram generated ⚠️
+2025-12-16 08:09:59,243 - generate_secondary - INFO -     - Length: 201 chars (cleaned: 201 chars)
+2025-12-16 08:09:59,243 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 08:09:59,243 - generate_secondary - INFO - [CRITICAL] Elements: 16 total (nodes: 7, connections: 9) 🔴
+2025-12-16 08:09:59,243 - generate_secondary - WARNING -     - Mermaid syntax warnings: 1 issues fixed (code fences, style commands)
+2025-12-16 08:09:59,243 - generate_secondary - WARNING -     - Critical issues: 2 structural problems requiring attention
+2025-12-16 08:09:59,243 - generate_secondary - WARNING - [WARNING] Only 7 nodes found (require at least 10, need 3 more - add more nodes to the diagram) ⚠️
+2025-12-16 08:09:59,243 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-16 08:09:59,243 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-16 08:09:59,243 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_03/visualization.mmd
+2025-12-16 08:09:59,243 - generate_secondary - INFO - Generating integration for session 3: Chemical Equations...
+2025-12-16 08:09:59,243 - src.llm.client - INFO - [int:6c1d4e] 🚀 int | m=gemma3:4b | p=22959c | t=150s
+2025-12-16 08:09:59,244 - src.llm.client - INFO - [int:6c1d4e] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:09:59,244 - src.llm.client - INFO - [int:6c1d4e] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:09:59,245 - src.llm.client - INFO - [int:6c1d4e] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=28565 bytes, prompt=22959 chars
+2025-12-16 08:09:59,245 - src.llm.client - INFO - [int:6c1d4e] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:10:03,825 - src.llm.request_handler - INFO - [int:6c1d4e] ✓ Done 4.58s
+2025-12-16 08:10:03,825 - src.llm.client - INFO - [int:6c1d4e] ✅ HTTP 200 in 4.58s
+2025-12-16 08:10:03,825 - src.llm.client - INFO - [int:6c1d4e] 📡 Stream active (200)
+2025-12-16 08:10:03,825 - src.llm.client - INFO - [int:6c1d4e] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:10:05,828 - src.llm.client - INFO - [int:6c1d4e] 📊 2.0s: 845c @422c/s (140ch, ~211t @105t/s)
+2025-12-16 08:10:07,842 - src.llm.client - INFO - [int:6c1d4e] 📊 4.0s: 1635c @407c/s (281ch, ~409t @102t/s)
+2025-12-16 08:10:09,856 - src.llm.client - INFO - [int:6c1d4e] 📊 6.0s: 2508c @416c/s (423ch, ~627t @104t/s)
+2025-12-16 08:10:11,724 - src.llm.client - INFO - [int:6c1d4e] ✓ Done 12.48s: 3259c (~439w @261c/s)
+2025-12-16 08:10:11,725 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:10:11,725 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-16 08:10:11,725 - generate_secondary - INFO -     - Length: 3259 chars, 439 words
+2025-12-16 08:10:11,725 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-16 08:10:11,725 - generate_secondary - INFO -     - Connections: 24
+2025-12-16 08:10:11,725 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-16 08:10:11,726 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_03/integration.md
+2025-12-16 08:10:11,726 - generate_secondary - INFO - Generating investigation for session 3: Chemical Equations...
+2025-12-16 08:10:11,726 - src.llm.client - INFO - [inv:bbcaff] 🚀 inv | m=gemma3:4b | p=21872c | t=150s
+2025-12-16 08:10:11,726 - src.llm.client - INFO - [inv:bbcaff] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:10:11,726 - src.llm.client - INFO - [inv:bbcaff] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:10:11,728 - src.llm.client - INFO - [inv:bbcaff] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=26421 bytes, prompt=21872 chars
+2025-12-16 08:10:11,728 - src.llm.client - INFO - [inv:bbcaff] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:10:16,304 - src.llm.request_handler - INFO - [inv:bbcaff] ✓ Done 4.58s
+2025-12-16 08:10:16,304 - src.llm.client - INFO - [inv:bbcaff] ✅ HTTP 200 in 4.58s
+2025-12-16 08:10:16,304 - src.llm.client - INFO - [inv:bbcaff] 📡 Stream active (200)
+2025-12-16 08:10:16,304 - src.llm.client - INFO - [inv:bbcaff] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:10:18,307 - src.llm.client - INFO - [inv:bbcaff] 📊 2.0s: 659c @329c/s (141ch, ~165t @82t/s)
+2025-12-16 08:10:20,310 - src.llm.client - INFO - [inv:bbcaff] 📊 4.0s: 1408c @352c/s (283ch, ~352t @88t/s)
+2025-12-16 08:10:22,311 - src.llm.client - INFO - [inv:bbcaff] 📊 6.0s: 2220c @370c/s (425ch, ~555t @92t/s)
+2025-12-16 08:10:24,322 - src.llm.client - INFO - [inv:bbcaff] 📊 8.0s: 2824c @352c/s (565ch, ~706t @88t/s)
+2025-12-16 08:10:26,335 - src.llm.client - INFO - [inv:bbcaff] 📊 10.0s: 3677c @367c/s (707ch, ~919t @92t/s)
+2025-12-16 08:10:28,341 - src.llm.client - INFO - [inv:bbcaff] 📊 12.0s: 4406c @366c/s (848ch, ~1102t @92t/s)
+2025-12-16 08:10:30,346 - src.llm.client - INFO - [inv:bbcaff] 📊 14.0s: 5097c @363c/s (988ch, ~1274t @91t/s)
+2025-12-16 08:10:32,320 - src.llm.client - INFO - [inv:bbcaff] ✓ Done 20.59s: 5742c (~869w @279c/s)
+2025-12-16 08:10:32,322 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:10:32,322 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-16 08:10:32,322 - generate_secondary - INFO -     - Length: 5739 chars, 869 words
+2025-12-16 08:10:32,322 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:10:32,322 - generate_secondary - INFO -     - Research questions: 3
+2025-12-16 08:10:32,322 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:10:32,323 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_03/investigation.md
+2025-12-16 08:10:32,323 - generate_secondary - INFO - Generating open_questions for session 3: Chemical Equations...
+2025-12-16 08:10:32,323 - src.llm.client - INFO - [opq:c1c5fe] 🚀 opq | m=gemma3:4b | p=21958c | t=150s
+2025-12-16 08:10:32,323 - src.llm.client - INFO - [opq:c1c5fe] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:10:32,323 - src.llm.client - INFO - [opq:c1c5fe] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:10:32,325 - src.llm.client - INFO - [opq:c1c5fe] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=26518 bytes, prompt=21958 chars
+2025-12-16 08:10:32,325 - src.llm.client - INFO - [opq:c1c5fe] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:10:36,879 - src.llm.request_handler - INFO - [opq:c1c5fe] ✓ Done 4.55s
+2025-12-16 08:10:36,879 - src.llm.client - INFO - [opq:c1c5fe] ✅ HTTP 200 in 4.55s
+2025-12-16 08:10:36,879 - src.llm.client - INFO - [opq:c1c5fe] 📡 Stream active (200)
+2025-12-16 08:10:36,880 - src.llm.client - INFO - [opq:c1c5fe] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:10:38,881 - src.llm.client - INFO - [opq:c1c5fe] 📊 2.0s: 843c @421c/s (141ch, ~211t @105t/s)
+2025-12-16 08:10:40,894 - src.llm.client - INFO - [opq:c1c5fe] 📊 4.0s: 1664c @414c/s (283ch, ~416t @104t/s)
+2025-12-16 08:10:42,931 - src.llm.client - INFO - [opq:c1c5fe] 📊 6.1s: 2407c @398c/s (412ch, ~602t @99t/s)
+2025-12-16 08:10:42,932 - src.llm.client - INFO - [opq:c1c5fe] ✓ Done 10.61s: 2407c (~304w @227c/s)
+2025-12-16 08:10:42,932 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:10:42,933 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-16 08:10:42,933 - generate_secondary - INFO -     - Length: 2406 chars, 304 words
+2025-12-16 08:10:42,933 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:10:42,933 - generate_secondary - INFO -     - Open questions: 3
+2025-12-16 08:10:42,933 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:10:42,933 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_03/open_questions.md
+2025-12-16 08:10:42,933 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-16 08:10:42,933 - generate_secondary - INFO - 
+  Session 4/6: The Mole Concept
+2025-12-16 08:10:42,935 - generate_secondary - INFO - Generating application for session 4: The Mole Concept...
+2025-12-16 08:10:42,935 - src.llm.client - INFO - [app:0a8bc0] 🚀 app | m=gemma3:4b | p=26317c | t=150s
+2025-12-16 08:10:42,935 - src.llm.client - INFO - [app:0a8bc0] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:10:42,935 - src.llm.client - INFO - [app:0a8bc0] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:10:42,937 - src.llm.client - INFO - [app:0a8bc0] Sending request to Ollama: model=gemma3:4b, operation=application, payload=28400 bytes, prompt=26317 chars
+2025-12-16 08:10:42,937 - src.llm.client - INFO - [app:0a8bc0] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:10:47,498 - src.llm.request_handler - INFO - [app:0a8bc0] ✓ Done 4.56s
+2025-12-16 08:10:47,498 - src.llm.client - INFO - [app:0a8bc0] ✅ HTTP 200 in 4.56s
+2025-12-16 08:10:47,498 - src.llm.client - INFO - [app:0a8bc0] 📡 Stream active (200)
+2025-12-16 08:10:47,498 - src.llm.client - INFO - [app:0a8bc0] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:10:49,510 - src.llm.client - INFO - [app:0a8bc0] 📊 2.0s: 811c @403c/s (142ch, ~203t @101t/s)
+2025-12-16 08:10:51,514 - src.llm.client - INFO - [app:0a8bc0] 📊 4.0s: 1664c @414c/s (284ch, ~416t @104t/s)
+2025-12-16 08:10:53,526 - src.llm.client - INFO - [app:0a8bc0] 📊 6.0s: 2438c @404c/s (426ch, ~610t @101t/s)
+2025-12-16 08:10:55,527 - src.llm.client - INFO - [app:0a8bc0] 📊 8.0s: 3298c @411c/s (568ch, ~824t @103t/s)
+2025-12-16 08:10:57,538 - src.llm.client - INFO - [app:0a8bc0] 📊 10.0s: 4148c @413c/s (709ch, ~1037t @103t/s)
+2025-12-16 08:10:59,544 - src.llm.client - INFO - [app:0a8bc0] 📊 12.0s: 4919c @408c/s (851ch, ~1230t @102t/s)
+2025-12-16 08:11:01,548 - src.llm.client - INFO - [app:0a8bc0] 📊 14.1s: 5614c @400c/s (991ch, ~1404t @100t/s)
+2025-12-16 08:11:02,862 - src.llm.client - INFO - [app:0a8bc0] ✓ Done 19.93s: 5956c (~793w @299c/s)
+2025-12-16 08:11:02,864 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:11:02,864 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-16 08:11:02,864 - generate_secondary - INFO -     - Length: 5934 chars, 788 words
+2025-12-16 08:11:02,864 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 08:11:02,864 - generate_secondary - INFO -     - Applications: 5
+2025-12-16 08:11:02,864 - generate_secondary - INFO -     - Avg words per application: 152
+2025-12-16 08:11:02,864 - generate_secondary - WARNING - [WARNING] Application 4 has 137 words (require 150-200, need 13 more words) ⚠️
+2025-12-16 08:11:02,864 - generate_secondary - WARNING - [WARNING] Application 5 has 123 words (require 150-200, need 27 more words) ⚠️
+2025-12-16 08:11:02,865 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_04/application.md
+2025-12-16 08:11:02,865 - generate_secondary - INFO - Generating extension for session 4: The Mole Concept...
+2025-12-16 08:11:02,865 - src.llm.client - INFO - [ext:703b4f] 🚀 ext | m=gemma3:4b | p=25351c | t=120s
+2025-12-16 08:11:02,865 - src.llm.client - INFO - [ext:703b4f] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:11:02,865 - src.llm.client - INFO - [ext:703b4f] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:11:02,866 - src.llm.client - INFO - [ext:703b4f] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=30551 bytes, prompt=25351 chars
+2025-12-16 08:11:02,867 - src.llm.client - INFO - [ext:703b4f] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:11:07,439 - src.llm.request_handler - INFO - [ext:703b4f] ✓ Done 4.57s
+2025-12-16 08:11:07,439 - src.llm.client - INFO - [ext:703b4f] ✅ HTTP 200 in 4.57s
+2025-12-16 08:11:07,439 - src.llm.client - INFO - [ext:703b4f] 📡 Stream active (200)
+2025-12-16 08:11:07,440 - src.llm.client - INFO - [ext:703b4f] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:11:09,443 - src.llm.client - INFO - [ext:703b4f] 📊 2.0s: 872c @435c/s (141ch, ~218t @109t/s)
+2025-12-16 08:11:11,448 - src.llm.client - INFO - [ext:703b4f] 📊 4.0s: 1793c @447c/s (283ch, ~448t @112t/s)
+2025-12-16 08:11:13,461 - src.llm.client - INFO - [ext:703b4f] 📊 6.0s: 2731c @454c/s (425ch, ~683t @113t/s)
+2025-12-16 08:11:15,465 - src.llm.client - INFO - [ext:703b4f] 📊 8.0s: 3645c @454c/s (566ch, ~911t @114t/s)
+2025-12-16 08:11:17,517 - src.llm.client - INFO - [ext:703b4f] 📊 10.1s: 4486c @445c/s (691ch, ~1122t @111t/s)
+2025-12-16 08:11:17,517 - src.llm.client - INFO - [ext:703b4f] ✓ Done 14.65s: 4486c (~569w @306c/s)
+2025-12-16 08:11:17,519 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:11:17,519 - generate_secondary - INFO - [NEEDS REVIEW] Extension generated ⚠️
+2025-12-16 08:11:17,519 - generate_secondary - INFO -     - Length: 4485 chars, 569 words
+2025-12-16 08:11:17,519 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 08:11:17,519 - generate_secondary - INFO -     - Topics: 3
+2025-12-16 08:11:17,519 - generate_secondary - INFO -     - Avg words per topic: 182
+2025-12-16 08:11:17,519 - generate_secondary - WARNING - [WARNING] Topic 1 has 165 words (exceeds 150 by 15 words - consider condensing) ⚠️
+2025-12-16 08:11:17,519 - generate_secondary - WARNING - [WARNING] Topic 2 has 188 words (exceeds 150 by 38 words - consider condensing) ⚠️
+2025-12-16 08:11:17,519 - generate_secondary - WARNING - [WARNING] Topic 3 has 194 words (exceeds 150 by 44 words - consider condensing) ⚠️
+2025-12-16 08:11:17,519 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_04/extension.md
+2025-12-16 08:11:17,519 - generate_secondary - INFO - Generating visualization for session 4: The Mole Concept...
+2025-12-16 08:11:17,519 - src.llm.client - INFO - [viz:81a3f8] 🚀 viz | m=gemma3:4b | p=24311c | t=120s
+2025-12-16 08:11:17,519 - src.llm.client - INFO - [viz:81a3f8] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:11:17,519 - src.llm.client - INFO - [viz:81a3f8] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:11:17,521 - src.llm.client - INFO - [viz:81a3f8] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=28833 bytes, prompt=24311 chars
+2025-12-16 08:11:17,521 - src.llm.client - INFO - [viz:81a3f8] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:11:22,079 - src.llm.request_handler - INFO - [viz:81a3f8] ✓ Done 4.56s
+2025-12-16 08:11:22,079 - src.llm.client - INFO - [viz:81a3f8] ✅ HTTP 200 in 4.56s
+2025-12-16 08:11:22,079 - src.llm.client - INFO - [viz:81a3f8] 📡 Stream active (200)
+2025-12-16 08:11:22,079 - src.llm.client - INFO - [viz:81a3f8] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:11:24,082 - src.llm.client - INFO - [viz:81a3f8] 📊 2.0s: 568c @284c/s (142ch, ~142t @71t/s)
+2025-12-16 08:11:26,083 - src.llm.client - INFO - [viz:81a3f8] 📊 4.0s: 1102c @275c/s (284ch, ~276t @69t/s)
+2025-12-16 08:11:28,086 - src.llm.client - INFO - [viz:81a3f8] 📊 6.0s: 1718c @286c/s (426ch, ~430t @71t/s)
+2025-12-16 08:11:29,189 - src.llm.client - INFO - [viz:81a3f8] ✓ Done 11.67s: 1992c (~282w @171c/s)
+2025-12-16 08:11:29,189 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:11:29,189 - generate_secondary - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-16 08:11:29,189 - generate_secondary - INFO -     - Length: 360 chars (cleaned: 360 chars)
+2025-12-16 08:11:29,189 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 08:11:29,189 - generate_secondary - INFO - [OK] Elements: 17 total (nodes: 9, connections: 8) ✓
+2025-12-16 08:11:29,190 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_04/visualization.mmd
+2025-12-16 08:11:29,190 - generate_secondary - INFO - Generating integration for session 4: The Mole Concept...
+2025-12-16 08:11:29,190 - src.llm.client - INFO - [int:5ffa64] 🚀 int | m=gemma3:4b | p=25660c | t=150s
+2025-12-16 08:11:29,190 - src.llm.client - INFO - [int:5ffa64] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:11:29,190 - src.llm.client - INFO - [int:5ffa64] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:11:29,191 - src.llm.client - INFO - [int:5ffa64] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=31199 bytes, prompt=25660 chars
+2025-12-16 08:11:29,191 - src.llm.client - INFO - [int:5ffa64] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:11:33,741 - src.llm.request_handler - INFO - [int:5ffa64] ✓ Done 4.55s
+2025-12-16 08:11:33,741 - src.llm.client - INFO - [int:5ffa64] ✅ HTTP 200 in 4.55s
+2025-12-16 08:11:33,742 - src.llm.client - INFO - [int:5ffa64] 📡 Stream active (200)
+2025-12-16 08:11:33,742 - src.llm.client - INFO - [int:5ffa64] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:11:35,746 - src.llm.client - INFO - [int:5ffa64] 📊 2.0s: 857c @428c/s (143ch, ~214t @107t/s)
+2025-12-16 08:11:37,753 - src.llm.client - INFO - [int:5ffa64] 📊 4.0s: 1691c @422c/s (287ch, ~423t @105t/s)
+2025-12-16 08:11:39,765 - src.llm.client - INFO - [int:5ffa64] 📊 6.0s: 2300c @382c/s (431ch, ~575t @95t/s)
+2025-12-16 08:11:40,561 - src.llm.client - INFO - [int:5ffa64] ✓ Done 11.37s: 2493c (~339w @219c/s)
+2025-12-16 08:11:40,563 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:11:40,563 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-16 08:11:40,563 - generate_secondary - INFO -     - Length: 2491 chars, 339 words
+2025-12-16 08:11:40,563 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-16 08:11:40,563 - generate_secondary - INFO -     - Connections: 15
+2025-12-16 08:11:40,563 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-16 08:11:40,563 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_04/integration.md
+2025-12-16 08:11:40,563 - generate_secondary - INFO - Generating investigation for session 4: The Mole Concept...
+2025-12-16 08:11:40,563 - src.llm.client - INFO - [inv:41ed10] 🚀 inv | m=gemma3:4b | p=24573c | t=150s
+2025-12-16 08:11:40,563 - src.llm.client - INFO - [inv:41ed10] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:11:40,563 - src.llm.client - INFO - [inv:41ed10] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:11:40,565 - src.llm.client - INFO - [inv:41ed10] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=29055 bytes, prompt=24573 chars
+2025-12-16 08:11:40,565 - src.llm.client - INFO - [inv:41ed10] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:11:45,119 - src.llm.request_handler - INFO - [inv:41ed10] ✓ Done 4.55s
+2025-12-16 08:11:45,120 - src.llm.client - INFO - [inv:41ed10] ✅ HTTP 200 in 4.55s
+2025-12-16 08:11:45,120 - src.llm.client - INFO - [inv:41ed10] 📡 Stream active (200)
+2025-12-16 08:11:45,120 - src.llm.client - INFO - [inv:41ed10] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:11:47,130 - src.llm.client - INFO - [inv:41ed10] 📊 2.0s: 820c @408c/s (143ch, ~205t @102t/s)
+2025-12-16 08:11:49,143 - src.llm.client - INFO - [inv:41ed10] 📊 4.0s: 1531c @381c/s (286ch, ~383t @95t/s)
+2025-12-16 08:11:51,153 - src.llm.client - INFO - [inv:41ed10] 📊 6.0s: 2373c @393c/s (429ch, ~593t @98t/s)
+2025-12-16 08:11:53,157 - src.llm.client - INFO - [inv:41ed10] 📊 8.0s: 2994c @373c/s (571ch, ~748t @93t/s)
+2025-12-16 08:11:55,160 - src.llm.client - INFO - [inv:41ed10] 📊 10.0s: 3821c @381c/s (714ch, ~955t @95t/s)
+2025-12-16 08:11:57,174 - src.llm.client - INFO - [inv:41ed10] 📊 12.1s: 4510c @374c/s (857ch, ~1128t @94t/s)
+2025-12-16 08:11:59,186 - src.llm.client - INFO - [inv:41ed10] 📊 14.1s: 5329c @379c/s (1001ch, ~1332t @95t/s)
+2025-12-16 08:12:00,534 - src.llm.client - INFO - [inv:41ed10] ✓ Done 19.97s: 5761c (~839w @288c/s)
+2025-12-16 08:12:00,536 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:12:00,536 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-16 08:12:00,536 - generate_secondary - INFO -     - Length: 5683 chars, 825 words
+2025-12-16 08:12:00,536 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:12:00,536 - generate_secondary - INFO -     - Research questions: 3
+2025-12-16 08:12:00,536 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:12:00,537 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_04/investigation.md
+2025-12-16 08:12:00,537 - generate_secondary - INFO - Generating open_questions for session 4: The Mole Concept...
+2025-12-16 08:12:00,537 - src.llm.client - INFO - [opq:ae82e2] 🚀 opq | m=gemma3:4b | p=24659c | t=150s
+2025-12-16 08:12:00,537 - src.llm.client - INFO - [opq:ae82e2] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:12:00,537 - src.llm.client - INFO - [opq:ae82e2] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:12:00,538 - src.llm.client - INFO - [opq:ae82e2] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=29152 bytes, prompt=24659 chars
+2025-12-16 08:12:00,538 - src.llm.client - INFO - [opq:ae82e2] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:12:05,089 - src.llm.request_handler - INFO - [opq:ae82e2] ✓ Done 4.55s
+2025-12-16 08:12:05,089 - src.llm.client - INFO - [opq:ae82e2] ✅ HTTP 200 in 4.55s
+2025-12-16 08:12:05,089 - src.llm.client - INFO - [opq:ae82e2] 📡 Stream active (200)
+2025-12-16 08:12:05,089 - src.llm.client - INFO - [opq:ae82e2] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:12:07,090 - src.llm.client - INFO - [opq:ae82e2] 📊 2.0s: 828c @414c/s (143ch, ~207t @103t/s)
+2025-12-16 08:12:09,095 - src.llm.client - INFO - [opq:ae82e2] 📊 4.0s: 1636c @408c/s (286ch, ~409t @102t/s)
+2025-12-16 08:12:10,400 - src.llm.client - INFO - [opq:ae82e2] ✓ Done 9.86s: 2088c (~274w @212c/s)
+2025-12-16 08:12:10,401 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:12:10,401 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-16 08:12:10,401 - generate_secondary - INFO -     - Length: 2087 chars, 274 words
+2025-12-16 08:12:10,401 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:12:10,401 - generate_secondary - INFO -     - Open questions: 3
+2025-12-16 08:12:10,401 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:12:10,401 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_02_chemical_reactions_and_stoichiometry/session_04/open_questions.md
+2025-12-16 08:12:10,401 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-16 08:12:10,401 - generate_secondary - INFO - 
+============================================================
+2025-12-16 08:12:10,401 - generate_secondary - INFO - [3/3] Module 3: Introduction to Chemical Calculations (2 sessions)
+2025-12-16 08:12:10,401 - generate_secondary - INFO - ============================================================
+2025-12-16 08:12:10,401 - generate_secondary - INFO - 
+  Session 5/6: Stoichiometric Calculations
+2025-12-16 08:12:10,403 - generate_secondary - INFO - Generating application for session 5: Stoichiometric Calculations...
+2025-12-16 08:12:10,403 - src.llm.client - INFO - [app:d176a4] 🚀 app | m=gemma3:4b | p=24781c | t=150s
+2025-12-16 08:12:10,403 - src.llm.client - INFO - [app:d176a4] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:12:10,403 - src.llm.client - INFO - [app:d176a4] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:12:10,405 - src.llm.client - INFO - [app:d176a4] Sending request to Ollama: model=gemma3:4b, operation=application, payload=26813 bytes, prompt=24781 chars
+2025-12-16 08:12:10,405 - src.llm.client - INFO - [app:d176a4] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:12:14,965 - src.llm.request_handler - INFO - [app:d176a4] ✓ Done 4.56s
+2025-12-16 08:12:14,965 - src.llm.client - INFO - [app:d176a4] ✅ HTTP 200 in 4.56s
+2025-12-16 08:12:14,965 - src.llm.client - INFO - [app:d176a4] 📡 Stream active (200)
+2025-12-16 08:12:14,965 - src.llm.client - INFO - [app:d176a4] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:12:16,978 - src.llm.client - INFO - [app:d176a4] 📊 2.0s: 824c @409c/s (144ch, ~206t @102t/s)
+2025-12-16 08:12:18,988 - src.llm.client - INFO - [app:d176a4] 📊 4.0s: 1591c @396c/s (288ch, ~398t @99t/s)
+2025-12-16 08:12:21,002 - src.llm.client - INFO - [app:d176a4] 📊 6.0s: 2411c @399c/s (432ch, ~603t @100t/s)
+2025-12-16 08:12:23,014 - src.llm.client - INFO - [app:d176a4] 📊 8.0s: 3243c @403c/s (576ch, ~811t @101t/s)
+2025-12-16 08:12:25,019 - src.llm.client - INFO - [app:d176a4] 📊 10.1s: 4081c @406c/s (719ch, ~1020t @101t/s)
+2025-12-16 08:12:27,022 - src.llm.client - INFO - [app:d176a4] 📊 12.1s: 4876c @404c/s (861ch, ~1219t @101t/s)
+2025-12-16 08:12:29,028 - src.llm.client - INFO - [app:d176a4] 📊 14.1s: 5556c @395c/s (1000ch, ~1389t @99t/s)
+2025-12-16 08:12:30,916 - src.llm.client - INFO - [app:d176a4] ✓ Done 20.51s: 6267c (~857w @306c/s)
+2025-12-16 08:12:30,918 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:12:30,919 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-16 08:12:30,919 - generate_secondary - INFO -     - Length: 6266 chars, 857 words
+2025-12-16 08:12:30,919 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 08:12:30,919 - generate_secondary - INFO -     - Applications: 6
+2025-12-16 08:12:30,919 - generate_secondary - INFO -     - Avg words per application: 135
+2025-12-16 08:12:30,919 - generate_secondary - WARNING - [WARNING] Too many applications (6, maximum 5, 1 excess - consider consolidating or removing less critical applications) ⚠️
+2025-12-16 08:12:30,919 - generate_secondary - WARNING - [WARNING] Application 2 has 147 words (require 150-200, need 3 more words) ⚠️
+2025-12-16 08:12:30,919 - generate_secondary - WARNING - [WARNING] Application 3 has 142 words (require 150-200, need 8 more words) ⚠️
+2025-12-16 08:12:30,919 - generate_secondary - WARNING - [WARNING] Application 4 has 125 words (require 150-200, need 25 more words) ⚠️
+2025-12-16 08:12:30,919 - generate_secondary - WARNING - [WARNING] Application 5 has 120 words (require 150-200, need 30 more words) ⚠️
+2025-12-16 08:12:30,919 - generate_secondary - WARNING - [WARNING] Application 6 has 107 words (require 150-200, need 43 more words) ⚠️
+2025-12-16 08:12:30,919 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-16 08:12:30,919 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-16 08:12:30,919 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_05/application.md
+2025-12-16 08:12:30,919 - generate_secondary - INFO - Generating extension for session 5: Stoichiometric Calculations...
+2025-12-16 08:12:30,919 - src.llm.client - INFO - [ext:2456bc] 🚀 ext | m=gemma3:4b | p=23815c | t=120s
+2025-12-16 08:12:30,919 - src.llm.client - INFO - [ext:2456bc] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:12:30,919 - src.llm.client - INFO - [ext:2456bc] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:12:30,921 - src.llm.client - INFO - [ext:2456bc] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=28964 bytes, prompt=23815 chars
+2025-12-16 08:12:30,921 - src.llm.client - INFO - [ext:2456bc] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:12:35,475 - src.llm.request_handler - INFO - [ext:2456bc] ✓ Done 4.55s
+2025-12-16 08:12:35,475 - src.llm.client - INFO - [ext:2456bc] ✅ HTTP 200 in 4.55s
+2025-12-16 08:12:35,475 - src.llm.client - INFO - [ext:2456bc] 📡 Stream active (200)
+2025-12-16 08:12:35,475 - src.llm.client - INFO - [ext:2456bc] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:12:37,480 - src.llm.client - INFO - [ext:2456bc] 📊 2.0s: 864c @431c/s (145ch, ~216t @108t/s)
+2025-12-16 08:12:39,481 - src.llm.client - INFO - [ext:2456bc] 📊 4.0s: 1790c @447c/s (286ch, ~448t @112t/s)
+2025-12-16 08:12:41,490 - src.llm.client - INFO - [ext:2456bc] 📊 6.0s: 2665c @443c/s (428ch, ~666t @111t/s)
+2025-12-16 08:12:43,495 - src.llm.client - INFO - [ext:2456bc] 📊 8.0s: 3623c @452c/s (570ch, ~906t @113t/s)
+2025-12-16 08:12:45,019 - src.llm.client - INFO - [ext:2456bc] ✓ Done 14.10s: 4226c (~540w @300c/s)
+2025-12-16 08:12:45,020 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:12:45,021 - generate_secondary - INFO - [NEEDS REVIEW] Extension generated ⚠️
+2025-12-16 08:12:45,021 - generate_secondary - INFO -     - Length: 4212 chars, 538 words
+2025-12-16 08:12:45,021 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 08:12:45,021 - generate_secondary - INFO -     - Topics: 3
+2025-12-16 08:12:45,021 - generate_secondary - INFO -     - Avg words per topic: 169
+2025-12-16 08:12:45,021 - generate_secondary - WARNING - [WARNING] Topic 1 has 173 words (exceeds 150 by 23 words - consider condensing) ⚠️
+2025-12-16 08:12:45,021 - generate_secondary - WARNING - [WARNING] Topic 2 has 154 words (exceeds 150 by 4 words - consider condensing) ⚠️
+2025-12-16 08:12:45,021 - generate_secondary - WARNING - [WARNING] Topic 3 has 181 words (exceeds 150 by 31 words - consider condensing) ⚠️
+2025-12-16 08:12:45,021 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_05/extension.md
+2025-12-16 08:12:45,021 - generate_secondary - INFO - Generating visualization for session 5: Stoichiometric Calculations...
+2025-12-16 08:12:45,021 - src.llm.client - INFO - [viz:90bee5] 🚀 viz | m=gemma3:4b | p=22775c | t=120s
+2025-12-16 08:12:45,021 - src.llm.client - INFO - [viz:90bee5] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:12:45,021 - src.llm.client - INFO - [viz:90bee5] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:12:45,023 - src.llm.client - INFO - [viz:90bee5] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=27246 bytes, prompt=22775 chars
+2025-12-16 08:12:45,023 - src.llm.client - INFO - [viz:90bee5] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:12:49,565 - src.llm.request_handler - INFO - [viz:90bee5] ✓ Done 4.54s
+2025-12-16 08:12:49,565 - src.llm.client - INFO - [viz:90bee5] ✅ HTTP 200 in 4.54s
+2025-12-16 08:12:49,565 - src.llm.client - INFO - [viz:90bee5] 📡 Stream active (200)
+2025-12-16 08:12:49,565 - src.llm.client - INFO - [viz:90bee5] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:12:51,566 - src.llm.client - INFO - [viz:90bee5] 📊 2.0s: 465c @232c/s (144ch, ~116t @58t/s)
+2025-12-16 08:12:53,567 - src.llm.client - INFO - [viz:90bee5] 📊 4.0s: 916c @229c/s (285ch, ~229t @57t/s)
+2025-12-16 08:12:55,606 - src.llm.client - INFO - [viz:90bee5] 📊 6.0s: 1387c @230c/s (414ch, ~347t @57t/s)
+2025-12-16 08:12:55,607 - src.llm.client - INFO - [viz:90bee5] ✓ Done 10.59s: 1387c (~232w @131c/s)
+2025-12-16 08:12:55,607 - src.generate.processors.cleanup - INFO - Cleanup complete: 2 issues before, 0 issues after
+2025-12-16 08:12:55,607 - generate_secondary - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-16 08:12:55,607 - generate_secondary - INFO -     - Length: 864 chars (cleaned: 864 chars)
+2025-12-16 08:12:55,607 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 08:12:55,607 - generate_secondary - INFO - [OK] Elements: 58 total (nodes: 22, connections: 36) ✓
+2025-12-16 08:12:55,608 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_05/visualization.mmd
+2025-12-16 08:12:55,608 - generate_secondary - INFO - Generating integration for session 5: Stoichiometric Calculations...
+2025-12-16 08:12:55,608 - src.llm.client - INFO - [int:8c77f1] 🚀 int | m=gemma3:4b | p=24124c | t=150s
+2025-12-16 08:12:55,608 - src.llm.client - INFO - [int:8c77f1] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:12:55,608 - src.llm.client - INFO - [int:8c77f1] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:12:55,609 - src.llm.client - INFO - [int:8c77f1] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=29612 bytes, prompt=24124 chars
+2025-12-16 08:12:55,609 - src.llm.client - INFO - [int:8c77f1] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:13:00,167 - src.llm.request_handler - INFO - [int:8c77f1] ✓ Done 4.56s
+2025-12-16 08:13:00,168 - src.llm.client - INFO - [int:8c77f1] ✅ HTTP 200 in 4.56s
+2025-12-16 08:13:00,168 - src.llm.client - INFO - [int:8c77f1] 📡 Stream active (200)
+2025-12-16 08:13:00,168 - src.llm.client - INFO - [int:8c77f1] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:13:02,170 - src.llm.client - INFO - [int:8c77f1] 📊 2.0s: 796c @398c/s (143ch, ~199t @99t/s)
+2025-12-16 08:13:04,182 - src.llm.client - INFO - [int:8c77f1] 📊 4.0s: 1647c @410c/s (286ch, ~412t @103t/s)
+2025-12-16 08:13:06,184 - src.llm.client - INFO - [int:8c77f1] 📊 6.0s: 2559c @425c/s (429ch, ~640t @106t/s)
+2025-12-16 08:13:06,583 - src.llm.client - INFO - [int:8c77f1] ✓ Done 10.98s: 2672c (~368w @243c/s)
+2025-12-16 08:13:06,584 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:13:06,584 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-16 08:13:06,584 - generate_secondary - INFO -     - Length: 2668 chars, 368 words
+2025-12-16 08:13:06,584 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-16 08:13:06,584 - generate_secondary - INFO -     - Connections: 19
+2025-12-16 08:13:06,584 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-16 08:13:06,584 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_05/integration.md
+2025-12-16 08:13:06,584 - generate_secondary - INFO - Generating investigation for session 5: Stoichiometric Calculations...
+2025-12-16 08:13:06,585 - src.llm.client - INFO - [inv:ac15ab] 🚀 inv | m=gemma3:4b | p=23037c | t=150s
+2025-12-16 08:13:06,585 - src.llm.client - INFO - [inv:ac15ab] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:13:06,585 - src.llm.client - INFO - [inv:ac15ab] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:13:06,586 - src.llm.client - INFO - [inv:ac15ab] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=27468 bytes, prompt=23037 chars
+2025-12-16 08:13:06,586 - src.llm.client - INFO - [inv:ac15ab] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:13:11,148 - src.llm.request_handler - INFO - [inv:ac15ab] ✓ Done 4.56s
+2025-12-16 08:13:11,149 - src.llm.client - INFO - [inv:ac15ab] ✅ HTTP 200 in 4.56s
+2025-12-16 08:13:11,149 - src.llm.client - INFO - [inv:ac15ab] 📡 Stream active (200)
+2025-12-16 08:13:11,149 - src.llm.client - INFO - [inv:ac15ab] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:13:13,160 - src.llm.client - INFO - [inv:ac15ab] 📊 2.0s: 748c @372c/s (143ch, ~187t @93t/s)
+2025-12-16 08:13:15,172 - src.llm.client - INFO - [inv:ac15ab] 📊 4.0s: 1545c @384c/s (286ch, ~386t @96t/s)
+2025-12-16 08:13:17,174 - src.llm.client - INFO - [inv:ac15ab] 📊 6.0s: 2316c @384c/s (430ch, ~579t @96t/s)
+2025-12-16 08:13:19,187 - src.llm.client - INFO - [inv:ac15ab] 📊 8.0s: 3017c @375c/s (573ch, ~754t @94t/s)
+2025-12-16 08:13:21,190 - src.llm.client - INFO - [inv:ac15ab] 📊 10.0s: 3826c @381c/s (714ch, ~956t @95t/s)
+2025-12-16 08:13:23,191 - src.llm.client - INFO - [inv:ac15ab] 📊 12.0s: 4656c @387c/s (855ch, ~1164t @97t/s)
+2025-12-16 08:13:24,052 - src.llm.client - INFO - [inv:ac15ab] ✓ Done 17.47s: 4936c (~731w @283c/s)
+2025-12-16 08:13:24,053 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:13:24,054 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-16 08:13:24,054 - generate_secondary - INFO -     - Length: 4934 chars, 731 words
+2025-12-16 08:13:24,054 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:13:24,054 - generate_secondary - INFO -     - Research questions: 3
+2025-12-16 08:13:24,054 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:13:24,054 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_05/investigation.md
+2025-12-16 08:13:24,054 - generate_secondary - INFO - Generating open_questions for session 5: Stoichiometric Calculations...
+2025-12-16 08:13:24,054 - src.llm.client - INFO - [opq:dba96f] 🚀 opq | m=gemma3:4b | p=23123c | t=150s
+2025-12-16 08:13:24,054 - src.llm.client - INFO - [opq:dba96f] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:13:24,054 - src.llm.client - INFO - [opq:dba96f] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:13:24,056 - src.llm.client - INFO - [opq:dba96f] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=27565 bytes, prompt=23123 chars
+2025-12-16 08:13:24,056 - src.llm.client - INFO - [opq:dba96f] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:13:28,610 - src.llm.request_handler - INFO - [opq:dba96f] ✓ Done 4.55s
+2025-12-16 08:13:28,610 - src.llm.client - INFO - [opq:dba96f] ✅ HTTP 200 in 4.55s
+2025-12-16 08:13:28,610 - src.llm.client - INFO - [opq:dba96f] 📡 Stream active (200)
+2025-12-16 08:13:28,610 - src.llm.client - INFO - [opq:dba96f] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:13:30,610 - src.llm.client - INFO - [opq:dba96f] 📊 2.0s: 843c @421c/s (145ch, ~211t @105t/s)
+2025-12-16 08:13:32,614 - src.llm.client - INFO - [opq:dba96f] 📊 4.0s: 1645c @411c/s (286ch, ~411t @103t/s)
+2025-12-16 08:13:34,622 - src.llm.client - INFO - [opq:dba96f] 📊 6.0s: 2424c @403c/s (428ch, ~606t @101t/s)
+2025-12-16 08:13:35,152 - src.llm.client - INFO - [opq:dba96f] ✓ Done 11.10s: 2547c (~329w @230c/s)
+2025-12-16 08:13:35,153 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:13:35,153 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-16 08:13:35,153 - generate_secondary - INFO -     - Length: 2533 chars, 327 words
+2025-12-16 08:13:35,153 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:13:35,154 - generate_secondary - INFO -     - Open questions: 3
+2025-12-16 08:13:35,154 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:13:35,154 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_05/open_questions.md
+2025-12-16 08:13:35,154 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-16 08:13:35,154 - generate_secondary - INFO - 
+  Session 6/6: Reaction Problem Solving
+2025-12-16 08:13:35,157 - generate_secondary - INFO - Generating application for session 6: Reaction Problem Solving...
+2025-12-16 08:13:35,157 - src.llm.client - INFO - [app:683767] 🚀 app | m=gemma3:4b | p=21603c | t=150s
+2025-12-16 08:13:35,157 - src.llm.client - INFO - [app:683767] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:13:35,157 - src.llm.client - INFO - [app:683767] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:13:35,159 - src.llm.client - INFO - [app:683767] Sending request to Ollama: model=gemma3:4b, operation=application, payload=23404 bytes, prompt=21603 chars
+2025-12-16 08:13:35,159 - src.llm.client - INFO - [app:683767] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:13:39,715 - src.llm.request_handler - INFO - [app:683767] ✓ Done 4.56s
+2025-12-16 08:13:39,716 - src.llm.client - INFO - [app:683767] ✅ HTTP 200 in 4.56s
+2025-12-16 08:13:39,716 - src.llm.client - INFO - [app:683767] 📡 Stream active (200)
+2025-12-16 08:13:39,716 - src.llm.client - INFO - [app:683767] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:13:41,724 - src.llm.client - INFO - [app:683767] 📊 2.0s: 803c @400c/s (143ch, ~201t @100t/s)
+2025-12-16 08:13:43,732 - src.llm.client - INFO - [app:683767] 📊 4.0s: 1646c @410c/s (286ch, ~412t @102t/s)
+2025-12-16 08:13:45,734 - src.llm.client - INFO - [app:683767] 📊 6.0s: 2417c @402c/s (430ch, ~604t @100t/s)
+2025-12-16 08:13:47,748 - src.llm.client - INFO - [app:683767] 📊 8.0s: 3284c @409c/s (570ch, ~821t @102t/s)
+2025-12-16 08:13:49,759 - src.llm.client - INFO - [app:683767] 📊 10.0s: 4130c @411c/s (713ch, ~1032t @103t/s)
+2025-12-16 08:13:51,767 - src.llm.client - INFO - [app:683767] 📊 12.1s: 5038c @418c/s (857ch, ~1260t @105t/s)
+2025-12-16 08:13:52,890 - src.llm.client - INFO - [app:683767] ✓ Done 17.73s: 5454c (~701w @308c/s)
+2025-12-16 08:13:52,892 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:13:52,892 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-16 08:13:52,892 - generate_secondary - INFO -     - Length: 5323 chars, 682 words
+2025-12-16 08:13:52,892 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 08:13:52,892 - generate_secondary - INFO -     - Applications: 5
+2025-12-16 08:13:52,892 - generate_secondary - INFO -     - Avg words per application: 134
+2025-12-16 08:13:52,892 - generate_secondary - WARNING - [WARNING] Application 2 has 140 words (require 150-200, need 10 more words) ⚠️
+2025-12-16 08:13:52,892 - generate_secondary - WARNING - [WARNING] Application 3 has 129 words (require 150-200, need 21 more words) ⚠️
+2025-12-16 08:13:52,892 - generate_secondary - WARNING - [WARNING] Application 4 has 126 words (require 150-200, need 24 more words) ⚠️
+2025-12-16 08:13:52,892 - generate_secondary - WARNING - [WARNING] Application 5 has 113 words (require 150-200, need 37 more words) ⚠️
+2025-12-16 08:13:52,893 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_06/application.md
+2025-12-16 08:13:52,893 - generate_secondary - INFO - Generating extension for session 6: Reaction Problem Solving...
+2025-12-16 08:13:52,893 - src.llm.client - INFO - [ext:9f7d68] 🚀 ext | m=gemma3:4b | p=20637c | t=120s
+2025-12-16 08:13:52,893 - src.llm.client - INFO - [ext:9f7d68] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:13:52,893 - src.llm.client - INFO - [ext:9f7d68] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:13:52,894 - src.llm.client - INFO - [ext:9f7d68] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=25555 bytes, prompt=20637 chars
+2025-12-16 08:13:52,894 - src.llm.client - INFO - [ext:9f7d68] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:13:57,456 - src.llm.request_handler - INFO - [ext:9f7d68] ✓ Done 4.56s
+2025-12-16 08:13:57,457 - src.llm.client - INFO - [ext:9f7d68] ✅ HTTP 200 in 4.56s
+2025-12-16 08:13:57,458 - src.llm.client - INFO - [ext:9f7d68] 📡 Stream active (200)
+2025-12-16 08:13:57,458 - src.llm.client - INFO - [ext:9f7d68] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:13:59,466 - src.llm.client - INFO - [ext:9f7d68] 📊 2.0s: 906c @451c/s (143ch, ~226t @113t/s)
+2025-12-16 08:14:01,470 - src.llm.client - INFO - [ext:9f7d68] 📊 4.0s: 1812c @452c/s (285ch, ~453t @113t/s)
+2025-12-16 08:14:03,473 - src.llm.client - INFO - [ext:9f7d68] 📊 6.0s: 2652c @441c/s (429ch, ~663t @110t/s)
+2025-12-16 08:14:05,482 - src.llm.client - INFO - [ext:9f7d68] 📊 8.0s: 3597c @448c/s (571ch, ~899t @112t/s)
+2025-12-16 08:14:06,978 - src.llm.client - INFO - [ext:9f7d68] ✓ Done 14.09s: 4255c (~532w @302c/s)
+2025-12-16 08:14:06,980 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:14:06,980 - generate_secondary - INFO - [NEEDS REVIEW] Extension generated ⚠️
+2025-12-16 08:14:06,980 - generate_secondary - INFO -     - Length: 4254 chars, 532 words
+2025-12-16 08:14:06,980 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 08:14:06,980 - generate_secondary - INFO -     - Topics: 3
+2025-12-16 08:14:06,980 - generate_secondary - INFO -     - Avg words per topic: 171
+2025-12-16 08:14:06,980 - generate_secondary - WARNING - [WARNING] Topic 1 has 171 words (exceeds 150 by 21 words - consider condensing) ⚠️
+2025-12-16 08:14:06,980 - generate_secondary - WARNING - [WARNING] Topic 2 has 164 words (exceeds 150 by 14 words - consider condensing) ⚠️
+2025-12-16 08:14:06,980 - generate_secondary - WARNING - [WARNING] Topic 3 has 178 words (exceeds 150 by 28 words - consider condensing) ⚠️
+2025-12-16 08:14:06,980 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_06/extension.md
+2025-12-16 08:14:06,980 - generate_secondary - INFO - Generating visualization for session 6: Reaction Problem Solving...
+2025-12-16 08:14:06,980 - src.llm.client - INFO - [viz:2ce2ea] 🚀 viz | m=gemma3:4b | p=19597c | t=120s
+2025-12-16 08:14:06,980 - src.llm.client - INFO - [viz:2ce2ea] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:14:06,980 - src.llm.client - INFO - [viz:2ce2ea] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:14:06,982 - src.llm.client - INFO - [viz:2ce2ea] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=23837 bytes, prompt=19597 chars
+2025-12-16 08:14:06,982 - src.llm.client - INFO - [viz:2ce2ea] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:14:11,559 - src.llm.request_handler - INFO - [viz:2ce2ea] ✓ Done 4.58s
+2025-12-16 08:14:11,561 - src.llm.client - INFO - [viz:2ce2ea] ✅ HTTP 200 in 4.58s
+2025-12-16 08:14:11,561 - src.llm.client - INFO - [viz:2ce2ea] 📡 Stream active (200)
+2025-12-16 08:14:11,561 - src.llm.client - INFO - [viz:2ce2ea] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:14:13,567 - src.llm.client - INFO - [viz:2ce2ea] 📊 2.0s: 519c @259c/s (142ch, ~130t @65t/s)
+2025-12-16 08:14:15,581 - src.llm.client - INFO - [viz:2ce2ea] 📊 4.0s: 1081c @269c/s (284ch, ~270t @67t/s)
+2025-12-16 08:14:16,554 - src.llm.client - INFO - [viz:2ce2ea] ✓ Done 9.57s: 1325c (~191w @138c/s)
+2025-12-16 08:14:16,555 - src.generate.processors.cleanup - INFO - Cleanup complete: 3 issues before, 0 issues after
+2025-12-16 08:14:16,555 - generate_secondary - INFO - [NEEDS REVIEW] Diagram generated ⚠️
+2025-12-16 08:14:16,555 - generate_secondary - INFO -     - Length: 545 chars (cleaned: 545 chars)
+2025-12-16 08:14:16,555 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 08:14:16,555 - generate_secondary - INFO - [WARNING] Elements: 25 total (nodes: 13, connections: 12) ⚠️
+2025-12-16 08:14:16,555 - generate_secondary - WARNING -     - Mermaid syntax warnings: 1 issues fixed (code fences, style commands)
+2025-12-16 08:14:16,555 - generate_secondary - WARNING - [WARNING] Some node text exceeds 40 characters (keep node labels concise - found 2 long nodes) ⚠️
+2025-12-16 08:14:16,555 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_06/visualization.mmd
+2025-12-16 08:14:16,555 - generate_secondary - INFO - Generating integration for session 6: Reaction Problem Solving...
+2025-12-16 08:14:16,555 - src.llm.client - INFO - [int:0a69c4] 🚀 int | m=gemma3:4b | p=20946c | t=150s
+2025-12-16 08:14:16,555 - src.llm.client - INFO - [int:0a69c4] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:14:16,555 - src.llm.client - INFO - [int:0a69c4] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:14:16,557 - src.llm.client - INFO - [int:0a69c4] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=26203 bytes, prompt=20946 chars
+2025-12-16 08:14:16,557 - src.llm.client - INFO - [int:0a69c4] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:14:21,131 - src.llm.request_handler - INFO - [int:0a69c4] ✓ Done 4.57s
+2025-12-16 08:14:21,132 - src.llm.client - INFO - [int:0a69c4] ✅ HTTP 200 in 4.57s
+2025-12-16 08:14:21,132 - src.llm.client - INFO - [int:0a69c4] 📡 Stream active (200)
+2025-12-16 08:14:21,132 - src.llm.client - INFO - [int:0a69c4] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:14:23,140 - src.llm.client - INFO - [int:0a69c4] 📊 2.0s: 807c @402c/s (142ch, ~202t @100t/s)
+2025-12-16 08:14:25,146 - src.llm.client - INFO - [int:0a69c4] 📊 4.0s: 1739c @433c/s (288ch, ~435t @108t/s)
+2025-12-16 08:14:26,565 - src.llm.client - INFO - [int:0a69c4] ✓ Done 10.01s: 2349c (~322w @235c/s)
+2025-12-16 08:14:26,566 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:14:26,566 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-16 08:14:26,567 - generate_secondary - INFO -     - Length: 2349 chars, 322 words
+2025-12-16 08:14:26,567 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-16 08:14:26,567 - generate_secondary - INFO -     - Connections: 11
+2025-12-16 08:14:26,567 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-16 08:14:26,567 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_06/integration.md
+2025-12-16 08:14:26,567 - generate_secondary - INFO - Generating investigation for session 6: Reaction Problem Solving...
+2025-12-16 08:14:26,567 - src.llm.client - INFO - [inv:8349b9] 🚀 inv | m=gemma3:4b | p=19859c | t=150s
+2025-12-16 08:14:26,567 - src.llm.client - INFO - [inv:8349b9] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:14:26,567 - src.llm.client - INFO - [inv:8349b9] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:14:26,570 - src.llm.client - INFO - [inv:8349b9] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=24059 bytes, prompt=19859 chars
+2025-12-16 08:14:26,570 - src.llm.client - INFO - [inv:8349b9] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:14:31,134 - src.llm.request_handler - INFO - [inv:8349b9] ✓ Done 4.56s
+2025-12-16 08:14:31,134 - src.llm.client - INFO - [inv:8349b9] ✅ HTTP 200 in 4.56s
+2025-12-16 08:14:31,134 - src.llm.client - INFO - [inv:8349b9] 📡 Stream active (200)
+2025-12-16 08:14:31,134 - src.llm.client - INFO - [inv:8349b9] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:14:33,141 - src.llm.client - INFO - [inv:8349b9] 📊 2.0s: 794c @396c/s (142ch, ~198t @99t/s)
+2025-12-16 08:14:35,152 - src.llm.client - INFO - [inv:8349b9] 📊 4.0s: 1682c @419c/s (284ch, ~420t @105t/s)
+2025-12-16 08:14:37,165 - src.llm.client - INFO - [inv:8349b9] 📊 6.0s: 2514c @417c/s (426ch, ~628t @104t/s)
+2025-12-16 08:14:39,172 - src.llm.client - INFO - [inv:8349b9] 📊 8.0s: 3287c @409c/s (569ch, ~822t @102t/s)
+2025-12-16 08:14:41,181 - src.llm.client - INFO - [inv:8349b9] 📊 10.0s: 4139c @412c/s (711ch, ~1035t @103t/s)
+2025-12-16 08:14:43,182 - src.llm.client - INFO - [inv:8349b9] 📊 12.0s: 4858c @403c/s (852ch, ~1214t @101t/s)
+2025-12-16 08:14:45,189 - src.llm.client - INFO - [inv:8349b9] 📊 14.1s: 5640c @401c/s (995ch, ~1410t @100t/s)
+2025-12-16 08:14:46,629 - src.llm.client - INFO - [inv:8349b9] ✓ Done 20.06s: 6178c (~910w @308c/s)
+2025-12-16 08:14:46,632 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:14:46,632 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-16 08:14:46,632 - generate_secondary - INFO -     - Length: 6178 chars, 910 words
+2025-12-16 08:14:46,632 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:14:46,632 - generate_secondary - INFO -     - Research questions: 3
+2025-12-16 08:14:46,632 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:14:46,635 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_06/investigation.md
+2025-12-16 08:14:46,635 - generate_secondary - INFO - Generating open_questions for session 6: Reaction Problem Solving...
+2025-12-16 08:14:46,635 - src.llm.client - INFO - [opq:9f94a3] 🚀 opq | m=gemma3:4b | p=19945c | t=150s
+2025-12-16 08:14:46,635 - src.llm.client - INFO - [opq:9f94a3] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:14:46,635 - src.llm.client - INFO - [opq:9f94a3] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:14:46,637 - src.llm.client - INFO - [opq:9f94a3] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=24156 bytes, prompt=19945 chars
+2025-12-16 08:14:46,637 - src.llm.client - INFO - [opq:9f94a3] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:14:51,204 - src.llm.request_handler - INFO - [opq:9f94a3] ✓ Done 4.57s
+2025-12-16 08:14:51,204 - src.llm.client - INFO - [opq:9f94a3] ✅ HTTP 200 in 4.57s
+2025-12-16 08:14:51,204 - src.llm.client - INFO - [opq:9f94a3] 📡 Stream active (200)
+2025-12-16 08:14:51,204 - src.llm.client - INFO - [opq:9f94a3] Starting stream parsing, waiting for first chunk...

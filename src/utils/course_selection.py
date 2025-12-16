@@ -51,9 +51,23 @@ def select_course_template(
         level = course_info.get("level", "Not specified")
         subject = course_info.get("subject", "Not specified")
         
+        # Extract length information from defaults
+        defaults = course_info.get("defaults", {})
+        num_modules = defaults.get("num_modules")
+        total_sessions = defaults.get("total_sessions")
+        
         logger_instance.info(f"  {idx}. {name}")
         logger_instance.info(f"     Subject: {subject}")
         logger_instance.info(f"     Level: {level}")
+        
+        # Display length information if available
+        if num_modules is not None and total_sessions is not None:
+            logger_instance.info(f"     Length: {num_modules} modules, {total_sessions} sessions")
+        elif num_modules is not None:
+            logger_instance.info(f"     Length: {num_modules} modules")
+        elif total_sessions is not None:
+            logger_instance.info(f"     Length: {total_sessions} sessions")
+        
         logger_instance.info(f"     Description: {description[:80]}{'...' if len(description) > 80 else ''}")
         logger_instance.info("")
     

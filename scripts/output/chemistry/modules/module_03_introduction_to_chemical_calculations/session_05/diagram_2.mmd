@@ -1,0 +1,23 @@
+graph LR
+    A([Start: Reaction]) --> B{Calculate Stoichiometric Ratios}
+    B --> C{Determine Theoretical Yield}
+    C --> D{Perform Experiment & Obtain Actual Yield}
+    D --> E{Calculate Percent Yield}
+    E --> F{Feedback: Actual Yield < Theoretical Yield?}
+    F -- Yes --> D
+    F -- No --> G([End: Acceptable Percent Yield])
+
+    B --> H{Consider % Error}
+    H --> G
+
+    C --> I{Account for Losses}
+    I --> D
+
+    D -- Volumetric Measurements --> D
+    I -- Mass Measurements --> D
+    B -- Molar Masses --> B
+    A -- Reaction Equation --> B
+    B -- Concentration --> B
+    C -- Ideal Gas Law --> C
+    I -- Heat Loss --> I
+    B -- Solvent Effects --> B

@@ -1,0 +1,27 @@
+graph TD
+    A[Start: Reactant A] --> B{Is A > B?}
+    B -- Yes --> C[React with B]
+    B -- No --> D[React with Excess A]
+    C --> E[Product X]
+    D --> E
+    E --> F{Is Product X > C?}
+    F -- Yes --> G[React with Excess X]
+    F -- No --> H[End: Balanced Reaction]
+    G --> H
+    H --> I([End: Stoichiometric Balance])
+    I --> J{Feedback: Excess Reactants?}
+    J -- Yes --> K[Re-evaluate Initial Ratios]
+    J -- No --> L([End: Complete Reaction])
+    K --> L
+    L --> M([End: Optimized Reaction])
+    M --> N([End: Process Complete])
+    N --> O([End: Final State])
+    O --> P{Further Analysis?}
+    P -- Yes --> Q[Repeat Calculation]
+    P -- No --> R([End: Final Result])
+    Q --> R
+    R --> S([End: Final State])
+    S --> T([End: Process Complete])
+    T --> U({Loop Back to Start?})
+    U -- Yes --> A
+    U -- No --> V([End: Process Complete])

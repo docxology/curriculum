@@ -2,13 +2,13 @@
 
 ## Purpose
 
-This directory contains comprehensive technical documentation for the educational course Generator. All documentation follows evergreen principles - permanent knowledge only, no temporary progress reports.
+This directory contains technical documentation for the educational course Generator. All documentation follows evergreen principles - permanent knowledge only, no temporary progress reports.
 
 ## Documentation Files
 
 ### Core Architecture
 
-**[ARCHITECTURE.md](ARCHITECTURE.md)** - System design and implementation
+**[ARCHITECTURE.md](ARCHITECTURE.md)** - System design
 - Design principles (modular, configuration-driven, no mocks, pipeline-based)
 - Component layers (Configuration, LLM, Generation, Processing, Orchestration, Utility)
 - Data flow diagrams (YAML → JSON outline → Content)
@@ -21,7 +21,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 ### Pipeline and Workflows
 
-**[PIPELINE_GUIDE.md](PIPELINE_GUIDE.md)** - 6-stage pipeline execution
+**[PIPELINE_GUIDE.md](PIPELINE_GUIDE.md)** - 6-stage pipeline
 - **Stage 01**: Environment Setup (`01_setup_environment.py`)
 - **Stage 02**: Validation & Tests (`02_run_tests.py`)
 - **Stage 03**: Generate Outline (`03_generate_outline.py`)
@@ -36,7 +36,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 ### Data Structures
 
-**[JSON_OUTLINE.md](JSON_OUTLINE.md)** - JSON outline format and lifecycle
+**[JSON_OUTLINE.md](JSON_OUTLINE.md)** - JSON outline format
 - JSON schema and field definitions
 - Generation process (Stage 03, interactive vs non-interactive)
 - Consumption process (Stages 04-05, session-based content)
@@ -49,7 +49,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 ### Configuration
 
-**[CONFIGURATION.md](CONFIGURATION.md)** - Complete YAML configuration reference
+**[CONFIGURATION.md](CONFIGURATION.md)** - YAML configuration reference
 - `course_config.yaml` - Course structure, defaults, topic areas
 - `llm_config.yaml` - LLM settings, prompts, outline generation bounds
 - `output_config.yaml` - Output paths, naming, formatting, logging
@@ -74,7 +74,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 ### API Reference
 
-**[API.md](API.md)** - Complete public API documentation
+**[API.md](API.md)** - Public API documentation
 - Configuration Layer: `ConfigLoader`
 - LLM Integration Layer: `OllamaClient`
 - Generation Layer: `ContentGenerator`, `OutlineGenerator`
@@ -101,7 +101,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 ### Technical Deep Dives
 
-**[ERROR_HANDLING.md](ERROR_HANDLING.md)** - Error handling patterns and exception hierarchy
+**[ERROR_HANDLING.md](ERROR_HANDLING.md)** - Error handling patterns
 - Exception hierarchy and usage
 - Error handling patterns by layer
 - Error recovery strategies
@@ -110,7 +110,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 **When to read**: Understanding error handling, debugging failures, implementing error recovery
 
-**[LOGGING.md](LOGGING.md)** - Logging patterns and debugging
+**[LOGGING.md](LOGGING.md)** - Logging patterns
 - Logging levels and usage
 - Structured logging patterns
 - Request ID tracing
@@ -124,7 +124,7 @@ This directory contains comprehensive technical documentation for the educationa
 - **[../src/llm/HEALTH_MONITORING.md](../src/llm/HEALTH_MONITORING.md)** - Health monitoring and diagnostics for Ollama service
 - **LLM Module**: [../src/llm/AGENTS.md](../src/llm/AGENTS.md) - Complete LLM integration documentation including health monitoring and request handling
 
-**[VALIDATION.md](VALIDATION.md)** - Content validation rules and criteria
+**[VALIDATION.md](VALIDATION.md)** - Content validation rules
 - Validation criteria for all content types
 - Configuration and customization
 - Validation troubleshooting
@@ -132,7 +132,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 **When to read**: Understanding validation, troubleshooting validation issues, customizing criteria
 
-**[EXTENSION.md](EXTENSION.md)** - Extension guide for adding new features
+**[EXTENSION.md](EXTENSION.md)** - Extension guide
 - Adding new content types and generators
 - Adding new configuration options
 - Adding new pipeline stages
@@ -140,7 +140,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 **When to read**: Extending the system, adding new features, creating custom workflows
 
-**[DATA_FLOW.md](DATA_FLOW.md)** - Data flow and transformations
+**[DATA_FLOW.md](DATA_FLOW.md)** - Data flow
 - Data structure evolution (YAML → JSON → Content)
 - Detailed transformations at each stage
 - Data validation points
@@ -148,7 +148,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 **When to read**: Understanding data transformations, debugging data flow issues
 
-**[MODULE_ORGANIZATION.md](MODULE_ORGANIZATION.md)** - Module structure and organization
+**[MODULE_ORGANIZATION.md](MODULE_ORGANIZATION.md)** - Module structure
 - Module structure and dependencies
 - Import patterns and standards
 - Module interface contracts
@@ -156,7 +156,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 **When to read**: Understanding module structure, adding new modules, organizing code
 
-**[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Comprehensive troubleshooting guide
+**[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Troubleshooting guide
 - Common issues by category
 - Issue diagnosis workflow
 - Solution patterns
@@ -164,7 +164,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 **When to read**: Troubleshooting issues, diagnosing problems, recovering from failures
 
-**[PERFORMANCE.md](PERFORMANCE.md)** - Performance considerations and optimization
+**[PERFORMANCE.md](PERFORMANCE.md)** - Performance considerations
 - Performance characteristics by stage
 - Optimization strategies
 - Performance monitoring
@@ -172,7 +172,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 **When to read**: Optimizing performance, monitoring system performance, performance testing
 
-**[SECURITY.md](SECURITY.md)** - Security considerations and best practices
+**[SECURITY.md](SECURITY.md)** - Security considerations
 - Security model overview
 - Input validation and sanitization
 - File path security
@@ -180,7 +180,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 **When to read**: Understanding security model, implementing security best practices
 
-**[DEPLOYMENT.md](DEPLOYMENT.md)** - Deployment and production use
+**[DEPLOYMENT.md](DEPLOYMENT.md)** - Deployment
 - Production environment setup
 - Configuration for production
 - Monitoring and logging
@@ -188,7 +188,7 @@ This directory contains comprehensive technical documentation for the educationa
 
 **When to read**: Deploying to production, production configuration, monitoring
 
-**[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines and workflow
+**[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines
 - Development setup
 - Code standards and testing requirements
 - Contribution workflow
@@ -228,7 +228,7 @@ All documentation in this directory follows these principles:
 ✅ **Examples that last** - Use realistic, timeless examples  
 
 ### Quality Standards
-✅ **Complete** - Comprehensive coverage of each topic  
+✅ **Complete** - Coverage of each topic  
 ✅ **Accurate** - Reflects actual implementation  
 ✅ **Navigable** - Clear signposting and cross-references  
 ✅ **Actionable** - Includes examples and commands  
@@ -242,114 +242,6 @@ All documentation in this directory follows these principles:
 ✅ **Consolidate duplicates** - Single source of truth  
 ✅ **Link, don't duplicate** - Reference other docs  
 
-## Documentation Update Workflow
-
-When making code changes:
-
-1. **Identify affected docs** - Check which files need updates
-2. **Update content** - Modify relevant sections
-3. **Verify cross-references** - Ensure links still work
-4. **Check examples** - Test code examples still run
-5. **Update navigation** - Adjust README.md if needed
-
-## Common Documentation Tasks
-
-### Adding a New Feature
-
-Update these docs:
-- [ARCHITECTURE.md](ARCHITECTURE.md) - Add to component description
-- [API.md](API.md) - Document new public APIs
-- [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) - If it's a new stage/script
-- [FORMATS.md](FORMATS.md) - If it's a new content type
-- [README.md](README.md) - Update quick reference
-
-### Changing Configuration
-
-Update these docs:
-- [CONFIGURATION.md](CONFIGURATION.md) - Update YAML reference
-- [../config/README.md](../config/README.md) - Update examples
-- [../config/AGENTS.md](../config/AGENTS.md) - Update agent guidance
-
-### Modifying Pipeline
-
-Update these docs:
-- [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) - Update stage descriptions
-- [../scripts/README.md](../scripts/README.md) - Update script reference
-- [../scripts/AGENTS.md](../scripts/AGENTS.md) - Update agent guidance
-
-### Adding Tests
-
-Update these docs:
-- [TESTING_COVERAGE.md](TESTING_COVERAGE.md) - Update test counts
-- [../tests/README.md](../tests/README.md) - Update test descriptions
-- [../tests/AGENTS.md](../tests/AGENTS.md) - Update test organization
-
-## Cross-Reference Matrix
-
-Where topics are covered across multiple documents:
-
-| Topic | Primary Doc | Also See |
-|-------|-------------|----------|
-| **JSON Outline Format** | [JSON_OUTLINE.md](JSON_OUTLINE.md) | [CONFIGURATION.md](CONFIGURATION.md), [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) |
-| **Pipeline Stages** | [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) | [ARCHITECTURE.md](ARCHITECTURE.md), [JSON_OUTLINE.md](JSON_OUTLINE.md) |
-| **Configuration Files** | [CONFIGURATION.md](CONFIGURATION.md) | [JSON_OUTLINE.md](JSON_OUTLINE.md), [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) |
-| **Content Formats** | [FORMATS.md](FORMATS.md) | [CONFIGURATION.md](CONFIGURATION.md), [API.md](API.md) |
-| **LLM Integration** | [ARCHITECTURE.md](ARCHITECTURE.md) | [CONFIGURATION.md](CONFIGURATION.md), [API.md](API.md) |
-| **Generator APIs** | [API.md](API.md) | [FORMATS.md](FORMATS.md), [ARCHITECTURE.md](ARCHITECTURE.md) |
-| **Testing** | [TESTING_COVERAGE.md](TESTING_COVERAGE.md) | [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md), [ARCHITECTURE.md](ARCHITECTURE.md) |
-| **Module Structure** | [ARCHITECTURE.md](ARCHITECTURE.md) | [API.md](API.md), [JSON_OUTLINE.md](JSON_OUTLINE.md) |
-| **Troubleshooting** | [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) | [JSON_OUTLINE.md](JSON_OUTLINE.md), [CONFIGURATION.md](CONFIGURATION.md) |
-| **Code Quality** | [ARCHITECTURE.md](ARCHITECTURE.md) | [TESTING_COVERAGE.md](TESTING_COVERAGE.md) |
-
-## Documentation Quality Checks
-
-Before considering documentation complete:
-
-- [ ] All code examples tested and working
-- [ ] All cross-references verified
-- [ ] No broken links
-- [ ] No temporary/dated content (unless necessary)
-- [ ] No TODO sections
-- [ ] Consistent formatting
-- [ ] Proper heading hierarchy
-- [ ] Table of contents if >500 lines
-- [ ] Examples for all features
-- [ ] Troubleshooting section included
-
-## What NOT to Include
-
-❌ **Temporary progress reports** - Use git log instead  
-❌ **Implementation TODOs** - Use issue tracker  
-❌ **Dated status updates** - Keep evergreen  
-❌ **Personal notes** - Keep professional  
-❌ **Redundant content** - Link to single source  
-❌ **Mock examples** - All examples use real implementations  
-
-
-## When to Read Each Document
-
-### Start Here
-- **New to project**: [ARCHITECTURE.md](ARCHITECTURE.md) → [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) → [CONFIGURATION.md](CONFIGURATION.md)
-- **Want to run pipeline**: [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md)
-- **Want to understand formats**: [FORMATS.md](FORMATS.md)
-
-### Development Tasks
-- **Extending functionality**: [ARCHITECTURE.md](ARCHITECTURE.md) → [API.md](API.md)
-- **Adding new content type**: [FORMATS.md](FORMATS.md) → [API.md](API.md)
-- **Modifying pipeline**: [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) → [ARCHITECTURE.md](ARCHITECTURE.md)
-- **Changing configuration**: [CONFIGURATION.md](CONFIGURATION.md)
-- **Understanding JSON outlines**: [JSON_OUTLINE.md](JSON_OUTLINE.md)
-
-### Troubleshooting
-- **Pipeline issues**: [PIPELINE_GUIDE.md](PIPELINE_GUIDE.md) → Troubleshooting section
-- **Configuration errors**: [CONFIGURATION.md](CONFIGURATION.md) → Validation section
-- **Outline problems**: [JSON_OUTLINE.md](JSON_OUTLINE.md) → Troubleshooting section
-- **Test failures**: [TESTING_COVERAGE.md](TESTING_COVERAGE.md) → Running tests section
-
-### Code Review
-- **Understanding codebase**: [ARCHITECTURE.md](ARCHITECTURE.md), [TESTING_COVERAGE.md](TESTING_COVERAGE.md)
-- **API usage**: [API.md](API.md)
-- **Test coverage**: [TESTING_COVERAGE.md](TESTING_COVERAGE.md)
 
 ## Documentation Update Workflow
 
@@ -363,8 +255,8 @@ When making code changes:
 
 ### Update Checklist
 
-- [ ] All code examples tested and working
-- [ ] All cross-references verified
+- [ ] Code examples tested and working
+- [ ] Cross-references verified
 - [ ] No broken links
 - [ ] No temporary/dated content (unless necessary)
 - [ ] No TODO sections

@@ -1,0 +1,26 @@
+graph LR
+    A([Start: Initial Reactants])
+    B(...) Reactant1
+    C(...) Reactant2
+    D(...) Reactant3
+    E([Step 1: Mixing]) --> F({Check Stoichiometry?})
+    F -- Yes --> G([Step 2: Catalysis])
+    F -- No --> H([Adjust Reactant Ratio])
+    G --> I([Step 3: Reaction Progress])
+    H --> I
+    I --> J({Is Reaction Complete?})
+    J -- Yes --> K([Step 4: Product Formation])
+    J -- No --> L([Revert to Step 1])
+    K --> M({Is Product Stable?})
+    M -- Yes --> N([Step 5: Product Isolation])
+    M -- No --> O([Recycle Reactants])
+    N --> P([End: Isolated Product])
+    O --> P
+    P --> Q([Product Analysis])
+    Q --> P
+    E -- Creates --> R({Formation of Intermediate Compounds})
+    R -- Leads To --> E
+    A --> E
+    E --> R
+    B -- Reacts With --> E
+    C -- Reacts With --> E

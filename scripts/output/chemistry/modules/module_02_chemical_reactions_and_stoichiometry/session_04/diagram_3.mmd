@@ -1,0 +1,22 @@
+graph LR
+    A([Start: Mass to Moles]) --> B{Calculate Moles};
+    B --> C{Moles * Molar Mass = Grams?};
+    C -- Yes --> D[Grams to Moles Conversion];
+    C -- No --> E{Molar Mass to Grams Conversion};
+    E --> D;
+    D --> F[Grams to Moles];
+    F --> G{Moles * Molar Mass = Grams?};
+    G -- Yes --> H[Moles to Grams];
+    G -- No --> I{Molar Mass to Grams Conversion};
+    I --> H;
+    H --> J[Grams to Moles];
+    J --> K{Moles * Molar Mass = Grams?};
+    K -- Yes --> L[Moles to Grams];
+    K -- No --> M{Molar Mass to Grams Conversion};
+    M --> L;
+    L --> N([End: Mass to Moles]);
+    N --> O{Feedback:  Incorrect Units?};
+    O -- Yes --> B;
+    O -- No --> N;
+
+    subgraph Stoichiometry

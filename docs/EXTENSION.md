@@ -17,9 +17,9 @@ Complete guide for extending the educational course Generator with new features,
 ## Overview
 
 The educational course Generator is designed for extensibility. This guide covers:
-- Adding new content types and generators
-- Adding new configuration options
-- Adding new pipeline stages
+- Adding content types and generators
+- Adding configuration options
+- Adding pipeline stages
 - Creating custom workflows
 - Integration patterns
 - Testing requirements

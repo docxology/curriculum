@@ -1,6 +1,6 @@
 # Documentation
 
-Complete technical documentation for the educational course Generator.
+Technical documentation for the educational course Generator.
 
 ## Core Documentation
 
@@ -13,28 +13,28 @@ Complete technical documentation for the educational course Generator.
 
 ### Content & Output
 
-- **[FORMATS.md](FORMATS.md)** - Content formats (lectures, labs, diagrams, questions, study notes) and validation criteria
-- **[API.md](API.md)** - Complete public API reference for all modules including content analysis functions
+- **[FORMATS.md](FORMATS.md)** - Content formats and validation
+- **[API.md](API.md)** - Public API reference
 
 ### Testing & Quality
 
-- **[TESTING_COVERAGE.md](TESTING_COVERAGE.md)** - Test suite overview (~540 tests across 25 files), coverage statistics
+- **[TESTING_COVERAGE.md](TESTING_COVERAGE.md)** - Test suite overview
 
 ### Technical Deep Dives
 
-- **[ERROR_HANDLING.md](ERROR_HANDLING.md)** - Error handling patterns, exception hierarchy, recovery strategies
-- **[LOGGING.md](LOGGING.md)** - Logging patterns, levels, structured logging, debugging
-- **[VALIDATION.md](VALIDATION.md)** - Content validation rules, criteria, troubleshooting
-- **[../src/llm/TROUBLESHOOTING.md](../src/llm/TROUBLESHOOTING.md)** - LLM troubleshooting guide (connection, timeouts, model issues)
-- **[../src/llm/HEALTH_MONITORING.md](../src/llm/HEALTH_MONITORING.md)** - LLM health monitoring and diagnostics
-- **[EXTENSION.md](EXTENSION.md)** - Extension guide for adding new features
-- **[DATA_FLOW.md](DATA_FLOW.md)** - Data flow and transformations
-- **[MODULE_ORGANIZATION.md](MODULE_ORGANIZATION.md)** - Module structure, dependencies, organization
-- **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Comprehensive troubleshooting guide
-- **[PERFORMANCE.md](PERFORMANCE.md)** - Performance considerations and optimization
-- **[SECURITY.md](SECURITY.md)** - Security considerations and best practices
-- **[DEPLOYMENT.md](DEPLOYMENT.md)** - Deployment and production use
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines and workflow
+- **[ERROR_HANDLING.md](ERROR_HANDLING.md)** - Error handling patterns
+- **[LOGGING.md](LOGGING.md)** - Logging patterns
+- **[VALIDATION.md](VALIDATION.md)** - Content validation rules
+- **[../src/llm/TROUBLESHOOTING.md](../src/llm/TROUBLESHOOTING.md)** - LLM troubleshooting guide
+- **[../src/llm/HEALTH_MONITORING.md](../src/llm/HEALTH_MONITORING.md)** - LLM health monitoring
+- **[EXTENSION.md](EXTENSION.md)** - Extension guide
+- **[DATA_FLOW.md](DATA_FLOW.md)** - Data flow
+- **[MODULE_ORGANIZATION.md](MODULE_ORGANIZATION.md)** - Module structure
+- **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Troubleshooting guide
+- **[PERFORMANCE.md](PERFORMANCE.md)** - Performance considerations
+- **[SECURITY.md](SECURITY.md)** - Security considerations
+- **[DEPLOYMENT.md](DEPLOYMENT.md)** - Deployment
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines
 
 ## Quick Navigation
 
@@ -62,7 +62,7 @@ Complete technical documentation for the educational course Generator.
 | Set up development environment | [../SETUP.md](../SETUP.md) | ⭐⭐⭐ |
 | Learn development rules | [../.cursorrules/README.md](../.cursorrules/README.md) | ⭐⭐ |
 
-**Priority Legend**: ⭐⭐⭐ Essential | ⭐⭐ Important | ⭐ Reference
+**Priority**: ⭐⭐⭐ Essential | ⭐⭐ Important | ⭐ Reference
 
 ## Documentation Structure
 
@@ -155,8 +155,8 @@ Complete technical documentation for the educational course Generator.
 
 ## Learning Paths
 
-### Path 1: Quick Start (30 minutes)
-For users who want to generate content quickly:
+### Quick Start (30 minutes)
+For users who want to generate content:
 
 1. **[../README.md](../README.md)** - Overview and quick start
 2. **[../SETUP.md](../SETUP.md)** - Installation (5 min)
@@ -164,7 +164,7 @@ For users who want to generate content quickly:
 4. **[CONFIGURATION.md](CONFIGURATION.md)** - Adjust settings (10 min)
 5. Run: `uv run python3 scripts/run_pipeline.py`
 
-### Path 2: Comprehensive Understanding (2 hours)
+### Comprehensive Understanding (2 hours)
 For users who want deep understanding:
 
 1. **[../README.md](../README.md)** - Project overview (10 min)
@@ -175,8 +175,8 @@ For users who want deep understanding:
 6. **[FORMATS.md](FORMATS.md)** - Output formats (20 min)
 7. **[API.md](API.md)** - Public API (10 min)
 
-### Path 3: Developer/Contributor (4 hours)
-For developers extending or contributing to the project:
+### Developer/Contributor (4 hours)
+For developers extending the project:
 
 1. **[../AGENTS.md](../AGENTS.md)** - Developer overview (15 min)
 2. **[../.cursorrules/README.md](../.cursorrules/README.md)** - Development rules (20 min)
@@ -189,7 +189,7 @@ For developers extending or contributing to the project:
 
 ## For AI Agents
 
-AI agents should reference **[../AGENTS.md](../AGENTS.md)** for:
+AI agents should reference **[AGENTS.md](AGENTS.md)** for:
 - Repository overview and key principles
 - Development rules (links to all 13 `.cursorrules/` files)
 - Architecture summary and module structure
@@ -199,9 +199,9 @@ AI agents should reference **[../AGENTS.md](../AGENTS.md)** for:
 
 ## Additional Resources
 
-- **Setup Guide**: [../SETUP.md](../SETUP.md) - Installation, prerequisites, troubleshooting
-- **Main README**: [../README.md](../README.md) - Quick start, navigation hub
-- **Development Rules**: [../.cursorrules/README.md](../.cursorrules/README.md) - All 12 modular rule files
+- **Setup Guide**: [../SETUP.md](../SETUP.md) - Installation
+- **Main README**: [../README.md](../README.md) - Quick start
+- **Development Rules**: [../.cursorrules/README.md](../.cursorrules/README.md) - Development rules
 - **Scripts Documentation**: [../scripts/README.md](../scripts/README.md) - Script usage details
 
 ## Common Scenarios
@@ -229,7 +229,6 @@ AI agents should reference **[../AGENTS.md](../AGENTS.md)** for:
 
 ## Cross-Reference Matrix
 
-Find where topics are covered across multiple documents:
 
 | Topic | Primary Doc | Also See |
 |-------|-------------|----------|
@@ -245,9 +244,9 @@ Find where topics are covered across multiple documents:
 
 ## Documentation Philosophy
 
-All documentation follows these principles:
+Documentation follows these principles:
 - **Modular** - Each file has a focused purpose
-- **Complete** - Comprehensive coverage of each topic
+- **Complete** - Coverage of each topic
 - **Accurate** - Reflects actual implementation
 - **Navigable** - Clear signposting and cross-references
 - **Actionable** - Includes examples and commands

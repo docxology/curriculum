@@ -5,21 +5,84 @@ that the LLM might return, including edge cases.
 """
 
 import pytest
+import yaml
+from pathlib import Path
 from src.generate.stages.stage1_outline import OutlineGenerator
 from src.config.loader import ConfigLoader
 from src.llm.client import OllamaClient
 
 
+@pytest.fixture
+def config_loader(tmp_path):
+    """Create a config loader with test configurations."""
+    config_path = tmp_path / "config"
+    config_path.mkdir()
+    
+    # Minimal course config for testing
+    course_config = {
+        "course": {
+            "name": "Test Course",
+            "level": "Introductory",
+            "duration_weeks": 4,
+            "description": "Test course for JSON extraction testing"
+        },
+        "structure": {
+            "num_modules": 2,
+            "total_sessions": 4
+        },
+        "content_bounds": {
+            "subtopics_per_session": {"min": 3, "max": 5},
+            "learning_objectives_per_session": {"min": 3, "max": 5},
+            "key_concepts_per_session": {"min": 5, "max": 8}
+        }
+    }
+    
+    # Minimal LLM config for testing
+    llm_config = {
+        "llm": {
+            "provider": "ollama",
+            "model": "gemma3:4b",
+            "api_url": "http://localhost:11434/api/generate",
+            "timeout": 60,
+            "parameters": {
+                "temperature": 0.7,
+                "top_p": 0.9,
+                "num_predict": 100
+            }
+        }
+    }
+    
+    # Minimal output config
+    output_config = {
+        "base_directory": str(tmp_path / "output")
+    }
+    
+    # Write configs
+    with open(config_path / "course_config.yaml", "w") as f:
+        yaml.dump(course_config, f)
+    with open(config_path / "llm_config.yaml", "w") as f:
+        yaml.dump(llm_config, f)
+    with open(config_path / "output_config.yaml", "w") as f:
+        yaml.dump(output_config, f)
+    
+    return ConfigLoader(config_path)
+
+
+@pytest.fixture
+def llm_client(config_loader):
+    """Create an LLM client for testing."""
+    llm_config = config_loader.get_llm_parameters()
+    return OllamaClient(llm_config)
+
+
+@pytest.fixture
+def outline_generator(config_loader, llm_client):
+    """Create OutlineGenerator instance for testing."""
+    return OutlineGenerator(config_loader, llm_client)
+
+
 class TestJSONExtraction:
     """Test JSON extraction from various response formats."""
-    
-    @pytest.fixture
-    def outline_generator(self, test_config):
-        """Create OutlineGenerator instance for testing."""
-        loader = ConfigLoader(test_config)
-        llm_config = loader.get_llm_parameters()
-        client = OllamaClient(llm_config)
-        return OutlineGenerator(loader, client)
     
     def test_extract_json_from_markdown_code_block(self, outline_generator):
         """Test extraction from markdown code block with json tag."""

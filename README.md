@@ -19,7 +19,7 @@ uv run python3 scripts/run_pipeline.py --no-interactive
 
 # Or run individual stages
 uv run python3 scripts/01_setup_environment.py      # Stage 01: Setup
-uv run python3 scripts/02_run_tests.py --run-tests  # Stage 02: Testing
+uv run python3 scripts/02_run_tests.py  # Stage 02: Testing (runs by default)
 uv run python3 scripts/03_generate_outline.py --no-interactive  # Stage 03: Outline (non-interactive)
 uv run python3 scripts/04_generate_primary.py       # Stage 04: Primary (auto-finds outline, all modules)
 uv run python3 scripts/05_generate_secondary.py     # Stage 05: Secondary (auto-finds outline, all modules)
@@ -35,7 +35,7 @@ For complete automation (CI/CD, scripts, no user interaction):
 
 ```bash
 # Full pipeline, zero interaction required
-uv run python3 scripts/run_pipeline.py --no-interactive --run-tests
+uv run python3 scripts/run_pipeline.py --no-interactive
 
 # Skip validation, just generate
 uv run python3 scripts/run_pipeline.py --no-interactive --skip-setup --skip-validation
@@ -177,9 +177,12 @@ curriculum/
 ├── tests/                # Test suite (~540 tests across 25 files, NO MOCKS)
 ├── docs/                 # Comprehensive documentation (18+ files)
 └── output/               # Generated content (gitignored)
-    ├── outlines/         # JSON course outlines (dynamically generated)
-    ├── modules/          # Session-based course materials
-    └── website/          # Generated website (single HTML)
+    ├── outlines/         # JSON course outlines (dynamically generated, default location)
+    ├── {course_name}/    # Course-specific output directories
+    │   ├── outlines/     # Course-specific outlines
+    │   ├── modules/      # Session-based course materials
+    │   └── website/      # Generated website (single HTML)
+    └── website/          # Default website location (fallback)
 ```
 
 ## Key Commands
