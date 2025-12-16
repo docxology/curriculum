@@ -924,3 +924,42 @@
 2025-12-16 08:14:51,204 - src.llm.client - INFO - [opq:9f94a3] ✅ HTTP 200 in 4.57s
 2025-12-16 08:14:51,204 - src.llm.client - INFO - [opq:9f94a3] 📡 Stream active (200)
 2025-12-16 08:14:51,204 - src.llm.client - INFO - [opq:9f94a3] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:14:53,209 - src.llm.client - INFO - [opq:9f94a3] 📊 2.0s: 837c @417c/s (145ch, ~209t @104t/s)
+2025-12-16 08:14:55,223 - src.llm.client - INFO - [opq:9f94a3] 📊 4.0s: 1643c @409c/s (288ch, ~411t @102t/s)
+2025-12-16 08:14:56,999 - src.llm.client - INFO - [opq:9f94a3] ✓ Done 10.36s: 2293c (~301w @221c/s)
+2025-12-16 08:14:57,000 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:14:57,000 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-16 08:14:57,000 - generate_secondary - INFO -     - Length: 2292 chars, 301 words
+2025-12-16 08:14:57,000 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:14:57,000 - generate_secondary - INFO -     - Open questions: 3
+2025-12-16 08:14:57,000 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:14:57,001 - generate_secondary - INFO -   → Saved to: output/chemistry/modules/module_03_introduction_to_chemical_calculations/session_06/open_questions.md
+2025-12-16 08:14:57,001 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-16 08:14:57,001 - generate_secondary - INFO - 
+2025-12-16 08:14:57,001 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:14:57,001 - generate_secondary - INFO - [ALL COMPLIANT] Secondary Materials Generation - Summary ✅
+2025-12-16 08:14:57,001 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:14:57,001 - generate_secondary - INFO -   Items Processed: 6
+2025-12-16 08:14:57,001 - generate_secondary - INFO -     - [COMPLIANT] Successful: 6
+2025-12-16 08:14:57,001 - generate_secondary - INFO -     - [ERROR] Failed: 0
+2025-12-16 08:14:57,001 - generate_secondary - INFO - 
+2025-12-16 08:14:57,001 - generate_secondary - INFO -   Compliance Breakdown:
+2025-12-16 08:14:57,001 - generate_secondary - INFO -     - [COMPLIANT]: 6
+2025-12-16 08:14:57,001 - generate_secondary - INFO -     - [NEEDS REVIEW]: 0
+2025-12-16 08:14:57,001 - generate_secondary - INFO -     - [CRITICAL]: 0
+2025-12-16 08:14:57,001 - generate_secondary - INFO - 
+2025-12-16 08:14:57,001 - generate_secondary - INFO -   Issue Statistics:
+2025-12-16 08:14:57,001 - generate_secondary - INFO -     - Total Issues: 0
+2025-12-16 08:14:57,001 - generate_secondary - INFO -     - Critical Errors: 0
+2025-12-16 08:14:57,001 - generate_secondary - INFO -     - Warnings: 0
+2025-12-16 08:14:57,001 - generate_secondary - INFO - 
+2025-12-16 08:14:57,001 - generate_secondary - INFO -   Recommendations:
+2025-12-16 08:14:57,001 - generate_secondary - INFO -     - All content generated successfully
+2025-12-16 08:14:57,001 - generate_secondary - INFO -     - No issues detected
+2025-12-16 08:14:57,001 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:14:57,001 - generate_secondary - INFO - 
+================================================================================
+2025-12-16 08:14:57,001 - generate_secondary - INFO - EXIT CODE: 0 (SUCCESS)
+2025-12-16 08:14:57,001 - generate_secondary - INFO - ================================================================================
+2025-12-16 08:14:57,001 - generate_secondary - INFO - All sessions processed successfully with no issues
+2025-12-16 08:14:57,001 - generate_secondary - INFO - ================================================================================

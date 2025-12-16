@@ -78,3 +78,25 @@
 2025-12-16 08:05:38,291 - __main__ - INFO - 📖 STAGE 05: Secondary Materials Generation
 2025-12-16 08:05:38,291 - __main__ - INFO - ────────────────────────────────────────────────────────────
 2025-12-16 08:05:38,292 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/05_generate_secondary.py --config-dir /Users/4d/Documents/GitHub/curriculum/config --all
+2025-12-16 08:14:57,016 - __main__ - INFO - ✅ Stage 05 complete
+2025-12-16 08:14:57,016 - __main__ - INFO - 
+2025-12-16 08:14:57,016 - __main__ - INFO - 🌐 STAGE 06: Website Generation
+2025-12-16 08:14:57,016 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:14:57,017 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/06_website.py --config-dir /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 08:14:57,329 - __main__ - INFO - ✅ Stage 06 complete
+2025-12-16 08:14:57,330 - __main__ - INFO - 
+2025-12-16 08:14:57,330 - __main__ - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:14:57,330 - __main__ - INFO - [FINAL SUMMARY] Pipeline Execution Complete
+2025-12-16 08:14:57,330 - __main__ - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:14:57,330 - __main__ - INFO -   • Stages run: 6
+2025-12-16 08:14:57,330 - __main__ - INFO -   • Stages failed: 0
+2025-12-16 08:14:57,330 - __main__ - INFO -   [SUCCESS] All stages completed successfully!
+2025-12-16 08:14:57,330 - __main__ - INFO - 
+2025-12-16 08:14:57,330 - __main__ - INFO -   Next steps:
+2025-12-16 08:14:57,330 - __main__ - INFO -     - Review generated content in output/ directory
+2025-12-16 08:14:57,330 - __main__ - INFO -     - Check stage summaries above for any [NEEDS REVIEW] or [CRITICAL] issues
+2025-12-16 08:14:57,330 - __main__ - INFO -     - Review log file for detailed validation information
+2025-12-16 08:14:57,330 - __main__ - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:14:57,330 - __main__ - INFO - 
+2025-12-16 08:14:57,330 - __main__ - INFO - 📝 Full log available at: output/logs/run_pipeline_20251216_075439.log
+2025-12-16 08:14:57,330 - __main__ - INFO - 

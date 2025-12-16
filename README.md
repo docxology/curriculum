@@ -2,6 +2,8 @@
 
 **Repository**: [https://github.com/docxology/curriculum](https://github.com/docxology/curriculum)
 
+[![DOI](https://zenodo.org/badge/1113375630.svg)](https://doi.org/10.5281/zenodo.17954165)
+
 Infrastructure for creating custom, modularly configured, legibly generated curricula through the intersection of human expertise and generative AI. Faculty leverage cognitive skills and postures alongside synthetic intelligence tools to curate, validate, and enhance educational content—supporting both manual creation and AI-assisted generation workflows.
 
 This system embodies a recursive collaboration between human judgment (top-down strategy, analytical validation) and synthetic generation (bottom-up tactics, empirical exploration), creating a nested continuum where pedagogical quality emerges through iterative refinement. The balance between what *ought* to be taught and what *is* effectively learnable is continuously negotiated through faculty oversight and AI capability.
@@ -234,6 +236,15 @@ See **[.cursorrules/README.md](.cursorrules/README.md)** for complete developmen
 - Python 3.10+
 - [uv](https://github.com/astral-sh/uv) package manager
 - [Ollama](https://ollama.ai/) with model (default: gemma3:4b, configurable in `config/llm_config.yaml`)
+
+## Citation & Archival
+
+This repository is archived at Zenodo for long-term preservation and citation:
+
+- **DOI**: [10.5281/zenodo.17954165](https://doi.org/10.5281/zenodo.17954165)
+- **Zenodo Archive**: [https://zenodo.org/records/17954165](https://zenodo.org/records/17954165)
+
+When citing this work, please use the DOI above.
 
 ## License
 
