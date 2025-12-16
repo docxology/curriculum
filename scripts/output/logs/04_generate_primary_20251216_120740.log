@@ -462,3 +462,287 @@
 2025-12-16 12:11:08,778 - src.llm.client - INFO - [qst:fb1042] 📊 4.0s: 1149c @285c/s (234ch, ~287t @71t/s)
 2025-12-16 12:11:10,783 - src.llm.client - INFO - [qst:fb1042] 📊 6.0s: 1798c @298c/s (356ch, ~450t @75t/s)
 2025-12-16 12:11:12,795 - src.llm.client - INFO - [qst:fb1042] 📊 8.0s: 2351c @292c/s (461ch, ~588t @73t/s)
+2025-12-16 12:11:14,798 - src.llm.client - INFO - [qst:fb1042] 📊 10.0s: 2913c @290c/s (576ch, ~728t @72t/s)
+2025-12-16 12:11:16,802 - src.llm.client - INFO - [qst:fb1042] 📊 12.1s: 3478c @289c/s (679ch, ~870t @72t/s)
+2025-12-16 12:11:18,816 - src.llm.client - INFO - [qst:fb1042] 📊 14.1s: 4026c @286c/s (782ch, ~1006t @72t/s)
+2025-12-16 12:11:20,832 - src.llm.client - INFO - [qst:fb1042] 📊 16.1s: 4586c @285c/s (882ch, ~1146t @71t/s)
+2025-12-16 12:11:22,841 - src.llm.client - INFO - [qst:fb1042] 📊 18.1s: 5258c @291c/s (1001ch, ~1314t @73t/s)
+2025-12-16 12:11:23,156 - src.llm.client - INFO - [qst:fb1042] ✓ Done 20.52s: 5355c (~760w @261c/s)
+2025-12-16 12:11:23,157 - src.generate.formats.questions - WARNING - Only 5 questions detected (expected 10) for Active Inference in Generative AI (Session 2)
+2025-12-16 12:11:23,157 - src.generate.formats.questions - INFO - [COMPLIANT] Questions generated ✓
+2025-12-16 12:11:23,157 - src.generate.formats.questions - INFO -     - Total: 5 questions
+2025-12-16 12:11:23,157 - src.generate.formats.questions - INFO -     - Multiple choice: 5 (valid structure: 5, with 4 options: 5)
+2025-12-16 12:11:23,157 - src.generate.formats.questions - INFO -     - Answers: 10, Explanations: 5
+2025-12-16 12:11:23,157 - src.generate.formats.questions - INFO - [OK] Question marks: 6 total, 5 questions with '?' ✓
+2025-12-16 12:11:23,157 - src.generate.formats.questions - INFO -     - Question length: avg 11.0 words (range: 7-15)
+2025-12-16 12:11:23,158 - src.generate.formats.questions - INFO -     - MC explanations: 5/5 have proper length (20-50 words)
+2025-12-16 12:11:23,160 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:11:23,162 - src.generate.orchestration.pipeline - INFO -   ✓ Session 2 completed
+2025-12-16 12:11:23,162 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 12:11:23,162 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-16 12:11:23,162 - src.generate.orchestration.pipeline - INFO - Module 3: Advanced Applications & Future Directions (1 sessions)
+2025-12-16 12:11:23,162 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-16 12:11:23,162 - src.generate.orchestration.pipeline - INFO - 
+[3/3] Session 3: Multi-Agent Coordination & Embodied AI
+2025-12-16 12:11:23,162 - src.generate.orchestration.pipeline - INFO -   → Generating lecture...
+2025-12-16 12:11:23,162 - src.generate.formats.lectures - INFO - Generating lecture for: Advanced Applications & Future Directions (Session 3/3)
+2025-12-16 12:11:23,163 - src.llm.client - INFO - [lec:ea4a02] 🚀 lec | m=gemma3:4b | p=3670c | t=180s
+2025-12-16 12:11:23,163 - src.llm.client - INFO - [lec:ea4a02] Timeout configuration: connect=5s, read=180s (total limit: 180s)
+2025-12-16 12:11:23,163 - src.llm.client - INFO - [lec:ea4a02] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:11:23,164 - src.llm.client - INFO - [lec:ea4a02] Sending request to Ollama: model=gemma3:4b, operation=lecture, payload=7307 bytes, prompt=3670 chars
+2025-12-16 12:11:23,164 - src.llm.client - INFO - [lec:ea4a02] Waiting for HTTP response (connect timeout: 5s, read timeout: 180s)...
+2025-12-16 12:11:24,372 - src.llm.request_handler - INFO - [lec:ea4a02] ✓ Done 1.21s
+2025-12-16 12:11:24,372 - src.llm.client - INFO - [lec:ea4a02] ✅ HTTP 200 in 1.21s
+2025-12-16 12:11:24,372 - src.llm.client - INFO - [lec:ea4a02] 📡 Stream active (200)
+2025-12-16 12:11:24,372 - src.llm.client - INFO - [lec:ea4a02] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:11:26,387 - src.llm.client - INFO - [lec:ea4a02] 📊 2.0s: 675c @335c/s (119ch, ~169t @84t/s)
+2025-12-16 12:11:28,401 - src.llm.client - INFO - [lec:ea4a02] 📊 4.0s: 1361c @338c/s (241ch, ~340t @84t/s)
+2025-12-16 12:11:30,420 - src.llm.client - INFO - [lec:ea4a02] 📊 6.0s: 1985c @328c/s (355ch, ~496t @82t/s)
+2025-12-16 12:11:32,422 - src.llm.client - INFO - [lec:ea4a02] 📊 8.0s: 2637c @328c/s (473ch, ~659t @82t/s)
+2025-12-16 12:11:34,427 - src.llm.client - INFO - [lec:ea4a02] 📊 10.1s: 3281c @326c/s (595ch, ~820t @82t/s)
+2025-12-16 12:11:36,440 - src.llm.client - INFO - [lec:ea4a02] 📊 12.1s: 3980c @330c/s (721ch, ~995t @82t/s)
+2025-12-16 12:11:38,443 - src.llm.client - INFO - [lec:ea4a02] 📊 14.1s: 4672c @332c/s (846ch, ~1168t @83t/s)
+2025-12-16 12:11:40,454 - src.llm.client - INFO - [lec:ea4a02] 📊 16.1s: 5326c @331c/s (971ch, ~1332t @83t/s)
+2025-12-16 12:11:42,458 - src.llm.client - INFO - [lec:ea4a02] 📊 18.1s: 5997c @332c/s (1095ch, ~1499t @83t/s)
+2025-12-16 12:11:44,458 - src.llm.client - INFO - [lec:ea4a02] 📊 20.1s: 6695c @333c/s (1216ch, ~1674t @83t/s)
+2025-12-16 12:11:46,474 - src.llm.client - INFO - [lec:ea4a02] 📊 22.1s: 7359c @333c/s (1338ch, ~1840t @83t/s)
+2025-12-16 12:11:48,481 - src.llm.client - INFO - [lec:ea4a02] 📊 24.1s: 8015c @332c/s (1455ch, ~2004t @83t/s)
+2025-12-16 12:11:50,513 - src.llm.client - INFO - [lec:ea4a02] 📊 26.1s: 8762c @335c/s (1576ch, ~2190t @84t/s)
+2025-12-16 12:11:52,480 - src.llm.client - INFO - [lec:ea4a02] ✓ Done 29.32s: 9313c (~1381w @318c/s)
+2025-12-16 12:11:52,482 - src.generate.formats.lectures - INFO - [COMPLIANT] Lecture generated ✓
+2025-12-16 12:11:52,482 - src.generate.formats.lectures - INFO -     - Length: 9596 chars, 1420 words
+2025-12-16 12:11:52,482 - src.generate.formats.lectures - INFO -     - Requirements: 1000-1500 words, 5-15 examples, 4-8 sections
+2025-12-16 12:11:52,482 - src.generate.formats.lectures - INFO -     - Structure: 8 sections, 0 subsections
+2025-12-16 12:11:52,482 - src.generate.formats.lectures - INFO -     - Content: 13 examples, 1 terms defined
+2025-12-16 12:11:52,482 - src.generate.formats.lectures - INFO - Quality score: 100.0/100 (excellent)
+2025-12-16 12:11:52,485 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:11:52,486 - src.generate.orchestration.pipeline - INFO -   → Generating lab...
+2025-12-16 12:11:52,486 - src.generate.formats.labs - INFO - Generating lab 3 for: Advanced Applications & Future Directions (Session 3)
+2025-12-16 12:11:52,486 - src.llm.client - INFO - [lab:22d96e] 🚀 lab | m=gemma3:4b | p=3638c | t=150s
+2025-12-16 12:11:52,486 - src.llm.client - INFO - [lab:22d96e] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:11:52,486 - src.llm.client - INFO - [lab:22d96e] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:11:52,488 - src.llm.client - INFO - [lab:22d96e] Sending request to Ollama: model=gemma3:4b, operation=lab, payload=4070 bytes, prompt=3638 chars
+2025-12-16 12:11:52,488 - src.llm.client - INFO - [lab:22d96e] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:11:53,706 - src.llm.request_handler - INFO - [lab:22d96e] ✓ Done 1.22s
+2025-12-16 12:11:53,706 - src.llm.client - INFO - [lab:22d96e] ✅ HTTP 200 in 1.22s
+2025-12-16 12:11:53,706 - src.llm.client - INFO - [lab:22d96e] 📡 Stream active (200)
+2025-12-16 12:11:53,706 - src.llm.client - INFO - [lab:22d96e] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:11:55,721 - src.llm.client - INFO - [lab:22d96e] 📊 2.0s: 684c @340c/s (124ch, ~171t @85t/s)
+2025-12-16 12:11:57,737 - src.llm.client - INFO - [lab:22d96e] 📊 4.0s: 1255c @312c/s (246ch, ~314t @78t/s)
+2025-12-16 12:11:59,742 - src.llm.client - INFO - [lab:22d96e] 📊 6.0s: 1703c @282c/s (370ch, ~426t @71t/s)
+2025-12-16 12:12:01,746 - src.llm.client - INFO - [lab:22d96e] 📊 8.0s: 2285c @284c/s (493ch, ~571t @71t/s)
+2025-12-16 12:12:03,761 - src.llm.client - INFO - [lab:22d96e] 📊 10.1s: 2830c @281c/s (616ch, ~708t @70t/s)
+2025-12-16 12:12:05,763 - src.llm.client - INFO - [lab:22d96e] 📊 12.1s: 3362c @279c/s (736ch, ~840t @70t/s)
+2025-12-16 12:12:07,766 - src.llm.client - INFO - [lab:22d96e] 📊 14.1s: 3771c @268c/s (850ch, ~943t @67t/s)
+2025-12-16 12:12:09,781 - src.llm.client - INFO - [lab:22d96e] 📊 16.1s: 4443c @276c/s (965ch, ~1111t @69t/s)
+2025-12-16 12:12:11,783 - src.llm.client - INFO - [lab:22d96e] 📊 18.1s: 5214c @288c/s (1087ch, ~1304t @72t/s)
+2025-12-16 12:12:13,797 - src.llm.client - INFO - [lab:22d96e] 📊 20.1s: 5806c @289c/s (1203ch, ~1452t @72t/s)
+2025-12-16 12:12:15,447 - src.llm.client - INFO - [lab:22d96e] ✓ Done 22.96s: 6407c (~844w @279c/s)
+2025-12-16 12:12:15,448 - src.generate.formats.labs - INFO - [COMPLIANT] Lab generated ✓
+2025-12-16 12:12:15,448 - src.generate.formats.labs - INFO -     - Length: 6526 chars, 862 words
+2025-12-16 12:12:15,448 - src.generate.formats.labs - INFO -     - Procedure: 10 steps
+2025-12-16 12:12:15,448 - src.generate.formats.labs - INFO -     - Safety: 5 warnings
+2025-12-16 12:12:15,448 - src.generate.formats.labs - INFO -     - Data tables: 9
+2025-12-16 12:12:15,451 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:12:15,452 - src.generate.orchestration.pipeline - INFO -   → Generating study notes...
+2025-12-16 12:12:15,452 - src.generate.formats.study_notes - INFO - Generating study notes for: Advanced Applications & Future Directions (Session 3)
+2025-12-16 12:12:15,452 - src.llm.client - INFO - [stu:326963] 🚀 stu | m=gemma3:4b | p=4818c | t=120s
+2025-12-16 12:12:15,452 - src.llm.client - INFO - [stu:326963] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:12:15,452 - src.llm.client - INFO - [stu:326963] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:12:15,459 - src.llm.client - INFO - [stu:326963] Sending request to Ollama: model=gemma3:4b, operation=study_notes, payload=8467 bytes, prompt=4818 chars
+2025-12-16 12:12:15,459 - src.llm.client - INFO - [stu:326963] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:12:16,885 - src.llm.request_handler - INFO - [stu:326963] ✓ Done 1.43s
+2025-12-16 12:12:16,886 - src.llm.client - INFO - [stu:326963] ✅ HTTP 200 in 1.43s
+2025-12-16 12:12:16,886 - src.llm.client - INFO - [stu:326963] 📡 Stream active (200)
+2025-12-16 12:12:16,886 - src.llm.client - INFO - [stu:326963] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:12:18,888 - src.llm.client - INFO - [stu:326963] 📊 2.0s: 690c @345c/s (122ch, ~172t @86t/s)
+2025-12-16 12:12:20,897 - src.llm.client - INFO - [stu:326963] 📊 4.0s: 1396c @348c/s (246ch, ~349t @87t/s)
+2025-12-16 12:12:22,899 - src.llm.client - INFO - [stu:326963] 📊 6.0s: 2082c @346c/s (366ch, ~520t @87t/s)
+2025-12-16 12:12:24,902 - src.llm.client - INFO - [stu:326963] 📊 8.0s: 2779c @347c/s (490ch, ~695t @87t/s)
+2025-12-16 12:12:26,909 - src.llm.client - INFO - [stu:326963] 📊 10.0s: 3517c @351c/s (616ch, ~879t @88t/s)
+2025-12-16 12:12:28,922 - src.llm.client - INFO - [stu:326963] 📊 12.0s: 4210c @350c/s (736ch, ~1052t @87t/s)
+2025-12-16 12:12:30,233 - src.llm.client - INFO - [stu:326963] ✓ Done 14.78s: 4677c (~662w @316c/s)
+2025-12-16 12:12:30,234 - src.generate.formats.study_notes - INFO - [COMPLIANT] Study notes generated ✓
+2025-12-16 12:12:30,234 - src.generate.formats.study_notes - INFO -     - Length: 4753 chars, 674 words
+2025-12-16 12:12:30,234 - src.generate.formats.study_notes - INFO -     - Requirements: 3-10 key concepts, max 1200 words
+2025-12-16 12:12:30,234 - src.generate.formats.study_notes - INFO -     - Key concepts: 5
+2025-12-16 12:12:30,234 - src.generate.formats.study_notes - INFO -     - Structure: 3 sections, 0 bullets
+2025-12-16 12:12:30,234 - src.generate.formats.study_notes - INFO - Quality score: 100.0/100 (excellent)
+2025-12-16 12:12:30,236 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:12:30,236 - src.generate.orchestration.pipeline - INFO -   → Generating diagrams...
+2025-12-16 12:12:30,237 - src.generate.formats.diagrams - INFO - Generating diagram for: Free Energy Minimization in Multi-Agent Systems (Advanced Applications & Future Directions)
+2025-12-16 12:12:30,237 - src.llm.client - INFO - [dia:1811ae] 🚀 dia | m=gemma3:4b | p=5840c | t=120s
+2025-12-16 12:12:30,237 - src.llm.client - INFO - [dia:1811ae] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:12:30,237 - src.generate.formats.diagrams - INFO - Generating diagram for: Spatial Intelligence & World Models (Advanced Applications & Future Directions)
+2025-12-16 12:12:30,237 - src.generate.formats.diagrams - INFO - Generating diagram for: Robotics and Active Inference (Advanced Applications & Future Directions)
+2025-12-16 12:12:30,237 - src.llm.client - INFO - [dia:1811ae] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:12:30,237 - src.generate.formats.diagrams - INFO - Generating diagram for: Emerging Applications (Advanced Applications & Future Directions)
+2025-12-16 12:12:30,238 - src.llm.client - INFO - [dia:3d85e3] 🚀 dia | m=gemma3:4b | p=5816c | t=120s
+2025-12-16 12:12:30,238 - src.llm.client - INFO - [dia:14ab49] 🚀 dia | m=gemma3:4b | p=5804c | t=120s
+2025-12-16 12:12:30,238 - src.llm.client - INFO - [dia:a21aaf] 🚀 dia | m=gemma3:4b | p=5788c | t=120s
+2025-12-16 12:12:30,238 - src.llm.client - INFO - [dia:3d85e3] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:12:30,239 - src.llm.client - INFO - [dia:14ab49] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:12:30,239 - src.llm.client - INFO - [dia:a21aaf] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:12:30,239 - src.llm.client - INFO - [dia:3d85e3] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:12:30,239 - src.llm.client - INFO - [dia:14ab49] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:12:30,239 - src.llm.client - INFO - [dia:a21aaf] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:12:30,242 - src.llm.client - INFO - [dia:1811ae] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11149 bytes, prompt=5840 chars
+2025-12-16 12:12:30,242 - src.llm.client - INFO - [dia:a21aaf] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11097 bytes, prompt=5788 chars
+2025-12-16 12:12:30,242 - src.llm.client - INFO - [dia:3d85e3] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11125 bytes, prompt=5816 chars
+2025-12-16 12:12:30,242 - src.llm.client - INFO - [dia:1811ae] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:12:30,243 - src.llm.client - INFO - [dia:a21aaf] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:12:30,243 - src.llm.client - INFO - [dia:3d85e3] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:12:30,243 - src.llm.client - INFO - [dia:14ab49] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11113 bytes, prompt=5804 chars
+2025-12-16 12:12:30,244 - src.llm.client - INFO - [dia:14ab49] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:12:32,192 - src.llm.request_handler - INFO - [dia:1811ae] ✓ Done 1.95s
+2025-12-16 12:12:32,192 - src.llm.client - INFO - [dia:1811ae] ✅ HTTP 200 in 1.95s
+2025-12-16 12:12:32,192 - src.llm.client - INFO - [dia:1811ae] 📡 Stream active (200)
+2025-12-16 12:12:32,192 - src.llm.client - INFO - [dia:1811ae] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:12:34,202 - src.llm.client - INFO - [dia:1811ae] 📊 2.0s: 434c @216c/s (115ch, ~108t @54t/s)
+2025-12-16 12:12:36,216 - src.llm.client - INFO - [dia:1811ae] 📊 4.0s: 844c @210c/s (240ch, ~211t @52t/s)
+2025-12-16 12:12:37,636 - src.llm.client - INFO - [dia:1811ae] ✓ Done 7.40s: 1101c (~160w @149c/s)
+2025-12-16 12:12:37,637 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Free Energy Minimization in Multi-Agent Systems (Advanced Applications & Future Directions):
+2025-12-16 12:12:37,637 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-16 12:12:37,637 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-16 12:12:37,637 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-16 12:12:37,637 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-16 12:12:37,637 - src.generate.formats.diagrams - INFO -     - Length: 1052 chars (cleaned: 1052 chars)
+2025-12-16 12:12:37,637 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 12:12:37,637 - src.generate.formats.diagrams - INFO - [OK] Elements: 68 total (nodes: 21, connections: 47) ✓
+2025-12-16 12:12:37,637 - src.generate.formats.diagrams - INFO -   Cleanup summary: 3 issues fixed (code fences, style commands, etc.)
+2025-12-16 12:12:37,637 - src.generate.formats.diagrams - INFO - Generated diagram: 1052 characters
+2025-12-16 12:12:39,343 - src.llm.request_handler - INFO - [dia:3d85e3] ✓ Done 9.10s
+2025-12-16 12:12:39,343 - src.llm.client - INFO - [dia:3d85e3] ✅ HTTP 200 in 9.10s
+2025-12-16 12:12:39,343 - src.llm.client - INFO - [dia:3d85e3] 📡 Stream active (200)
+2025-12-16 12:12:39,343 - src.llm.client - INFO - [dia:3d85e3] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:12:41,356 - src.llm.client - INFO - [dia:3d85e3] 📊 2.0s: 408c @203c/s (122ch, ~102t @51t/s)
+2025-12-16 12:12:43,371 - src.llm.client - INFO - [dia:3d85e3] 📊 4.0s: 775c @192c/s (248ch, ~194t @48t/s)
+2025-12-16 12:12:45,377 - src.llm.client - INFO - [dia:3d85e3] 📊 6.0s: 1039c @172c/s (368ch, ~260t @43t/s)
+2025-12-16 12:12:46,789 - src.llm.client - INFO - [dia:3d85e3] ✓ Done 16.55s: 1223c (~149w @74c/s)
+2025-12-16 12:12:46,789 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Spatial Intelligence & World Models (Advanced Applications & Future Directions):
+2025-12-16 12:12:46,789 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-16 12:12:46,789 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-16 12:12:46,789 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-16 12:12:46,790 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-16 12:12:46,790 - src.generate.formats.diagrams - INFO -     - Length: 690 chars (cleaned: 690 chars)
+2025-12-16 12:12:46,790 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 12:12:46,790 - src.generate.formats.diagrams - INFO - [OK] Elements: 40 total (nodes: 16, connections: 24) ✓
+2025-12-16 12:12:46,790 - src.generate.formats.diagrams - INFO -   Cleanup summary: 3 issues fixed (code fences, style commands, etc.)
+2025-12-16 12:12:46,790 - src.generate.formats.diagrams - INFO - Generated diagram: 690 characters
+2025-12-16 12:12:48,492 - src.llm.request_handler - INFO - [dia:a21aaf] ✓ Done 18.25s
+2025-12-16 12:12:48,492 - src.llm.client - INFO - [dia:a21aaf] ✅ HTTP 200 in 18.25s
+2025-12-16 12:12:48,492 - src.llm.client - INFO - [dia:a21aaf] 📡 Stream active (200)
+2025-12-16 12:12:48,492 - src.llm.client - INFO - [dia:a21aaf] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:12:50,495 - src.llm.client - INFO - [dia:a21aaf] 📊 2.0s: 490c @245c/s (124ch, ~122t @61t/s)
+2025-12-16 12:12:52,503 - src.llm.client - INFO - [dia:a21aaf] 📊 4.0s: 834c @208c/s (244ch, ~208t @52t/s)
+2025-12-16 12:12:54,519 - src.llm.client - INFO - [dia:a21aaf] 📊 6.0s: 1106c @184c/s (351ch, ~276t @46t/s)
+2025-12-16 12:12:55,500 - src.llm.client - INFO - [dia:a21aaf] ✓ Done 25.26s: 1246c (~138w @49c/s)
+2025-12-16 12:12:55,500 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Emerging Applications (Advanced Applications & Future Directions):
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - WARNING - [WARNING] Some node text exceeds 40 characters (keep node labels concise - found 1 long nodes) ⚠️
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - INFO - [NEEDS REVIEW] Diagram generated ⚠️
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - INFO -     - Length: 721 chars (cleaned: 721 chars)
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - INFO - [WARNING] Elements: 37 total (nodes: 11, connections: 26) ⚠️
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - WARNING -     - Mermaid syntax warnings: 1 issues fixed (code fences, style commands)
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - WARNING - [WARNING] Some node text exceeds 40 characters (keep node labels concise - found 1 long nodes) ⚠️
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - INFO -   Cleanup summary: 4 issues fixed (code fences, style commands, etc.)
+2025-12-16 12:12:55,501 - src.generate.formats.diagrams - INFO - Generated diagram: 721 characters
+2025-12-16 12:12:57,217 - src.llm.request_handler - INFO - [dia:14ab49] ✓ Done 26.97s
+2025-12-16 12:12:57,217 - src.llm.client - INFO - [dia:14ab49] ✅ HTTP 200 in 26.97s
+2025-12-16 12:12:57,217 - src.llm.client - INFO - [dia:14ab49] 📡 Stream active (200)
+2025-12-16 12:12:57,217 - src.llm.client - INFO - [dia:14ab49] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:12:59,219 - src.llm.client - INFO - [dia:14ab49] 📊 2.0s: 428c @214c/s (118ch, ~107t @53t/s)
+2025-12-16 12:13:01,229 - src.llm.client - INFO - [dia:14ab49] 📊 4.0s: 845c @211c/s (243ch, ~211t @53t/s)
+2025-12-16 12:13:01,848 - src.llm.client - INFO - [dia:14ab49] ✓ Done 31.61s: 929c (~125w @29c/s)
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Robotics and Active Inference (Advanced Applications & Future Directions):
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - WARNING - [WARNING] Only 7 nodes found (require at least 10, need 3 more - add more nodes to the diagram) ⚠️
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - WARNING - [CRITICAL] Content Issue: Only 7 nodes found (require at least 10, need 3 more - add more nodes to the diagram) 🔴
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - WARNING -     Context: Module 3 Session 3
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - WARNING -     Impact: Diagram lacks sufficient nodes for meaningful visualization
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - WARNING -     Recommendation: Add more nodes to the diagram (minimum 10 nodes required)
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - WARNING - [CRITICAL] Content Issue: Only 7 nodes found (require at least 10, need 3 more - add more nodes to the diagram) 🔴
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - WARNING -     Context: Module 3 Session 3
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - WARNING -     Impact: Diagram lacks sufficient nodes for meaningful visualization
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - WARNING -     Recommendation: Add more nodes to the diagram (minimum 10 nodes required)
+2025-12-16 12:13:01,848 - src.generate.formats.diagrams - WARNING -   Critical issues detected, will retry: 2 issues
+2025-12-16 12:13:01,849 - src.generate.formats.diagrams - WARNING -   Retry attempt 1/1 for diagram: Robotics and Active Inference (Advanced Applications & Future Directions)
+2025-12-16 12:13:01,849 - src.generate.formats.diagrams - WARNING -   Smart retry system suggests skipping retry (low success rate)
+2025-12-16 12:13:01,849 - src.generate.orchestration.pipeline - INFO -   → Generating questions...
+2025-12-16 12:13:01,849 - src.generate.formats.questions - INFO - Generating 10 questions for: Advanced Applications & Future Directions (Session 3)
+2025-12-16 12:13:01,849 - src.llm.client - INFO - [qst:ac3c1e] 🚀 qst | m=gemma3:4b | p=7628c | t=150s
+2025-12-16 12:13:01,849 - src.llm.client - INFO - [qst:ac3c1e] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:13:01,849 - src.llm.client - INFO - [qst:ac3c1e] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:13:01,851 - src.llm.client - INFO - [qst:ac3c1e] Sending request to Ollama: model=gemma3:4b, operation=questions, payload=11307 bytes, prompt=7628 chars
+2025-12-16 12:13:01,851 - src.llm.client - INFO - [qst:ac3c1e] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:13:04,192 - src.llm.request_handler - INFO - [qst:ac3c1e] ✓ Done 2.34s
+2025-12-16 12:13:04,192 - src.llm.client - INFO - [qst:ac3c1e] ✅ HTTP 200 in 2.34s
+2025-12-16 12:13:04,192 - src.llm.client - INFO - [qst:ac3c1e] 📡 Stream active (200)
+2025-12-16 12:13:04,192 - src.llm.client - INFO - [qst:ac3c1e] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:13:06,194 - src.llm.client - INFO - [qst:ac3c1e] 📊 2.0s: 598c @299c/s (126ch, ~150t @75t/s)
+2025-12-16 12:13:08,209 - src.llm.client - INFO - [qst:ac3c1e] 📊 4.0s: 1223c @305c/s (244ch, ~306t @76t/s)
+2025-12-16 12:13:10,209 - src.llm.client - INFO - [qst:ac3c1e] 📊 6.0s: 1827c @304c/s (366ch, ~457t @76t/s)
+2025-12-16 12:13:12,212 - src.llm.client - INFO - [qst:ac3c1e] 📊 8.0s: 2440c @304c/s (486ch, ~610t @76t/s)
+2025-12-16 12:13:14,224 - src.llm.client - INFO - [qst:ac3c1e] 📊 10.0s: 3029c @302c/s (607ch, ~757t @75t/s)
+2025-12-16 12:13:16,228 - src.llm.client - INFO - [qst:ac3c1e] 📊 12.0s: 3671c @305c/s (728ch, ~918t @76t/s)
+2025-12-16 12:13:18,238 - src.llm.client - INFO - [qst:ac3c1e] 📊 14.0s: 4364c @311c/s (851ch, ~1091t @78t/s)
+2025-12-16 12:13:19,902 - src.llm.client - INFO - [qst:ac3c1e] ✓ Done 18.05s: 4962c (~691w @275c/s)
+2025-12-16 12:13:19,905 - src.utils.content_analysis.question_fixes - INFO - Auto-fixed 1 question format issues: {'format_standardized': 0, 'question_marks_added': 1, 'mc_options_fixed': 0, 'total_fixes': 1}
+2025-12-16 12:13:19,905 - src.generate.formats.questions - INFO - Applied 1 auto-fixes to questions
+2025-12-16 12:13:19,906 - src.generate.formats.questions - WARNING - [CRITICAL] Structure Issue: MC option count: 2 multiple choice questions do not have exactly 4 options (require A, B, C, D - ensure each MC question has exactly 4 options) 🔴
+2025-12-16 12:13:19,906 - src.generate.formats.questions - WARNING -     Context: Module 3 Session 3
+2025-12-16 12:13:19,906 - src.generate.formats.questions - WARNING -     Impact: MC questions may not have standard format
+2025-12-16 12:13:19,906 - src.generate.formats.questions - WARNING -     Recommendation: Ensure each MC question has exactly 4 options (A, B, C, D)
+2025-12-16 12:13:19,907 - src.generate.formats.questions - WARNING -   Critical issues detected, will retry: 1 issues
+2025-12-16 12:13:19,907 - src.generate.formats.questions - WARNING -   Retry attempt 1/1 for questions: Advanced Applications & Future Directions (Session 3)
+2025-12-16 12:13:19,907 - src.generate.formats.questions - WARNING -   Smart retry system suggests skipping retry (low success rate)
+2025-12-16 12:13:19,909 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -   ✓ Session 3 completed
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - QUALITY SCORE SUMMARY
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - Average Quality Score: 100.0/100
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - Overall Quality: excellent
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - Quality Distribution: {'excellent': 3}
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - [ALL COMPLIANT] Primary Materials Generation - Summary ✅
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -   Items Processed: 3
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -     - [COMPLIANT] Successful: 3
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -     - [ERROR] Failed: 0
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -   Compliance Breakdown:
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -     - [COMPLIANT]: 3
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -     - [NEEDS REVIEW]: 0
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -     - [CRITICAL]: 0
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -   Issue Statistics:
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -     - Total Issues: 0
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -     - Critical Errors: 0
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -     - Warnings: 0
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -   Recommendations:
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -     - All content generated successfully
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO -     - No issues detected
+2025-12-16 12:13:19,912 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 12:13:19,912 - generate_primary - INFO - 
+================================================================================
+2025-12-16 12:13:19,912 - generate_primary - INFO - PRIMARY MATERIALS COMPLETE
+2025-12-16 12:13:19,912 - generate_primary - INFO - ================================================================================
+2025-12-16 12:13:19,912 - generate_primary - INFO - Total sessions processed: 3
+2025-12-16 12:13:19,912 - generate_primary - INFO - Successful: 3
+2025-12-16 12:13:19,912 - generate_primary - INFO - Failed: 0
+2025-12-16 12:13:19,912 - generate_primary - INFO - 
+================================================================================
+2025-12-16 12:13:19,912 - generate_primary - INFO - EXIT CODE: 0 (SUCCESS)
+2025-12-16 12:13:19,912 - generate_primary - INFO - ================================================================================
+2025-12-16 12:13:19,912 - generate_primary - INFO - All sessions processed successfully with no critical issues
+2025-12-16 12:13:19,912 - generate_primary - INFO - ================================================================================

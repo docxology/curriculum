@@ -1,0 +1,11 @@
+graph TD
+    A[LLM Training] --> B{Reward Model Training}
+    B -- "Human Feedback" --> C{Reward Signal Generation}
+    C --> D[KL Divergence Calculation]
+    D --> E[Policy Optimization (PPO)]
+    E --> F{LLM Updates}
+    F -- "Reinforcement" --> B
+    B -- "Iterative Refinement" --> C
+    C -- "Contextual Understanding" --> D
+    D -- "Bias Detection" --> C
+    C -- "Adaptive Learning" --> B

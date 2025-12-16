@@ -1,0 +1,21 @@
+graph TD
+    A([Start: Multi-Agent Robotics]) --> B{Environment Perception & Representation}
+    B --> C{Active Inference: Hypotheses Generation}
+    C --> D{Prediction & Action Selection}
+    D --> E{Action Execution}
+    E --> F{Sensor Feedback}
+    F --> B
+    E -- ==>  Updates Belief State
+    B -- ==>  Refines Hypotheses
+    C -- ==>  Predicts Future States
+    D -- ==>  Selects Optimal Actions
+    E -- ==>  Updates World Model
+    F --> C
+    B -- ==>  Contextual Understanding
+    C -- ==>  Spatial Reasoning
+    D -- ==>  Resource Allocation
+    E -- ==>  Motor Control
+    B -- ==>  Object Recognition
+    C -- ==>  Anomaly Detection
+    D -- ==>  Strategic Planning
+    E -- ==>  Precise Movement

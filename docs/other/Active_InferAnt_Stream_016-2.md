@@ -124,3 +124,19 @@ As many "Oughts" — *What should we do with these capabilities?* — as there a
 - ⚖️ **How do we balance** efficiency gains with pedagogical depth?
 - ⚖️ **What are the ethical considerations** in AI-generated educational content?
 - 🏛️ **How can institutions support** faculty in adopting these tools?
+
+
+
+@buzztoot
+- ​How does Daniel see tool adoption changing "where we think" and not just wondering about "How we think?"
+​Will these tools put us further out into the world, or, will it allow us to dive deeper into the epistemological world of refinement, or both? How does that Map v Territory diff now play out?
+
+
+
+@kirbyurner
+​​Lit analysis seemed to pull in large amounts of papers outside the focus of tree grafting, getting into heart surgery big time, and some algebra? A more loquacious prompt would prolly fix that.
+
+
+@kirbyurner
+
+​A teacher would know how to graft in the field i.e. curriculum generation does not replace skills e.g. doing heart surgery. No substitute for practice makes perfect.

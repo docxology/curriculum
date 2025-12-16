@@ -1,0 +1,505 @@
+2025-12-16 12:13:20,334 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/05_generate_secondary_20251216_121320.log
+2025-12-16 12:13:20,334 - generate_secondary - INFO - 
+2025-12-16 12:13:20,334 - generate_secondary - INFO - 🔬 STAGE 05: SECONDARY MATERIALS (Session-Level Synthesis)
+2025-12-16 12:13:20,334 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 12:13:20,334 - generate_secondary - INFO - Generating materials PER SESSION (with full session context)
+2025-12-16 12:13:20,334 - generate_secondary - INFO - Reading all content from: [course-specific]/modules/module_XX/session_YY/
+2025-12-16 12:13:20,334 - generate_secondary - INFO - Output structure: [course-specific]/modules/module_XX/session_YY/[type].md
+2025-12-16 12:13:20,334 - generate_secondary - INFO - 
+2025-12-16 12:13:20,334 - generate_secondary - INFO - SECONDARY TYPES GENERATED PER SESSION:
+2025-12-16 12:13:20,334 - generate_secondary - INFO -   1. application.md - Real-world applications and case studies
+2025-12-16 12:13:20,334 - generate_secondary - INFO -   2. extension.md - Advanced topics beyond core curriculum
+2025-12-16 12:13:20,334 - generate_secondary - INFO -   3. visualization.mmd - Additional diagrams and concept maps (Mermaid format)
+2025-12-16 12:13:20,334 - generate_secondary - INFO -   4. integration.md - Cross-module connections and synthesis
+2025-12-16 12:13:20,334 - generate_secondary - INFO -   5. investigation.md - Research questions and experiments
+2025-12-16 12:13:20,334 - generate_secondary - INFO -   6. open_questions.md - Current scientific debates and frontiers
+2025-12-16 12:13:20,334 - generate_secondary - INFO - 
+2025-12-16 12:13:20,334 - generate_secondary - INFO - 
+2025-12-16 12:13:20,334 - generate_secondary - INFO - ⚙️ CONFIGURATION
+2025-12-16 12:13:20,334 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 12:13:20,334 - generate_secondary - INFO -   • Content Validation: DISABLED
+2025-12-16 12:13:20,334 - generate_secondary - INFO -   • Dry Run: DISABLED
+2025-12-16 12:13:20,334 - generate_secondary - INFO -   • Log File: output/logs/05_generate_secondary_20251216_121320.log
+2025-12-16 12:13:20,334 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 12:13:20,334 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 12:13:20,335 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 12:13:20,353 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 12:13:20,353 - generate_secondary - INFO - Using specified outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/active_inference_ai_short/outlines/course_outline_20251216_120739.json
+2025-12-16 12:13:20,353 - src.config.loader - INFO - Using specified outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/active_inference_ai_short/outlines/course_outline_20251216_120739.json
+2025-12-16 12:13:20,353 - src.config.loader - INFO - Loaded 3 modules from outline: course_outline_20251216_120739.json
+2025-12-16 12:13:20,353 - generate_secondary - INFO - Using course-specific output directory: output/active_inference_ai_short/
+2025-12-16 12:13:20,353 - generate_secondary - INFO - Processing ALL modules
+2025-12-16 12:13:20,353 - generate_secondary - INFO - Processing 3 modules (3 total sessions)
+2025-12-16 12:13:20,353 - generate_secondary - INFO - Secondary types: application, extension, visualization, integration, investigation, open_questions
+2025-12-16 12:13:20,354 - src.llm.client - INFO - Initialized OllamaClient: model=gemma3:4b, url=http://localhost:11434/api/generate
+2025-12-16 12:13:20,354 - generate_secondary - INFO - 
+============================================================
+2025-12-16 12:13:20,354 - generate_secondary - INFO - [1/3] Module 1: Foundations of Active Inference (1 sessions)
+2025-12-16 12:13:20,354 - generate_secondary - INFO - ============================================================
+2025-12-16 12:13:20,354 - generate_secondary - INFO - 
+  Session 1/3: Introduction to Active Inference
+2025-12-16 12:13:20,357 - generate_secondary - INFO - Generating application for session 1: Introduction to Active Inference...
+2025-12-16 12:13:20,357 - src.llm.client - INFO - [app:ebc90d] 🚀 app | m=gemma3:4b | p=28329c | t=150s
+2025-12-16 12:13:20,357 - src.llm.client - INFO - [app:ebc90d] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:13:20,358 - src.llm.client - INFO - [app:ebc90d] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:13:20,376 - src.llm.client - INFO - [app:ebc90d] Sending request to Ollama: model=gemma3:4b, operation=application, payload=30346 bytes, prompt=28329 chars
+2025-12-16 12:13:20,380 - src.llm.client - INFO - [app:ebc90d] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:13:25,448 - src.llm.request_handler - INFO - [app:ebc90d] ✓ Done 5.07s
+2025-12-16 12:13:25,448 - src.llm.client - INFO - [app:ebc90d] ✅ HTTP 200 in 5.07s
+2025-12-16 12:13:25,448 - src.llm.client - INFO - [app:ebc90d] 📡 Stream active (200)
+2025-12-16 12:13:25,448 - src.llm.client - INFO - [app:ebc90d] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:13:27,454 - src.llm.client - INFO - [app:ebc90d] 📊 2.0s: 700c @349c/s (114ch, ~175t @87t/s)
+2025-12-16 12:13:29,462 - src.llm.client - INFO - [app:ebc90d] 📊 4.0s: 1344c @335c/s (227ch, ~336t @84t/s)
+2025-12-16 12:13:31,468 - src.llm.client - INFO - [app:ebc90d] 📊 6.0s: 2017c @335c/s (342ch, ~504t @84t/s)
+2025-12-16 12:13:33,469 - src.llm.client - INFO - [app:ebc90d] 📊 8.0s: 2734c @341c/s (462ch, ~684t @85t/s)
+2025-12-16 12:13:35,483 - src.llm.client - INFO - [app:ebc90d] 📊 10.0s: 3443c @343c/s (581ch, ~861t @86t/s)
+2025-12-16 12:13:37,497 - src.llm.client - INFO - [app:ebc90d] 📊 12.0s: 4129c @343c/s (703ch, ~1032t @86t/s)
+2025-12-16 12:13:39,510 - src.llm.client - INFO - [app:ebc90d] 📊 14.1s: 4749c @338c/s (809ch, ~1187t @84t/s)
+2025-12-16 12:13:41,526 - src.llm.client - INFO - [app:ebc90d] 📊 16.1s: 5375c @334c/s (911ch, ~1344t @84t/s)
+2025-12-16 12:13:43,524 - src.llm.client - INFO - [app:ebc90d] 📊 18.1s: 6082c @336c/s (1027ch, ~1520t @84t/s)
+2025-12-16 12:13:45,529 - src.llm.client - INFO - [app:ebc90d] 📊 20.1s: 6724c @335c/s (1145ch, ~1681t @84t/s)
+2025-12-16 12:13:47,534 - src.llm.client - INFO - [app:ebc90d] 📊 22.1s: 7336c @332c/s (1259ch, ~1834t @83t/s)
+2025-12-16 12:13:49,229 - src.llm.client - INFO - [app:ebc90d] ✓ Done 28.87s: 7839c (~1067w @272c/s)
+2025-12-16 12:13:49,235 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:13:49,236 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-16 12:13:49,236 - generate_secondary - INFO -     - Length: 7839 chars, 1067 words
+2025-12-16 12:13:49,236 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 12:13:49,236 - generate_secondary - INFO -     - Applications: 3
+2025-12-16 12:13:49,236 - generate_secondary - INFO -     - Avg words per application: 354
+2025-12-16 12:13:49,236 - generate_secondary - WARNING - [WARNING] Application 1 has 349 words (exceeds 200 by 149 words - consider condensing) ⚠️
+2025-12-16 12:13:49,236 - generate_secondary - WARNING - [WARNING] Application 2 has 354 words (exceeds 200 by 154 words - consider condensing) ⚠️
+2025-12-16 12:13:49,237 - generate_secondary - WARNING - [WARNING] Application 3 has 358 words (exceeds 200 by 158 words - consider condensing) ⚠️
+2025-12-16 12:13:49,237 - generate_secondary - WARNING - [WARNING] Total word count (1067) exceeds maximum 1000 (exceeds by 67 words - condense content) ⚠️
+2025-12-16 12:13:49,237 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-16 12:13:49,237 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-16 12:13:49,239 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_01_foundations_of_active_inference/session_01/application.md
+2025-12-16 12:13:49,239 - generate_secondary - INFO - Generating extension for session 1: Introduction to Active Inference...
+2025-12-16 12:13:49,239 - src.llm.client - INFO - [ext:c61aad] 🚀 ext | m=gemma3:4b | p=25941c | t=120s
+2025-12-16 12:13:49,239 - src.llm.client - INFO - [ext:c61aad] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:13:49,239 - src.llm.client - INFO - [ext:c61aad] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:13:49,244 - src.llm.client - INFO - [ext:c61aad] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=30934 bytes, prompt=25941 chars
+2025-12-16 12:13:49,244 - src.llm.client - INFO - [ext:c61aad] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:13:54,213 - src.llm.request_handler - INFO - [ext:c61aad] ✓ Done 4.97s
+2025-12-16 12:13:54,213 - src.llm.client - INFO - [ext:c61aad] ✅ HTTP 200 in 4.97s
+2025-12-16 12:13:54,213 - src.llm.client - INFO - [ext:c61aad] 📡 Stream active (200)
+2025-12-16 12:13:54,214 - src.llm.client - INFO - [ext:c61aad] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:13:56,225 - src.llm.client - INFO - [ext:c61aad] 📊 2.0s: 695c @346c/s (121ch, ~174t @86t/s)
+2025-12-16 12:13:58,237 - src.llm.client - INFO - [ext:c61aad] 📊 4.0s: 1458c @362c/s (238ch, ~364t @91t/s)
+2025-12-16 12:14:00,238 - src.llm.client - INFO - [ext:c61aad] 📊 6.0s: 2209c @367c/s (363ch, ~552t @92t/s)
+2025-12-16 12:14:02,242 - src.llm.client - INFO - [ext:c61aad] 📊 8.0s: 2936c @366c/s (484ch, ~734t @91t/s)
+2025-12-16 12:14:04,242 - src.llm.client - INFO - [ext:c61aad] 📊 10.0s: 3634c @362c/s (596ch, ~908t @91t/s)
+2025-12-16 12:14:06,264 - src.llm.client - INFO - [ext:c61aad] 📊 12.0s: 4216c @350c/s (696ch, ~1054t @88t/s)
+2025-12-16 12:14:08,265 - src.llm.client - INFO - [ext:c61aad] 📊 14.1s: 4657c @331c/s (797ch, ~1164t @83t/s)
+2025-12-16 12:14:10,448 - src.llm.client - INFO - [ext:c61aad] 📊 16.2s: 4977c @307c/s (885ch, ~1244t @77t/s)
+2025-12-16 12:14:10,450 - src.llm.client - INFO - [ext:c61aad] ✓ Done 21.21s: 4977c (~700w @235c/s)
+2025-12-16 12:14:10,457 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:14:10,458 - generate_secondary - INFO - [NEEDS REVIEW] Extension generated ⚠️
+2025-12-16 12:14:10,459 - generate_secondary - INFO -     - Length: 4976 chars, 700 words
+2025-12-16 12:14:10,459 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 12:14:10,459 - generate_secondary - INFO -     - Topics: 8
+2025-12-16 12:14:10,459 - generate_secondary - INFO -     - Avg words per topic: 84
+2025-12-16 12:14:10,459 - generate_secondary - WARNING - [WARNING] Too many topics (8, maximum 4, 4 excess - consider consolidating or removing less critical topics) ⚠️
+2025-12-16 12:14:10,459 - generate_secondary - WARNING - [WARNING] Topic 2 has 155 words (exceeds 150 by 5 words - consider condensing) ⚠️
+2025-12-16 12:14:10,459 - generate_secondary - WARNING - [WARNING] Topic 4 has 182 words (exceeds 150 by 32 words - consider condensing) ⚠️
+2025-12-16 12:14:10,459 - generate_secondary - WARNING - [WARNING] Topic 5 has 1 words (require 100-150, need 99 more words) ⚠️
+2025-12-16 12:14:10,459 - generate_secondary - WARNING - [WARNING] Topic 6 has 1 words (require 100-150, need 99 more words) ⚠️
+2025-12-16 12:14:10,459 - generate_secondary - WARNING - [WARNING] Topic 7 has 1 words (require 100-150, need 99 more words) ⚠️
+2025-12-16 12:14:10,459 - generate_secondary - WARNING - [WARNING] Topic 8 has 48 words (require 100-150, need 52 more words) ⚠️
+2025-12-16 12:14:10,459 - generate_secondary - WARNING - [WARNING] Total word count (700) exceeds maximum 600 (exceeds by 100 words - condense content) ⚠️
+2025-12-16 12:14:10,459 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-16 12:14:10,459 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-16 12:14:10,461 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_01_foundations_of_active_inference/session_01/extension.md
+2025-12-16 12:14:10,462 - generate_secondary - INFO - Generating visualization for session 1: Introduction to Active Inference...
+2025-12-16 12:14:10,462 - src.llm.client - INFO - [viz:32d338] 🚀 viz | m=gemma3:4b | p=24901c | t=120s
+2025-12-16 12:14:10,463 - src.llm.client - INFO - [viz:32d338] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:14:10,463 - src.llm.client - INFO - [viz:32d338] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:14:10,472 - src.llm.client - INFO - [viz:32d338] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=29216 bytes, prompt=24901 chars
+2025-12-16 12:14:10,472 - src.llm.client - INFO - [viz:32d338] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:14:16,074 - src.llm.request_handler - INFO - [viz:32d338] ✓ Done 5.60s
+2025-12-16 12:14:16,075 - src.llm.client - INFO - [viz:32d338] ✅ HTTP 200 in 5.60s
+2025-12-16 12:14:16,075 - src.llm.client - INFO - [viz:32d338] 📡 Stream active (200)
+2025-12-16 12:14:16,076 - src.llm.client - INFO - [viz:32d338] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:14:18,091 - src.llm.client - INFO - [viz:32d338] 📊 2.0s: 459c @228c/s (118ch, ~115t @57t/s)
+2025-12-16 12:14:20,088 - src.llm.client - INFO - [viz:32d338] ✓ Done 9.63s: 843c (~130w @88c/s)
+2025-12-16 12:14:20,088 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 12:14:20,089 - generate_secondary - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-16 12:14:20,089 - generate_secondary - INFO -     - Length: 364 chars (cleaned: 364 chars)
+2025-12-16 12:14:20,089 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 12:14:20,089 - generate_secondary - INFO - [OK] Elements: 24 total (nodes: 11, connections: 13) ✓
+2025-12-16 12:14:20,090 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_01_foundations_of_active_inference/session_01/visualization.mmd
+2025-12-16 12:14:20,090 - generate_secondary - INFO - Generating integration for session 1: Introduction to Active Inference...
+2025-12-16 12:14:20,090 - src.llm.client - INFO - [int:9208f8] 🚀 int | m=gemma3:4b | p=26250c | t=150s
+2025-12-16 12:14:20,090 - src.llm.client - INFO - [int:9208f8] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:14:20,091 - src.llm.client - INFO - [int:9208f8] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:14:20,092 - src.llm.client - INFO - [int:9208f8] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=31582 bytes, prompt=26250 chars
+2025-12-16 12:14:20,092 - src.llm.client - INFO - [int:9208f8] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:14:25,199 - src.llm.request_handler - INFO - [int:9208f8] ✓ Done 5.11s
+2025-12-16 12:14:25,199 - src.llm.client - INFO - [int:9208f8] ✅ HTTP 200 in 5.11s
+2025-12-16 12:14:25,199 - src.llm.client - INFO - [int:9208f8] 📡 Stream active (200)
+2025-12-16 12:14:25,199 - src.llm.client - INFO - [int:9208f8] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:14:27,214 - src.llm.client - INFO - [int:9208f8] 📊 2.0s: 632c @314c/s (110ch, ~158t @78t/s)
+2025-12-16 12:14:29,226 - src.llm.client - INFO - [int:9208f8] 📊 4.0s: 1381c @343c/s (230ch, ~345t @86t/s)
+2025-12-16 12:14:31,232 - src.llm.client - INFO - [int:9208f8] 📊 6.0s: 2044c @339c/s (345ch, ~511t @85t/s)
+2025-12-16 12:14:33,234 - src.llm.client - INFO - [int:9208f8] 📊 8.0s: 2747c @342c/s (455ch, ~687t @85t/s)
+2025-12-16 12:14:35,239 - src.llm.client - INFO - [int:9208f8] 📊 10.0s: 3417c @340c/s (566ch, ~854t @85t/s)
+2025-12-16 12:14:37,247 - src.llm.client - INFO - [int:9208f8] 📊 12.0s: 4207c @349c/s (688ch, ~1052t @87t/s)
+2025-12-16 12:14:39,253 - src.llm.client - INFO - [int:9208f8] 📊 14.1s: 4939c @351c/s (809ch, ~1235t @88t/s)
+2025-12-16 12:14:41,254 - src.llm.client - INFO - [int:9208f8] 📊 16.1s: 5643c @351c/s (927ch, ~1411t @88t/s)
+2025-12-16 12:14:43,258 - src.llm.client - INFO - [int:9208f8] 📊 18.1s: 6094c @337c/s (1044ch, ~1524t @84t/s)
+2025-12-16 12:14:45,054 - src.llm.client - INFO - [int:9208f8] ✓ Done 24.96s: 6435c (~853w @258c/s)
+2025-12-16 12:14:45,057 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:14:45,059 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-16 12:14:45,059 - generate_secondary - INFO -     - Length: 6425 chars, 853 words
+2025-12-16 12:14:45,059 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-16 12:14:45,059 - generate_secondary - INFO -     - Connections: 34
+2025-12-16 12:14:45,059 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-16 12:14:45,059 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_01_foundations_of_active_inference/session_01/integration.md
+2025-12-16 12:14:45,060 - generate_secondary - INFO - Generating investigation for session 1: Introduction to Active Inference...
+2025-12-16 12:14:45,060 - src.llm.client - INFO - [inv:fa6225] 🚀 inv | m=gemma3:4b | p=25163c | t=150s
+2025-12-16 12:14:45,060 - src.llm.client - INFO - [inv:fa6225] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:14:45,060 - src.llm.client - INFO - [inv:fa6225] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:14:45,066 - src.llm.client - INFO - [inv:fa6225] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=29438 bytes, prompt=25163 chars
+2025-12-16 12:14:45,066 - src.llm.client - INFO - [inv:fa6225] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:14:50,205 - src.llm.request_handler - INFO - [inv:fa6225] ✓ Done 5.14s
+2025-12-16 12:14:50,206 - src.llm.client - INFO - [inv:fa6225] ✅ HTTP 200 in 5.14s
+2025-12-16 12:14:50,206 - src.llm.client - INFO - [inv:fa6225] 📡 Stream active (200)
+2025-12-16 12:14:50,206 - src.llm.client - INFO - [inv:fa6225] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:14:52,244 - src.llm.client - INFO - [inv:fa6225] 📊 2.0s: 505c @250c/s (95ch, ~126t @63t/s)
+2025-12-16 12:14:54,230 - src.llm.client - INFO - [inv:fa6225] 📊 4.0s: 981c @244c/s (193ch, ~245t @61t/s)
+2025-12-16 12:14:56,235 - src.llm.client - INFO - [inv:fa6225] 📊 6.0s: 1592c @264c/s (306ch, ~398t @66t/s)
+2025-12-16 12:14:58,241 - src.llm.client - INFO - [inv:fa6225] 📊 8.0s: 2124c @264c/s (404ch, ~531t @66t/s)
+2025-12-16 12:15:00,244 - src.llm.client - INFO - [inv:fa6225] 📊 10.0s: 2695c @268c/s (521ch, ~674t @67t/s)
+2025-12-16 12:15:02,257 - src.llm.client - INFO - [inv:fa6225] 📊 12.0s: 3292c @273c/s (637ch, ~823t @68t/s)
+2025-12-16 12:15:04,269 - src.llm.client - INFO - [inv:fa6225] 📊 14.1s: 3855c @274c/s (745ch, ~964t @69t/s)
+2025-12-16 12:15:06,274 - src.llm.client - INFO - [inv:fa6225] 📊 16.1s: 4437c @276c/s (866ch, ~1109t @69t/s)
+2025-12-16 12:15:08,276 - src.llm.client - INFO - [inv:fa6225] 📊 18.1s: 5096c @282c/s (980ch, ~1274t @71t/s)
+2025-12-16 12:15:10,284 - src.llm.client - INFO - [inv:fa6225] 📊 20.1s: 5617c @280c/s (1106ch, ~1404t @70t/s)
+2025-12-16 12:15:11,009 - src.llm.client - INFO - [inv:fa6225] ✓ Done 25.95s: 5775c (~843w @223c/s)
+2025-12-16 12:15:11,011 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:15:11,012 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-16 12:15:11,012 - generate_secondary - INFO -     - Length: 5772 chars, 843 words
+2025-12-16 12:15:11,012 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 12:15:11,012 - generate_secondary - INFO -     - Research questions: 3
+2025-12-16 12:15:11,012 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 12:15:11,012 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_01_foundations_of_active_inference/session_01/investigation.md
+2025-12-16 12:15:11,013 - generate_secondary - INFO - Generating open_questions for session 1: Introduction to Active Inference...
+2025-12-16 12:15:11,013 - src.llm.client - INFO - [opq:1f1266] 🚀 opq | m=gemma3:4b | p=25249c | t=150s
+2025-12-16 12:15:11,013 - src.llm.client - INFO - [opq:1f1266] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:15:11,013 - src.llm.client - INFO - [opq:1f1266] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:15:11,015 - src.llm.client - INFO - [opq:1f1266] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=29535 bytes, prompt=25249 chars
+2025-12-16 12:15:11,015 - src.llm.client - INFO - [opq:1f1266] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:15:16,095 - src.llm.request_handler - INFO - [opq:1f1266] ✓ Done 5.08s
+2025-12-16 12:15:16,097 - src.llm.client - INFO - [opq:1f1266] ✅ HTTP 200 in 5.08s
+2025-12-16 12:15:16,097 - src.llm.client - INFO - [opq:1f1266] 📡 Stream active (200)
+2025-12-16 12:15:16,097 - src.llm.client - INFO - [opq:1f1266] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:15:18,112 - src.llm.client - INFO - [opq:1f1266] 📊 2.0s: 593c @295c/s (105ch, ~148t @74t/s)
+2025-12-16 12:15:20,119 - src.llm.client - INFO - [opq:1f1266] 📊 4.0s: 1369c @340c/s (217ch, ~342t @85t/s)
+2025-12-16 12:15:22,141 - src.llm.client - INFO - [opq:1f1266] 📊 6.0s: 2112c @350c/s (331ch, ~528t @87t/s)
+2025-12-16 12:15:24,152 - src.llm.client - INFO - [opq:1f1266] 📊 8.1s: 2830c @351c/s (446ch, ~708t @88t/s)
+2025-12-16 12:15:24,550 - src.llm.client - INFO - [opq:1f1266] ✓ Done 13.54s: 2910c (~377w @215c/s)
+2025-12-16 12:15:24,551 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 12:15:24,552 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-16 12:15:24,552 - generate_secondary - INFO -     - Length: 2896 chars, 375 words
+2025-12-16 12:15:24,552 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 12:15:24,553 - generate_secondary - INFO -     - Open questions: 3
+2025-12-16 12:15:24,553 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 12:15:24,554 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_01_foundations_of_active_inference/session_01/open_questions.md
+2025-12-16 12:15:24,555 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-16 12:15:24,555 - generate_secondary - INFO - 
+============================================================
+2025-12-16 12:15:24,555 - generate_secondary - INFO - [2/3] Module 2: Active Inference in Generative AI (1 sessions)
+2025-12-16 12:15:24,555 - generate_secondary - INFO - ============================================================
+2025-12-16 12:15:24,555 - generate_secondary - INFO - 
+  Session 2/3: Active Inference and Large Language Models
+2025-12-16 12:15:24,560 - generate_secondary - INFO - Generating application for session 2: Active Inference and Large Language Models...
+2025-12-16 12:15:24,560 - src.llm.client - INFO - [app:40df57] 🚀 app | m=gemma3:4b | p=28780c | t=150s
+2025-12-16 12:15:24,560 - src.llm.client - INFO - [app:40df57] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:15:24,560 - src.llm.client - INFO - [app:40df57] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:15:24,566 - src.llm.client - INFO - [app:40df57] Sending request to Ollama: model=gemma3:4b, operation=application, payload=30795 bytes, prompt=28780 chars
+2025-12-16 12:15:24,566 - src.llm.client - INFO - [app:40df57] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:15:29,679 - src.llm.request_handler - INFO - [app:40df57] ✓ Done 5.11s
+2025-12-16 12:15:29,681 - src.llm.client - INFO - [app:40df57] ✅ HTTP 200 in 5.11s
+2025-12-16 12:15:29,681 - src.llm.client - INFO - [app:40df57] 📡 Stream active (200)
+2025-12-16 12:15:29,681 - src.llm.client - INFO - [app:40df57] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:15:31,682 - src.llm.client - INFO - [app:40df57] 📊 2.0s: 688c @344c/s (106ch, ~172t @86t/s)
+2025-12-16 12:15:33,699 - src.llm.client - INFO - [app:40df57] 📊 4.0s: 1361c @339c/s (222ch, ~340t @85t/s)
+2025-12-16 12:15:35,712 - src.llm.client - INFO - [app:40df57] 📊 6.0s: 1909c @317c/s (321ch, ~477t @79t/s)
+2025-12-16 12:15:37,718 - src.llm.client - INFO - [app:40df57] 📊 8.0s: 2565c @319c/s (429ch, ~641t @80t/s)
+2025-12-16 12:15:39,747 - src.llm.client - INFO - [app:40df57] 📊 10.0s: 3052c @304c/s (524ch, ~763t @76t/s)
+2025-12-16 12:15:41,737 - src.llm.client - INFO - [app:40df57] 📊 12.1s: 3797c @315c/s (645ch, ~949t @79t/s)
+2025-12-16 12:15:43,746 - src.llm.client - INFO - [app:40df57] 📊 14.1s: 4642c @330c/s (770ch, ~1160t @83t/s)
+2025-12-16 12:15:45,749 - src.llm.client - INFO - [app:40df57] 📊 16.1s: 5277c @328c/s (881ch, ~1319t @82t/s)
+2025-12-16 12:15:47,494 - src.llm.client - INFO - [app:40df57] ✓ Done 22.93s: 5803c (~788w @253c/s)
+2025-12-16 12:15:47,497 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:15:47,498 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-16 12:15:47,498 - generate_secondary - INFO -     - Length: 5803 chars, 788 words
+2025-12-16 12:15:47,498 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 12:15:47,498 - generate_secondary - INFO -     - Applications: 3
+2025-12-16 12:15:47,498 - generate_secondary - INFO -     - Avg words per application: 261
+2025-12-16 12:15:47,498 - generate_secondary - WARNING - [WARNING] Application 1 has 249 words (exceeds 200 by 49 words - consider condensing) ⚠️
+2025-12-16 12:15:47,498 - generate_secondary - WARNING - [WARNING] Application 2 has 277 words (exceeds 200 by 77 words - consider condensing) ⚠️
+2025-12-16 12:15:47,498 - generate_secondary - WARNING - [WARNING] Application 3 has 256 words (exceeds 200 by 56 words - consider condensing) ⚠️
+2025-12-16 12:15:47,499 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_02_active_inference_in_generative_ai/session_02/application.md
+2025-12-16 12:15:47,500 - generate_secondary - INFO - Generating extension for session 2: Active Inference and Large Language Models...
+2025-12-16 12:15:47,500 - src.llm.client - INFO - [ext:d86fd5] 🚀 ext | m=gemma3:4b | p=26392c | t=120s
+2025-12-16 12:15:47,501 - src.llm.client - INFO - [ext:d86fd5] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:15:47,501 - src.llm.client - INFO - [ext:d86fd5] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:15:47,513 - src.llm.client - INFO - [ext:d86fd5] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=31383 bytes, prompt=26392 chars
+2025-12-16 12:15:47,513 - src.llm.client - INFO - [ext:d86fd5] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:15:52,521 - src.llm.request_handler - INFO - [ext:d86fd5] ✓ Done 5.01s
+2025-12-16 12:15:52,521 - src.llm.client - INFO - [ext:d86fd5] ✅ HTTP 200 in 5.01s
+2025-12-16 12:15:52,522 - src.llm.client - INFO - [ext:d86fd5] 📡 Stream active (200)
+2025-12-16 12:15:52,522 - src.llm.client - INFO - [ext:d86fd5] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:15:54,526 - src.llm.client - INFO - [ext:d86fd5] 📊 2.0s: 557c @278c/s (108ch, ~139t @70t/s)
+2025-12-16 12:15:56,536 - src.llm.client - INFO - [ext:d86fd5] 📊 4.0s: 1286c @320c/s (219ch, ~322t @80t/s)
+2025-12-16 12:15:58,537 - src.llm.client - INFO - [ext:d86fd5] 📊 6.0s: 1976c @329c/s (332ch, ~494t @82t/s)
+2025-12-16 12:16:00,548 - src.llm.client - INFO - [ext:d86fd5] 📊 8.0s: 2719c @339c/s (453ch, ~680t @85t/s)
+2025-12-16 12:16:02,559 - src.llm.client - INFO - [ext:d86fd5] 📊 10.0s: 3535c @352c/s (575ch, ~884t @88t/s)
+2025-12-16 12:16:02,809 - src.llm.client - INFO - [ext:d86fd5] ✓ Done 15.31s: 3536c (~477w @231c/s)
+2025-12-16 12:16:02,811 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 12:16:02,811 - generate_secondary - INFO - [NEEDS REVIEW] Extension generated ⚠️
+2025-12-16 12:16:02,811 - generate_secondary - INFO -     - Length: 3523 chars, 475 words
+2025-12-16 12:16:02,811 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 12:16:02,811 - generate_secondary - INFO -     - Topics: 3
+2025-12-16 12:16:02,811 - generate_secondary - INFO -     - Avg words per topic: 153
+2025-12-16 12:16:02,811 - generate_secondary - WARNING - [WARNING] Topic 1 has 154 words (exceeds 150 by 4 words - consider condensing) ⚠️
+2025-12-16 12:16:02,811 - generate_secondary - WARNING - [WARNING] Topic 2 has 151 words (exceeds 150 by 1 words - consider condensing) ⚠️
+2025-12-16 12:16:02,811 - generate_secondary - WARNING - [WARNING] Topic 3 has 154 words (exceeds 150 by 4 words - consider condensing) ⚠️
+2025-12-16 12:16:02,812 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_02_active_inference_in_generative_ai/session_02/extension.md
+2025-12-16 12:16:02,812 - generate_secondary - INFO - Generating visualization for session 2: Active Inference and Large Language Models...
+2025-12-16 12:16:02,812 - src.llm.client - INFO - [viz:e22262] 🚀 viz | m=gemma3:4b | p=25352c | t=120s
+2025-12-16 12:16:02,812 - src.llm.client - INFO - [viz:e22262] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:16:02,812 - src.llm.client - INFO - [viz:e22262] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:16:02,814 - src.llm.client - INFO - [viz:e22262] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=29665 bytes, prompt=25352 chars
+2025-12-16 12:16:02,814 - src.llm.client - INFO - [viz:e22262] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:16:07,807 - src.llm.request_handler - INFO - [viz:e22262] ✓ Done 4.99s
+2025-12-16 12:16:07,807 - src.llm.client - INFO - [viz:e22262] ✅ HTTP 200 in 4.99s
+2025-12-16 12:16:07,807 - src.llm.client - INFO - [viz:e22262] 📡 Stream active (200)
+2025-12-16 12:16:07,807 - src.llm.client - INFO - [viz:e22262] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:16:09,808 - src.llm.client - INFO - [viz:e22262] 📊 2.0s: 445c @222c/s (111ch, ~111t @56t/s)
+2025-12-16 12:16:11,822 - src.llm.client - INFO - [viz:e22262] 📊 4.0s: 882c @220c/s (219ch, ~220t @55t/s)
+2025-12-16 12:16:13,831 - src.llm.client - INFO - [viz:e22262] 📊 6.0s: 1416c @235c/s (330ch, ~354t @59t/s)
+2025-12-16 12:16:14,196 - src.llm.client - INFO - [viz:e22262] ✓ Done 11.38s: 1450c (~203w @127c/s)
+2025-12-16 12:16:14,197 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 12:16:14,198 - generate_secondary - INFO - [NEEDS REVIEW] Diagram generated ⚠️
+2025-12-16 12:16:14,198 - generate_secondary - INFO -     - Length: 396 chars (cleaned: 396 chars)
+2025-12-16 12:16:14,198 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 12:16:14,198 - generate_secondary - INFO - [CRITICAL] Elements: 22 total (nodes: 6, connections: 16) 🔴
+2025-12-16 12:16:14,198 - generate_secondary - WARNING -     - Mermaid syntax warnings: 1 issues fixed (code fences, style commands)
+2025-12-16 12:16:14,198 - generate_secondary - WARNING -     - Critical issues: 2 structural problems requiring attention
+2025-12-16 12:16:14,198 - generate_secondary - WARNING - [WARNING] Only 7 nodes found (require at least 10, need 3 more - add more nodes to the diagram) ⚠️
+2025-12-16 12:16:14,198 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-16 12:16:14,198 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-16 12:16:14,199 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_02_active_inference_in_generative_ai/session_02/visualization.mmd
+2025-12-16 12:16:14,199 - generate_secondary - INFO - Generating integration for session 2: Active Inference and Large Language Models...
+2025-12-16 12:16:14,199 - src.llm.client - INFO - [int:6f4235] 🚀 int | m=gemma3:4b | p=26701c | t=150s
+2025-12-16 12:16:14,200 - src.llm.client - INFO - [int:6f4235] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:16:14,200 - src.llm.client - INFO - [int:6f4235] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:16:14,203 - src.llm.client - INFO - [int:6f4235] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=32031 bytes, prompt=26701 chars
+2025-12-16 12:16:14,203 - src.llm.client - INFO - [int:6f4235] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:16:19,576 - src.llm.request_handler - INFO - [int:6f4235] ✓ Done 5.37s
+2025-12-16 12:16:19,578 - src.llm.client - INFO - [int:6f4235] ✅ HTTP 500 in 5.38s
+2025-12-16 12:16:19,579 - src.llm.client - ERROR - [int:6f4235] HTTP error after 5.38s: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate
+2025-12-16 12:16:19,579 - generate_secondary - ERROR -   ✗ Module 2 Session 2 - integration generation failed (Request ID: int:6f4235)
+2025-12-16 12:16:19,580 - generate_secondary - ERROR -      Error: [int:6f4235] HTTP error after 5.38s: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate
+2025-12-16 12:16:19,580 - generate_secondary - ERROR -      Type: LLM generation error
+2025-12-16 12:16:19,580 - generate_secondary - ERROR -   ✗ LLM Error for session 2: Active Inference and Large Language Models
+2025-12-16 12:16:19,580 - generate_secondary - ERROR -      Module: Active Inference in Generative AI (ID: 2)
+2025-12-16 12:16:19,580 - generate_secondary - ERROR -      Request ID: int:6f4235 (filter logs: grep '[int:6f4235]' output/logs/*.log)
+2025-12-16 12:16:19,580 - generate_secondary - ERROR -      Error: [int:6f4235] HTTP error after 5.38s: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate
+2025-12-16 12:16:19,583 - generate_secondary - INFO - 
+============================================================
+2025-12-16 12:16:19,583 - generate_secondary - INFO - [3/3] Module 3: Advanced Applications & Future Directions (1 sessions)
+2025-12-16 12:16:19,583 - generate_secondary - INFO - ============================================================
+2025-12-16 12:16:19,583 - generate_secondary - INFO - 
+  Session 3/3: Multi-Agent Coordination & Embodied AI
+2025-12-16 12:16:19,589 - generate_secondary - INFO - Generating application for session 3: Multi-Agent Coordination & Embodied AI...
+2025-12-16 12:16:19,592 - src.llm.client - INFO - [app:8014ba] 🚀 app | m=gemma3:4b | p=31586c | t=150s
+2025-12-16 12:16:19,597 - src.llm.client - INFO - [app:8014ba] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:16:19,597 - src.llm.client - INFO - [app:8014ba] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:16:19,628 - src.llm.client - INFO - [app:8014ba] Sending request to Ollama: model=gemma3:4b, operation=application, payload=33703 bytes, prompt=31586 chars
+2025-12-16 12:16:19,628 - src.llm.client - INFO - [app:8014ba] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:16:20,033 - src.llm.health - INFO - [ext:c61aad] Health check: Model gemma3:4b not loaded after 150.8s (may be loading or unresponsive)
+2025-12-16 12:16:20,033 - src.llm.request_handler - WARNING - [ext:c61aad] ⚠️ Model not loaded after 150.8s (may be slow)
+2025-12-16 12:16:20,569 - src.llm.health - INFO - [int:9208f8] Health check: Model gemma3:4b not loaded after 120.4s (may be loading or unresponsive)
+2025-12-16 12:16:20,569 - src.llm.request_handler - WARNING - [int:9208f8] ⚠️ Model not loaded after 120.4s (may be slow)
+2025-12-16 12:16:27,122 - src.llm.request_handler - INFO - [app:8014ba] ✓ Done 7.49s
+2025-12-16 12:16:27,122 - src.llm.client - INFO - [app:8014ba] ✅ HTTP 200 in 7.49s
+2025-12-16 12:16:27,122 - src.llm.client - INFO - [app:8014ba] 📡 Stream active (200)
+2025-12-16 12:16:27,123 - src.llm.client - INFO - [app:8014ba] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:16:29,132 - src.llm.client - INFO - [app:8014ba] 📊 2.0s: 671c @334c/s (119ch, ~168t @84t/s)
+2025-12-16 12:16:31,141 - src.llm.client - INFO - [app:8014ba] 📊 4.0s: 1344c @334c/s (236ch, ~336t @84t/s)
+2025-12-16 12:16:33,147 - src.llm.client - INFO - [app:8014ba] 📊 6.0s: 2122c @352c/s (356ch, ~530t @88t/s)
+2025-12-16 12:16:35,153 - src.llm.client - INFO - [app:8014ba] 📊 8.0s: 2829c @352c/s (476ch, ~707t @88t/s)
+2025-12-16 12:16:37,158 - src.llm.client - INFO - [app:8014ba] 📊 10.0s: 3585c @357c/s (598ch, ~896t @89t/s)
+2025-12-16 12:16:39,167 - src.llm.client - INFO - [app:8014ba] 📊 12.0s: 4381c @364c/s (725ch, ~1095t @91t/s)
+2025-12-16 12:16:41,171 - src.llm.client - INFO - [app:8014ba] 📊 14.0s: 5071c @361c/s (838ch, ~1268t @90t/s)
+2025-12-16 12:16:43,180 - src.llm.client - INFO - [app:8014ba] 📊 16.1s: 5829c @363c/s (961ch, ~1457t @91t/s)
+2025-12-16 12:16:43,689 - src.llm.client - INFO - [app:8014ba] ✓ Done 24.10s: 5938c (~818w @246c/s)
+2025-12-16 12:16:43,692 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:16:43,692 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-16 12:16:43,693 - generate_secondary - INFO -     - Length: 5938 chars, 818 words
+2025-12-16 12:16:43,693 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 12:16:43,693 - generate_secondary - INFO -     - Applications: 3
+2025-12-16 12:16:43,693 - generate_secondary - INFO -     - Avg words per application: 271
+2025-12-16 12:16:43,693 - generate_secondary - WARNING - [WARNING] Application 1 has 255 words (exceeds 200 by 55 words - consider condensing) ⚠️
+2025-12-16 12:16:43,693 - generate_secondary - WARNING - [WARNING] Application 2 has 290 words (exceeds 200 by 90 words - consider condensing) ⚠️
+2025-12-16 12:16:43,693 - generate_secondary - WARNING - [WARNING] Application 3 has 267 words (exceeds 200 by 67 words - consider condensing) ⚠️
+2025-12-16 12:16:43,693 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_03_advanced_applications_future_directions/session_03/application.md
+2025-12-16 12:16:43,693 - generate_secondary - INFO - Generating extension for session 3: Multi-Agent Coordination & Embodied AI...
+2025-12-16 12:16:43,693 - src.llm.client - INFO - [ext:562b5e] 🚀 ext | m=gemma3:4b | p=29198c | t=120s
+2025-12-16 12:16:43,693 - src.llm.client - INFO - [ext:562b5e] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:16:43,693 - src.llm.client - INFO - [ext:562b5e] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:16:43,695 - src.llm.client - INFO - [ext:562b5e] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=34291 bytes, prompt=29198 chars
+2025-12-16 12:16:43,695 - src.llm.client - INFO - [ext:562b5e] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:16:48,880 - src.llm.request_handler - INFO - [ext:562b5e] ✓ Done 5.18s
+2025-12-16 12:16:48,880 - src.llm.client - INFO - [ext:562b5e] ✅ HTTP 200 in 5.19s
+2025-12-16 12:16:48,880 - src.llm.client - INFO - [ext:562b5e] 📡 Stream active (200)
+2025-12-16 12:16:48,880 - src.llm.client - INFO - [ext:562b5e] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:16:50,889 - src.llm.client - INFO - [ext:562b5e] 📊 2.0s: 710c @353c/s (120ch, ~178t @88t/s)
+2025-12-16 12:16:52,902 - src.llm.client - INFO - [ext:562b5e] 📊 4.0s: 1293c @322c/s (214ch, ~323t @80t/s)
+2025-12-16 12:16:54,906 - src.llm.client - INFO - [ext:562b5e] 📊 6.0s: 1994c @331c/s (327ch, ~498t @83t/s)
+2025-12-16 12:16:56,919 - src.llm.client - INFO - [ext:562b5e] 📊 8.0s: 2654c @330c/s (442ch, ~664t @83t/s)
+2025-12-16 12:16:58,750 - src.llm.client - INFO - [ext:562b5e] ✓ Done 15.06s: 3155c (~414w @210c/s)
+2025-12-16 12:16:58,752 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:16:58,752 - generate_secondary - INFO - [COMPLIANT] Extension generated ✓
+2025-12-16 12:16:58,752 - generate_secondary - INFO -     - Length: 3155 chars, 414 words
+2025-12-16 12:16:58,752 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 12:16:58,752 - generate_secondary - INFO -     - Topics: 3
+2025-12-16 12:16:58,752 - generate_secondary - INFO -     - Avg words per topic: 128
+2025-12-16 12:16:58,752 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_03_advanced_applications_future_directions/session_03/extension.md
+2025-12-16 12:16:58,753 - generate_secondary - INFO - Generating visualization for session 3: Multi-Agent Coordination & Embodied AI...
+2025-12-16 12:16:58,753 - src.llm.client - INFO - [viz:251c74] 🚀 viz | m=gemma3:4b | p=28158c | t=120s
+2025-12-16 12:16:58,753 - src.llm.client - INFO - [viz:251c74] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:16:58,753 - src.llm.client - INFO - [viz:251c74] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:16:58,755 - src.llm.client - INFO - [viz:251c74] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=32573 bytes, prompt=28158 chars
+2025-12-16 12:16:58,755 - src.llm.client - INFO - [viz:251c74] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:17:03,846 - src.llm.request_handler - INFO - [viz:251c74] ✓ Done 5.09s
+2025-12-16 12:17:03,846 - src.llm.client - INFO - [viz:251c74] ✅ HTTP 200 in 5.09s
+2025-12-16 12:17:03,846 - src.llm.client - INFO - [viz:251c74] 📡 Stream active (200)
+2025-12-16 12:17:03,847 - src.llm.client - INFO - [viz:251c74] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:17:05,874 - src.llm.client - INFO - [viz:251c74] 📊 2.0s: 467c @231c/s (105ch, ~117t @58t/s)
+2025-12-16 12:17:07,870 - src.llm.client - INFO - [viz:251c74] 📊 4.0s: 829c @206c/s (209ch, ~207t @52t/s)
+2025-12-16 12:17:09,876 - src.llm.client - INFO - [viz:251c74] 📊 6.0s: 1206c @200c/s (326ch, ~302t @50t/s)
+2025-12-16 12:17:11,883 - src.llm.client - INFO - [viz:251c74] 📊 8.0s: 1593c @198c/s (443ch, ~398t @50t/s)
+2025-12-16 12:17:13,892 - src.llm.client - INFO - [viz:251c74] 📊 10.0s: 1960c @195c/s (558ch, ~490t @49t/s)
+2025-12-16 12:17:15,894 - src.llm.client - INFO - [viz:251c74] 📊 12.0s: 2353c @195c/s (671ch, ~588t @49t/s)
+2025-12-16 12:17:17,903 - src.llm.client - INFO - [viz:251c74] 📊 14.1s: 2728c @194c/s (781ch, ~682t @49t/s)
+2025-12-16 12:17:19,908 - src.llm.client - INFO - [viz:251c74] 📊 16.1s: 3136c @195c/s (897ch, ~784t @49t/s)
+2025-12-16 12:17:21,913 - src.llm.client - INFO - [viz:251c74] 📊 18.1s: 3492c @193c/s (1005ch, ~873t @48t/s)
+2025-12-16 12:17:24,127 - src.llm.client - INFO - [viz:251c74] 📊 20.3s: 3980c @196c/s (1111ch, ~995t @49t/s)
+2025-12-16 12:17:24,128 - src.llm.client - INFO - [viz:251c74] ✓ Done 25.38s: 3980c (~586w @157c/s)
+2025-12-16 12:17:24,129 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:17:24,129 - generate_secondary - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-16 12:17:24,129 - generate_secondary - INFO -     - Length: 1041 chars (cleaned: 1041 chars)
+2025-12-16 12:17:24,129 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 12:17:24,129 - generate_secondary - INFO - [OK] Elements: 67 total (nodes: 21, connections: 46) ✓
+2025-12-16 12:17:24,130 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_03_advanced_applications_future_directions/session_03/visualization.mmd
+2025-12-16 12:17:24,130 - generate_secondary - INFO - Generating integration for session 3: Multi-Agent Coordination & Embodied AI...
+2025-12-16 12:17:24,130 - src.llm.client - INFO - [int:78d799] 🚀 int | m=gemma3:4b | p=29507c | t=150s
+2025-12-16 12:17:24,130 - src.llm.client - INFO - [int:78d799] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:17:24,130 - src.llm.client - INFO - [int:78d799] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:17:24,131 - src.llm.client - INFO - [int:78d799] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=34939 bytes, prompt=29507 chars
+2025-12-16 12:17:24,131 - src.llm.client - INFO - [int:78d799] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:17:29,378 - src.llm.request_handler - INFO - [int:78d799] ✓ Done 5.25s
+2025-12-16 12:17:29,466 - src.llm.client - INFO - [int:78d799] ✅ HTTP 200 in 5.33s
+2025-12-16 12:17:29,466 - src.llm.client - INFO - [int:78d799] 📡 Stream active (200)
+2025-12-16 12:17:29,467 - src.llm.client - INFO - [int:78d799] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:17:31,483 - src.llm.client - INFO - [int:78d799] 📊 2.0s: 664c @329c/s (110ch, ~166t @82t/s)
+2025-12-16 12:17:33,490 - src.llm.client - INFO - [int:78d799] 📊 4.0s: 1390c @345c/s (229ch, ~348t @86t/s)
+2025-12-16 12:17:35,490 - src.llm.client - INFO - [int:78d799] 📊 6.0s: 2117c @351c/s (344ch, ~529t @88t/s)
+2025-12-16 12:17:37,495 - src.llm.client - INFO - [int:78d799] 📊 8.0s: 2852c @355c/s (464ch, ~713t @89t/s)
+2025-12-16 12:17:39,503 - src.llm.client - INFO - [int:78d799] 📊 10.0s: 3478c @347c/s (586ch, ~870t @87t/s)
+2025-12-16 12:17:40,591 - src.llm.client - INFO - [int:78d799] ✓ Done 16.46s: 3683c (~493w @224c/s)
+2025-12-16 12:17:40,593 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 12:17:40,593 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-16 12:17:40,593 - generate_secondary - INFO -     - Length: 3669 chars, 491 words
+2025-12-16 12:17:40,593 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-16 12:17:40,593 - generate_secondary - INFO -     - Connections: 28
+2025-12-16 12:17:40,593 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-16 12:17:40,594 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_03_advanced_applications_future_directions/session_03/integration.md
+2025-12-16 12:17:40,594 - generate_secondary - INFO - Generating investigation for session 3: Multi-Agent Coordination & Embodied AI...
+2025-12-16 12:17:40,594 - src.llm.client - INFO - [inv:af03c3] 🚀 inv | m=gemma3:4b | p=28420c | t=150s
+2025-12-16 12:17:40,594 - src.llm.client - INFO - [inv:af03c3] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:17:40,594 - src.llm.client - INFO - [inv:af03c3] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:17:40,595 - src.llm.client - INFO - [inv:af03c3] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=32795 bytes, prompt=28420 chars
+2025-12-16 12:17:40,595 - src.llm.client - INFO - [inv:af03c3] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:17:45,624 - src.llm.request_handler - INFO - [inv:af03c3] ✓ Done 5.03s
+2025-12-16 12:17:45,625 - src.llm.client - INFO - [inv:af03c3] ✅ HTTP 200 in 5.03s
+2025-12-16 12:17:45,625 - src.llm.client - INFO - [inv:af03c3] 📡 Stream active (200)
+2025-12-16 12:17:45,625 - src.llm.client - INFO - [inv:af03c3] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:17:47,632 - src.llm.client - INFO - [inv:af03c3] 📊 2.0s: 631c @314c/s (124ch, ~158t @79t/s)
+2025-12-16 12:17:49,643 - src.llm.client - INFO - [inv:af03c3] 📊 4.0s: 1303c @324c/s (246ch, ~326t @81t/s)
+2025-12-16 12:17:51,658 - src.llm.client - INFO - [inv:af03c3] 📊 6.0s: 1924c @319c/s (356ch, ~481t @80t/s)
+2025-12-16 12:17:53,669 - src.llm.client - INFO - [inv:af03c3] 📊 8.0s: 2598c @323c/s (477ch, ~650t @81t/s)
+2025-12-16 12:17:55,684 - src.llm.client - INFO - [inv:af03c3] 📊 10.1s: 3244c @323c/s (599ch, ~811t @81t/s)
+2025-12-16 12:17:57,691 - src.llm.client - INFO - [inv:af03c3] 📊 12.1s: 3931c @326c/s (723ch, ~983t @81t/s)
+2025-12-16 12:17:59,701 - src.llm.client - INFO - [inv:af03c3] 📊 14.1s: 4572c @325c/s (843ch, ~1143t @81t/s)
+2025-12-16 12:18:01,753 - src.llm.client - INFO - [inv:af03c3] 📊 16.1s: 5129c @318c/s (945ch, ~1282t @80t/s)
+2025-12-16 12:18:01,754 - src.llm.client - INFO - [inv:af03c3] ✓ Done 21.16s: 5129c (~735w @242c/s)
+2025-12-16 12:18:01,756 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:18:01,757 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-16 12:18:01,757 - generate_secondary - INFO -     - Length: 5127 chars, 735 words
+2025-12-16 12:18:01,758 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 12:18:01,758 - generate_secondary - INFO -     - Research questions: 3
+2025-12-16 12:18:01,758 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 12:18:01,759 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_03_advanced_applications_future_directions/session_03/investigation.md
+2025-12-16 12:18:01,759 - generate_secondary - INFO - Generating open_questions for session 3: Multi-Agent Coordination & Embodied AI...
+2025-12-16 12:18:01,760 - src.llm.client - INFO - [opq:94b3e0] 🚀 opq | m=gemma3:4b | p=28506c | t=150s
+2025-12-16 12:18:01,760 - src.llm.client - INFO - [opq:94b3e0] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:18:01,760 - src.llm.client - INFO - [opq:94b3e0] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:18:01,763 - src.llm.client - INFO - [opq:94b3e0] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=32892 bytes, prompt=28506 chars
+2025-12-16 12:18:01,763 - src.llm.client - INFO - [opq:94b3e0] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:18:06,802 - src.llm.request_handler - INFO - [opq:94b3e0] ✓ Done 5.04s
+2025-12-16 12:18:06,802 - src.llm.client - INFO - [opq:94b3e0] ✅ HTTP 200 in 5.04s
+2025-12-16 12:18:06,802 - src.llm.client - INFO - [opq:94b3e0] 📡 Stream active (200)
+2025-12-16 12:18:06,802 - src.llm.client - INFO - [opq:94b3e0] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:18:08,819 - src.llm.client - INFO - [opq:94b3e0] 📊 2.0s: 730c @362c/s (124ch, ~182t @91t/s)
+2025-12-16 12:18:10,825 - src.llm.client - INFO - [opq:94b3e0] 📊 4.0s: 1427c @355c/s (247ch, ~357t @89t/s)
+2025-12-16 12:18:12,827 - src.llm.client - INFO - [opq:94b3e0] 📊 6.0s: 2173c @361c/s (364ch, ~543t @90t/s)
+2025-12-16 12:18:13,319 - src.llm.client - INFO - [opq:94b3e0] ✓ Done 11.56s: 2289c (~289w @198c/s)
+2025-12-16 12:18:13,321 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 12:18:13,321 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-16 12:18:13,321 - generate_secondary - INFO -     - Length: 2277 chars, 287 words
+2025-12-16 12:18:13,321 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 12:18:13,321 - generate_secondary - INFO -     - Open questions: 3
+2025-12-16 12:18:13,321 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 12:18:13,322 - generate_secondary - INFO -   → Saved to: output/active_inference_ai_short/modules/module_03_advanced_applications_future_directions/session_03/open_questions.md
+2025-12-16 12:18:13,322 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-16 12:18:13,322 - generate_secondary - INFO - 
+2025-12-16 12:18:13,322 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 12:18:13,322 - generate_secondary - INFO - [ALL COMPLIANT] Secondary Materials Generation - Summary ✅
+2025-12-16 12:18:13,322 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 12:18:13,322 - generate_secondary - INFO -   Items Processed: 3
+2025-12-16 12:18:13,322 - generate_secondary - INFO -     - [COMPLIANT] Successful: 2
+2025-12-16 12:18:13,322 - generate_secondary - INFO -     - [ERROR] Failed: 1
+2025-12-16 12:18:13,322 - generate_secondary - INFO - 
+2025-12-16 12:18:13,322 - generate_secondary - INFO -   Compliance Breakdown:
+2025-12-16 12:18:13,322 - generate_secondary - INFO -     - [COMPLIANT]: 3
+2025-12-16 12:18:13,322 - generate_secondary - INFO -     - [NEEDS REVIEW]: 0
+2025-12-16 12:18:13,322 - generate_secondary - INFO -     - [CRITICAL]: 0
+2025-12-16 12:18:13,322 - generate_secondary - INFO - 
+2025-12-16 12:18:13,322 - generate_secondary - INFO -   Issue Statistics:
+2025-12-16 12:18:13,322 - generate_secondary - INFO -     - Total Issues: 0
+2025-12-16 12:18:13,322 - generate_secondary - INFO -     - Critical Errors: 0
+2025-12-16 12:18:13,322 - generate_secondary - INFO -     - Warnings: 0
+2025-12-16 12:18:13,322 - generate_secondary - INFO - 
+2025-12-16 12:18:13,322 - generate_secondary - INFO -   Recommendations:
+2025-12-16 12:18:13,322 - generate_secondary - INFO -     - All content generated successfully
+2025-12-16 12:18:13,322 - generate_secondary - INFO -     - No issues detected
+2025-12-16 12:18:13,322 - generate_secondary - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 12:18:13,322 - generate_secondary - ERROR - 
+================================================================================
+2025-12-16 12:18:13,322 - generate_secondary - ERROR - EXIT CODE: 1 (FAILURE)
+2025-12-16 12:18:13,322 - generate_secondary - ERROR - ================================================================================
+2025-12-16 12:18:13,322 - generate_secondary - ERROR - Reason: 1 session(s) failed during generation
+2025-12-16 12:18:13,322 - generate_secondary - ERROR - 
+2025-12-16 12:18:13,322 - generate_secondary - ERROR - Failed sessions details:
+2025-12-16 12:18:13,322 - generate_secondary - ERROR -   (Error details not captured - check log file for full traceback)
+2025-12-16 12:18:13,322 - generate_secondary - ERROR - 
+2025-12-16 12:18:13,322 - generate_secondary - ERROR - Troubleshooting:
+2025-12-16 12:18:13,322 - generate_secondary - ERROR -   1. Check log file for detailed error messages and request IDs
+2025-12-16 12:18:13,322 - generate_secondary - ERROR -   2. Review docs/TROUBLESHOOTING.md for common issues
+2025-12-16 12:18:13,322 - generate_secondary - ERROR -   3. For timeout errors, see timeout troubleshooting section
+2025-12-16 12:18:13,322 - generate_secondary - ERROR -   4. Use request IDs to filter logs: grep '[REQUEST_ID]' output/logs/*.log
+2025-12-16 12:18:13,322 - generate_secondary - ERROR - ================================================================================

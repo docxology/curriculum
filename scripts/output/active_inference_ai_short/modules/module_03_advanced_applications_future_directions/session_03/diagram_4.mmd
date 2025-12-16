@@ -1,0 +1,21 @@
+graph TD
+    A[Multi-Agent System Initialization] --> B{Agent Selection};
+    B -- Agent A Selected --> C[Perception & Data Gathering];
+    B -- Agent B Selected --> C;
+    C --> D{Environmental Assessment};
+    D -- Assessment Complete --> E[Decision Making (Multi-Agent Coordination)];
+    E -- Collaborative Strategy --> F[Action Execution (Embodied AI)];
+    E -- Divergent Strategies --> G[Conflict Resolution];
+    G --> E;
+    F --> H[Sensor Data Collection];
+    H --> I{Data Analysis & Interpretation};
+    I --> E;
+    E --> J[Adaptive Strategy Adjustment];
+    J --> E;
+    A --> K[Simulation Environment Setup];
+    K --> A;
+    B -- Agent C Selected --> C;
+    C --> D;
+    H --> I;
+    I --> E;
+    J --> K;
