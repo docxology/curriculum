@@ -1,0 +1,24 @@
+graph LR
+    A([Start: Wound Induction]) --> B([Inflammation Phase - Neutrophil Response])
+    B --> C([Angiogenesis & Vascular Permeability Changes])
+    C --> D([Fibroblast Proliferation & ECM Deposition])
+    D --> E({Matrix Metalloproteinase (MMP) Activity - Degradation})
+    E --> D
+    C --> F({Growth Factor Signaling - PDGF, VEGF})
+    F --> D
+    B --> G({Cell Migration & Chemotaxis})
+    G --> D
+    D --> H([Granulation Tissue Formation])
+    H --> I([Epithelialization - Keratinocyte Migration])
+    I --> J([Scar Maturation - Collagen Remodeling])
+    J --> K([Final Scar Tissue])
+    K --> L({Feedback: Persistent Inflammation → Chronic Scar})
+    L --> B
+    B --> M({Immune Cell Recruitment - Macrophages})
+    M --> B
+    E --> N({ECM Remodeling - Collagen Types})
+    N --> J
+    F --> O({Vascularization & Nutrient Supply})
+    O --> D
+    A --> P([Wound Assessment & Monitoring])
+    P --> A

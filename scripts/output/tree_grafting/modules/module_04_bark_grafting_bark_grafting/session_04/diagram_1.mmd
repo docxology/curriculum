@@ -1,0 +1,19 @@
+graph TD
+    A([Start: Bark Collection]) --> B{Assess Bark Quality?};
+    B -- Yes --> C[Select Optimal Bark Sections];
+    B -- No --> D[Re-evaluate Bark];
+    D --> B;
+    C --> E[Prepare Bark - Cleaning & Shaping];
+    E --> F{Apply Preservative?};
+    F -- Yes --> G[Treat with Preservative (e.g., Wax)];
+    F -- No --> G;
+    G --> H[Store Bark Properly (Temperature & Humidity)];
+    H --> I{Monitor for Decay?};
+    I -- Yes --> J[Dispose of Decayed Bark];
+    I -- No --> K[Continue Grafting Process];
+    K --> L{Repeat Bark Collection?};
+    L -- Yes --> A;
+    L -- No --> M([End: Grafting Complete]);
+    B --> N{Bark Size Appropriate?};
+    N -- Yes --> C;
+    N -- No --> D;

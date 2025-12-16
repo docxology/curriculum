@@ -1,0 +1,20 @@
+graph TD
+    A([Start: Initial Assessment]) --> B{Assess Rootstock & Scion Compatibility?};
+    B -- Yes --> C([Prepare Graft Union: Wax/Seal]);
+    B -- No --> D[Re-evaluate Rootstock/Scion];
+    D --> B;
+    C --> E([Align Rootstock & Scion Vertically)];
+    E --> F{Is Alignment Perfect?};
+    F -- Yes --> G([Secure Graft Union with Tape/Binding]);
+    F -- No --> H([Adjust Alignment & Repeat)];
+    H --> E;
+    G --> I([Monitor Graft for 3-6 Weeks]);
+    I --> J{Successful Vascular Connection?};
+    J -- Yes --> K([Continue Regular Watering & Fertilization]);
+    J -- No --> L[Potential Graft Failure – Investigate];
+    L --> M[Check for Disease/Pest Issues];
+    M --> N[Address Root Cause – Remove/Treat];
+    N --> O[Repeat Grafting Attempt or Accept Failure];
+    O --> P([End: Graft Established or Failed]);
+    B -- No --> Q[Consult Experienced Grafting Specialist];
+    Q --> P;

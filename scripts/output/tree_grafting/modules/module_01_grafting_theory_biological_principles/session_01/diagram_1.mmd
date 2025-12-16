@@ -1,0 +1,27 @@
+graph TD
+    A[Grafting Procedure] --> B(Cambial Zone Initiation);
+    B --> C{Wound Response Assessment};
+    C -- Triggered Signaling --> D(Cambial Cell Proliferation);
+    D --> E{Cell Differentiation};
+    E -- Correct Signals --> F(Vascular Development);
+    F --> G(Callus Formation);
+    G --> H{Callus Maturation};
+    H -- Successful Maturation --> I(Integrated Vascular System);
+    H -- Failure --> J(Necrosis/Cell Death);
+    J --> K(Inflammation Response);
+    K --> L(Fibrous Tissue Formation);
+    L --> M(Scar Tissue Development);
+    M --> N(Limited Vascular Integration);
+    N --> O[Failed Graft];
+    B -- Signaling Interference --> P(Cambial Arrest);
+    P --> Q(Reduced Growth Potential);
+    C -- Negative Wound Signals --> R(Hypertrophic Response);
+    R --> S(Localized Inflammation);
+    S --> T(Impaired Callus Formation);
+    T --> U(Chronic Inflammation);
+    U --> V[Grafted Tissue Dysfunction];
+    A --> W[Environmental Factors (Light, Temperature)];
+    W --> X{Cambial Activity Modulation};
+    X --> A;
+    C --> Y{Feedback Loop - Chronic Inflammation};
+    Y --> C;

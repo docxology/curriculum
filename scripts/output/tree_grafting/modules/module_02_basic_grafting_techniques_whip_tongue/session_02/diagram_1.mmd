@@ -1,0 +1,26 @@
+graph TD
+    A([Start: Initial Assessment]) --> B{Assess Grafting Site}
+    B -- Good Condition --> C[Prepare Graft Union]
+    B -- Poor Condition --> D[Correct Issues/Reject]
+    D --> A
+    C --> E[Select Rootstock & Scion]
+    E --> F{Compatibility Check?}
+    F -- Yes --> G[Make Grafting Cut(s)]
+    F -- No --> H[Re-evaluate Rootstock/Scion]
+    H --> E
+    G --> I[Bind Grafted Union]
+    I --> J{Secure Binding?};
+    J -- Yes --> K[Apply Wound Dressing]
+    J -- No --> L[Re-secure Binding]
+    L --> I
+    K --> M[Monitor Graft Progress]
+    M --> N{Successful Union?}
+    N -- Yes --> O[Continue Regular Care]
+    N -- No --> P[Investigate & Correct - e.g., Moisture, Infection]
+    P --> M
+    O --> Q([End: Graft Successfully])
+    Q --> R{Feedback: Record Observations}
+    R --> S([Data Logging])
+    S --> T([Review for Future Success])
+    T --> U([Process Re-Evaluation])
+    U --> A

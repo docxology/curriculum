@@ -1,0 +1,23 @@
+graph LR
+    A([Start: Bark Grafting Assessment])
+    B(...: Rootstock Selection)
+    C(...: Scion Selection)
+    D(...) : Preparation of Rootstock & Scion
+    E([Rootstock Preparation])
+    F([Scion Preparation])
+    G([Initial Grafting])
+    H([Wrapping & Securing Grafted Area])
+    I([Bandaging & Support])
+    J([Monitoring & Watering])
+    K([Feedback Loop: Check for Vascular Contact])
+    L([Vascular Contact Established?])
+    M({Yes}) --> N([Maintain Watering Schedule])
+    M({No}) --> O([Re-grafting Attempt - Adjust Angle/Cut])
+    N --> P([Ongoing Monitoring - Signs of Success/Failure])
+    P -- Feedback --> Q([Adjust Care Protocol - Shade, Protection])
+    Q --> P
+    O --> R([Rootstock Rejection - Attempt Different Rootstock])
+    R --> S([Scion Rejection - Assess Scion Health])
+    S --> T([Graft Failure - Investigation & Documentation])
+    T --> A
+    A --> End([End: Graft Successful or Failure Identified])

@@ -1,0 +1,17 @@
+graph TD
+    A([Start: Tissue Preparation]) --> B{Assess Graft Site};
+    B -- Negative --> C([Stop: Unsuitable Site]);
+    B -- Positive --> D{Select T-Bud Insertion Point};
+    D -- Precise --> E([Prepare Insertion Tool: Scalpel, Forceps]);
+    E --> F{Pre-Conditioning: Gentle Tissue Expansion};
+    F -- Successful --> G([Insert T-Bud with Gentle Pressure]);
+    G --> H{Monitor Blood Supply & Graft Response};
+    H -- Good --> I([Secure T-Bud with Sutures]);
+    I --> J{Post-Operative Care & Monitoring};
+    J --> K([End: Successful T-Bud Insertion]);
+    H -- Failure --> L([Re-Evaluate Site & Repeat Prep)];
+    L --> B;
+    I --> M{Potential Complications: Infection, Hematoma};
+    M --> N([Implement Preventative Measures]);
+    N --> J;
+    B -- Poor --> C;

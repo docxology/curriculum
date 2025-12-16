@@ -1,0 +1,29 @@
+graph LR
+    subgraph Cleft & Crust Grafting - Binding Methods
+        A([Start: Wound Assessment & Preparation])
+        B([Step 1: Tissue Preparation - Debridement])
+        C([Step 2: Graft Selection - Cleft vs. Crust])
+        D({Decision: Wound Characteristics?})
+        E([Step 3A: Cleft Grafting Technique])
+        F([Step 3B: Crust Grafting Technique])
+        G({Decision: Graft Suitability?})
+        H([Step 4: Graft Placement & Fixation - Sutures/Adhesives])
+        I([Step 5: Post-Operative Care & Monitoring])
+        J({Feedback: Infection/Granulation?})
+        K([Step 6: Addressing Complications - Revision/Debridement])
+        L([End: Wound Closure & Healing])
+    end
+
+    A --> B
+    B --> C
+    C --> D
+    D -- Yes --> E
+    D -- No --> F
+    E --> H
+    F --> H
+    H --> I
+    I --> J
+    J -- Yes --> K
+    J -- No --> L
+    K --> L
+    L --> End
