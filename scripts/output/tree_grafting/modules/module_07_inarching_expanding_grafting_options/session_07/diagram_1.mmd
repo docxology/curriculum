@@ -1,0 +1,23 @@
+graph TD
+    A([Start: Rootstock Selection]) --> B{Assess Grafting Goal};
+    B --> C{Desired Tree Traits?};
+    C -- "Yes" --> D{Select Rootstock based on Traits};
+    C -- "No" --> E{Consider Environmental Factors};
+    E --> F{Soil Type & Drainage};
+    F --> G{Rootstock Compatibility};
+    G --> H{Evaluate Disease Resistance};
+    H --> I{Assess Growth Rate};
+    I --> J{Select Rootstock - Initial Choice};
+    J --> K{Test Rootstock - Field Trial};
+    K -- Success --> L{Confirm Rootstock};
+    K -- Failure --> M{Re-evaluate Criteria};
+    M --> C;
+    L --> N{Graft to Scion};
+    N --> O{Monitor Tree Growth & Health};
+    O -- "Problems" --> P{Adjust Rootstock (if possible)};
+    P --> L;
+    O -- "No Problems" --> Q{Maintain Rootstock};
+    Q --> R([End: Stable Grafted Tree]);
+    B -- "Need Additional Support?" --> S{Investigate Nutrient Deficiency};
+    S --> T{Amend Soil or Supplement};
+    T --> B;

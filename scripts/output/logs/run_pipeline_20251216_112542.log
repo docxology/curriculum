@@ -89,3 +89,30 @@
 2025-12-16 11:27:02,186 - __main__ - INFO - 📚 STAGE 04: Primary Materials Generation
 2025-12-16 11:27:02,186 - __main__ - INFO - ────────────────────────────────────────────────────────────
 2025-12-16 11:27:02,186 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/04_generate_primary.py --config-dir /Users/4d/Documents/GitHub/curriculum/config --outline /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json --all
+2025-12-16 11:43:02,241 - __main__ - INFO - ✅ Stage 04 complete
+2025-12-16 11:43:02,242 - __main__ - INFO - 
+2025-12-16 11:43:02,242 - __main__ - INFO - 📖 STAGE 05: Secondary Materials Generation
+2025-12-16 11:43:02,242 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:43:02,242 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/05_generate_secondary.py --config-dir /Users/4d/Documents/GitHub/curriculum/config --outline /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json --all
+2025-12-16 11:59:59,253 - __main__ - INFO - ✅ Stage 05 complete
+2025-12-16 11:59:59,253 - __main__ - INFO - 
+2025-12-16 11:59:59,253 - __main__ - INFO - 🌐 STAGE 06: Website Generation
+2025-12-16 11:59:59,253 - __main__ - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:59:59,254 - __main__ - INFO - Running: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/4d/Documents/GitHub/curriculum/scripts/06_website.py --config-dir /Users/4d/Documents/GitHub/curriculum/config --outline /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json
+2025-12-16 12:00:00,518 - __main__ - INFO - ✅ Stage 06 complete
+2025-12-16 12:00:00,518 - __main__ - INFO - 
+2025-12-16 12:00:00,518 - __main__ - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 12:00:00,518 - __main__ - INFO - [FINAL SUMMARY] Pipeline Execution Complete
+2025-12-16 12:00:00,518 - __main__ - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 12:00:00,518 - __main__ - INFO -   • Stages run: 6
+2025-12-16 12:00:00,518 - __main__ - INFO -   • Stages failed: 0
+2025-12-16 12:00:00,518 - __main__ - INFO -   [SUCCESS] All stages completed successfully!
+2025-12-16 12:00:00,518 - __main__ - INFO - 
+2025-12-16 12:00:00,518 - __main__ - INFO -   Next steps:
+2025-12-16 12:00:00,518 - __main__ - INFO -     - Review generated content in output/ directory
+2025-12-16 12:00:00,518 - __main__ - INFO -     - Check stage summaries above for any [NEEDS REVIEW] or [CRITICAL] issues
+2025-12-16 12:00:00,519 - __main__ - INFO -     - Review log file for detailed validation information
+2025-12-16 12:00:00,519 - __main__ - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 12:00:00,519 - __main__ - INFO - 
+2025-12-16 12:00:00,519 - __main__ - INFO - 📝 Full log available at: output/logs/run_pipeline_20251216_112542.log
+2025-12-16 12:00:00,519 - __main__ - INFO - 

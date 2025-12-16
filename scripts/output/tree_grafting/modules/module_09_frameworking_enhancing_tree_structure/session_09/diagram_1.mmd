@@ -1,0 +1,20 @@
+graph LR
+    A([Start: Scion Selection]) --> B{Assess Rootstock Compatibility}
+    B -- Compatible --> C([Scion Preparation - Rootstock Grafting])
+    B -- Incompatible --> D([Rejection & New Scion])
+    C --> E{Initial Root Establishment}
+    E --> F{Monitor Growth & Health}
+    F -- Healthy --> G([Ongoing Support & Nutrient Management])
+    F -- Unhealthy --> H([Rootstock Failure – Replacement])
+    G --> I{Scion Growth & Vigor}
+    I --> J{Feedback: Adjust Grafting Technique}
+    J --> G
+    I --> K{Harvest & Propagation}
+    K --> L([End: Mature Grafted Tree])
+    B -- Rootstock Disease --> H
+    C -- Grafting Technique --> J
+    H --> L
+    K --> L
+    subgraph Parallel Pathways
+        A1[Alternative Rootstock Trials] --> B
+    end

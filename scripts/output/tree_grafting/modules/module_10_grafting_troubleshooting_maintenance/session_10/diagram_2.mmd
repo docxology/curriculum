@@ -1,0 +1,24 @@
+graph LR
+    A[Grafting Start] --> B{Pre-Graft Assessment}
+    B -- Negative --> C[Reject Graft - Disease Risk]
+    B -- Positive --> D[Graft Preparation]
+    D --> E[Host Plant Condition Check]
+    E -- Unsatisfactory --> F[Host Treatment - Disease Control]
+    E -- Satisfactory --> G[Grafting Procedure]
+    G --> H[Post-Graft Monitoring]
+    H --> I{Disease Symptoms Detected?}
+    I -- Yes --> J[Diagnostic Testing - Identify Pathogen]
+    J --> K[Treatment Protocol (Specific to Pathogen)]
+    K --> L[Re-assessment of Graft Health]
+    L -- Improvement --> M[Continued Monitoring]
+    L -- No Improvement --> N[Graft Removal - Disease Failure]
+    M --> O[Long-Term Monitoring - Prevent Recurrence]
+    N --> P[Quarantine - Prevent Spread]
+    O --> Q[Adjust Environmental Controls (Temperature, Humidity)]
+    Q --> R[Monitor Graft Health & Performance]
+    R --> S[Harvest/Sale - Graft Healthy]
+    S --> T[End]
+    I -- No --> N
+    B --> U{Nutrient Deficiencies?}
+    U -- Yes --> V[Host Plant Fertilization]
+    V --> D

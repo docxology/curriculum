@@ -1,0 +1,23 @@
+graph TD
+    A[Wound Induction] --> B(Inflammation Phase);
+    B --> C{Wound Response Assessment};
+    C -- Triggered Signaling --> D(Cambial Cell Proliferation);
+    D --> E{Cell Differentiation};
+    E -- Correct Signals --> F(Vascular Development);
+    F --> G(Callus Formation);
+    G --> H{Callus Maturation};
+    H -- Successful Maturation --> I(Integrated Vascular System);
+    H -- Failure --> J(Necrosis/Cell Death);
+    J --> K(Inflammation Response);
+    K --> L(Fibrous Tissue Formation);
+    L --> M(Scar Tissue Development);
+    M --> N(Limited Vascular Integration);
+    N --> O[Failed Graft];
+    A --> P[Environmental Factors];
+    P --> Q{Cambial Activity Modulation};
+    Q --> A;
+    C -- Negative Wound Signals --> R(Hypertrophic Response);
+    R --> S(Localized Inflammation);
+    S --> T(Impaired Callus Formation);
+    T --> U(Chronic Inflammation);
+    U --> V[Grafted Tissue Dysfunction];

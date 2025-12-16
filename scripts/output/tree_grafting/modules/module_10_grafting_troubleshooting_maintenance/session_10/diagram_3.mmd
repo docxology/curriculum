@@ -1,0 +1,22 @@
+graph LR
+    A([Grafting Start]) --> B{Cambial Contact Assessment}
+    B -- Poor Contact Detected --> C[Rootstock Selection - Optimize]
+    B -- Adequate Contact --> D[Maintain Graft Union - Support]
+    C --> D
+    D --> E{Monitoring - Vascular Health?}
+    E -- Yes --> F[Continue Supportive Care]
+    E -- No --> G[Rootstock/Scion Replacement - Critical]
+    G --> H[New Graft Union Establishment]
+    H --> I{Post-Grafting Monitoring}
+    I -- Healthy Vascular Flow --> J[Successful Graft Integration]
+    I -- Continued Poor Flow --> K[Secondary Rootstock/Scion Replacement]
+    K --> J
+    B --> L{Environmental Stress - Impact?}
+    L -- Yes --> M[Reduce Stress - Mitigation]
+    M --> B
+    B --> N[Record & Analyze Graft Failure Data]
+    N --> O[Identify Recurring Issues - Prevention]
+    O --> B
+    B -- Initial Assessment Complete --> P[Grafting Process Complete]
+    P --> Q[Long-Term Monitoring]
+    Q --> P

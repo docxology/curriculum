@@ -13,9 +13,10 @@ Templates are automatically discovered from `.yaml` files in this directory. Cur
 - `biology.yaml` - Introductory Biology
 - `chemistry.yaml` - Introductory Chemistry
 - `physics.yaml` - Introductory Physics
-- `active_inference.yaml` - Active Inference
+- `active_inference.yaml` - Active Inference: Theory and Applications (Graduate/Advanced)
+- `active_inference_ai_short.yaml` - Active Inference for Generative AI (Short Course, 3 sessions)
 - `active_inference_college.yaml` - Active Inference and Probabilistic Dynamical Systems (Undergraduate)
-- `free_energy_principle.yaml` - Free Energy Principle
+- `free_energy_principle.yaml` - Free Energy Principle: From Physics to Mind
 - `tree_grafting.yaml` - Tree Grafting: Fundamentals to Advanced Techniques
 
 ## Using Templates

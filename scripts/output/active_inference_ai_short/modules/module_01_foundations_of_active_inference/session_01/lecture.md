@@ -1,0 +1,43 @@
+# Foundations of Active Inference
+
+## Learning Objectives
+
+- Understand the core principles of Active Inference
+- Describe how Active Inference explains adaptive behavior
+- Identify the role of perception and action in generating models of the world
+
+---
+
+## Introduction
+
+Welcome to Foundations of Active Inference. In this module, we’ll explore a radical yet increasingly compelling framework for understanding how adaptive systems – from humans and animals to robots – interact with and shape their environment. Traditionally, neuroscience and psychology have often treated perception and action as separate processes, with perception passively receiving information from the world and action responding to that information. Active Inference challenges this dichotomy, proposing that perception and action are fundamentally intertwined, driven by a unified goal: minimizing surprise. This lecture will lay the groundwork for understanding this concept, introducing core principles and establishing a theoretical foundation. We’ll begin by considering how our brains actively construct models of the world, not simply reacting to it. Consider the simple act of reaching for a cup of coffee. A passive view would see your brain simply registering the visual information about the cup’s location and then initiating a motor command to move your arm. Active Inference suggests a different story—that your brain is constantly predicting where the cup *will be* and taking action to bring it closer to your hand, reducing the uncertainty associated with that prediction.
+
+---
+
+## Main Topic 1: Variational Free Energy and the Surprise Principle
+
+At the heart of Active Inference lies the concept of **Variational Free Energy (VFE)**. **VFE**: A mathematical measure of the difference between a predicted model of the world and the actual sensory evidence received. It represents the ‘surprise’ associated with our predictions. Our brains aren’t trying to perfectly replicate reality; instead, they’re striving to minimize this surprise. Imagine you're trying to guess a number between 1 and 10. If you guess 5 and the correct answer is 7, you experience a significant amount of surprise. However, if you guess 5 and the correct answer is also 5, the surprise is minimal. The VFE is a way of quantifying this degree of surprise.  The principle driving this minimization is often referred to as the 'surprise principle' or ‘prediction error minimization’. For instance, a thermostat actively tries to maintain a constant temperature by adjusting the heating or cooling system, minimizing the difference between the desired temperature (the prediction) and the actual temperature of the room (the sensory evidence).  This continuous adjustment, guided by VFE minimization, reflects an active role in shaping the environment to align with internal expectations. Furthermore, consider the case of a child learning to walk. Initially, each step involves substantial error – the child falls repeatedly. Through trial and error, they adjust their movements, reducing the VFE and eventually achieving stable locomotion.
+
+---
+
+## Main Topic 2: Predictive Coding and the Generative Model
+
+The concept of **Predictive Coding** provides a more detailed understanding of how the brain attempts to minimize VFE. **Generative Model**: A mathematical description of the world that the brain uses to predict future sensory input. Predictive coding proposes that the brain operates as a hierarchical prediction machine. At each level of this hierarchy, a module generates a prediction about the sensory input it's supposed to receive. This prediction is then compared to the actual sensory input. The difference between the prediction and the evidence is sent back up the hierarchy as an ‘error signal’. This error signal isn’t simply a statement of “something is wrong”; it’s an instruction for adjusting the generative model itself. For example, when you see a face, your visual cortex doesn't just passively register the pixels. Instead, it’s constantly predicting what the face *should look like* based on its prior knowledge of faces. If the actual face deviates from this prediction – perhaps it’s smiling – the error signal adjusts the model to better account for the smiling. Imagine a musician learning a complex piece of music. They don’t just hear the notes; they actively predict the next note based on the preceding ones, adjusting their understanding of the music as they progress.  This hierarchical prediction and error correction process is a core mechanism underlying adaptive behavior.
+
+---
+
+## Main Topic 3: Bayesian Inference and Prior Beliefs
+
+**Bayesian Inference**: A statistical framework for updating beliefs based on new evidence.  Within Active Inference, Bayesian inference plays a crucial role in linking prior beliefs with posterior beliefs. **Prior Beliefs**: Initial assumptions or expectations about the world that the brain uses to guide its predictions. We don’t start with a blank slate. Our brains are populated with prior beliefs based on our past experiences, genetics, and social interactions. These priors influence our initial predictions. Consider a newborn baby. Before any explicit learning, the infant possesses prior beliefs about the world – for example, that objects have consistent properties, that things tend to fall downwards, and that people will respond to their cries. These priors heavily influence the infant’s initial actions and perceptions.  In Bayesian terms, the brain combines these prior beliefs with the incoming sensory evidence (the data) to generate a posterior belief. This posterior belief then feeds back into the generative model, guiding future predictions and actions. For instance, if you've previously had a negative experience with a particular type of food, you’ll likely have a prior belief that it’s unpleasant. When you encounter that food again, you’ll be more sensitive to any potential negative sensory evidence, further reinforcing your prior belief.
+
+---
+
+## Main Topic 4: Perception-Action Loops and Active Exploration
+
+The integration of predictive coding and Bayesian inference leads to the concept of perception-action loops. **Perception-Action Loops**: Continuous, reciprocal interactions between perceptual processes and action, driven by the minimization of VFE. These loops demonstrate how actions aren't simply responses to sensory input; they actively shape our experience of the world. Consider the example of navigating a room. You don’t passively observe the room’s layout. Instead, you continuously predict where objects will be as you move around, adjusting your actions to avoid obstacles and reach your goal. As you move, your perception changes, updating your predictions, and this iterative process generates a feedback loop that allows you to effectively interact with your environment. For instance, when searching for a pen on your desk, you initially make broad movements based on a general prediction about its location. As you get closer, your predictions become more specific, and your movements become more refined.  This active exploration and refinement of your model of the world are key to adaptive behavior.  A robot designed to navigate a cluttered environment would use this principle; it would actively predict where objects *will* be, taking actions to explore the space and build a detailed map.
+
+---
+
+## Summary
+
+Throughout this lecture, we’ve introduced the core principles of Active Inference: Variational Free Energy minimization, Predictive Coding, Bayesian Inference, and Perception-Action Loops. We’ve established that the brain doesn’t passively receive information; instead, it actively constructs models of the world, constantly predicting and correcting its predictions to minimize surprise. This framework provides a powerful explanation for adaptive behavior, offering a unified account of perception and action. Remember the key elements: the minimization of VFE drives the process, prior beliefs shape initial predictions, and perception-action loops allow us to actively explore and shape our environment. As we move forward, we’ll delve deeper into the mathematical details and explore specific examples across various domains, including motor control, cognition, and even consciousness. This foundational understanding is critical to grasping the full implications of Active Inference.

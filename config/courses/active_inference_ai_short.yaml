@@ -1,0 +1,37 @@
+# Educational Course Configuration - Active Inference & AI (Short Course)
+# Concise course connecting Active Inference principles to contemporary AI applications
+
+course:
+  name: "Active Inference for Generative AI: Principles and Applications"
+  subject: "AI, Machine Learning, and Cognitive Systems"
+  description: |
+    A focused introduction to Active Inference principles and their applications in contemporary AI systems. 
+    This course provides an intuitive understanding of how Active Inference—the principle that adaptive systems 
+    minimize variational free energy through perception, action, and learning—relates to and enhances modern 
+    generative AI architectures. Students will explore how variational inference, predictive coding, and Bayesian 
+    model selection connect to transformer architectures, large language models, and diffusion models. The course 
+    examines how Active Inference principles inform key challenges in 2025's AI landscape: alignment (ensuring AI 
+    systems pursue intended goals through proper generative models and precision weighting), multiagent coordination 
+    (how multiple AI agents achieve shared inference through free energy minimization), spatial intelligence 
+    (embodied AI that grounds language and vision in actionable world models), and emerging applications in 
+    autonomous systems, human-AI collaboration, and adaptive interfaces. Students will understand how free energy 
+    minimization provides a principled framework for building AI systems that actively gather information, update 
+    beliefs under uncertainty, and select actions that resolve ambiguity—capabilities essential for robust, 
+    interpretable, and aligned AI. The course connects theoretical principles to practical implementations, showing 
+    how concepts like prediction error minimization, precision-weighted inference, and active sampling manifest in 
+    contemporary AI architectures and inform design choices for next-generation systems.
+  level: "Professional Development / Graduate"
+  additional_constraints: |
+    Focus on intuitive understanding over mathematical derivation. Emphasize connections between Active Inference 
+    principles and familiar AI concepts (attention mechanisms, RLHF, exploration-exploitation, model-based RL). 
+    Include concrete examples from current AI systems (LLMs, multimodal models, robotics). Address practical 
+    implications for AI development, deployment, and alignment. Connect each theoretical principle to real-world 
+    applications in 2025's AI landscape. Suitable for AI practitioners, researchers, and developers seeking 
+    principled frameworks for understanding and building adaptive AI systems.
+  
+  # Configurable defaults (all overwritable in interactive mode)
+  defaults:
+    num_modules: 3           # Number of modules to generate
+    total_sessions: 3        # Total sessions across all modules (1 per module)
+    sessions_per_module: 1   # One session per module for focused delivery
+

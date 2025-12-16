@@ -12,6 +12,7 @@ config/courses/
 ├── chemistry.yaml
 ├── physics.yaml
 ├── active_inference.yaml
+├── active_inference_ai_short.yaml
 ├── active_inference_college.yaml
 ├── free_energy_principle.yaml
 ├── tree_grafting.yaml

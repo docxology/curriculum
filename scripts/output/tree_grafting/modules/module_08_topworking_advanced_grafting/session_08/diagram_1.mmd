@@ -1,0 +1,17 @@
+graph TD
+    A[Start: Scion Selection Assessment] --> B{Assess Rootstock Compatibility}
+    B -- Compatible --> C[Select Scion Based on Traits]
+    B -- Incompatible --> D[Reject Scion - Potential Issues]
+    C --> E{Evaluate Grafting Site}
+    E -- Suitable --> F[Prepare Grafting Surface]
+    E -- Unsuitable --> G[Re-evaluate Scion/Site]
+    G --> E
+    F --> H[Perform Grafting Technique]
+    H --> I{Monitor Graft Union}
+    I -- Successful Union --> J[Maintain Grafted Tree]
+    I -- Failed Union --> K[Revise Grafting Technique]
+    K --> H
+    J --> L[Harvest & Produce]
+    L --> M[End: Successful Grafted Product]
+    M --> N[Feedback Loop: Analyze Failure Cases]
+    N --> B

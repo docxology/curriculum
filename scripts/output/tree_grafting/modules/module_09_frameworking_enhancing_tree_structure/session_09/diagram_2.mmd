@@ -1,0 +1,19 @@
+graph TD
+    A([Start: Grafting Project Initiation]) --> B{Assess Site Suitability}
+    B -- Positive --> C([Select Grafting Technique])
+    B -- Negative --> D([Re-evaluate Site or Grafting Method])
+    C --> E([Prepare Rootstock and Scion])
+    E --> F{Assess Rootstock Health?}
+    F -- Yes --> G([Perform Grafting Procedure])
+    F -- No --> E
+    G --> H{Monitor Graft Success?}
+    H -- Yes --> I([Regular Care & Maintenance])
+    H -- No --> G
+    I --> J{Long-Term Monitoring & Assessment}
+    J --> K([Adjustments for Optimal Growth])
+    K --> L([Harvest & Yield Analysis])
+    L --> M([Data Reporting & Analysis])
+    M --> N([Refine Grafting Strategy])
+    N --> O([Continuous Improvement])
+    O --> A
+    B -- Significant Issues --> D

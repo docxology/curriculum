@@ -1,0 +1,20 @@
+graph TD
+    A[Start: Grafting Initiation] --> B{Assess Bridge Stability};
+    B -- Stable --> C[Prepare Grafting Site];
+    B -- Unstable --> D[Reinforce Bridge];
+    D --> C;
+    C --> E[Apply Binding String (Layer 1)];
+    E --> F{Check String Adhesion?};
+    F -- Yes --> G[Apply Binding String (Layer 2)];
+    F -- No --> H[Re-evaluate Bridge & Grafting Site];
+    H --> B;
+    G --> I[Secure with Mechanical Fasteners];
+    I --> J{Monitor for Stress/Movement?};
+    J -- Yes --> K[Adjust Fasteners];
+    K --> J;
+    J -- No --> L[Final Inspection & Stabilization];
+    L --> M[End: Bond Secure];
+    E --> N{Evaluate String Type};
+    N -- Compatible --> E;
+    N -- Incompatible --> O[Replace String with Suitable Alternative];
+    O --> E;

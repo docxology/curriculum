@@ -1,0 +1,23 @@
+graph TD
+    A[Start: Initial Assessment] --> B{Blade Angle Selection?};
+    B -- Correct Angle --> C[Prepare Graft Union];
+    B -- Incorrect Angle --> D[Re-evaluate & Adjust];
+    C --> E[Make Incision - Angled];
+    E --> F{Check Angle Again?};
+    F -- Correct --> G[Prepare Tissue];
+    F -- Incorrect --> H[Adjust Incision];
+    H --> G;
+    G --> I[Apply Graft];
+    I --> J{Successful Union?};
+    J -- Yes --> K[Monitor & Care];
+    J -- No --> L[Repeat Grafting Process];
+    L --> I;
+    K --> M([End: Graft Established]);
+    M --> N{Long-Term Monitoring};
+    N --> O([End: Successful Graft]);
+    E -- Alternative Approach --> P[Spiral Cut Technique];
+    P --> G;
+    B -- Consideration of Plant Species --> Q[Species-Specific Angles];
+    Q --> B;
+    B --  Influence of Grafting Technique --> R[Whip & Tongue Specifics];
+    R --> B;

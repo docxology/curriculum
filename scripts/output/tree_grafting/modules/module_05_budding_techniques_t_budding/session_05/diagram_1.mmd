@@ -1,0 +1,21 @@
+graph TD
+    A[Start: Site Selection & Rootstock Choice] --> B{Rootstock Selection ([...] Rootstock Type)};
+    B -- Suitable --> C[Scion Selection ([...] Scion Variety)];
+    B -- Unsuitable --> D[Re-evaluate Rootstock];
+    D --> B;
+    C --> E[Prepare Rootstock ( [...] Cutting/Grafting)];
+    E --> F[Prepare Scion ( [...] Tissue Prep)];
+    F --> G[Initial Grafting ( [...] Grafting Technique)];
+    G --> H{Graft Acceptance Check ({...} Success Criteria?)};
+    H -- Yes --> I[Shade & Monitor ( [...] Environmental Control)];
+    H -- No --> J[Repeat Grafting ( [...] Grafting Refinement)];
+    J --> G;
+    I --> K{Monitor for Vascular Connection ([...] Vascular Assessment)};
+    K -- Successful --> L[Regular Watering & Fertilization ([...] Nutrient Management)];
+    K -- Unsuccessful --> J;
+    L --> M[Gradual Removal of Scion Shield ([...] Shield Removal)];
+    M --> N{Monitor for Scion Health ([...] Scion Health Indicators)};
+    N -- Healthy --> O[Continued Care & Observation ([...] Ongoing Care)];
+    N -- Unhealthy --> J;
+    O --> P[Scion Established ([...] Final Establishment)];
+    P --> Q[End: Scion Successfully Grafted];

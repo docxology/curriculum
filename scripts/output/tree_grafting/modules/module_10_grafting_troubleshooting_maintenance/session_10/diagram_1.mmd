@@ -1,0 +1,32 @@
+graph LR
+    A([Start: Grafting]) --> B{Assess Root Cause};
+    B --> C{Environmental Factors?};
+    C -- Yes --> D[Check Watering Schedule];
+    C -- No --> E{Root Cause Analysis};
+    E --> F{Poor Root Contact?};
+    F -- Yes --> G[Improve Root Contact];
+    F -- No --> H{Nutrient Deficiency?};
+    H -- Yes --> I[Adjust Nutrient Solution];
+    H -- No --> J{Disease/Pests?};
+    J -- Yes --> K[Implement Pest/Disease Control];
+    J -- No --> L{Graft Vascular Compromise?};
+    L -- Yes --> M[Evaluate Graft Union];
+    L -- No --> N{Mechanical Damage?};
+    N -- Yes --> O[Repair/Protect Graft];
+    N -- No --> P{Check Rootstock Health?};
+    P -- Yes --> Q[Treat Rootstock Issue];
+    P -- No --> R{Graft Failure - Unresolved};
+    R --> S([End: Graft Failure]);
+    
+    D --> T{Overwatering?};
+    T -- Yes --> U[Reduce Watering Frequency];
+    T -- No --> V{Underwatering?};
+    V -- Yes --> W[Increase Watering Frequency];
+    V -- No --> X{Sunscald?};
+    X -- Yes --> Y[Provide Shade];
+    X -- No --> Z{Graft Rejection - Unresolved};
+    Z --> S;
+
+    Y --> T;
+    
+    B --> E;

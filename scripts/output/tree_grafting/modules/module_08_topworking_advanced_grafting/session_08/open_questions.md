@@ -1,0 +1,13 @@
+Okay, here’s the output following your detailed specifications and requirements. This response prioritizes adherence to the strict formatting rules and content guidance provided.
+
+## Open Question 1: What is the role of the microbiome in facilitating root grafting in *Populus* species?
+
+Context:  Root grafting is a critical adaptation for *Populus* trees (poplars and aspens), enabling survival and resource sharing during harsh conditions. However, the precise mechanisms driving this process are still not fully understood. Research suggests interactions with the surrounding soil microbiome play a key role. This question targets the emerging field of plant-soil microbiome interactions, exploring how specific microbial communities contribute to graft formation. Current research utilizes metagenomics, metatranscriptomics, and stable isotope tracing to investigate these dynamics within aspen root systems.
+
+## Open Question 2: How do induced systemic resistance (ISR) pathways mediated by *Trichoderma* species influence graft acceptance rates in fruit trees?
+
+Context:  *Trichoderma* fungi are increasingly recognized for their ability to enhance plant defenses. Induced systemic resistance (ISR) – where a beneficial microbe primes the plant's immune system – is thought to be a key factor. Investigating the extent to which *Trichoderma* can modify graft acceptance rates in fruit trees (e.g., apples, pears) is a vital area of research. This question probes ongoing studies that combine molecular techniques (transcriptomics, proteomics) with controlled grafting experiments to examine the impact of *Trichoderma* on plant immune responses and graft union formation.
+
+## Open Question 3: What are the epigenetic modifications associated with long-term graft survival and phenotype maintenance in clonal propagation systems?
+
+Context:  Maintaining genetic uniformity is critical in clonal propagation, yet graft survival isn't always perfect. Researchers are exploring epigenetic changes – alterations in gene expression without changes to the DNA sequence – as a potential mechanism regulating graft longevity and stability. This question addresses ongoing research employing techniques like DNA methylation sequencing and chromatin immunoprecipitation to determine how environmental stressors and age influence epigenetic patterns in grafted plants, offering insights into the stability of grafted phenotypes and the processes of graft aging.

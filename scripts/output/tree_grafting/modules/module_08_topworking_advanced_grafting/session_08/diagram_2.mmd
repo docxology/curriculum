@@ -1,0 +1,19 @@
+graph TD
+    A([Start: Initial Assessment]) --> B{Assess Rootstock Compatibility?}
+    B -- Compatible --> C([Prepare Rootstock & Scion])
+    B -- Incompatible --> D[Select Alternative Rootstock]
+    C --> E([Create Graft Union – Wax/Rubber Binding])
+    E --> F{Monitor Graft Union for Stability?}
+    F -- Stable --> G([Initial Post-Graft Care – Watering, Sunlight])
+    F -- Unstable --> H[Re-evaluate Graft Union Technique]
+    H --> I([Adjust Graft Union – Tighten, Re-bind])
+    I --> F
+    G --> J{Observe Scion Vigor & Health?}
+    J -- Healthy --> K([Ongoing Care – Fertilization, Pest Control])
+    J -- Unhealthy --> L[Investigate Potential Issues – Disease, Nutrient Deficiency]
+    L --> M[Implement Corrective Measures – Fungicide, Adjust Fertilizer]
+    M --> K
+    K --> N([End: Successful Grafting])
+    N --> O{Feedback Loop: Monitor for Long-Term Success}
+    O -- Positive --> O
+    O -- Negative --> L

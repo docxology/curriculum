@@ -1,0 +1,29 @@
+2025-12-16 11:59:59,463 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/06_website_20251216_115959.log
+2025-12-16 11:59:59,463 - generate_website - INFO - 
+2025-12-16 11:59:59,463 - generate_website - INFO - 🌐 STAGE 06: WEBSITE GENERATION
+2025-12-16 11:59:59,463 - generate_website - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:59:59,463 - generate_website - INFO - Generating single HTML website for course materials
+2025-12-16 11:59:59,463 - generate_website - INFO - Output: output/website/index.html
+2025-12-16 11:59:59,463 - generate_website - INFO - 
+2025-12-16 11:59:59,463 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:59:59,464 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 11:59:59,481 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 11:59:59,481 - generate_website - INFO - 
+2025-12-16 11:59:59,481 - generate_website - INFO - ⚙️ CONFIGURATION
+2025-12-16 11:59:59,481 - generate_website - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:59:59,481 - generate_website - INFO -   • Config Directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 11:59:59,481 - generate_website - INFO -   • Log File: output/logs/06_website_20251216_115959.log
+2025-12-16 11:59:59,481 - generate_website - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 11:59:59,481 - generate_website - INFO - Using specified outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json
+2025-12-16 11:59:59,481 - generate_website - INFO - 
+2025-12-16 11:59:59,481 - src.website.generator - INFO - Loading outline from: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/outlines/course_outline_20251216_112702.json
+2025-12-16 11:59:59,482 - src.website.generator - INFO - Found 10 modules in outline
+2025-12-16 11:59:59,484 - src.website.generator - INFO - Using course-specific output directory: output/tree_grafting/
+2025-12-16 12:00:00,434 - src.website.generator - INFO - Generating HTML website...
+2025-12-16 12:00:00,437 - src.website.generator - INFO - Website generated: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/website/index.html
+2025-12-16 12:00:00,437 - generate_website - INFO - 
+2025-12-16 12:00:00,437 - generate_website - INFO -   ✅ SUCCESS: Website generated: /Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/website/index.html
+2025-12-16 12:00:00,437 - generate_website - INFO - 
+2025-12-16 12:00:00,437 - generate_website - INFO - You can now open the website in your browser:
+2025-12-16 12:00:00,437 - generate_website - INFO -   file:///Users/4d/Documents/GitHub/curriculum/scripts/output/tree_grafting/website/index.html
+2025-12-16 12:00:00,437 - generate_website - INFO - 

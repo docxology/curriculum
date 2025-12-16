@@ -1,0 +1,21 @@
+graph TD
+    A[Start: Rootstock Selection] --> B{Assess Rootstock Health & Size}
+    B --> C{Determine Graft Compatibility}
+    C -- Compatible --> D[Prepare Rootstock: Cleaning & Shaping]
+    C -- Incompatible --> E[Rootstock Replacement]
+    D --> F[Prepare Graft Union]
+    F --> G[Bridge Grafting Technique - Initial Cut]
+    G --> H[Insert Graft Union]
+    H --> I[Secure Graft Union]
+    I --> J[Post-Graft Care: Monitoring & Support]
+    J --> K{Check for Vascular Connection}
+    K -- Successful --> L[Maintain Rootstock Health]
+    K -- Failure --> M[Re-evaluate Graft Position]
+    M --> I
+    L --> N[Long-Term Monitoring & Pruning]
+    N --> O[End: Established Grafted Tree]
+    B -- Disease Detected --> E
+    J --> P{Rootstock Stress?}
+    P -- Yes --> Q[Adjust Support Structure]
+    Q --> J
+    P -- No --> J

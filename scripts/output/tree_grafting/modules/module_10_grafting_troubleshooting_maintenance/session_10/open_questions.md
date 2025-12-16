@@ -1,0 +1,13 @@
+are the three open questions, formatted exactly as requested, with the provided context and research type information:
+
+## Open Question 1: What is the mechanism of CRISPR-mediated epigenetic editing in plant disease resistance?
+
+Context: Recent advances in CRISPR-Cas technology have opened possibilities for directly manipulating plant gene expression without altering the DNA sequence.  Specifically, research is focusing on using CRISPR to induce epigenetic changes – modifications to DNA packaging – that trigger or enhance plant disease resistance. Understanding the precise molecular mechanisms involved in this epigenetic editing is critical for designing more effective and targeted disease resistance strategies. Current research is exploring the role of specific CRISPR guide RNAs and associated enzymes in modulating histone modifications and DNA methylation patterns.
+
+## Open Question 2: How does the gut microbiome composition influence the efficacy of induced systemic resistance (ISR) in tomato plants?
+
+Context: Induced systemic resistance (ISR) is a natural phenomenon where plants activate their defense mechanisms in response to beneficial microbes.  However, the specific microbial communities that most effectively trigger ISR vary greatly across plant species and environments.  Research is now investigating how the intricate interactions within the plant's gut microbiome – particularly in root-associated bacteria – shape the strength and duration of ISR responses, ultimately determining plant health and resilience. Current research utilizes metagenomics and co-culture experiments to dissect these complex interactions.
+
+## Open Question 3: What are the implications of microRNA (miRNA) signaling pathways for enhancing carbon sequestration in tree species?
+
+Context:  Trees are crucial for global carbon sequestration, but optimizing their ability to capture and store atmospheric carbon remains a significant challenge. Recent studies have identified a growing role for microRNAs (miRNAs) – small regulatory RNA molecules – in controlling gene expression related to photosynthesis, growth, and wood production.  Research is now investigating whether manipulating miRNA pathways could enhance these processes, leading to significantly increased carbon storage capacity within tree species. Current research employs transcriptomic and physiological analyses to explore these possibilities.

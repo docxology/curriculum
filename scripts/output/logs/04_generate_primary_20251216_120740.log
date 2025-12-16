@@ -1,0 +1,170 @@
+2025-12-16 12:07:40,136 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/04_generate_primary_20251216_120740.log
+2025-12-16 12:07:40,136 - generate_primary - INFO - 
+2025-12-16 12:07:40,136 - generate_primary - INFO - 📚 STAGE 04: PRIMARY MATERIALS (Session-Based)
+2025-12-16 12:07:40,136 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 12:07:40,136 - generate_primary - INFO - Generating materials PER SESSION (not per module)
+2025-12-16 12:07:40,136 - generate_primary - INFO - Output structure: output/modules/module_XX/session_YY/[material].md
+2025-12-16 12:07:40,136 - generate_primary - INFO - 
+2025-12-16 12:07:40,136 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 12:07:40,137 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 12:07:40,151 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 12:07:40,151 - generate_primary - INFO - PRIMARY ARTIFACTS GENERATED PER SESSION:
+2025-12-16 12:07:40,151 - generate_primary - INFO -   1. lecture.md - Comprehensive instructional content
+2025-12-16 12:07:40,151 - generate_primary - INFO -   2. lab.md - Laboratory exercise with procedures
+2025-12-16 12:07:40,151 - generate_primary - INFO -   3. study_notes.md - Concise session summary
+2025-12-16 12:07:40,151 - generate_primary - INFO -   4. diagram_1.mmd, diagram_2.mmd, ... (up to 4 diagrams)
+2025-12-16 12:07:40,151 - generate_primary - INFO -   5. questions.md - Comprehension assessment questions
+2025-12-16 12:07:40,151 - generate_primary - INFO - 
+2025-12-16 12:07:40,151 - generate_primary - INFO - 
+2025-12-16 12:07:40,151 - generate_primary - INFO - ⚙️ CONFIGURATION
+2025-12-16 12:07:40,151 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 12:07:40,151 - generate_primary - INFO -   • Diagrams per Session: 4
+2025-12-16 12:07:40,151 - generate_primary - INFO -   • Log File: output/logs/04_generate_primary_20251216_120740.log
+2025-12-16 12:07:40,151 - generate_primary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 12:07:40,151 - generate_primary - INFO - Using specified outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/active_inference_ai_short/outlines/course_outline_20251216_120739.json
+2025-12-16 12:07:40,151 - generate_primary - INFO - 
+2025-12-16 12:07:40,151 - generate_primary - INFO - Processing ALL modules from outline
+2025-12-16 12:07:40,151 - src.generate.orchestration.pipeline - INFO - Initializing Educational Course Generator pipeline...
+2025-12-16 12:07:40,152 - src.llm.client - INFO - Initialized OllamaClient: model=gemma3:4b, url=http://localhost:11434/api/generate
+2025-12-16 12:07:40,152 - src.generate.stages.stage1_outline - INFO - Initialized OutlineGenerator
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - Pipeline initialized successfully
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - STAGE 2: Generating Primary Content (Session-Based)
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - Using explicit outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/active_inference_ai_short/outlines/course_outline_20251216_120739.json
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - Processing 3 modules with session-based generation
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - Using course-specific output directory: output/active_inference_ai_short/
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - 
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - Module 1: Foundations of Active Inference (1 sessions)
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - ============================================================
+2025-12-16 12:07:40,152 - src.generate.orchestration.pipeline - INFO - 
+[1/3] Session 1: Introduction to Active Inference
+2025-12-16 12:07:40,153 - src.generate.orchestration.pipeline - INFO -   → Generating lecture...
+2025-12-16 12:07:40,153 - src.generate.formats.lectures - INFO - Generating lecture for: Foundations of Active Inference (Session 1/3)
+2025-12-16 12:07:40,153 - src.llm.client - INFO - [lec:429cc4] 🚀 lec | m=gemma3:4b | p=3505c | t=180s
+2025-12-16 12:07:40,153 - src.llm.client - INFO - [lec:429cc4] Timeout configuration: connect=5s, read=180s (total limit: 180s)
+2025-12-16 12:07:40,153 - src.llm.client - INFO - [lec:429cc4] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:07:40,162 - src.llm.client - INFO - [lec:429cc4] Sending request to Ollama: model=gemma3:4b, operation=lecture, payload=7142 bytes, prompt=3505 chars
+2025-12-16 12:07:40,163 - src.llm.client - INFO - [lec:429cc4] Waiting for HTTP response (connect timeout: 5s, read timeout: 180s)...
+2025-12-16 12:07:41,374 - src.llm.request_handler - INFO - [lec:429cc4] ✓ Done 1.21s
+2025-12-16 12:07:41,374 - src.llm.client - INFO - [lec:429cc4] ✅ HTTP 200 in 1.21s
+2025-12-16 12:07:41,374 - src.llm.client - INFO - [lec:429cc4] 📡 Stream active (200)
+2025-12-16 12:07:41,374 - src.llm.client - INFO - [lec:429cc4] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:07:43,381 - src.llm.client - INFO - [lec:429cc4] 📊 2.0s: 782c @390c/s (122ch, ~196t @97t/s)
+2025-12-16 12:07:45,390 - src.llm.client - INFO - [lec:429cc4] 📊 4.0s: 1385c @345c/s (237ch, ~346t @86t/s)
+2025-12-16 12:07:47,402 - src.llm.client - INFO - [lec:429cc4] 📊 6.0s: 1908c @317c/s (349ch, ~477t @79t/s)
+2025-12-16 12:07:49,405 - src.llm.client - INFO - [lec:429cc4] 📊 8.0s: 2570c @320c/s (473ch, ~642t @80t/s)
+2025-12-16 12:07:51,408 - src.llm.client - INFO - [lec:429cc4] 📊 10.0s: 3122c @311c/s (578ch, ~780t @78t/s)
+2025-12-16 12:07:53,408 - src.llm.client - INFO - [lec:429cc4] 📊 12.0s: 3762c @313c/s (700ch, ~940t @78t/s)
+2025-12-16 12:07:55,417 - src.llm.client - INFO - [lec:429cc4] 📊 14.0s: 4378c @312c/s (819ch, ~1094t @78t/s)
+2025-12-16 12:07:57,425 - src.llm.client - INFO - [lec:429cc4] 📊 16.0s: 5025c @313c/s (936ch, ~1256t @78t/s)
+2025-12-16 12:07:59,427 - src.llm.client - INFO - [lec:429cc4] 📊 18.1s: 5650c @313c/s (1053ch, ~1412t @78t/s)
+2025-12-16 12:08:01,440 - src.llm.client - INFO - [lec:429cc4] 📊 20.1s: 6296c @314c/s (1175ch, ~1574t @78t/s)
+2025-12-16 12:08:03,448 - src.llm.client - INFO - [lec:429cc4] 📊 22.1s: 6896c @312c/s (1282ch, ~1724t @78t/s)
+2025-12-16 12:08:05,448 - src.llm.client - INFO - [lec:429cc4] 📊 24.1s: 7528c @313c/s (1399ch, ~1882t @78t/s)
+2025-12-16 12:08:07,212 - src.llm.client - INFO - [lec:429cc4] ✓ Done 27.06s: 8152c (~1212w @301c/s)
+2025-12-16 12:08:07,214 - src.generate.formats.lectures - INFO - [COMPLIANT] Lecture generated ✓
+2025-12-16 12:08:07,214 - src.generate.formats.lectures - INFO -     - Length: 8408 chars, 1251 words
+2025-12-16 12:08:07,214 - src.generate.formats.lectures - INFO -     - Requirements: 1000-1500 words, 5-15 examples, 4-8 sections
+2025-12-16 12:08:07,214 - src.generate.formats.lectures - INFO -     - Structure: 7 sections, 0 subsections
+2025-12-16 12:08:07,214 - src.generate.formats.lectures - INFO -     - Content: 11 examples, 5 terms defined
+2025-12-16 12:08:07,214 - src.generate.formats.lectures - INFO - Quality score: 100.0/100 (excellent)
+2025-12-16 12:08:07,219 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:08:07,220 - src.generate.orchestration.pipeline - INFO -   → Generating lab...
+2025-12-16 12:08:07,220 - src.generate.formats.labs - INFO - Generating lab 1 for: Foundations of Active Inference (Session 1)
+2025-12-16 12:08:07,220 - src.llm.client - INFO - [lab:72fd58] 🚀 lab | m=gemma3:4b | p=3556c | t=150s
+2025-12-16 12:08:07,220 - src.llm.client - INFO - [lab:72fd58] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 12:08:07,220 - src.llm.client - INFO - [lab:72fd58] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:08:07,223 - src.llm.client - INFO - [lab:72fd58] Sending request to Ollama: model=gemma3:4b, operation=lab, payload=3998 bytes, prompt=3556 chars
+2025-12-16 12:08:07,223 - src.llm.client - INFO - [lab:72fd58] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 12:08:08,223 - src.llm.request_handler - INFO - [lab:72fd58] ✓ Done 1.00s
+2025-12-16 12:08:08,223 - src.llm.client - INFO - [lab:72fd58] ✅ HTTP 200 in 1.00s
+2025-12-16 12:08:08,223 - src.llm.client - INFO - [lab:72fd58] 📡 Stream active (200)
+2025-12-16 12:08:08,223 - src.llm.client - INFO - [lab:72fd58] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:08:10,225 - src.llm.client - INFO - [lab:72fd58] 📊 2.0s: 633c @316c/s (126ch, ~158t @79t/s)
+2025-12-16 12:08:12,253 - src.llm.client - INFO - [lab:72fd58] 📊 4.0s: 1218c @304c/s (237ch, ~304t @76t/s)
+2025-12-16 12:08:14,241 - src.llm.client - INFO - [lab:72fd58] 📊 6.0s: 1613c @268c/s (348ch, ~403t @67t/s)
+2025-12-16 12:08:16,258 - src.llm.client - INFO - [lab:72fd58] 📊 8.0s: 2095c @261c/s (458ch, ~524t @65t/s)
+2025-12-16 12:08:18,272 - src.llm.client - INFO - [lab:72fd58] 📊 10.0s: 2742c @273c/s (580ch, ~686t @68t/s)
+2025-12-16 12:08:20,284 - src.llm.client - INFO - [lab:72fd58] 📊 12.1s: 3231c @268c/s (697ch, ~808t @67t/s)
+2025-12-16 12:08:22,290 - src.llm.client - INFO - [lab:72fd58] 📊 14.1s: 3775c @268c/s (818ch, ~944t @67t/s)
+2025-12-16 12:08:24,299 - src.llm.client - INFO - [lab:72fd58] 📊 16.1s: 4102c @255c/s (935ch, ~1026t @64t/s)
+2025-12-16 12:08:26,300 - src.llm.client - INFO - [lab:72fd58] 📊 18.1s: 4538c @251c/s (1052ch, ~1134t @63t/s)
+2025-12-16 12:08:28,308 - src.llm.client - INFO - [lab:72fd58] 📊 20.1s: 5079c @253c/s (1165ch, ~1270t @63t/s)
+2025-12-16 12:08:29,481 - src.llm.client - INFO - [lab:72fd58] ✓ Done 22.26s: 5443c (~792w @245c/s)
+2025-12-16 12:08:29,484 - src.generate.formats.labs - INFO - [COMPLIANT] Lab generated ✓
+2025-12-16 12:08:29,484 - src.generate.formats.labs - INFO -     - Length: 5547 chars, 808 words
+2025-12-16 12:08:29,484 - src.generate.formats.labs - INFO -     - Procedure: 9 steps
+2025-12-16 12:08:29,484 - src.generate.formats.labs - INFO -     - Safety: 3 warnings
+2025-12-16 12:08:29,484 - src.generate.formats.labs - INFO -     - Data tables: 9
+2025-12-16 12:08:29,486 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:08:29,488 - src.generate.orchestration.pipeline - INFO -   → Generating study notes...
+2025-12-16 12:08:29,488 - src.generate.formats.study_notes - INFO - Generating study notes for: Foundations of Active Inference (Session 1)
+2025-12-16 12:08:29,488 - src.llm.client - INFO - [stu:6a8833] 🚀 stu | m=gemma3:4b | p=4705c | t=120s
+2025-12-16 12:08:29,488 - src.llm.client - INFO - [stu:6a8833] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:08:29,488 - src.llm.client - INFO - [stu:6a8833] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:08:29,493 - src.llm.client - INFO - [stu:6a8833] Sending request to Ollama: model=gemma3:4b, operation=study_notes, payload=8364 bytes, prompt=4705 chars
+2025-12-16 12:08:29,493 - src.llm.client - INFO - [stu:6a8833] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:08:30,973 - src.llm.request_handler - INFO - [stu:6a8833] ✓ Done 1.48s
+2025-12-16 12:08:30,974 - src.llm.client - INFO - [stu:6a8833] ✅ HTTP 200 in 1.48s
+2025-12-16 12:08:30,979 - src.llm.client - INFO - [stu:6a8833] 📡 Stream active (200)
+2025-12-16 12:08:30,982 - src.llm.client - INFO - [stu:6a8833] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:08:32,996 - src.llm.client - INFO - [stu:6a8833] 📊 2.0s: 768c @381c/s (120ch, ~192t @95t/s)
+2025-12-16 12:08:34,999 - src.llm.client - INFO - [stu:6a8833] 📊 4.0s: 1385c @345c/s (237ch, ~346t @86t/s)
+2025-12-16 12:08:37,005 - src.llm.client - INFO - [stu:6a8833] 📊 6.0s: 1970c @327c/s (348ch, ~492t @82t/s)
+2025-12-16 12:08:39,013 - src.llm.client - INFO - [stu:6a8833] 📊 8.0s: 2589c @322c/s (464ch, ~647t @81t/s)
+2025-12-16 12:08:41,016 - src.llm.client - INFO - [stu:6a8833] 📊 10.0s: 3190c @318c/s (580ch, ~798t @79t/s)
+2025-12-16 12:08:43,033 - src.llm.client - INFO - [stu:6a8833] 📊 12.1s: 3796c @315c/s (695ch, ~949t @79t/s)
+2025-12-16 12:08:45,044 - src.llm.client - INFO - [stu:6a8833] 📊 14.1s: 4344c @309c/s (797ch, ~1086t @77t/s)
+2025-12-16 12:08:47,047 - src.llm.client - INFO - [stu:6a8833] 📊 16.1s: 4828c @301c/s (894ch, ~1207t @75t/s)
+2025-12-16 12:08:47,966 - src.llm.client - INFO - [stu:6a8833] ✓ Done 18.48s: 5060c (~726w @274c/s)
+2025-12-16 12:08:47,968 - src.generate.formats.study_notes - INFO - [COMPLIANT] Study notes generated ✓
+2025-12-16 12:08:47,968 - src.generate.formats.study_notes - INFO -     - Length: 5126 chars, 737 words
+2025-12-16 12:08:47,968 - src.generate.formats.study_notes - INFO -     - Requirements: 3-10 key concepts, max 1200 words
+2025-12-16 12:08:47,968 - src.generate.formats.study_notes - INFO -     - Key concepts: 3
+2025-12-16 12:08:47,968 - src.generate.formats.study_notes - INFO -     - Structure: 3 sections, 3 bullets
+2025-12-16 12:08:47,968 - src.generate.formats.study_notes - INFO - Quality score: 100.0/100 (excellent)
+2025-12-16 12:08:47,970 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 12:08:47,970 - src.generate.orchestration.pipeline - INFO -   → Generating diagrams...
+2025-12-16 12:08:47,971 - src.generate.formats.diagrams - INFO - Generating diagram for: Free Energy Minimization (Foundations of Active Inference)
+2025-12-16 12:08:47,971 - src.llm.client - INFO - [dia:39b5ca] 🚀 dia | m=gemma3:4b | p=5778c | t=120s
+2025-12-16 12:08:47,971 - src.generate.formats.diagrams - INFO - Generating diagram for: Predictive Coding (Foundations of Active Inference)
+2025-12-16 12:08:47,971 - src.generate.formats.diagrams - INFO - Generating diagram for: Bayesian Inference (Foundations of Active Inference)
+2025-12-16 12:08:47,971 - src.generate.formats.diagrams - INFO - Generating diagram for: Perception-Action Loops (Foundations of Active Inference)
+2025-12-16 12:08:47,972 - src.llm.client - INFO - [dia:39b5ca] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:08:47,972 - src.llm.client - INFO - [dia:0b0d07] 🚀 dia | m=gemma3:4b | p=5764c | t=120s
+2025-12-16 12:08:47,972 - src.llm.client - INFO - [dia:55d293] 🚀 dia | m=gemma3:4b | p=5766c | t=120s
+2025-12-16 12:08:47,973 - src.llm.client - INFO - [dia:d11161] 🚀 dia | m=gemma3:4b | p=5776c | t=120s
+2025-12-16 12:08:47,973 - src.llm.client - INFO - [dia:39b5ca] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:08:47,973 - src.llm.client - INFO - [dia:0b0d07] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:08:47,973 - src.llm.client - INFO - [dia:55d293] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:08:47,973 - src.llm.client - INFO - [dia:d11161] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 12:08:47,973 - src.llm.client - INFO - [dia:0b0d07] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:08:47,974 - src.llm.client - INFO - [dia:55d293] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:08:47,974 - src.llm.client - INFO - [dia:d11161] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 12:08:47,977 - src.llm.client - INFO - [dia:d11161] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11085 bytes, prompt=5776 chars
+2025-12-16 12:08:47,977 - src.llm.client - INFO - [dia:d11161] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:08:47,978 - src.llm.client - INFO - [dia:55d293] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11075 bytes, prompt=5766 chars
+2025-12-16 12:08:47,978 - src.llm.client - INFO - [dia:55d293] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:08:47,978 - src.llm.client - INFO - [dia:0b0d07] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11073 bytes, prompt=5764 chars
+2025-12-16 12:08:47,978 - src.llm.client - INFO - [dia:0b0d07] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:08:47,979 - src.llm.client - INFO - [dia:39b5ca] Sending request to Ollama: model=gemma3:4b, operation=diagram, payload=11087 bytes, prompt=5778 chars
+2025-12-16 12:08:47,979 - src.llm.client - INFO - [dia:39b5ca] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 12:08:50,264 - src.llm.request_handler - INFO - [dia:39b5ca] ✓ Done 2.28s
+2025-12-16 12:08:50,269 - src.llm.client - INFO - [dia:39b5ca] ✅ HTTP 200 in 2.29s
+2025-12-16 12:08:50,269 - src.llm.client - INFO - [dia:39b5ca] 📡 Stream active (200)
+2025-12-16 12:08:50,269 - src.llm.client - INFO - [dia:39b5ca] Starting stream parsing, waiting for first chunk...
+2025-12-16 12:08:52,273 - src.llm.client - INFO - [dia:39b5ca] 📊 2.0s: 360c @180c/s (110ch, ~90t @45t/s)
+2025-12-16 12:08:54,284 - src.llm.client - INFO - [dia:39b5ca] 📊 4.0s: 625c @156c/s (203ch, ~156t @39t/s)
+2025-12-16 12:08:55,597 - src.llm.client - INFO - [dia:39b5ca] ✓ Done 7.63s: 768c (~99w @101c/s)
+2025-12-16 12:08:55,601 - src.generate.formats.diagrams - WARNING -   Diagram cleanup for Free Energy Minimization (Foundations of Active Inference):
+2025-12-16 12:08:55,602 - src.generate.formats.diagrams - INFO - [FIXED] Removed markdown code fence ✓
+2025-12-16 12:08:55,602 - src.generate.formats.diagrams - INFO - [FIXED] Removed style command (not supported in all renderers) ✓
+2025-12-16 12:08:55,602 - src.generate.formats.diagrams - INFO - [FIXED] Removed explanatory text after diagram code ✓
+2025-12-16 12:08:55,602 - src.generate.formats.diagrams - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-16 12:08:55,602 - src.generate.formats.diagrams - INFO -     - Length: 515 chars (cleaned: 515 chars)
+2025-12-16 12:08:55,602 - src.generate.formats.diagrams - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 12:08:55,602 - src.generate.formats.diagrams - INFO - [OK] Elements: 35 total (nodes: 15, connections: 20) ✓
+2025-12-16 12:08:55,602 - src.generate.formats.diagrams - INFO -   Cleanup summary: 3 issues fixed (code fences, style commands, etc.)
+2025-12-16 12:08:55,602 - src.generate.formats.diagrams - INFO - Generated diagram: 515 characters

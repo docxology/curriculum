@@ -1,0 +1,103 @@
+{
+  "course_metadata": {
+    "name": "Active Inference for Generative AI: Principles and Applications",
+    "level": "Professional Development / Graduate",
+    "duration_weeks": "Not specified",
+    "total_sessions": 3,
+    "total_modules": 3,
+    "course_template": "active_inference_ai_short",
+    "quality_score": 98.0,
+    "quality_level": "excellent",
+    "quality_validation": {
+      "overlap_count": 3,
+      "progression_issue_count": 0,
+      "balance_issue_count": 0
+    }
+  },
+  "modules": [
+    {
+      "module_id": 1,
+      "module_name": "Foundations of Active Inference",
+      "module_description": "Introduce Active Inference as a unifying framework for adaptive systems, focusing on variational free energy minimization, predictive coding, and Bayesian inference.",
+      "sessions": [
+        {
+          "session_number": 1,
+          "session_title": "Introduction to Active Inference",
+          "subtopics": [
+            "Free Energy Minimization",
+            "Predictive Coding",
+            "Bayesian Inference",
+            "Perception-Action Loops"
+          ],
+          "learning_objectives": [
+            "Understand the core principles of Active Inference",
+            "Describe how Active Inference explains adaptive behavior",
+            "Identify the role of perception and action in generating models of the world"
+          ],
+          "key_concepts": [
+            "Variational Free Energy",
+            "Prior Beliefs",
+            "Posterior Beliefs"
+          ],
+          "rationale": "Establishes the foundational theoretical framework for the course."
+        }
+      ]
+    },
+    {
+      "module_id": 2,
+      "module_name": "Active Inference in Generative AI",
+      "module_description": "Explore the application of Active Inference to contemporary generative models like LLMs and diffusion models, emphasizing precision weighting and exploration-exploitation.",
+      "sessions": [
+        {
+          "session_number": 2,
+          "session_title": "Active Inference and Large Language Models",
+          "subtopics": [
+            "Attention Mechanisms as Predictive Coding",
+            "Precision Weighting",
+            "RLHF as an Active Inference Process",
+            "Model-Based RL"
+          ],
+          "learning_objectives": [
+            "Explain how attention mimics predictive coding",
+            "Understand the role of precision weighting in LLM training",
+            "Relate RLHF to active inference processes"
+          ],
+          "key_concepts": [
+            "Query Vectors",
+            "Context Vectors",
+            "Reward Shaping"
+          ],
+          "rationale": "Connects theoretical principles to practical applications in LLMs."
+        }
+      ]
+    },
+    {
+      "module_id": 3,
+      "module_name": "Advanced Applications & Future Directions",
+      "module_description": "Examine more sophisticated applications of Active Inference, including multi-agent coordination, spatial intelligence, and embodied AI, highlighting challenges and opportunities for future research.",
+      "sessions": [
+        {
+          "session_number": 3,
+          "session_title": "Multi-Agent Coordination & Embodied AI",
+          "subtopics": [
+            "Free Energy Minimization in Multi-Agent Systems",
+            "Spatial Intelligence & World Models",
+            "Robotics and Active Inference",
+            "Emerging Applications"
+          ],
+          "learning_objectives": [
+            "Describe how multiple agents can minimize free energy collectively",
+            "Understand how Active Inference can guide embodied AI",
+            "Identify potential applications in autonomous systems and human-AI collaboration"
+          ],
+          "key_concepts": [
+            "Shared World Models",
+            "Precision Weighting in Multi-Agent Systems",
+            "Grounding Language in Action"
+          ],
+          "rationale": "Addresses advanced applications and future research directions."
+        }
+      ]
+    }
+  ]
+}
