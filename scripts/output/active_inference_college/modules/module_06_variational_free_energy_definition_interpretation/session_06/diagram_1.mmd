@@ -1,0 +1,16 @@
+graph LR
+    A([Start]) --> B{Initial Measurement}
+    B --> C[Calculate Potential Energy]
+    C --> D{Is Potential Energy Sufficient?}
+    D -- Yes --> E[Optimize Parameters]
+    D -- No --> F[Re-evaluate Initial Measurement]
+    F --> B
+    E --> G[Calculate Free Energy]
+    G --> H{Is Free Energy Acceptable?}
+    H -- Yes --> I[Final Result]
+    H -- No --> J[Iterate Optimization]
+    J --> E
+    E --> K{Convergence?}
+    K -- Yes --> I
+    K -- No --> E
+    I --> L([End])

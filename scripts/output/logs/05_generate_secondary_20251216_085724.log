@@ -1,0 +1,506 @@
+2025-12-16 08:57:24,750 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/05_generate_secondary_20251216_085724.log
+2025-12-16 08:57:24,750 - generate_secondary - INFO - 
+2025-12-16 08:57:24,750 - generate_secondary - INFO - 🔬 STAGE 05: SECONDARY MATERIALS (Session-Level Synthesis)
+2025-12-16 08:57:24,750 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:57:24,751 - generate_secondary - INFO - Generating materials PER SESSION (with full session context)
+2025-12-16 08:57:24,751 - generate_secondary - INFO - Reading all content from: [course-specific]/modules/module_XX/session_YY/
+2025-12-16 08:57:24,751 - generate_secondary - INFO - Output structure: [course-specific]/modules/module_XX/session_YY/[type].md
+2025-12-16 08:57:24,751 - generate_secondary - INFO - 
+2025-12-16 08:57:24,751 - generate_secondary - INFO - SECONDARY TYPES GENERATED PER SESSION:
+2025-12-16 08:57:24,751 - generate_secondary - INFO -   1. application.md - Real-world applications and case studies
+2025-12-16 08:57:24,751 - generate_secondary - INFO -   2. extension.md - Advanced topics beyond core curriculum
+2025-12-16 08:57:24,751 - generate_secondary - INFO -   3. visualization.mmd - Additional diagrams and concept maps (Mermaid format)
+2025-12-16 08:57:24,751 - generate_secondary - INFO -   4. integration.md - Cross-module connections and synthesis
+2025-12-16 08:57:24,751 - generate_secondary - INFO -   5. investigation.md - Research questions and experiments
+2025-12-16 08:57:24,751 - generate_secondary - INFO -   6. open_questions.md - Current scientific debates and frontiers
+2025-12-16 08:57:24,751 - generate_secondary - INFO - 
+2025-12-16 08:57:24,751 - generate_secondary - INFO - 
+2025-12-16 08:57:24,751 - generate_secondary - INFO - ⚙️ CONFIGURATION
+2025-12-16 08:57:24,751 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:57:24,751 - generate_secondary - INFO -   • Content Validation: DISABLED
+2025-12-16 08:57:24,751 - generate_secondary - INFO -   • Dry Run: DISABLED
+2025-12-16 08:57:24,751 - generate_secondary - INFO -   • Log File: output/logs/05_generate_secondary_20251216_085724.log
+2025-12-16 08:57:24,751 - generate_secondary - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:57:24,751 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 08:57:24,752 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 08:57:24,767 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 08:57:24,767 - generate_secondary - INFO - Using most recent outline from output/outlines/ or scripts/output/outlines/
+2025-12-16 08:57:24,768 - src.config.loader - INFO - Found most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/active_inference_college/outlines/course_outline_20251216_083317.json
+2025-12-16 08:57:24,768 - src.config.loader - INFO - Found most recent outline: /Users/4d/Documents/GitHub/curriculum/scripts/output/active_inference_college/outlines/course_outline_20251216_083317.json
+2025-12-16 08:57:24,769 - src.config.loader - INFO - Loaded 15 modules from outline: course_outline_20251216_083317.json
+2025-12-16 08:57:24,769 - generate_secondary - INFO - Using course-specific output directory: output/active_inference_college/
+2025-12-16 08:57:24,769 - generate_secondary - INFO - Processing ALL modules
+2025-12-16 08:57:24,769 - generate_secondary - INFO - Processing 15 modules (15 total sessions)
+2025-12-16 08:57:24,769 - generate_secondary - INFO - Secondary types: application, extension, visualization, integration, investigation, open_questions
+2025-12-16 08:57:24,769 - src.llm.client - INFO - Initialized OllamaClient: model=gemma3:4b, url=http://localhost:11434/api/generate
+2025-12-16 08:57:24,770 - generate_secondary - INFO - 
+============================================================
+2025-12-16 08:57:24,770 - generate_secondary - INFO - [1/15] Module 1: Introduction to Bayesian Statistics (1 sessions)
+2025-12-16 08:57:24,770 - generate_secondary - INFO - ============================================================
+2025-12-16 08:57:24,770 - generate_secondary - INFO - 
+  Session 1/15: Probability Basics
+2025-12-16 08:57:24,772 - generate_secondary - INFO - Generating application for session 1: Probability Basics...
+2025-12-16 08:57:24,772 - src.llm.client - INFO - [app:4d463e] 🚀 app | m=gemma3:4b | p=31902c | t=150s
+2025-12-16 08:57:24,772 - src.llm.client - INFO - [app:4d463e] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:57:24,772 - src.llm.client - INFO - [app:4d463e] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:57:24,779 - src.llm.client - INFO - [app:4d463e] Sending request to Ollama: model=gemma3:4b, operation=application, payload=33864 bytes, prompt=31902 chars
+2025-12-16 08:57:24,779 - src.llm.client - INFO - [app:4d463e] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:57:29,511 - src.llm.request_handler - INFO - [app:4d463e] ✓ Done 4.73s
+2025-12-16 08:57:29,511 - src.llm.client - INFO - [app:4d463e] ✅ HTTP 200 in 4.73s
+2025-12-16 08:57:29,511 - src.llm.client - INFO - [app:4d463e] 📡 Stream active (200)
+2025-12-16 08:57:29,511 - src.llm.client - INFO - [app:4d463e] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:57:31,514 - src.llm.client - INFO - [app:4d463e] 📊 2.0s: 785c @392c/s (130ch, ~196t @98t/s)
+2025-12-16 08:57:33,516 - src.llm.client - INFO - [app:4d463e] 📊 4.0s: 1700c @424c/s (264ch, ~425t @106t/s)
+2025-12-16 08:57:35,526 - src.llm.client - INFO - [app:4d463e] 📊 6.0s: 2556c @425c/s (402ch, ~639t @106t/s)
+2025-12-16 08:57:37,534 - src.llm.client - INFO - [app:4d463e] 📊 8.0s: 3370c @420c/s (531ch, ~842t @105t/s)
+2025-12-16 08:57:39,546 - src.llm.client - INFO - [app:4d463e] 📊 10.0s: 4103c @409c/s (654ch, ~1026t @102t/s)
+2025-12-16 08:57:41,551 - src.llm.client - INFO - [app:4d463e] 📊 12.0s: 4838c @402c/s (782ch, ~1210t @100t/s)
+2025-12-16 08:57:43,555 - src.llm.client - INFO - [app:4d463e] 📊 14.0s: 5617c @400c/s (909ch, ~1404t @100t/s)
+2025-12-16 08:57:45,799 - src.llm.client - INFO - [app:4d463e] 📊 16.3s: 6315c @388c/s (1031ch, ~1579t @97t/s)
+2025-12-16 08:57:45,800 - src.llm.client - INFO - [app:4d463e] ✓ Done 21.03s: 6315c (~858w @300c/s)
+2025-12-16 08:57:45,805 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:57:45,806 - generate_secondary - INFO - [COMPLIANT] Application generated ✓
+2025-12-16 08:57:45,806 - generate_secondary - INFO -     - Length: 6304 chars, 856 words
+2025-12-16 08:57:45,806 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 08:57:45,806 - generate_secondary - INFO -     - Applications: 5
+2025-12-16 08:57:45,806 - generate_secondary - INFO -     - Avg words per application: 166
+2025-12-16 08:57:45,806 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_01_introduction_to_bayesian_statistics/session_01/application.md
+2025-12-16 08:57:45,806 - generate_secondary - INFO - Generating extension for session 1: Probability Basics...
+2025-12-16 08:57:45,806 - src.llm.client - INFO - [ext:2dca7c] 🚀 ext | m=gemma3:4b | p=25125c | t=120s
+2025-12-16 08:57:45,806 - src.llm.client - INFO - [ext:2dca7c] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:57:45,807 - src.llm.client - INFO - [ext:2dca7c] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:57:45,808 - src.llm.client - INFO - [ext:2dca7c] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=29942 bytes, prompt=25125 chars
+2025-12-16 08:57:45,808 - src.llm.client - INFO - [ext:2dca7c] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:57:50,660 - src.llm.request_handler - INFO - [ext:2dca7c] ✓ Done 4.85s
+2025-12-16 08:57:50,660 - src.llm.client - INFO - [ext:2dca7c] ✅ HTTP 200 in 4.85s
+2025-12-16 08:57:50,660 - src.llm.client - INFO - [ext:2dca7c] 📡 Stream active (200)
+2025-12-16 08:57:50,660 - src.llm.client - INFO - [ext:2dca7c] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:57:52,671 - src.llm.client - INFO - [ext:2dca7c] 📊 2.0s: 821c @408c/s (133ch, ~205t @102t/s)
+2025-12-16 08:57:54,679 - src.llm.client - INFO - [ext:2dca7c] 📊 4.0s: 1650c @411c/s (264ch, ~412t @103t/s)
+2025-12-16 08:57:56,687 - src.llm.client - INFO - [ext:2dca7c] 📊 6.0s: 2428c @403c/s (399ch, ~607t @101t/s)
+2025-12-16 08:57:58,689 - src.llm.client - INFO - [ext:2dca7c] 📊 8.0s: 3302c @411c/s (534ch, ~826t @103t/s)
+2025-12-16 08:57:59,181 - src.llm.client - INFO - [ext:2dca7c] ✓ Done 13.37s: 3417c (~449w @255c/s)
+2025-12-16 08:57:59,184 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:57:59,185 - generate_secondary - INFO - [COMPLIANT] Extension generated ✓
+2025-12-16 08:57:59,185 - generate_secondary - INFO -     - Length: 3416 chars, 449 words
+2025-12-16 08:57:59,185 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 08:57:59,185 - generate_secondary - INFO -     - Topics: 3
+2025-12-16 08:57:59,185 - generate_secondary - INFO -     - Avg words per topic: 140
+2025-12-16 08:57:59,186 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_01_introduction_to_bayesian_statistics/session_01/extension.md
+2025-12-16 08:57:59,186 - generate_secondary - INFO - Generating visualization for session 1: Probability Basics...
+2025-12-16 08:57:59,186 - src.llm.client - INFO - [viz:f714e4] 🚀 viz | m=gemma3:4b | p=24085c | t=120s
+2025-12-16 08:57:59,187 - src.llm.client - INFO - [viz:f714e4] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:57:59,187 - src.llm.client - INFO - [viz:f714e4] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:57:59,195 - src.llm.client - INFO - [viz:f714e4] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=28224 bytes, prompt=24085 chars
+2025-12-16 08:57:59,195 - src.llm.client - INFO - [viz:f714e4] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:58:04,135 - src.llm.request_handler - INFO - [viz:f714e4] ✓ Done 4.94s
+2025-12-16 08:58:04,135 - src.llm.client - INFO - [viz:f714e4] ✅ HTTP 200 in 4.94s
+2025-12-16 08:58:04,136 - src.llm.client - INFO - [viz:f714e4] 📡 Stream active (200)
+2025-12-16 08:58:04,136 - src.llm.client - INFO - [viz:f714e4] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:58:06,142 - src.llm.client - INFO - [viz:f714e4] 📊 2.0s: 507c @253c/s (133ch, ~127t @63t/s)
+2025-12-16 08:58:07,961 - src.llm.client - INFO - [viz:f714e4] ✓ Done 8.78s: 944c (~136w @108c/s)
+2025-12-16 08:58:07,962 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:58:07,962 - generate_secondary - INFO - [NEEDS REVIEW] Diagram generated ⚠️
+2025-12-16 08:58:07,962 - generate_secondary - INFO -     - Length: 194 chars (cleaned: 194 chars)
+2025-12-16 08:58:07,962 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 08:58:07,962 - generate_secondary - INFO - [CRITICAL] Elements: 12 total (nodes: 6, connections: 6) 🔴
+2025-12-16 08:58:07,962 - generate_secondary - WARNING -     - Mermaid syntax warnings: 1 issues fixed (code fences, style commands)
+2025-12-16 08:58:07,962 - generate_secondary - WARNING -     - Critical issues: 2 structural problems requiring attention
+2025-12-16 08:58:07,962 - generate_secondary - WARNING - [WARNING] Only 6 nodes found (require at least 10, need 4 more - add more nodes to the diagram) ⚠️
+2025-12-16 08:58:07,962 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-16 08:58:07,962 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-16 08:58:07,963 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_01_introduction_to_bayesian_statistics/session_01/visualization.mmd
+2025-12-16 08:58:07,963 - generate_secondary - INFO - Generating integration for session 1: Probability Basics...
+2025-12-16 08:58:07,963 - src.llm.client - INFO - [int:43b564] 🚀 int | m=gemma3:4b | p=25434c | t=150s
+2025-12-16 08:58:07,963 - src.llm.client - INFO - [int:43b564] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:58:07,963 - src.llm.client - INFO - [int:43b564] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:58:07,964 - src.llm.client - INFO - [int:43b564] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=30590 bytes, prompt=25434 chars
+2025-12-16 08:58:07,964 - src.llm.client - INFO - [int:43b564] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:58:12,688 - src.llm.request_handler - INFO - [int:43b564] ✓ Done 4.72s
+2025-12-16 08:58:12,689 - src.llm.client - INFO - [int:43b564] ✅ HTTP 200 in 4.72s
+2025-12-16 08:58:12,689 - src.llm.client - INFO - [int:43b564] 📡 Stream active (200)
+2025-12-16 08:58:12,689 - src.llm.client - INFO - [int:43b564] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:58:14,700 - src.llm.client - INFO - [int:43b564] 📊 2.0s: 761c @378c/s (135ch, ~190t @95t/s)
+2025-12-16 08:58:16,706 - src.llm.client - INFO - [int:43b564] 📊 4.0s: 1544c @384c/s (270ch, ~386t @96t/s)
+2025-12-16 08:58:18,718 - src.llm.client - INFO - [int:43b564] 📊 6.0s: 2351c @390c/s (406ch, ~588t @97t/s)
+2025-12-16 08:58:20,730 - src.llm.client - INFO - [int:43b564] 📊 8.0s: 3119c @388c/s (542ch, ~780t @97t/s)
+2025-12-16 08:58:22,743 - src.llm.client - INFO - [int:43b564] 📊 10.1s: 3866c @385c/s (678ch, ~966t @96t/s)
+2025-12-16 08:58:24,941 - src.llm.client - INFO - [int:43b564] 📊 12.3s: 4496c @367c/s (811ch, ~1124t @92t/s)
+2025-12-16 08:58:24,942 - src.llm.client - INFO - [int:43b564] ✓ Done 16.98s: 4496c (~631w @265c/s)
+2025-12-16 08:58:24,944 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:58:24,945 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-16 08:58:24,945 - generate_secondary - INFO -     - Length: 4495 chars, 631 words
+2025-12-16 08:58:24,945 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-16 08:58:24,945 - generate_secondary - INFO -     - Connections: 14
+2025-12-16 08:58:24,945 - generate_secondary - INFO -     - Structure: 1 sections
+2025-12-16 08:58:24,945 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_01_introduction_to_bayesian_statistics/session_01/integration.md
+2025-12-16 08:58:24,945 - generate_secondary - INFO - Generating investigation for session 1: Probability Basics...
+2025-12-16 08:58:24,945 - src.llm.client - INFO - [inv:428219] 🚀 inv | m=gemma3:4b | p=24347c | t=150s
+2025-12-16 08:58:24,945 - src.llm.client - INFO - [inv:428219] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:58:24,945 - src.llm.client - INFO - [inv:428219] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:58:24,947 - src.llm.client - INFO - [inv:428219] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=28446 bytes, prompt=24347 chars
+2025-12-16 08:58:24,947 - src.llm.client - INFO - [inv:428219] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:58:29,558 - src.llm.request_handler - INFO - [inv:428219] ✓ Done 4.61s
+2025-12-16 08:58:29,559 - src.llm.client - INFO - [inv:428219] ✅ HTTP 200 in 4.61s
+2025-12-16 08:58:29,559 - src.llm.client - INFO - [inv:428219] 📡 Stream active (200)
+2025-12-16 08:58:29,559 - src.llm.client - INFO - [inv:428219] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:58:31,567 - src.llm.client - INFO - [inv:428219] 📊 2.0s: 716c @357c/s (138ch, ~179t @89t/s)
+2025-12-16 08:58:33,570 - src.llm.client - INFO - [inv:428219] 📊 4.0s: 1492c @372c/s (271ch, ~373t @93t/s)
+2025-12-16 08:58:35,579 - src.llm.client - INFO - [inv:428219] 📊 6.0s: 2208c @367c/s (404ch, ~552t @92t/s)
+2025-12-16 08:58:37,584 - src.llm.client - INFO - [inv:428219] 📊 8.0s: 3045c @379c/s (538ch, ~761t @95t/s)
+2025-12-16 08:58:39,594 - src.llm.client - INFO - [inv:428219] 📊 10.0s: 3823c @381c/s (672ch, ~956t @95t/s)
+2025-12-16 08:58:41,602 - src.llm.client - INFO - [inv:428219] 📊 12.0s: 4567c @379c/s (808ch, ~1142t @95t/s)
+2025-12-16 08:58:42,805 - src.llm.client - INFO - [inv:428219] ✓ Done 17.86s: 5030c (~694w @282c/s)
+2025-12-16 08:58:42,807 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:58:42,808 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-16 08:58:42,808 - generate_secondary - INFO -     - Length: 5025 chars, 694 words
+2025-12-16 08:58:42,808 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:58:42,808 - generate_secondary - INFO -     - Research questions: 3
+2025-12-16 08:58:42,808 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:58:42,808 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_01_introduction_to_bayesian_statistics/session_01/investigation.md
+2025-12-16 08:58:42,808 - generate_secondary - INFO - Generating open_questions for session 1: Probability Basics...
+2025-12-16 08:58:42,808 - src.llm.client - INFO - [opq:4a2442] 🚀 opq | m=gemma3:4b | p=24433c | t=150s
+2025-12-16 08:58:42,808 - src.llm.client - INFO - [opq:4a2442] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:58:42,808 - src.llm.client - INFO - [opq:4a2442] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:58:42,810 - src.llm.client - INFO - [opq:4a2442] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=28543 bytes, prompt=24433 chars
+2025-12-16 08:58:42,810 - src.llm.client - INFO - [opq:4a2442] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:58:47,526 - src.llm.request_handler - INFO - [opq:4a2442] ✓ Done 4.72s
+2025-12-16 08:58:47,527 - src.llm.client - INFO - [opq:4a2442] ✅ HTTP 200 in 4.72s
+2025-12-16 08:58:47,527 - src.llm.client - INFO - [opq:4a2442] 📡 Stream active (200)
+2025-12-16 08:58:47,527 - src.llm.client - INFO - [opq:4a2442] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:58:49,534 - src.llm.client - INFO - [opq:4a2442] 📊 2.0s: 771c @384c/s (136ch, ~193t @96t/s)
+2025-12-16 08:58:51,539 - src.llm.client - INFO - [opq:4a2442] 📊 4.0s: 1684c @420c/s (272ch, ~421t @105t/s)
+2025-12-16 08:58:53,541 - src.llm.client - INFO - [opq:4a2442] 📊 6.0s: 2408c @400c/s (408ch, ~602t @100t/s)
+2025-12-16 08:58:53,830 - src.llm.client - INFO - [opq:4a2442] ✓ Done 11.02s: 2452c (~322w @222c/s)
+2025-12-16 08:58:53,831 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:58:53,832 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-16 08:58:53,832 - generate_secondary - INFO -     - Length: 2452 chars, 322 words
+2025-12-16 08:58:53,832 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 08:58:53,832 - generate_secondary - INFO -     - Open questions: 3
+2025-12-16 08:58:53,832 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 08:58:53,832 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_01_introduction_to_bayesian_statistics/session_01/open_questions.md
+2025-12-16 08:58:53,832 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-16 08:58:53,833 - generate_secondary - INFO - 
+============================================================
+2025-12-16 08:58:53,833 - generate_secondary - INFO - [2/15] Module 2: Conditional Probability & Bayes’ Theorem (1 sessions)
+2025-12-16 08:58:53,833 - generate_secondary - INFO - ============================================================
+2025-12-16 08:58:53,833 - generate_secondary - INFO - 
+  Session 2/15: Conditional Probability
+2025-12-16 08:58:53,834 - generate_secondary - INFO - Generating application for session 2: Conditional Probability...
+2025-12-16 08:58:53,834 - src.llm.client - INFO - [app:e4b756] 🚀 app | m=gemma3:4b | p=30477c | t=150s
+2025-12-16 08:58:53,834 - src.llm.client - INFO - [app:e4b756] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:58:53,834 - src.llm.client - INFO - [app:e4b756] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:58:53,836 - src.llm.client - INFO - [app:e4b756] Sending request to Ollama: model=gemma3:4b, operation=application, payload=32490 bytes, prompt=30477 chars
+2025-12-16 08:58:53,836 - src.llm.client - INFO - [app:e4b756] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:58:58,669 - src.llm.request_handler - INFO - [app:e4b756] ✓ Done 4.83s
+2025-12-16 08:58:58,670 - src.llm.client - INFO - [app:e4b756] ✅ HTTP 200 in 4.83s
+2025-12-16 08:58:58,670 - src.llm.client - INFO - [app:e4b756] 📡 Stream active (200)
+2025-12-16 08:58:58,670 - src.llm.client - INFO - [app:e4b756] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:59:00,676 - src.llm.client - INFO - [app:e4b756] 📊 2.0s: 832c @415c/s (132ch, ~208t @104t/s)
+2025-12-16 08:59:02,677 - src.llm.client - INFO - [app:e4b756] 📊 4.0s: 1722c @430c/s (267ch, ~430t @107t/s)
+2025-12-16 08:59:04,680 - src.llm.client - INFO - [app:e4b756] 📊 6.0s: 2609c @434c/s (401ch, ~652t @109t/s)
+2025-12-16 08:59:06,689 - src.llm.client - INFO - [app:e4b756] 📊 8.0s: 3463c @432c/s (533ch, ~866t @108t/s)
+2025-12-16 08:59:08,700 - src.llm.client - INFO - [app:e4b756] 📊 10.0s: 4288c @428c/s (667ch, ~1072t @107t/s)
+2025-12-16 08:59:10,701 - src.llm.client - INFO - [app:e4b756] 📊 12.0s: 5064c @421c/s (792ch, ~1266t @105t/s)
+2025-12-16 08:59:11,706 - src.llm.client - INFO - [app:e4b756] ✓ Done 17.87s: 5373c (~692w @301c/s)
+2025-12-16 08:59:11,708 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:59:11,708 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-16 08:59:11,708 - generate_secondary - INFO -     - Length: 5361 chars, 690 words
+2025-12-16 08:59:11,708 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 08:59:11,708 - generate_secondary - INFO -     - Applications: 5
+2025-12-16 08:59:11,708 - generate_secondary - INFO -     - Avg words per application: 133
+2025-12-16 08:59:11,708 - generate_secondary - WARNING - [WARNING] Application 2 has 143 words (require 150-200, need 7 more words) ⚠️
+2025-12-16 08:59:11,708 - generate_secondary - WARNING - [WARNING] Application 3 has 126 words (require 150-200, need 24 more words) ⚠️
+2025-12-16 08:59:11,708 - generate_secondary - WARNING - [WARNING] Application 4 has 123 words (require 150-200, need 27 more words) ⚠️
+2025-12-16 08:59:11,708 - generate_secondary - WARNING - [WARNING] Application 5 has 112 words (require 150-200, need 38 more words) ⚠️
+2025-12-16 08:59:11,709 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_02_conditional_probability_bayes_theorem/session_02/application.md
+2025-12-16 08:59:11,709 - generate_secondary - INFO - Generating extension for session 2: Conditional Probability...
+2025-12-16 08:59:11,709 - src.llm.client - INFO - [ext:81d5fc] 🚀 ext | m=gemma3:4b | p=23700c | t=120s
+2025-12-16 08:59:11,709 - src.llm.client - INFO - [ext:81d5fc] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:59:11,709 - src.llm.client - INFO - [ext:81d5fc] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:59:11,711 - src.llm.client - INFO - [ext:81d5fc] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=28568 bytes, prompt=23700 chars
+2025-12-16 08:59:11,711 - src.llm.client - INFO - [ext:81d5fc] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:59:16,537 - src.llm.request_handler - INFO - [ext:81d5fc] ✓ Done 4.83s
+2025-12-16 08:59:16,538 - src.llm.client - INFO - [ext:81d5fc] ✅ HTTP 200 in 4.83s
+2025-12-16 08:59:16,538 - src.llm.client - INFO - [ext:81d5fc] 📡 Stream active (200)
+2025-12-16 08:59:16,538 - src.llm.client - INFO - [ext:81d5fc] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:59:18,552 - src.llm.client - INFO - [ext:81d5fc] 📊 2.0s: 841c @418c/s (135ch, ~210t @104t/s)
+2025-12-16 08:59:20,557 - src.llm.client - INFO - [ext:81d5fc] 📊 4.0s: 1598c @398c/s (267ch, ~400t @99t/s)
+2025-12-16 08:59:22,561 - src.llm.client - INFO - [ext:81d5fc] 📊 6.0s: 2405c @399c/s (399ch, ~601t @100t/s)
+2025-12-16 08:59:24,572 - src.llm.client - INFO - [ext:81d5fc] 📊 8.0s: 3188c @397c/s (530ch, ~797t @99t/s)
+2025-12-16 08:59:26,586 - src.llm.client - INFO - [ext:81d5fc] 📊 10.0s: 4017c @400c/s (662ch, ~1004t @100t/s)
+2025-12-16 08:59:27,295 - src.llm.client - INFO - [ext:81d5fc] ✓ Done 15.59s: 4179c (~548w @268c/s)
+2025-12-16 08:59:27,296 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 08:59:27,297 - generate_secondary - INFO - [NEEDS REVIEW] Extension generated ⚠️
+2025-12-16 08:59:27,297 - generate_secondary - INFO -     - Length: 4178 chars, 548 words
+2025-12-16 08:59:27,297 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 08:59:27,297 - generate_secondary - INFO -     - Topics: 3
+2025-12-16 08:59:27,297 - generate_secondary - INFO -     - Avg words per topic: 176
+2025-12-16 08:59:27,297 - generate_secondary - WARNING - [WARNING] Topic 1 has 165 words (exceeds 150 by 15 words - consider condensing) ⚠️
+2025-12-16 08:59:27,297 - generate_secondary - WARNING - [WARNING] Topic 2 has 155 words (exceeds 150 by 5 words - consider condensing) ⚠️
+2025-12-16 08:59:27,297 - generate_secondary - WARNING - [WARNING] Topic 3 has 207 words (exceeds 150 by 57 words - consider condensing) ⚠️
+2025-12-16 08:59:27,297 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_02_conditional_probability_bayes_theorem/session_02/extension.md
+2025-12-16 08:59:27,297 - generate_secondary - INFO - Generating visualization for session 2: Conditional Probability...
+2025-12-16 08:59:27,297 - src.llm.client - INFO - [viz:0afc65] 🚀 viz | m=gemma3:4b | p=22660c | t=120s
+2025-12-16 08:59:27,297 - src.llm.client - INFO - [viz:0afc65] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 08:59:27,297 - src.llm.client - INFO - [viz:0afc65] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:59:27,299 - src.llm.client - INFO - [viz:0afc65] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=26850 bytes, prompt=22660 chars
+2025-12-16 08:59:27,299 - src.llm.client - INFO - [viz:0afc65] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 08:59:32,087 - src.llm.request_handler - INFO - [viz:0afc65] ✓ Done 4.79s
+2025-12-16 08:59:32,088 - src.llm.client - INFO - [viz:0afc65] ✅ HTTP 200 in 4.79s
+2025-12-16 08:59:32,089 - src.llm.client - INFO - [viz:0afc65] 📡 Stream active (200)
+2025-12-16 08:59:32,089 - src.llm.client - INFO - [viz:0afc65] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:59:34,097 - src.llm.client - INFO - [viz:0afc65] 📊 2.0s: 494c @246c/s (134ch, ~124t @61t/s)
+2025-12-16 08:59:36,098 - src.llm.client - INFO - [viz:0afc65] 📊 4.0s: 916c @228c/s (268ch, ~229t @57t/s)
+2025-12-16 08:59:37,535 - src.llm.client - INFO - [viz:0afc65] ✓ Done 10.24s: 1297c (~202w @127c/s)
+2025-12-16 08:59:37,536 - src.generate.processors.cleanup - INFO - Cleanup complete: 3 issues before, 0 issues after
+2025-12-16 08:59:37,536 - generate_secondary - INFO - [COMPLIANT] Diagram generated ✓
+2025-12-16 08:59:37,536 - generate_secondary - INFO -     - Length: 714 chars (cleaned: 714 chars)
+2025-12-16 08:59:37,536 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 08:59:37,536 - generate_secondary - INFO - [OK] Elements: 48 total (nodes: 16, connections: 32) ✓
+2025-12-16 08:59:37,536 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_02_conditional_probability_bayes_theorem/session_02/visualization.mmd
+2025-12-16 08:59:37,536 - generate_secondary - INFO - Generating integration for session 2: Conditional Probability...
+2025-12-16 08:59:37,536 - src.llm.client - INFO - [int:7764d7] 🚀 int | m=gemma3:4b | p=24009c | t=150s
+2025-12-16 08:59:37,537 - src.llm.client - INFO - [int:7764d7] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:59:37,537 - src.llm.client - INFO - [int:7764d7] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:59:37,538 - src.llm.client - INFO - [int:7764d7] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=29216 bytes, prompt=24009 chars
+2025-12-16 08:59:37,538 - src.llm.client - INFO - [int:7764d7] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:59:42,288 - src.llm.request_handler - INFO - [int:7764d7] ✓ Done 4.75s
+2025-12-16 08:59:42,288 - src.llm.client - INFO - [int:7764d7] ✅ HTTP 200 in 4.75s
+2025-12-16 08:59:42,288 - src.llm.client - INFO - [int:7764d7] 📡 Stream active (200)
+2025-12-16 08:59:42,288 - src.llm.client - INFO - [int:7764d7] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:59:44,300 - src.llm.client - INFO - [int:7764d7] 📊 2.0s: 815c @405c/s (135ch, ~204t @101t/s)
+2025-12-16 08:59:46,304 - src.llm.client - INFO - [int:7764d7] 📊 4.0s: 1639c @408c/s (269ch, ~410t @102t/s)
+2025-12-16 08:59:48,306 - src.llm.client - INFO - [int:7764d7] 📊 6.0s: 2352c @391c/s (403ch, ~588t @98t/s)
+2025-12-16 08:59:50,078 - src.llm.client - INFO - [int:7764d7] ✓ Done 12.54s: 2779c (~385w @222c/s)
+2025-12-16 08:59:50,080 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 08:59:50,080 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-16 08:59:50,080 - generate_secondary - INFO -     - Length: 2766 chars, 383 words
+2025-12-16 08:59:50,080 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-16 08:59:50,080 - generate_secondary - INFO -     - Connections: 13
+2025-12-16 08:59:50,080 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-16 08:59:50,080 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_02_conditional_probability_bayes_theorem/session_02/integration.md
+2025-12-16 08:59:50,080 - generate_secondary - INFO - Generating investigation for session 2: Conditional Probability...
+2025-12-16 08:59:50,080 - src.llm.client - INFO - [inv:17346f] 🚀 inv | m=gemma3:4b | p=22922c | t=150s
+2025-12-16 08:59:50,080 - src.llm.client - INFO - [inv:17346f] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 08:59:50,080 - src.llm.client - INFO - [inv:17346f] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:59:50,082 - src.llm.client - INFO - [inv:17346f] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=27072 bytes, prompt=22922 chars
+2025-12-16 08:59:50,082 - src.llm.client - INFO - [inv:17346f] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 08:59:54,834 - src.llm.request_handler - INFO - [inv:17346f] ✓ Done 4.75s
+2025-12-16 08:59:54,834 - src.llm.client - INFO - [inv:17346f] ✅ HTTP 200 in 4.75s
+2025-12-16 08:59:54,834 - src.llm.client - INFO - [inv:17346f] 📡 Stream active (200)
+2025-12-16 08:59:54,835 - src.llm.client - INFO - [inv:17346f] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:59:56,848 - src.llm.client - INFO - [inv:17346f] 📊 2.0s: 694c @345c/s (135ch, ~174t @86t/s)
+2025-12-16 08:59:58,852 - src.llm.client - INFO - [inv:17346f] 📊 4.0s: 1437c @358c/s (269ch, ~359t @89t/s)
+2025-12-16 09:00:00,860 - src.llm.client - INFO - [inv:17346f] 📊 6.0s: 2188c @363c/s (404ch, ~547t @91t/s)
+2025-12-16 09:00:02,861 - src.llm.client - INFO - [inv:17346f] 📊 8.0s: 2973c @370c/s (539ch, ~743t @93t/s)
+2025-12-16 09:00:04,873 - src.llm.client - INFO - [inv:17346f] 📊 10.0s: 3755c @374c/s (674ch, ~939t @94t/s)
+2025-12-16 09:00:06,447 - src.llm.client - INFO - [inv:17346f] ✓ Done 16.37s: 4124c (~546w @252c/s)
+2025-12-16 09:00:06,449 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 09:00:06,449 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-16 09:00:06,449 - generate_secondary - INFO -     - Length: 4119 chars, 546 words
+2025-12-16 09:00:06,449 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 09:00:06,449 - generate_secondary - INFO -     - Research questions: 3
+2025-12-16 09:00:06,449 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 09:00:06,449 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_02_conditional_probability_bayes_theorem/session_02/investigation.md
+2025-12-16 09:00:06,449 - generate_secondary - INFO - Generating open_questions for session 2: Conditional Probability...
+2025-12-16 09:00:06,449 - src.llm.client - INFO - [opq:66380c] 🚀 opq | m=gemma3:4b | p=23008c | t=150s
+2025-12-16 09:00:06,449 - src.llm.client - INFO - [opq:66380c] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 09:00:06,449 - src.llm.client - INFO - [opq:66380c] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 09:00:06,451 - src.llm.client - INFO - [opq:66380c] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=27169 bytes, prompt=23008 chars
+2025-12-16 09:00:06,451 - src.llm.client - INFO - [opq:66380c] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 09:00:11,197 - src.llm.request_handler - INFO - [opq:66380c] ✓ Done 4.75s
+2025-12-16 09:00:11,199 - src.llm.client - INFO - [opq:66380c] ✅ HTTP 200 in 4.75s
+2025-12-16 09:00:11,199 - src.llm.client - INFO - [opq:66380c] 📡 Stream active (200)
+2025-12-16 09:00:11,199 - src.llm.client - INFO - [opq:66380c] Starting stream parsing, waiting for first chunk...
+2025-12-16 09:00:13,200 - src.llm.client - INFO - [opq:66380c] 📊 2.0s: 831c @415c/s (135ch, ~208t @104t/s)
+2025-12-16 09:00:15,214 - src.llm.client - INFO - [opq:66380c] 📊 4.0s: 1619c @403c/s (271ch, ~405t @101t/s)
+2025-12-16 09:00:16,626 - src.llm.client - INFO - [opq:66380c] ✓ Done 10.18s: 2139c (~277w @210c/s)
+2025-12-16 09:00:16,628 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 09:00:16,628 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-16 09:00:16,628 - generate_secondary - INFO -     - Length: 2138 chars, 277 words
+2025-12-16 09:00:16,628 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 09:00:16,628 - generate_secondary - INFO -     - Open questions: 3
+2025-12-16 09:00:16,628 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 09:00:16,628 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_02_conditional_probability_bayes_theorem/session_02/open_questions.md
+2025-12-16 09:00:16,628 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-16 09:00:16,628 - generate_secondary - INFO - 
+============================================================
+2025-12-16 09:00:16,628 - generate_secondary - INFO - [3/15] Module 3: Bayes’ Theorem – Derivation & Intuition (1 sessions)
+2025-12-16 09:00:16,628 - generate_secondary - INFO - ============================================================
+2025-12-16 09:00:16,628 - generate_secondary - INFO - 
+  Session 3/15: Bayes' Theorem Derivation
+2025-12-16 09:00:16,630 - generate_secondary - INFO - Generating application for session 3: Bayes' Theorem Derivation...
+2025-12-16 09:00:16,630 - src.llm.client - INFO - [app:35fde0] 🚀 app | m=gemma3:4b | p=29826c | t=150s
+2025-12-16 09:00:16,630 - src.llm.client - INFO - [app:35fde0] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 09:00:16,630 - src.llm.client - INFO - [app:35fde0] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 09:00:16,631 - src.llm.client - INFO - [app:35fde0] Sending request to Ollama: model=gemma3:4b, operation=application, payload=32154 bytes, prompt=29826 chars
+2025-12-16 09:00:16,631 - src.llm.client - INFO - [app:35fde0] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 09:00:21,445 - src.llm.request_handler - INFO - [app:35fde0] ✓ Done 4.81s
+2025-12-16 09:00:21,445 - src.llm.client - INFO - [app:35fde0] ✅ HTTP 200 in 4.81s
+2025-12-16 09:00:21,445 - src.llm.client - INFO - [app:35fde0] 📡 Stream active (200)
+2025-12-16 09:00:21,446 - src.llm.client - INFO - [app:35fde0] Starting stream parsing, waiting for first chunk...
+2025-12-16 09:00:23,457 - src.llm.client - INFO - [app:35fde0] 📊 2.0s: 800c @398c/s (132ch, ~200t @99t/s)
+2025-12-16 09:00:25,466 - src.llm.client - INFO - [app:35fde0] 📊 4.0s: 1687c @420c/s (263ch, ~422t @105t/s)
+2025-12-16 09:00:27,475 - src.llm.client - INFO - [app:35fde0] 📊 6.0s: 2532c @420c/s (396ch, ~633t @105t/s)
+2025-12-16 09:00:29,488 - src.llm.client - INFO - [app:35fde0] 📊 8.0s: 3284c @408c/s (529ch, ~821t @102t/s)
+2025-12-16 09:00:31,494 - src.llm.client - INFO - [app:35fde0] 📊 10.0s: 4114c @409c/s (660ch, ~1028t @102t/s)
+2025-12-16 09:00:33,509 - src.llm.client - INFO - [app:35fde0] 📊 12.1s: 4953c @411c/s (793ch, ~1238t @103t/s)
+2025-12-16 09:00:35,736 - src.llm.client - INFO - [app:35fde0] 📊 14.3s: 5711c @400c/s (915ch, ~1428t @100t/s)
+2025-12-16 09:00:35,737 - src.llm.client - INFO - [app:35fde0] ✓ Done 19.11s: 5711c (~757w @299c/s)
+2025-12-16 09:00:35,739 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 09:00:35,739 - generate_secondary - INFO - [NEEDS REVIEW] Application generated ⚠️
+2025-12-16 09:00:35,739 - generate_secondary - INFO -     - Length: 5711 chars, 757 words
+2025-12-16 09:00:35,739 - generate_secondary - INFO -     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
+2025-12-16 09:00:35,739 - generate_secondary - INFO -     - Applications: 5
+2025-12-16 09:00:35,739 - generate_secondary - INFO -     - Avg words per application: 145
+2025-12-16 09:00:35,739 - generate_secondary - WARNING - [WARNING] Application 1 has 146 words (require 150-200, need 4 more words) ⚠️
+2025-12-16 09:00:35,739 - generate_secondary - WARNING - [WARNING] Application 4 has 135 words (require 150-200, need 15 more words) ⚠️
+2025-12-16 09:00:35,739 - generate_secondary - WARNING - [WARNING] Application 5 has 132 words (require 150-200, need 18 more words) ⚠️
+2025-12-16 09:00:35,739 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_03_bayes_theorem_derivation_intuition/session_03/application.md
+2025-12-16 09:00:35,739 - generate_secondary - INFO - Generating extension for session 3: Bayes' Theorem Derivation...
+2025-12-16 09:00:35,740 - src.llm.client - INFO - [ext:e42ced] 🚀 ext | m=gemma3:4b | p=23049c | t=120s
+2025-12-16 09:00:35,740 - src.llm.client - INFO - [ext:e42ced] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 09:00:35,740 - src.llm.client - INFO - [ext:e42ced] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 09:00:35,741 - src.llm.client - INFO - [ext:e42ced] Sending request to Ollama: model=gemma3:4b, operation=extension, payload=28232 bytes, prompt=23049 chars
+2025-12-16 09:00:35,741 - src.llm.client - INFO - [ext:e42ced] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 09:00:40,595 - src.llm.request_handler - INFO - [ext:e42ced] ✓ Done 4.85s
+2025-12-16 09:00:40,596 - src.llm.client - INFO - [ext:e42ced] ✅ HTTP 200 in 4.85s
+2025-12-16 09:00:40,596 - src.llm.client - INFO - [ext:e42ced] 📡 Stream active (200)
+2025-12-16 09:00:40,596 - src.llm.client - INFO - [ext:e42ced] Starting stream parsing, waiting for first chunk...
+2025-12-16 09:00:42,598 - src.llm.client - INFO - [ext:e42ced] 📊 2.0s: 846c @423c/s (132ch, ~212t @106t/s)
+2025-12-16 09:00:44,600 - src.llm.client - INFO - [ext:e42ced] 📊 4.0s: 1671c @417c/s (267ch, ~418t @104t/s)
+2025-12-16 09:00:46,613 - src.llm.client - INFO - [ext:e42ced] 📊 6.0s: 2443c @406c/s (402ch, ~611t @101t/s)
+2025-12-16 09:00:48,626 - src.llm.client - INFO - [ext:e42ced] 📊 8.0s: 3281c @409c/s (537ch, ~820t @102t/s)
+2025-12-16 09:00:49,940 - src.llm.client - INFO - [ext:e42ced] ✓ Done 14.20s: 3734c (~495w @263c/s)
+2025-12-16 09:00:49,941 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 09:00:49,941 - generate_secondary - INFO - [NEEDS REVIEW] Extension generated ⚠️
+2025-12-16 09:00:49,941 - generate_secondary - INFO -     - Length: 3733 chars, 495 words
+2025-12-16 09:00:49,941 - generate_secondary - INFO -     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
+2025-12-16 09:00:49,941 - generate_secondary - INFO -     - Topics: 3
+2025-12-16 09:00:49,941 - generate_secondary - INFO -     - Avg words per topic: 158
+2025-12-16 09:00:49,941 - generate_secondary - WARNING - [WARNING] Topic 2 has 161 words (exceeds 150 by 11 words - consider condensing) ⚠️
+2025-12-16 09:00:49,941 - generate_secondary - WARNING - [WARNING] Topic 3 has 166 words (exceeds 150 by 16 words - consider condensing) ⚠️
+2025-12-16 09:00:49,942 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_03_bayes_theorem_derivation_intuition/session_03/extension.md
+2025-12-16 09:00:49,942 - generate_secondary - INFO - Generating visualization for session 3: Bayes' Theorem Derivation...
+2025-12-16 09:00:49,942 - src.llm.client - INFO - [viz:b5e62d] 🚀 viz | m=gemma3:4b | p=22009c | t=120s
+2025-12-16 09:00:49,942 - src.llm.client - INFO - [viz:b5e62d] Timeout configuration: connect=5s, read=120s (total limit: 120s)
+2025-12-16 09:00:49,942 - src.llm.client - INFO - [viz:b5e62d] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 09:00:49,943 - src.llm.client - INFO - [viz:b5e62d] Sending request to Ollama: model=gemma3:4b, operation=visualization, payload=26514 bytes, prompt=22009 chars
+2025-12-16 09:00:49,943 - src.llm.client - INFO - [viz:b5e62d] Waiting for HTTP response (connect timeout: 5s, read timeout: 120s)...
+2025-12-16 09:00:54,691 - src.llm.request_handler - INFO - [viz:b5e62d] ✓ Done 4.75s
+2025-12-16 09:00:54,691 - src.llm.client - INFO - [viz:b5e62d] ✅ HTTP 200 in 4.75s
+2025-12-16 09:00:54,691 - src.llm.client - INFO - [viz:b5e62d] 📡 Stream active (200)
+2025-12-16 09:00:54,691 - src.llm.client - INFO - [viz:b5e62d] Starting stream parsing, waiting for first chunk...
+2025-12-16 09:00:56,694 - src.llm.client - INFO - [viz:b5e62d] 📊 2.0s: 535c @267c/s (131ch, ~134t @67t/s)
+2025-12-16 09:00:58,699 - src.llm.client - INFO - [viz:b5e62d] 📊 4.0s: 1083c @270c/s (264ch, ~271t @68t/s)
+2025-12-16 09:01:00,699 - src.llm.client - INFO - [viz:b5e62d] 📊 6.0s: 1529c @255c/s (397ch, ~382t @64t/s)
+2025-12-16 09:01:02,711 - src.llm.client - INFO - [viz:b5e62d] 📊 8.0s: 2130c @266c/s (531ch, ~532t @66t/s)
+2025-12-16 09:01:04,719 - src.llm.client - INFO - [viz:b5e62d] 📊 10.0s: 2798c @279c/s (665ch, ~700t @70t/s)
+2025-12-16 09:01:05,155 - src.llm.client - INFO - [viz:b5e62d] ✓ Done 15.21s: 2878c (~426w @189c/s)
+2025-12-16 09:01:05,156 - src.generate.processors.cleanup - INFO - Cleanup complete: 3 issues before, 0 issues after
+2025-12-16 09:01:05,156 - generate_secondary - INFO - [NEEDS REVIEW] Diagram generated ⚠️
+2025-12-16 09:01:05,156 - generate_secondary - INFO -     - Length: 258 chars (cleaned: 258 chars)
+2025-12-16 09:01:05,156 - generate_secondary - INFO -     - Requirements: min 6 diagram elements
+2025-12-16 09:01:05,156 - generate_secondary - INFO - [CRITICAL] Elements: 4 total (nodes: 4, connections: 0) 🔴
+2025-12-16 09:01:05,156 - generate_secondary - WARNING -     - Mermaid syntax warnings: 2 issues fixed (code fences, style commands)
+2025-12-16 09:01:05,156 - generate_secondary - WARNING -     - Critical issues: 5 structural problems requiring attention
+2025-12-16 09:01:05,156 - generate_secondary - WARNING - [WARNING] Missing diagram type declaration (graph/flowchart/etc.) - add 'graph TD' or 'graph LR' at the start ⚠️
+2025-12-16 09:01:05,156 - generate_secondary - WARNING - [WARNING] Only 6 nodes found (require at least 10, need 4 more - add more nodes to the diagram) ⚠️
+2025-12-16 09:01:05,156 - generate_secondary - WARNING - [WARNING] Only 4 diagram elements found (require at least 6, need 2 more - add nodes and connections) ⚠️
+2025-12-16 09:01:05,156 - generate_secondary - INFO -     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
+2025-12-16 09:01:05,156 - generate_secondary - INFO -     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
+2025-12-16 09:01:05,156 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_03_bayes_theorem_derivation_intuition/session_03/visualization.mmd
+2025-12-16 09:01:05,156 - generate_secondary - INFO - Generating integration for session 3: Bayes' Theorem Derivation...
+2025-12-16 09:01:05,156 - src.llm.client - INFO - [int:63955d] 🚀 int | m=gemma3:4b | p=23358c | t=150s
+2025-12-16 09:01:05,156 - src.llm.client - INFO - [int:63955d] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 09:01:05,156 - src.llm.client - INFO - [int:63955d] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 09:01:05,158 - src.llm.client - INFO - [int:63955d] Sending request to Ollama: model=gemma3:4b, operation=integration, payload=28880 bytes, prompt=23358 chars
+2025-12-16 09:01:05,158 - src.llm.client - INFO - [int:63955d] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 09:01:09,924 - src.llm.request_handler - INFO - [int:63955d] ✓ Done 4.77s
+2025-12-16 09:01:09,924 - src.llm.client - INFO - [int:63955d] ✅ HTTP 200 in 4.77s
+2025-12-16 09:01:09,924 - src.llm.client - INFO - [int:63955d] 📡 Stream active (200)
+2025-12-16 09:01:09,927 - src.llm.client - INFO - [int:63955d] Starting stream parsing, waiting for first chunk...
+2025-12-16 09:01:11,938 - src.llm.client - INFO - [int:63955d] 📊 2.0s: 752c @374c/s (134ch, ~188t @94t/s)
+2025-12-16 09:01:13,938 - src.llm.client - INFO - [int:63955d] 📊 4.0s: 1546c @385c/s (267ch, ~386t @96t/s)
+2025-12-16 09:01:15,948 - src.llm.client - INFO - [int:63955d] 📊 6.0s: 2379c @395c/s (401ch, ~595t @99t/s)
+2025-12-16 09:01:17,962 - src.llm.client - INFO - [int:63955d] 📊 8.0s: 3147c @392c/s (535ch, ~787t @98t/s)
+2025-12-16 09:01:19,962 - src.llm.client - INFO - [int:63955d] 📊 10.0s: 3960c @395c/s (669ch, ~990t @99t/s)
+2025-12-16 09:01:21,963 - src.llm.client - INFO - [int:63955d] 📊 12.0s: 4698c @390c/s (803ch, ~1174t @98t/s)
+2025-12-16 09:01:23,975 - src.llm.client - INFO - [int:63955d] 📊 14.0s: 5146c @366c/s (937ch, ~1286t @92t/s)
+2025-12-16 09:01:24,736 - src.llm.client - INFO - [int:63955d] ✓ Done 19.58s: 5261c (~722w @269c/s)
+2025-12-16 09:01:24,738 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 09:01:24,739 - generate_secondary - INFO - [COMPLIANT] Integration generated ✓
+2025-12-16 09:01:24,739 - generate_secondary - INFO -     - Length: 5237 chars, 720 words
+2025-12-16 09:01:24,739 - generate_secondary - INFO -     - Requirements: min 3 connections, max 1000 words
+2025-12-16 09:01:24,739 - generate_secondary - INFO -     - Connections: 41
+2025-12-16 09:01:24,739 - generate_secondary - INFO -     - Structure: 0 sections
+2025-12-16 09:01:24,739 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_03_bayes_theorem_derivation_intuition/session_03/integration.md
+2025-12-16 09:01:24,739 - generate_secondary - INFO - Generating investigation for session 3: Bayes' Theorem Derivation...
+2025-12-16 09:01:24,739 - src.llm.client - INFO - [inv:b7e5b9] 🚀 inv | m=gemma3:4b | p=22271c | t=150s
+2025-12-16 09:01:24,739 - src.llm.client - INFO - [inv:b7e5b9] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 09:01:24,739 - src.llm.client - INFO - [inv:b7e5b9] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 09:01:24,741 - src.llm.client - INFO - [inv:b7e5b9] Sending request to Ollama: model=gemma3:4b, operation=investigation, payload=26736 bytes, prompt=22271 chars
+2025-12-16 09:01:24,741 - src.llm.client - INFO - [inv:b7e5b9] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 09:01:29,531 - src.llm.request_handler - INFO - [inv:b7e5b9] ✓ Done 4.79s
+2025-12-16 09:01:29,533 - src.llm.client - INFO - [inv:b7e5b9] ✅ HTTP 200 in 4.79s
+2025-12-16 09:01:29,533 - src.llm.client - INFO - [inv:b7e5b9] 📡 Stream active (200)
+2025-12-16 09:01:29,533 - src.llm.client - INFO - [inv:b7e5b9] Starting stream parsing, waiting for first chunk...
+2025-12-16 09:01:31,538 - src.llm.client - INFO - [inv:b7e5b9] 📊 2.0s: 690c @344c/s (135ch, ~172t @86t/s)
+2025-12-16 09:01:33,542 - src.llm.client - INFO - [inv:b7e5b9] 📊 4.0s: 1360c @339c/s (270ch, ~340t @85t/s)
+2025-12-16 09:01:35,556 - src.llm.client - INFO - [inv:b7e5b9] 📊 6.0s: 2048c @340c/s (404ch, ~512t @85t/s)
+2025-12-16 09:01:37,557 - src.llm.client - INFO - [inv:b7e5b9] 📊 8.0s: 2662c @332c/s (537ch, ~666t @83t/s)
+2025-12-16 09:01:39,564 - src.llm.client - INFO - [inv:b7e5b9] 📊 10.0s: 3398c @339c/s (671ch, ~850t @85t/s)
+2025-12-16 09:01:41,577 - src.llm.client - INFO - [inv:b7e5b9] 📊 12.0s: 4190c @348c/s (805ch, ~1048t @87t/s)
+2025-12-16 09:01:43,586 - src.llm.client - INFO - [inv:b7e5b9] 📊 14.1s: 4883c @347c/s (940ch, ~1221t @87t/s)
+2025-12-16 09:01:45,600 - src.llm.client - INFO - [inv:b7e5b9] 📊 16.1s: 5699c @355c/s (1074ch, ~1425t @89t/s)
+2025-12-16 09:01:46,614 - src.llm.client - INFO - [inv:b7e5b9] ✓ Done 21.87s: 5962c (~868w @273c/s)
+2025-12-16 09:01:46,616 - src.generate.processors.cleanup - INFO - Cleanup complete: 1 issues before, 0 issues after
+2025-12-16 09:01:46,616 - generate_secondary - INFO - [COMPLIANT] Investigation generated ✓
+2025-12-16 09:01:46,616 - generate_secondary - INFO -     - Length: 5948 chars, 866 words
+2025-12-16 09:01:46,616 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 09:01:46,616 - generate_secondary - INFO -     - Research questions: 3
+2025-12-16 09:01:46,616 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 09:01:46,616 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_03_bayes_theorem_derivation_intuition/session_03/investigation.md
+2025-12-16 09:01:46,616 - generate_secondary - INFO - Generating open_questions for session 3: Bayes' Theorem Derivation...
+2025-12-16 09:01:46,616 - src.llm.client - INFO - [opq:3c4cf1] 🚀 opq | m=gemma3:4b | p=22357c | t=150s
+2025-12-16 09:01:46,617 - src.llm.client - INFO - [opq:3c4cf1] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 09:01:46,617 - src.llm.client - INFO - [opq:3c4cf1] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 09:01:46,618 - src.llm.client - INFO - [opq:3c4cf1] Sending request to Ollama: model=gemma3:4b, operation=open_questions, payload=26833 bytes, prompt=22357 chars
+2025-12-16 09:01:46,618 - src.llm.client - INFO - [opq:3c4cf1] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 09:01:51,402 - src.llm.request_handler - INFO - [opq:3c4cf1] ✓ Done 4.78s
+2025-12-16 09:01:51,403 - src.llm.client - INFO - [opq:3c4cf1] ✅ HTTP 200 in 4.78s
+2025-12-16 09:01:51,403 - src.llm.client - INFO - [opq:3c4cf1] 📡 Stream active (200)
+2025-12-16 09:01:51,403 - src.llm.client - INFO - [opq:3c4cf1] Starting stream parsing, waiting for first chunk...
+2025-12-16 09:01:53,408 - src.llm.client - INFO - [opq:3c4cf1] 📊 2.0s: 690c @345c/s (117ch, ~172t @86t/s)
+2025-12-16 09:01:55,420 - src.llm.client - INFO - [opq:3c4cf1] 📊 4.0s: 1427c @355c/s (244ch, ~357t @89t/s)
+2025-12-16 09:01:57,399 - src.llm.client - INFO - [opq:3c4cf1] ✓ Done 10.78s: 2054c (~272w @190c/s)
+2025-12-16 09:01:57,400 - src.generate.processors.cleanup - INFO - Cleanup complete: 0 issues before, 0 issues after
+2025-12-16 09:01:57,400 - generate_secondary - INFO - [COMPLIANT] Open questions generated ✓
+2025-12-16 09:01:57,401 - generate_secondary - INFO -     - Length: 2053 chars, 272 words
+2025-12-16 09:01:57,401 - generate_secondary - INFO -     - Requirements: min 3 questions, max 1000 words
+2025-12-16 09:01:57,401 - generate_secondary - INFO -     - Open questions: 3
+2025-12-16 09:01:57,401 - generate_secondary - INFO -     - Structure: 3 sections
+2025-12-16 09:01:57,401 - generate_secondary - INFO -   → Saved to: output/active_inference_college/modules/module_03_bayes_theorem_derivation_intuition/session_03/open_questions.md
+2025-12-16 09:01:57,401 - generate_secondary - INFO -   ✓ Generated 6 secondary materials
+2025-12-16 09:01:57,401 - generate_secondary - INFO - 
+============================================================
+2025-12-16 09:01:57,401 - generate_secondary - INFO - [4/15] Module 4: Bayesian Inference – Model Specification (1 sessions)
+2025-12-16 09:01:57,401 - generate_secondary - INFO - ============================================================
+2025-12-16 09:01:57,401 - generate_secondary - INFO - 
+  Session 4/15: Model Selection Criteria
+2025-12-16 09:01:57,403 - generate_secondary - INFO - Generating application for session 4: Model Selection Criteria...
+2025-12-16 09:01:57,403 - src.llm.client - INFO - [app:2c36e3] 🚀 app | m=gemma3:4b | p=31430c | t=150s
+2025-12-16 09:01:57,403 - src.llm.client - INFO - [app:2c36e3] Timeout configuration: connect=5s, read=150s (total limit: 150s)
+2025-12-16 09:01:57,403 - src.llm.client - INFO - [app:2c36e3] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 09:01:57,404 - src.llm.client - INFO - [app:2c36e3] Sending request to Ollama: model=gemma3:4b, operation=application, payload=33314 bytes, prompt=31430 chars
+2025-12-16 09:01:57,404 - src.llm.client - INFO - [app:2c36e3] Waiting for HTTP response (connect timeout: 5s, read timeout: 150s)...
+2025-12-16 09:02:02,230 - src.llm.request_handler - INFO - [app:2c36e3] ✓ Done 4.83s
+2025-12-16 09:02:02,231 - src.llm.client - INFO - [app:2c36e3] ✅ HTTP 200 in 4.83s
+2025-12-16 09:02:02,231 - src.llm.client - INFO - [app:2c36e3] 📡 Stream active (200)
+2025-12-16 09:02:02,231 - src.llm.client - INFO - [app:2c36e3] Starting stream parsing, waiting for first chunk...
+2025-12-16 09:02:04,238 - src.llm.client - INFO - [app:2c36e3] 📊 2.0s: 783c @390c/s (131ch, ~196t @98t/s)
+2025-12-16 09:02:06,251 - src.llm.client - INFO - [app:2c36e3] 📊 4.0s: 1644c @409c/s (264ch, ~411t @102t/s)
+2025-12-16 09:02:08,264 - src.llm.client - INFO - [app:2c36e3] 📊 6.0s: 2481c @411c/s (389ch, ~620t @103t/s)
+2025-12-16 09:02:10,278 - src.llm.client - INFO - [app:2c36e3] 📊 8.0s: 3279c @407c/s (521ch, ~820t @102t/s)
+2025-12-16 09:02:12,287 - src.llm.client - INFO - [app:2c36e3] 📊 10.1s: 4144c @412c/s (654ch, ~1036t @103t/s)

@@ -1,0 +1,23 @@
+graph TD
+    A([Start - MDP]) --> B{Environment Observation}
+    B -- Raw Data --> C{State Estimation}
+    C --> D{Policy Evaluation}
+    D -- Q-values --> E{Policy Selection}
+    E -- Action --> F{Action Execution}
+    F -- Reward & New State --> B
+    F --  Action Feedback --> G{Policy Update}
+    G -- Learning Rate & Gradient --> H{Policy Parameter Update}
+    H --> E
+    B --  External Events --> I{State Transition}
+    I --> B
+    E -- Exploration/Exploitation --> E
+    I --  Transition Probability --> J{Transition Model}
+    J --> K{Reward Function}
+    K --> E
+    E -- Critic Network --> L{Value Estimation}
+    L --> E
+    E -- Uncertainty --> M{Adaptive Exploration}
+    M --> E
+    J --  Model Refinement --> J
+    A -- Initial Policy --> E
+    E -- Decay Exploration --> E

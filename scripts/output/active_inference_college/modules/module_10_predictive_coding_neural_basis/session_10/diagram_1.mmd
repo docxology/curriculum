@@ -1,0 +1,16 @@
+graph TD
+    A([Encoder]) --> B(Sensory Input)
+    B --> C(Prediction Generation)
+    C --> D{Compare Prediction with Reality}
+    D -- Prediction Error --> C
+    C --> E(Adjust Model Parameters)
+    E --> B
+    B --> F(Feedforward Activation)
+    F --> D
+    D -- Prediction Accurate --> F
+    C --> G(Higher-Level Prediction)
+    G --> H{Decision Point - Action?}
+    H -- Yes --> I([Execute Action])
+    H -- No --> G
+    I --> J(Environment Interaction)
+    J --> B

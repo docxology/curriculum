@@ -1,0 +1,18 @@
+graph TD
+    Start([Markov Model Initialization]) --> StateSpace((State Space Definition))
+    StateSpace --> StateNodes((States: S1, S2, S3))
+    StateNodes --> TransitionProbabilities((Transition Probabilities: P_{ij}))
+    TransitionProbabilities --> DecisionNode{Check Condition?}
+    DecisionNode -- Yes --> NextState(Next State S1)
+    DecisionNode -- No --> AlternativePath(Alternative Path S2)
+    NextState --> TransitionProbabilities
+    AlternativePath --> TransitionProbabilities
+    TransitionProbabilities --> FeedbackLoop((Feedback Loop - Influence on P_{ij}))
+    FeedbackLoop --> TransitionProbabilities
+    TransitionProbabilities -->  StateSpace
+    StateSpace --> End([Model Convergence])
+    DecisionNode -- Yes --> NextState
+    DecisionNode -- No -->  AlternativePath
+    AlternativePath --> StateSpace
+    StateSpace --> End
+    subgraph State Transitions

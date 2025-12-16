@@ -1,0 +1,21 @@
+graph LR
+    A([Start]) --> B{Prior Knowledge?};
+    B -- Yes --> C[Bayes' Theorem Formula];
+    B -- No --> D[Introduce Conditional Probability];
+    D --> C;
+    C --> E[P(A|B) = P(A&B) / P(B)];
+    E --> F[Deriving P(A&B)];
+    F --> G{Prior Probability (P(A))?};
+    G -- Yes --> H[P(A&B) = P(A) * P(B|A)];
+    H --> G;
+    G -- No --> I[Assume P(B|A) = k];
+    I --> E;
+    E --> J[Applying Theorem];
+    J --> K{New Evidence (B)};
+    K --> L[Updating Posterior Probability];
+    L --> M[P(A|B) = [P(A&B)] / P(B)];
+    M --> N{Further Evidence?};
+    N -- Yes --> N;
+    N -- No --> O([End]);
+    O --> P[Intuition: Bayes' Theorem corrects prior beliefs with observed data];
+    P --> O;

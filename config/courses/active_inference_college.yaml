@@ -1,0 +1,48 @@
+# Educational Course Configuration - Active Inference for Undergraduates
+# Comprehensive long course on Active Inference, Bayesian Statistics, and Probabilistic Dynamical Perception-Action Systems
+
+course:
+  name: "Active Inference and Probabilistic Dynamical Systems"
+  subject: "Cognitive Science, Statistics, and Systems Biology"  # Subject/expertise area
+  description: |
+    A comprehensive undergraduate course on Active Inference, Bayesian statistics, and probabilistic dynamical 
+    perception-action systems. This course provides a thorough introduction to how biological and artificial systems 
+    use probabilistic reasoning, Bayesian inference, and active engagement with their environment to maintain 
+    adaptive behavior. Students will learn the mathematical foundations of Bayesian statistics, including probability 
+    theory, conditional probability, Bayes' theorem, and Bayesian inference. The course covers variational methods 
+    for approximate Bayesian inference, including variational free energy and its relationship to model evidence 
+    and surprise. Students will explore how these statistical principles apply to dynamical systems, where perception 
+    and action are coupled through generative models that make predictions about sensory inputs. The course examines 
+    how organisms and agents maintain their structural and functional integrity by minimizing variational free energy 
+    through both perceptual inference (updating beliefs about hidden states) and active inference (selecting actions 
+    that confirm predictions). Topics include the mathematical formulation of probabilistic state-space models, 
+    hierarchical generative models, temporal dynamics and Markov processes, the relationship between free energy 
+    minimization and Bayesian model selection, precision weighting and attention, policy selection and planning 
+    under uncertainty, and model learning through experience. The course connects these theoretical principles to 
+    concrete examples from neuroscience (e.g., predictive coding, sensorimotor control), cognitive science (e.g., 
+    perception, decision-making, learning), and artificial intelligence (e.g., Bayesian neural networks, 
+    reinforcement learning, autonomous agents). Students will gain hands-on experience through computational exercises 
+    implementing Bayesian inference, building generative models, simulating perception-action loops, and analyzing 
+    how probabilistic systems adapt to changing environments. The course emphasizes both mathematical rigor and 
+    intuitive understanding, with extensive use of examples, visualizations, and computational demonstrations to 
+    make abstract concepts concrete. Applications span from simple sensorimotor behaviors to complex cognitive 
+    processes, showing how probabilistic dynamical systems provide a unified framework for understanding adaptive 
+    behavior across scales of organization.
+  level: "Undergraduate"
+  additional_constraints: |
+    Designed for science undergraduates with background in calculus, linear algebra, and basic probability. 
+    Emphasize building mathematical intuition through concrete examples and computational exercises. Progress 
+    from foundational Bayesian statistics to advanced topics in active inference and probabilistic dynamical 
+    systems. Include hands-on programming exercises implementing Bayesian inference, generative models, and 
+    perception-action simulations. Connect abstract mathematical principles to biological and cognitive phenomena. 
+    Provide extensive visualizations and intuitive explanations alongside formal derivations. Include practical 
+    applications in neuroscience, cognitive science, and artificial intelligence. Address both theoretical 
+    foundations and empirical evidence. Encourage critical thinking about the scope and limitations of 
+    probabilistic approaches to understanding adaptive systems.
+  
+  # Configurable defaults (all overwritable in interactive mode)
+  defaults:
+    num_modules: 15          # Number of modules to generate
+    total_sessions: 30       # Total sessions across all modules
+    sessions_per_module: null  # Auto-calculated if null
+

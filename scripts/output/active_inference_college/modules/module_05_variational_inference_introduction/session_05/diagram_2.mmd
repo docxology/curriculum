@@ -1,0 +1,20 @@
+graph TD
+    A([Start: Variational Inference Setup]) --> B{Choose Prior Distribution (P(Z))}
+    B --> C{Sample Z from P(Z)}
+    C --> D{Compute Posterior Distribution (P(Z|X))}
+    D --> E{Apply E-Step: Update Weights for Z}
+    E --> F{Define Evidence Lower Bound (ELBO)}
+    F --> G{Optimize ELBO: Maximize Approximation}
+    G --> H{Update Prior Distribution (P(Z))}
+    H --> I{Repeat Steps C-H}
+    I --> J{Convergence Check}
+    J -- Yes --> I
+    J -- No --> K([End: Approximate Inference])
+
+    B -- Optional --> L{Consider Model Choice (e.g., Gaussian)}
+    L --> B
+    
+    B -- Secondary --> M{Regularization Techniques}
+    M --> B
+    
+    E -- Feedback --> B

@@ -1,0 +1,16 @@
+graph TD
+    A([Start]) --> B{Model Specification};
+    B --> C{Likelihood Ratio Calculation};
+    C --> D{Null Hypothesis Test};
+    D -- Reject --> E{Model Rejection};
+    D -- Fail to Reject --> F{Model Acceptance};
+    E --> G([Alternative Model Selection]);
+    F --> G;
+    G --> H{Model Validation};
+    H -- Pass --> I([Final Model Selection]);
+    H -- Fail --> G;
+    I --> J([Model Deployment]);
+    J --> K([Monitoring & Evaluation]);
+    K --> L([Feedback Loop - Model Performance]);
+    L --> B;
+    B --> C;

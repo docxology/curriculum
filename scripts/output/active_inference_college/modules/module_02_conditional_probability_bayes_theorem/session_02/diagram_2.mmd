@@ -1,0 +1,21 @@
+graph LR
+    A([Start]) --> B{Prior Event A?}
+    B -- Yes --> C([Calculate Prior Probability P(A)])
+    B -- No --> D([Calculate Prior Probability P(A|B)])
+    C --> E{P(A|B) ?}
+    D --> E
+    E -- Yes --> F([P(B|A) ?])
+    E -- No --> G([Calculate P(B|A)])
+    F -- Yes --> H([Calculate P(A|B)])
+    F -- No --> I([Calculate P(B|A)])
+    G --> H
+    I --> H
+    H --> J([Apply Chain Rule: P(A and B) = P(A|B) * P(B)])
+    J --> K([Calculate P(A|B) using Bayes' Theorem])
+    K --> L([Calculate P(B) using Prior Probability])
+    L --> K
+    K --> J
+    J --> M([End])
+    M --> N([Feedback Loop: Re-evaluate P(A|B) based on new evidence])
+    N --> A
+    A --> M

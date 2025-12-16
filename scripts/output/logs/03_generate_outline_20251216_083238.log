@@ -1,0 +1,220 @@
+2025-12-16 08:32:38,771 - root - INFO - Logging to file: /Users/4d/Documents/GitHub/curriculum/scripts/output/logs/03_generate_outline_20251216_083238.log
+2025-12-16 08:32:38,771 - generate_outline - INFO - 
+2025-12-16 08:32:38,771 - generate_outline - INFO - 📝 STAGE 03: OUTLINE GENERATION
+2025-12-16 08:32:38,771 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:32:38,771 - generate_outline - INFO - 
+2025-12-16 08:32:38,772 - generate_outline - INFO - ⚙️ CONFIGURATION
+2025-12-16 08:32:38,772 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:32:38,772 - generate_outline - INFO -   • Config Directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 08:32:38,772 - generate_outline - INFO -   • Log File: output/logs/03_generate_outline_20251216_083238.log
+2025-12-16 08:32:38,772 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:32:38,772 - src.config.loader - INFO - Initialized ConfigLoader with directory: /Users/4d/Documents/GitHub/curriculum/config
+2025-12-16 08:32:38,772 - src.config.loader - INFO - Course configuration validated successfully
+2025-12-16 08:32:38,785 - src.config.loader - INFO - All configurations validated successfully
+2025-12-16 08:32:38,785 - generate_outline - INFO - Loading course template: active_inference_college
+2025-12-16 08:32:38,786 - src.config.loader - INFO - Loaded course template: active_inference_college
+2025-12-16 08:32:38,787 - src.config.loader - INFO - Loaded course template: active_inference_college
+2025-12-16 08:32:38,787 - generate_outline - INFO - 
+2025-12-16 08:32:38,787 - generate_outline - INFO - 
+2025-12-16 08:32:38,787 - generate_outline - INFO - ✏️ INTERACTIVE MODE: Customize Course Metadata
+2025-12-16 08:32:38,787 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:32:38,787 - generate_outline - INFO - Starting interactive course configuration...
+2025-12-16 08:32:38,787 - generate_outline - INFO - Current defaults loaded from config/course_config.yaml
+2025-12-16 08:32:38,787 - generate_outline - INFO - Press Enter to accept defaults, or type new values
+2025-12-16 08:32:38,787 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 08:32:40,584 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 08:32:40,584 - generate_outline - INFO - MODULE AND SESSION STRUCTURE
+2025-12-16 08:32:40,584 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 08:32:40,852 - generate_outline - INFO - Configuration: 15 modules, 30 sessions
+2025-12-16 08:32:40,852 - generate_outline - INFO - Average: 2.0 sessions per module
+2025-12-16 08:32:40,852 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 08:32:40,852 - generate_outline - INFO - CONTENT ITEM BOUNDS
+2025-12-16 08:32:40,852 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 08:32:46,267 - generate_outline - INFO - Clear output: No
+2025-12-16 08:32:46,267 - generate_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 08:32:46,267 - generate_outline - INFO - Interactive configuration complete
+2025-12-16 08:32:46,267 - generate_outline - INFO - 
+2025-12-16 08:32:46,268 - generate_outline - INFO - 
+2025-12-16 08:32:46,268 - generate_outline - INFO - 📋 FINAL COURSE CONFIGURATION
+2025-12-16 08:32:46,268 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Course Name: Active Inference and Probabilistic Dynamical Systems
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Course Level: Undergraduate
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Description: A comprehensive undergraduate course on Active Inference, Bayesian statistics, and probabilistic dyn...
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Additional Constraints: Designed for science undergraduates with background in calculus, linear algebra, and basic probabili...
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Number of Modules: 15
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Total Sessions: 30
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Avg Sessions per Module: 2.0
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Subtopics per Session: 3-7
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Learning Objectives per Session: 3-7
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Key Concepts per Session: 3-7
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Output Directory: output
+2025-12-16 08:32:46,268 - generate_outline - INFO -   • Clear Output: No
+2025-12-16 08:32:46,268 - generate_outline - INFO - ────────────────────────────────────────────────────────────
+2025-12-16 08:32:46,268 - src.generate.orchestration.pipeline - INFO - Initializing Educational Course Generator pipeline...
+2025-12-16 08:32:46,268 - src.llm.client - INFO - Initialized OllamaClient: model=gemma3:4b, url=http://localhost:11434/api/generate
+2025-12-16 08:32:46,268 - src.generate.stages.stage1_outline - INFO - Initialized OutlineGenerator
+2025-12-16 08:32:46,269 - src.generate.orchestration.pipeline - INFO - Pipeline initialized successfully
+2025-12-16 08:32:46,269 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.orchestration.pipeline - INFO - STAGE 1: Generating Course Outline
+2025-12-16 08:32:46,269 - src.generate.orchestration.pipeline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - OUTLINE GENERATION PROCESS (JSON-STRUCTURED)
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - Course Title: 'Active Inference and Probabilistic Dynamical Systems'
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - Course Level: 'Undergraduate'
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - Description: 2482 characters
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - Modules to Generate: 15
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - Topic Areas: LLM will generate based on course description and constraints
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - Additional Constraints: Designed for science undergraduates with background in calculus, linear algebra, and basic probabili...
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - SESSION/MODULE CONFIGURATION
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - Modules: 15
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - Total Sessions: 30
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - Average: 2.00 sessions per module
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - ✓ Balanced distribution
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - OUTLINE GENERATION ITEM BOUNDS
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   • Subtopics per session: 3-7
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   • Learning objectives per session: 3-7
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   • Key concepts per session: 3-7
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - LLM GENERATION PARAMETERS
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - Model Configuration:
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   • Model: gemma3:4b
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   • Format: JSON structured
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   • Prompt: 'You are an expert curriculum designer. Create a coherent, pedagogically sound co...'
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO - Template Variables (16 provided):
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ additional_constraints  : "Designed for science undergraduates with background in ca..."
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ avg_sessions_per_module : "2.0"
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ course_description      : "A comprehensive undergraduate course on Active Inference,..."
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ course_duration         : "Not specified"
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ course_level            : "Undergraduate"
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ course_name             : "Active Inference and Probabilistic Dynamical Systems"
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ language                : "English"
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ max_concepts            : 7
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ max_objectives          : 7
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ max_subtopics           : 7
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ min_concepts            : 3
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ min_objectives          : 3
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ min_subtopics           : 3
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ num_modules             : 15
+2025-12-16 08:32:46,269 - src.generate.stages.stage1_outline - INFO -   ✓ subject                 : "Cognitive Science, Statistics, and Systems Biology"
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO -   ✓ total_sessions          : 30
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - Template Validation:
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO -   ✓ All 16 required variables provided
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO -   ✓ No missing variables
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO -   ✓ No extra variables
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - Sending JSON generation request to LLM...
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - Requesting structured outline for: 'Active Inference and Probabilistic Dynamical Systems'
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - Generating 15 modules with 30 total sessions
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - Formatted prompt size: 5078 characters
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - System prompt size: 119 characters
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - Template variables: 16 variables provided
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - LLM model: gemma3:4b
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - LLM timeout: 240s (operation-specific, base: 180s)
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - LLM API URL: http://localhost:11434/api/generate
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - Using optimized parameters for outline generation: num_ctx=32000, num_predict=4000 (reduced from default 128K/64K for faster generation)
+2025-12-16 08:32:46,270 - src.generate.stages.stage1_outline - INFO - Checking Ollama service connection and performance...
+2025-12-16 08:32:46,277 - src.generate.stages.stage1_outline - INFO - Ollama connection check successful (response time: 0.006s)
+2025-12-16 08:32:46,277 - src.generate.stages.stage1_outline - INFO - Checking GPU acceleration status...
+2025-12-16 08:32:46,297 - src.generate.stages.stage1_outline - INFO - GPU acceleration active: 100% GPU
+2025-12-16 08:32:46,298 - src.llm.client - INFO - [out:b015ab] 🚀 out | m=gemma3:4b | p=5078c | t=240s
+2025-12-16 08:32:46,298 - src.llm.client - INFO - [out:b015ab] Timeout configuration: connect=5s, read=240s (total limit: 240s)
+2025-12-16 08:32:46,298 - src.llm.client - INFO - [out:b015ab] Pre-flight check: Verifying Ollama service is reachable...
+2025-12-16 08:32:46,299 - src.llm.client - INFO - [out:b015ab] Sending request to Ollama: model=gemma3:4b, operation=outline, payload=5510 bytes, prompt=5078 chars
+2025-12-16 08:32:46,299 - src.llm.client - INFO - [out:b015ab] Waiting for HTTP response (connect timeout: 5s, read timeout: 240s)...
+2025-12-16 08:32:47,589 - src.llm.request_handler - INFO - [out:b015ab] ✓ Done 1.29s
+2025-12-16 08:32:47,589 - src.llm.client - INFO - [out:b015ab] ✅ HTTP 200 in 1.29s
+2025-12-16 08:32:47,589 - src.llm.client - INFO - [out:b015ab] 📡 Stream active (200)
+2025-12-16 08:32:47,589 - src.llm.client - INFO - [out:b015ab] Starting stream parsing, waiting for first chunk...
+2025-12-16 08:32:49,597 - src.llm.client - INFO - [out:b015ab] 📊 2.0s: 535c @267c/s (145ch, ~134t @67t/s)
+2025-12-16 08:32:51,601 - src.llm.client - INFO - [out:b015ab] 📊 4.0s: 1148c @286c/s (289ch, ~287t @72t/s)
+2025-12-16 08:32:53,602 - src.llm.client - INFO - [out:b015ab] 📊 6.0s: 1715c @285c/s (431ch, ~429t @71t/s)
+2025-12-16 08:32:55,611 - src.llm.client - INFO - [out:b015ab] 📊 8.0s: 2287c @285c/s (574ch, ~572t @71t/s)
+2025-12-16 08:32:57,613 - src.llm.client - INFO - [out:b015ab] 📊 10.0s: 2883c @288c/s (716ch, ~721t @72t/s)
+2025-12-16 08:32:59,623 - src.llm.client - INFO - [out:b015ab] 📊 12.0s: 3481c @289c/s (859ch, ~870t @72t/s)
+2025-12-16 08:33:01,631 - src.llm.client - INFO - [out:b015ab] 📊 14.0s: 4047c @288c/s (1001ch, ~1012t @72t/s)
+2025-12-16 08:33:03,643 - src.llm.client - INFO - [out:b015ab] 📊 16.1s: 4611c @287c/s (1144ch, ~1153t @72t/s)
+2025-12-16 08:33:05,648 - src.llm.client - INFO - [out:b015ab] 📊 18.1s: 5174c @287c/s (1286ch, ~1294t @72t/s)
+2025-12-16 08:33:07,661 - src.llm.client - INFO - [out:b015ab] 📊 20.1s: 5756c @287c/s (1428ch, ~1439t @72t/s)
+2025-12-16 08:33:09,669 - src.llm.client - INFO - [out:b015ab] 📊 22.1s: 6303c @285c/s (1571ch, ~1576t @71t/s)
+2025-12-16 08:33:11,670 - src.llm.client - INFO - [out:b015ab] 📊 24.1s: 6859c @285c/s (1713ch, ~1715t @71t/s)
+2025-12-16 08:33:13,674 - src.llm.client - INFO - [out:b015ab] 📊 26.1s: 7416c @284c/s (1855ch, ~1854t @71t/s)
+2025-12-16 08:33:15,683 - src.llm.client - INFO - [out:b015ab] 📊 28.1s: 7982c @284c/s (1998ch, ~1996t @71t/s)
+2025-12-16 08:33:17,276 - src.llm.client - INFO - [out:b015ab] ✓ Done 30.98s: 8414c (~683w @272c/s)
+2025-12-16 08:33:17,276 - src.generate.stages.stage1_outline - INFO - LLM generation completed (received 8414 characters)
+2025-12-16 08:33:17,276 - src.generate.stages.stage1_outline - INFO - Generation took 30.98 seconds
+2025-12-16 08:33:17,276 - src.generate.stages.stage1_outline - INFO - Generation rate: 271.6 chars/s
+2025-12-16 08:33:17,276 - src.generate.stages.stage1_outline - INFO - Generation performance: 30.98s (within expected range)
+2025-12-16 08:33:17,276 - src.generate.stages.stage1_outline - INFO - --------------------------------------------------------------------------------
+2025-12-16 08:33:17,276 - src.generate.stages.stage1_outline - INFO - Parsing JSON response...
+2025-12-16 08:33:17,276 - src.generate.stages.stage1_outline - INFO - JSON parsed successfully
+2025-12-16 08:33:17,276 - src.generate.stages.stage1_outline - INFO - Validating outline structure...
+2025-12-16 08:33:17,276 - src.generate.stages.stage1_outline - WARNING - Session count mismatch in metadata: metadata says 30, actual is 15
+2025-12-16 08:33:17,277 - src.generate.stages.stage1_outline - INFO - Updated course_metadata.total_sessions to 15
+2025-12-16 08:33:17,277 - src.generate.stages.stage1_outline - INFO - Outline JSON validation successful
+2025-12-16 08:33:17,277 - src.generate.stages.stage1_outline - INFO - Normalizing session numbering to global sequence...
+2025-12-16 08:33:17,277 - src.generate.stages.stage1_outline - INFO - Normalized session numbering: 1-15 across 15 modules
+2025-12-16 08:33:17,277 - src.generate.stages.stage1_outline - INFO - Running outline quality validation...
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - Outline quality score: 93.0/100 (excellent)
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - WARNING - Found 3 quality issues:
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - WARNING -   - overlap
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - WARNING -   - overlap
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - WARNING -   - Session count mismatch: expected 30, got 15
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - Quality recommendations:
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   [HIGH] Found 2 topic overlaps. Consider consolidating or differentiating overlapping topics.
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   [MEDIUM] Found 1 balance issues. Consider redistributing sessions/concepts/objectives.
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - GENERATION & VALIDATION SUMMARY
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - Generated Output:
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   • Modules: 15/15
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   • Sessions: 15/30 (range: 1-15)
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   • Avg Sessions/Module: 1.00
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   • Learning Objectives: 16 total (1.07/session)
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   • Key Concepts: 17 total (1.13/session)
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   ✓ Module count: 15
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - WARNING -   ⚠️  Session count: 15 (expected 30)
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - WARNING -   ⚠️  Validation Warning (see above)
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   📊 Quality Validation:
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -      • Overall Score: 93.0/100 (excellent)
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -      • Topic Overlaps: 2
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -      • Progression Issues: 0
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -      • Balance Issues: 1
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - Converting JSON to markdown format...
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - OUTLINE GENERATION COMPLETE
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   • Modules: 15/15
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   • Sessions: 15
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO -   • Size: 1,019 words, 350 lines
+2025-12-16 08:33:17,279 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:33:17,280 - src.generate.stages.stage1_outline - INFO - Saved outline (markdown) to: /Users/4d/Documents/GitHub/curriculum/scripts/output/active_inference_college/outlines/course_outline_20251216_083317.md
+2025-12-16 08:33:17,280 - src.generate.stages.stage1_outline - INFO - Saved outline (JSON) to: /Users/4d/Documents/GitHub/curriculum/scripts/output/active_inference_college/outlines/course_outline_20251216_083317.json
+2025-12-16 08:33:17,280 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:33:17,280 - src.generate.stages.stage1_outline - INFO - ✅ FILES SAVED
+2025-12-16 08:33:17,280 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:33:17,280 - src.generate.stages.stage1_outline - INFO -   📄 /Users/4d/Documents/GitHub/curriculum/scripts/output/active_inference_college/outlines/course_outline_20251216_083317.md
+2025-12-16 08:33:17,280 - src.generate.stages.stage1_outline - INFO -   📄 /Users/4d/Documents/GitHub/curriculum/scripts/output/active_inference_college/outlines/course_outline_20251216_083317.json
+2025-12-16 08:33:17,280 - src.generate.stages.stage1_outline - INFO - 
+2025-12-16 08:33:17,280 - src.generate.stages.stage1_outline - INFO - 📊 OUTLINE STATISTICS:
+2025-12-16 08:33:17,281 - src.generate.stages.stage1_outline - INFO -   • Modules: 15
+2025-12-16 08:33:17,281 - src.generate.stages.stage1_outline - INFO -   • Sessions: 15
+2025-12-16 08:33:17,281 - src.generate.stages.stage1_outline - INFO -   • Words: 1,019
+2025-12-16 08:33:17,281 - src.generate.stages.stage1_outline - INFO - ════════════════════════════════════════════════════════════════════════════════
+2025-12-16 08:33:17,281 - src.generate.orchestration.pipeline - INFO - Stage 1 complete. Outline saved to: output/active_inference_college/outlines/course_outline_20251216_083317.md
+2025-12-16 08:33:17,281 - generate_outline - INFO - 
+2025-12-16 08:33:17,281 - generate_outline - INFO -   ✅ Outline Generated Successfully: output/active_inference_college/outlines/course_outline_20251216_083317.md

@@ -1,0 +1,20 @@
+graph TD
+    A([Start]) --> B{State 1};
+    B -- Process 1 --> C{State 2};
+    C -- Process 2 --> D{State 3};
+    D -- Process 3 --> E{State 4};
+    E -- Process 4 --> F{State 5};
+    F -- Process 5 --> G{State 6};
+    G -- Feedback Loop --> B;
+
+    B -- Secondary Relationship --> H({Concept A});
+    H --  Process A --> C;
+    C --  Process B --> D;
+    D -- Process C --> E;
+    E -- Process D --> F;
+
+    F -- Parallel Pathway --> G;
+
+    G -- Decision Point --> H;
+
+    H --> I([End]);

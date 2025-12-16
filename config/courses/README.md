@@ -14,6 +14,7 @@ Templates are automatically discovered from `.yaml` files in this directory. Cur
 - `chemistry.yaml` - Introductory Chemistry
 - `physics.yaml` - Introductory Physics
 - `active_inference.yaml` - Active Inference
+- `active_inference_college.yaml` - Active Inference and Probabilistic Dynamical Systems (Undergraduate)
 - `free_energy_principle.yaml` - Free Energy Principle
 
 ## Using Templates

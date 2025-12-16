@@ -1,0 +1,22 @@
+graph TD
+    A([Start]) --> B{Define Probability};
+    B --> C{Calculate Marginal Probability};
+    C --> D{Calculate Conditional Probability};
+    D --> E{Bayes' Theorem Application};
+    E --> F{Update Prior Belief};
+    F --> G{Posterior Belief};
+    G --> H{Iterative Process};
+    H --> I{New Data Available?};
+    I -- Yes --> E;
+    I -- No --> J([End]);
+
+    B --> K{Events & Sample Space};
+    K --> L{Independent Events};
+    L --> M{Dependent Events};
+    M --> N{Joint Probability};
+    N --> C;
+
+    C --> O{Probability Mass Function (PMF)};
+    O --> C;
+
+    E ==> D;

@@ -1,0 +1,23 @@
+graph TD
+    A([Start]) --> B{Define Sample Space};
+    B --> C{Identify All Possible Outcomes};
+    C --> D{Calculate Probabilities};
+    D --> E{Bayesian Update (Prior)};
+    E --> F{New Evidence};
+    F --> G{Update Posterior};
+    G --> H{Repeat Bayesian Update};
+    H --> I{Convergence?};
+    I -- Yes --> H;
+    I -- No --> J{Final Posterior Distribution};
+    J --> K([End]);
+
+    B --> L{Consider Conditional Probabilities};
+    L -- Yes --> M{Calculate Conditional Probabilities};
+    M --> C;
+    L -- No --> C;
+
+    C --> N{Interactions with External Factors};
+    N --> C;
+
+    C --> O{Sensitivity Analysis};
+    O --> C;

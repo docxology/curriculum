@@ -1,0 +1,25 @@
+graph LR
+    A([Start: Model Selection]) --> B{Data Splitting}
+    B --> C{Hold-out Set Creation}
+    C --> D[Training Model]
+    D --> E{Model Evaluation}
+    E --> F{Performance Metrics}
+    F --> G{Validation Against Hold-out Set}
+    G -- High Performance --> H[Model Selection]
+    G -- Low Performance --> I[Retrain Model]
+    I --> D
+    D --> E
+    E --> G
+    H --> J([Final Model])
+    J --> K{Deployment & Monitoring}
+    K --> L([End: Ongoing Evaluation])
+    B --> M{Data Preprocessing}
+    M --> B
+    E --> N{Cross-Validation (K-Fold)}
+    N --> E
+    E --> O{Compare Hold-out Performance}
+    O --> P{Assess Generalization}
+    P --> Q{Refine Model}
+    Q --> D
+    A -- Feedback Loop --> R{Feature Engineering}
+    R --> M

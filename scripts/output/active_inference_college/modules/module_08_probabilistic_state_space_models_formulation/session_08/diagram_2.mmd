@@ -1,0 +1,23 @@
+graph LR
+    A([Sensory Input - Start]) --> B{Environment Perception}
+    B --> C{Feature Extraction}
+    C --> D{Pattern Recognition}
+    D --> E{Probabilistic Model Update}
+    E --> F{State Estimation}
+    F --> G{Contextual Refinement}
+    G --> H{Model Calibration}
+    H --> I{Feedback - Confidence Assessment}
+    I --> J{Adjust Model Parameters}
+    J --> E
+    B --> K{External Stimuli}
+    K --> C
+    C --> L{Noise Reduction}
+    L --> C
+    E --> M{Prior Knowledge Integration}
+    M --> E
+    G --> N{Spatial Context}
+    N --> G
+    D --> O{Anomaly Detection}
+    O --> D
+    B --> P{Illumination Levels}
+    P --> B

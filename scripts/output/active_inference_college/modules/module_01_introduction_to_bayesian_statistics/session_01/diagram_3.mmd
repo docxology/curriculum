@@ -1,0 +1,26 @@
+graph LR
+    A([Start]) --> B{Prior Probabilities};
+    B --> C[Calculate Marginal Likelihood];
+    C --> D{Is Marginal Likelihood > 0?};
+    D -- Yes --> E[Calculate Posterior Probabilities];
+    E --> F[Posterior Probabilities];
+    D -- No --> G[Uncertain - Further Investigation Needed];
+    F --> H{Update Prior Probabilities?};
+    H -- Yes --> I[New Prior Probabilities];
+    I --> B;
+    H -- No --> J[Maintain Current Posterior];
+    J --> K[Output Posterior Probabilities];
+    K --> L([End]);
+    B --> M{Normalization};
+    M --> B;
+    C --> N{Check for Divergence};
+    N -- Yes --> G;
+    N -- No --> E;
+    E --> O{Calculate Normalization Constant};
+    O --> P{Apply Normalization};
+    P --> Q[Posterior Probabilities];
+    Q --> F;
+    A -- Feedback --> B;
+    C -- Feedback --> E;
+    E -- Feedback --> F;
+    F -- Feedback --> Q;

@@ -1,0 +1,21 @@
+graph LR
+    A([Start: Conceptual Synthesis]) --> B{Define Scope & Objectives}
+    B --> C[Literature Review & Analysis]
+    C --> D{Identify Key Concepts}
+    D --> E[Develop Conceptual Framework]
+    E --> F[Iterative Refinement & Validation]
+    F --> G{Feedback Loop: External Experts}
+    G -- Primary Relationship --> E
+    G -- Secondary Relationship --> D
+    F -- Feedback Loop --> F
+    E -- Critical Pathway --> C
+    C -- Optional Pathway --> D
+    D --> E
+    E --> F
+    F --> G
+    G -- Context: Research Community, Funding Agencies --> F
+    F --> H{Synthesize Findings & Report}
+    H --> I([End: Consolidated Model])
+    I -- Critical Pathway --> H
+    H -- Optional Pathway --> I
+    I -- Feedback Loop --> H

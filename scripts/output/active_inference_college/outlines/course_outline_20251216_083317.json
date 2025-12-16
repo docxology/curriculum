@@ -1,0 +1,349 @@
+{
+  "course_metadata": {
+    "name": "Active Inference and Probabilistic Dynamical Systems",
+    "level": "Undergraduate",
+    "duration_weeks": "Not specified",
+    "total_sessions": 15,
+    "total_modules": 15,
+    "course_template": "active_inference_college",
+    "quality_score": 93.0,
+    "quality_level": "excellent",
+    "quality_validation": {
+      "overlap_count": 2,
+      "progression_issue_count": 0,
+      "balance_issue_count": 1
+    }
+  },
+  "modules": [
+    {
+      "module_id": 1,
+      "module_name": "Introduction to Bayesian Statistics",
+      "module_description": "Foundational probability and Bayesian inference.",
+      "sessions": [
+        {
+          "session_number": 1,
+          "session_title": "Probability Basics",
+          "subtopics": [
+            "Sample Space",
+            "Probability Distributions",
+            "Marginalization"
+          ],
+          "learning_objectives": [
+            "Define probability",
+            "Understand distributions"
+          ],
+          "key_concepts": [
+            "Probability",
+            "Uniform Distribution"
+          ],
+          "rationale": "Sets the stage for Bayesian reasoning."
+        }
+      ]
+    },
+    {
+      "module_id": 2,
+      "module_name": "Conditional Probability & Bayes\u2019 Theorem",
+      "module_description": "Derivation and application of key Bayesian tools.",
+      "sessions": [
+        {
+          "session_number": 2,
+          "session_title": "Conditional Probability",
+          "subtopics": [
+            "Definition",
+            "Chain Rule"
+          ],
+          "learning_objectives": [
+            "Calculate conditional probabilities"
+          ],
+          "key_concepts": [
+            "Joint Probability"
+          ],
+          "rationale": "Essential for updating beliefs."
+        }
+      ]
+    },
+    {
+      "module_id": 3,
+      "module_name": "Bayes\u2019 Theorem \u2013 Derivation & Intuition",
+      "module_description": "Formal derivation and interpretation of Bayes\u2019 theorem.",
+      "sessions": [
+        {
+          "session_number": 3,
+          "session_title": "Bayes' Theorem Derivation",
+          "subtopics": [
+            "Conditional Probability revisited",
+            "Derivation steps"
+          ],
+          "learning_objectives": [
+            "Understand the derivation"
+          ],
+          "key_concepts": [
+            "Prior, Likelihood, Posterior"
+          ],
+          "rationale": "Crucial for Bayesian inference."
+        }
+      ]
+    },
+    {
+      "module_id": 4,
+      "module_name": "Bayesian Inference \u2013 Model Specification",
+      "module_description": "Choosing and defining probability models.",
+      "sessions": [
+        {
+          "session_number": 4,
+          "session_title": "Model Selection Criteria",
+          "subtopics": [
+            "Likelihood ratio test",
+            "AIC",
+            "BIC"
+          ],
+          "learning_objectives": [
+            "Understand model comparison"
+          ],
+          "key_concepts": [
+            "Model Evidence"
+          ],
+          "rationale": "Selecting appropriate probabilistic frameworks."
+        }
+      ]
+    },
+    {
+      "module_id": 5,
+      "module_name": "Variational Inference \u2013 Introduction",
+      "module_description": "Approximation methods for Bayesian inference.",
+      "sessions": [
+        {
+          "session_number": 5,
+          "session_title": "The Challenge of Exact Inference",
+          "subtopics": [
+            "Computational Cost",
+            "Approximation Methods"
+          ],
+          "learning_objectives": [
+            "Recognize the computational burden"
+          ],
+          "key_concepts": [
+            "Surrogate Distributions"
+          ],
+          "rationale": "Motivation for variational methods."
+        }
+      ]
+    },
+    {
+      "module_id": 6,
+      "module_name": "Variational Free Energy \u2013 Definition & Interpretation",
+      "module_description": "Formal definition and connection to surprise.",
+      "sessions": [
+        {
+          "session_number": 6,
+          "session_title": "Defining VFE",
+          "subtopics": [
+            "Mathematical Formulation",
+            "Relationship to Surprise"
+          ],
+          "learning_objectives": [
+            "Calculate VFE"
+          ],
+          "key_concepts": [
+            "Free Energy"
+          ],
+          "rationale": "Central concept in variational inference."
+        }
+      ]
+    },
+    {
+      "module_id": 7,
+      "module_name": "Markov Models \u2013 Introduction & State Spaces",
+      "module_description": "Discrete-time Markov models as a foundation.",
+      "sessions": [
+        {
+          "session_number": 7,
+          "session_title": "Markov Property",
+          "subtopics": [
+            "State Transitions",
+            "Transition Probabilities"
+          ],
+          "learning_objectives": [
+            "Understand Markov transitions"
+          ],
+          "key_concepts": [
+            "State Space"
+          ],
+          "rationale": "Basis for dynamic models."
+        }
+      ]
+    },
+    {
+      "module_id": 8,
+      "module_name": "Probabilistic State-Space Models \u2013 Formulation",
+      "module_description": "Mathematical structure of state-space models.",
+      "sessions": [
+        {
+          "session_number": 8,
+          "session_title": "Model Equations",
+          "subtopics": [
+            "Continuous-Time Dynamics",
+            "Sensory Input"
+          ],
+          "learning_objectives": [
+            "Understand model equations"
+          ],
+          "key_concepts": [
+            "State Equations",
+            "Measurement Equations"
+          ],
+          "rationale": "Formalizing perception-action loops."
+        }
+      ]
+    },
+    {
+      "module_id": 9,
+      "module_name": "Precision Weighting & Attention",
+      "module_description": "Focusing on relevant information.",
+      "sessions": [
+        {
+          "session_number": 9,
+          "session_title": "Weighting States",
+          "subtopics": [
+            "Precision of States"
+          ],
+          "learning_objectives": [
+            "Understand weighting"
+          ],
+          "key_concepts": [
+            "Attention"
+          ],
+          "rationale": "Mechanism for selective processing."
+        }
+      ]
+    },
+    {
+      "module_id": 10,
+      "module_name": "Predictive Coding \u2013 Neural Basis",
+      "module_description": "Biological inspiration for active inference.",
+      "sessions": [
+        {
+          "session_number": 10,
+          "session_title": "Encoder-Decoder Model",
+          "subtopics": [
+            "Hierarchical Predictions"
+          ],
+          "learning_objectives": [
+            "Understand the predictive coding loop"
+          ],
+          "key_concepts": [
+            "Error Signals"
+          ],
+          "rationale": "Connecting theory to neuroscience."
+        }
+      ]
+    },
+    {
+      "module_id": 11,
+      "module_name": "Model Learning & Adaptation",
+      "module_description": "Updating models from experience.",
+      "sessions": [
+        {
+          "session_number": 11,
+          "session_title": "Parameter Estimation",
+          "subtopics": [
+            "Maximum Likelihood Estimation"
+          ],
+          "learning_objectives": [
+            "Update model parameters"
+          ],
+          "key_concepts": [
+            "Learning Rate"
+          ],
+          "rationale": "Model learning is central to adaptation."
+        }
+      ]
+    },
+    {
+      "module_id": 12,
+      "module_name": "Reinforcement Learning \u2013 Policy Optimization",
+      "module_description": "Learning optimal behaviors.",
+      "sessions": [
+        {
+          "session_number": 12,
+          "session_title": "Markov Decision Processes",
+          "subtopics": [
+            "Reward Function",
+            "Transition Probabilities"
+          ],
+          "learning_objectives": [
+            "Understand MDPs"
+          ],
+          "key_concepts": [
+            "Policy"
+          ],
+          "rationale": "Connects Bayesian inference to decision making."
+        }
+      ]
+    },
+    {
+      "module_id": 13,
+      "module_name": "Generative Models \u2013 Hierarchical Structures",
+      "module_description": "Complex models with multiple levels of abstraction.",
+      "sessions": [
+        {
+          "session_number": 13,
+          "session_title": "Multi-Level Models",
+          "subtopics": [
+            "Recurrent Networks"
+          ],
+          "learning_objectives": [
+            "Understand complex models"
+          ],
+          "key_concepts": [
+            "Latent Variables"
+          ],
+          "rationale": "Modeling hierarchical relationships."
+        }
+      ]
+    },
+    {
+      "module_id": 14,
+      "module_name": "Model Selection & Validation",
+      "module_description": "Evaluating the quality of probabilistic models.",
+      "sessions": [
+        {
+          "session_number": 14,
+          "session_title": "Cross-Validation",
+          "subtopics": [
+            "Hold-out Sets"
+          ],
+          "learning_objectives": [
+            "Assess model performance"
+          ],
+          "key_concepts": [
+            "Performance Metrics"
+          ],
+          "rationale": "Ensuring model robustness."
+        }
+      ]
+    },
+    {
+      "module_id": 15,
+      "module_name": "Applications & Future Directions",
+      "module_description": "Summary and connections to diverse fields.",
+      "sessions": [
+        {
+          "session_number": 15,
+          "session_title": "Concluding Remarks",
+          "subtopics": [
+            "Synthesis of Concepts",
+            "Future Research"
+          ],
+          "learning_objectives": [
+            "Critical Thinking"
+          ],
+          "key_concepts": [
+            "Open Questions"
+          ],
+          "rationale": "Final overview and integration of concepts."
+        }
+      ]
+    }
+  ]
+}

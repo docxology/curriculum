@@ -1,0 +1,34 @@
+graph LR
+    A([Start: AIC Model Selection])
+    B((Bayesian Inference))
+    C((Model Specification))
+    D((Model Selection Criteria: AIC))
+    E[AIC Calculation] --> D
+    F[Evaluate Model Fit] --> E
+    G[Compare Models] --> F
+    H[Select Best Model] --> G
+    I[Model Deployment] --> H
+    J[Monitor Performance] --> I
+    K[Feedback: Refine Model] --> J
+    L((Sensitivity Analysis))
+    M((Alternative Models Considered))
+    N((Data Preprocessing))
+    O[Iterative Process] --> N
+    P[Model Validation] --> O
+    Q[Documentation] --> P
+    R[Stakeholder Review] --> Q
+    S([End: Final Model])
+
+    B --> C
+    C --> E
+    E --> D
+    D --> B
+    B --> L
+    L --> M
+    M --> N
+    N --> P
+    P --> R
+    R --> S
+    B --> M
+    B --> N
+    B --> P

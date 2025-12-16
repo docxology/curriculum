@@ -1,0 +1,27 @@
+graph LR
+    A([Start: Initial Model]) --> B{Define Model Objective}
+    B --> C{Choose Model Type (e.g., Linear, Logistic)}
+    C --> D{Gather & Prepare Data}
+    D --> E{Train Model}
+    E -- Primary --> F{Evaluate Model Performance}
+    F -- Critical --> G{Assess Goodness of Fit (e.g., Log-Likelihood)}
+    G --> H{Iterate: Adjust Parameters}
+    H -- Optional --> I{Try Different Model Types}
+    H -- Feedback --> E
+    E -- Parallel --> I
+    I --> E
+    H -- Conditional --> G
+    G -- Critical --> H
+    F --> K{Model Validation - Holdout Set}
+    K --> L{Deployment/Prediction}
+    L --> M([End: Final Model])
+
+    subgraph Data Preparation
+        D --> D1{Data Cleaning}
+        D1 --> D2{Feature Engineering}
+    end
+
+    subgraph Model Training
+        E --> E1{Parameter Optimization (e.g., Gradient Descent)}
+        E1 --> E2{Convergence Check}
+    end

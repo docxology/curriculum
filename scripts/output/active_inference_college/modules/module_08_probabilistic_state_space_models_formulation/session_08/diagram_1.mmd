@@ -1,0 +1,17 @@
+graph TD
+    A([Start]) --> B(State 1 - Initial Condition);
+    B --> C{Condition A?};
+    C -- Yes --> D(State 2 - Process 1);
+    C -- No --> E(State 3 - Alternative Path);
+    D --> F{Condition B?};
+    E --> F;
+    F -- Yes --> G(State 4 - Process 2);
+    F -- No --> H(State 5 - Divergence);
+    G --> I{Condition C?};
+    H --> I;
+    I -- Yes --> J(State 6 - Feedback Loop);
+    I -- No --> K(State 7 - Termination);
+    J --> L(State 8 -  Parameter Adjustment);
+    L --> J;
+    K --> A;
+    A --> K;

@@ -1,0 +1,17 @@
+graph TD
+    A([Start: Environment Setup]) --> B{Initialize RL Agent};
+    B -- Reward Signal --> C{Calculate Reward};
+    C -- Reward Value --> D{Update Policy};
+    D -- Policy Update --> E{Action Selection};
+    E -- Environment Interaction --> F{Observe New State};
+    F --> E;
+    E -- Action --> F;
+    C -- Cost --> G{Calculate Cost};
+    G -- Cost Value --> H{Update Q-Function};
+    H --> D;
+    C -- Potential Penalties --> G;
+    D -- Policy Convergence --> I{Policy Stable?};
+    I -- Yes --> J([End: Optimal Policy Found]);
+    I -- No --> B;
+    J --> K{Save Model};
+    K --> J;

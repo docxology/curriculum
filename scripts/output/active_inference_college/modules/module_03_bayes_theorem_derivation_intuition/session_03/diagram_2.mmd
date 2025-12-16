@@ -1,0 +1,17 @@
+graph TD
+    A([Start]) --> B{Prior Knowledge?};
+    B -- Yes --> C[Bayes' Theorem Formula: P(A|B) = P(B|A)P(A)/P(B)];
+    B -- No --> D[Introduce Prior Probability (P(A))];
+    D --> E[Introduce Likelihood (P(B|A))];
+    E --> F[Introduce Marginal Probability of B (P(B))];
+    F --> C;
+    C --> G{Update P(A|B)?};
+    G -- Yes --> H[Apply Bayes' Theorem Formula];
+    H --> I[New P(A|B)];
+    I --> J{Repeat with New P(A|B)?};
+    J -- Yes --> G;
+    J -- No --> K[Final Result: P(A|B)];
+    K --> L([End]);
+    C --> M{Calculate Evidence (P(B))};
+    M --> C;
+    G -- No --> L;
