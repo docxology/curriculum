@@ -3,6 +3,9 @@
 import pytest
 from src.website import templates
 
+pytestmark = pytest.mark.unit
+
+
 
 class TestTemplates:
     """Test template functions."""

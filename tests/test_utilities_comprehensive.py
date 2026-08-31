@@ -12,6 +12,9 @@ from src.utils.prompt_helpers import (
 )
 from src.config.loader import ConfigLoader
 
+pytestmark = pytest.mark.unit
+
+
 
 class TestCourseSelection:
     """Tests for course_selection module."""

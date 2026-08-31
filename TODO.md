@@ -1,21 +1,32 @@
 # TODO — curriculum
 
 Backlog for agent-ergonomics and repo hygiene work. One line per entry.
-Entries added 2026-08-31 by the agent-ergonomics pass (see REVIEW_LOG_2026-08-31.md).
+Created 2026-08-31 (agent-erg fleet); items marked DONE completed same day in a follow-up pass
+(commit 045875b). Scope any remaining work here.
 
 ## Minor
 
-- [ ] docs/TROUBLESHOOTING.md link to src/llm/TROUBLESHOOTING.md was broken (../../ instead of src/) — FIXED 2026-08-31
-- [ ] README.md / AGENTS.md test counts said "~540 tests across 25 files"; actual 658 collected across 35 files — FIXED 2026-08-31 (claims now dated + carry verification command)
-- [ ] AGENTS.md project-layout code block labeled repo root "biology/" — FIXED 2026-08-31 (relabeled "curriculum/ repo root")
-- [ ] docs claims said `output/` is "gitignored" but the repo has no .gitignore and 5 files under output/ are git-tracked — FIXED 2026-08-31 (claims corrected; see Major below)
+- [x] docs/TROUBLESHOOTING.md broken link (../../ -> ../src/) — DONE 2026-08-31
+- [x] README/AGENTS.md stale test counts (~540/25 -> 658 collected/35 files, dated + verification command) — DONE 2026-08-31
+- [x] AGENTS.md layout root mislabeled "biology/" — DONE 2026-08-31
+- [x] output/ "gitignored" claims were false (no .gitignore existed) — DONE 2026-08-31: .gitignore added; claims now true
 
 ## Medium
 
-- [ ] AGENTS.md "Recent Updates" section was frozen at Dec 2024 with no date-visible status; now has a verified-state line (2026-08-31) — keep updating it as a dated log, or convert to a STATUS.md appended-only log
-- [ ] ~205 untracked files under scripts/output/ and output/ (generated AGENTS.md/README.md doc pairs) make `git status` noise for cold agents; either add a .gitignore rule for generated doc pairs or track them deliberately
+- [x] Untracked generated AGENTS.md/README.md stub pairs (~200 files) polluted `git status` — DONE 2026-08-31: ignored via .gitignore per their own "gitignored, never committed" declaration
+- [x] AGENTS.md "Recent Updates" frozen at Dec 2024 — DONE 2026-08-31: dated verified-state line added; keep appending dated entries (do not rewrite history)
 
 ## Major
 
-- [ ] 194 compiled .pyc files are git-tracked (e.g. src/*/__pycache__/*.pyc, tests/__pycache__/*.pyc) and show as permanently modified in git status. Fix: add a .gitignore covering __pycache__/, then `git rm -r --cached` the .pyc files. Requires owner decision because it rewrites what CI sees and touches 194 tracked paths (deliberately NOT done in this docs pass).
-- [ ] No .gitignore exists at all. Output/, .venv, __pycache__ are unprotected. Same owner decision as above (source-hygiene change, out of docs-pass scope).
+- [x] 194 git-tracked .pyc files permanently showing as modified — DONE 2026-08-31: untracked via `git rm -r --cached` in commit 045875b; .gitignore now covers __pycache__/ and *.pyc
+- [x] No .gitignore at all — DONE 2026-08-31: added in commit 045875b (also untracked .DS_Store, .coverage, output/logs/, scripts/output/logs/, scripts/test_reports/)
+- [x] pytest marker scheme was broken: 28/35 test files had no marker, so `pytest -m unit` deselected all 658 — DONE 2026-08-31 Round 2: annotated 28 files with `pytestmark = pytest.mark.unit`; gate now runs 613 passed / 45 deselected / 0 failed
+- [ ] No fast pre-push gate declared (lint/typecheck). If wanted: `uv run black --check src scripts` + `uv run flake8 src scripts` (tools already in dev deps) — owner decision whether to wire into a hook
+- [ ] Full integration suite (`uv run pytest -m integration`) requires local Ollama + gemma3:4b; not verified in this pass — run before any release/tag
+
+## Verification (2026-08-31, Round 2)
+
+- Fast gate: `uv run pytest -m unit` -> 613 passed, 45 deselected, 0 failed (407s on external drive)
+- `git status --porcelain | wc -l`: 206 (pre-pass) -> 1 (post-pass; the 1 is a pre-existing edit this fleet did not author)
+- `git ls-files | grep -c '\.pyc$'` -> 0
+- Link check across all touched docs: 0 broken

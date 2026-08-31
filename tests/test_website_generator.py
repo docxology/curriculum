@@ -6,6 +6,9 @@ from pathlib import Path
 from src.config.loader import ConfigLoader
 from src.website.generator import WebsiteGenerator
 
+pytestmark = pytest.mark.unit
+
+
 
 @pytest.fixture
 def config_dir(tmp_path):

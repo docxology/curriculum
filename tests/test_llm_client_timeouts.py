@@ -9,6 +9,9 @@ import time
 import pytest
 from src.llm.client import OllamaClient, LLMError
 
+pytestmark = pytest.mark.unit
+
+
 
 @pytest.fixture
 def llm_config():

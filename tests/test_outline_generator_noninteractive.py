@@ -9,6 +9,9 @@ from src.llm.client import OllamaClient
 from src.generate.stages.stage1_outline import OutlineGenerator
 from src.utils.helpers import format_timestamp
 
+pytestmark = pytest.mark.unit
+
+
 
 @pytest.fixture
 def noninteractive_config(tmp_path):

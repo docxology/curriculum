@@ -4,6 +4,9 @@ import pytest
 
 from src.website import styles
 
+pytestmark = pytest.mark.unit
+
+
 
 class TestStyles:
     """Test cases for styles module."""

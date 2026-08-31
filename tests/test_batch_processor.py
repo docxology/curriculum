@@ -14,6 +14,9 @@ import shutil
 
 from src.generate.orchestration.batch import BatchCourseProcessor
 
+pytestmark = pytest.mark.unit
+
+
 
 @pytest.fixture
 def config_dir(tmp_path):

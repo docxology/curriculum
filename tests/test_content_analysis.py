@@ -3,6 +3,7 @@
 import pytest
 import re
 from src.utils.content_analysis import (
+
     count_words,
     count_sections,
     count_subsections,
@@ -21,6 +22,8 @@ from src.utils.content_analysis import (
     analyze_open_questions,
     validate_mermaid_syntax
 )
+
+pytestmark = pytest.mark.unit
 
 
 class TestWordCounting:

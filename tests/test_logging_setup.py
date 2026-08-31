@@ -17,6 +17,9 @@ from src.utils.logging_setup import (
 )
 from src.config.loader import ConfigLoader
 
+pytestmark = pytest.mark.unit
+
+
 
 class TestSetupLogging:
     """Test setup_logging function."""

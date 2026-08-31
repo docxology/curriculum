@@ -15,6 +15,9 @@ from src.config.loader import ConfigLoader
 from src.utils.course_selection import select_course_template, GENERATE_ALL_COURSES
 import logging
 
+pytestmark = pytest.mark.unit
+
+
 
 class TestCourseSelectionEdgeCases:
     """Test course selection with edge cases."""

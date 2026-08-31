@@ -10,6 +10,9 @@ from src.generate.formats.study_notes import StudyNotesGenerator
 from src.generate.formats.diagrams import DiagramGenerator
 from src.generate.formats.questions import QuestionGenerator
 
+pytestmark = pytest.mark.unit
+
+
 
 @pytest.fixture
 def test_config(tmp_path):

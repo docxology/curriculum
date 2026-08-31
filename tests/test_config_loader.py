@@ -5,6 +5,9 @@ import yaml
 from pathlib import Path
 from src.config.loader import ConfigLoader, ConfigurationError
 
+pytestmark = pytest.mark.unit
+
+
 
 @pytest.fixture
 def config_dir(tmp_path):

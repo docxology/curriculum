@@ -9,6 +9,9 @@ import pytest
 
 from src.website import scripts
 
+pytestmark = pytest.mark.unit
+
+
 
 class TestScriptsInteraction:
     """Test cases for JavaScript interaction behavior."""

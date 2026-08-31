@@ -2,6 +2,7 @@
 
 import pytest
 from src.generate.processors.cleanup import (
+
     clean_conversational_artifacts,
     standardize_placeholders,
     remove_duplicate_headings,
@@ -9,6 +10,8 @@ from src.generate.processors.cleanup import (
     full_cleanup_pipeline,
     batch_validate_materials,
 )
+
+pytestmark = pytest.mark.unit
 
 
 class TestCleanConversationalArtifacts:

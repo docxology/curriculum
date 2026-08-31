@@ -5,6 +5,9 @@ import pytest
 from pathlib import Path
 from src.config.loader import ConfigLoader
 
+pytestmark = pytest.mark.unit
+
+
 
 @pytest.fixture
 def sample_outline_json(tmp_path):

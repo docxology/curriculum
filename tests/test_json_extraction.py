@@ -11,6 +11,9 @@ from src.generate.stages.stage1_outline import OutlineGenerator
 from src.config.loader import ConfigLoader
 from src.llm.client import OllamaClient
 
+pytestmark = pytest.mark.unit
+
+
 
 @pytest.fixture
 def config_loader(tmp_path):

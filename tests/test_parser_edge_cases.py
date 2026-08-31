@@ -3,6 +3,9 @@
 import pytest
 from src.generate.processors.parser import OutlineParser
 
+pytestmark = pytest.mark.unit
+
+
 
 class TestMalformedMarkdown:
     """Test parser handling of malformed markdown."""

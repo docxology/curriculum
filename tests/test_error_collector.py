@@ -3,6 +3,9 @@
 import pytest
 from src.utils.error_collector import ErrorCollector, ErrorEntry, ErrorSeverity, ErrorType
 
+pytestmark = pytest.mark.unit
+
+
 
 class TestErrorCollector:
     """Test ErrorCollector class."""

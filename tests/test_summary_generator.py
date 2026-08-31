@@ -1,14 +1,18 @@
 """Tests for summary generator module."""
+import pytest
 
 import logging
 from src.utils.error_collector import ErrorCollector
 from src.utils.summary_generator import (
+
     categorize_errors_by_type,
     format_error_list,
     generate_validation_summary,
     generate_stage_summary,
     generate_generation_summary
 )
+
+pytestmark = pytest.mark.unit
 
 
 class TestSummaryGenerator:

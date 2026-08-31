@@ -12,6 +12,9 @@ from src.config.loader import ConfigLoader
 from src.generate.orchestration.pipeline import ContentGenerator
 from src.llm.client import LLMError
 
+pytestmark = pytest.mark.unit
+
+
 
 @pytest.fixture
 def test_config(tmp_path):

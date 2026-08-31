@@ -11,6 +11,9 @@ from src.llm.client import OllamaClient, LLMError
 from src.llm.health import OllamaHealthMonitor
 from src.llm.request_handler import RequestHandler
 
+pytestmark = pytest.mark.unit
+
+
 
 @pytest.fixture
 def llm_config():

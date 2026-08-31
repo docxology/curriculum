@@ -4,6 +4,9 @@ import pytest
 from pathlib import Path
 from src.website import content_loader
 
+pytestmark = pytest.mark.unit
+
+
 
 class TestContentLoader:
     """Test content_loader functions."""

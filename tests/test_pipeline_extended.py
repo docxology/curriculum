@@ -7,6 +7,9 @@ from pathlib import Path
 from src.config.loader import ConfigLoader
 from src.generate.orchestration.pipeline import ContentGenerator
 
+pytestmark = pytest.mark.unit
+
+
 
 @pytest.fixture
 def multi_module_config(tmp_path):

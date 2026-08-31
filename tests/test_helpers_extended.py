@@ -4,6 +4,7 @@ import pytest
 from pathlib import Path
 from datetime import datetime
 from src.utils.helpers import (
+
     ensure_directory,
     slugify,
     save_markdown,
@@ -12,6 +13,8 @@ from src.utils.helpers import (
     sanitize_filename,
     format_module_filename,
 )
+
+pytestmark = pytest.mark.unit
 
 
 class TestFormatModuleFilename:

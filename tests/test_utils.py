@@ -3,6 +3,7 @@
 import pytest
 from pathlib import Path
 from src.utils.helpers import (
+
     ensure_directory,
     slugify,
     save_markdown,
@@ -10,6 +11,8 @@ from src.utils.helpers import (
     format_timestamp,
     sanitize_filename
 )
+
+pytestmark = pytest.mark.unit
 
 
 class TestUtils:

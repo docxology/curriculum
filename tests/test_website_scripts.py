@@ -5,6 +5,9 @@ import pytest
 
 from src.website import scripts
 
+pytestmark = pytest.mark.unit
+
+
 
 class TestScripts:
     """Test cases for scripts module."""
