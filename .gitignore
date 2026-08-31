@@ -1,0 +1,35 @@
+# --- Bytecode / caches ---
+__pycache__/
+*.py[cod]
+*.pyc
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.benchmarks/
+
+# --- Environments ---
+.venv/
+venv/
+
+# --- OS noise ---
+.DS_Store
+
+# --- Runtime artifacts (NOT tracked) ---
+output/logs/
+output/**/*.log
+scripts/output/logs/
+scripts/output/**/*.log
+scripts/test_reports/
+.pytest-timeouts
+
+# --- Generated AGENTS.md/README.md stubs (self-declare "gitignored, never committed") ---
+.cursorrules/AGENTS.md
+docs/manuscript/AGENTS.md
+docs/manuscript/README.md
+output/**/AGENTS.md
+output/**/README.md
+scripts/output/**/AGENTS.md
+scripts/output/**/README.md
