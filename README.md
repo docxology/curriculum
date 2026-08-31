@@ -34,6 +34,14 @@ uv run python3 scripts/06_website.py               # Stage 06: Website
 
 ---
 
+## 📌 Current State (verified 2026-08-31)
+
+- **Status**: implemented and working — 658 tests collected across 35 files, all 6 pipeline stages present. Verify: `uv run pytest --collect-only`.
+- **Backlog / what's next**: [TODO.md](TODO.md) (single authoritative pointer).
+- **For AI agents**: [AGENTS.md](AGENTS.md). Pass history: [REVIEW_LOG_2026-08-31.md](REVIEW_LOG_2026-08-31.md).
+
+---
+
 ## 📊 System Overview
 
 ### Pipeline Workflow
@@ -235,7 +243,7 @@ graph TB
 
 ### Core Principles
 
-- ✅ **Implementations only** - No mocks in tests (~540 tests across 25 files)
+- ✅ **Implementations only** - No mocks in tests (658 tests collected across 35 files as of 2026-08-31, verified by `uv run pytest --collect-only`)
 - ✅ **Configuration-driven** - YAML controls all behavior
 - ✅ **Text-based** - All formats human-editable and git-friendly
 - ✅ **Modular design** - Clear separation of concerns
@@ -269,9 +277,9 @@ curriculum/
 │   ├── 05_generate_secondary.py
 │   ├── 06_website.py
 │   └── run_pipeline.py
-├── tests/                  # Test suite (~540 tests, NO MOCKS)
-├── docs/                   # Comprehensive documentation (18+ files)
-└── output/                 # Generated content (gitignored)
+├── tests/                  # Test suite (658 collected tests across 35 files, NO MOCKS; as of 2026-08-31 via `uv run pytest --collect-only`)
+├── docs/                   # Comprehensive documentation (20 topical files + manuscript/ + other/)
+└── output/                 # Generated content (working material; a few logs/outlines ARE git-tracked — check `git ls-files output`)
     ├── outlines/           # JSON course outlines
     ├── {course_name}/      # Course-specific output
     │   ├── outlines/       # Course-specific outlines

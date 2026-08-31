@@ -293,7 +293,7 @@ print(diagnostics)
      timeout: 300  # Increase from default 180
    ```
 
-See [src/llm/TROUBLESHOOTING.md](../../src/llm/TROUBLESHOOTING.md) for comprehensive guide.
+See [src/llm/TROUBLESHOOTING.md](../src/llm/TROUBLESHOOTING.md) for comprehensive guide.
 
 ### Issue: "LLM timeout" / "Stream timeout"
 
