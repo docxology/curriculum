@@ -20,6 +20,7 @@ venv/
 # --- Runtime artifacts (NOT tracked) ---
 output/logs/
 output/**/*.log
+output/test_reports/
 scripts/output/logs/
 scripts/output/**/*.log
 scripts/test_reports/
