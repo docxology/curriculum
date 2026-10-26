@@ -103,7 +103,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         '--run-tests',
         action='store_true',
-        help='Run pytest in stage 02'
+        help='Deprecated no-op: stage 02 runs pytest by default; accepted for backwards compatibility.'
     )
     parser.add_argument(
         '--log-level',

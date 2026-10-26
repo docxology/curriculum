@@ -607,7 +607,7 @@ uv run python3 scripts/05_generate_secondary.py --outline path/to/outline.md
 
 ```
 2024-12-08 14:17:13 - INFO - Using most recent outline from output/outlines/
-2024-12-08 14:17:13 - INFO - Loading most recent outline JSON from: /Users/user/biology/scripts/output/outlines/course_outline_20241208_141121.json
+2024-12-08 14:17:13 - INFO - Loading most recent outline JSON from: /Users/user/curriculum/output/outlines/course_outline_20241208_141121.json
 ```
 
 ## Environment Variables

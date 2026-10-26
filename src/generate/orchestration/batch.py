@@ -100,9 +100,7 @@ class BatchCourseProcessor:
             cmd.extend(['--course', course_name])
         
         # Forward other relevant arguments
-        if script_name == '02_run_tests.py' and args.run_tests:
-            cmd.append('--run-tests')
-        elif script_name == '04_generate_primary.py':
+        if script_name == '04_generate_primary.py':
             if args.modules:
                 cmd.append('--modules')
                 cmd.extend([str(m) for m in args.modules])
@@ -141,9 +139,9 @@ class BatchCourseProcessor:
                 
                 # Try to find and read last lines of log file for context
                 try:
-                    # Look for log file in scripts/output/logs/
+                    # Look for log file in output/logs/
                     log_pattern = script_name.replace('.py', '') + '_*.log'
-                    log_dir = self.project_root / "scripts" / "output" / "logs"
+                    log_dir = self.project_root / "output" / "logs"
                     if log_dir.exists():
                         log_files = sorted(log_dir.glob(log_pattern), key=lambda p: p.stat().st_mtime, reverse=True)
                         if log_files:

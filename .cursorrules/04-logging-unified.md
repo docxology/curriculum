@@ -118,7 +118,7 @@ logger.debug(f"Module: {module_name}, Session: {session_title}")
 ## Log File Output
 
 All scripts write logs to timestamped files:
-- Location: `output/logs/` or `scripts/output/logs/`
+- Location: `output/logs/`
 - Format: `{script_name}_{YYYYMMDD}_{HHMMSS}.log`
 - Example: `04_generate_primary_20241208_143022.log`
 

@@ -16,7 +16,7 @@ This system embodies a recursive collaboration between human judgment (top-down 
 
 ```bash
 # Install dependencies
-uv pip install -e ".[dev]"
+uv sync --extra dev
 
 # Hands-off generation (completely automated, no user interaction)
 uv run python3 scripts/run_pipeline.py --no-interactive
@@ -30,15 +30,15 @@ uv run python3 scripts/05_generate_secondary.py     # Stage 05: Secondary conten
 uv run python3 scripts/06_website.py               # Stage 06: Website
 ```
 
-**Requirements**: Python 3.10+, [uv](https://github.com/astral-sh/uv), [Ollama](https://ollama.ai/) with model
+**Requirements**: Python 3.10+, [uv](https://github.com/astral-sh/uv), [Ollama](https://ollama.com/) with model
 
 ---
 
-## 📌 Current State (verified 2026-08-31)
+## 📌 Current State (verified 2026-10-25)
 
-- **Status**: implemented and working — 658 tests collected across 35 files, all 6 pipeline stages present. Verify: `uv run pytest --collect-only`.
+- **Status**: implemented and working — 688 tests collected across 35 files, all 6 pipeline stages present. Verify: `uv run pytest --collect-only`.
 - **Backlog / what's next**: [TODO.md](TODO.md) (single authoritative pointer).
-- **For AI agents**: [AGENTS.md](AGENTS.md). Pass history: [REVIEW_LOG_2026-08-31.md](REVIEW_LOG_2026-08-31.md).
+- **For AI agents**: [AGENTS.md](AGENTS.md).
 
 ---
 
@@ -243,7 +243,7 @@ graph TB
 
 ### Core Principles
 
-- ✅ **Implementations only** - No mocks in tests (658 tests collected across 35 files as of 2026-08-31, verified by `uv run pytest --collect-only`)
+- ✅ **Implementations only** - No mocks in tests (688 tests collected across 35 files as of 2026-08-31, verified by `uv run pytest --collect-only`)
 - ✅ **Configuration-driven** - YAML controls all behavior
 - ✅ **Text-based** - All formats human-editable and git-friendly
 - ✅ **Modular design** - Clear separation of concerns
@@ -277,7 +277,7 @@ curriculum/
 │   ├── 05_generate_secondary.py
 │   ├── 06_website.py
 │   └── run_pipeline.py
-├── tests/                  # Test suite (658 collected tests across 35 files, NO MOCKS; as of 2026-08-31 via `uv run pytest --collect-only`)
+├── tests/                  # Test suite (688 collected tests across 35 files, NO MOCKS; as of 2026-08-31 via `uv run pytest --collect-only`)
 ├── docs/                   # Comprehensive documentation (20 topical files + manuscript/ + other/)
 └── output/                 # Generated content (working material; a few logs/outlines ARE git-tracked — check `git ls-files output`)
     ├── outlines/           # JSON course outlines
@@ -294,7 +294,7 @@ curriculum/
 
 | Task | Command |
 |------|---------|
-| **Setup** | `uv pip install -e ".[dev]"` |
+| **Setup** | `uv sync --extra dev` |
 | **Hands-off full pipeline** | `uv run python3 scripts/run_pipeline.py --no-interactive` |
 | **Full pipeline (interactive)** | `uv run python3 scripts/run_pipeline.py` |
 | **Generate outline** | `uv run python3 scripts/03_generate_outline.py --no-interactive` |

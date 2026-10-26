@@ -143,7 +143,7 @@ Technical documentation for the educational course Generator.
 
 ### [TESTING_COVERAGE.md](TESTING_COVERAGE.md)
 **Test suite overview and coverage** - 🧪 Quality assurance
-- Test statistics (~540 tests across 25 files)
+- Test statistics (688 collected tests across 35 files)
 - Unit vs integration tests (fast tests <2s, slow tests ~150s)
 - Coverage metrics (~30% without Ollama, ~75% with integration tests)
 - Test organization by functionality and speed

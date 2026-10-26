@@ -126,7 +126,7 @@ See **[docs/PIPELINE_GUIDE.md](docs/PIPELINE_GUIDE.md)** for detailed script doc
 
 - **Location**: `tests/` directory
 - **Run with**: `uv run pytest`
-- **Test files**: 35 test files with 658 collected tests (as of 2026-08-31, verified by `uv run pytest --collect-only`)
+- **Test files**: 35 test files with 688 collected tests (as of 2026-10-25, verified by `uv run pytest --collect-only`)
 - **Test types**:
   - Unit tests (no external dependencies)
   - Integration tests (require Ollama + model)
@@ -169,11 +169,11 @@ See **[docs/PIPELINE_GUIDE.md](docs/PIPELINE_GUIDE.md)** for detailed script doc
 - Content generation (Session-based primary + Session-level secondary materials)
 - **Content Validation** (automatic quality checks with [COMPLIANT]/[NEEDS REVIEW] status)
 - Six-stage pipeline (setup → validation → outline → primary → secondary → website)
-- Comprehensive test suite (658 collected tests across 35 test files, no mocks; verified 2026-08-31 by `uv run pytest --collect-only`)
+- Comprehensive test suite (688 collected tests across 35 test files, no mocks; verified 2026-10-25 by `uv run pytest --collect-only`)
 - Modular documentation (architecture, configuration, pipeline, formats, API reference, testing coverage)
 - Development rules (12 numbered rule files + README in .cursorrules/)
 
-### Recent Updates (dated entries; see also REVIEW_LOG_2026-08-31.md at repo root)
+### Recent Updates (dated entries)
 
 Latest verified state: 2026-09-06 — scripts enforce the thin-orchestrator contract (logic in src/, scripts = argparse + logging + one delegated call); `git status` may show untracked AGENTS.md/README.md doc pairs under output/ (generated alongside output content; do not assume gitignored).
 - **Thin Script Refactor (2026-09-06)**: Stages 01/02/03/05 logic moved verbatim from scripts/ into `src/setup/environment.py`, `src/validation/runner.py`, `src/generate/stages/outline_workflow.py`, and `src/generate/stages/secondary.py`; scripts remain thin orchestrators. Test reports now default to `output/test_reports/`. Legacy `scripts/output/` artifacts relocated to root `output/`; `scripts/test_reports/` and `.DS_Store` artifacts removed.
@@ -345,7 +345,7 @@ uv run pytest tests/test_llm_client.py tests/test_outline_generator.py tests/tes
 | **`src/setup/`** | Environment setup module | `environment.py` (Stage 01 logic) |
 | **`src/validation/`** | Validation & pytest orchestration module | `runner.py` (Stage 02 logic) |
 | **`scripts/`** | Thin orchestrator scripts (argparse + logging + one delegated call) | `01_setup_environment.py` through `06_website.py`, `run_pipeline.py` |
-| **`tests/`** | Test suite | 25 test files, `conftest.py` (auto-start Ollama) |
+| **`tests/`** | Test suite | 35 test files, `conftest.py` (auto-start Ollama) |
 | **`docs/`** | Technical documentation | `ARCHITECTURE.md`, `PIPELINE_GUIDE.md`, `CONFIGURATION.md`, etc. |
 | **`output/outlines/`** | Generated outlines | `course_outline_TIMESTAMP.json`, `course_outline_TIMESTAMP.md` |
 | **`output/{course_name}/modules/`** | Generated content | `module_XX_name/session_YY/` (primary + secondary, both session-level, course-specific) |
@@ -395,7 +395,7 @@ curriculum/   # repo root (this file previously mislabeled this 'biology/')
 │   ├── course_config.yaml
 │   ├── llm_config.yaml
 │   └── output_config.yaml
-├── tests/                # Test suite (658 collected tests across 35 files, no mocks; verified 2026-08-31)
+├── tests/                # Test suite (688 collected tests across 35 files, no mocks; verified 2026-10-25)
 │   ├── conftest.py       # Auto-start Ollama
 │   └── test_*.py         # Test files
 ├── scripts/              # Executable scripts (7 scripts: 6 stages + pipeline)
@@ -428,7 +428,7 @@ curriculum/   # repo root (this file previously mislabeled this 'biology/')
 **Core**: pyyaml, requests  
 **Dev**: pytest, pytest-cov, black, flake8, mypy
 
-**Install**: `uv pip install -e ".[dev]"`
+**Install**: `uv sync --extra dev`
 
 ### Key Documentation
 

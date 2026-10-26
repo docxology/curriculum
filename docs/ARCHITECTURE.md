@@ -13,7 +13,7 @@ The educational course Generator is a modular, configuration-driven system that 
 | **Core Layers** | Configuration, LLM, Generation, Processing, Orchestration, Utility |
 | **Data Flow** | YAML configs → JSON outline → Session-based content → Module synthesis |
 | **Key Innovation** | Dynamic JSON outline structure, not static module definitions |
-| **Testing Philosophy** | Real implementations only, no mocks (~540 tests across 25 files) |
+| **Testing Philosophy** | Real implementations only, no mocks (688 collected tests across 35 files) |
 | **Extension Points** | New content types, custom workflows, additional config |
 
 **Read time**: 15-30 minutes | **Audience**: Developers, contributors, system architects
@@ -303,7 +303,7 @@ biology/
 │   ├── llm_config.yaml      # LLM settings
 │   └── output_config.yaml   # Output configuration
 │
-├── tests/                   # Test suite (~540 tests across 25 files)
+├── tests/                   # Test suite (688 collected tests across 35 files)
 │   ├── test_batch_processor.py
 │   ├── test_cleanup.py
 │   ├── test_config_loader.py

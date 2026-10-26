@@ -139,7 +139,7 @@ open htmlcov/index.html
 ### "Ollama not found"
 
 Integration tests will skip automatically. To run them:
-1. Install Ollama: https://ollama.ai/
+1. Install Ollama: https://ollama.com/
 2. Start Ollama: `ollama serve`
 3. Pull model: `ollama pull gemma3:4b`
 
@@ -177,15 +177,10 @@ uv run pytest --cov=src --cov-report=html
 
 ### Parallel Execution
 
-Install pytest-xdist:
+pytest-xdist is not a declared dependency; pull it in per run:
 ```bash
-uv pip install pytest-xdist
-```
-
-Run tests in parallel:
-```bash
-uv run pytest -n auto  # Auto-detect CPU count
-uv run pytest -n 4    # Use 4 workers
+uv run --with pytest-xdist pytest -n auto  # Auto-detect CPU count
+uv run --with pytest-xdist pytest -n 4     # Use 4 workers
 ```
 
 **Note**: Integration tests with Ollama may not benefit much from parallelization due to API rate limits.

@@ -618,7 +618,7 @@ Error: Stream timeout: 941.62s elapsed (limit: 360.00s)...
 1. **Extract request ID** from error message
 2. **Filter logs** to see full request lifecycle:
    ```bash
-   grep "[lecture-7c3f93fc]" scripts/output/logs/*.log
+   grep "[lecture-7c3f93fc]" output/logs/*.log
    ```
 3. **Identify root cause**: Check timeout, connection, or validation errors
 4. **Regenerate failed session**:
@@ -708,10 +708,10 @@ if "[" in error_msg and "]" in error_msg:
 **From Log Files**:
 ```bash
 # Find request ID in logs
-grep "Stream timeout" scripts/output/logs/*.log | grep -oE "\[.*?\]"
+grep "Stream timeout" output/logs/*.log | grep -oE "\[.*?\]"
 
 # Extract all request IDs from errors
-grep "ERROR" scripts/output/logs/*.log | grep -oE "\[[a-z]+-[a-f0-9]{8}\]" | sort | uniq
+grep "ERROR" output/logs/*.log | grep -oE "\[[a-z]+-[a-f0-9]{8}\]" | sort | uniq
 ```
 
 ### Tracing Request Lifecycle
@@ -725,16 +725,16 @@ REQUEST_ID="lecture-7c3f93fc"
 **Step 2: Filter Logs by Request ID**
 ```bash
 # Find all entries for this request
-grep "[${REQUEST_ID}]" scripts/output/logs/*.log
+grep "[${REQUEST_ID}]" output/logs/*.log
 
 # See full lifecycle
-grep -E "\[${REQUEST_ID}\]" scripts/output/logs/*.log | head -50
+grep -E "\[${REQUEST_ID}\]" output/logs/*.log | head -50
 ```
 
 **Step 3: Analyze Request Timeline**
 ```bash
 # Extract timeline of events
-grep "[${REQUEST_ID}]" scripts/output/logs/*.log | \
+grep "[${REQUEST_ID}]" output/logs/*.log | \
   awk '{print $1, $2, $NF}' | \
   head -20
 ```
@@ -742,7 +742,7 @@ grep "[${REQUEST_ID}]" scripts/output/logs/*.log | \
 **Step 4: Check Performance Metrics**
 ```bash
 # See stream progress logs
-grep "[${REQUEST_ID}]" scripts/output/logs/*.log | grep "Stream:"
+grep "[${REQUEST_ID}]" output/logs/*.log | grep "Stream:"
 
 # Example output:
 # Stream: 2.0s | Chunks: 68 (33.9/s) | Text: 414 chars (~104 tokens, 51.6 tok/s)
@@ -804,13 +804,13 @@ Reason: 6 session(s) failed during generation
 **Step 1: Analyze Failure Pattern**
 ```bash
 # Check which courses failed
-grep "completed with errors" scripts/output/logs/run_pipeline_*.log
+grep "completed with errors" output/logs/run_pipeline_*.log
 
 # Check which stages failed
-grep "Failed stages" scripts/output/logs/run_pipeline_*.log
+grep "Failed stages" output/logs/run_pipeline_*.log
 
 # Extract all request IDs from failures
-grep "Stream timeout\|Connection error" scripts/output/logs/*.log | \
+grep "Stream timeout\|Connection error" output/logs/*.log | \
   grep -oE "\[[a-z]+-[a-f0-9]{8}\]" | sort | uniq
 ```
 
@@ -964,7 +964,7 @@ Performance: 7.1 chars/s, ~1.8 tok/s. Very slow generation...
 1. **Extract request ID**: `lecture-7c3f93fc`
 2. **Filter logs** to see full request lifecycle:
    ```bash
-   grep "[lecture-7c3f93fc]" scripts/output/logs/*.log
+   grep "[lecture-7c3f93fc]" output/logs/*.log
    ```
 3. **Increase timeout** in `llm_config.yaml`:
    ```yaml

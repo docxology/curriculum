@@ -16,7 +16,7 @@ Quick start guide for the educational course Generator.
 
 3. **Ollama with gemma3:4b**
    ```bash
-   # Install Ollama from https://ollama.ai/
+   # Install Ollama from https://ollama.com/
    
    # Pull gemma3:4b model
    ollama pull gemma3:4b
@@ -29,10 +29,10 @@ Quick start guide for the educational course Generator.
 
 ```bash
 # Clone repository
-cd /path/to/biology
+cd /path/to/curriculum
 
 # Install dependencies with uv
-uv pip install -e ".[dev]"
+uv sync --extra dev
 ```
 
 ## Quick Test
@@ -145,7 +145,7 @@ ls -l output/outlines/
 ## Project Structure
 
 ```
-biology/
+curriculum/
 ├── src/                 # Source code (modular structure)
 │   ├── config/          # Configuration management
 │   │   └── loader.py    # ConfigLoader class
@@ -169,10 +169,10 @@ biology/
 │   └── website/         # Website generation
 │       └── generator.py # WebsiteGenerator
 ├── config/              # YAML configurations
-├── tests/               # Test suite (~540 tests across 25 files)
+├── tests/               # Test suite (see README for current counts)
 ├── scripts/             # Executable scripts
 ├── docs/                # Documentation
-└── output/              # Generated content (gitignored)
+└── output/              # Generated content (working material; a few logs/outlines ARE git-tracked)
 ```
 
 ## Testing
@@ -246,7 +246,7 @@ ollama list
 
 Ensure you're running from the repository root:
 ```bash
-cd /path/to/biology
+cd /path/to/curriculum
 ls config/*.yaml  # Should show 3 files
 ```
 

@@ -4,7 +4,7 @@
 
 | Metric | Value | Target | Notes |
 |--------|-------|--------|-------|
-| **Total Tests** | ~500 | Across 25 test files |
+| **Total Tests** | 688 collected | Across 35 test files |
 | **Test Files** | 25 | Modular organization |
 | **Coverage (no Ollama)** | ~30% | Unit tests only |
 | **Coverage (with Ollama)** | ~75% | Integration tests included |
@@ -18,7 +18,7 @@
 
 ## Overview
 
-Comprehensive test suite with **~540 tests** covering all major components of the educational course generator.
+Comprehensive test suite with **688 collected tests** covering all major components of the educational course generator.
 
 **Current Status**:
 - **Total Tests**: 499
@@ -29,7 +29,7 @@ Comprehensive test suite with **~540 tests** covering all major components of th
 
 ## Test Modules
 
-All 25 test files covering comprehensive functionality:
+All 35 test files covering comprehensive functionality:
 
 | Module | Tests | Coverage | Type | Focus |
 |--------|-------|----------|------|-------|
@@ -59,7 +59,7 @@ All 25 test files covering comprehensive functionality:
 | `test_website_styles.py` | - | Unit | Website styling |
 | `test_website_templates.py` | - | Unit | Website templates |
 
-**Total**: ~540 tests across 25 test files
+**Total**: 688 collected tests across 35 test files
 
 **Coverage Note**: Integration tests require Ollama + gemma3:4b model for full coverage.
 
@@ -271,7 +271,7 @@ uv run python3 scripts/02_run_tests.py --include-ollama
 ### Testing Roadmap
 
 **Phase 1** (Current): Basic coverage with real implementations
-- [x] Unit tests for core modules (~540 tests)
+- [x] Unit tests for core modules (688 collected tests)
 - [x] Integration tests for LLM interaction (require Ollama)
 - [x] Coverage reporting (14% without Ollama)
 - [x] JSON outline integration tests

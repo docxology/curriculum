@@ -28,14 +28,14 @@ Complete troubleshooting reference for common issues, diagnosis workflows, and s
 
 ```bash
 # Find most recent log file
-ls -lt scripts/output/logs/*.log | head -1
+ls -lt output/logs/*.log | head -1
 
 # Search for errors
-grep "ERROR" scripts/output/logs/*.log
+grep "ERROR" output/logs/*.log
 
 # Search for specific issue
-grep "Connection" scripts/output/logs/*.log
-grep "not found" scripts/output/logs/*.log
+grep "Connection" output/logs/*.log
+grep "not found" output/logs/*.log
 ```
 
 ### Step 3: Verify Prerequisites
@@ -323,7 +323,7 @@ cat config/llm_config.yaml | grep -A 10 "operation_timeouts"
 
 # Extract request ID from error and filter logs
 # Error message format: [operation-uuid] Stream timeout...
-grep "[REQUEST_ID]" scripts/output/logs/*.log
+grep "[REQUEST_ID]" output/logs/*.log
 
 # Check Ollama service status and performance
 curl http://localhost:11434/api/version
@@ -433,10 +433,10 @@ Error messages include request IDs in format `[operation-uuid]`:
 Filter logs by request ID:
 ```bash
 # Find all log entries for a specific request
-grep "[lecture-7c3f93fc]" scripts/output/logs/*.log
+grep "[lecture-7c3f93fc]" output/logs/*.log
 
 # See full request lifecycle
-grep -E "\[lecture-7c3f93fc\]" scripts/output/logs/*.log | head -50
+grep -E "\[lecture-7c3f93fc\]" output/logs/*.log | head -50
 ```
 
 **Performance Expectations**:
@@ -465,16 +465,16 @@ grep -E "\[lecture-7c3f93fc\]" scripts/output/logs/*.log | head -50
 **Diagnosis**:
 ```bash
 # Check which sessions failed
-grep "failed during generation" scripts/output/logs/run_pipeline_*.log
+grep "failed during generation" output/logs/run_pipeline_*.log
 
 # Find timeout errors with request IDs
-grep "Stream timeout" scripts/output/logs/*.log | grep -E "\[.*\]"
+grep "Stream timeout" output/logs/*.log | grep -E "\[.*\]"
 
 # Check for specific operation timeouts
-grep -E "Operation: (outline|lecture|application)" scripts/output/logs/*.log | grep timeout
+grep -E "Operation: (outline|lecture|application)" output/logs/*.log | grep timeout
 
 # Analyze timeout patterns
-grep "Stream timeout" scripts/output/logs/*.log | \
+grep "Stream timeout" output/logs/*.log | \
   awk '{print $NF}' | sort | uniq -c | sort -rn
 ```
 
@@ -524,10 +524,10 @@ grep "Stream timeout" scripts/output/logs/*.log | \
    REQUEST_ID="lecture-7c3f93fc"
    
    # Find all log entries for this request
-   grep "[${REQUEST_ID}]" scripts/output/logs/*.log
+   grep "[${REQUEST_ID}]" output/logs/*.log
    
    # See performance metrics
-   grep "[${REQUEST_ID}]" scripts/output/logs/*.log | grep "Stream:"
+   grep "[${REQUEST_ID}]" output/logs/*.log | grep "Stream:"
    ```
 
 **Best Practices for Batch Processing**:
@@ -622,7 +622,7 @@ LLMError: LLM returned empty response
 **Diagnosis**:
 ```bash
 # Check logs for request details
-grep "LLM Request" scripts/output/logs/*.log | tail -5
+grep "LLM Request" output/logs/*.log | tail -5
 
 # Test Ollama directly
 curl -X POST http://localhost:11434/api/generate \
@@ -651,7 +651,7 @@ ls -la output/outlines/course_outline_*.json
 ls -la scripts/output/outlines/course_outline_*.json
 
 # Check search paths
-grep "Searching for" scripts/output/logs/*.log
+grep "Searching for" output/logs/*.log
 ```
 
 **Solutions**:
@@ -730,10 +730,10 @@ ERROR: Error processing session 1: ...
 **Diagnosis**:
 ```bash
 # Check logs for specific error
-grep "Error processing" scripts/output/logs/*.log
+grep "Error processing" output/logs/*.log
 
 # Check which sessions failed
-grep "Failed:" scripts/output/logs/*.log
+grep "Failed:" output/logs/*.log
 ```
 
 **Solutions**:
@@ -755,7 +755,7 @@ grep "Failed:" scripts/output/logs/*.log
 uv run python3 scripts/04_generate_primary.py --modules <failed_id>
 
 # Check logs for specific error
-grep "Evolution" scripts/output/logs/*.log
+grep "Evolution" output/logs/*.log
 
 # Adjust configuration if needed
 ```
@@ -801,7 +801,7 @@ FileNotFoundError: File not found: /path/to/file
 ls -la /path/to/file
 
 # Check search paths
-grep "Searching for" scripts/output/logs/*.log
+grep "Searching for" output/logs/*.log
 ```
 
 **Solutions**:
@@ -888,7 +888,7 @@ ls -la src/config/
 cat config/llm_config.yaml | grep -A 10 "content_generation:"
 
 # Check actual content metrics
-grep "Word count" scripts/output/logs/*.log | head -10
+grep "Word count" output/logs/*.log | head -10
 ```
 
 **Solutions**:
@@ -913,7 +913,7 @@ grep "Word count" scripts/output/logs/*.log | head -10
 grep "Question" output/modules/*/session_*/questions.md | head -5
 
 # Check validation logs
-grep "No questions detected" scripts/output/logs/*.log
+grep "No questions detected" output/logs/*.log
 ```
 
 **Solutions**:
@@ -931,7 +931,7 @@ grep "No questions detected" scripts/output/logs/*.log
 **Diagnosis**:
 ```bash
 # Check generation times in logs
-grep "Generation complete" scripts/output/logs/*.log | tail -10
+grep "Generation complete" output/logs/*.log | tail -10
 
 # Check system resources
 top
@@ -959,27 +959,27 @@ df -h
 ### Enable Debug Logging
 
 ```bash
-# Run with DEBUG level
-uv run python3 scripts/04_generate_primary.py --log-level DEBUG
+# Run the pipeline with DEBUG level
+uv run python3 scripts/run_pipeline.py --log-level DEBUG
 
-# Or set environment variable
-LOG_LEVEL=DEBUG uv run python3 scripts/04_generate_primary.py
+# Stage scripts 02-06 log at INFO; stage 01 has --verbose
+uv run python3 scripts/01_setup_environment.py --verbose
 ```
 
 ### Analyze Logs
 
 ```bash
 # Find all errors
-grep "ERROR" scripts/output/logs/*.log
+grep "ERROR" output/logs/*.log
 
 # Find validation warnings
-grep "NEEDS REVIEW" scripts/output/logs/*.log
+grep "NEEDS REVIEW" output/logs/*.log
 
 # Find slow operations
-grep "Generation complete" scripts/output/logs/*.log | grep -E "[0-9]{3,}\.[0-9]+s"
+grep "Generation complete" output/logs/*.log | grep -E "[0-9]{3,}\.[0-9]+s"
 
 # Count successful vs failed
-grep "completed\|Failed" scripts/output/logs/*.log | wc -l
+grep "completed\|Failed" output/logs/*.log | wc -l
 ```
 
 ### Test Individual Components
@@ -1071,10 +1071,10 @@ uv run python3 scripts/04_generate_primary.py --modules 2
 **Watch logs during generation**:
 ```bash
 # Follow log file
-tail -f scripts/output/logs/04_generate_primary_*.log
+tail -f output/logs/04_generate_primary_*.log
 
 # Or watch for errors
-tail -f scripts/output/logs/04_generate_primary_*.log | grep -E "ERROR|Failed"
+tail -f output/logs/04_generate_primary_*.log | grep -E "ERROR|Failed"
 ```
 
 ## Related Documentation

@@ -38,13 +38,13 @@ Complete guide for contributing to the educational course Generator, including d
 
 2. **Install dependencies**:
    ```bash
-   uv pip install -e ".[dev]"
+   uv sync --extra dev
    ```
 
 3. **Install Ollama** (for integration tests):
    ```bash
-   # Follow instructions at ollama.ai
-   curl -fsSL https://ollama.ai/install.sh | sh
+   # Follow instructions at ollama.com
+   curl -fsSL https://ollama.com/install.sh | sh
    ollama pull gemma3:4b
    ```
 

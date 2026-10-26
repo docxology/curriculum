@@ -16,11 +16,11 @@ This directory contains the comprehensive test suite for the educational course 
 
 ## Test Statistics
 
-**Total**: ~540 tests across 25 test files + 10 fixture files  
-**Coverage**: 30% without Ollama, 75% with integration tests  
-**Speed**: Fast unit tests ~5s, full suite ~150s  
+- **Total**: 688 collected tests across 35 test files + 10 fixture files
+- **Coverage**: 30% without Ollama, 75% with integration tests
+- **Speed**: `uv run pytest -m unit` ≈ 1.5 min (measured on an external drive); integration tests additionally need Ollama
 
-## Test Files (25 files)
+## Test Files (35 files)
 
 ### Unit Tests (No Ollama Required)
 
@@ -42,7 +42,7 @@ This directory contains the comprehensive test suite for the educational course 
 16. **test_website_styles.py** (6 tests) - CSS stylesheet generation
 17. **test_logging_setup.py** (38 tests) - Logging configuration and setup
 
-**Total unit tests**: ~221 tests, run in ~5 seconds
+**Total unit tests**: 643 marked `unit` (42 skip when Ollama is unavailable)
 
 ### Integration Tests (Require Ollama + gemma3:4b)
 
@@ -361,7 +361,7 @@ def test_error_handling():
 ### "Ollama not found"
 ```bash
 # Install Ollama
-# https://ollama.ai/
+# https://ollama.com/
 
 # Tests will skip integration tests but run unit tests
 ```
@@ -414,7 +414,7 @@ uv run pytest tests/test_config_loader.py tests/test_parser.py tests/test_utils.
 ```yaml
 # GitHub Actions example
 - name: Install Ollama
-  run: curl https://ollama.ai/install.sh | sh
+  run: curl https://ollama.com/install.sh | sh
 
 - name: Pull Model
   run: ollama pull gemma3:4b

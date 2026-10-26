@@ -427,13 +427,13 @@ All timeout errors include request IDs for traceability:
 REQUEST_ID="lecture-7c3f93fc"
 
 # Filter logs by request ID
-grep "[${REQUEST_ID}]" scripts/output/logs/*.log
+grep "[${REQUEST_ID}]" output/logs/*.log
 
 # See performance progression
-grep "[${REQUEST_ID}]" scripts/output/logs/*.log | grep "Stream:"
+grep "[${REQUEST_ID}]" output/logs/*.log | grep "Stream:"
 
 # See timeout extension events
-grep "[${REQUEST_ID}]" scripts/output/logs/*.log | grep "extending timeout"
+grep "[${REQUEST_ID}]" output/logs/*.log | grep "extending timeout"
 ```
 
 ### Progress Monitoring
@@ -809,10 +809,10 @@ llm:
 REQUEST_ID="lecture-7c3f93fc"
 
 # Filter logs by request ID
-grep "[${REQUEST_ID}]" scripts/output/logs/*.log
+grep "[${REQUEST_ID}]" output/logs/*.log
 
 # See performance metrics
-grep "[${REQUEST_ID}]" scripts/output/logs/*.log | grep "Stream:"
+grep "[${REQUEST_ID}]" output/logs/*.log | grep "Stream:"
 ```
 
 ### Timeout Configuration Guidelines

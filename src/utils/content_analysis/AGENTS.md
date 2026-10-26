@@ -313,8 +313,8 @@ if not result['valid']:
 
 - **[README.md](README.md)** - Complete module documentation
 - **[../AGENTS.md](../AGENTS.md)** - Utils module overview
-- **[../../docs/VALIDATION.md](../../docs/VALIDATION.md)** - Validation rules and criteria
-- **[../../docs/FORMATS.md](../../docs/FORMATS.md)** - Content format specifications
+- **[../../../docs/VALIDATION.md](../../../docs/VALIDATION.md)** - Validation rules and criteria
+- **[../../../docs/FORMATS.md](../../../docs/FORMATS.md)** - Content format specifications
 
 
 

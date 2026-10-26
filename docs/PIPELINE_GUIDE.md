@@ -106,7 +106,7 @@ uv run python3 scripts/01_setup_environment.py --auto-install --start-ollama
 
 **Tasks**:
 1. Check uv availability
-2. Optional dependency install (`uv pip install -e ".[dev]"`)
+2. Optional dependency install (`uv sync --extra dev`)
 3. Validate configs exist and are readable YAML
 4. Ensure output directories
 5. Check Ollama + gemma3:4b availability
@@ -125,16 +125,16 @@ uv run python3 scripts/01_setup_environment.py --auto-install --start-ollama
 uv run python3 scripts/02_run_tests.py
 
 # Validation + tests with output saving
-uv run python3 scripts/02_run_tests.py --run-tests
+uv run python3 scripts/02_run_tests.py
 
 # Verbose test output
-uv run python3 scripts/02_run_tests.py --run-tests --verbose
+uv run python3 scripts/02_run_tests.py --verbose
 
 # Save to custom directory
-uv run python3 scripts/02_run_tests.py --run-tests --output-dir ./my_reports
+uv run python3 scripts/02_run_tests.py --output-dir ./my_reports
 
 # Don't save output
-uv run python3 scripts/02_run_tests.py --run-tests --no-save-output
+uv run python3 scripts/02_run_tests.py --no-save-output
 ```
 
 **Tasks**:
@@ -1056,7 +1056,7 @@ The pipeline generates detailed logs during execution. Understanding these logs 
 ### Log File Location
 
 All scripts write logs to timestamped files:
-- Location: `scripts/output/logs/`
+- Location: `output/logs/`
 - Format: `{script_name}_{YYYYMMDD}_{HHMMSS}.log`
 - Example: `04_generate_primary_20251209_091827.log`
 
@@ -1408,10 +1408,10 @@ When batch processing reports "Failed stages", follow these steps:
    Last 10 lines from log file (04_generate_primary_20251210_140023.log): ...
    ```
 
-2. **Review the log file**: Check the most recent log file in `scripts/output/logs/`:
+2. **Review the log file**: Check the most recent log file in `output/logs/`:
    ```bash
    # Find most recent log for failed stage
-   ls -lt scripts/output/logs/04_generate_primary_*.log | head -1
+   ls -lt output/logs/04_generate_primary_*.log | head -1
    
    # Check exit code reason
    tail -50 <log_file> | grep "EXIT CODE"
@@ -1437,13 +1437,13 @@ When batch processing reports "Failed stages", follow these steps:
 grep "Failed courses" <batch_log>
 
 # 2. Check specific stage log
-tail -100 scripts/output/logs/04_generate_primary_*.log | grep -A 20 "EXIT CODE"
+tail -100 output/logs/04_generate_primary_*.log | grep -A 20 "EXIT CODE"
 
 # 3. Check for failed sessions
-grep "Failed sessions" scripts/output/logs/04_generate_primary_*.log
+grep "Failed sessions" output/logs/04_generate_primary_*.log
 
 # 4. Check for critical issues
-grep "CRITICAL" scripts/output/logs/04_generate_primary_*.log
+grep "CRITICAL" output/logs/04_generate_primary_*.log
 ```
 - **Module generation failed**: Regenerate with `--modules <id>`
 

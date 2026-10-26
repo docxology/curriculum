@@ -8,15 +8,15 @@
 
 ### Package Management
 - **HARD**: Use `uv` for installing dependencies
-- **HARD**: Use `uv pip install` instead of `pip install`
+- **HARD**: Use `uv sync` (or `uv add`) instead of `pip install`
 - **HARD**: Use `uv run` for executing scripts
 - **HARD**: Never create or use virtual environments manually
 
 ### Installation Commands
 
 ```bash
-# ✅ CORRECT: Install dependencies with uv
-uv pip install -e ".[dev]"
+# ✅ CORRECT: Install dependencies (creates .venv from uv.lock, includes the dev extra)
+uv sync --extra dev
 
 # ✅ CORRECT: Run scripts with uv
 uv run python3 scripts/03_generate_outline.py

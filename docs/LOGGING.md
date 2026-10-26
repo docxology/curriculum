@@ -477,12 +477,14 @@ logging:
 
 **Enable Debug Logging**:
 ```bash
-# Via script argument
-uv run python3 scripts/04_generate_primary.py --log-level DEBUG
+# Pipeline-wide DEBUG logging
+uv run python3 scripts/run_pipeline.py --log-level DEBUG
 
-# Via environment variable
-LOG_LEVEL=DEBUG uv run python3 scripts/04_generate_primary.py
+# Stage 01 only
+uv run python3 scripts/01_setup_environment.py --verbose
 ```
+
+Stage scripts 02-06 log at INFO (they expose no `--log-level` flag); their log files are written to `output/logs/`.
 
 ## Recent Improvements
 

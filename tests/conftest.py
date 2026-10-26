@@ -49,7 +49,7 @@ def start_ollama_server():
         return False
         
     except FileNotFoundError:
-        logger.error("Ollama not found. Install from https://ollama.ai/")
+        logger.error("Ollama not found. Install from https://ollama.com/")
         return False
     except Exception as e:
         logger.error(f"Error starting Ollama: {e}")

@@ -13,7 +13,7 @@ Comprehensive test coverage for all modules using pytest.
 
 ```mermaid
 graph TB
-    A[Test Suite] --> B[Unit Tests<br/>~135 tests, ~5s]
+    A[Test Suite] --> B[Unit Tests<br/>643 marked unit, no Ollama]
     A --> C[Integration Tests<br/>~75 tests, ~150s]
     
     B --> B1[test_config_loader.py]
@@ -108,7 +108,7 @@ uv run pytest -s
 ### Test Fixtures (10 files)
 - `tests/fixtures/` - Sample data for testing (configs, outlines, content examples)
 
-**Total**: ~540 tests across 25 test files + 10 fixture files
+**Total**: 688 collected tests across 35 test files + 10 fixture files
 
 **Coverage Note**: Integration tests require Ollama + gemma3:4b model for full coverage.
 
@@ -380,7 +380,7 @@ All integration tests pass with real Ollama, significantly increasing coverage f
 
 ### "Ollama not found"
 
-Ollama isn't installed. Install from https://ollama.ai/
+Ollama isn't installed. Install from https://ollama.com/
 
 Tests will skip integration tests but run 65 unit tests successfully.
 
@@ -425,7 +425,7 @@ For continuous integration:
 
 2. **With Ollama**: Install Ollama in CI environment
    ```bash
-   curl https://ollama.ai/install.sh | sh
+   curl https://ollama.com/install.sh | sh
    ollama pull gemma3:4b
    uv run pytest
    ```

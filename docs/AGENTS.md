@@ -89,7 +89,7 @@ This directory contains technical documentation for the educational course Gener
 ### Testing
 
 **[TESTING_COVERAGE.md](TESTING_COVERAGE.md)** - Test suite overview
-- Test statistics (~540 tests across 25 files, NO MOCKS)
+- Test statistics (688 collected tests across 35 files, NO MOCKS)
 - Unit vs integration tests (fast tests <2s, slow tests ~150s)
 - Coverage metrics (~30% without Ollama, ~75% with integration tests)
 - Test organization by functionality and speed

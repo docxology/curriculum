@@ -350,7 +350,7 @@ Each submodule has detailed documentation:
 
 ## Testing
 
-Comprehensive test suite with ~540 tests across 25 test files:
+Comprehensive test suite with 688 collected tests across 35 test files:
 
 ```bash
 # Run all tests
@@ -367,7 +367,7 @@ See **[../tests/README.md](../tests/README.md)** for complete testing documentat
 This package is installed in development mode:
 
 ```bash
-uv pip install -e ".[dev]"
+uv sync --extra dev
 ```
 
 ## Code Standards

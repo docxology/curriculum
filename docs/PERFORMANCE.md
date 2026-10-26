@@ -180,16 +180,16 @@ llm:
 
 ```bash
 # Find generation times
-grep "Generation complete" scripts/output/logs/*.log | \
+grep "Generation complete" output/logs/*.log | \
   grep -oE "[0-9]+\.[0-9]+s" | \
   awk '{sum+=$1; count++} END {print "Average:", sum/count, "s"}'
 
 # Find slow operations
-grep "Generation complete" scripts/output/logs/*.log | \
+grep "Generation complete" output/logs/*.log | \
   grep -E "[0-9]{3,}\.[0-9]+s"
 
 # Count operations
-grep "Generation complete" scripts/output/logs/*.log | wc -l
+grep "Generation complete" output/logs/*.log | wc -l
 ```
 
 ### Performance Metrics

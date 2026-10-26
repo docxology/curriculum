@@ -45,7 +45,7 @@ The educational course Generator is designed for local execution. This guide cov
 **Required Software**:
 - **Python**: 3.10 or higher
 - **uv**: Package manager (install via `curl -LsSf https://astral.sh/uv/install.sh | sh`)
-- **Ollama**: LLM runtime (install via `ollama.ai`)
+- **Ollama**: LLM runtime (install via `ollama.com`)
 
 **Optional Software**:
 - **jq**: JSON processing (for log analysis)
@@ -61,13 +61,13 @@ The educational course Generator is designed for local execution. This guide cov
 
 2. **Install dependencies**:
    ```bash
-   uv pip install -e ".[dev]"
+   uv sync --extra dev
    ```
 
 3. **Install Ollama**:
    ```bash
-   # Follow instructions at ollama.ai
-   curl -fsSL https://ollama.ai/install.sh | sh
+   # Follow instructions at ollama.com
+   curl -fsSL https://ollama.com/install.sh | sh
    ```
 
 4. **Download LLM model**:
@@ -307,14 +307,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.10'
       - name: Install uv
         run: curl -LsSf https://astral.sh/uv/install.sh | sh
       - name: Install dependencies
-        run: uv pip install -e ".[dev]"
+        run: uv sync --extra dev
       - name: Run tests
         run: uv run pytest
       - name: Validate configuration
