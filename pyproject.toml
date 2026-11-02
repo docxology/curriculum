@@ -3,7 +3,7 @@ name = "educational-materials-generator"
 version = "0.1.0"
 description = "AI-powered educational course materials generator using Ollama"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "pyyaml>=6.0.3",
     "requests>=2.34.2",
