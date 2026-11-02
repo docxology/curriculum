@@ -30,7 +30,7 @@ uv run python3 scripts/05_generate_secondary.py     # Stage 05: Secondary conten
 uv run python3 scripts/06_website.py               # Stage 06: Website
 ```
 
-**Requirements**: Python 3.10+, [uv](https://github.com/astral-sh/uv), [Ollama](https://ollama.com/) with model
+**Requirements**: the bound in `pyproject.toml` or newer, [uv](https://github.com/astral-sh/uv), [Ollama](https://ollama.com/) with model
 
 ---
 
