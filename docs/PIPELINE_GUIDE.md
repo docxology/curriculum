@@ -1,5 +1,12 @@
 # Pipeline Guide - Staged Course Generation
 
+For a local verification run without a model service, start with the
+[offline fixture](OFFLINE_FIXTURE.md). Stage 06 consumes an existing JSON
+outline and available session files. The default course HTML path is
+`output/<course-key>/website/index.html`. The flag `--no-interactive` skips
+the outline questions and still runs model-backed generation.
+
+
 Complete guide to the educational course Generator pipeline with detailed script references.
 
 ## Quick Reference Card
@@ -79,7 +86,7 @@ All stages can be run independently or together via `scripts/run_pipeline.py` (s
 ┌──────────────────────────────────────────────────────┐
 │  Stage 06: Website Generation                       │
 │  Script: scripts/06_website.py                        │
-│  Output: output/website/index.html (single HTML)     │
+│  Output: output/{course_name}/website/index.html (single HTML)     │
 │  Purpose: Browse all course materials in one place  │
 └──────────────────────────────────────────────────────┘
                         │
@@ -270,7 +277,7 @@ uv run python3 scripts/04_generate_primary.py --config-dir /path/to/config
    - **study_notes.md** - Concise session summary for review
    - **diagram_1.mmd, diagram_2.mmd, ...** - Mermaid diagrams (number from config, typically 1-2 per session)
    - **questions.md** - Comprehension assessment questions (MC/SA/Essay format)
-3. Saves all content to session directories: `output/modules/module_XX/session_YY/`
+3. Saves all content to session directories: `output/{course_name}/modules/module_XX/session_YY/`
 
 **Modules Used**:
 - `src.generate.formats.lectures.LectureGenerator`
@@ -288,7 +295,7 @@ uv run python3 scripts/04_generate_primary.py --config-dir /path/to/config
 - `output/{course_name}/modules/module_{id:02d}_{name}/session_{n:02d}/diagram_2.mmd` (if configured)
 - `output/{course_name}/modules/module_{id:02d}_{name}/session_{n:02d}/questions.md`
 
-**Note**: `{course_name}` is the course template name (e.g., `chemistry`, `biology`). When using default config (no template), paths are `output/modules/...` (no course subdirectory).
+**Note**: `{course_name}` is the template key or, when the outline omits it, the short name derived from the default course configuration.
 
 **Configuration Per Module**:
 ```yaml
@@ -360,11 +367,11 @@ uv run python3 scripts/05_generate_secondary.py --modules 1 --dry-run
    - **integration.md** - Cross-module connections and synthesis
    - **investigation.md** - Research questions and experiments
    - **open_questions.md** - Current scientific debates and frontiers
-3. Saves all content to session directories: `output/modules/module_XX/session_YY/`
+3. Saves all content to session directories: `output/{course_name}/modules/module_XX/session_YY/`
 
 **Output Structure**:
 ```
-output/modules/module_01_cell_biology/
+output/{course_name}/modules/module_01_cell_biology/
   session_01/          # Primary materials (from Stage 04)
     lecture.md
     lab.md
@@ -414,7 +421,7 @@ Cleanup is applied automatically during generation - no manual intervention requ
 
 **Script**: `scripts/06_website.py`
 
-**Purpose**: Generate a single, self-contained HTML website for browsing all course materials
+**Purpose**: Generate one HTML file for browsing course materials. Embedded course content is local, while Mermaid and syntax highlighting reference browser assets from CDNs.
 
 **Usage**:
 ```bash
@@ -451,10 +458,10 @@ uv run python3 scripts/06_website.py --open-browser
 3. Converts markdown content to HTML
 4. Generates navigation structure (modules → sessions → content types)
 5. Creates single HTML file with embedded styles and scripts
-6. Saves to `output/website/index.html`
+6. Saves to `output/{course_name}/website/index.html`
 
 **Output File**:
-- `output/website/index.html` - Single HTML file containing entire website
+- `output/{course_name}/website/index.html` - Single HTML file containing entire website
 
 **Website Features**:
 - **Module List**: Overview of all modules with session counts
@@ -468,7 +475,7 @@ uv run python3 scripts/06_website.py --open-browser
 
 **Example Output**:
 ```
-output/website/
+output/{course_name}/website/
   index.html  # Single HTML file (open in browser)
 ```
 
@@ -696,8 +703,8 @@ uv run python3 scripts/03_generate_outline.py
 uv run python3 scripts/04_generate_primary.py --modules 1
 
 # Step 3: Review Module 1 content
-ls -la output/modules/module_01_*/session_01/
-cat output/modules/module_01_*/session_01/lecture.md
+ls -la output/{course_name}/modules/module_01_*/session_01/
+cat output/{course_name}/modules/module_01_*/session_01/lecture.md
 
 # Step 4: If satisfied, continue with Module 2
 uv run python3 scripts/04_generate_primary.py --modules 2
@@ -1125,7 +1132,7 @@ Generating application for session 1: Bioch. & Biomolecules...
     - Requirements: 3-5 applications, 150-200 words each, max 1000 total words
     - Applications: 4
     - Avg words per application: 169
-  → Saved to: output/modules/module_01_.../session_01/application.md
+  → Saved to: output/{course_name}/modules/module_01_.../session_01/application.md
 
 Generating extension for session 1: Bioch. & Biomolecules...
   ✓ Extension generated: [COMPLIANT]
@@ -1133,14 +1140,14 @@ Generating extension for session 1: Bioch. & Biomolecules...
     - Requirements: 3-4 topics, 100-150 words each, max 600 total words
     - Topics: 3
     - Avg words per topic: 162
-  → Saved to: output/modules/module_01_.../session_01/extension.md
+  → Saved to: output/{course_name}/modules/module_01_.../session_01/extension.md
 
 Generating visualization for session 1: Bioch. & Biomolecules...
   ✓ Visualization generated: [COMPLIANT]
     - Length: 234 chars
     - Requirements: min 3 diagram elements
     - Elements: 8 (nodes: 5, connections: 3)
-  → Saved to: output/modules/module_01_.../session_01/visualization.mmd
+  → Saved to: output/{course_name}/modules/module_01_.../session_01/visualization.mmd
 
   ✓ Generated 6 secondary materials
 ```
@@ -1157,7 +1164,7 @@ Generating application for session 2: Cell Structure & Organelles...
     ⚠️  Application 1 has 120 words (require 150-200, need 30 more words)
     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
     💡 Tip: Consider regenerating if issues are significant (validation is conservative)
-  → Saved to: output/modules/module_02_.../session_02/application.md
+  → Saved to: output/{course_name}/modules/module_02_.../session_02/application.md
 ```
 
 #### Stage 06: Website Generation
@@ -1178,7 +1185,7 @@ Generating website...
   ✓ Converted 44 markdown files to HTML
   ✓ Generated navigation structure
   ✓ Embedded styles and scripts
-  ✓ Website saved to: output/website/index.html
+  ✓ Website saved to: output/{course_name}/website/index.html
   ✓ Website size: 2.3 MB (self-contained)
 
 Opening in browser...
@@ -1198,7 +1205,7 @@ Generating integration for session 2: Cell Structure & Organelles...
     - Connections: 1
     ⚠️  Only 1 connections found (require at least 3, need 2 more - add references to other modules/topics)
     💡 Tip: See docs/FORMATS.md → Validation and Quality Checks for guidance
-  → Saved to: output/modules/module_02_.../session_02/integration.md
+  → Saved to: output/{course_name}/modules/module_02_.../session_02/integration.md
 ```
 
 ### Validation Warning Messages
@@ -1473,12 +1480,12 @@ All configurable, all modular, all text-based for full manual control.
 ### Essential Reading (Before Running Pipeline)
 - **[CONFIGURATION.md](CONFIGURATION.md)** - Configure all YAML files before running
 - **[JSON_OUTLINE.md](JSON_OUTLINE.md)** - Understand JSON outlines (Stage 03 output, Stages 04-05 input)
-- **[../SETUP.md](../SETUP.md)** - Initial setup before Stage 01
+- **[SETUP.md](SETUP.md)** - Initial setup before Stage 01
 
 ### Stage-Specific References
 | Stage | Script | Key Documentation |
 |-------|--------|-------------------|
-| **01** | `01_setup_environment.py` | [../SETUP.md](../SETUP.md), [CONFIGURATION.md](CONFIGURATION.md) |
+| **01** | `01_setup_environment.py` | [SETUP.md](SETUP.md), [CONFIGURATION.md](CONFIGURATION.md) |
 | **02** | `02_run_tests.py` | [TESTING_COVERAGE.md](TESTING_COVERAGE.md) |
 | **03** | `03_generate_outline.py` | [JSON_OUTLINE.md](JSON_OUTLINE.md), [CONFIGURATION.md](CONFIGURATION.md) |
 | **04** | `04_generate_primary.py` | [FORMATS.md](FORMATS.md), [JSON_OUTLINE.md](JSON_OUTLINE.md) |

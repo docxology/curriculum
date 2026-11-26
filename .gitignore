@@ -28,8 +28,6 @@ scripts/test_reports/
 
 # --- Generated AGENTS.md/README.md stubs (self-declare "gitignored, never committed") ---
 .cursorrules/AGENTS.md
-docs/manuscript/AGENTS.md
-docs/manuscript/README.md
 output/**/AGENTS.md
 output/**/README.md
 scripts/output/**/AGENTS.md

@@ -402,7 +402,7 @@ top
 
 ## Related Documentation
 
-- **[SETUP.md](../SETUP.md)** - Initial setup and installation
+- **[SETUP.md](SETUP.md)** - Initial setup and installation
 - **[CONFIGURATION.md](CONFIGURATION.md)** - Configuration reference
 - **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Troubleshooting guide
 - **[PERFORMANCE.md](PERFORMANCE.md)** - Performance optimization

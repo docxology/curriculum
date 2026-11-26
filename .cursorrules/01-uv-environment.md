@@ -96,6 +96,6 @@ If `uv` is not available:
 
 ## See Also
 
-- **[../SETUP.md](../SETUP.md)** - Installation instructions
+- **[../SETUP.md](../docs/SETUP.md)** - Installation instructions
 - **[../docs/CONTRIBUTING.md](../docs/CONTRIBUTING.md)** - Development setup
 - **[00-overview.md](00-overview.md)** - Core principles
