@@ -268,7 +268,7 @@ When making code changes:
 ## See Also
 
 - **Main README**: [../README.md](../README.md) - Quick start and navigation hub
-- **Setup Guide**: [../SETUP.md](../SETUP.md) - Installation and prerequisites
+- **Setup Guide**: [SETUP.md](SETUP.md) - Installation and prerequisites
 - **Development Rules**: [../.cursorrules/README.md](../.cursorrules/README.md) - All 12 modular rule files
 - **Agent Guide**: [../AGENTS.md](../AGENTS.md) - High-level overview for AI agents
 - **Config Docs**: [../config/AGENTS.md](../config/AGENTS.md) - Configuration guide

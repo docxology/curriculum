@@ -188,6 +188,6 @@ if not all(results.values()):
 - **Environment Setup**: [../../scripts/AGENTS.md](../../scripts/AGENTS.md) - Script 01 documentation
 - **Configuration**: [../config/AGENTS.md](../config/AGENTS.md) - Config initialization
 - **Pipeline**: [../generate/orchestration/AGENTS.md](../generate/orchestration/AGENTS.md) - Generator initialization
-- **Setup Guide**: [../../SETUP.md](../../SETUP.md) - Installation and setup documentation
+- **Setup Guide**: [../../docs/SETUP.md](../../docs/SETUP.md) - Installation and setup documentation
 
 

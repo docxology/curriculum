@@ -245,6 +245,6 @@ grep "\[a1b2c3d4\].*ERROR" output/logs/*.log
 - **Troubleshooting**: [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Comprehensive troubleshooting guide
 - **Health Monitoring**: [HEALTH_MONITORING.md](HEALTH_MONITORING.md) - Health monitoring guide
 - **Configuration**: [../../config/README.md](../../config/README.md)
-- **Ollama Setup**: [../../SETUP.md](../../SETUP.md)
+- **Ollama Setup**: [../../docs/SETUP.md](../../docs/SETUP.md)
 
 

@@ -463,7 +463,7 @@ curriculum/   # repo root (this file previously mislabeled this 'biology/')
 - **[tests/AGENTS.md](tests/AGENTS.md)** - Test suite organization, running patterns, coverage, no-mocks philosophy
 
 #### Setup & Development
-- **[SETUP.md](SETUP.md)** - Installation, prerequisites, troubleshooting
+- **[setup](docs/SETUP.md)** - Installation, prerequisites, troubleshooting
 - **[.cursorrules/README.md](.cursorrules/README.md)** - Guide to all 13 development rule files
 - **[.cursorrules/00-overview.md](.cursorrules/00-overview.md)** - Project philosophy and quick reference
 - **[.cursorrules/03-testing-real-only.md](.cursorrules/03-testing-real-only.md)** - NO MOCKS EVER philosophy

@@ -51,6 +51,6 @@ This module is reserved for future package-level setup utilities:
 
 - **For AI Agents**: [AGENTS.md](AGENTS.md) - Complete module documentation
 - **Setup Script**: [../../scripts/01_setup_environment.py](../../scripts/01_setup_environment.py)
-- **Setup Guide**: [../../SETUP.md](../../SETUP.md)
+- **Setup Guide**: [../../docs/SETUP.md](../../docs/SETUP.md)
 
 
