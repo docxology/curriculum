@@ -1,56 +1,23 @@
 # Setup Module
 
-Package initialization and setup utilities.
+The Stage 01 [environment module](environment.py) checks tool availability and
+configuration, prepares output directories, and checks the configured Ollama
+service and model.
 
-## Files
+## Entry point
 
-- `__init__.py` - Package initialization (currently minimal)
+The [Stage 01 script](../../scripts/01_setup_environment.py) handles command-line
+arguments, import paths, and logging, then calls `run_environment_setup` in
+`src.setup.environment`. The function returns exit code 0 when setup
+succeeds and 1 when it cannot complete.
 
-## Overview
+See the [setup guide](../../docs/SETUP.md) for prerequisites and the
+[pipeline guide](../../docs/PIPELINE_GUIDE.md) for the stage sequence.
 
-This module provides package-level initialization for src. Currently minimal, containing only the Python package structure. Reserved for future setup and initialization utilities.
+## Related tests
 
-## Current State
+The [configuration loader tests](../../tests/test_config_loader.py) cover loading
+and validation of project configuration. The [logging tests](../../tests/test_logging_setup.py)
+cover the logging helpers used by the wrapper and environment module.
 
-The module exists for package structure but does not provide any public APIs. All setup and initialization is handled by individual modules and application-level scripts.
-
-## Package Structure
-
-The src package uses modular initialization where each component manages its own setup:
-
-```python
-# Configuration setup
-from src.config.loader import ConfigLoader
-loader = ConfigLoader("config")
-
-# LLM setup
-from src.llm.client import OllamaClient
-client = OllamaClient(loader.get_llm_parameters())
-
-# Generator setup
-from src.generate.orchestration.pipeline import ContentGenerator
-generator = ContentGenerator(loader)
-```
-
-## Setup Scripts
-
-Environment setup is handled by scripts:
-- `scripts/01_setup_environment.py` - Validates environment, checks dependencies
-- `scripts/02_run_tests.py` - Runs tests and validation
-
-## Future Purpose
-
-This module is reserved for future package-level setup utilities:
-- Environment validation
-- First-run initialization
-- Dependency checking
-- Setup wizards
-- Installation helpers
-
-## See Also
-
-- **For AI Agents**: [AGENTS.md](AGENTS.md) - Complete module documentation
-- **Setup Script**: [../../scripts/01_setup_environment.py](../../scripts/01_setup_environment.py)
-- **Setup Guide**: [../../docs/SETUP.md](../../docs/SETUP.md)
-
-
+See [AGENTS.md](AGENTS.md) for the source boundaries.
