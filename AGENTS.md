@@ -322,10 +322,10 @@ uv run pytest tests/test_llm_client.py tests/test_outline_generator.py tests/tes
 |------|-------------|--------------|
 | **Setup environment** | `uv run python3 scripts/01_setup_environment.py` | [scripts/AGENTS.md](scripts/AGENTS.md) |
 | **Run tests** | `uv run pytest` | [tests/AGENTS.md](tests/AGENTS.md) |
-| **Generate outline** | `uv run python3 scripts/03_generate_outline.py --no-interactive` | [scripts/AGENTS.md](scripts/AGENTS.md#03_generate_outlinepy) |
-| **Generate primary content** | `uv run python3 scripts/04_generate_primary.py --modules 1` | [scripts/AGENTS.md](scripts/AGENTS.md#04_generate_primarypy) |
-| **Generate secondary content** | `uv run python3 scripts/05_generate_secondary.py --types application` | [scripts/AGENTS.md](scripts/AGENTS.md#05_generate_secondarypy) |
-| **Generate website** | `uv run python3 scripts/06_website.py --open-browser` | [scripts/AGENTS.md](scripts/AGENTS.md#06_websitepy) |
+| **Generate outline** | `uv run python3 scripts/03_generate_outline.py --no-interactive` | [Script inventory](scripts/AGENTS.md#script-inventory) |
+| **Generate primary content** | `uv run python3 scripts/04_generate_primary.py --modules 1` | [Script inventory](scripts/AGENTS.md#script-inventory) |
+| **Generate secondary content** | `uv run python3 scripts/05_generate_secondary.py --types application` | [Script inventory](scripts/AGENTS.md#script-inventory) |
+| **Generate website** | `uv run python3 scripts/06_website.py --open-browser` | [Script inventory](scripts/AGENTS.md#script-inventory) |
 | **Full pipeline** | `uv run python3 scripts/run_pipeline.py --no-interactive` | [docs/PIPELINE_GUIDE.md](docs/PIPELINE_GUIDE.md) |
 | **Load configuration** | `from src.config.loader import ConfigLoader; loader = ConfigLoader("config")` | [src/config/AGENTS.md](src/config/AGENTS.md) |
 | **Use LLM client** | `from src.llm.client import OllamaClient; client = OllamaClient(llm_config)` | [src/llm/AGENTS.md](src/llm/AGENTS.md) |
